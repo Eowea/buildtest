@@ -120,9 +120,9 @@
     /* ═══════════════════════════════
        HEADER
        ═══════════════════════════════ */
-.topbar {
+    .topbar {
       display: flex;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       justify-content: space-between;
       gap: 16px;
       padding: 24px;
@@ -130,7 +130,7 @@
     }
 
     .brand-block { 
-      flex: 1;
+      flex: 1 1 300px;
       display: flex;
       flex-direction: column;
       gap: 14px; 
@@ -140,13 +140,15 @@
     .desktop-player {
       display: flex;
       flex-direction: row;
+      flex-wrap: nowrap;
       gap: 16px;
       align-items: stretch;
+      justify-content: flex-end;
     }
 
     .desktop-player > * {
+      flex: 0 0 300px;
       width: 300px;
-      flex-shrink: 0;
     }
 
     .eyebrow, .twitch-head, .filter-chip, .role-badge, .card-head, .talent-level, .build-tab, .guide-video-kicker, .youtube-badge {
@@ -258,8 +260,8 @@
     }
 
     /* ── Twitch player ── */
- .twitch-card {
-      display: none; /* Caché par défaut, affiché uniquement si le live est ON */
+    .twitch-card {
+      display: none; /* Cacher par défaut (Live OFF) */
       border-radius: var(--radius-sm);
       overflow: hidden;
       border: 1px solid var(--blue-border);
@@ -293,7 +295,7 @@
     .twitch-card.is-collapsed .twitch-mount { display: none; }
     .twitch-card.is-collapsed .twitch-placeholder { display: grid; }
 
-.mobile-player {
+    .mobile-player {
       display: none;
       padding: 0 14px 14px;
       gap: 16px;
@@ -1044,12 +1046,12 @@
     /* ═══════════════════════════════
        RESPONSIVE & MOBILE OPTIMIZATIONS
        ═══════════════════════════════ */
-@media (max-width: 1180px) {
+    @media (max-width: 1180px) {
       .topbar { flex-direction: column; }
       .layout { grid-template-columns: minmax(0, 1fr); width: 100%; }
       .mobile-player {
         display: flex;
-        flex-direction: row; /* Force Twitch à gauche et le Build à droite */
+        flex-direction: row;
         flex-wrap: wrap;
         align-items: stretch;
         gap: 16px;
@@ -1137,9 +1139,10 @@
     @media (max-width: 520px) {
       .social-link { flex: 1 1 100%; }
     }
-    /* ── Random Build Card (Offline Replacement) ── */
-  .random-build-card {
-      display: flex; /* Visible en permanence */
+
+    /* ── Random Build Card ── */
+    .random-build-card {
+      display: flex;
       flex-direction: column;
       height: 100%;
       border: 1px solid var(--blue-border);
@@ -1147,7 +1150,6 @@
       border-radius: var(--radius-sm);
       overflow: hidden;
     }
-    .random-build-card.active { display: flex !important; }
 
     .random-card-head {
       display: flex;
@@ -1207,7 +1209,7 @@
       text-transform: uppercase;
     }
 
-.random-build-label {
+    .random-build-label {
       font-family: 'Rajdhani', serif;
       font-size: 14px;
       color: var(--gold-bright);
@@ -1284,7 +1286,7 @@
         <div class="twitch-placeholder" id="twitchPlaceholder1">Lecteur replié.</div>
       </div>
 
-      <!-- La carte de build (affichée si Offline) -->
+      <!-- La carte de build (affichée en permanence) -->
       <div class="random-build-card" id="randomBuildCard">
         <!-- Rempli dynamiquement par JS -->
       </div>
@@ -1682,7 +1684,7 @@
             enabled: true, order: 2, label: { fr: 'Build 2 (À venir)', en: 'Build 2 (TBA)' },
             summary: { fr: 'En construction.', en: 'Under construction.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
-            buildCode: '', videos: [], talents:[]
+            buildCode: '', videos:[], talents:[]
           }
         ]
       },
@@ -1730,7 +1732,7 @@
             enabled: true, order: 2, label: { fr: 'Build Lumière', en: 'Light Build' },
             summary: { fr: 'Build centré sur la Bombe de Lumière et les attaques de base.', en: 'Build centered around Lightbomb and basic attacks.' },
             buildCodeTitle: { fr: "A COLLER", en: "PASTE" },
-            buildCode: "[T2222222,Anduin]", videos: [], talents:[]
+            buildCode: "[T2222222,Anduin]", videos:[], talents:[]
           }
         ]
       },
@@ -1862,7 +1864,7 @@
             enabled: true, order: 1, label: { fr: 'Build passif', en: 'Cleanse Build' },
             summary: { fr: 'Build qui permet d\'utiliser plus souvent sa cleanse.', en: 'Build that allows more frequent use of Cleanse.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
-            buildCode: "[T2331323,Brightwing]", videos: [],
+            buildCode: "[T2331323,Brightwing]", videos:[],
             talents:[
               { level: 1, name: { fr: 'Hyperphase', en: 'Hyper Shift' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_brightwing_hypershift.jpg', description: { fr: 'Augmente le montant de soins de Déphasage et son temps de recharge est réduit pour chaque serviteur tué.', en: 'Increases Phase Shift healing amount and its cooldown is reduced for each minion killed.' }, demoYoutubeId: null },
               { level: 4, name: { fr: 'Crachat magique', en: 'Magic Spit' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_talent_autoattack_cooldown.jpg', description: { fr: 'Augmente la portée d\'auto-attaque et ses auto-attaques réduisent le temps de recharge de Brume Apaisante.', en: 'Increases basic attack range and basic attacks reduce Soothing Mist cooldown.' }, demoYoutubeId: null },
@@ -2195,7 +2197,7 @@
             enabled: true, order: 1, label: { fr: 'Build Protection', en: 'Safeguard Build' },
             summary: { fr: 'Armure maximale pour sauver les cibles.', en: 'Maximum armor to save targets.' },
             buildCodeTitle: { fr: "A COLLER", en: "PASTE" },
-            buildCode: "[T2222222,LtMorales]", videos: [],
+            buildCode: "[T2222222,LtMorales]", videos:[],
             talents:[
               { level: 1, name: { fr: 'Protection longue', en: 'Prolonged Safeguard' }, icon: '', description: { fr: 'Améliore W.', en: 'Improves W.' }, demoYoutubeId: null }
             ]
@@ -2281,7 +2283,7 @@
             enabled: true, order: 1, label: { fr: 'Build Bras', en: 'Lurking Arm Build' },
             summary: { fr: 'Maximise l\'impact de la zone de silence.', en: 'Maximizes the impact of the silence zone.' },
             buildCodeTitle: { fr: "A COLLER", en: "PASTE" },
-            buildCode: "[T3331333,Stukov]", videos: [],
+            buildCode: "[T3331333,Stukov]", videos:[],
             talents:[
               { level: 1, name: { fr: 'Allongement', en: 'Growing Infestation' }, icon: '', description: { fr: 'Améliore E.', en: 'Improves E.' }, demoYoutubeId: null }
             ]
@@ -2345,7 +2347,7 @@
             enabled: false, order: 2, label: { fr: 'Build soin', en: 'Healing Build' },
             summary: { fr: 'Sniper à très longue distance pour poke.', en: 'Very long-range sniper build for poke.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
-            buildCode: "[T2332312,Tyrande]", videos: [],
+            buildCode: "[T2332312,Tyrande]", videos:[],
             talents:[
               { level: 1, name: { fr: 'Ranger', en: 'Ranger' }, icon: '', description: { fr: 'Améliore W.', en: 'Improves Sentinel.' }, demoYoutubeId: null }
             ]
@@ -2441,7 +2443,7 @@
     buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
     buildCode: "[T1231121,Whitemane]",
     videos: [],
-    talents: [
+    talents:[
       {
         level: 1,
         name: { fr: 'Compassion', en: 'Compassion' },
@@ -2654,16 +2656,30 @@ const getInitialLang = () => {
 
     function twitchFrame() { if(!STREAMER_CONFIG.twitchChannel) return ''; return `<iframe src="https://player.twitch.tv/?channel=${encodeURIComponent(STREAMER_CONFIG.twitchChannel)}&parent=${encodeURIComponent(location.hostname||'localhost')}&muted=true" allowfullscreen loading="lazy"></iframe>`; }
     // --- GESTION TWITCH & BUILD ALEATOIRE ---
-ffunction setStreamOnline() {
+function setStreamOnline() {
   $('desktopTwitchCard').style.display = 'block';
+  $('randomBuildCard').classList.add('active');
+
   const mobileTwitchCard = $('mobileTwitchCard');
+  const mobileRandomBuildCard = $('mobileRandomBuildCard');
+
   if (mobileTwitchCard) mobileTwitchCard.style.display = 'block';
+  if (mobileRandomBuildCard) mobileRandomBuildCard.classList.add('active');
+
+  renderRandomBuildCard();
 }
 
 function setStreamOffline() {
   $('desktopTwitchCard').style.display = 'none';
+  $('randomBuildCard').classList.add('active');
+
   const mobileTwitchCard = $('mobileTwitchCard');
+  const mobileRandomBuildCard = $('mobileRandomBuildCard');
+
   if (mobileTwitchCard) mobileTwitchCard.style.display = 'none';
+  if (mobileRandomBuildCard) mobileRandomBuildCard.classList.add('active');
+
+  renderRandomBuildCard();
 }
 
 function mountTwitch() {
@@ -2677,7 +2693,7 @@ function mountTwitch() {
     width: '100%',
     height: 200,
     channel: STREAMER_CONFIG.twitchChannel,
-    parent: [location.hostname || 'localhost'],
+    parent:[location.hostname || 'localhost'],
     muted: true,
   });
 
@@ -2721,7 +2737,7 @@ function mountTwitch() {
 
       els.heroList.innerHTML = hList.map(h => {
         // On compte uniquement les builds qui ne sont pas explicitement désactivés
-        const bCount = (h.builds || []).filter(b => b.enabled !== false).length;
+        const bCount = (h.builds ||[]).filter(b => b.enabled !== false).length;
         
         return `
         <button class="hero-link${h.id===state.heroId?' active':''}" type="button" data-hero-id="${h.id}">
