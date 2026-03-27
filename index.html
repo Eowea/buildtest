@@ -816,12 +816,18 @@
     }
 
     .talent-trigger {
-      width: 56px; height: 56px;
-      background: var(--blue-border);
-      clip-path: var(--hex-clip);
-      padding: 2px; border: none; border-radius: 0;
-      cursor: help; position: relative; transition: all var(--t);
-    }
+  width: 56px;
+  height: 56px;
+  background: var(--blue-border);
+  clip-path: var(--hex-clip);
+  padding: 2px;
+  border: none;
+  border-radius: 0;
+  cursor: help;
+  position: relative;
+  transition: all var(--t);
+  touch-action: manipulation;
+}
     .talent-icon { width: 100%; height: 100%; background: var(--bg-deep); clip-path: var(--hex-clip); display: grid; place-items: center; }
     .talent-icon img { width: 100%; height: 100%; object-fit: cover; }
     
@@ -2759,29 +2765,36 @@ function mountTwitch() {
     function queueTooltipPosition() { if (!activeFloatingTrigger || tooltipRaf) return; tooltipRaf = requestAnimationFrame(() => { tooltipRaf = 0; const t = $('activeFloatingTooltip'); if (activeFloatingTrigger && t) positionTooltip(activeFloatingTrigger, t); }); }
     function showFloatingTooltip(tr) { if(!tr) return; clearTimeout(hideTooltipTimer); activeFloatingTrigger=tr; const title=tr.dataset.floatingTitle||'',desc=tr.dataset.floatingDescription||'',did=parseYouTubeId(tr.dataset.floatingDemoYoutubeId||''); els.tooltipPortal.innerHTML=`<div class="floating-tooltip" id="activeFloatingTooltip"><div class="floating-tooltip-title">${title}</div><div class="floating-tooltip-body">${desc}</div>${did?`<div class="floating-demo"><iframe src="${ytMini(did)}" title="Demo" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>`:''}</div>`; els.tooltipPortal.setAttribute('aria-hidden','false'); queueTooltipPosition(); }
 function bindFloatingTriggers(root = document) {
+  const isTouchLike = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+
   root.querySelectorAll('.floating-trigger').forEach(t => {
     if (t.dataset.bound) return;
     t.dataset.bound = '1';
 
-    t.addEventListener('mouseenter', () => showFloatingTooltip(t));
-    t.addEventListener('mouseleave', () => hideFloatingTooltip());
-    t.addEventListener('focus', () => showFloatingTooltip(t));
-    t.addEventListener('blur', () => hideFloatingTooltip(true));
+    if (!isTouchLike) {
+      // PC
+      t.addEventListener('mouseenter', () => showFloatingTooltip(t));
+      t.addEventListener('mouseleave', () => hideFloatingTooltip());
+      t.addEventListener('focus', () => showFloatingTooltip(t));
+      t.addEventListener('blur', () => hideFloatingTooltip(true));
+      
+    } else {
+      // Mobile / tactile
+      t.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
 
-    t.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
+        const isAlreadyOpen =
+          activeFloatingTrigger === t &&
+          els.tooltipPortal.getAttribute('aria-hidden') === 'false';
 
-      const isAlreadyOpen =
-        activeFloatingTrigger === t &&
-        els.tooltipPortal.getAttribute('aria-hidden') === 'false';
-
-      if (isAlreadyOpen) {
-        hideFloatingTooltip(true);
-      } else {
-        showFloatingTooltip(t);
-      }
-    });
+        if (isAlreadyOpen) {
+          hideFloatingTooltip(true);
+        } else {
+          showFloatingTooltip(t);
+        }
+      });
+    }
   });
 }
     function startPreview(c) { if(!c||c.classList.contains('is-previewing')) return; const id=parseYouTubeId(c.dataset.youtubeId||''),h=c.querySelector('[data-preview]'); if(!id||!h) return; h.innerHTML=`<iframe src="${ytPreview(id)}" title="Preview" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>`; c.classList.add('is-previewing'); }
