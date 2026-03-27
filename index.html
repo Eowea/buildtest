@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Eowea - Builds HotS</title>
   <link rel="icon" type="image/png" href="https://static.wikia.nocookie.net/allstars_gamepedia/images/e/e5/Emoji_Elements_Pack_Flower.png/">
-  <!-- Script Twitch Player -->
-  <script src="https://player.twitch.tv/js/embed/v1.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
@@ -1890,7 +1888,7 @@
             enabled: false, order: 2, label: { fr: 'Build W (Soins)', en: 'W Build (Healing)' },
             summary: { fr: 'Idéal si vous avez un très bon hyper-carry.', en: 'Ideal if you have a very strong hyper-carry.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
-            buildCode: "[T3332333,Auriel]", videos:[],
+            buildCode: "[T3332333,Auriel]", videos: [],
             talents:[
               { level: 1, name: { fr: 'Rayon croissant', en: 'Increasing Clarity' }, icon: '', description: { fr: 'Plus d\'énergie.', en: 'More Energy.' }, demoYoutubeId: null }
             ]
@@ -2096,7 +2094,7 @@
             enabled: true, order: 1, label: { fr: 'Build Bras', en: 'Lurking Arm Build' },
             summary: { fr: 'Maximise l\'impact de la zone de silence.', en: 'Maximizes the impact of the silence zone.' },
             buildCodeTitle: { fr: "A COLLER", en: "PASTE" },
-            buildCode: "[T3331333,Stukov]", videos: [],
+            buildCode: "[T3331333,Stukov]", videos:[],
             talents:[
               { level: 1, name: { fr: 'Allongement', en: 'Growing Infestation' }, icon: '', description: { fr: 'Améliore E.', en: 'Improves E.' }, demoYoutubeId: null }
             ]
@@ -2160,7 +2158,7 @@
             enabled: false, order: 2, label: { fr: 'Build soin', en: 'Healing Build' },
             summary: { fr: 'Sniper à très longue distance pour poke.', en: 'Very long-range sniper build for poke.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
-            buildCode: "[T2332312,Tyrande]", videos: [],
+            buildCode: "[T2332312,Tyrande]", videos:[],
             talents:[
               { level: 1, name: { fr: 'Ranger', en: 'Ranger' }, icon: '', description: { fr: 'Améliore W.', en: 'Improves Sentinel.' }, demoYoutubeId: null }
             ]
@@ -2255,7 +2253,7 @@
     summary: { fr: 'Build tourné autour du laser.', en: 'Build focused on Inquisition (W).' },
     buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
     buildCode: "[T1231121,Whitemane]",
-    videos:[],
+    videos: [],
     talents:[
       {
         level: 1,
@@ -2394,7 +2392,6 @@
       const stored = localStorage.getItem('eowea_lang');
       if (stored) return stored;
       const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-      // Si le navigateur n'est pas en français, on bascule en anglais par défaut.
       return browserLang.startsWith('fr') ? 'fr' : 'en';
     };
 
@@ -2415,7 +2412,6 @@
     /* ── Utilities ── */
     const loc = (val) => (val && typeof val === 'object' && !Array.isArray(val)) ? (val[state.lang] !== undefined ? val[state.lang] : (val['fr'] || '')) : (val || '');
 
-    // Conversion dynamique FR (AZERTY) <-> EN (QWERTY)
     function uiSpellKey(keyRaw) {
       if (keyRaw && typeof keyRaw === 'object' && keyRaw[state.lang]) {
         return String(keyRaw[state.lang]).trim().toUpperCase();
@@ -2465,75 +2461,59 @@
     function clampBuildIndex(h) { if(!h?.builds?.length){state.buildIndex=0;return 0;} state.buildIndex=Math.min(h.builds.length-1,Math.max(0,Number(state.buildIndex)||0)); return state.buildIndex; }
     function ensureSelection() { const l=filteredHeroes(); if(state.heroId&&(!currentHero()||!l.some(h=>h.id===state.heroId))){state.heroId=null;state.buildIndex=0;} clampBuildIndex(currentHero()); }
 
-    function mountTwitch() {
+    async function mountTwitch() {
       if (!STREAMER_CONFIG.twitchChannel) return;
-      if (typeof Twitch === 'undefined') {
-        // Retry si le script Twitch est en cours de chargement
-        setTimeout(mountTwitch, 100);
-        return;
-      }
-      
-      // La playlist d'Uploads de la chaine YouTube (ID Eowea remplacé avec 'UU' pour Uploads)
-      const YT_UPLOADS_PLAYLIST = 'UUPsyRq7cuI-F2ZdVhul8OZQ';
       const parentHost = location.hostname || 'localhost';
 
-      [els.desktopTwitchMount, els.mobileTwitchMount].forEach(mountEl => {
-        if (!mountEl || mountEl.dataset.mounted) return;
-        mountEl.dataset.mounted = '1';
-        mountEl.innerHTML = '';
-        
-        const player = new Twitch.Player(mountEl.id, {
-          width: "100%",
-          height: "100%",
-          channel: STREAMER_CONFIG.twitchChannel,
-          parent: [parentHost],
-          muted: true
-        });
+      try {
+        // Vérification de l'état du stream via DecAPI (gratuit, sans auth)
+        const res = await fetch(`https://decapi.me/twitch/uptime/${STREAMER_CONFIG.twitchChannel}`);
+        const text = await res.text();
+        const isOffline = text.toLowerCase().includes('offline') || text.toLowerCase().includes('not found') || text.toLowerCase().includes('error');
 
-        let offlineTimer;
-        
-        const setOfflineFallback = () => {
-          offlineTimer = setTimeout(() => {
-            let ytFrame = mountEl.querySelector('.yt-fallback');
-            // Créer l'iframe YouTube pour remplacer le lecteur Twitch hors-ligne
-            if (!ytFrame) {
-               ytFrame = document.createElement('iframe');
-               ytFrame.className = 'yt-fallback';
-               ytFrame.width = "100%";
-               ytFrame.height = "100%";
-               ytFrame.src = `https://www.youtube.com/embed?listType=playlist&list=${YT_UPLOADS_PLAYLIST}`;
-               ytFrame.frameBorder = "0";
-               ytFrame.allowFullscreen = true;
-               mountEl.appendChild(ytFrame);
-            }
-            
-            // Masquer le lecteur Twitch et afficher YouTube
-            const twitchFrame = mountEl.querySelector('iframe:not(.yt-fallback)');
-            if (twitchFrame) twitchFrame.style.display = 'none';
-            ytFrame.style.display = 'block';
-
-            // Modifier l'entête
-            const head = mountEl.closest('.twitch-card').querySelector('.twitch-head span');
-            if (head) head.textContent = 'YouTube';
-          }, 3000); // 3 secondes de délai pour éviter les micro-coupures de Twitch
-        };
-
-        // Ecouter l'événement hors-ligne de Twitch
-        player.addEventListener(Twitch.Player.OFFLINE, setOfflineFallback);
-
-        // Récupérer le flux si la chaine passe en ligne
-        player.addEventListener(Twitch.Player.ONLINE, () => {
-          clearTimeout(offlineTimer);
-          const ytFrame = mountEl.querySelector('.yt-fallback');
-          if (ytFrame) ytFrame.style.display = 'none';
+        let ytVideoId = null;
+        if (isOffline) {
+           try {
+              // Récupération de la dernière vidéo de @eowea (sans les shorts/lives)
+              const ytRes = await fetch(`https://decapi.me/youtube/latest_video?handle=@eowea&no_shorts=1&no_livestream=1`);
+              const ytText = await ytRes.text();
+              const match = ytText.match(/(?:youtu\.be\/|v=)([a-zA-Z0-9_-]{11})/);
+              if (match && match[1]) ytVideoId = match[1];
+           } catch(e) {
+              console.error('Erreur API YouTube:', e);
+           }
+        }[els.desktopTwitchMount, els.mobileTwitchMount].forEach(mountEl => {
+          if (!mountEl || mountEl.dataset.mounted) return;
+          mountEl.dataset.mounted = '1';
+          mountEl.innerHTML = '';
           
-          const twitchFrame = mountEl.querySelector('iframe:not(.yt-fallback)');
-          if (twitchFrame) twitchFrame.style.display = 'block';
+          if (isOffline) {
+            if (ytVideoId) {
+              const ytFrame = document.createElement('iframe');
+              ytFrame.width = "100%";
+              ytFrame.height = "100%";
+              ytFrame.src = `https://www.youtube.com/embed/${ytVideoId}?autoplay=0`;
+              ytFrame.style.border = "0";
+              ytFrame.allowFullscreen = true;
+              mountEl.appendChild(ytFrame);
 
-          const head = mountEl.closest('.twitch-card').querySelector('.twitch-head span');
-          if (head) head.textContent = 'Twitch';
+              const head = mountEl.closest('.twitch-card').querySelector('.twitch-head span');
+              if (head) head.textContent = 'YouTube';
+            } else {
+               mountEl.innerHTML = `<div class="twitch-placeholder" style="display:grid;height:100%;">${t('videoUnavailable')}</div>`;
+            }
+          } else {
+            mountEl.innerHTML = `<iframe src="https://player.twitch.tv/?channel=${STREAMER_CONFIG.twitchChannel}&parent=${parentHost}&muted=true" width="100%" height="100%" style="border:0;" allowfullscreen></iframe>`;
+          }
         });
-      }); 
+      } catch (err) {
+        console.error('Erreur API Twitch:', err);
+        // En cas d'erreur de vérification de l'API externe, on charge Twitch par défaut au cas où[els.desktopTwitchMount, els.mobileTwitchMount].forEach(mountEl => {
+          if (!mountEl || mountEl.dataset.mounted) return;
+          mountEl.dataset.mounted = '1';
+          mountEl.innerHTML = `<iframe src="https://player.twitch.tv/?channel=${STREAMER_CONFIG.twitchChannel}&parent=${parentHost}&muted=true" width="100%" height="100%" style="border:0;" allowfullscreen></iframe>`;
+        });
+      }
     }
 
     function syncTwitchUI() { els.desktopTwitchCard.classList.toggle('is-collapsed',!state.twitchOpen); els.toggleTwitch.textContent=state.twitchOpen?t('twitchClose'):t('twitchOpen'); }
