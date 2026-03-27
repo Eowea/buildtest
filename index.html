@@ -2621,36 +2621,51 @@ const getInitialLang = () => {
 
     function twitchFrame() { if(!STREAMER_CONFIG.twitchChannel) return ''; return `<iframe src="https://player.twitch.tv/?channel=${encodeURIComponent(STREAMER_CONFIG.twitchChannel)}&parent=${encodeURIComponent(location.hostname||'localhost')}&muted=true" allowfullscreen loading="lazy"></iframe>`; }
     // --- GESTION TWITCH & BUILD ALEATOIRE ---
- function mountTwitch() {
+function setStreamOnline() {
+  $('desktopTwitchCard').style.display = 'block';
+  $('randomBuildCard').classList.remove('active');
+
+  const mobileTwitchCard = $('mobileTwitchCard');
+  const mobileRandomBuildCard = $('mobileRandomBuildCard');
+
+  if (mobileTwitchCard) mobileTwitchCard.style.display = 'block';
+  if (mobileRandomBuildCard) mobileRandomBuildCard.classList.remove('active');
+}
+
+function setStreamOffline() {
+  $('desktopTwitchCard').style.display = 'none';
+  $('randomBuildCard').classList.add('active');
+
+  const mobileTwitchCard = $('mobileTwitchCard');
+  const mobileRandomBuildCard = $('mobileRandomBuildCard');
+
+  if (mobileTwitchCard) mobileTwitchCard.style.display = 'none';
+  if (mobileRandomBuildCard) mobileRandomBuildCard.classList.add('active');
+
+  renderRandomBuildCard();
+}
+
+function mountTwitch() {
   els.desktopTwitchMount.innerHTML = '<div id="twitch-player-desktop"></div>';
 
-  const options = {
+  if (els.mobileTwitchMount) {
+    els.mobileTwitchMount.innerHTML = twitchFrame();
+  }
+
+  const player = new Twitch.Player('twitch-player-desktop', {
     width: '100%',
     height: 200,
     channel: STREAMER_CONFIG.twitchChannel,
     parent: [location.hostname || 'localhost'],
     muted: true,
-  };
-
-  const player = new Twitch.Player('twitch-player-desktop', options);
-
-  player.addEventListener(Twitch.Player.ONLINE, () => {
-    $('desktopTwitchCard').style.display = 'block';
-    $('randomBuildCard').classList.remove('active');
   });
 
-  player.addEventListener(Twitch.Player.OFFLINE, () => {
-    $('desktopTwitchCard').style.display = 'none';
-    $('randomBuildCard').classList.add('active');
-    renderRandomBuildCard();
-  });
+  player.addEventListener(Twitch.Player.ONLINE, setStreamOnline);
+  player.addEventListener(Twitch.Player.OFFLINE, setStreamOffline);
 
   setTimeout(() => {
-    if (!player.getStream()) {
-      $('desktopTwitchCard').style.display = 'none';
-      $('randomBuildCard').classList.add('active');
-      renderRandomBuildCard();
-    }
+    if (player.getStream && player.getStream()) setStreamOnline();
+    else setStreamOffline();
   }, 3000);
 }
  
@@ -2765,48 +2780,53 @@ const getInitialLang = () => {
 
     // Afficher le build aléatoire dans la carte
 function renderRandomBuildCard() {
-      // On vérifie si on a déjà un build choisi pour ne pas en changer à chaque clic de langue, 
-      // sauf si c'est le premier chargement.
-      if (!window.currentRandomHero) {
-          const activeHeroes = HEROES.filter(h => h.enabled && h.builds && h.builds.length > 0);
-          if (!activeHeroes.length) return;
-          window.currentRandomHero = activeHeroes[Math.floor(Math.random() * activeHeroes.length)];
-          window.currentRandomBuildIdx = Math.floor(Math.random() * window.currentRandomHero.builds.length);
-      }
-      
-      const hero = window.currentRandomHero;
-      const bIdx = window.currentRandomBuildIdx;
-      const build = hero.builds[bIdx];
+  if (!window.currentRandomHero) {
+    const activeHeroes = HEROES.filter(h => h.enabled !== false && h.builds && h.builds.length > 0);
+    if (!activeHeroes.length) return;
 
-      $('randomBuildCard').innerHTML = `
-        <div class="random-card-head">
-            <span>${t('randomBuildTitle')}</span>
-            <span style="opacity:0.5; font-size:10px;">OFFLINE</span>
+    window.currentRandomHero = activeHeroes[Math.floor(Math.random() * activeHeroes.length)];
+    window.currentRandomBuildIdx = Math.floor(Math.random() * window.currentRandomHero.builds.length);
+  }
+
+  const hero = window.currentRandomHero;
+  const bIdx = window.currentRandomBuildIdx;
+  const build = hero.builds[bIdx];
+
+  const markup = `
+    <div class="random-card-head">
+      <span>${t('randomBuildTitle')}</span>
+      <span style="opacity:0.5; font-size:10px;">OFFLINE</span>
+    </div>
+    <div class="random-card-body">
+      <div class="random-hero-row">
+        <div class="portrait"><img src="${hero.portrait}" alt=""></div>
+        <div class="random-meta">
+          <div class="name">${esc(loc(hero.name))}</div>
+          <div class="role">${esc(locRole(hero.role))}</div>
         </div>
-        <div class="random-card-body">
-          <div class="random-hero-row">
-            <div class="portrait"><img src="${hero.portrait}" alt=""></div>
-            <div class="random-meta">
-              <div class="name">${esc(loc(hero.name))}</div>
-              <div class="role">${esc(locRole(hero.role))}</div>
-            </div>
-          </div>
-          <div class="random-build-label">${esc(loc(build.label))}</div>
-          <div class="random-talents-strip">
-            ${(build.talents || []).slice(0, 7).map(td => ftHTML({
-                cls:'talent-trigger floating-trigger', 
-                title:td.name, 
-                desc:td.description, 
-                inner:`<div class="talent-icon"><img src="${td.icon || svgBadge(loc(td.name))}"></div>`
-            })).join('')}
-          </div>
-          <button class="btn-suggest" onclick="window.goToBuild('${hero.id}', ${bIdx})">
-            ${t('viewBuild')}
-          </button>
-        </div>
-      `;
-      bindFloatingTriggers();
-    }
+      </div>
+      <div class="random-build-label">${esc(loc(build.label))}</div>
+      <div class="random-talents-strip">
+        ${(build.talents || []).slice(0, 7).map(td => ftHTML({
+          cls: 'talent-trigger floating-trigger',
+          title: td.name,
+          desc: td.description,
+          inner: `<div class="talent-icon"><img src="${td.icon || svgBadge(loc(td.name))}"></div>`
+        })).join('')}
+      </div>
+      <button class="btn-suggest" onclick="window.goToBuild('${hero.id}', ${bIdx})">
+        ${t('viewBuild')}
+      </button>
+    </div>
+  `;
+
+  ['randomBuildCard', 'mobileRandomBuildCard'].forEach(id => {
+    const el = $(id);
+    if (el) el.innerHTML = markup;
+  });
+
+  bindFloatingTriggers();
+}
 
     // Fonction pour naviguer vers le build proposé
     window.goToBuild = (heroId, buildIndex) => {
