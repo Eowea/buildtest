@@ -2613,98 +2613,39 @@ const getInitialLang = () => {
 
     function twitchFrame() { if(!STREAMER_CONFIG.twitchChannel) return ''; return `<iframe src="https://player.twitch.tv/?channel=${encodeURIComponent(STREAMER_CONFIG.twitchChannel)}&parent=${encodeURIComponent(location.hostname||'localhost')}&muted=true" allowfullscreen loading="lazy"></iframe>`; }
     // --- GESTION TWITCH & BUILD ALEATOIRE ---
-    function mountTwitch() {
-      // On vide les anciens mounts pour l'API
-      els.desktopTwitchMount.innerHTML = '<div id="twitch-player-desktop"></div>';
-      
-      const options = {
-        width: '100%',
-        height: 200,
-        channel: STREAMER_CONFIG.twitchChannel,
-        parent: [location.hostname || "localhost"],
-        muted: true,
-      };
+ function mountTwitch() {
+  els.desktopTwitchMount.innerHTML = '<div id="twitch-player-desktop"></div>';
 
-      const player = new Twitch.Player("twitch-player-desktop", options);
+  const options = {
+    width: '100%',
+    height: 200,
+    channel: STREAMER_CONFIG.twitchChannel,
+    parent: [location.hostname || 'localhost'],
+    muted: true,
+  };
 
-      // Si le stream est en ligne
-      player.addEventListener(Twitch.Player.ONLINE, () => {
-        $('desktopTwitchCard').style.display = 'block';
-        $('randomBuildCard').style.display = 'none';
-      });
+  const player = new Twitch.Player('twitch-player-desktop', options);
 
-      // Si le stream est hors-ligne
-      player.addEventListener(Twitch.Player.OFFLINE, () => {
-        $('desktopTwitchCard').style.display = 'none';
-        $('randomBuildCard').style.display = 'flex';
-        renderRandomBuild();
-      });
-      
-      // Sécurité : Vérification après 3 secondes si l'event ne part pas
-      setTimeout(() => {
-          if (!player.getStream()) {
-              $('desktopTwitchCard').style.display = 'none';
-              $('randomBuildCard').style.display = 'flex';
-              renderRandomBuild();
-          }
-      }, 3000);
+  player.addEventListener(Twitch.Player.ONLINE, () => {
+    $('desktopTwitchCard').style.display = 'block';
+    $('randomBuildCard').classList.remove('active');
+  });
+
+  player.addEventListener(Twitch.Player.OFFLINE, () => {
+    $('desktopTwitchCard').style.display = 'none';
+    $('randomBuildCard').classList.add('active');
+    renderRandomBuildCard();
+  });
+
+  setTimeout(() => {
+    if (!player.getStream()) {
+      $('desktopTwitchCard').style.display = 'none';
+      $('randomBuildCard').classList.add('active');
+      renderRandomBuildCard();
     }
-
-    function renderRandomBuild() {
-      // 1. Sélectionner un build au hasard
-      const activeHeroes = HEROES.filter(h => h.enabled !== false && h.builds && h.builds.length > 0);
-      if (!activeHeroes.length) return;
-      
-      const hero = activeHeroes[Math.floor(Math.random() * activeHeroes.length)];
-      const buildIdx = Math.floor(Math.random() * hero.builds.length);
-      const build = hero.builds[buildIdx];
-
-      // 2. Construire le HTML
-      const container = $('randomBuildCard');
-      container.innerHTML = `
-        <div class="random-card-head">
-          <span>${t('randomBuildTitle')}</span>
-          <span style="color:var(--text-muted); font-size:10px;">OFFLINE</span>
-        </div>
-        <div class="random-card-body">
-          <div class="random-hero-row">
-            <div class="portrait"><img src="${hero.portrait}" alt=""></div>
-            <div class="random-meta">
-              <div class="name">${esc(loc(hero.name))}</div>
-              <div class="role">${esc(locRole(hero.role))}</div>
-            </div>
-          </div>
-          <div class="random-build-label">${esc(loc(build.label))}</div>
-          <div class="random-talents-strip">
-            ${(build.talents || []).slice(0, 7).map(tData => 
-              ftHTML({
-                cls: 'talent-trigger floating-trigger',
-                title: tData.name,
-                desc: tData.description,
-                demoId: tData.demoYoutubeId,
-                inner: `<div class="talent-icon"><img src="${tData.icon || svgBadge(loc(tData.name))}" onerror="this.parentNode.classList.add('fallback');this.remove();"></div>`
-              })
-            ).join('')}
-          </div>
-          <button class="btn-suggest" onclick="selectSuggestedBuild('${hero.id}', ${buildIdx})">
-            ${t('viewBuild')}
-          </button>
-        </div>
-      `;
-      
-      // 3. Activer les tooltips sur les nouveaux éléments
-      bindFloatingTriggers();
-    }
-
-    // Fonction de navigation globale
-    window.selectSuggestedBuild = (hId, bIdx) => {
-      state.heroId = hId;
-      state.buildIndex = bIdx;
-      renderAll();
-      // Scroll vers la zone de build
-      const target = $('detailViewWrap');
-      if(target) window.scrollTo({ top: target.offsetTop - 20, behavior: 'smooth' });
-    }
+  }, 3000);
+}
+ 
 
     function syncTwitchUI() { els.desktopTwitchCard.classList.toggle('is-collapsed',!state.twitchOpen); els.toggleTwitch.textContent=state.twitchOpen?t('twitchClose'):t('twitchOpen'); }
 
@@ -2867,15 +2808,6 @@ function renderRandomBuildCard() {
       window.scrollTo({ top: $('detailViewWrap').offsetTop - 20, behavior: 'smooth' });
     };
 
-    /* ── Event Listeners ── */
-    els.langSwitcher.addEventListener('click', e => {
-      const btn = e.target.closest('.lang-btn');
-      if (btn) {
-        state.lang = btn.dataset.lang;
-        localStorage.setItem('eowea_lang', state.lang);
-        renderAll();
-      }
-    });
 
     els.searchInput.addEventListener('input',e=>{state.search=e.target.value;renderAll();});
     els.roleFilters.addEventListener('click',e=>{const b=e.target.closest('[data-role]');if(b){state.role=b.dataset.role;renderAll();}});
@@ -2901,19 +2833,18 @@ function renderRandomBuildCard() {
     els.detailView.addEventListener('click',e=>{const tab=e.target.closest('[data-build-index]');if(tab){state.buildIndex=Number(tab.dataset.buildIndex);const h=currentHero();if(h)renderBuildSection(h);updateHash();return;} const yt=e.target.closest('[data-youtube-id]');if(yt) openLightbox(yt.dataset.youtubeId);});
     els.toggleTwitch.addEventListener('click',()=>{state.twitchOpen=!state.twitchOpen;syncTwitchUI();});
     els.videoOverlay.addEventListener('click',e=>{if(e.target===els.videoOverlay||e.target===els.closeOverlayBtn) closeLightbox();});
-    els.langSwitcher.onclick = (e) => {
-      const btn = e.target.closest('.lang-btn');
-      if(btn) { 
-        state.lang = btn.dataset.lang; 
-        localStorage.setItem('eowea_lang', state.lang); 
-        renderAll(); 
-        
-        // Cette ligne force la mise à jour du texte de la carte de build aléatoire
-        if($('randomBuildCard').classList.contains('active')) {
-            renderRandomBuildCard(); 
-        }
-      }
-    };
+els.langSwitcher.addEventListener('click', (e) => {
+  const btn = e.target.closest('.lang-btn');
+  if (!btn) return;
+
+  state.lang = btn.dataset.lang;
+  localStorage.setItem('eowea_lang', state.lang);
+  renderAll();
+
+  if ($('randomBuildCard').classList.contains('active')) {
+    renderRandomBuildCard();
+  }
+});
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&els.videoOverlay.classList.contains('active')) closeLightbox();});
     window.addEventListener('resize',()=>{queueTooltipPosition();queueLayoutSync();});
     window.addEventListener('scroll', queueTooltipPosition, { passive: true, capture: true });
