@@ -258,7 +258,8 @@
     }
 
     /* ── Twitch player ── */
-    .twitch-card {
+ .twitch-card {
+      display: none; /* Caché par défaut, affiché uniquement si le live est ON */
       border-radius: var(--radius-sm);
       overflow: hidden;
       border: 1px solid var(--blue-border);
@@ -1048,8 +1049,13 @@
       .layout { grid-template-columns: minmax(0, 1fr); width: 100%; }
       .mobile-player {
         display: flex;
-        flex-direction: column;
+        flex-direction: row; /* Force Twitch à gauche et le Build à droite */
+        flex-wrap: wrap;
+        align-items: stretch;
         gap: 16px;
+      }
+      .mobile-player > * {
+        flex: 1 1 300px;
       }
       .desktop-player { display: none; }
       
@@ -1132,8 +1138,8 @@
       .social-link { flex: 1 1 100%; }
     }
     /* ── Random Build Card (Offline Replacement) ── */
-.random-build-card {
-      display: none;
+  .random-build-card {
+      display: flex; /* Visible en permanence */
       flex-direction: column;
       height: 100%;
       border: 1px solid var(--blue-border);
@@ -2648,30 +2654,16 @@ const getInitialLang = () => {
 
     function twitchFrame() { if(!STREAMER_CONFIG.twitchChannel) return ''; return `<iframe src="https://player.twitch.tv/?channel=${encodeURIComponent(STREAMER_CONFIG.twitchChannel)}&parent=${encodeURIComponent(location.hostname||'localhost')}&muted=true" allowfullscreen loading="lazy"></iframe>`; }
     // --- GESTION TWITCH & BUILD ALEATOIRE ---
-function setStreamOnline() {
+ffunction setStreamOnline() {
   $('desktopTwitchCard').style.display = 'block';
-  $('randomBuildCard').classList.add('active');
-
   const mobileTwitchCard = $('mobileTwitchCard');
-  const mobileRandomBuildCard = $('mobileRandomBuildCard');
-
   if (mobileTwitchCard) mobileTwitchCard.style.display = 'block';
-  if (mobileRandomBuildCard) mobileRandomBuildCard.classList.add('active');
-
-  renderRandomBuildCard();
 }
 
 function setStreamOffline() {
   $('desktopTwitchCard').style.display = 'none';
-  $('randomBuildCard').classList.add('active');
-
   const mobileTwitchCard = $('mobileTwitchCard');
-  const mobileRandomBuildCard = $('mobileRandomBuildCard');
-
   if (mobileTwitchCard) mobileTwitchCard.style.display = 'none';
-  if (mobileRandomBuildCard) mobileRandomBuildCard.classList.add('active');
-
-  renderRandomBuildCard();
 }
 
 function mountTwitch() {
@@ -2941,7 +2933,7 @@ els.langSwitcher.addEventListener('click', (e) => {
     window.addEventListener('resize',()=>{queueTooltipPosition();queueLayoutSync();});
     window.addEventListener('scroll', queueTooltipPosition, { passive: true, capture: true });
 
-    restoreFromHash(); mountTwitch(); syncTwitchUI(); renderAll();
+    restoreFromHash(); mountTwitch(); syncTwitchUI(); renderRandomBuildCard(); renderAll();
   </script>
 </body>
 </html>
