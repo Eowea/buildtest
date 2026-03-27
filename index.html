@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Eowea - Builds HotS</title>
   <link rel="icon" type="image/png" href="https://static.wikia.nocookie.net/allstars_gamepedia/images/e/e5/Emoji_Elements_Pack_Flower.png/">
-  <!-- Script Twitch Player -->
   <script src="https://player.twitch.tv/js/embed/v1.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
@@ -988,6 +987,30 @@
     }
     .close-overlay:hover { background: rgba(0, 229, 255, 0.2); border-color: var(--blue-bright); color: var(--blue-bright); box-shadow: 0 0 15px var(--blue-glow); }
 
+    .hero-name-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 10px;
+    }
+    .build-count-badge {
+      font-size: 10px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      color: var(--blue-bright);
+      background: rgba(0, 229, 255, 0.1);
+      border: 1px solid var(--blue-border);
+      padding: 1px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .hero-link.active .build-count-badge {
+      color: var(--gold-bright);
+      border-color: var(--gold-border);
+      background: rgba(248, 183, 0, 0.1);
+    }
+
     /* ═══════════════════════════════
        RESPONSIVE & MOBILE OPTIMIZATIONS
        ═══════════════════════════════ */
@@ -1074,6 +1097,56 @@
     @media (max-width: 520px) {
       .social-link { flex: 1 1 100%; }
     }
+    /* -- Random Build Card Styles -- */
+    .random-build-card {
+      display: none; /* Caché par défaut */
+      flex-direction: column;
+      height: 100%;
+    }
+    .random-build-card.active { display: flex; }
+
+    .random-card-head {
+      background: linear-gradient(90deg, #8000ff33, transparent);
+      color: var(--blue-bright);
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--blue-border);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .random-card-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: var(--bg-1);
+      flex-grow: 1;
+    }
+    .random-hero-info { display: flex; gap: 12px; align-items: center; }
+    .random-hero-info .portrait { width: 50px; height: 50px; clip-path: var(--hex-clip); background: var(--gold-border); padding: 2px; }
+    .random-hero-info .portrait img { clip-path: var(--hex-clip); width: 100%; height: 100%; object-fit: cover; }
+    
+    .random-build-name { color: var(--gold-bright); font-family: 'Rajdhani', sans-serif; font-weight: 700; text-transform: uppercase; font-size: 14px; margin-top: 4px; }
+    
+    .random-talents-mini { display: flex; gap: 4px; justify-content: space-between; margin: 8px 0; }
+    .random-talents-mini .talent-trigger { width: 32px; height: 32px; padding: 1px; }
+    
+    .btn-go-build {
+      width: 100%;
+      margin-top: auto;
+      background: var(--blue-soft);
+      border: 1px solid var(--blue-border);
+      color: var(--blue-bright);
+      font-family: 'Rajdhani', sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 8px;
+      cursor: pointer;
+      transition: all var(--t);
+      font-size: 12px;
+    }
+    .btn-go-build:hover { background: var(--blue-glow); border-color: var(--blue-bright); box-shadow: 0 0 10px var(--blue-glow); }
   </style>
 </head>
 <body>
@@ -1096,13 +1169,26 @@
         </div>
       </div>
       <aside class="desktop-player">
-        <div class="twitch-card" id="desktopTwitchCard">
-          <div class="twitch-head">
-            <span>Twitch</span>
-            <button class="btn" id="toggleTwitch" type="button">replier</button>
+        <div class="panel" style="height: 100%;">
+          <!-- Conteneur Twitch -->
+          <div class="twitch-card" id="desktopTwitchCard" style="height: 100%; border:none;">
+            <div class="twitch-head">
+              <span>Twitch LIVE</span>
+              <button class="btn" id="toggleTwitch" type="button">replier</button>
+            </div>
+            <div id="twitch-embed-container" style="height: 200px; background: #000;"></div>
           </div>
-          <div class="twitch-mount" id="desktopTwitchMount"></div>
-          <div class="twitch-placeholder" id="twitchPlaceholder1">Lecteur replié.</div>
+          
+          <!-- Conteneur Build Aléatoire (affiché si offline) -->
+          <div class="random-build-card" id="randomBuildCard">
+            <div class="random-card-head">
+              <span>PROPOSITION DE BUILD</span>
+              <span class="eyebrow" style="font-size: 10px;">OFFLINE</span>
+            </div>
+            <div class="random-card-body" id="randomBuildContent">
+              <!-- Rempli par JS -->
+            </div>
+          </div>
         </div>
       </aside>
     </header>
@@ -1503,7 +1589,7 @@
       },
 
       /* =======================================================
-         ==== TOUS LES HEALERS DU JEU ====
+         ==== TOUS LES HEALERS DU JEU (Corrigés et ajoutés) ====
          ======================================================= */
 
       {
@@ -1539,7 +1625,7 @@
             enabled: true, order: 1, label: { fr: 'Heal fiable', en: 'Reliable Heal' },
             summary: { fr: 'Build généraliste pour garder régularité, contrôle et sécurité.', en: 'Generalist build to keep consistency, control, and safety.' },
             buildCodeTitle: { fr: "A COLLER", en: "PASTE" },
-            buildCode: "[T1111111,Anduin]", videos:[], talents:[]
+            buildCode: "[T1111111,Anduin]", videos: [], talents:[]
           },
           {
             enabled: true, order: 2, label: { fr: 'Build Lumière', en: 'Light Build' },
@@ -1580,7 +1666,7 @@
         ],
         tips:[
           { fr: 'Utilise ton totem pour protéger un allié ou attraper un ennemi', en: 'Use your totem to protect an ally or catch an enemy.' },
-          { fr: 'Place ton Bouclier de foudre sur ton tank', en: 'Place Lightning Shield on your frontline tank.' },
+          { fr: 'Place son Bouclier de foudre sur ton tank', en: 'Place Lightning Shield on your frontline tank.' },
           { fr: 'Ne pas avoir peur d\'aller mettre des attaques de base', en: 'Don\'t be afraid to auto-attacks.' }
         ],
         builds:[
@@ -1604,7 +1690,7 @@
           },
           {
             enabled: true, order: 2, label: { fr: 'Build loup', en: 'Wolf Build' },
-            summary: { fr: 'Build plus aggressif: demande une connaissance de jeu impeccable', en: 'More aggressive build: requires flawless game knowledge.' },
+            summary: { fr: 'Build plus aggressif: demande une connaissance de jeu impéccable', en: 'More aggressive build: requires flawless game knowledge.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
             buildCode: "[T3131231,Rehgar]",
             videos:[
@@ -1725,7 +1811,7 @@
         ],
         builds:[
           {
-            enabled: true, order: 1, label: { fr: 'Build générique', en: 'Cube Build' },
+            enabled: true, order: 1, label: { fr: 'Build recommandé', en: 'Recommanded build' },
             summary: { fr: 'Build qui passe partout, peu importe le mode de jeu.', en: 'A build that works in any situation, no matter the game mode.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
             buildCode: "[T3121331,Deckard]", videos:[],
@@ -1872,7 +1958,7 @@
         ],
         builds:[
           {
-            enabled: true, order: 1, label: { fr: 'Build générique', en: 'Standard Build' },
+            enabled: true, order: 1, label: { fr: 'Build recommandé', en: 'Recommanded Build' },
             summary: { fr: 'Génère énormément d\'énergie par soi-même.', en: 'Generates a huge amount of Energy on its own.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
             buildCode: "[T3332332,Auriel]", videos:[],
@@ -1890,7 +1976,7 @@
             enabled: false, order: 2, label: { fr: 'Build W (Soins)', en: 'W Build (Healing)' },
             summary: { fr: 'Idéal si vous avez un très bon hyper-carry.', en: 'Ideal if you have a very strong hyper-carry.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
-            buildCode: "[T3332333,Auriel]", videos:[],
+            buildCode: "[T3332333,Auriel]", videos: [],
             talents:[
               { level: 1, name: { fr: 'Rayon croissant', en: 'Increasing Clarity' }, icon: '', description: { fr: 'Plus d\'énergie.', en: 'More Energy.' }, demoYoutubeId: null }
             ]
@@ -1933,7 +2019,7 @@
             enabled: true, order: 2, label: { fr: 'Transcendance', en: 'Transcendence' },
             summary: { fr: 'Le build soin classique et soutenu.', en: 'The classic sustained healing build.' },
             buildCodeTitle: { fr: "A COLLER", en: "PASTE" },
-            buildCode: "[T2111111,Kharazim]", videos:[],
+            buildCode: "[T2111111,Kharazim]", videos: [],
             talents:[
               { level: 1, name: { fr: 'Transcendance', en: 'Transcendence' }, icon: '', description: { fr: 'Soin sur la 3ème attaque.', en: 'Heal on 3rd attack.' }, demoYoutubeId: null }
             ]
@@ -2251,12 +2337,12 @@
   {
     enabled: true,
     order: 1,
-    label: { fr: 'Build générique', en: 'Standard Build' },
+    label: { fr: 'Build recommandé', en: 'Recommanded Build' },
     summary: { fr: 'Build tourné autour du laser.', en: 'Build focused on Inquisition (W).' },
     buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
     buildCode: "[T1231121,Whitemane]",
-    videos:[],
-    talents:[
+    videos: [],
+    talents: [
       {
         level: 1,
         name: { fr: 'Compassion', en: 'Compassion' },
@@ -2389,13 +2475,15 @@
     /* =========================================================================
        MOTEUR DE L'APPLICATION
        ========================================================================= */
-       
-    const getDefaultLang = () => {
-      const stored = localStorage.getItem('eowea_lang');
-      if (stored) return stored;
-      const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-      // Si le navigateur n'est pas en français, on bascule en anglais par défaut.
-      return browserLang.startsWith('fr') ? 'fr' : 'en';
+
+//Détection automatique de la langue
+    const getInitialLang = () => {
+      const saved = localStorage.getItem('eowea_lang');
+      if (saved) return saved;
+
+      // Vérifie la langue du navigateur (ex: "fr-FR" ou "en-US")
+      const browserLang = navigator.language || navigator.userLanguage;
+      return (browserLang && browserLang.toLowerCase().startsWith('fr')) ? 'fr' : 'en';
     };
 
     const state = { 
@@ -2404,7 +2492,7 @@
       heroId: null, 
       buildIndex: 0, 
       twitchOpen: true,
-      lang: getDefaultLang() 
+      lang: getInitialLang() 
     };
 
     let activeFloatingTrigger = null, hideTooltipTimer = null, tooltipRaf = 0, layoutRaf = 0;
@@ -2465,77 +2553,41 @@
     function clampBuildIndex(h) { if(!h?.builds?.length){state.buildIndex=0;return 0;} state.buildIndex=Math.min(h.builds.length-1,Math.max(0,Number(state.buildIndex)||0)); return state.buildIndex; }
     function ensureSelection() { const l=filteredHeroes(); if(state.heroId&&(!currentHero()||!l.some(h=>h.id===state.heroId))){state.heroId=null;state.buildIndex=0;} clampBuildIndex(currentHero()); }
 
+    function twitchFrame() { if(!STREAMER_CONFIG.twitchChannel) return ''; return `<iframe src="https://player.twitch.tv/?channel=${encodeURIComponent(STREAMER_CONFIG.twitchChannel)}&parent=${encodeURIComponent(location.hostname||'localhost')}&muted=true" allowfullscreen loading="lazy"></iframe>`; }
     function mountTwitch() {
-      if (!STREAMER_CONFIG.twitchChannel) return;
-      if (typeof Twitch === 'undefined') {
-        // Retry si le script Twitch est en cours de chargement
-        setTimeout(mountTwitch, 100);
-        return;
-      }
+      const options = {
+        width: '100%',
+        height: 200,
+        channel: STREAMER_CONFIG.twitchChannel,
+        parent: [location.hostname || "localhost"],
+        muted: true,
+      };
       
-      // La playlist d'Uploads de la chaine YouTube (ID Eowea remplacé avec 'UU' pour Uploads)
-      const YT_UPLOADS_PLAYLIST = 'PL4buBMBqxxrYsHjPFXo044IHL3i0GMNVtO';
-      const parentHost = location.hostname || 'localhost';
+      const player = new Twitch.Player("twitch-embed-container", options);
 
-      [els.desktopTwitchMount, els.mobileTwitchMount].forEach(mountEl => {
-        if (!mountEl || mountEl.dataset.mounted) return;
-        mountEl.dataset.mounted = '1';
-        mountEl.innerHTML = '';
-        
-        const player = new Twitch.Player(mountEl.id, {
-          width: "100%",
-          height: "100%",
-          channel: STREAMER_CONFIG.twitchChannel,
-          parent: [parentHost],
-          muted: true
-        });
+      // Détection du statut de la chaîne
+      player.addEventListener(Twitch.Player.ONLINE, () => {
+        $('desktopTwitchCard').style.display = 'block';
+        $('randomBuildCard').classList.remove('active');
+      });
 
-        let offlineTimer;
-        
-        const setOfflineFallback = () => {
-          offlineTimer = setTimeout(() => {
-            let ytFrame = mountEl.querySelector('.yt-fallback');
-            // Créer l'iframe YouTube pour remplacer le lecteur Twitch hors-ligne
-            if (!ytFrame) {
-               ytFrame = document.createElement('iframe');
-               ytFrame.className = 'yt-fallback';
-               ytFrame.width = "100%";
-               ytFrame.height = "100%";
-               ytFrame.src = `https://www.youtube.com/embed?listType=playlist&list=${YT_UPLOADS_PLAYLIST}`;
-               ytFrame.frameBorder = "0";
-               ytFrame.allowFullscreen = true;
-               mountEl.appendChild(ytFrame);
-            }
-            
-            // Masquer le lecteur Twitch et afficher YouTube
-            const twitchFrame = mountEl.querySelector('iframe:not(.yt-fallback)');
-            if (twitchFrame) twitchFrame.style.display = 'none';
-            ytFrame.style.display = 'block';
+      player.addEventListener(Twitch.Player.OFFLINE, () => {
+        $('desktopTwitchCard').style.display = 'none';
+        $('randomBuildCard').classList.add('active');
+        renderRandomBuildCard();
+      });
 
-            // Modifier l'entête
-            const head = mountEl.closest('.twitch-card').querySelector('.twitch-head span');
-            if (head) head.textContent = 'YouTube';
-          }, 3000); // 3 secondes de délai pour éviter les micro-coupures de Twitch
-        };
-
-        // Ecouter l'événement hors-ligne de Twitch
-        player.addEventListener(Twitch.Player.OFFLINE, setOfflineFallback);
-
-        // Récupérer le flux si la chaine passe en ligne
-        player.addEventListener(Twitch.Player.ONLINE, () => {
-          clearTimeout(offlineTimer);
-          const ytFrame = mountEl.querySelector('.yt-fallback');
-          if (ytFrame) ytFrame.style.display = 'none';
-          
-          const twitchFrame = mountEl.querySelector('iframe:not(.yt-fallback)');
-          if (twitchFrame) twitchFrame.style.display = 'block';
-
-          const head = mountEl.closest('.twitch-card').querySelector('.twitch-head span');
-          if (head) head.textContent = 'Twitch';
-        });
-      }); 
+      // Sécurité : si après 3 secondes on n'a pas d'info, on vérifie manuellement
+      setTimeout(() => {
+        if (player.getIsPaused() && !player.getEnded()) { // Souvent signe que c'est offline ou en attente
+             if(!player.getStream()) {
+                $('desktopTwitchCard').style.display = 'none';
+                $('randomBuildCard').classList.add('active');
+                renderRandomBuildCard();
+             }
+        }
+      }, 3000);
     }
-
     function syncTwitchUI() { els.desktopTwitchCard.classList.toggle('is-collapsed',!state.twitchOpen); els.toggleTwitch.textContent=state.twitchOpen?t('twitchClose'):t('twitchOpen'); }
 
     function updateStaticLang() {
@@ -2555,7 +2607,34 @@
     }
     
     function renderFilters() { els.roleFilters.innerHTML=roles().map(r=>`<button class="filter-chip${state.role===r?' active':''}" type="button" data-role="${r}">${locRole(r)}</button>`).join(''); }
-    function renderHeroList() { const h=filteredHeroes(); els.resultsCount.textContent = h.length > 1 ? t('resultsCount', {n:h.length}) : t('resultsCountSingular', {n:h.length}); if(!h.length){els.heroList.innerHTML=`<div class="empty-state">${t('emptyHeroList')}</div>`;return;} els.heroList.innerHTML=h.map(h=>`<button class="hero-link${h.id===state.heroId?' active':''}" type="button" data-hero-id="${h.id}"><div class="portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div class="hero-meta"><div class="hero-name">${esc(loc(h.name))}</div><div class="hero-role">${esc(locRole(h.role))}</div></div></button>`).join(''); }
+    function renderHeroList() {
+      const hList = filteredHeroes();
+      els.resultsCount.textContent = hList.length > 1 ? t('resultsCount', {n:hList.length}) : t('resultsCountSingular', {n:hList.length});
+      
+      if(!hList.length){
+        els.heroList.innerHTML=`<div class="empty-state">${t('emptyHeroList')}</div>`;
+        return;
+      }
+
+      els.heroList.innerHTML = hList.map(h => {
+        // On compte uniquement les builds qui ne sont pas explicitement désactivés
+        const bCount = (h.builds || []).filter(b => b.enabled !== false).length;
+        
+        return `
+        <button class="hero-link${h.id===state.heroId?' active':''}" type="button" data-hero-id="${h.id}">
+          <div class="portrait" data-fallback="${esc(initials(loc(h.name)))}">
+            <img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" />
+          </div>
+          <div class="hero-meta">
+            <div class="hero-name-row">
+              <div class="hero-name">${esc(loc(h.name))}</div>
+              ${bCount > 0 ? `<span class="build-count-badge">${bCount} Build${bCount > 1 ? 's' : ''}</span>` : ''}
+            </div>
+            <div class="hero-role">${esc(locRole(h.role))}</div>
+          </div>
+        </button>`;
+      }).join('');
+    }
 
     function ftHTML({cls,title,desc,demoId,inner}) { return `<button class="${cls}" type="button" aria-label="${esc(loc(title))}" data-floating-title="${esc(loc(title))}" data-floating-description="${esc(loc(desc)||t('descUnavailable'))}" data-floating-demo-youtube-id="${esc(parseYouTubeId(demoId||''))}">${inner}</button>`; }
     function renderSpells(sp=[]) {
@@ -2608,6 +2687,55 @@
 
     function openLightbox(ref) { const id=parseYouTubeId(ref); if(!id){els.videoOverlay.classList.add('active','error');els.videoOverlay.classList.remove('loading');els.videoOverlay.setAttribute('aria-hidden','false');els.overlayStatusText.textContent=t('invalidId');return;} els.videoOverlay.classList.add('active','loading');els.videoOverlay.classList.remove('error');els.videoOverlay.setAttribute('aria-hidden','false');els.overlayStatusText.textContent=t('loading'); const cl=()=>{els.expandedYoutube.removeEventListener('load',ok);els.expandedYoutube.removeEventListener('error',ko);}; const ok=()=>{cl();els.videoOverlay.classList.remove('loading','error');}; const ko=()=>{cl();els.videoOverlay.classList.remove('loading');els.videoOverlay.classList.add('error');els.overlayStatusText.textContent=t('loadError');}; els.expandedYoutube.removeAttribute('src'); els.expandedYoutube.addEventListener('load',ok,{once:true}); els.expandedYoutube.addEventListener('error',ko,{once:true}); els.expandedYoutube.src=ytEmbed(id,true); }
     function closeLightbox() { els.videoOverlay.classList.remove('active','loading','error'); els.videoOverlay.setAttribute('aria-hidden','true'); els.expandedYoutube.removeAttribute('src'); }
+    // Choisir un build au hasard parmi les héros activés
+    function getRandomBuildData() {
+      const activeHeroes = HEROES.filter(h => h.enabled !== false && h.builds && h.builds.length > 0);
+      const randomHero = activeHeroes[Math.floor(Math.random() * activeHeroes.length)];
+      const availableBuilds = randomHero.builds.filter(b => b.enabled !== false);
+      const randomIndex = Math.floor(Math.random() * availableBuilds.length);
+      return { hero: randomHero, build: availableBuilds[randomIndex], index: randomIndex };
+    }
+
+    // Afficher le build aléatoire dans la carte
+    function renderRandomBuildCard() {
+      const data = getRandomBuildData();
+      const h = data.hero;
+      const b = data.build;
+      
+      const content = `
+        <div class="random-hero-info">
+          <div class="portrait"><img src="${h.portrait}" alt=""></div>
+          <div>
+            <div class="hero-name" style="font-size:16px;">${esc(loc(h.name))}</div>
+            <div class="hero-role" style="font-size:11px;">${esc(locRole(h.role))}</div>
+          </div>
+        </div>
+        <div class="random-build-name">${esc(loc(b.label))}</div>
+        <div class="random-talents-mini">
+          ${(b.talents || []).slice(0, 7).map(tData => 
+            ftHTML({
+              cls: 'talent-trigger floating-trigger',
+              title: tData.name,
+              desc: tData.description,
+              demoId: tData.demoYoutubeId,
+              inner: `<div class="talent-icon"><img src="${tData.icon || svgBadge(loc(tData.name))}" onerror="this.parentNode.classList.add('fallback');this.remove();"></div>`
+            })
+          ).join('')}
+        </div>
+        <button class="btn-go-build" onclick="goToBuild('${h.id}', ${data.index})">Voir ce build</button>
+      `;
+      
+      $('randomBuildContent').innerHTML = content;
+      bindFloatingTriggers(); // Réattache les tooltips
+    }
+
+    // Fonction pour naviguer vers le build proposé
+    window.goToBuild = (heroId, buildIndex) => {
+      state.heroId = heroId;
+      state.buildIndex = buildIndex;
+      renderAll();
+      window.scrollTo({ top: $('detailViewWrap').offsetTop - 20, behavior: 'smooth' });
+    };
 
     /* ── Event Listeners ── */
     els.langSwitcher.addEventListener('click', e => {
