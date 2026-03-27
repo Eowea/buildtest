@@ -273,7 +273,11 @@
     .twitch-card.is-collapsed .twitch-mount { display: none; }
     .twitch-card.is-collapsed .twitch-placeholder { display: grid; }
 
-    .mobile-player { display: none; padding: 0 14px 14px; }
+    .mobile-player {
+  display: none;
+  padding: 0 14px 14px;
+  gap: 12px;
+}
 
     /* ── Shared button ── */
     .btn {
@@ -1016,7 +1020,10 @@
        ═══════════════════════════════ */
     @media (max-width: 1180px) {
       .topbar, .layout { grid-template-columns: minmax(0, 1fr); width: 100%; }
-      .mobile-player { display: block; }
+      .mobile-player {
+  display: grid;
+  gap: 12px;
+}
       .desktop-player { display: none; }
       
       .hero-list {
@@ -1251,14 +1258,15 @@
     </aside>
     </header>
 
-    <div class="panel mobile-player">
-      <div class="twitch-card">
-        <div class="twitch-head"><span>Twitch</span></div>
-        <div class="twitch-mount" id="mobileTwitchMount"></div>
-        <div class="twitch-placeholder" id="twitchPlaceholder2">Lecteur replié.</div>
-      </div>
-    </div>
+<div class="panel mobile-player">
+  <div class="twitch-card" id="mobileTwitchCard">
+    <div class="twitch-head"><span>Twitch LIVE</span></div>
+    <div class="twitch-mount" id="mobileTwitchMount"></div>
+    <div class="twitch-placeholder" id="twitchPlaceholder2">Lecteur replié.</div>
+  </div>
 
+  <div class="random-build-card" id="mobileRandomBuildCard"></div>
+</div>
     <section class="panel toolbar">
       <div class="filters" id="roleFilters" role="tablist" aria-label="Filtrer par rôle"></div>
       <div class="toolbar-row">
