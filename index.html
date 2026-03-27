@@ -121,25 +121,34 @@
        HEADER
        ═══════════════════════════════ */
    .topbar {
-      display: grid;
-      grid-template-columns: 1fr auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       gap: 16px;
       padding: 24px;
       border-bottom: 2px solid var(--gold-dim);
     }
 
-    .brand-block { display: grid; gap: 14px; align-content: start; }
+    .brand-block { 
+      flex: 1 1 300px;
+      display: grid; 
+      gap: 14px; 
+      align-content: start; 
+    }
 
     .desktop-player {
       display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
       gap: 16px;
       align-items: stretch;
+      justify-content: flex-end;
     }
 
     .desktop-player > * {
+      flex: 0 0 300px;
       width: 300px;
     }
-
     .eyebrow, .twitch-head, .filter-chip, .role-badge, .card-head, .talent-level, .build-tab, .guide-video-kicker, .youtube-badge {
       font-family: 'Rajdhani', sans-serif;
       text-transform: uppercase;
@@ -283,11 +292,11 @@
     .twitch-card.is-collapsed .twitch-mount { display: none; }
     .twitch-card.is-collapsed .twitch-placeholder { display: grid; }
 
-    .mobile-player {
-  display: none;
-  padding: 0 14px 14px;
-  gap: 12px;
-}
+.mobile-player {
+      display: none;
+      padding: 0 14px 14px;
+      gap: 16px;
+    }
 
     /* ── Shared button ── */
     .btn {
@@ -1034,12 +1043,18 @@
     /* ═══════════════════════════════
        RESPONSIVE & MOBILE OPTIMIZATIONS
        ═══════════════════════════════ */
-    @media (max-width: 1180px) {
-      .topbar, .layout { grid-template-columns: minmax(0, 1fr); width: 100%; }
+@media (max-width: 1180px) {
+      .topbar, .layout { width: 100%; }
+      .layout { grid-template-columns: minmax(0, 1fr); }
       .mobile-player {
-  display: grid;
-  gap: 12px;
-}
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+      }
+      .mobile-player > * {
+        flex: 1 1 300px;
+      }
       .desktop-player { display: none; }
       
       .hero-list {
@@ -1121,7 +1136,7 @@
       .social-link { flex: 1 1 100%; }
     }
     /* ── Random Build Card (Offline Replacement) ── */
-    .random-build-card {
+.random-build-card {
       display: none;
       flex-direction: column;
       height: 100%;
@@ -2639,26 +2654,26 @@ const getInitialLang = () => {
     // --- GESTION TWITCH & BUILD ALEATOIRE ---
 function setStreamOnline() {
   $('desktopTwitchCard').style.display = 'block';
-  $('randomBuildCard').classList.add('active');
+  $('randomBuildCard').style.display = 'flex';
 
   const mobileTwitchCard = $('mobileTwitchCard');
   const mobileRandomBuildCard = $('mobileRandomBuildCard');
 
   if (mobileTwitchCard) mobileTwitchCard.style.display = 'block';
-  if (mobileRandomBuildCard) mobileRandomBuildCard.classList.add('active');
+  if (mobileRandomBuildCard) mobileRandomBuildCard.style.display = 'flex';
 
   renderRandomBuildCard();
 }
 
 function setStreamOffline() {
   $('desktopTwitchCard').style.display = 'none';
-  $('randomBuildCard').classList.add('active');
+  $('randomBuildCard').style.display = 'flex';
 
   const mobileTwitchCard = $('mobileTwitchCard');
   const mobileRandomBuildCard = $('mobileRandomBuildCard');
 
   if (mobileTwitchCard) mobileTwitchCard.style.display = 'none';
-  if (mobileRandomBuildCard) mobileRandomBuildCard.classList.add('active');
+  if (mobileRandomBuildCard) mobileRandomBuildCard.style.display = 'flex';
 
   renderRandomBuildCard();
 }
