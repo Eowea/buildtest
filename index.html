@@ -1167,13 +1167,13 @@
       text-transform: uppercase;
     }
 
-    .random-build-label {
+.random-build-label {
       font-family: 'Cinzel', serif;
       font-size: 14px;
       color: var(--gold-bright);
       margin: 4px 0;
       font-weight: 800; /* Nom du build en gras */
-      text-transform: uppercase
+      text-transform: uppercase;
     }
 
     .random-talents-strip {
@@ -2815,7 +2815,7 @@ const getInitialLang = () => {
     }
 
     // Afficher le build aléatoire dans la carte
-  function renderRandomBuildCard() {
+function renderRandomBuildCard() {
       // On vérifie si on a déjà un build choisi pour ne pas en changer à chaque clic de langue, 
       // sauf si c'est le premier chargement.
       if (!window.currentRandomHero) {
