@@ -120,9 +120,9 @@
     /* ═══════════════════════════════
        HEADER
        ═══════════════════════════════ */
-   .topbar {
+.topbar {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: space-between;
       gap: 16px;
       padding: 24px;
@@ -130,8 +130,9 @@
     }
 
     .brand-block { 
-      flex: 1 1 300px;
-      display: grid; 
+      flex: 1;
+      display: flex;
+      flex-direction: column;
       gap: 14px; 
       align-content: start; 
     }
@@ -139,16 +140,15 @@
     .desktop-player {
       display: flex;
       flex-direction: row;
-      flex-wrap: nowrap;
       gap: 16px;
       align-items: stretch;
-      justify-content: flex-end;
     }
 
     .desktop-player > * {
-      flex: 0 0 300px;
       width: 300px;
+      flex-shrink: 0;
     }
+
     .eyebrow, .twitch-head, .filter-chip, .role-badge, .card-head, .talent-level, .build-tab, .guide-video-kicker, .youtube-badge {
       font-family: 'Rajdhani', sans-serif;
       text-transform: uppercase;
@@ -1044,16 +1044,12 @@
        RESPONSIVE & MOBILE OPTIMIZATIONS
        ═══════════════════════════════ */
 @media (max-width: 1180px) {
-      .topbar, .layout { width: 100%; }
-      .layout { grid-template-columns: minmax(0, 1fr); }
+      .topbar { flex-direction: column; }
+      .layout { grid-template-columns: minmax(0, 1fr); width: 100%; }
       .mobile-player {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: stretch;
-      }
-      .mobile-player > * {
-        flex: 1 1 300px;
+        flex-direction: column;
+        gap: 16px;
       }
       .desktop-player { display: none; }
       
@@ -1145,7 +1141,7 @@
       border-radius: var(--radius-sm);
       overflow: hidden;
     }
-    .random-build-card.active { display: flex; }
+    .random-build-card.active { display: flex !important; }
 
     .random-card-head {
       display: flex;
@@ -2654,26 +2650,26 @@ const getInitialLang = () => {
     // --- GESTION TWITCH & BUILD ALEATOIRE ---
 function setStreamOnline() {
   $('desktopTwitchCard').style.display = 'block';
-  $('randomBuildCard').style.display = 'flex';
+  $('randomBuildCard').classList.add('active');
 
   const mobileTwitchCard = $('mobileTwitchCard');
   const mobileRandomBuildCard = $('mobileRandomBuildCard');
 
   if (mobileTwitchCard) mobileTwitchCard.style.display = 'block';
-  if (mobileRandomBuildCard) mobileRandomBuildCard.style.display = 'flex';
+  if (mobileRandomBuildCard) mobileRandomBuildCard.classList.add('active');
 
   renderRandomBuildCard();
 }
 
 function setStreamOffline() {
   $('desktopTwitchCard').style.display = 'none';
-  $('randomBuildCard').style.display = 'flex';
+  $('randomBuildCard').classList.add('active');
 
   const mobileTwitchCard = $('mobileTwitchCard');
   const mobileRandomBuildCard = $('mobileRandomBuildCard');
 
   if (mobileTwitchCard) mobileTwitchCard.style.display = 'none';
-  if (mobileRandomBuildCard) mobileRandomBuildCard.style.display = 'flex';
+  if (mobileRandomBuildCard) mobileRandomBuildCard.classList.add('active');
 
   renderRandomBuildCard();
 }
