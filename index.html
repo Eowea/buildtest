@@ -2970,21 +2970,26 @@ const markup = `
       }
     });
     
-    els.heroList.addEventListener('click',e=>{
-      const b=e.target.closest('[data-hero-id]');
-      if(b){
-        state.heroId=b.dataset.heroId;
-        state.buildIndex=0;
+els.heroList.addEventListener('click', e => {
+      const b = e.target.closest('[data-hero-id]');
+      if (b) {
+        state.heroId = b.dataset.heroId;
+        state.buildIndex = 0;
         renderAll();
-        if (window.innerWidth <= 1180) {
-          setTimeout(() => {
-            const detailEl = document.getElementById('detailViewWrap');
-            if (detailEl) {
-              const y = detailEl.getBoundingClientRect().top + window.scrollY - 160;
-              window.scrollTo({ top: y, behavior: 'smooth' });
-            }
-          }, 50);
-        }
+        
+        // On laisse une micro-seconde au navigateur pour afficher la fiche du héros
+        setTimeout(() => {
+          const detailEl = document.getElementById('detailViewWrap');
+          if (detailEl) {
+            // On cible le haut de la fiche du héros, et on retire 140 pixels 
+            // pour que la barre de recherche flottante ne cache pas le portrait et le nom.
+            const offset = window.innerWidth <= 640 ? 120 : 140;
+            const y = detailEl.getBoundingClientRect().top + window.scrollY - offset;
+            
+            // Remonte de manière fluide
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }, 50);
       }
     });
 
