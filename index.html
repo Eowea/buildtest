@@ -52,8 +52,8 @@
     }
 
     /* ── Reset ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; overflow-x: hidden; }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', system-ui, sans-serif;
@@ -63,7 +63,7 @@
       -webkit-font-smoothing: antialiased;
       min-height: 100vh;
       width: 100%;
-      overflow-x: hidden;
+      overflow-x: clip; /* Remplacement de hidden par clip pour autoriser la barre flottante */
     }
 
     /* ── Nexus Background Effect (OPTIMIZED) ── */
@@ -333,10 +333,10 @@
       padding: 16px;
       display: grid;
       gap: 12px;
+      position: -webkit-sticky;
       position: sticky;
       top: 16px;
       z-index: 50;
-      /* On ajoute une ombre forte pour bien détacher la barre lorsqu'elle passe sur les autres contenus */
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.95), inset 0 1px 0 rgba(255, 255, 255, 0.05);
     }
     .toolbar-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
