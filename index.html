@@ -2914,8 +2914,34 @@ const markup = `
       }, 50);
     };
 
-    els.searchInput.addEventListener('input',e=>{state.search=e.target.value;renderAll();});
-    els.roleFilters.addEventListener('click',e=>{const b=e.target.closest('[data-role]');if(b){state.role=b.dataset.role;renderAll();}});
+   // Fonction pour remonter en douceur au niveau de la liste des héros
+    function scrollToHeroes() {
+      const layoutEl = document.querySelector('.layout');
+      if (layoutEl) {
+        // On calcule la position de la liste, moins la hauteur de la barre flottante (~130px)
+        const y = layoutEl.getBoundingClientRect().top + window.scrollY - 130;
+        
+        // On remonte uniquement si l'utilisateur est descendu sous la liste
+        if (window.scrollY > y + 20) {
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }
+    }
+
+    els.searchInput.addEventListener('input', e => {
+      state.search = e.target.value;
+      renderAll();
+      scrollToHeroes();
+    });
+
+    els.roleFilters.addEventListener('click', e => {
+      const b = e.target.closest('[data-role]');
+      if (b) {
+        state.role = b.dataset.role;
+        renderAll();
+        scrollToHeroes();
+      }
+    });
     
     els.heroList.addEventListener('click',e=>{
       const b=e.target.closest('[data-hero-id]');
