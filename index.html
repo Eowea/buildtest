@@ -905,6 +905,17 @@
       border-color: var(--blue-bright);
       box-shadow: inset 0 0 10px rgba(0,0,0,0.8), 0 4px 15px var(--blue-glow);
     }
+    .build-code-box.is-copied {
+  color: var(--gold-bright);
+  border-color: var(--gold-bright);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.8), 0 4px 15px var(--gold-glow);
+}
+
+.build-code-box.is-copy-error {
+  color: #ff8f8f;
+  border-color: rgba(255, 80, 80, 0.7);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.8), 0 4px 15px rgba(255, 80, 80, 0.25);
+}
 
     /* ── Videos ── */
     .videos-layout { 
@@ -2577,6 +2588,10 @@
       loadError: { fr: "Impossible de charger la vidéo", en: "Cannot load the video" },
       randomBuildTitle: { fr: "Proposition de build", en: "Suggested Build" },
       viewBuild: { fr: "Voir ce build", en: "View Build" },
+      copySuccess: { fr: "Build copié !", en: "Build copied!" },
+      copyError: { fr: "Copie impossible", en: "Copy failed" },
+      copyHint: { fr: "Clique pour copier", en: "Click to copy" },
+      
     };
 
     /* =========================================================================
@@ -2766,7 +2781,69 @@ function mountTwitch() {
     }
     function renderTalentBoard(ts=[]) { if(!ts.length) return `<div class="empty-state">${t('emptyTalents')}</div>`; return `<section class="talent-board-wrap"><div class="talent-board-scroller"><div class="talent-board-track">${ts.map(tData=>`<article class="talent-card"><div class="talent-level">${t('level')} ${esc(String(tData.level))}</div>${ftHTML({cls:'talent-trigger floating-trigger',title:tData.name,desc:tData.description,demoId:tData.demoYoutubeId||tData.demoYoutubeUrl,inner:`<div class="talent-icon" data-fallback="${esc(initials(loc(tData.name)))}"><img src="${tData.icon||svgBadge(loc(tData.name))}" alt="${esc(loc(tData.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`})}<div class="talent-title-card">${esc(loc(tData.name))}</div></article>`).join('')}</div></div></section>`; }
     
-    function renderBuildCode(b) { if(!b.buildCode) return ''; const title = esc(loc(b.buildCodeTitle) || t('defaultBuildCodeTitle')); return `<div class="build-code-wrap"><div class="build-code-title">${title}</div><div class="build-code-box" title="Cliquez pour sélectionner">${esc(b.buildCode)}</div></div>`; }
+function renderBuildCode(b) {
+  if (!b.buildCode) return '';
+
+  const title = esc(loc(b.buildCodeTitle) || t('defaultBuildCodeTitle'));
+  const code = esc(b.buildCode);
+  const hint = esc(t('copyHint'));
+
+  return `
+    <div class="build-code-wrap">
+      <div class="build-code-title">${title}</div>
+      <button
+        class="build-code-box"
+        type="button"
+        title="${hint}"
+        aria-label="${hint}"
+        data-build-code="${code}"
+        data-copy-default="${code}"
+      >${code}</button>
+    </div>
+  `;
+}
+    async function copyBuildCode(button) {
+  if (!button) return;
+
+  const buildCode = button.dataset.buildCode || button.dataset.copyDefault || '';
+  if (!buildCode) return;
+
+  const originalText = button.dataset.copyDefault || buildCode;
+
+  const setFeedback = (messageKey, isError = false) => {
+    button.textContent = t(messageKey);
+    button.disabled = true;
+    button.classList.toggle('is-copied', !isError);
+    button.classList.toggle('is-copy-error', isError);
+
+    clearTimeout(button._copyTimer);
+    button._copyTimer = setTimeout(() => {
+      button.textContent = originalText;
+      button.disabled = false;
+      button.classList.remove('is-copied', 'is-copy-error');
+    }, 1600);
+  };
+
+  try {
+    await navigator.clipboard.writeText(buildCode);
+    setFeedback('copySuccess', false);
+  } catch (err) {
+    try {
+      const temp = document.createElement('textarea');
+      temp.value = buildCode;
+      temp.setAttribute('readonly', '');
+      temp.style.position = 'absolute';
+      temp.style.left = '-9999px';
+      document.body.appendChild(temp);
+      temp.select();
+      document.execCommand('copy');
+      document.body.removeChild(temp);
+      setFeedback('copySuccess', false);
+    } catch (fallbackErr) {
+      setFeedback('copyError', true);
+    }
+  }
+}
     
     function hasGuide(g) { return !!parseYouTubeId(g?.youtubeId||g?.youtubeUrl||g?.url||''); }
     function renderGuide(g) { const id=parseYouTubeId(g?.youtubeId||g?.youtubeUrl||g?.url||''); if(!id) return ''; return `<section class="video-group"><button class="guide-video-card" type="button" data-youtube-id="${id}"><div class="guide-video-media"><img src="${ytThumb(id)}" alt="${esc(loc(g.title))}" loading="lazy" />${APP_CONFIG.showGuideBadge ? '<span class="youtube-badge">guide</span>' : ''}<span class="youtube-play"></span></div><div class="guide-video-content"><div class="guide-video-kicker">${t('mainVideo')}</div><div class="guide-video-title">${esc(loc(g.title)||'Guide')}</div><div class="guide-video-desc">${esc(loc(g.desc)||'')}</div><div class="guide-video-cta">${t('seeGuide')}</div></div></button></section>`; }
@@ -2993,7 +3070,27 @@ els.heroList.addEventListener('click', (e) => {
       }, 250); // Attend un quart de seconde pour fluidifier la frappe
     });
 
-    els.detailView.addEventListener('click',e=>{const tab=e.target.closest('[data-build-index]');if(tab){state.buildIndex=Number(tab.dataset.buildIndex);const h=currentHero();if(h)renderBuildSection(h);updateHash();return;} const yt=e.target.closest('[data-youtube-id]');if(yt) openLightbox(yt.dataset.youtubeId);});
+   els.detailView.addEventListener('click', (e) => {
+  const tab = e.target.closest('[data-build-index]');
+  if (tab) {
+    state.buildIndex = Number(tab.dataset.buildIndex);
+    const h = currentHero();
+    if (h) renderBuildSection(h);
+    updateHash();
+    return;
+  }
+
+  const buildCodeBtn = e.target.closest('.build-code-box[data-build-code]');
+  if (buildCodeBtn) {
+    copyBuildCode(buildCodeBtn);
+    return;
+  }
+
+  const yt = e.target.closest('[data-youtube-id]');
+  if (yt) {
+    openLightbox(yt.dataset.youtubeId);
+  }
+});
     els.toggleTwitch.addEventListener('click',()=>{state.twitchOpen=!state.twitchOpen;syncTwitchUI();});
     els.videoOverlay.addEventListener('click',e=>{if(e.target===els.videoOverlay||e.target===els.closeOverlayBtn) closeLightbox();});
 els.langSwitcher.addEventListener('click', (e) => {
