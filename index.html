@@ -2981,20 +2981,37 @@ const markup = `
 
   bindFloatingTriggers();
 }
+function resetHeroNavigationFilters() {
+  if (typeof searchTimeout !== 'undefined') {
+    clearTimeout(searchTimeout);
+  }
 
+  state.search = '';
+  state.role = 'all';
+
+  if (els.searchInput) {
+    els.searchInput.value = '';
+    els.searchInput.blur();
+  }
+}
     // Fonction pour naviguer vers le build proposé
-    window.goToBuild = (heroId, buildIndex) => {
-      state.heroId = heroId;
-      state.buildIndex = buildIndex;
-      renderAll();
-      setTimeout(() => {
-        const detailEl = document.getElementById('detailViewWrap');
-        if (detailEl) {
-          const y = detailEl.getBoundingClientRect().top + window.scrollY - 160;
-          window.scrollTo({ top: y, behavior: 'smooth' });
-        }
-      }, 50);
-    };
+window.goToBuild = (heroId, buildIndex) => {
+  resetHeroNavigationFilters();
+
+  state.heroId = heroId;
+  state.buildIndex = buildIndex;
+
+  renderAll();
+
+  requestAnimationFrame(() => {
+    const detailEl = document.getElementById('detailViewWrap');
+    if (!detailEl) return;
+
+    const offset = window.innerWidth <= 640 ? 120 : 160;
+    const y = detailEl.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  });
+};
 
 // Fonction pour scroller en douceur au niveau de la liste des héros
    function scrollToHeroes() {
