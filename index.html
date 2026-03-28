@@ -2914,17 +2914,14 @@ const markup = `
       }, 50);
     };
 
-   // Fonction pour remonter en douceur au niveau de la liste des héros
+// Fonction pour scroller en douceur au niveau de la liste des héros
     function scrollToHeroes() {
       const layoutEl = document.querySelector('.layout');
       if (layoutEl) {
-        // On calcule la position de la liste, moins la hauteur de la barre flottante (~130px)
+        // On calcule la position de la grille, moins la hauteur de la barre flottante (environ 130px)
         const y = layoutEl.getBoundingClientRect().top + window.scrollY - 130;
-        
-        // On remonte uniquement si l'utilisateur est descendu sous la liste
-        if (window.scrollY > y + 20) {
-          window.scrollTo({ top: y, behavior: 'smooth' });
-        }
+        // Défilement fluide forcé peu importe la position
+        window.scrollTo({ top: y, behavior: 'smooth' });
       }
     }
 
@@ -2932,6 +2929,15 @@ const markup = `
       state.search = e.target.value;
       renderAll();
       scrollToHeroes();
+    });
+
+    els.roleFilters.addEventListener('click', e => {
+      const b = e.target.closest('[data-role]');
+      if (b) {
+        state.role = b.dataset.role;
+        renderAll();
+        scrollToHeroes();
+      }
     });
 
     els.roleFilters.addEventListener('click', e => {
