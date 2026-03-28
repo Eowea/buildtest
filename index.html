@@ -2940,57 +2940,42 @@ const markup = `
       }
     }
 
-    // Un timer pour éviter que la recherche ne saccade à chaque lettre frappée
+// Un timer pour éviter que la recherche ne saccade à chaque lettre frappée
     let searchTimeout;
     
     els.searchInput.addEventListener('input', e => {
       clearTimeout(searchTimeout);
       searchTimeout = setTimeout(() => {
         state.search = e.target.value;
-        renderAll();
-        scrollToHeroes();
-      }, 250); // Attend un quart de seconde que l'utilisateur finisse de taper
-    });
-
-    els.roleFilters.addEventListener('click', e => {
-      const b = e.target.closest('[data-role]');
-      if (b) {
-        state.role = b.dataset.role;
-        renderAll();
-        scrollToHeroes();
-      }
-    });
-
-    els.roleFilters.addEventListener('click', e => {
-      const b = e.target.closest('[data-role]');
-      if (b) {
-        state.role = b.dataset.role;
-        renderAll();
-        scrollToHeroes();
-      }
-    });
-    
-els.heroList.addEventListener('click', e => {
-      const b = e.target.closest('[data-hero-id]');
-      if (b) {
-        state.heroId = b.dataset.heroId;
-        state.buildIndex = 0;
+        
+        // --- NOUVEAUTÉ : Auto-sélection dès qu'on tape ---
+        const matches = filteredHeroes();
+        
+        // Si la recherche n'est pas vide et qu'il y a des résultats
+        if (state.search.trim() !== '' && matches.length > 0) {
+          // On sélectionne le premier héros trouvé
+          // (sauf si le héros actuellement sélectionné correspond déjà à la recherche)
+          if (!state.heroId || !matches.some(h => h.id === state.heroId)) {
+            state.heroId = matches[0].id;
+            state.buildIndex = 0;
+          }
+        }
+        
         renderAll();
         
-        // On laisse une micro-seconde au navigateur pour afficher la fiche du héros
-        setTimeout(() => {
+        // On scrolle doucement vers la fiche du héros affiché
+        if (state.heroId) {
           const detailEl = document.getElementById('detailViewWrap');
           if (detailEl) {
-            // On cible le haut de la fiche du héros, et on retire 140 pixels 
-            // pour que la barre de recherche flottante ne cache pas le portrait et le nom.
             const offset = window.innerWidth <= 640 ? 120 : 140;
             const y = detailEl.getBoundingClientRect().top + window.scrollY - offset;
-            
-            // Remonte de manière fluide
             window.scrollTo({ top: y, behavior: 'smooth' });
           }
-        }, 50);
-      }
+        } else {
+          // S'il n'y a pas de résultat, on scrolle juste vers la liste vide
+          scrollToHeroes();
+        }
+      }, 250); // Attend un quart de seconde pour fluidifier la frappe
     });
 
     els.detailView.addEventListener('click',e=>{const tab=e.target.closest('[data-build-index]');if(tab){state.buildIndex=Number(tab.dataset.buildIndex);const h=currentHero();if(h)renderBuildSection(h);updateHash();return;} const yt=e.target.closest('[data-youtube-id]');if(yt) openLightbox(yt.dataset.youtubeId);});
