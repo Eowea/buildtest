@@ -93,7 +93,7 @@
     ::-webkit-scrollbar-thumb { background: var(--blue-border); border-radius: 4px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--blue); }
 
-    /* ── Layout (SAFE SIZING FOR MOBILE) ── */
+  /* ── Layout (SAFE SIZING FOR MOBILE) ── */
     .page {
       position: relative;
       z-index: 1;
@@ -101,7 +101,8 @@
       max-width: var(--content-max);
       padding: 0 16px;
       margin: 16px auto 48px;
-      display: grid;
+      display: flex;
+      flex-direction: column;
       gap: 16px;
       box-sizing: border-box;
     }
@@ -332,10 +333,12 @@
       padding: 16px;
       display: grid;
       gap: 12px;
-      position: relative;
-      z-index: 8;
+      position: sticky;
+      top: 16px;
+      z-index: 50;
+      /* On ajoute une ombre forte pour bien détacher la barre lorsqu'elle passe sur les autres contenus */
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.95), inset 0 1px 0 rgba(255, 255, 255, 0.05);
     }
-
     .toolbar-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
 
     .search-wrap { position: relative; flex: 1 1 200px; min-width: 0; width: 100%; }
@@ -1077,9 +1080,11 @@
       .video-modal { width: 100%; }
     }
 
-    @media (max-width: 640px) {
+@media (max-width: 640px) {
       .page { width: 100%; max-width: 100%; padding: 0 12px; margin: 8px auto 16px; box-sizing: border-box; }
       .topbar, .toolbar, .sidebar, .content { padding: 14px; width: 100%; box-sizing: border-box; }
+      
+      .toolbar { top: 8px; } /* Ajuste l'espacement flottant sur petit écran */
       
       .topbar { text-align: center; }
       .brand-block { justify-items: center; text-align: center; }
@@ -2900,9 +2905,14 @@ const markup = `
       state.heroId = heroId;
       state.buildIndex = buildIndex;
       renderAll();
-      window.scrollTo({ top: $('detailViewWrap').offsetTop - 20, behavior: 'smooth' });
+      setTimeout(() => {
+        const detailEl = document.getElementById('detailViewWrap');
+        if (detailEl) {
+          const y = detailEl.getBoundingClientRect().top + window.scrollY - 160;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }, 50);
     };
-
 
     els.searchInput.addEventListener('input',e=>{state.search=e.target.value;renderAll();});
     els.roleFilters.addEventListener('click',e=>{const b=e.target.closest('[data-role]');if(b){state.role=b.dataset.role;renderAll();}});
@@ -2917,7 +2927,7 @@ const markup = `
           setTimeout(() => {
             const detailEl = document.getElementById('detailViewWrap');
             if (detailEl) {
-              const y = detailEl.getBoundingClientRect().top + window.scrollY - 16;
+              const y = detailEl.getBoundingClientRect().top + window.scrollY - 160;
               window.scrollTo({ top: y, behavior: 'smooth' });
             }
           }, 50);
