@@ -2924,7 +2924,40 @@ const markup = `
 
 // Un timer pour éviter que la recherche ne saccade à chaque lettre frappée
     let searchTimeout;
-    
+    els.roleFilters.addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-role]');
+  if (!btn) return;
+
+  state.role = btn.dataset.role;
+
+  const matches = filteredHeroes();
+
+  if (!matches.some(h => h.id === state.heroId)) {
+    state.heroId = matches[0]?.id || null;
+    state.buildIndex = 0;
+  }
+
+  renderAll();
+  scrollToHeroes();
+});
+
+els.heroList.addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-hero-id]');
+  if (!btn) return;
+
+  state.heroId = btn.dataset.heroId;
+  state.buildIndex = 0;
+  renderAll();
+
+  setTimeout(() => {
+    const detailEl = document.getElementById('detailViewWrap');
+    if (!detailEl) return;
+
+    const offset = window.innerWidth <= 640 ? 120 : 140;
+    const y = detailEl.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }, 0);
+});
     els.searchInput.addEventListener('input', e => {
       clearTimeout(searchTimeout);
       searchTimeout = setTimeout(() => {
