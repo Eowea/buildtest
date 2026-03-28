@@ -900,6 +900,11 @@
       word-break: break-all;
       max-width: 100%;
       box-sizing: border-box;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
     .build-code-box:hover {
       border-color: var(--blue-bright);
@@ -2798,6 +2803,7 @@ function renderBuildCode(b) {
         aria-label="${hint}"
         data-build-code="${code}"
         data-copy-default="${code}"
+        draggable="false"
       >${code}</button>
     </div>
   `;
@@ -3079,6 +3085,17 @@ els.heroList.addEventListener('click', (e) => {
     updateHash();
     return;
   }
+els.detailView.addEventListener('mousedown', (e) => {
+  const buildCodeBtn = e.target.closest('.build-code-box[data-build-code]');
+  if (!buildCodeBtn) return;
+
+  e.preventDefault();
+
+  const selection = window.getSelection ? window.getSelection() : null;
+  if (selection && selection.removeAllRanges) {
+    selection.removeAllRanges();
+  }
+});
 
   const buildCodeBtn = e.target.closest('.build-code-box[data-build-code]');
   if (buildCodeBtn) {
