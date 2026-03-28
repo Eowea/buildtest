@@ -466,12 +466,7 @@
     }
 
     /* ── Hero list ── */
-     @keyframes listFadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .hero-list { display: grid; gap: 6px; width: 100%; }
+   .hero-list { display: grid; gap: 6px; width: 100%; }
 
     .hero-link {
       display: flex;
@@ -487,8 +482,6 @@
       cursor: pointer;
       transition: all var(--t);
       box-sizing: border-box;
-      /* Nouvelle animation d'apparition fluide */
-      animation: listFadeIn 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
     }
     .hero-link:hover {
       background: linear-gradient(90deg, rgba(0, 229, 255, 0.1), transparent);
@@ -548,22 +541,11 @@
       font-family: 'Rajdhani', sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      /* Nouvelle animation d'apparition fluide */
-      animation: listFadeIn 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
     }
     /* ═══════════════════════════════
        HERO DETAIL
        ═══════════════════════════════ */
-   @keyframes detailFadeIn {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    #detailView > *, #buildSection > * {
-      animation: detailFadeIn 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
-    }
-
-    .hero-header {
+ .hero-header {
       display: grid;
       grid-template-columns: 120px 1fr;
       gap: 24px;
