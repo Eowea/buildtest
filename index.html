@@ -2721,15 +2721,10 @@ function mountTwitch() {
     muted: true,
   });
 
+  // On fait uniquement confiance aux événements officiels de l'API
   player.addEventListener(Twitch.Player.ONLINE, setStreamOnline);
   player.addEventListener(Twitch.Player.OFFLINE, setStreamOffline);
-
-  setTimeout(() => {
-    if (player.getStream && player.getStream()) setStreamOnline();
-    else setStreamOffline();
-  }, 3000);
 }
- 
 
     function syncTwitchUI() { els.desktopTwitchCard.classList.toggle('is-collapsed',!state.twitchOpen); els.toggleTwitch.textContent=state.twitchOpen?t('twitchClose'):t('twitchOpen'); }
 
