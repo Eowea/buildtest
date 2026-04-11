@@ -2833,11 +2833,8 @@ function renderTalentBoard(ts=[]) {
   if(!ts.length) return `<div class="empty-state">${t('emptyTalents')}</div>`; 
   
   return `<section class="talent-board-wrap"><div class="talent-board-scroller"><div class="talent-board-track">${ts.map(tData => {
-    
-    // 1. On prépare le HTML des alternatives (s'il y en a)
     let altHtml = '';
     if (tData.alternatives && tData.alternatives.length > 0) {
-      // On prend maximum 3 talents optionnels via slice(0, 3)
       const alts = tData.alternatives.slice(0, 3).map(alt => ftHTML({
         cls: 'talent-trigger alt-talent floating-trigger',
         title: alt.name,
@@ -2847,12 +2844,10 @@ function renderTalentBoard(ts=[]) {
       })).join('');
       altHtml = `<div class="talent-alternatives"><div class="talent-alternatives-label">${t('optionalTalents')}</div>${alts}</div>`;
     }
-
-    // 2. On retourne la carte complète (talent principal + alternatives)
     return `<article class="talent-card"><div class="talent-level">${t('level')} ${esc(String(tData.level))}</div>${ftHTML({cls:'talent-trigger floating-trigger',title:tData.name,desc:tData.description,demoId:tData.demoYoutubeId||tData.demoYoutubeUrl,inner:`<div class="talent-icon" data-fallback="${esc(initials(loc(tData.name)))}"><img src="${tData.icon||svgBadge(loc(tData.name))}" alt="${esc(loc(tData.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`})}<div class="talent-title-card">${esc(loc(tData.name))}</div>${altHtml}</article>`;
-    
   }).join('')}</div></div></section>`; 
-}    
+}   
+    
 function renderBuildCode(b) {
   if (!b.buildCode) return '';
 
