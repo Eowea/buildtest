@@ -2834,7 +2834,7 @@ function renderTalentBoard(ts=[]) {
             demoId: alt.demoYoutubeId || alt.demoYoutubeUrl,
             inner: `<div class="talent-icon" data-fallback="${esc(initials(loc(alt.name)))}"><img src="${alt.icon||svgBadge(loc(alt.name))}" alt="${esc(loc(alt.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`
           })).join('');
-          altHtml = `<div class="talent-alternatives"><div class="talent-alternatives-label">${t('optionalTalents')}</div>${alts}</div>`;
+
         }
 
         return `<article class="talent-card"><div class="talent-level">${t('level')} ${esc(String(tData.level))}</div>${ftHTML({cls:'talent-trigger floating-trigger',title:tData.name,desc:tData.description,demoId:tData.demoYoutubeId||tData.demoYoutubeUrl,inner:`<div class="talent-icon" data-fallback="${esc(initials(loc(tData.name)))}"><img src="${tData.icon||svgBadge(loc(tData.name))}" alt="${esc(loc(tData.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`})}<div class="talent-title-card">${esc(loc(tData.name))}</div>${altHtml}</article>`;
