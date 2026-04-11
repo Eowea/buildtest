@@ -814,14 +814,22 @@
       box-shadow: 0 0 10px var(--blue-glow);
     }
 
-    .talent-card {
-      flex: 0 0 clamp(100px, 12vw, 120px);
-      border: 1px solid var(--blue-border);
-      border-radius: 4px;
-      background: linear-gradient(180deg, rgba(20, 28, 44, 0.95), rgba(12, 18, 28, 0.98));
-      padding: 12px 10px 16px;
-      display: grid; justify-items: center; gap: 10px; text-align: center; position: relative; z-index: 1;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 4px 15px rgba(0,0,0,0.6);
+.talent-card {
+  flex: 0 0 clamp(100px, 12vw, 120px);
+  border: 1px solid var(--blue-border);
+  border-radius: 4px;
+  background: linear-gradient(180deg, rgba(20, 28, 44, 0.95), rgba(12, 18, 28, 0.98));
+  padding: 12px 10px 16px;
+  display: flex;             /* Modifié : Flexbox */
+  flex-direction: column;    /* Modifié : Colonne */
+  align-items: center;       /* Modifié : Centrage */
+  gap: 10px; 
+  text-align: center; 
+  position: relative; 
+  z-index: 1;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 4px 15px rgba(0,0,0,0.6);
+  height: 100%;              /* Ajouté : Étirement */
+  
     }
     .talent-card::before {
       content: ''; position: absolute; top: -1px; left: -1px; width: 12px; height: 12px;
@@ -1274,6 +1282,34 @@
       border-color: var(--blue);
       box-shadow: 0 0 15px var(--blue-glow);
     }
+    /* ── Talents Optionnels ── */
+.talent-alternatives {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+  margin-top: auto; /* Pousse les options tout en bas de la carte */
+  padding-top: 8px;
+  border-top: 1px dashed rgba(0, 229, 255, 0.2);
+  width: 100%;
+}
+.talent-alternatives-label {
+  width: 100%;
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-family: 'Rajdhani', sans-serif;
+  margin-bottom: 2px;
+}
+.talent-trigger.alt-talent {
+  width: 30px; /* Plus petit qu'un talent normal */
+  height: 30px;
+  background: rgba(0, 229, 255, 0.2);
+}
+.talent-trigger.alt-talent:hover, .talent-trigger.alt-talent:focus-visible {
+  background: var(--gold-bright);
+  transform: scale(1.2);
+}
   </style>
 </head>
 <body>
@@ -2084,7 +2120,21 @@
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
             buildCode: "[T3332332,Auriel]", videos:[],
             talents:[
-              { level: 1, name: { fr: 'Lumière ardente', en: 'Searing Light' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_rayofheaven.jpg', description: { fr: 'Rayon des Cieux inflige des dégâts aux héros adverses présents dans la zone de soin.', en: 'Ray of Heaven deals damage to enemy Heroes in the healing area.' }, demoYoutubeId: null },
+              { level: 1, name: { fr: 'Lumière ardente', en: 'Searing Light' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_rayofheaven.jpg', description: { fr: 'Rayon des Cieux inflige des dégâts aux héros adverses présents dans la zone de soin.', en: 'Ray of Heaven deals damage to enemy Heroes in the healing area.' }, demoYoutubeId: null,  
+               alternatives: [
+      {
+        name: { fr: 'Festin d\'âmes', en: 'Soul Feast' },
+        icon: 'https://.../autre_image.jpg',
+        description: { fr: 'Excellente alternative si...', en: 'Great alternative if...' }
+        // demoYoutubeId: '...' (Optionnel)
+      },
+      {
+        name: { fr: 'Bouclier', en: 'Shield' },
+        icon: 'https://.../image3.jpg',
+        description: { fr: 'Contre beaucoup de mages.', en: 'Against many mages.' }
+      }
+    ]
+    // ------------------------------- },
               { level: 4, name: { fr: 'Sentence', en: 'Repeated Offense' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_restrainingblow_a.jpg', description: { fr: 'Augmente le repoussement d\'Entrave. Quête: étourdir des héros augmente les dégats.', en: 'Increases Detainment Strike\'s knockback distance. Quest: Stunning Heroes increases its damage.' }, demoYoutubeId: null },
               { level: 7, name: { fr: 'Corde sacrée', en: 'Energized Cord' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_bestowhope_a.jpg', description: { fr: 'Augmente l\'énergie conférée par les attaques de base d\'Auriel aux héros et aux cibles non héroïques. Passif: augmente la portée des attaques de bases', en: 'Increases the Energy gained from Auriel\'s Basic Attacks against Heroes and non-Heroic targets. Passive: increases Basic Attack range.' }, demoYoutubeId: null },
               { level: 10, name: { fr: 'Égide de Cristal', en: 'Crystal Aegis' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_ribboncocoon.jpg', description: { fr: 'Place un allié en Stase puis inflige des dégâts autour.', en: 'Places an ally in Stasis, then deals damage around them.' }, demoYoutubeId: null },
@@ -2596,7 +2646,7 @@
       copySuccess: { fr: "Build copié !", en: "Build copied!" },
       copyError: { fr: "Copie impossible", en: "Copy failed" },
       copyHint: { fr: "Clique pour copier", en: "Click to copy" },
-      
+      optionalTalents: { fr: "Options", en: "Options" },
     };
 
     /* =========================================================================
@@ -2779,8 +2829,30 @@ function mountTwitch() {
       if(!sp.length) return '';
       return `<div class="spell-strip">${sp.map(s=>`<div class="spell-item">${ftHTML({cls:'spell-trigger floating-trigger',title:s.name,desc:s.description,demoId:s.demoYoutubeId||s.demoYoutubeUrl,inner:`<div class="spell-icon" data-fallback="${esc(uiSpellKey(s.key)||initials(loc(s.name)))}"><img src="${s.icon||svgBadge(loc(s.name))}" alt="${esc(loc(s.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`})}<div class="spell-name">${esc(uiSpellKey(s.key)||'')}</div></div>`).join('')}</div>`;
     }
-    function renderTalentBoard(ts=[]) { if(!ts.length) return `<div class="empty-state">${t('emptyTalents')}</div>`; return `<section class="talent-board-wrap"><div class="talent-board-scroller"><div class="talent-board-track">${ts.map(tData=>`<article class="talent-card"><div class="talent-level">${t('level')} ${esc(String(tData.level))}</div>${ftHTML({cls:'talent-trigger floating-trigger',title:tData.name,desc:tData.description,demoId:tData.demoYoutubeId||tData.demoYoutubeUrl,inner:`<div class="talent-icon" data-fallback="${esc(initials(loc(tData.name)))}"><img src="${tData.icon||svgBadge(loc(tData.name))}" alt="${esc(loc(tData.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`})}<div class="talent-title-card">${esc(loc(tData.name))}</div></article>`).join('')}</div></div></section>`; }
+function renderTalentBoard(ts=[]) { 
+  if(!ts.length) return `<div class="empty-state">${t('emptyTalents')}</div>`; 
+  
+  return `<section class="talent-board-wrap"><div class="talent-board-scroller"><div class="talent-board-track">${ts.map(tData => {
     
+    // 1. On prépare le HTML des alternatives (s'il y en a)
+    let altHtml = '';
+    if (tData.alternatives && tData.alternatives.length > 0) {
+      // On prend maximum 3 talents optionnels via slice(0, 3)
+      const alts = tData.alternatives.slice(0, 3).map(alt => ftHTML({
+        cls: 'talent-trigger alt-talent floating-trigger',
+        title: alt.name,
+        desc: alt.description,
+        demoId: alt.demoYoutubeId || alt.demoYoutubeUrl,
+        inner: `<div class="talent-icon" data-fallback="${esc(initials(loc(alt.name)))}"><img src="${alt.icon||svgBadge(loc(alt.name))}" alt="${esc(loc(alt.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`
+      })).join('');
+      altHtml = `<div class="talent-alternatives"><div class="talent-alternatives-label">${t('optionalTalents')}</div>${alts}</div>`;
+    }
+
+    // 2. On retourne la carte complète (talent principal + alternatives)
+    return `<article class="talent-card"><div class="talent-level">${t('level')} ${esc(String(tData.level))}</div>${ftHTML({cls:'talent-trigger floating-trigger',title:tData.name,desc:tData.description,demoId:tData.demoYoutubeId||tData.demoYoutubeUrl,inner:`<div class="talent-icon" data-fallback="${esc(initials(loc(tData.name)))}"><img src="${tData.icon||svgBadge(loc(tData.name))}" alt="${esc(loc(tData.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`})}<div class="talent-title-card">${esc(loc(tData.name))}</div>${altHtml}</article>`;
+    
+  }).join('')}</div></div></section>`; 
+}    
 function renderBuildCode(b) {
   if (!b.buildCode) return '';
 
