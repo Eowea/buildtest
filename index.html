@@ -2136,12 +2136,29 @@
             ]
           },
           {
-            enabled: false, order: 2, label: { fr: 'Build W (Soins)', en: 'W Build (Healing)' },
-            summary: { fr: 'Idéal si vous avez un très bon hyper-carry.', en: 'Ideal if you have a very strong hyper-carry.' },
+            enabled: true, order: 2, label: { fr: 'Build ARAM', en: 'ARAM Build' },
+            summary: { fr: 'Ça fait ding ding et des dégats.', en: 'Ideal if you have a very strong hyper-carry.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
-            buildCode: "[T3332333,Auriel]", videos: [],
+            buildCode: "[T1112232,Auriel]", videos: [],
             talents:[
-              { level: 1, name: { fr: 'Rayon croissant', en: 'Increasing Clarity' }, icon: '', description: { fr: 'Plus d\'énergie.', en: 'More Energy.' }, demoYoutubeId: null }
+              { level: 1, name: { fr: 'Révélation céleste', en: 'Increasing Clarity' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_angelicsweep.jpg', description: { fr: 'Quête : Augmente les dégâts de la zone centrale. Récompense : Augmente à nouveau les dégâts de la zone centrale.', en: 'More Energy.' }, demoYoutubeId: null },
+              { level: 4, name: { fr: 'Amplitude majestueuse', en: 'Increasing Clarity' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_angelicsweep.jpg', description: { fr: 'Augmente le rayon de Arc vertueux.', en: 'More Energy.' }, demoYoutubeId: null },
+              { level: 7, name: { fr: 'Lueur d\'espoir', en: 'Energized Cord' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_rayofheaven.jpg', description: { fr: 'Récolter un globe réduit le coût en énergie du prochain Rayon des Cieux', en: 'Increases the Energy gained from Auriel\'s Basic Attacks against Heroes and non-Heroic targets. Passive: increases Basic Attack range.' }, demoYoutubeId: null, 
+
+               alternatives: [
+      {
+        name: { fr: 'Corde sacrée', en: 'Energized Cord' },
+        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_bestowhope_a.jpg',
+        description: { fr: 'Augmente l\'énergie conférée par les attaques de base d\'Auriel aux héros et aux cibles non héroïques. Passif: augmente la portée des attaques de bases', en: 'Increases the Energy gained from Auriel\'s Basic Attacks against Heroes and non-Heroic targets. Passive: increases Basic Attack range.' },
+        demoYoutubeId: null 
+      },
+    ]
+    }, // ------------------------------- 
+          
+              { level: 10, name: { fr: 'Égide de Cristal', en: 'Crystal Aegis' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_ribboncocoon.jpg', description: { fr: 'Place un allié en Stase puis inflige des dégâts autour.', en: 'Places an ally in Stasis, then deals damage around them.' }, demoYoutubeId: null },
+              { level: 13, name: { fr: 'Force convergente', en: 'Increasing Clarity' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_angelicsweep_b.jpg', description: { fr: 'Les ennemis sont repoussés au centre.', en: 'More Energy.' }, demoYoutubeId: null },
+              { level: 16, name: { fr: 'Courroux des Cieux', en: 'Wrath of Heaven' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_bestowhope_a.jpg', description: { fr: 'Augmente la puissance de capacité de l\'allié affecté par Don d\'espoir. Réduit l\'armure anti-sort des héros adverses touchés par le centre d\'Arc vertueux et par l\'étourdissement d\'Entrave.', en: 'Increases the Spell Power of the ally affected by Bestow Hope. Reduces Spell Armor on enemy Heroes hit by the center of Sacred Sweep and by Detainment Strike\'s Stun.' }, demoYoutubeId: null },
+              { level: 20, name: { fr: 'Résolution d\'airain', en: 'Diamond Resolve' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_ribboncocoon.jpg', description: { fr: 'Égide de Cristal confère de l\'armure à la sortie.', en: 'Crystal Aegis grants Armor when it ends.' }, demoYoutubeId: null },
             ]
           }
         ]
@@ -2329,12 +2346,12 @@
         gameplay: { fr: 'Stukov propage des virus soignants sur son équipe et des pustules sur l\'ennemi, avant de tout faire exploser avec son Trait.', en: 'Stukov spreads healing viruses to his team and pustules to enemies, then detonates them all with his Trait.' },
         guideVideo: null,
         spells:[
-          { key: 'Trait', name: { fr: 'Virus bio-kill', en: 'Bio-Kill Switch' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_bio-killswitch.jpg', description: { fr: 'Fait exploser ses virus : soigne grandement les alliés ou ralentit/blesse les ennemis.', en: 'Detonates viruses: greatly heals allies or slows/damages enemies.' }, demoYoutubeId: '' },
-          { key: 'A', name: { fr: 'Pathogène guérisseur', en: 'Healing Pathogen' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_healingpathogen.jpg', description: { fr: 'Un soin qui se propage d\'allié en allié.', en: 'A heal that spreads from ally to ally.' }, demoYoutubeId: '' },
-          { key: 'Z', name: { fr: 'Pustule purulente', en: 'Weighted Pustule' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_weightedpustule.jpg', description: { fr: 'Lance un projectile qui infecte et ralentit les ennemis.', en: 'Throws a projectile that infects and slows enemies.' }, demoYoutubeId: '' },
-          { key: 'E', name: { fr: 'Bras anéantissant', en: 'Lurking Arm' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_lurkingarm.jpg', description: { fr: 'Canalise une zone qui réduit au silence et inflige des dégâts.', en: 'Channels a zone that silences and damages enemies.' }, demoYoutubeId: '' },
-          { key: 'R1', name: { fr: 'Balayage massif', en: 'Massive Shove' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_massiveshove.jpg', description: { fr: 'Pousse un ennemi jusqu\'à ce qu\'il percute un obstacle.', en: 'Pushes an enemy until they hit terrain.' }, demoYoutubeId: '' },
-          { key: 'R2', name: { fr: 'Poussée virale', en: 'Flailing Swipe' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_flailingswipe.jpg', description: { fr: 'Balaye les ennemis en face de lui plusieurs fois.', en: 'Swipes enemies in front of him multiple times.' }, demoYoutubeId: '' }
+          { key: 'Trait', name: { fr: 'Éruption éruptive', en: 'Bio-Kill Switch' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_bio-killswitch.jpg', description: { fr: 'Fait exploser ses virus : soigne grandement les alliés ou ralentit/blesse les ennemis.', en: 'Detonates viruses: greatly heals allies or slows/damages enemies.' }, demoYoutubeId: '' },
+          { key: 'A', name: { fr: 'Virus régénérateur', en: 'Healing Pathogen' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_healingpathogen.jpg', description: { fr: 'Un soin qui se propage d\'allié en allié.', en: 'A heal that spreads from ally to ally.' }, demoYoutubeId: '' },
+          { key: 'Z', name: { fr: 'Agent infectieux', en: 'Weighted Pustule' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_weightedpustule.jpg', description: { fr: 'Lance un projectile qui infecte et ralentit les ennemis.', en: 'Throws a projectile that infects and slows enemies.' }, demoYoutubeId: '' },
+          { key: 'E', name: { fr: 'Menace larvée', en: 'Lurking Arm' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_lurkingarm.jpg', description: { fr: 'Canalise une zone qui réduit au silence et inflige des dégâts.', en: 'Channels a zone that silences and damages enemies.' }, demoYoutubeId: '' },
+          { key: 'R1', name: { fr: 'Poussée éruptive', en: 'Massive Shove' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_massiveshove.jpg', description: { fr: 'Pousse un ennemi jusqu\'à ce qu\'il percute un obstacle.', en: 'Pushes an enemy until they hit terrain.' }, demoYoutubeId: '' },
+          { key: 'R2', name: { fr: 'Frappe chaotique', en: 'Flailing Swipe' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_flailingswipe.jpg', description: { fr: 'Balaye les ennemis en face de lui plusieurs fois.', en: 'Swipes enemies in front of him multiple times.' }, demoYoutubeId: '' }
         ],
         tips:[
           { fr: 'Attends que le A se propage à tout le monde avant de faire péter le D.', en: 'Wait for Q to spread to everyone before pressing D.' },
@@ -2342,16 +2359,102 @@
         ],
         builds:[
           {
-            enabled: true, order: 1, label: { fr: 'Build Bras', en: 'Lurking Arm Build' },
-            summary: { fr: 'Maximise l\'impact de la zone de silence.', en: 'Maximizes the impact of the silence zone.' },
-            buildCodeTitle: { fr: "A COLLER", en: "PASTE" },
-            buildCode: "[T3331333,Stukov]", videos:[],
+            enabled: true, order: 1, label: { fr: 'Build recommandé', en: 'Recommanded Build' },
+            summary: { fr: 'Build qui passe partout, peu importe le mode de jeu.', en: 'Maximizes the impact of the silence zone.' },
+            buildCodeTitle: { fr: "A COLLER DANS L\'ARBRE DES TALENTS", en: "PASTE" },
+            buildCode: "[T3322212,Stukov]", videos:[],
             talents:[
-              { level: 1, name: { fr: 'Allongement', en: 'Growing Infestation' }, icon: '', description: { fr: 'Améliore E.', en: 'Improves E.' }, demoYoutubeId: null }
-            ]
+{ 
+    level: 1, 
+    name: { fr: 'Ballistospores réactives', en: 'Reactive Ballistospores' }, 
+    icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_bio-killswitch.jpg', 
+    description: { 
+      fr: 'Actif : Propage Agent infectieux autour de Stukov à ses ennemis et annule le temps de recharge d\'Éruption éruptive. Passif : Quand les points de vie de Stukov sont bas, le temps de recharge d\'Éruption éruptive est plus rapide.', 
+      en: 'Active: Spreads Weighted Pustule to nearby enemies and resets Bio-Kill Switch\'s cooldown. Passive: When Stukov\'s Health is low, Bio-Kill Switch recharges faster.' 
+    }, 
+    demoYoutubeId: null 
+  },
+  { 
+    level: 4, 
+    name: { fr: 'Régénération virale', en: 'Vigorous Reuptake' }, 
+    icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_bio-killswitch.jpg', 
+    description: { 
+      fr: 'Augmente les points de vie rendus par Éruption virale si un certain nombre d\'alliés sont sous Virus régénérateur.', 
+      en: 'Increases the healing provided by Bio-Kill Switch if a certain number of allies are affected by Healing Pathogen.' 
+    }, 
+    demoYoutubeId: null 
+  },
+  { 
+    level: 7, 
+    name: { fr: 'Contamination de masse', en: 'Growing Infestation' }, 
+    icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_lurkingarm.jpg', 
+    description: { 
+      fr: 'Augmente la zone d\'effet de Menace larvée sur la durée, mais sa durée devient limité.', 
+      en: 'Increases the area of effect of Lurking Arm over time, but its duration becomes limited.' 
+    }, 
+    demoYoutubeId: null 
+  },
+  { 
+    level: 10, 
+    name: { fr: 'Poussée éruptive', en: 'Massive Shove' }, 
+    icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_massiveshove.jpg', 
+    description: { 
+      fr: 'Pousse un ennemi jusqu\'à ce qu\'il percute un obstacle.', 
+      en: 'Pushes an enemy until they hit terrain.' 
+    }, 
+    demoYoutubeId: null, alternatives: [
+      {
+        name: { fr: 'Frappe chaotique', en: 'Flailing Swipe' },
+        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_flailingswipe.jpg', 
+        description: { fr: 'Balaye les ennemis en face de lui plusieurs fois.', 
+        en: 'Swipes enemies in front of him multiple times.' }, 
+        demoYoutubeId: null,
+      },
+]
+  },
+  { 
+    level: 13, 
+    name: { fr: 'Réaction infectieuse', en: 'Virulent Reaction' }, 
+    icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_lurkingarm_a.jpg', 
+    description: { 
+      fr: 'Exploser les Agents infectieux sur les ennemis dans Menace larvée les immobilise.', 
+      en: 'Detonating Weighted Pustules on enemies inside Lurking Arm Roots them.' 
+    }, 
+    demoYoutubeId: null 
+  },
+  { 
+    level: 16, 
+    name: { fr: 'Souche résistante', en: 'Superstrain' }, 
+    icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_healingpathogen.jpg', 
+    description: { 
+      fr: 'Virus régénérateur rend des points de vie supplémentaires en cas d\'étourdissement ou d\'immobilisation', 
+      en: 'Healing Pathogen heals for an additional amount when the target is Stunned or Rooted.' 
+    }, 
+    demoYoutubeId: null 
+  },
+  { 
+    level: 20, 
+    name: { fr: 'Force de propulsion', en: 'Push Comes To Shove' }, 
+    icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_massiveshove.jpg', 
+    description: { 
+      fr: 'Poussée éruptive ralentit lorsque la cible percute un obstacle et peut voir son temps de recharge réduit.', 
+      en: 'Massive Shove slows the target when they hit terrain, and can have its cooldown reduced.' 
+    }, 
+    demoYoutubeId: null, alternatives: [
+  {
+      name: { fr: 'Chaos maîtrisé', en: 'Controlled Chaos' },
+      icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_flailingswipe.jpg',
+      description: { fr: 'Frappes chaotiques touche une seule fois mais possède plusieurs charges.', 
+                    en: 'Flailing Swipe hits only once but has multiple charges.' 
+  },
+    demoYoutubeId: null 
+}
+]
+  }
+]
           },
           {
-            enabled: true, order: 2, label: { fr: 'Build Pustule', en: 'Pustule Build' },
+            enabled: false, order: 2, label: { fr: 'Build Pustule', en: 'Pustule Build' },
             summary: { fr: 'Gros burst et ralentissement sur l\'explosion du W.', en: 'Huge burst and slow on W explosion.' },
             buildCodeTitle: { fr: "A COLLER", en: "PASTE" },
             buildCode: "[T1112111,Stukov]", videos: [],
