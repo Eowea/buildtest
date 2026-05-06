@@ -388,7 +388,7 @@ function renderDetail() {
   renderBuildSection(h);
   bindFloatingTriggers(els.detailView);
   queueLayoutSync();
-}
+};
 
     function renderAll() { updateStaticLang(); ensureSelection(); renderHeader(); renderFilters(); renderHeroList(); renderDetail(); updateHash(); }
     function updateHash() { const h=currentHero(); clampBuildIndex(h); h?history.replaceState(null,'',`#hero=${encodeURIComponent(state.heroId)}&build=${state.buildIndex}`):history.replaceState(null,'',location.pathname); }
