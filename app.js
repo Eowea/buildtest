@@ -326,7 +326,7 @@ function renderBuildCode(b) {
   if (!hero.builds || hero.builds.length === 0) {
     el.innerHTML = `<div class="empty-state">${t('emptyTalents')}</div>`;
       bindFloatingTriggers(el);
-queueLayoutSync();
+    queueLayoutSync();
     return;
   }
   
@@ -340,7 +340,14 @@ queueLayoutSync();
   el.innerHTML=`<div class="build-tabs">${hero.builds.map((x,i)=>`<button class="build-tab${i===state.buildIndex?' active':''}" type="button" data-build-index="${i}">${esc(loc(x.label))}</button>`).join('')}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(b.talents)}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
 }
 
-    function renderDetail() { hideFloatingTooltip(true); const h=currentHero(); if(!h){els.detailView.innerHTML=`<div class="empty-state">${t('emptySelection')}</div>`;return;} clampBuildIndex(h); els.detailView.innerHTML=`<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${renderSpells(h.spells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||[]).map(tip=>`<li>${esc(loc(tip))}</li>`).join('')}</ul></div></article></section><div id="buildSection"></div>`; enderBuildSection(h);
+    function renderDetail() { hideFloatingTooltip(true); const h=currentHero(); if(!h){els.detailView.innerHTML=`<div class="empty-state">${t('emptySelection')}</div>`;return;} clampBuildIndex(h); els.detailView.innerHTML=`<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${renderSpells(h.spells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||[]).map(tip=>`
+  <li>${esc(loc(tip))}</li>
+`).join('')}
+
+<div id="buildSection"></div>
+`;
+
+renderBuildSection(h);
 bindFloatingTriggers(els.detailView);
 queueLayoutSync();
  }
