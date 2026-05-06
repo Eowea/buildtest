@@ -1293,3 +1293,33 @@
       border-color: var(--blue);
       box-shadow: 0 0 15px var(--blue-glow);
     }
+/* --- TEST VUE GRILLE --- */
+.hero-list {
+  display: grid !important;
+  /* Crée autant de colonnes de 56px que possible */
+  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr)) !important; 
+  gap: 8px !important;
+  justify-items: center;
+}
+
+.hero-list .hero-link {
+  padding: 0 !important;
+  border: 2px solid transparent !important;
+  background: transparent !important;
+  justify-content: center;
+}
+
+/* Cache le texte (nom et rôle) */
+.hero-list .hero-meta {
+  display: none !important;
+}
+
+/* Agrandit un peu le portrait pour la grille */
+.hero-list .portrait {
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.hero-list .hero-link:hover .portrait {
+  transform: scale(1.1);
+}
