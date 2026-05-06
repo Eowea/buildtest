@@ -346,17 +346,17 @@ function renderDetail() {
   const h = currentHero();
 
   if (!h) {
-    els.detailView.innerHTML = 
+    els.detailView.innerHTML = `
       <div class="empty-state">
         ${t('emptySelection')}
       </div>
-    ;
+    `;
     return;
   }
 
   clampBuildIndex(h);
 
-  els.detailView.innerHTML = 
+  els.detailView.innerHTML = `
     <h2>${esc(loc(h.name))}</h2>
 
     <div class="hero-role">
@@ -367,6 +367,7 @@ function renderDetail() {
 
     <section class="detail-section">
       <h3>${t('gameplay')}</h3>
+
       <p>${esc(loc(h.gameplay))}</p>
 
       ${renderSpells(h.spells)}
@@ -376,9 +377,9 @@ function renderDetail() {
       <h3>${t('tips')}</h3>
 
       <ul class="tips-list">
-        ${(h.tips || []).map(tip => 
+        ${(h.tips || []).map(tip => `
           <li>${esc(loc(tip))}</li>
-        ).join('')}
+        `).join('')}
       </ul>
     </section>
 
@@ -388,7 +389,7 @@ function renderDetail() {
   renderBuildSection(h);
   bindFloatingTriggers(els.detailView);
   queueLayoutSync();
-}};
+}
 
     function renderAll() { updateStaticLang(); ensureSelection(); renderHeader(); renderFilters(); renderHeroList(); renderDetail(); updateHash(); }
     function updateHash() { const h=currentHero(); clampBuildIndex(h); h?history.replaceState(null,'',`#hero=${encodeURIComponent(state.heroId)}&build=${state.buildIndex}`):history.replaceState(null,'',location.pathname); }
