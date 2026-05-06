@@ -337,9 +337,16 @@ function renderBuildCode(b) {
     ? `<div class="build-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> ${t('lastUpdate')} ${esc(loc(b.updatedAt))}</div>` 
     : '';
   
-  el.innerHTML=`<div class="build-tabs">${hero.builds.map((x,i)=>`<button class="build-tab${i===state.buildIndex?' active':''}" type="button" data-build-index="${i}">${esc(loc(x.label))}</button>`).join('')}</div>${dateHtml}<div class="build-summary"><p class="build-summary detail-text">
-  ${esc(loc(b.summary))}
-</p></div>${renderTalentBoard(b.talents)}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
+  el.innerHTML=`<div class="build-tabs">${hero.builds.map((x,i)=>`<button class="build-tab${i===state.buildIndex?' active':''}" type="button" data-build-index="${i}">${esc(loc(x.label))}</button>`).join('')}</div>${dateHtml}
+
+<p class="build-desc">
+  ${esc 
+(loc(b.summary))}
+</p>
+
+${renderTalentBoard(b.talents)}
+${renderBuildCode(b)}
+${renderBuildVideos(hero,b)};
 }
 
 function renderDetail() {
@@ -359,30 +366,32 @@ function renderDetail() {
   clampBuildIndex(h);
 
   els.detailView.innerHTML = `
-    <h2 class="detail-title">${esc(loc(h.name))}</h2>
+    <div class="hero-detail-header">
+      <h2>${esc(loc(h.name))}</h2>
 
-    <div class="hero-role detail-role">
-      ${esc(locRole(h.role))}
+      <div class="hero-role">
+        ${esc(locRole(h.role))}
+      </div>
+
+      <p class="hero-desc">
+        ${esc(loc(h.headline))}
+      </p>
     </div>
 
-    <p class="hero-headline">
-      ${esc(loc(h.headline))}
-    </p>
+    <section class="detail-block">
+      <h3 class="section-title">${t('gameplay')}</h3>
 
-    <section class="detail-section gameplay-section">
-      <h3>${t('gameplay')}</h3>
-
-      <p class="detail-text gameplay-text">
+      <p class="hero-gameplay">
         ${esc(loc(h.gameplay))}
       </p>
 
       ${renderSpells(h.spells)}
     </section>
 
-    <section class="detail-section tips-section">
-      <h3>${t('tips')}</h3>
+    <section class="detail-block">
+      <h3 class="section-title">${t('tips')}</h3>
 
-      <ul class="tips-list">
+      <ul class="tips">
         ${(h.tips || []).map(tip => `
           <li>${esc(loc(tip))}</li>
         `).join('')}
