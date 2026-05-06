@@ -1375,3 +1375,80 @@
   height: 14px; 
   color: var(--gold-dim); 
 }
+.detail-section {
+  margin-top: 26px;
+  padding: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 22px;
+  background: rgba(15, 23, 42, 0.34);
+}
+
+.detail-section h3 {
+  margin: 0 0 14px;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent, #7dd3fc);
+}
+
+.hero-headline,
+.detail-text,
+.build-summary {
+  color: rgba(226, 232, 240, 0.86);
+  line-height: 1.75;
+}
+
+.hero-headline {
+  margin-top: 14px;
+  font-size: 1.02rem;
+}
+
+.tips-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.tips-list li {
+  color: rgba(226, 232, 240, 0.86);
+  line-height: 1.65;
+}
+
+.spell-list,
+.spells-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.spell-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(125, 211, 252, 0.26);
+  background: rgba(8, 47, 73, 0.42);
+  color: #e0f2fe;
+  font-weight: 800;
+  cursor: help;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.spell-trigger:hover {
+  transform: translateY(-1px);
+  border-color: rgba(125, 211, 252, 0.58);
+  background: rgba(14, 116, 144, 0.38);
+}
+
+.build-summary {
+  margin: 18px 0 22px;
+  padding: 16px 18px;
+  border-left: 3px solid var(--accent, #7dd3fc);
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.42);
+}
