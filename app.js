@@ -341,7 +341,7 @@ function renderBuildCode(b) {
 
 ${renderTalentBoard(b.talents)}
 ${renderBuildCode(b)}
-${renderBuildVideos(hero,b)};
+${renderBuildVideos(hero,b)}`;
 }
 
 function renderDetail() {
