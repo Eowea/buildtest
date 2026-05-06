@@ -395,7 +395,6 @@
       {
         id: 'rehgar',
         enabled: true,
-        updatedAt: { fr: '6 Mai 2026', en: 'May 6, 2026' },
         name: { fr: 'Rehgar', en: 'Rehgar' },
         role: 'Healer',
         portrait: 'https://static.icy-veins.com/images/heroes/hero-portraits/rehgar.jpg',
@@ -429,6 +428,7 @@
         builds:[
           {
             enabled: true, order: 1, label: { fr: 'Build totem', en: 'Totem Build' },
+            updatedAt: { fr: '6 Mai 2026', en: 'May 6, 2026' },
             summary: { fr: 'Build le plus simple à jouer: le totem devient le point central du gameplay', en: 'Easiest build: the totem becomes the central point of your gameplay.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
             buildCode: "[T2111121,Rehgar]",
