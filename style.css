@@ -1293,33 +1293,67 @@
       border-color: var(--blue);
       box-shadow: 0 0 15px var(--blue-glow);
     }
-/* --- TEST VUE GRILLE --- */
+/* --- TEST VUE GRILLE (Avec nom au-dessus du portrait) --- */
 .hero-list {
   display: grid !important;
-  /* Crée autant de colonnes de 56px que possible */
-  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr)) !important; 
-  gap: 8px !important;
+  /* On élargit un peu les colonnes pour laisser de la place aux noms */
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)) !important; 
+  gap: 16px 8px !important; /* Plus d'espace vertical entre les rangées */
   justify-items: center;
 }
 
 .hero-list .hero-link {
   padding: 0 !important;
-  border: 2px solid transparent !important;
+  border: none !important;
   background: transparent !important;
-  justify-content: center;
+  
+  /* L'astuce magique pour inverser l'ordre image/texte ! */
+  display: flex !important;
+  flex-direction: column-reverse !important; 
+  align-items: center !important;
+  gap: 8px !important;
 }
 
-/* Cache le texte (nom et rôle) */
-.hero-list .hero-meta {
+/* On cache le rôle et le nombre de builds pour ne pas surcharger */
+.hero-list .hero-role, 
+.hero-list .build-count-badge {
   display: none !important;
 }
 
-/* Agrandit un peu le portrait pour la grille */
-.hero-list .portrait {
-  width: 56px !important;
-  height: 56px !important;
+/* On centre le nom et on l'empêche de déborder si c'est un nom très long */
+.hero-list .hero-meta {
+  width: 100%;
+  text-align: center;
 }
 
+.hero-list .hero-name-row {
+  justify-content: center !important;
+  width: 100%;
+}
+
+.hero-list .hero-name {
+  font-size: 13px !important;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Rajoute "..." si le nom est trop long (ex: Deckard Cain) */
+  max-width: 80px; 
+}
+
+/* Le portrait */
+.hero-list .portrait {
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.hero-list .hero-link:hover .portrait {
+  transform: scale(1.1);
+}
+
+/* On retire l'effet de sélection "barre jaune" qui ne marche qu'en liste */
+.hero-list .hero-link.active {
+  box-shadow: none !important;
+}
 .hero-list .hero-link:hover .portrait {
   transform: scale(1.1);
 }
