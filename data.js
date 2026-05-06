@@ -447,6 +447,7 @@
           },
           {
             enabled: true, order: 2, label: { fr: 'Build loup', en: 'Wolf Build' },
+            updatedAt: { fr: '6 Mai 2026', en: 'May 6, 2026' },
             summary: { fr: 'Build plus aggressif: demande une connaissance de jeu impéccable', en: 'More aggressive build: requires flawless game knowledge.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
             buildCode: "[T3131231,Rehgar]",
@@ -502,7 +503,7 @@
         ],
         builds:[
           {
-            enabled: true, order: 2, label: { fr: 'Build TP', en: 'TP Build' },
+            enabled: false, order: 2, label: { fr: 'Build TP', en: 'TP Build' },
             summary: { fr: 'Build le plus simple à jouer: empêche le oneshot sur votre allié', en: 'Easiest build: prevents your ally from getting oneshot.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
             buildCode: "[T2321323,Brightwing]", videos:[],
@@ -517,14 +518,21 @@
             ]
           },
           {
-            enabled: true, order: 1, label: { fr: 'Build passif', en: 'Cleanse Build' },
+            enabled: true, order: 1, label: { fr: 'Build recommandé', en: 'Recommanded build' },
+            updatedAt: { fr: '6 Mai 2026', en: 'May 6, 2026' },
             summary: { fr: 'Build qui permet d\'utiliser plus souvent sa cleanse.', en: 'Build that allows more frequent use of Cleanse.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
             buildCode: "[T2331323,Brightwing]", videos:[],
             talents:[
               { level: 1, name: { fr: 'Hyperphase', en: 'Hyper Shift' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_brightwing_hypershift.jpg', description: { fr: 'Augmente le montant de soins de Déphasage et son temps de recharge est réduit pour chaque serviteur tué.', en: 'Increases Phase Shift healing amount and its cooldown is reduced for each minion killed.' }, demoYoutubeId: null },
               { level: 4, name: { fr: 'Crachat magique', en: 'Magic Spit' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_talent_autoattack_cooldown.jpg', description: { fr: 'Augmente la portée d\'auto-attaque et ses auto-attaques réduisent le temps de recharge de Brume Apaisante.', en: 'Increases basic attack range and basic attacks reduce Soothing Mist cooldown.' }, demoYoutubeId: null },
-              { level: 7, name: { fr: 'Brume opportune', en: 'Critical Mist' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_brightwing_soothingmist.jpg', description: { fr: 'À l\'activation de Brume apaisante, la purge est plus efficace.', en: 'Activating Soothing Mist removes disabling effects more effectively.' }, demoYoutubeId: null },
+              { level: 7, name: { fr: 'Brume opportune', en: 'Critical Mist' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_brightwing_soothingmist.jpg', description: { fr: 'À l\'activation de Brume apaisante, la purge est plus efficace.', en: 'Activating Soothing Mist removes disabling effects more effectively.' }, demoYoutubeId: null,
+               alternatives: [
+      {
+       name: { fr: 'Je te vois !', en: 'Peekaboo!' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_brightwing_hypershift.jpg', description: { fr: 'Déphasage confère un bouclier à Luisaile et sa cible, puis révèle la zone autour.', en: 'Phase Shift grants a shield to Brightwing and her target, then reveals the surrounding area.' }, demoYoutubeId: null
+      },
+    ]
+    },
               { level: 10, name: { fr: 'Papillonnage', en: 'Blink Heal' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_brightwing_blinkheal.jpg', description: { fr: 'Se téléporte vers un allié et le soigne.', en: 'Teleports to an ally and heals them.' }, demoYoutubeId: null },
               { level: 13, name: { fr: 'Superlimpinpin', en: 'Pixie Power' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_brightwing_pixiedust_b.jpg', description: { fr: 'Réduit le temps de recharge de Poudre de perlimpinpin et augmente l\'armure anti-sort.', en: 'Reduces Pixie Dust cooldown and increases spell armor.' }, demoYoutubeId: null },
               { level: 16, name: { fr: 'Bestiolifier', en: 'Critterize' }, icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_brightwing_polymorph.jpg', description: { fr: 'Métamorphose réduit l\'armure.', en: 'Polymorph reduces armor.' }, demoYoutubeId: null },
@@ -569,6 +577,7 @@
         builds:[
           {
             enabled: true, order: 1, label: { fr: 'Build recommandé', en: 'Recommanded build' },
+            updatedAt: { fr: '6 Mai 2026', en: 'May 6, 2026' },
             summary: { fr: 'Build qui passe partout, peu importe le mode de jeu.', en: 'A build that works in any situation, no matter the game mode.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
             buildCode: "[T3121331,Deckard]", videos:[],
@@ -584,6 +593,7 @@
           },
           {
             enabled: true, order: 2, label: { fr: 'Build ARAM', en: 'ARAM Build' },
+            updatedAt: { fr: '6 Mai 2026', en: 'May 6, 2026' },
             summary: { fr: 'Ça fait ding ding et des dégats.', en: 'It goes ding-ding and deals damage.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
             buildCode: "[T1311314,Deckard]", videos: [],
@@ -716,6 +726,7 @@
         builds:[
           {
             enabled: true, order: 1, label: { fr: 'Build recommandé', en: 'Recommanded Build' },
+            updatedAt: { fr: '6 Mai 2026', en: 'May 6, 2026' },
             summary: { fr: 'Génère énormément d\'énergie par soi-même.', en: 'Generates a huge amount of Energy on its own.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
             buildCode: "[T3332332,Auriel]", videos:[],
@@ -732,6 +743,7 @@
           },
           {
             enabled: true, order: 2, label: { fr: 'Build ARAM', en: 'ARAM Build' },
+            updatedAt: { fr: '6 Mai 2026', en: 'May 6, 2026' },
             summary: { fr: 'Ça fait ding ding et des dégats.', en: 'Ideal if you have a very strong hyper-carry.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
             buildCode: "[T1112232,Auriel]", videos: [],
@@ -955,6 +967,7 @@
         builds:[
           {
             enabled: true, order: 1, label: { fr: 'Build recommandé', en: 'Recommanded Build' },
+            updatedAt: { fr: '6 Mai 2026', en: 'May 6, 2026' },
             summary: { fr: 'Build qui passe partout, peu importe le mode de jeu.', en: 'Maximizes the impact of the silence zone.' },
             buildCodeTitle: { fr: "A COLLER DANS L\'ARBRE DES TALENTS", en: "PASTE" },
             buildCode: "[T3322212,Stukov]", videos:[],
@@ -1090,6 +1103,7 @@
         builds:[
           {
             enabled: true, order: 1, label: { fr: 'Build E', en: 'E Build' },
+            updatedAt: { fr: '6 Mai 2026', en: 'May 6, 2026' },
             summary: { fr: 'Étourdissements réguliers et soins continus.', en: 'Reliable stuns and sustained healing.' },
             buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
             buildCode: "[T2332312,Tyrande]", videos: [],
@@ -1199,6 +1213,7 @@
     enabled: true,
     order: 1,
     label: { fr: 'Build recommandé', en: 'Recommanded Build' },
+    updatedAt: { fr: '6 Mai 2026', en: 'May 6, 2026' },
     summary: { fr: 'Build tourné autour du laser.', en: 'Build focused on Inquisition (W).' },
     buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
     buildCode: "[T1231121,Whitemane]",
