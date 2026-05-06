@@ -1360,7 +1360,7 @@
 /* --- DATE DE MISE A JOUR --- */
 .build-date {
   font-size: 12px;
-  color: var(--text-muted);
+  color: var(--text-color, white);
   font-family: 'Rajdhani', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
