@@ -340,7 +340,7 @@ function renderBuildCode(b) {
   el.innerHTML=`<div class="build-tabs">${hero.builds.map((x,i)=>`<button class="build-tab${i===state.buildIndex?' active':''}" type="button" data-build-index="${i}">${esc(loc(x.label))}</button>`).join('')}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(b.talents)}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
 }
 
-unction renderDetail() {
+function renderDetail() {
   hideFloatingTooltip(true);
 
   const h = currentHero();
