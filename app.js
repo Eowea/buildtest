@@ -30,6 +30,7 @@
       mainVideo: { fr: "Vidéo principale", en: "Main video" },
       seeGuide: { fr: "Voir le guide &rarr;", en: "Watch guide &rarr;" },
       videoUnavailable: { fr: "Vidéo non disponible", en: "Video unavailable" },
+      lastUpdate: { fr: "Dernière mise à jour :", en: "Last updated:" },
       defaultBuildCodeTitle: { fr: "À COLLER DANS L'ARBRE DES TALENTS", en: "PASTE INTO TALENT TREE" },
       emptyTalents: { fr: "Aucun talent dans ce build.", en: "No talents in this build." },
       emptySelection: { fr: "Sélectionne un héros dans la liste.", en: "Select a hero from the list." },
@@ -319,19 +320,24 @@ function renderBuildCode(b) {
     function renderBuildVideos(h,b) { const wg=hasGuide(h?.guideVideo); return `<section class="videos-layout${wg?' with-guide':''}">${wg?renderGuide(h.guideVideo):''}${renderVideoCards(b.videos)}</section>`; }
 
     function renderBuildSection(hero) { 
-      const el = $('buildSection'); 
-      if (!el) return; 
-      
-      if (!hero.builds || hero.builds.length === 0) {
-        el.innerHTML = `<div class="empty-state">${t('emptyTalents')}</div>`;
-        return;
-      }
-      
-      const b = hero.builds[clampBuildIndex(hero)] || hero.builds[0]; 
-      
-      el.innerHTML=`<div class="build-tabs">${hero.builds.map((x,i)=>`<button class="build-tab${i===state.buildIndex?' active':''}" type="button" data-build-index="${i}">${esc(loc(x.label))}</button>`).join('')}</div><div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(b.talents)}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`; 
-      bindFloatingTriggers(); bindComboVideoPreviews(); queueLayoutSync(); 
-    }
+  const el = $('buildSection'); 
+  if (!el) return; 
+  
+  if (!hero.builds || hero.builds.length === 0) {
+    el.innerHTML = `<div class="empty-state">${t('emptyTalents')}</div>`;
+    return;
+  }
+  
+  const b = hero.builds[clampBuildIndex(hero)] || hero.builds[0]; 
+  
+  // NOUVEAU : On prépare le code HTML de la date (avec une petite icône calendrier)
+  const dateHtml = b.updatedAt 
+    ? `<div class="build-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> ${t('lastUpdate')} ${esc(loc(b.updatedAt))}</div>` 
+    : '';
+  
+  el.innerHTML=`<div class="build-tabs">${hero.builds.map((x,i)=>`<button class="build-tab${i===state.buildIndex?' active':''}" type="button" data-build-index="${i}">${esc(loc(x.label))}</button>`).join('')}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(b.talents)}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`; 
+  bindFloatingTriggers(); bindComboVideoPreviews(); queueLayoutSync(); 
+}
 
     function renderDetail() { hideFloatingTooltip(true); const h=currentHero(); if(!h){els.detailView.innerHTML=`<div class="empty-state">${t('emptySelection')}</div>`;return;} clampBuildIndex(h); els.detailView.innerHTML=`<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${renderSpells(h.spells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||[]).map(tip=>`<li>${esc(loc(tip))}</li>`).join('')}</ul></div></article></section><div id="buildSection"></div>`; bindFloatingTriggers(); renderBuildSection(h); }
 
