@@ -395,6 +395,7 @@
       {
         id: 'rehgar',
         enabled: true,
+        updatedAt: { fr: '6 Mai 2026', en: 'May 6, 2026' },
         name: { fr: 'Rehgar', en: 'Rehgar' },
         role: 'Healer',
         portrait: 'https://static.icy-veins.com/images/heroes/hero-portraits/rehgar.jpg',
