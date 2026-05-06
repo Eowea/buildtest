@@ -340,17 +340,55 @@ function renderBuildCode(b) {
   el.innerHTML=`<div class="build-tabs">${hero.builds.map((x,i)=>`<button class="build-tab${i===state.buildIndex?' active':''}" type="button" data-build-index="${i}">${esc(loc(x.label))}</button>`).join('')}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(b.talents)}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
 }
 
-    function renderDetail() { hideFloatingTooltip(true); const h=currentHero(); if(!h){els.detailView.innerHTML=`<div class="empty-state">${t('emptySelection')}</div>`;return;} clampBuildIndex(h); els.detailView.innerHTML=`<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${renderSpells(h.spells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||[]).map(tip=>`
-  <li>${esc(loc(tip))}</li>
-`).join('')}
+unction renderDetail() {
+  hideFloatingTooltip(true);
 
-<div id="buildSection"></div>
-`;
+  const h = currentHero();
 
-renderBuildSection(h);
-bindFloatingTriggers(els.detailView);
-queueLayoutSync();
- }
+  if (!h) {
+    els.detailView.innerHTML = 
+      <div class="empty-state">
+        ${t('emptySelection')}
+      </div>
+    ;
+    return;
+  }
+
+  clampBuildIndex(h);
+
+  els.detailView.innerHTML = 
+    <h2>${esc(loc(h.name))}</h2>
+
+    <div class="hero-role">
+      ${esc(locRole(h.role))}
+    </div>
+
+    <p>${esc(loc(h.headline))}</p>
+
+    <section class="detail-section">
+      <h3>${t('gameplay')}</h3>
+      <p>${esc(loc(h.gameplay))}</p>
+
+      ${renderSpells(h.spells)}
+    </section>
+
+    <section class="detail-section">
+      <h3>${t('tips')}</h3>
+
+      <ul class="tips-list">
+        ${(h.tips || []).map(tip => 
+          <li>${esc(loc(tip))}</li>
+        ).join('')}
+      </ul>
+    </section>
+
+    <div id="buildSection"></div>
+  `;
+
+  renderBuildSection(h);
+  bindFloatingTriggers(els.detailView);
+  queueLayoutSync();
+}
 
     function renderAll() { updateStaticLang(); ensureSelection(); renderHeader(); renderFilters(); renderHeroList(); renderDetail(); updateHash(); }
     function updateHash() { const h=currentHero(); clampBuildIndex(h); h?history.replaceState(null,'',`#hero=${encodeURIComponent(state.heroId)}&build=${state.buildIndex}`):history.replaceState(null,'',location.pathname); }
