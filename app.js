@@ -325,6 +325,8 @@ function renderBuildCode(b) {
   
   if (!hero.builds || hero.builds.length === 0) {
     el.innerHTML = `<div class="empty-state">${t('emptyTalents')}</div>`;
+      bindFloatingTriggers(el);
+queueLayoutSync();
     return;
   }
   
@@ -338,7 +340,10 @@ function renderBuildCode(b) {
   el.innerHTML=`<div class="build-tabs">${hero.builds.map((x,i)=>`<button class="build-tab${i===state.buildIndex?' active':''}" type="button" data-build-index="${i}">${esc(loc(x.label))}</button>`).join('')}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(b.talents)}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
 }
 
-    function renderDetail() { hideFloatingTooltip(true); const h=currentHero(); if(!h){els.detailView.innerHTML=`<div class="empty-state">${t('emptySelection')}</div>`;return;} clampBuildIndex(h); els.detailView.innerHTML=`<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${renderSpells(h.spells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||[]).map(tip=>`<li>${esc(loc(tip))}</li>`).join('')}</ul></div></article></section><div id="buildSection"></div>`; bindFloatingTriggers(); renderBuildSection(h); }
+    function renderDetail() { hideFloatingTooltip(true); const h=currentHero(); if(!h){els.detailView.innerHTML=`<div class="empty-state">${t('emptySelection')}</div>`;return;} clampBuildIndex(h); els.detailView.innerHTML=`<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${renderSpells(h.spells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||[]).map(tip=>`<li>${esc(loc(tip))}</li>`).join('')}</ul></div></article></section><div id="buildSection"></div>`; enderBuildSection(h);
+bindFloatingTriggers(els.detailView);
+queueLayoutSync();
+ }
 
     function renderAll() { updateStaticLang(); ensureSelection(); renderHeader(); renderFilters(); renderHeroList(); renderDetail(); updateHash(); }
     function updateHash() { const h=currentHero(); clampBuildIndex(h); h?history.replaceState(null,'',`#hero=${encodeURIComponent(state.heroId)}&build=${state.buildIndex}`):history.replaceState(null,'',location.pathname); }
@@ -568,17 +573,7 @@ els.heroList.addEventListener('click', (e) => {
     updateHash();
     return;
   }
-els.detailView.addEventListener('mousedown', (e) => {
-  const buildCodeBtn = e.target.closest('.build-code-box[data-build-code]');
-  if (!buildCodeBtn) return;
 
-  e.preventDefault();
-
-  const selection = window.getSelection ? window.getSelection() : null;
-  if (selection && selection.removeAllRanges) {
-    selection.removeAllRanges();
-  }
-});
 
   const buildCodeBtn = e.target.closest('.build-code-box[data-build-code]');
   if (buildCodeBtn) {
@@ -589,6 +584,17 @@ els.detailView.addEventListener('mousedown', (e) => {
   const yt = e.target.closest('[data-youtube-id]');
   if (yt) {
     openLightbox(yt.dataset.youtubeId);
+  }
+});
+els.detailView.addEventListener('mousedown', (e) => {
+  const buildCodeBtn = e.target.closest('.build-code-box[data-build-code]');
+  if (!buildCodeBtn) return;
+
+  e.preventDefault();
+
+  const selection = window.getSelection ? window.getSelection() : null;
+  if (selection && selection.removeAllRanges) {
+    selection.removeAllRanges();
   }
 });
     els.toggleTwitch.addEventListener('click',()=>{state.twitchOpen=!state.twitchOpen;syncTwitchUI();});
