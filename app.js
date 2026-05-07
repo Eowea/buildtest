@@ -225,9 +225,9 @@ function mountTwitch() {
 
 function ftHTML({cls,title,desc,demoId,inner}) { 
   const dStr = String(demoId||'').toLowerCase();
-  // On vérifie si c'est un GIF OU un WEBP
-  const isImg = dStr.endsWith('.gif') || dStr.endsWith('.webp');
-  const finalDemo = isImg ? demoId : parseYouTubeId(demoId||'');
+  // On vérifie si c'est un GIF, un WEBP ou un MP4
+  const isMedia = dStr.endsWith('.gif') || dStr.endsWith('.webp') || dStr.endsWith('.mp4');
+  const finalDemo = isMedia ? demoId : parseYouTubeId(demoId||'');
   
   return `<button class="${cls}" type="button" aria-label="${esc(loc(title))}" data-floating-title="${esc(loc(title))}" data-floating-description="${esc(loc(desc)||t('descUnavailable'))}" data-floating-demo="${esc(finalDemo)}">${inner}</button>`; 
 }
@@ -364,13 +364,18 @@ function showFloatingTooltip(tr) {
     const did = tr.dataset.floatingDemo||''; 
     
     let mediaHtml = '';
-    const isImg = did.toLowerCase().endsWith('.gif') || did.toLowerCase().endsWith('.webp');
+    const lowerDid = did.toLowerCase();
+    const isImg = lowerDid.endsWith('.gif') || lowerDid.endsWith('.webp');
+    const isVid = lowerDid.endsWith('.mp4');
     
     if (isImg) {
-        // Affichage pour .gif ou .webp
+        // 1. Affichage pour .gif ou .webp (Balise <img>)
         mediaHtml = `<div class="floating-demo" style="margin-top:8px; background:transparent; border-radius:6px; overflow:hidden;"><img src="${did}" alt="Demo" style="display:block; width:100%; height:100%; aspect-ratio:16/9; object-fit:cover; margin:0;" /></div>`;
+    } else if (isVid) {
+        // 2. Affichage pour .mp4 (Balise <video>)
+        mediaHtml = `<div class="floating-demo" style="margin-top:8px; background:transparent; border-radius:6px; overflow:hidden;"><video src="${did}" autoplay loop muted playsinline style="display:block; width:100%; height:100%; aspect-ratio:16/9; object-fit:cover; margin:0;"></video></div>`;
     } else if (did) {
-        // Affichage pour YouTube
+        // 3. Affichage pour YouTube (Balise <iframe>)
         mediaHtml = `<div class="floating-demo"><iframe src="${ytMini(did)}" title="Demo" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>`;
     }
 
