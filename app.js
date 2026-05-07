@@ -368,7 +368,7 @@ function showFloatingTooltip(tr) {
     
     if (isImg) {
         // Affichage pour .gif ou .webp
-        mediaHtml = `<div class="floating-demo" style="margin-top:8px;"><img src="${did}" alt="Demo" style="display:block; width:100%; height:100%; aspect-ratio:16/9; object-fit:cover; border-radius:6px; margin:0;" /></div>`;
+        mediaHtml = `<div class="floating-demo" style="margin-top:8px; background:transparent; border-radius:6px; overflow:hidden;"><img src="${did}" alt="Demo" style="display:block; width:100%; height:100%; aspect-ratio:16/9; object-fit:cover; margin:0;" /></div>`;
     } else if (did) {
         // Affichage pour YouTube
         mediaHtml = `<div class="floating-demo"><iframe src="${ytMini(did)}" title="Demo" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>`;
