@@ -223,8 +223,16 @@ function mountTwitch() {
       }).join('');
     }
 
-    function ftHTML({cls,title,desc,demoId,inner}) { return `<button class="${cls}" type="button" aria-label="${esc(loc(title))}" data-floating-title="${esc(loc(title))}" data-floating-description="${esc(loc(desc)||t('descUnavailable'))}" data-floating-demo-youtube-id="${esc(parseYouTubeId(demoId||''))}">${inner}</button>`; }
-    function renderSpells(sp=[]) {
+function ftHTML({cls,title,desc,demoId,inner}) { 
+  const dStr = String(demoId||'').toLowerCase();
+  // On vérifie si c'est un GIF OU un WEBP
+  const isImg = dStr.endsWith('.gif') || dStr.endsWith('.webp');
+  const finalDemo = isImg ? demoId : parseYouTubeId(demoId||'');
+  
+  return `<button class="${cls}" type="button" aria-label="${esc(loc(title))}" data-floating-title="${esc(loc(title))}" data-floating-description="${esc(loc(desc)||t('descUnavailable'))}" data-floating-demo="${esc(finalDemo)}">${inner}</button>`; 
+}
+
+function renderSpells(sp=[]) {
       if(!sp.length) return '';
       return `<div class="spell-strip">${sp.map(s=>`<div class="spell-item">${ftHTML({cls:'spell-trigger floating-trigger',title:s.name,desc:s.description,demoId:s.demoYoutubeId||s.demoYoutubeUrl,inner:`<div class="spell-icon" data-fallback="${esc(uiSpellKey(s.key)||initials(loc(s.name)))}"><img src="${s.icon||svgBadge(loc(s.name))}" alt="${esc(loc(s.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`})}<div class="spell-name">${esc(uiSpellKey(s.key)||'')}</div></div>`).join('')}</div>`;
     }
@@ -348,7 +356,28 @@ function renderBuildCode(b) {
     function hideFloatingTooltip(imm=false) { clearTimeout(hideTooltipTimer); const r=()=>{els.tooltipPortal.innerHTML='';els.tooltipPortal.setAttribute('aria-hidden','true');activeFloatingTrigger=null;}; imm?r():(hideTooltipTimer=setTimeout(r,40)); }
     function positionTooltip(tr,tt) { if(!tr||!tt) return; const r=tr.getBoundingClientRect(),m=12,vw=innerWidth,vh=innerHeight; let l=r.left+r.width/2-tt.offsetWidth/2; l=Math.max(m,Math.min(l,vw-tt.offsetWidth-m)); let tPos=r.top-tt.offsetHeight-10,pl='top'; if(tPos<m){tPos=r.bottom+10;pl='bottom';} tPos=Math.max(m,Math.min(tPos,vh-tt.offsetHeight-m)); const a=Math.max(16,Math.min(r.left+r.width/2-l,tt.offsetWidth-16)); tt.style.left=l+'px'; tt.style.top=tPos+'px'; tt.dataset.placement=pl; tt.style.setProperty('--arrow-left',a+'px'); }
     function queueTooltipPosition() { if (!activeFloatingTrigger || tooltipRaf) return; tooltipRaf = requestAnimationFrame(() => { tooltipRaf = 0; const t = $('activeFloatingTooltip'); if (activeFloatingTrigger && t) positionTooltip(activeFloatingTrigger, t); }); }
-    function showFloatingTooltip(tr) { if(!tr) return; clearTimeout(hideTooltipTimer); activeFloatingTrigger=tr; const title=tr.dataset.floatingTitle||'',desc=tr.dataset.floatingDescription||'',did=parseYouTubeId(tr.dataset.floatingDemoYoutubeId||''); els.tooltipPortal.innerHTML=`<div class="floating-tooltip" id="activeFloatingTooltip"><div class="floating-tooltip-title">${title}</div><div class="floating-tooltip-body">${desc}</div>${did?`<div class="floating-demo"><iframe src="${ytMini(did)}" title="Demo" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>`:''}</div>`; els.tooltipPortal.setAttribute('aria-hidden','false'); queueTooltipPosition(); }
+function showFloatingTooltip(tr) { 
+    if(!tr) return; 
+    clearTimeout(hideTooltipTimer); activeFloatingTrigger=tr; 
+    const title = tr.dataset.floatingTitle||'';
+    const desc = tr.dataset.floatingDescription||'';
+    const did = tr.dataset.floatingDemo||''; 
+    
+    let mediaHtml = '';
+    const isImg = did.toLowerCase().endsWith('.gif') || did.toLowerCase().endsWith('.webp');
+    
+    if (isImg) {
+        // Affichage pour .gif ou .webp
+        mediaHtml = `<div class="floating-demo"><img src="${did}" alt="Demo" style="width:100%; border-radius:6px; margin-top:8px;" /></div>`;
+    } else if (did) {
+        // Affichage pour YouTube
+        mediaHtml = `<div class="floating-demo"><iframe src="${ytMini(did)}" title="Demo" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>`;
+    }
+
+    els.tooltipPortal.innerHTML=`<div class="floating-tooltip" id="activeFloatingTooltip"><div class="floating-tooltip-title">${title}</div><div class="floating-tooltip-body">${desc}</div>${mediaHtml}</div>`; 
+    els.tooltipPortal.setAttribute('aria-hidden','false'); 
+    queueTooltipPosition(); 
+}
 function bindFloatingTriggers(root = document) {
   const isTouchLike = window.matchMedia('(hover: none), (pointer: coarse)').matches;
 
