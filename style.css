@@ -1375,3 +1375,61 @@
   height: 14px; 
   color: var(--gold-dim); 
 }
+/* ==========================================================================
+   COULEURS DES RÉSEAUX SOCIAUX
+   ========================================================================== */
+
+/* Twitch (Violet) */
+.social-link[data-network="twitch"] {
+    background-color: #9146FF;
+    border-color: #9146FF;
+    color: #FFFFFF;
+}
+.social-link[data-network="twitch"]:hover {
+    background-color: #772ce8; /* Un peu plus sombre au survol */
+    border-color: #772ce8;
+}
+
+/* YouTube (Rouge) */
+.social-link[data-network="youtube"] {
+    background-color: #FF0000;
+    border-color: #FF0000;
+    color: #FFFFFF;
+}
+.social-link[data-network="youtube"]:hover {
+    background-color: #cc0000;
+    border-color: #cc0000;
+}
+
+/* Discord (Bleu) */
+.social-link[data-network="discord"] {
+    background-color: #5865F2;
+    border-color: #5865F2;
+    color: #FFFFFF;
+}
+.social-link[data-network="discord"]:hover {
+    background-color: #4752c4;
+    border-color: #4752c4;
+}
+
+/* Ko-fi (Corail / Rouge) */
+.social-link[data-network="kofi"] {
+    background-color: #FF5E5B;
+    border-color: #FF5E5B;
+    color: #FFFFFF;
+}
+.social-link[data-network="kofi"]:hover {
+    background-color: #e54b48;
+    border-color: #e54b48;
+}
+
+/* X / Twitter (Noir) */
+.social-link[data-network="x"] {
+    background-color: #111111; /* Presque noir pour bien contraster avec le fond du site */
+    border-color: #333333;
+    color: #FFFFFF;
+}
+.social-link[data-network="x"]:hover {
+    background-color: #222222;
+    border-color: #444444;
+}

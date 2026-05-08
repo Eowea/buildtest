@@ -190,7 +190,7 @@ function mountTwitch() {
     function renderHeader() { 
       els.siteTitle.textContent = loc(STREAMER_CONFIG.siteTitle); 
       els.siteSubtitle.textContent = loc(STREAMER_CONFIG.siteSubtitle); 
-      els.socials.innerHTML = STREAMER_CONFIG.socials.map(s=>`<a class="social-link" href="${s.url}" target="_blank" rel="noreferrer">${ICONS[s.icon]||''}<span>${s.label}</span></a>`).join(''); 
+      els.socials.innerHTML = STREAMER_CONFIG.socials.map(s=>`<a class="social-link" data-network="${s.icon}" href="${s.url}" target="_blank" rel="noreferrer">${ICONS[s.icon]||''}<span>${s.label}</span></a>`).join('');
     }
     
     function renderFilters() { els.roleFilters.innerHTML=roles().map(r=>`<button class="filter-chip${state.role===r?' active':''}" type="button" data-role="${r}">${locRole(r)}</button>`).join(''); }
@@ -358,7 +358,15 @@ function renderBuildCode(b) {
     function queueTooltipPosition() { if (!activeFloatingTrigger || tooltipRaf) return; tooltipRaf = requestAnimationFrame(() => { tooltipRaf = 0; const t = $('activeFloatingTooltip'); if (activeFloatingTrigger && t) positionTooltip(activeFloatingTrigger, t); }); }
 function showFloatingTooltip(tr) { 
     if(!tr) return; 
-    clearTimeout(hideTooltipTimer); activeFloatingTrigger=tr; 
+    clearTimeout(hideTooltipTimer); 
+    
+    // --- NOUVEAUTÉ : On empêche le rechargement si l'infobulle est déjà active
+    if (activeFloatingTrigger === tr && els.tooltipPortal.getAttribute('aria-hidden') === 'false') {
+        return; 
+    }
+    // -------------------------------------------------------------------------
+
+    activeFloatingTrigger=tr; 
     const title = tr.dataset.floatingTitle||'';
     const desc = tr.dataset.floatingDescription||'';
     const did = tr.dataset.floatingDemo||''; 
@@ -395,7 +403,7 @@ function bindFloatingTriggers(root = document) {
       t.addEventListener('mouseenter', () => showFloatingTooltip(t));
       t.addEventListener('mouseleave', () => hideFloatingTooltip());
       t.addEventListener('focus', () => showFloatingTooltip(t));
-      t.addEventListener('blur', () => hideFloatingTooltip(true));
+      t.addEventListener('blur', () => hideFloatingTooltip());
       
     } else {
       // Mobile / tactile
@@ -508,7 +516,7 @@ window.goToBuild = (heroId, buildIndex) => {
     const detailEl = document.getElementById('detailViewWrap');
     if (!detailEl) return;
 
-    const offset = window.innerWidth <= 640 ? 120 : 160;
+    const offset = window.innerWidth <= 640 ? 160 : 190;
     const y = detailEl.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top: y, behavior: 'smooth' });
   });
@@ -516,12 +524,15 @@ window.goToBuild = (heroId, buildIndex) => {
 
 // Fonction pour scroller en douceur au niveau de la liste des héros
    function scrollToHeroes() {
-      const layoutEl = document.querySelector('.layout');
-      if (layoutEl) {
-        const y = layoutEl.getBoundingClientRect().top + window.scrollY - 130;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }
-    }
+     const layoutEl = document.querySelector('.layout');
+     if (layoutEl) {
+         // On augmente la marge de sécurité (190px sur PC, 160px sur mobile)
+         const offset = window.innerWidth <= 640 ? 160 : 190;
+         const y = layoutEl.getBoundingClientRect().top + window.scrollY - offset;
+         
+         window.scrollTo({ top: y, behavior: 'smooth' });
+     }
+ }
 
 // Un timer pour éviter que la recherche ne saccade à chaque lettre frappée
     let searchTimeout;
@@ -554,7 +565,7 @@ els.heroList.addEventListener('click', (e) => {
     const detailEl = document.getElementById('detailViewWrap');
     if (!detailEl) return;
 
-    const offset = window.innerWidth <= 640 ? 120 : 140;
+    const offset = window.innerWidth <= 640 ? 160 : 190;
     const y = detailEl.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top: y, behavior: 'smooth' });
   }, 0);
@@ -583,7 +594,7 @@ els.heroList.addEventListener('click', (e) => {
         if (state.heroId) {
           const detailEl = document.getElementById('detailViewWrap');
           if (detailEl) {
-            const offset = window.innerWidth <= 640 ? 120 : 140;
+            const offset = window.innerWidth <= 640 ? 160 : 190;
             const y = detailEl.getBoundingClientRect().top + window.scrollY - offset;
             window.scrollTo({ top: y, behavior: 'smooth' });
           }
@@ -649,4 +660,18 @@ els.langSwitcher.addEventListener('click', (e) => {
     window.addEventListener('resize',()=>{queueTooltipPosition();queueLayoutSync();});
     window.addEventListener('scroll', queueTooltipPosition, { passive: true, capture: true });
 
-    restoreFromHash(); mountTwitch(); syncTwitchUI(); renderRandomBuildCard(); renderAll();
+restoreFromHash(); mountTwitch(); syncTwitchUI(); renderRandomBuildCard(); renderAll();
+
+    // --- NOUVEAU : Auto-scroll au chargement si on arrive via un lien de partage ---
+if (location.hash.includes('hero=')) {
+    setTimeout(() => {
+        const detailEl = document.getElementById('detailViewWrap');
+        if (detailEl) {
+            const offset = window.innerWidth <= 640 ? 160 : 190;
+            const y = detailEl.getBoundingClientRect().top + window.scrollY - offset;
+            
+            // Effectue le scroll vers le héros
+            window.scrollTo({ top: y, behavior: 'smooth' }); 
+        }
+    }, 150); 
+};
