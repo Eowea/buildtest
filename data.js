@@ -948,7 +948,7 @@
         enabled: true,
         name: { fr: 'Stukov', en: 'Stukov' },
         role: 'Healer',
-        portrait: 'https://static.icy-veins.com/images/heroes/hero-portraits/stukov.jpg',
+        portrait: 'https://i.postimg.cc/fyNWJD3j/image-2026-05-08-170431056.png',
         headline: { fr: 'Contrôle de zone énorme et soins propagatifs.', en: 'Massive zone control and spreading heals.' },
         gameplay: { fr: 'Stukov propage des virus soignants sur son équipe et des pustules sur l\'ennemi, avant de tout faire exploser avec son Trait.', en: 'Stukov spreads healing viruses to his team and pustules to enemies, then detonates them all with his Trait.' },
         guideVideo: null,
