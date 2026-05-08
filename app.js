@@ -143,39 +143,29 @@ function setStreamOnline() {
 }
 
 function setStreamOffline() {
-  $('desktopTwitchCard').style.display = 'none';
-  $('randomBuildCard').classList.add('active');
-
-  const mobileTwitchCard = $('mobileTwitchCard');
-  const mobileRandomBuildCard = $('mobileRandomBuildCard');
-
-  if (mobileTwitchCard) mobileTwitchCard.style.display = 'none';
-  if (mobileRandomBuildCard) mobileRandomBuildCard.classList.add('active');
-
-  renderRandomBuildCard();
+    const d = $('desktopTwitchCard'); if(d) d.style.display = 'none';
+    const r = $('randomBuildCard'); if(r) r.classList.add('active');
+    const mt = $('mobileTwitchCard'); if(mt) mt.style.display = 'none';
+    const mr = $('mobileRandomBuildCard'); if(mr) mr.classList.add('active');
+    renderRandomBuildCard();
 }
 
 function mountTwitch() {
-  els.desktopTwitchMount.innerHTML = '<div id="twitch-player-desktop"></div>';
-
-  if (els.mobileTwitchMount) {
-    els.mobileTwitchMount.innerHTML = twitchFrame();
-  }
-
-  const player = new Twitch.Player('twitch-player-desktop', {
-    width: '100%',
-    height: 200,
-    channel: STREAMER_CONFIG.twitchChannel,
-    parent:[location.hostname || 'localhost'],
-    muted: true,
-  });
-
-  // On fait uniquement confiance aux événements officiels de l'API
-  player.addEventListener(Twitch.Player.ONLINE, setStreamOnline);
-  player.addEventListener(Twitch.Player.OFFLINE, setStreamOffline);
+    if (els.desktopTwitchMount) {
+        els.desktopTwitchMount.innerHTML = '<div id="twitch-player-desktop"></div>';
+        const player = new Twitch.Player('twitch-player-desktop', {
+            width: '100%', height: 200, channel: STREAMER_CONFIG.twitchChannel, parent:[location.hostname || 'localhost'], muted: true,
+        });
+        player.addEventListener(Twitch.Player.ONLINE, setStreamOnline);
+        player.addEventListener(Twitch.Player.OFFLINE, setStreamOffline);
+    }
+    if (els.mobileTwitchMount) els.mobileTwitchMount.innerHTML = twitchFrame();
 }
 
-    function syncTwitchUI() { els.desktopTwitchCard.classList.toggle('is-collapsed',!state.twitchOpen); els.toggleTwitch.textContent=state.twitchOpen?t('twitchClose'):t('twitchOpen'); }
+    function syncTwitchUI() { 
+    if (els.desktopTwitchCard) els.desktopTwitchCard.classList.toggle('is-collapsed',!state.twitchOpen); 
+    if (els.toggleTwitch) els.toggleTwitch.textContent=state.twitchOpen?t('twitchClose'):t('twitchOpen'); 
+}
 
     function updateStaticLang() {
       const el = id => { const e = $(id); if (e) return e; return { textContent: '', placeholder: '' }; };
@@ -718,21 +708,28 @@ els.detailView.addEventListener('mousedown', (e) => {
         selection.removeAllRanges();
     }
 });
+   if (els.toggleTwitch) {
     els.toggleTwitch.addEventListener('click',()=>{state.twitchOpen=!state.twitchOpen;syncTwitchUI();});
+}
+
+if (els.videoOverlay) {
     els.videoOverlay.addEventListener('click',e=>{if(e.target===els.videoOverlay||e.target===els.closeOverlayBtn) closeLightbox();});
-els.langSwitcher.addEventListener('click', (e) => {
-  const btn = e.target.closest('.lang-btn');
-  if (!btn) return;
+}
 
-  state.lang = btn.dataset.lang;
-  localStorage.setItem('eowea_lang', state.lang);
-  renderAll();
+if (els.langSwitcher) {
+    els.langSwitcher.addEventListener('click', (e) => {
+        const btn = e.target.closest('.lang-btn');
+        if (!btn) return;
+        state.lang = btn.dataset.lang;
+        localStorage.setItem('eowea_lang', state.lang);
+        renderAll();
+        
+        const rbc = $('randomBuildCard');
+        if (rbc && rbc.classList.contains('active')) renderRandomBuildCard();
+    });
+}
 
-  if ($('randomBuildCard').classList.contains('active')) {
-    renderRandomBuildCard();
-  }
-});
-    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&els.videoOverlay.classList.contains('active')) closeLightbox();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&& els.videoOverlay && els.videoOverlay.classList.contains('active')) closeLightbox();});
     document.addEventListener('click', (e) => {
   if (!e.target.closest('.floating-trigger') && !e.target.closest('.floating-tooltip')) {
     hideFloatingTooltip(true);
