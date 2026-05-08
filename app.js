@@ -347,8 +347,82 @@ function renderBuildCode(b) {
      bindFloatingTriggers(); 
     }
 
-    function renderDetail() { hideFloatingTooltip(true); const h=currentHero(); if(!h){els.detailView.innerHTML=`<div class="empty-state">${t('emptySelection')}</div>`;return;} clampBuildIndex(h); els.detailView.innerHTML=`<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${renderSpells(h.spells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||[]).map(tip=>`<li>${esc(loc(tip))}</li>`).join('')}</ul></div></article></section><div id="buildSection"></div>`; renderBuildSection(h); bindFloatingTriggers(); }
+let cachedFourBuilds = null;
 
+function renderFourRandomBuildsHtml() {
+  if (!cachedFourBuilds) {
+    const activeHeroes = HEROES.filter(h => h.enabled !== false && h.builds && h.builds.length > 0);
+    let pool = [];
+    if (activeHeroes.length > 0) {
+      activeHeroes.forEach(hero => {
+        hero.builds.filter(b => b.enabled !== false).forEach((build, bIdx) => {
+          pool.push({ hero, build, bIdx });
+        });
+      });
+      // Mélange aléatoire (shuffle) de tous les builds existants
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+      }
+    }
+    // On garde les 4 premiers
+    cachedFourBuilds = pool.slice(0, 4);
+  }
+
+  if (!cachedFourBuilds.length) return `<div class="empty-state">${t('emptySelection')}</div>`;
+
+  let html = `<div class="center-random-container">`;
+  html += `<h2 class="section-title" style="text-align: center; margin-bottom: 25px;">${t('randomBuildTitle')}</h2>`;
+  html += `<div class="center-random-grid">`;
+  
+  cachedFourBuilds.forEach(item => {
+    const { hero, build, bIdx } = item;
+    // On réutilise l'esthétique de ta carte aléatoire existante
+    html += `
+      <div class="random-card-body center-random-card">
+        <div class="random-hero-row">
+          <div class="portrait"><img src="${hero.portrait}" alt=""></div>
+          <div class="random-meta">
+            <div class="name" style="font-size: 1.1rem;">${esc(loc(hero.name))}</div>
+            <div class="role" style="font-size: 0.85rem; opacity: 0.8;">${esc(locRole(hero.role))}</div>
+          </div>
+        </div>
+        <div class="random-build-label" style="margin: 15px 0;">${esc(loc(build.label))}</div>
+        <div class="random-talents-strip" style="margin-bottom: 20px;">
+          ${(build.talents || []).slice(0, 7).map(td => ftHTML({
+            cls: 'talent-trigger floating-trigger',
+            title: td.name,
+            desc: td.description,
+            inner: `<div class="talent-icon"><img src="${td.icon || svgBadge(loc(td.name))}"></div>`
+          })).join('')}
+        </div>
+        <button class="btn-suggest" onclick="window.goToBuild('${hero.id}', ${bIdx})">
+          ${t('viewBuild')}
+        </button>
+      </div>
+    `;
+  });
+  
+  html += `</div></div>`;
+  return html;
+}
+
+function renderDetail() { 
+  hideFloatingTooltip(true); 
+  const h=currentHero(); 
+  
+  // NOUVEAUTÉ : Si aucun héros n'est sélectionné, on affiche les 4 builds !
+  if(!h){
+    els.detailView.innerHTML = renderFourRandomBuildsHtml();
+    bindFloatingTriggers(); // Très important pour que les infobulles marchent au centre
+    return;
+  } 
+  
+  clampBuildIndex(h); 
+  els.detailView.innerHTML=`<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${renderSpells(h.spells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||[]).map(tip=>`<li>${esc(loc(tip))}</li>`).join('')}</ul></div></article></section><div id="buildSection"></div>`; 
+  renderBuildSection(h); 
+  bindFloatingTriggers(); 
+}
     function renderAll() { updateStaticLang(); ensureSelection(); renderHeader(); renderFilters(); renderHeroList(); renderDetail(); updateHash(); }
     function updateHash() { const h=currentHero(); clampBuildIndex(h); h?history.replaceState(null,'',`#hero=${encodeURIComponent(state.heroId)}&build=${state.buildIndex}`):history.replaceState(null,'',location.pathname); }
     function restoreFromHash() { const p=new URLSearchParams(location.hash.replace(/^#/,'')); const id=p.get('hero'); if(id&&HEROES.some(h=>h.id===id&&h.enabled!==false)){state.heroId=id;state.buildIndex=Number(p.get('build')||'0');} }
