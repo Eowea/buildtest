@@ -1433,3 +1433,69 @@
     background-color: #222222;
     border-color: #444444;
 }
+/* ==========================================================================
+   MENUS FLOTTANTS (Réseaux à gauche, Langues à droite)
+   ========================================================================== */
+
+#socials {
+    position: fixed;
+    top: 50%;
+    left: 15px; /* Sur la gauche de l'écran */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+/* Cache le texte des boutons réseaux pour un look vertical épuré */
+#socials .social-link span {
+    display: none;
+}
+
+/* Transforme les boutons réseaux en ronds parfaits */
+#socials .social-link {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+#langSwitcher {
+    position: fixed;
+    top: 50%;
+    right: 15px; /* Sur la droite de l'écran */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+#langSwitcher .lang-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Ajustement pour les petits écrans (Mobile) */
+@media (max-width: 900px) {
+    #socials { left: 5px; }
+    #langSwitcher { right: 5px; }
+    #socials .social-link, #langSwitcher .lang-btn {
+        width: 35px;
+        height: 35px;
+    }
+    #socials svg { width: 18px; height: 18px; }
+}
