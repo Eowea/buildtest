@@ -128,54 +128,7 @@ const getInitialLang = () => {
     function ensureSelection() { const l=filteredHeroes(); if(state.heroId&&(!currentHero()||!l.some(h=>h.id===state.heroId))){state.heroId=null;state.buildIndex=0;} clampBuildIndex(currentHero()); }
 
     function twitchFrame() { if(!STREAMER_CONFIG.twitchChannel) return ''; return `<iframe src="https://player.twitch.tv/?channel=${encodeURIComponent(STREAMER_CONFIG.twitchChannel)}&parent=${encodeURIComponent(location.hostname||'localhost')}&muted=true" allowfullscreen loading="lazy"></iframe>`; }
-    // --- GESTION TWITCH & BUILD ALEATOIRE ---
-function setStreamOnline() {
-  $('desktopTwitchCard').style.display = 'block';
-  $('randomBuildCard').classList.add('active');
 
-  const mobileTwitchCard = $('mobileTwitchCard');
-  const mobileRandomBuildCard = $('mobileRandomBuildCard');
-
-  if (mobileTwitchCard) mobileTwitchCard.style.display = 'block';
-  if (mobileRandomBuildCard) mobileRandomBuildCard.classList.add('active');
-
-  renderRandomBuildCard();
-}
-
-function setStreamOffline() {
-  $('desktopTwitchCard').style.display = 'none';
-  $('randomBuildCard').classList.add('active');
-
-  const mobileTwitchCard = $('mobileTwitchCard');
-  const mobileRandomBuildCard = $('mobileRandomBuildCard');
-
-  if (mobileTwitchCard) mobileTwitchCard.style.display = 'none';
-  if (mobileRandomBuildCard) mobileRandomBuildCard.classList.add('active');
-
-  renderRandomBuildCard();
-}
-
-function mountTwitch() {
-  els.desktopTwitchMount.innerHTML = '<div id="twitch-player-desktop"></div>';
-
-  if (els.mobileTwitchMount) {
-    els.mobileTwitchMount.innerHTML = twitchFrame();
-  }
-
-  const player = new Twitch.Player('twitch-player-desktop', {
-    width: '100%',
-    height: 200,
-    channel: STREAMER_CONFIG.twitchChannel,
-    parent:[location.hostname || 'localhost'],
-    muted: true,
-  });
-
-  // On fait uniquement confiance aux événements officiels de l'API
-  player.addEventListener(Twitch.Player.ONLINE, setStreamOnline);
-  player.addEventListener(Twitch.Player.OFFLINE, setStreamOffline);
-}
-
-    function syncTwitchUI() { els.desktopTwitchCard.classList.toggle('is-collapsed',!state.twitchOpen); els.toggleTwitch.textContent=state.twitchOpen?t('twitchClose'):t('twitchOpen'); }
 
     function updateStaticLang() {
       const el = id => { const e = $(id); if (e) return e; return { textContent: '', placeholder: '' }; };
@@ -516,54 +469,6 @@ function bindFloatingTriggers(root = document) {
       return { hero: randomHero, build: availableBuilds[randomIndex], index: randomIndex };
     }
 
-    // Afficher le build aléatoire dans la carte
-function renderRandomBuildCard() {
-  if (!window.currentRandomHero) {
-    const activeHeroes = HEROES.filter(h => h.enabled !== false && h.builds && h.builds.length > 0);
-    if (!activeHeroes.length) return;
-
-    window.currentRandomHero = activeHeroes[Math.floor(Math.random() * activeHeroes.length)];
-    window.currentRandomBuildIdx = Math.floor(Math.random() * window.currentRandomHero.builds.length);
-  }
-
-  const hero = window.currentRandomHero;
-  const bIdx = window.currentRandomBuildIdx;
-  const build = hero.builds[bIdx];
-
-const markup = `
-    <div class="random-card-head">
-      <span>${t('randomBuildTitle')}</span>
-    </div>
-    <div class="random-card-body">
-      <div class="random-hero-row">
-        <div class="portrait"><img src="${hero.portrait}" alt=""></div>
-        <div class="random-meta">
-          <div class="name">${esc(loc(hero.name))}</div>
-          <div class="role">${esc(locRole(hero.role))}</div>
-        </div>
-      </div>
-      <div class="random-build-label">${esc(loc(build.label))}</div>
-      <div class="random-talents-strip">
-        ${(build.talents || []).slice(0, 7).map(td => ftHTML({
-          cls: 'talent-trigger floating-trigger',
-          title: td.name,
-          desc: td.description,
-          inner: `<div class="talent-icon"><img src="${td.icon || svgBadge(loc(td.name))}"></div>`
-        })).join('')}
-      </div>
-      <button class="btn-suggest" onclick="window.goToBuild('${hero.id}', ${bIdx})">
-        ${t('viewBuild')}
-      </button>
-    </div>
-  `;
-
-  ['randomBuildCard', 'mobileRandomBuildCard'].forEach(id => {
-    const el = $(id);
-    if (el) el.innerHTML = markup;
-  });
-
-  bindFloatingTriggers();
-}
 function resetHeroNavigationFilters() {
   if (typeof searchTimeout !== 'undefined') {
     clearTimeout(searchTimeout);
@@ -711,7 +616,6 @@ els.detailView.addEventListener('mousedown', (e) => {
     openLightbox(yt.dataset.youtubeId);
   }
 });
-    els.toggleTwitch.addEventListener('click',()=>{state.twitchOpen=!state.twitchOpen;syncTwitchUI();});
     els.videoOverlay.addEventListener('click',e=>{if(e.target===els.videoOverlay||e.target===els.closeOverlayBtn) closeLightbox();});
 els.langSwitcher.addEventListener('click', (e) => {
   const btn = e.target.closest('.lang-btn');
@@ -734,7 +638,7 @@ els.langSwitcher.addEventListener('click', (e) => {
     window.addEventListener('resize',()=>{queueTooltipPosition();queueLayoutSync();});
     window.addEventListener('scroll', queueTooltipPosition, { passive: true, capture: true });
 
-restoreFromHash(); mountTwitch(); syncTwitchUI(); renderRandomBuildCard(); renderAll();
+restoreFromHash(); renderAll();
 
     // --- NOUVEAU : Auto-scroll au chargement si on arrive via un lien de partage ---
 if (location.hash.includes('hero=')) {
