@@ -415,7 +415,22 @@ function renderDetail() {
     
     // --- SI UN HÉROS EST SÉLECTIONNÉ (Ton code d'origine) ---
     clampBuildIndex(h); 
-    els.detailView.innerHTML = `<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${renderSpells(h.spells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||
+    
+    // Code séparé sur plusieurs lignes pour éviter que ça ne coupe
+    let html = '';
+    html += '<section class="hero-header"><div class="detail-portrait" data-fallback="' + esc(initials(loc(h.name))) + '">';
+    html += '<img src="' + h.portrait + '" alt="' + esc(loc(h.name)) + '" loading="lazy" onerror="this.parentNode.classList.add(\\'fallback\\');this.remove();" /></div>';
+    html += '<div><h2 class="detail-title">' + esc(loc(h.name)) + '</h2><div class="role-badge">' + esc(locRole(h.role)) + '</div>';
+    html += '<p class="detail-headline">' + esc(loc(h.headline)) + '</p></div></section>';
+    html += '<section class="meta-grid"><article class="card"><div class="card-head">' + t('gameplay') + '</div>';
+    html += '<div class="card-body"><p>' + esc(loc(h.gameplay)) + '</p>' + renderSpells(h.spells) + '</div></article>';
+    html += '<article class="card"><div class="card-head">' + t('tips') + '</div><div class="card-body"><ul class="bullet-list">';
+    html += (h.tips||[]).map(x => '<li>' + esc(loc(x)) + '</li>').join('');
+    html += '</ul></div></article></section><div id="buildSection"></div>';
+    
+    els.detailView.innerHTML = html;
+    renderBuildSection(h); 
+}
     function renderAll() { updateStaticLang(); ensureSelection(); renderHeader(); renderFilters(); renderHeroList(); renderDetail(); updateHash(); }
     function updateHash() { const h=currentHero(); clampBuildIndex(h); h?history.replaceState(null,'',`#hero=${encodeURIComponent(state.heroId)}&build=${state.buildIndex}`):history.replaceState(null,'',location.pathname); }
     function restoreFromHash() { const p=new URLSearchParams(location.hash.replace(/^#/,'')); const id=p.get('hero'); if(id&&HEROES.some(h=>h.id===id&&h.enabled!==false)){state.heroId=id;state.buildIndex=Number(p.get('build')||'0');} }
