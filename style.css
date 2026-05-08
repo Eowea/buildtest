@@ -1506,3 +1506,50 @@
   .center-random-grid {
     grid-template-columns: 1fr;
   }
+/* --- ETAPE 3 : ANIMATION DES RÉSEAUX SOCIAUX AU SURVOL --- */
+
+/* Structure de base du bouton */
+#socials .social-link {
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  color: #fff !important;
+  overflow: hidden !important; /* Essentiel : cache tout ce qui dépasse */
+  border-radius: 8px !important;
+  padding: 8px !important;
+  transition: background-color 0.3s ease !important;
+}
+
+/* On s'assure que l'icône garde toujours la même taille */
+#socials .social-link svg {
+  width: 24px !important;
+  height: 24px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Le texte est masqué par défaut */
+#socials .social-link span {
+  max-width: 0 !important; /* Largeur à 0 */
+  opacity: 0 !important;   /* Totalement transparent */
+  margin-left: 0 !important; /* Pas d'espace avec l'icône */
+  white-space: nowrap !important; /* Empêche le texte de revenir à la ligne */
+  font-weight: bold !important;
+  font-size: 0.9rem !important;
+  
+  /* L'animation d'ouverture/fermeture dure 0.3 seconde */
+  transition: max-width 0.3s ease, opacity 0.3s ease, margin-left 0.3s ease !important;
+}
+
+/* --- EFFET AU SURVOL (HOVER) --- */
+
+/* 1. On donne un petit fond au bouton quand on passe la souris */
+#socials .social-link:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important; 
+}
+
+/* 2. On dévoile le texte */
+#socials .social-link:hover span {
+  max-width: 150px !important; /* On donne assez de place pour que le texte s'affiche */
+  opacity: 1 !important;       /* Il devient visible */
+  margin-left: 10px !important; /* On écarte le texte de l'icône */
+}
