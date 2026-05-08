@@ -1476,3 +1476,33 @@
   font-weight: bold !important;
   cursor: pointer !important;
 }
+.center-random-container {
+  padding: 10px;
+  animation: fadeIn 0.3s ease-out; /* Petite animation d'apparition douce */
+}
+
+.center-random-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes par défaut */
+  gap: 20px; /* Espace entre les builds */
+}
+
+/* On force un fond sur les cartes pour qu'elles se détachent du fond principal */
+.center-random-card {
+  background-color: rgba(25, 27, 35, 0.6); 
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.center-random-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Mode mobile : on passe les 4 builds sur 1 seule colonne */
+@media (max-width: 768px) {
+  .center-random-grid {
+    grid-template-columns: 1fr;
+  }
