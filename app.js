@@ -187,11 +187,13 @@ function mountTwitch() {
       document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === state.lang));
     }
 
-    function renderHeader() { 
-      els.siteTitle.textContent = loc(STREAMER_CONFIG.siteTitle); 
-      els.siteSubtitle.textContent = loc(STREAMER_CONFIG.siteSubtitle); 
-      els.socials.innerHTML = STREAMER_CONFIG.socials.map(s=>`<a class="social-link" data-network="${s.icon}" href="${s.url}" target="_blank" rel="noreferrer">${ICONS[s.icon]||''}<span>${s.label}</span></a>`).join('');
+function renderHeader() { 
+    if (els.siteTitle) els.siteTitle.textContent = loc(STREAMER_CONFIG.siteTitle); 
+    if (els.siteSubtitle) els.siteSubtitle.textContent = loc(STREAMER_CONFIG.siteSubtitle); 
+    if (els.socials) {
+        els.socials.innerHTML = STREAMER_CONFIG.socials.map(s=>`<a class="social-link" data-network="${s.icon}" href="${s.url}" target="_blank" rel="noreferrer">${ICONS[s.icon]||''}<span>${s.label}</span></a>`).join('');
     }
+}
     
     function renderFilters() { els.roleFilters.innerHTML=roles().map(r=>`<button class="filter-chip${state.role===r?' active':''}" type="button" data-role="${r}">${locRole(r)}</button>`).join(''); }
     function renderHeroList() {
