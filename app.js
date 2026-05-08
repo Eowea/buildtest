@@ -349,8 +349,73 @@ function renderBuildCode(b) {
      bindFloatingTriggers(); 
     }
 
-    function renderDetail() { hideFloatingTooltip(true); const h=currentHero(); if(!h){els.detailView.innerHTML=`<div class="empty-state">${t('emptySelection')}</div>`;return;} clampBuildIndex(h); els.detailView.innerHTML=`<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${renderSpells(h.spells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||[]).map(tip=>`<li>${esc(loc(tip))}</li>`).join('')}</ul></div></article></section><div id="buildSection"></div>`; renderBuildSection(h); bindFloatingTriggers(); }
+function renderDetail() { 
+    hideFloatingTooltip(true); 
+    const h = currentHero(); 
+    
+    // --- SI AUCUN HÉROS N'EST SÉLECTIONNÉ (Génération de 4 builds) ---
+    if (!h) {
+        // 1. On récupère absolument tous les builds valides de tous les héros
+        const activeHeroes = HEROES.filter(hero => hero.enabled !== false && hero.builds && hero.builds.length > 0);
+        let allBuilds =[];
+        activeHeroes.forEach(hero => {
+            hero.builds.forEach((build, bIdx) => {
+                if (build.enabled !== false) {
+                    allBuilds.push({ hero, build, bIdx });
+                }
+            });
+        });
 
+        // 2. On mélange aléatoirement et on garde les 4 premiers
+        allBuilds = allBuilds.sort(() => 0.5 - Math.random()).slice(0, 4);
+
+        // 3. On crée les cartes HTML
+        const cardsHtml = allBuilds.map(({ hero, build, bIdx }) => `
+            <div class="card" style="display:flex; flex-direction:column; gap:15px; padding:15px;">
+                <div style="display:flex; align-items:center; gap:15px;">
+                    <div class="portrait" style="width:50px; height:50px; flex-shrink:0;">
+                        <img src="${hero.portrait}" alt="" style="width:100%; border-radius:8px;">
+                    </div>
+                    <div>
+                        <div style="font-weight:bold; font-size:1.1em;">${esc(loc(hero.name))}</div>
+                        <div style="font-size:0.9em; opacity:0.8;">${esc(locRole(hero.role))}</div>
+                    </div>
+                </div>
+                <div style="font-weight:bold; color:#d4a84b; font-size:1.1em;">${esc(loc(build.label))}</div>
+                <div style="display:flex; gap:6px; flex-wrap:wrap; min-height:40px;">
+                    ${(build.talents ||[]).slice(0, 7).map(td => ftHTML({
+                        cls: 'talent-trigger floating-trigger',
+                        title: td.name,
+                        desc: td.description,
+                        demoId: td.demoYoutubeId || td.demoYoutubeUrl,
+                        inner: \`<div class="talent-icon" style="width:38px; height:38px;"><img src="${td.icon || svgBadge(loc(td.name))}" style="width:100%; border-radius:4px;"></div>\`
+                    })).join('')}
+                </div>
+                <button class="btn-suggest" style="margin-top:auto; padding:10px; background:#183052; color:white; border:none; border-radius:6px; cursor:pointer; font-weight:bold;" onclick="window.goToBuild('${hero.id}', ${bIdx})">
+                    ${t('viewBuild')}
+                </button>
+            </div>
+        `).join('');
+
+        // 4. On injecte la grille dans la vue
+        els.detailView.innerHTML = `
+            <div style="display:flex; align-items:center; gap:15px; margin-bottom:20px; margin-top:20px;">
+                <div style="flex-grow:1; height:1px; background:rgba(255,255,255,0.1);"></div>
+                <h3 style="color:#d4a84b; margin:0; text-transform:uppercase; font-size:1.2rem;">${t('randomBuildTitle')}</h3>
+                <div style="flex-grow:1; height:1px; background:rgba(255,255,255,0.1);"></div>
+            </div>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
+                ${cardsHtml}
+            </div>
+        `;
+        
+        bindFloatingTriggers();
+        return;
+    }
+    
+    // --- SI UN HÉROS EST SÉLECTIONNÉ (Ton code d'origine) ---
+    clampBuildIndex(h); 
+    els.detailView.innerHTML = `<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${renderSpells(h.spells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||
     function renderAll() { updateStaticLang(); ensureSelection(); renderHeader(); renderFilters(); renderHeroList(); renderDetail(); updateHash(); }
     function updateHash() { const h=currentHero(); clampBuildIndex(h); h?history.replaceState(null,'',`#hero=${encodeURIComponent(state.heroId)}&build=${state.buildIndex}`):history.replaceState(null,'',location.pathname); }
     function restoreFromHash() { const p=new URLSearchParams(location.hash.replace(/^#/,'')); const id=p.get('hero'); if(id&&HEROES.some(h=>h.id===id&&h.enabled!==false)){state.heroId=id;state.buildIndex=Number(p.get('build')||'0');} }
