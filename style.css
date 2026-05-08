@@ -1444,7 +1444,7 @@
   gap: 15px;
   padding: 10px;
   background-color: rgba(15, 15, 20, 0.8); /* Petit fond sombre semi-transparent (optionnel) */
-
+    border-radius: 0 10px 10px 0; /* Arrondi sur la droite */
     align-items: flex-start !important;
 }
 
