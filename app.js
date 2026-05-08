@@ -687,37 +687,36 @@ els.heroList.addEventListener('click', (e) => {
       }, 250); // Attend un quart de seconde pour fluidifier la frappe
     });
 
-   els.detailView.addEventListener('click', (e) => {
-  const tab = e.target.closest('[data-build-index]');
-  if (tab) {
-    state.buildIndex = Number(tab.dataset.buildIndex);
-    const h = currentHero();
-    if (h) renderBuildSection(h);
-    updateHash();
-    return;
-  }
-els.detailView.addEventListener('mousedown', (e) => {
-  const buildCodeBtn = e.target.closest('.build-code-box[data-build-code]');
-  if (!buildCodeBtn) return;
+els.detailView.addEventListener('click', (e) => {
+    const tab = e.target.closest('[data-build-index]');
+    if (tab) {
+        state.buildIndex = Number(tab.dataset.buildIndex);
+        const h = currentHero();
+        if (h) renderBuildSection(h);
+        updateHash();
+        return;
+    }
 
-  e.preventDefault();
+    const buildCodeBtn = e.target.closest('.build-code-box[data-build-code]');
+    if (buildCodeBtn) {
+        copyBuildCode(buildCodeBtn);
+        return;
+    }
 
-  const selection = window.getSelection ? window.getSelection() : null;
-  if (selection && selection.removeAllRanges) {
-    selection.removeAllRanges();
-  }
+    const yt = e.target.closest('[data-youtube-id]');
+    if (yt) {
+        openLightbox(yt.dataset.youtubeId);
+    }
 });
 
-  const buildCodeBtn = e.target.closest('.build-code-box[data-build-code]');
-  if (buildCodeBtn) {
-    copyBuildCode(buildCodeBtn);
-    return;
-  }
-
-  const yt = e.target.closest('[data-youtube-id]');
-  if (yt) {
-    openLightbox(yt.dataset.youtubeId);
-  }
+els.detailView.addEventListener('mousedown', (e) => {
+    const buildCodeBtn = e.target.closest('.build-code-box[data-build-code]');
+    if (!buildCodeBtn) return;
+    e.preventDefault();
+    const selection = window.getSelection ? window.getSelection() : null;
+    if (selection && selection.removeAllRanges) {
+        selection.removeAllRanges();
+    }
 });
     els.toggleTwitch.addEventListener('click',()=>{state.twitchOpen=!state.twitchOpen;syncTwitchUI();});
     els.videoOverlay.addEventListener('click',e=>{if(e.target===els.videoOverlay||e.target===els.closeOverlayBtn) closeLightbox();});
