@@ -13,36 +13,12 @@
 </head>
 <body>
   <div class="page">
-    <header class="panel topbar">
-      <div class="brand-block">
-        <div class="eyebrow">Heroes of the Storm</div>
-        <div class="title-row">
-          <div>
-            <h1 class="site-title" id="siteTitle">Eowea builds</h1>
-            <p class="site-subtitle" id="siteSubtitle"></p>
-          </div>
-          <div class="header-actions">
-            <nav class="socials" id="socials" aria-label="Réseaux sociaux"></nav>
-            <div class="lang-switcher" id="langSwitcher" aria-label="Changer de langue">
-              <button class="lang-btn" data-lang="fr">FR</button>
-              <button class="lang-btn" data-lang="en">EN</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <aside class="desktop-player">
-        <div class="twitch-card" id="desktopTwitchCard">
-          <div class="twitch-head">
-            <span>Twitch LIVE</span>
-            <button class="btn" id="toggleTwitch" type="button">replier</button>
-          </div>
-          <div class="twitch-mount" id="desktopTwitchMount"></div>
-          <div class="twitch-placeholder" id="twitchPlaceholder1">Lecteur replié.</div>
-        </div>
-        <div class="random-build-card" id="randomBuildCard"></div>
-      </aside>
-    </header>
-
+    <!-- BOUTONS FLOTTANTS -->
+    <div id="socials" class="socials"></div>
+    <div id="langSwitcher" class="lang-switcher">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
     <div class="panel mobile-player">
       <div class="twitch-card" id="mobileTwitchCard">
         <div class="twitch-head"><span>Twitch LIVE</span></div>
@@ -70,7 +46,7 @@
         <div class="hero-list" id="heroList" role="listbox" aria-label="Liste des héros"></div>
       </aside>
       <section class="panel content" id="detailViewWrap">
-        <div id="detailView"></div>
+        <"detailView"></div>
       </section>
     </main>
   </div>
