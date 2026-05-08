@@ -1433,3 +1433,31 @@
     background-color: #222222;
     border-color: #444444;
 }
+#socials {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%); /* Permet de centrer parfaitement en hauteur */
+  z-index: 9999; /* S'assure qu'ils sont toujours au-dessus du reste */
+  display: flex;
+  flex-direction: column; /* Affiche les icônes de haut en bas */
+  gap: 15px;
+  padding: 10px;
+  background-color: rgba(15, 15, 20, 0.8); /* Petit fond sombre semi-transparent (optionnel) */
+  border-radius: 0 10px 10px 0; /* Arrondi sur la droite */
+}
+
+/* Fixer le switch de langue à droite */
+#langSwitcher {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column; /* Affiche "FR" et "EN" l'un au dessus de l'autre */
+  gap: 10px;
+  padding: 10px;
+  background-color: rgba(15, 15, 20, 0.8);
+  border-radius: 10px 0 0 10px; /* Arrondi sur la gauche */
+}
