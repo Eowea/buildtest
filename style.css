@@ -1518,58 +1518,34 @@
 
 /* Sur Mobile : On utilise la classe .is-open gérée par le script JavaScript */
 @media (max-width: 768px) {
+    /* 1. Boutons "plus rentrés" et correction du bug de l'icône */
+    #socials .social-link {
+        width: 34px !important;  /* Bouton plus fin/rentré vers la gauche */
+        height: 38px !important; /* Légèrement moins haut */
+        padding: 0 8px !important; /* Réduit l'espace autour de l'icône */
+        flex: 0 0 auto !important; /* CORRIGE LE BUG : empêche le bouton de s'étirer et de cacher l'icône */
+    }
+    
+    /* 2. On réduit légèrement l'icône pour qu'elle tienne dans le petit bouton */
+    #socials .social-link svg {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    /* 3. On rapproche le texte */
+    #socials .social-link span {
+        margin-left: 10px !important;
+        font-size: 12px !important;
+    }
+
+    /* 4. Comportement du bouton quand on appuie dessus (Ouvert) */
     #socials .social-link.is-open {
-        width: 150px !important;
+        width: 130px !important; /* S'ouvre un peu moins large sur mobile pour ne pas prendre tout l'écran */
         opacity: 1 !important;
         border-color: rgba(255, 255, 255, 0.3) !important;
     }
+    
     #socials .social-link.is-open span {
         opacity: 1 !important;
     }
 }
-/* ── Lang Switcher Rectangulaire Unique ── */
-#langSwitcher {
-    position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    z-index: 10000;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 8px;
-    background: rgba(13, 19, 31, 0.95);
-    border: 1px solid var(--blue-border);
-    border-radius: 4px 0 0 4px;
-}
-
-.lang-btn {
-    width: 45px;
-    height: 30px;
-    padding: 0;
-    border: 1px solid var(--blue-border);
-    background: transparent !important;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all var(--t);
-    border-radius: 2px;
-    overflow: hidden;
-    opacity: 0.8;
-}
-
-.lang-btn img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.lang-btn:hover {
-    transform: scale(1.05);
-    opacity: 1;
-    border-color: var(--blue-bright);
-    box-shadow: 0 0 10px var(--blue-glow);
-}
-
