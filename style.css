@@ -238,22 +238,15 @@
     border: none !important;
     background: transparent !important;
     cursor: pointer;
-    /* On utilise l'image en tant qu'élément enfant ou background-image */
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    /* On cache le texte "FR" ou "EN" */
-    font-size: 0;
-    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-/* Application des drapeaux */
-.lang-btn[data-lang="fr"] {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg') !important;
-}
-
-.lang-btn[data-lang="en"] {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg') !important;
+.lang-btn img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Pour la forme ronde */
+    object-fit: cover;
 }
 
     /* ── Twitch player ── */
