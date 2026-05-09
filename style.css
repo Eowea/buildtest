@@ -1548,16 +1548,15 @@
 /* --- EFFET AU SURVOL (HOVER) --- */
 
 #socials .social-link:hover {
-    width: auto;
-    padding-right: 22px;
-    background-color: inherit !important; 
+    width: auto !important; /* Force l'étirement */
+    padding-right: 22px !important;
+    background-color: inherit !important;
     border: none !important;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-    /* Ajout de l'étirement horizontal */
-    transform: scaleX(1.1); 
-    transform-origin: left; /* Pour que ça s'étire vers la droite */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4) !important;
+    transform: scaleX(1.1);
+    transform-origin: left;
 }
 
 #socials .social-link:hover span {
-    opacity: 1;
+    opacity: 1 !important;
 }
