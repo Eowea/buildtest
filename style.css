@@ -1425,18 +1425,53 @@
 }
 
 /* Mode mobile : on passe les 4 builds sur 1 seule colonne */
-@media (max-width: 768px) {
-    /* On déplace UNIQUEMENT le sélecteur de langue en bas à droite sur mobile */
-    #langSwitcher {
-        position: fixed !important;
-        top: auto !important;
-        bottom: 20px !important;
-        right: 20px !important;
-        transform: none !important;
-        flex-direction: column-reverse !important;
-        z-index: 9999;
-    }
-    /* Note : On ne touche plus à #socials ici, pour qu'il garde son look PC */
+#langSwitcher {
+    position: fixed !important;
+    top: 50% !important;
+    right: 0 !important;
+    transform: translateY(-50%) !important;
+    z-index: 10000 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    padding: 8px !important;
+    background: rgba(13, 19, 31, 0.95) !important;
+    border: 1px solid var(--blue-border) !important;
+    border-radius: 4px 0 0 4px !important;
+    list-style: none !important; 
+    margin: 0 !important;
+}
+
+.lang-btn {
+    width: 40px !important; 
+    height: 28px !important; 
+    padding: 0 !important;
+    border: 1px solid var(--blue-border) !important;
+    background: transparent !important;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all var(--t);
+    border-radius: 2px !important;
+    overflow: hidden !important;
+    opacity: 0.8;
+    flex-shrink: 0 !important; /* Empêche les drapeaux de devenir des points ! */
+    text-decoration: none !important;
+}
+
+.lang-btn img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.lang-btn:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    border-color: var(--blue-bright) !important;
+    box-shadow: 0 0 10px var(--blue-glow) !important;
 }
 
 /* ==========================================================================
