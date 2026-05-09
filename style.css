@@ -1550,10 +1550,14 @@
 #socials .social-link:hover {
     width: auto;
     padding-right: 22px;
-    background-color: inherit !important;   /* Garde la couleur du réseau */
+    background-color: inherit !important; 
     border: none !important;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    /* Ajout de l'étirement horizontal */
+    transform: scaleX(1.1); 
+    transform-origin: left; /* Pour que ça s'étire vers la droite */
 }
+
 #socials .social-link:hover span {
     opacity: 1;
 }
