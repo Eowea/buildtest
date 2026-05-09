@@ -1426,29 +1426,27 @@
 
 /* Mode mobile : on passe les 4 builds sur 1 seule colonne */
 @media (max-width: 768px) {
-    /* On déplace UNIQUEMENT le sélecteur de langue en bas à droite */
-    /* #socials hérite de la version PC : fixe à gauche et replié ! */
+    /* On déplace UNIQUEMENT le sélecteur de langue en bas à droite sur mobile */
     #langSwitcher {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        flex-direction: column-reverse; 
-        gap: 10px;
+        position: fixed !important;
+        top: auto !important;
+        bottom: 20px !important;
+        right: 20px !important;
+        transform: none !important;
+        flex-direction: column-reverse !important;
         z-index: 9999;
     }
+    /* Note : On ne touche plus à #socials ici, pour qu'il garde son look PC */
 }
 
-    /* Optionnel : cacher les textes sur mobile pour gagner de la place */
-    #socials .social-link span { display: none; }
-    #socials .social-link { width: 44px; }
-}
-
-/* 1. Conteneur des réseaux */
+/* ==========================================================================
+   1. Conteneur des réseaux (PC & Mobile)
+   ========================================================================== */
 #socials {
     position: fixed;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    top: 50%; /* Centre verticalement */
+    left: 0;  /* Colle à gauche */
+    transform: translateY(-50%); /* Ajustement exact du centrage */
     z-index: 9999;
     display: flex;
     flex-direction: column;
@@ -1460,19 +1458,17 @@
     display: flex;
     align-items: center;
     height: 44px;
-    width: 44px; 
+    width: 44px; /* Reste petit par défaut */
     padding: 0 13px;
-    
-    /* Couleur de fond par défaut (opacité 60%) */
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0 4px 4px 0; 
-    
     color: #ffffff;
     text-decoration: none;
     transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background 0.3s ease, opacity 0.3s ease;
     overflow: hidden;
     cursor: pointer;
     opacity: 0.7; /* Légèrement transparent au repos */
+    box-sizing: border-box;
 }
 
 /* 3. Couleurs pleines appliquées au repos */
@@ -1482,13 +1478,14 @@
 #socials .social-link[data-network="x"] { background: #111111; }
 #socials .social-link[data-network="kofi"] { background: #FF5E5B; }
 
-/* 4. Effet au survol et au toucher (focus) : S'étire et devient opaque */
+/* 4. Effet au survol (PC) et au clic/toucher (Mobile) : S'étire et devient opaque */
 #socials .social-link:hover,
-#socials .social-link:focus {
+#socials .social-link:focus,
+#socials .social-link:active {
     width: 150px;
     opacity: 1; /* Couleur devient pleine et vive */
     border-color: rgba(255, 255, 255, 0.3);
-    outline: none; /* Désactive le contour bleu natif des mobiles */
+    outline: none; /* Enlève la bordure native des navigateurs mobiles */
 }
 
 /* 5. Icône et Texte */
@@ -1505,28 +1502,16 @@
     font-weight: 700;
     text-transform: uppercase;
     font-size: 13px;
-    opacity: 0;
+    opacity: 0; /* Invisible par défaut */
     white-space: nowrap;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease 0.1s; /* Petit délai pour laisser le bouton s'ouvrir */
+    display: inline-block;
 }
 
+/* Affiche le texte quand on survole (PC) ou qu'on tapote une fois (Mobile) */
 #socials .social-link:hover span,
-#socials .social-link:focus span {
-    opacity: 1;
-}
-
-#socials .social-link span {
-    margin-left: 14px;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 13px;
-    opacity: 0;
-    white-space: nowrap;
-    transition: opacity 0.2s ease;
-}
-
-#socials .social-link:hover span {
+#socials .social-link:focus span,
+#socials .social-link:active span {
     opacity: 1;
 }
 /* ── Lang Switcher Rectangulaire Unique ── */
