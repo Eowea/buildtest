@@ -653,3 +653,10 @@ if (location.hash.includes('hero=')) {
         }
     }, 150); 
 };
+document.addEventListener('click', function(e) {
+    const socials = document.getElementById('socials');
+    // Si on clique en dehors des réseaux, on les referme ou on les bascule
+    if (!socials.contains(e.target)) {
+        socials.classList.remove('active');
+    }
+});
