@@ -1591,3 +1591,17 @@
         opacity: 1 !important;
     }
 }
+/* ==========================================================================
+   CORRECTION DES ZONES MORTES (Clics bloqués sur les bords)
+   ========================================================================== */
+/* 1. On désactive les clics sur les grandes "boîtes invisibles" qui contiennent les boutons */
+#socials, 
+#langSwitcher {
+    pointer-events: none !important;
+}
+
+/* 2. On réactive les clics UNIQUEMENT sur les vrais boutons colorés/drapeaux */
+#socials .social-link, 
+#langSwitcher .lang-btn {
+    pointer-events: auto !important;
+}
