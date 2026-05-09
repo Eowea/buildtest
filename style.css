@@ -1424,22 +1424,27 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Mode mobile : on passe les 4 builds sur 1 seule colonne */
+/* ==========================================================================
+   SÉLECTEUR DE LANGUE (Drapeaux - Fixe PC & Mobile)
+   ========================================================================== */
 #langSwitcher {
     position: fixed !important;
     top: 50% !important;
-    right: 0 !important;
+    right: 8px !important; /* On les décolle un tout petit peu du bord de l'écran */
     transform: translateY(-50%) !important;
     z-index: 10000 !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 8px !important;
-    padding: 8px !important;
-    background: rgba(13, 19, 31, 0.95) !important;
-    border: 1px solid var(--blue-border) !important;
-    border-radius: 4px 0 0 4px !important;
+    gap: 10px !important; /* Espace entre les drapeaux */
+    
+    /* SUPPRESSION DE L'ENCADRÉ ICI */
+    background: transparent !important; 
+    border: none !important;
+    padding: 0 !important;
+    
     list-style: none !important; 
     margin: 0 !important;
+    pointer-events: none !important; /* Laisse passer les clics autour */
 }
 
 .lang-btn {
