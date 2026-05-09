@@ -222,25 +222,46 @@
     }
     .social-link svg { width: 14px; height: 14px; }
 
-/* ── Lang Switcher (Drapeaux) ── */
-.lang-btn {
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    border: none !important;
-    background: transparent !important;
-    cursor: pointer;
+./* ── Lang Switcher Fixe (Flottant à droite) ── */
+#langSwitcher {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10000;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.lang-btn img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%; /* Pour la forme ronde */
-    object-fit: cover;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    background: rgba(13, 19, 31, 0.8);
+    border-radius: 8px 0 0 8px;
+    border: 1px solid var(--blue-border);
 }
 
+.lang-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--blue-border);
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--text-dim);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--t);
+    border-radius: 2px;
+}
+
+.lang-btn:hover {
+    background: var(--blue-soft);
+    color: var(--blue-bright);
+    border-color: var(--blue);
+}
+
+.lang-btn.active {
+    background: var(--blue-border);
+    color: var(--blue-bright);
+    border-color: var(--blue);
+}
     /* ── Twitch player ── */
     .twitch-card {
       display: none; /* Cacher par défaut (Live OFF) */
