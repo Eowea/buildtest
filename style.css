@@ -1511,29 +1511,25 @@
 
 /* Structure de base du bouton */
 #socials .social-link {
+    width: 54px; /* Largeur fixe initiale */
+    overflow: hidden; /* Empêche le texte de dépasser */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    transition: width 0.4s ease; /* C'est la largeur qui doit s'animer */
     display: flex;
     align-items: center;
-    color: white;
     text-decoration: none;
-    border-radius: 50px;           /* forme plus douce */
-    padding: 12px 14px;
-    width: 54px;                   /* largeur fermée */
-    min-width: 54px;
-    transition: all 0.4s ease;
-    overflow: hidden;
-    white-space: nowrap;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 0 15px; /* Ajustez selon vos besoins */
 }
 
 /* Fixe la taille de l'icône */
-#socials .social-link svg {
+#socials .social-link: svg {
     width: 28px;
     height: 28px;
     flex-shrink: 0;
 }
 
 /* Le texte (masqué par défaut) */
-#socials .social-link span {
+#socials .social-link: span {
     margin-left: 14px;
     opacity: 0;
     font-weight: 700;
@@ -1548,13 +1544,7 @@
 /* --- EFFET AU SURVOL (HOVER) --- */
 
 #socials .social-link:hover {
-    width: auto !important; /* Force l'étirement */
-    padding-right: 22px !important;
-    background-color: inherit !important;
-    border: none !important;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4) !important;
-    transform: scaleX(1.1);
-    transform-origin: left;
+    width: 150px; /* Augmentez cette valeur si le texte est coupé */
 }
 
 #socials .social-link:hover span {
