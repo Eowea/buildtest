@@ -1499,56 +1499,72 @@
 }
     }
 
-/* 1. Structure du conteneur des réseaux sociaux */
+/* 1. Conteneur principal (placé sur le côté) */
 #socials {
     position: fixed;
     top: 50%;
-    left: 0; /* Alignement à gauche */
+    left: 0;
     transform: translateY(-50%);
     z-index: 9999;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
-/* 2. Style de base des boutons (Icône seule visible) */
+/* 2. Le bouton (forme hexagonale par défaut) */
 #socials .social-link {
     display: flex;
     align-items: center;
-    width: 50px; /* Largeur fixe de l'icône seule */
-    height: 50px;
-    padding: 0 13px; /* Centrage de l'icône */
-    border-radius: 0 25px 25px 0; /* Bouton arrondi à droite */
-    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    justify-content: flex-start;
+    width: 60px; /* Taille fixe de l'icône seule */
+    height: 52px;
+    padding-left: 15px;
+    
+    /* Design Nexus */
+    clip-path: var(--hex-clip);
+    background: rgba(13, 19, 31, 0.9);
+    border: 1px solid var(--blue-border);
+    
+    /* Animation */
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background 0.3s ease;
     overflow: hidden;
     white-space: nowrap;
     text-decoration: none;
     cursor: pointer;
-    color: #ffffff;
 }
 
-/* 3. Le texte masqué par défaut */
+/* 3. Le texte (masqué, prêt à apparaître) */
 #socials .social-link span {
-    margin-left: 15px; /* Espace entre icône et texte */
+    margin-left: 20px;
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-bright);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
 }
 
-/* 4. Effet au survol : le bouton s'élargit */
+/* 4. Effet de survol (Étirement + Couleur) */
 #socials .social-link:hover {
-    width: 160px; /* Largeur totale avec texte */
+    width: 170px; /* S'étire pour afficher le texte */
+    border-color: var(--blue);
+    box-shadow: 0 0 15px var(--blue-glow);
 }
 
 #socials .social-link:hover span {
     opacity: 1;
 }
 
-/* 5. Couleurs spécifiques (utilisez bien[data-network="..."]) */
-.social-link[data-network="twitch"] { background-color: #9146FF; }
-.social-link[data-network="youtube"] { background-color: #FF0000; }
-.social-link[data-network="discord"] { background-color: #5865F2; }
-.social-link[data-network="kofi"] { background-color: #FF5E5B; }
-.social-link[data-network="x"] { background-color: #111111; }
+/* 5. Couleurs dynamiques selon le réseau */
+.social-link[data-network="twitch"] { color: #9146FF; }
+.social-link[data-network="youtube"] { color: #FF0000; }
+.social-link[data-network="discord"] { color: #5865F2; }
+.social-link[data-network="x"] { color: #ffffff; }
 
+/* Applique la couleur à l'icône ET au fond lors du survol */
+#socials .social-link:hover {
+    background: var(--bg-1) !important; /* Garde le fond sombre pour l'harmonie */
+}
+#socials .social-link:hover svg {
+    fill: currentColor;
+}
