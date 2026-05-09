@@ -1499,10 +1499,11 @@
 }
     }
 
+/* 1. Conteneur des réseaux */
 #socials {
     position: fixed;
     top: 50%;
-    left: 15px;
+    left: 0;
     transform: translateY(-50%);
     z-index: 9999;
     display: flex;
@@ -1510,53 +1511,58 @@
     gap: 10px;
 }
 
+/* 2. Bouton de base (icône visible, texte caché) */
 #socials .social-link {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     height: 44px;
-    padding: 0 16px;
-    gap: 12px;
+    width: 44px; /* Largeur initiale : juste l'icône */
+    padding: 0 13px;
     
-    /* Design rectangulaire Nexus */
     background: rgba(13, 19, 31, 0.95);
     border: 1px solid var(--blue-border);
-    border-radius: 2px;
+    border-radius: 0 4px 4px 0; /* Bords nets façon site */
+    
     color: var(--text-bright);
     text-decoration: none;
-    
-    /* Animation fluide */
-    transition: all var(--t);
-    width: 140px; /* Largeur fixe pour afficher icône + texte */
-    overflow: hidden;
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background 0.3s ease;
+    overflow: hidden; /* Cache le texte */
     cursor: pointer;
 }
 
+/* 3. Icône */
 #socials .social-link svg {
     width: 18px;
     height: 18px;
-    flex-shrink: 0; /* Empêche l'icône de s'écraser */
+    flex-shrink: 0;
     fill: currentColor;
 }
 
+/* 4. Texte (masqué par défaut) */
 #socials .social-link span {
+    margin-left: 14px;
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 13px;
+    opacity: 0;
     white-space: nowrap;
+    transition: opacity 0.2s ease;
 }
 
-/* Effet de survol : le bouton s'illumine */
+/* 5. Effet au survol : S'étire et change de couleur */
 #socials .social-link:hover {
-    width: 160px; /* S'étire légèrement au survol */
-    border-color: var(--blue);
-    background: rgba(0, 229, 255, 0.1);
-    box-shadow: 0 0 15px var(--blue-glow);
+    width: 150px; /* S'étire pour laisser place au texte */
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Couleurs par réseau (en ajoutant une classe ou data-attribute) */
-.social-link[data-network="twitch"]:hover { color: #9146FF; }
-.social-link[data-network="youtube"]:hover { color: #FF0000; }
-.social-link[data-network="discord"]:hover { color: #5865F2; }
-.social-link[data-network="x"]:hover { color: #ffffff; }
+#socials .social-link:hover span {
+    opacity: 1;
+}
+
+/* 6. Couleurs spécifiques par réseau au survol */
+#socials .social-link[data-network="twitch"]:hover { background: #9146FF; border-color: #9146FF; }
+#socials .social-link[data-network="youtube"]:hover { background: #FF0000; border-color: #FF0000; }
+#socials .social-link[data-network="discord"]:hover { background: #5865F2; border-color: #5865F2; }
+#socials .social-link[data-network="x"]:hover { background: #111111; border-color: #333333; }
+#socials .social-link[data-network="kofi"]:hover { background: #FF5E5B; border-color: #FF5E5B; }
