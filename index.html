@@ -84,7 +84,7 @@
   <script src="data.js"></script>
   <script src="app.js"></script>
 
-    <script>
+<script>
   document.addEventListener("DOMContentLoaded", function() {
     const socialLinks = document.querySelectorAll("#socials .social-link");
 
@@ -95,26 +95,31 @@
           
           // Si le lien n'a pas la classe 'is-open' (il est fermé)
           if (!this.classList.contains("is-open")) {
-            e.preventDefault(); // On bloque la redirection vers le réseau social
+            e.preventDefault(); // On bloque la redirection
             
-            // On referme tous les autres liens potentiellement ouverts
+            // On referme tous les autres liens
             socialLinks.forEach(l => l.classList.remove("is-open"));
             
             // On ouvre celui sur lequel on vient d'appuyer
             this.classList.add("is-open");
           }
-          // S'il a DÉJÀ la classe 'is-open', e.preventDefault() n'est pas appelé,
-          // donc le deuxième clic ouvre normalement le lien Twitch/Discord/etc.
         }
       });
     });
 
-    // Bonus : Si l'utilisateur clique n'importe où ailleurs sur l'écran, on referme le menu
-    document.addEventListener("click", function(e) {
-      if (!e.target.closest("#socials") && window.innerWidth <= 768) {
-        socialLinks.forEach(l => l.classList.remove("is-open"));
+    // Fonction pour refermer quand on touche ailleurs
+    function closeSocialsOutside(e) {
+      if (window.innerWidth <= 768) {
+        // Si l'élément touché n'est PAS dans le conteneur #socials
+        if (!e.target.closest("#socials")) {
+          socialLinks.forEach(l => l.classList.remove("is-open"));
+        }
       }
-    });
+    }
+
+    // On écoute le clic standard ET le toucher tactile (iOS/Android)
+    document.addEventListener("click", closeSocialsOutside);
+    document.addEventListener("touchstart", closeSocialsOutside, { passive: true });
   });
 </script>
 </body>
