@@ -83,5 +83,39 @@
   <!-- C'est ici qu'on relie ton code logique et tes héros ! -->
   <script src="data.js"></script>
   <script src="app.js"></script>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const socialLinks = document.querySelectorAll("#socials .social-link");
+
+    socialLinks.forEach(link => {
+      link.addEventListener("click", function(e) {
+        // Cette logique ne s'active que sur format Mobile/Tablette
+        if (window.innerWidth <= 768) {
+          
+          // Si le lien n'a pas la classe 'is-open' (il est fermé)
+          if (!this.classList.contains("is-open")) {
+            e.preventDefault(); // On bloque la redirection vers le réseau social
+            
+            // On referme tous les autres liens potentiellement ouverts
+            socialLinks.forEach(l => l.classList.remove("is-open"));
+            
+            // On ouvre celui sur lequel on vient d'appuyer
+            this.classList.add("is-open");
+          }
+          // S'il a DÉJÀ la classe 'is-open', e.preventDefault() n'est pas appelé,
+          // donc le deuxième clic ouvre normalement le lien Twitch/Discord/etc.
+        }
+      });
+    });
+
+    // Bonus : Si l'utilisateur clique n'importe où ailleurs sur l'écran, on referme le menu
+    document.addEventListener("click", function(e) {
+      if (!e.target.closest("#socials") && window.innerWidth <= 768) {
+        socialLinks.forEach(l => l.classList.remove("is-open"));
+      }
+    });
+  });
+</script>
 </body>
 </html>
