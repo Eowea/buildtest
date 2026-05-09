@@ -1511,26 +1511,45 @@
     gap: 10px;
 }
 
-/* 2. Bouton de base (icône visible, texte caché) */
+/* 2. Bouton de base (couleur par défaut avec opacité) */
 #socials .social-link {
     display: flex;
     align-items: center;
     height: 44px;
-    width: 44px; /* Largeur initiale : juste l'icône */
+    width: 44px; 
     padding: 0 13px;
     
+    /* Couleur de fond par défaut (sombre) */
     background: rgba(13, 19, 31, 0.95);
     border: 1px solid var(--blue-border);
-    border-radius: 0 4px 4px 0; /* Bords nets façon site */
+    border-radius: 0 4px 4px 0; 
     
     color: var(--text-bright);
     text-decoration: none;
-    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background 0.3s ease;
-    overflow: hidden; /* Cache le texte */
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
     cursor: pointer;
 }
 
-/* 3. Icône */
+/* 3. Couleurs initiales (Icône sur fond sombre, contour subtil) */
+#socials .social-link[data-network="twitch"] { border-left: 3px solid #9146FF; }
+#socials .social-link[data-network="youtube"] { border-left: 3px solid #FF0000; }
+#socials .social-link[data-network="discord"] { border-left: 3px solid #5865F2; }
+#socials .social-link[data-network="x"] { border-left: 3px solid #ffffff; }
+#socials .social-link[data-network="kofi"] { border-left: 3px solid #FF5E5B; }
+
+/* 4. Effet au survol : S'étire et prend la couleur pleine */
+#socials .social-link:hover {
+    width: 150px;
+}
+
+#socials .social-link[data-network="twitch"]:hover { background: #9146FF; border-color: #9146FF; }
+#socials .social-link[data-network="youtube"]:hover { background: #FF0000; border-color: #FF0000; }
+#socials .social-link[data-network="discord"]:hover { background: #5865F2; border-color: #5865F2; }
+#socials .social-link[data-network="x"]:hover { background: #111111; border-color: #333333; }
+#socials .social-link[data-network="kofi"]:hover { background: #FF5E5B; border-color: #FF5E5B; }
+
+/* 5. Texte et Icône */
 #socials .social-link svg {
     width: 18px;
     height: 18px;
@@ -1538,7 +1557,6 @@
     fill: currentColor;
 }
 
-/* 4. Texte (masqué par défaut) */
 #socials .social-link span {
     margin-left: 14px;
     font-family: 'Rajdhani', sans-serif;
@@ -1550,19 +1568,6 @@
     transition: opacity 0.2s ease;
 }
 
-/* 5. Effet au survol : S'étire et change de couleur */
-#socials .social-link:hover {
-    width: 150px; /* S'étire pour laisser place au texte */
-    border-color: rgba(255, 255, 255, 0.3);
-}
-
 #socials .social-link:hover span {
     opacity: 1;
 }
-
-/* 6. Couleurs spécifiques par réseau au survol */
-#socials .social-link[data-network="twitch"]:hover { background: #9146FF; border-color: #9146FF; }
-#socials .social-link[data-network="youtube"]:hover { background: #FF0000; border-color: #FF0000; }
-#socials .social-link[data-network="discord"]:hover { background: #5865F2; border-color: #5865F2; }
-#socials .social-link[data-network="x"]:hover { background: #111111; border-color: #333333; }
-#socials .social-link[data-network="kofi"]:hover { background: #FF5E5B; border-color: #FF5E5B; }
