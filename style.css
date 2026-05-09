@@ -223,14 +223,6 @@
     .social-link svg { width: 14px; height: 14px; }
 
 /* ── Lang Switcher (Drapeaux) ── */
-.lang-switcher {
-    border: none !important;
-    background: transparent !important;
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
 .lang-btn {
     width: 32px;
     height: 32px;
