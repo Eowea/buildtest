@@ -226,51 +226,34 @@
 .lang-switcher {
     border: none !important;
     background: transparent !important;
-    gap: 12px;
-    height: auto;
+    gap: 10px;
     display: flex;
-    flex-direction: column; /* Garde la disposition verticale si vous l'aviez fixée */
-    align-items: center;
+    flex-direction: column;
 }
 
 .lang-btn {
-    background: transparent !important;
-    border: none !important;
     width: 32px;
     height: 32px;
     padding: 0;
-    border-radius: 50%; /* Forme ronde pour les drapeaux */
+    border: none !important;
+    background: transparent !important;
     cursor: pointer;
-    transition: transform 0.2s ease, opacity 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0; /* Cache le texte FR/EN */
-    background-size: cover !important;
+    /* On utilise l'image en tant qu'élément enfant ou background-image */
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
     background-position: center !important;
-    opacity: 0.6; /* Un peu transparent au repos */
+    /* On cache le texte "FR" ou "EN" */
+    font-size: 0;
+    line-height: 0;
 }
 
-/* Effet au survol */
-.lang-btn:hover {
-    transform: scale(1.15);
-    opacity: 1;
-}
-
-/* Indicateur actif */
-.lang-btn.active {
-    opacity: 1;
-    box-shadow: 0 0 10px var(--blue-glow);
-    transform: scale(1.1);
-}
-
-/* Images des drapeaux */
+/* Application des drapeaux */
 .lang-btn[data-lang="fr"] {
-    background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg') !important;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg') !important;
 }
 
 .lang-btn[data-lang="en"] {
-    background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg') !important;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg') !important;
 }
 
     /* ── Twitch player ── */
