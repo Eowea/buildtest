@@ -1458,32 +1458,48 @@
 }
 
 /* ── Style des boutons drapeaux ── */
-.lang-btn {
-    width: 40px;
-    height: 40px;
-    padding: 0;
+/* ── Lang Switcher Rectangulaire ── */
+.lang-switcher {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    background: rgba(13, 19, 31, 0.95);
     border: 1px solid var(--blue-border);
-    background: rgba(13, 19, 31, 0.8); /* Fond sombre Nexus */
+    border-radius: 4px 0 0 4px;
+}
+
+.lang-btn {
+    width: 45px; /* Largeur un peu plus grande pour un rectangle harmonieux */
+    height: 30px; /* Hauteur adaptée pour un ratio 3:2 ou 4:3 */
+    padding: 0;
+    border: 1px solid var(--blue-border); /* Petit cadre fin pour la netteté */
+    background: transparent !important;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%; /* Rond */
     transition: all var(--t);
+    border-radius: 2px; /* Coins légèrement carrés pour le côté rectangulaire */
     overflow: hidden;
 }
 
 .lang-btn img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Remplit tout le rectangle */
+    display: block;
 }
 
-/* Effet survol */
 .lang-btn:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
     border-color: var(--blue-bright);
-    box-shadow: 0 0 15px var(--blue-glow);
+    box-shadow: 0 0 10px var(--blue-glow);
 }
 .center-random-container {
   padding: 10px;
