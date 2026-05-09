@@ -85,42 +85,40 @@
   <script src="app.js"></script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const socialLinks = document.querySelectorAll("#socials .social-link");
-
-    socialLinks.forEach(link => {
-      link.addEventListener("click", function(e) {
-        // Cette logique ne s'active que sur format Mobile/Tablette
-        if (window.innerWidth <= 768) {
+  // Utilisation de "l'Event Delegation" : on écoute le document entier
+  document.addEventListener("click", function(e) {
+    // Cette logique ne s'active que sur mobile/tablette
+    if (window.innerWidth <= 768) {
+      
+      // On vérifie si l'élément cliqué est un réseau social (ou une icône à l'intérieur)
+      const socialLink = e.target.closest("#socials .social-link");
+      
+      if (socialLink) {
+        // On a cliqué sur un réseau social !
+        // S'il est FERMÉ, on bloque le lien et on l'ouvre
+        if (!socialLink.classList.contains("is-open")) {
+          e.preventDefault(); // Bloque la redirection
           
-          // Si le lien n'a pas la classe 'is-open' (il est fermé)
-          if (!this.classList.contains("is-open")) {
-            e.preventDefault(); // On bloque la redirection
-            
-            // On referme tous les autres liens
-            socialLinks.forEach(l => l.classList.remove("is-open"));
-            
-            // On ouvre celui sur lequel on vient d'appuyer
-            this.classList.add("is-open");
-          }
+          // On referme tous les autres liens
+          document.querySelectorAll("#socials .social-link").forEach(l => l.classList.remove("is-open"));
+          
+          // On ouvre celui sur lequel on vient d'appuyer
+          socialLink.classList.add("is-open");
         }
-      });
-    });
-
-    // Fonction pour refermer quand on touche ailleurs
-    function closeSocialsOutside(e) {
-      if (window.innerWidth <= 768) {
-        // Si l'élément touché n'est PAS dans le conteneur #socials
-        if (!e.target.closest("#socials")) {
-          socialLinks.forEach(l => l.classList.remove("is-open"));
-        }
+        // S'il est déjà ouvert, on ne fait rien, le navigateur va suivre le lien naturellement.
+      } else {
+        // Si on a cliqué N'IMPORTE OÙ AILLEURS (ex: sur un héros), on referme les réseaux
+        document.querySelectorAll("#socials .social-link").forEach(l => l.classList.remove("is-open"));
       }
     }
-
-    // On écoute le clic standard ET le toucher tactile (iOS/Android)
-    document.addEventListener("click", closeSocialsOutside);
-    document.addEventListener("touchstart", closeSocialsOutside, { passive: true });
   });
+
+  // Sécurité indispensable pour iOS (iPhone/iPad) : refermer quand on touche une zone "morte"
+  document.addEventListener("touchstart", function(e) {
+    if (window.innerWidth <= 768 && !e.target.closest("#socials")) {
+      document.querySelectorAll("#socials .social-link").forEach(l => l.classList.remove("is-open"));
+    }
+  }, { passive: true });
 </script>
 </body>
 </html>
