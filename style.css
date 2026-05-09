@@ -1519,18 +1519,6 @@
 /* Sur Mobile : On utilise la classe .is-open gérée par le script JavaScript */
 @media (max-width: 768px) {
     
-    /* --- 1. SÉLECTEUR DE LANGUES (Drapeaux) --- */
-    /* On force l'affichage au milieu à droite pour éviter la barre de navigation du téléphone */
-    #langSwitcher {
-        position: fixed !important;
-        top: 50% !important;
-        right: 0 !important;
-        bottom: auto !important; /* Annule l'ancrage en bas qui causait le bug */
-        transform: translateY(-50%) !important;
-        display: flex !important;
-        flex-direction: column !important;
-        z-index: 10000 !important;
-    }
 
     /* --- 2. RÉSEAUX SOCIAUX --- */
     #socials .social-link {
