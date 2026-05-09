@@ -222,34 +222,56 @@
     }
     .social-link svg { width: 14px; height: 14px; }
 
-    /* ── Lang Switcher ── */
-    .lang-switcher {
-      display: inline-flex;
-      border: 1px solid var(--blue-border);
-      border-radius: 2px;
-      overflow: hidden;
-      height: 40px;
-    }
-    .lang-btn {
-      background: rgba(0, 0, 0, 0.4);
-      color: var(--text-dim);
-      border: none;
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      padding: 0 12px;
-      cursor: pointer;
-      transition: all var(--t);
-    }
-    .lang-btn:hover {
-      background: rgba(0, 229, 255, 0.1);
-      color: var(--blue-bright);
-    }
-    .lang-btn.active {
-      background: var(--blue-soft);
-      color: var(--blue-bright);
-      box-shadow: inset 0 0 10px var(--blue-glow);
-    }
+/* ── Lang Switcher (Drapeaux) ── */
+.lang-switcher {
+    border: none !important;
+    background: transparent !important;
+    gap: 12px;
+    height: auto;
+    display: flex;
+    flex-direction: column; /* Garde la disposition verticale si vous l'aviez fixée */
+    align-items: center;
+}
+
+.lang-btn {
+    background: transparent !important;
+    border: none !important;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border-radius: 50%; /* Forme ronde pour les drapeaux */
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0; /* Cache le texte FR/EN */
+    background-size: cover !important;
+    background-position: center !important;
+    opacity: 0.6; /* Un peu transparent au repos */
+}
+
+/* Effet au survol */
+.lang-btn:hover {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+/* Indicateur actif */
+.lang-btn.active {
+    opacity: 1;
+    box-shadow: 0 0 10px var(--blue-glow);
+    transform: scale(1.1);
+}
+
+/* Images des drapeaux */
+.lang-btn[data-lang="fr"] {
+    background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg') !important;
+}
+
+.lang-btn[data-lang="en"] {
+    background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg') !important;
+}
 
     /* ── Twitch player ── */
     .twitch-card {
