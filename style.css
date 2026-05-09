@@ -1433,33 +1433,38 @@
 }
 
 /* Fixer le switch de langue à droite */
-#langSwitcher {
-  position: fixed !important;
-  top: 50% !important;
-  right: 0 !important;
-  transform: translateY(-50%) !important;
-  z-index: 9999 !important;
-  
-  display: flex !important;
-  flex-direction: column !important; /* Force l'affichage vertical */
-  gap: 10px !important;
-  padding: 10px !important;
-  
-  background-color: rgba(15, 15, 20, 0.9) !important;
-  border-radius: 10px 0 0 10px !important;
-  
-  height: auto !important; /* Empêche le bouton du bas d'être coupé */
-  overflow: visible !important;
+.lang-switcher {
+    display: flex;
+    flex-direction: column; /* Garde l'alignement vertical */
+    gap: 10px;
+    align-items: center;
+    background: transparent !important;
+    border: none !important;
 }
 
-/* Force les boutons à être visibles et blancs pour contraster avec le fond sombre */
-#langSwitcher .lang-btn {
-  display: block !important;
-  color: #ffffff !important;
-  background: transparent !important; /* Retire un éventuel fond existant */
-  border: none !important;
-  font-weight: bold !important;
-  cursor: pointer !important;
+.lang-btn {
+    width: 32px;
+    height: 32px;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.lang-btn img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%; /* Garde le côté rond */
+    object-fit: cover;
+    border: 1px solid var(--blue-border); /* Petit rappel du design Nexus */
+}
+
+.lang-btn:hover {
+    transform: scale(1.1);
 }
 .center-random-container {
   padding: 10px;
