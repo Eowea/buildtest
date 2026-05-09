@@ -1426,15 +1426,17 @@
 
 /* Mode mobile : on passe les 4 builds sur 1 seule colonne */
 @media (max-width: 768px) {
-    /* Cache les éléments fixés sur les côtés pour éviter les superpositions */
-    #socials, #langSwitcher {
+    /* On déplace UNIQUEMENT le sélecteur de langue en bas à droite */
+    /* #socials hérite de la version PC : fixe à gauche et replié ! */
+    #langSwitcher {
         position: fixed;
-        bottom: 20px; /* On met tout en bas */
+        bottom: 20px;
         right: 20px;
-        flex-direction: column-reverse; /* Empile vers le haut */
+        flex-direction: column-reverse; 
         gap: 10px;
         z-index: 9999;
     }
+}
 
     /* Optionnel : cacher les textes sur mobile pour gagner de la place */
     #socials .social-link span { display: none; }
@@ -1480,11 +1482,13 @@
 #socials .social-link[data-network="x"] { background: #111111; }
 #socials .social-link[data-network="kofi"] { background: #FF5E5B; }
 
-/* 4. Effet au survol : S'étire et devient opaque */
-#socials .social-link:hover {
+/* 4. Effet au survol et au toucher (focus) : S'étire et devient opaque */
+#socials .social-link:hover,
+#socials .social-link:focus {
     width: 150px;
     opacity: 1; /* Couleur devient pleine et vive */
     border-color: rgba(255, 255, 255, 0.3);
+    outline: none; /* Désactive le contour bleu natif des mobiles */
 }
 
 /* 5. Icône et Texte */
@@ -1493,6 +1497,22 @@
     height: 18px;
     flex-shrink: 0;
     fill: currentColor;
+}
+
+#socials .social-link span {
+    margin-left: 14px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+}
+
+#socials .social-link:hover span,
+#socials .social-link:focus span {
+    opacity: 1;
 }
 
 #socials .social-link span {
