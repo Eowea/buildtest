@@ -1433,16 +1433,6 @@
     background-color: #222222;
     border-color: #444444;
 }
-#socials {
-    position: fixed;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
 /* Fixer le switch de langue à droite */
 #langSwitcher {
@@ -1509,44 +1499,56 @@
 }
     }
 
-/* Structure de base du bouton */
+/* 1. Structure du conteneur des réseaux sociaux */
+#socials {
+    position: fixed;
+    top: 50%;
+    left: 0; /* Alignement à gauche */
+    transform: translateY(-50%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 2. Style de base des boutons (Icône seule visible) */
 #socials .social-link {
-    width: 54px; /* Largeur fixe initiale */
-    overflow: hidden; /* Empêche le texte de dépasser */
-    white-space: nowrap; /* Empêche le texte de passer à la ligne */
-    transition: width 0.4s ease; /* C'est la largeur qui doit s'animer */
     display: flex;
     align-items: center;
+    width: 50px; /* Largeur fixe de l'icône seule */
+    height: 50px;
+    padding: 0 13px; /* Centrage de l'icône */
+    border-radius: 0 25px 25px 0; /* Bouton arrondi à droite */
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    white-space: nowrap;
     text-decoration: none;
-    padding: 0 15px; /* Ajustez selon vos besoins */
+    cursor: pointer;
+    color: #ffffff;
 }
 
-/* Fixe la taille de l'icône */
-#socials .social-link: svg {
-    width: 28px;
-    height: 28px;
-    flex-shrink: 0;
-}
-
-/* Le texte (masqué par défaut) */
-#socials .social-link: span {
-    margin-left: 14px;
-    opacity: 0;
+/* 3. Le texte masqué par défaut */
+#socials .social-link span {
+    margin-left: 15px; /* Espace entre icône et texte */
+    font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
-    font-size: 15px;
-    transition: all 0.4s ease;
-}
-  
-  /* L'animation fluide */
-  transition: max-width 0.3s ease, opacity 0.3s ease, margin-left 0.3s ease !important;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-/* --- EFFET AU SURVOL (HOVER) --- */
-
+/* 4. Effet au survol : le bouton s'élargit */
 #socials .social-link:hover {
-    width: 150px; /* Augmentez cette valeur si le texte est coupé */
+    width: 160px; /* Largeur totale avec texte */
 }
 
 #socials .social-link:hover span {
-    opacity: 1 !important;
+    opacity: 1;
 }
+
+/* 5. Couleurs spécifiques (utilisez bien[data-network="..."]) */
+.social-link[data-network="twitch"] { background-color: #9146FF; }
+.social-link[data-network="youtube"] { background-color: #FF0000; }
+.social-link[data-network="discord"] { background-color: #5865F2; }
+.social-link[data-network="kofi"] { background-color: #FF5E5B; }
+.social-link[data-network="x"] { background-color: #111111; }
+
