@@ -1444,21 +1444,21 @@
    ========================================================================== */
 #socials {
     position: fixed;
-    top: 50%; /* Centre verticalement */
-    left: 0;  /* Colle à gauche */
-    transform: translateY(-50%); /* Ajustement exact du centrage */
+    top: 50%; 
+    left: 0;  
+    transform: translateY(-50%); 
     z-index: 9999;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-/* 2. Bouton de base (couleur pleine mais atténuée au repos) */
+/* 2. Bouton de base */
 #socials .social-link {
     display: flex;
     align-items: center;
     height: 44px;
-    width: 44px; /* Reste petit par défaut */
+    width: 44px; 
     padding: 0 13px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0 4px 4px 0; 
@@ -1467,8 +1467,10 @@
     transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background 0.3s ease, opacity 0.3s ease;
     overflow: hidden;
     cursor: pointer;
-    opacity: 0.7; /* Légèrement transparent au repos */
+    opacity: 0.7; 
     box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: transparent; /* Supprime le flash de sélection bleu sur mobile */
 }
 
 /* 3. Couleurs pleines appliquées au repos */
@@ -1478,17 +1480,7 @@
 #socials .social-link[data-network="x"] { background: #111111; }
 #socials .social-link[data-network="kofi"] { background: #FF5E5B; }
 
-/* 4. Effet au survol (PC) et au clic/toucher (Mobile) : S'étire et devient opaque */
-#socials .social-link:hover,
-#socials .social-link:focus,
-#socials .social-link:active {
-    width: 150px;
-    opacity: 1; /* Couleur devient pleine et vive */
-    border-color: rgba(255, 255, 255, 0.3);
-    outline: none; /* Enlève la bordure native des navigateurs mobiles */
-}
-
-/* 5. Icône et Texte */
+/* 4. Icône et Texte */
 #socials .social-link svg {
     width: 18px;
     height: 18px;
@@ -1502,17 +1494,38 @@
     font-weight: 700;
     text-transform: uppercase;
     font-size: 13px;
-    opacity: 0; /* Invisible par défaut */
+    opacity: 0; 
     white-space: nowrap;
-    transition: opacity 0.2s ease 0.1s; /* Petit délai pour laisser le bouton s'ouvrir */
+    transition: opacity 0.2s ease 0.1s; 
     display: inline-block;
 }
 
-/* Affiche le texte quand on survole (PC) ou qu'on tapote une fois (Mobile) */
-#socials .social-link:hover span,
-#socials .social-link:focus span,
-#socials .social-link:active span {
-    opacity: 1;
+/* ==========================================================================
+   5. GESTION DE L'OUVERTURE (Séparation PC / Mobile)
+   ========================================================================== */
+
+/* Sur PC : Le survol de la souris gère l'ouverture classique */
+@media (min-width: 769px) {
+    #socials .social-link:hover {
+        width: 150px;
+        opacity: 1;
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+    #socials .social-link:hover span {
+        opacity: 1;
+    }
+}
+
+/* Sur Mobile : On utilise la classe .is-open gérée par le script JavaScript */
+@media (max-width: 768px) {
+    #socials .social-link.is-open {
+        width: 150px !important;
+        opacity: 1 !important;
+        border-color: rgba(255, 255, 255, 0.3) !important;
+    }
+    #socials .social-link.is-open span {
+        opacity: 1 !important;
+    }
 }
 /* ── Lang Switcher Rectangulaire Unique ── */
 #langSwitcher {
