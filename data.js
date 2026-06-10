@@ -18,7 +18,7 @@
 const HEROES = [
   {
     id: 'anduin',
-    enabled: false,
+    enabled: true,
     name: { fr: 'Anduin', en: 'Anduin' },
     role: 'Healer',
     portrait: 'https://static.icy-veins.com/images/heroes/hero-portraits/anduin.jpg',
@@ -89,7 +89,57 @@ const HEROES = [
         buildCodeTitle: { fr: "A COLLER", en: "PASTE" },
         buildCode: "[T1111111,Anduin]",
         videos: [],
-        talents: []
+        talents: [
+          {
+            level: 1,
+            name: { fr: 'Totem Colossal', en: 'Colossal Totem' },
+            icon: 'https://psionic-storm.com/media/img/talents/rehgar_earthbindtotem.png',
+            description: { fr: 'Augmente les points de vie, le rayon et la durée du totem. Permet de le repositionner une nouvelle fois.', en: 'Increases health, radius, and duration of the totem. Can be repositioned once.' },
+            demoYoutubeId: null
+          },
+          {
+            level: 4,
+            name: { fr: 'Viveterre', en: 'Earthliving Enchant' },
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg',
+            description: { fr: 'Renforce Salve de guerison pour les héros dont les points de vie sont bas.', en: 'Empowers Chain Heal for heroes at low health.' },
+            demoYoutubeId: null
+          },
+          {
+            level: 7,
+            name: { fr: 'Totem lié à la terre', en: 'Grounded Totem' },
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg',
+            description: { fr: "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.", en: 'Reduces attack and spell power of enemies in range.' },
+            demoYoutubeId: null
+          },
+          {
+            level: 10,
+            name: { fr: 'Guérison ancestrale', en: 'Ancestral Healing' },
+            icon: 'https://psionic-storm.com/media/img/talents/rehgar_ancestralhealing.png',
+            description: { fr: 'Gros soin monocible, utilisable sur soi.', en: 'Massive single-target heal, usable on self.' },
+            demoYoutubeId: null
+          },
+          {
+            level: 13,
+            name: { fr: 'Raz-de-marée', en: 'Tidal Waves' },
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg',
+            description: { fr: 'Réduit le temps de recharge de Salve de guérison et son coût en mana.', en: 'Reduces Chain Heal cooldown and mana cost.' },
+            demoYoutubeId: null
+          },
+          {
+            level: 16,
+            name: { fr: 'Totem d’emprise de la terre', en: 'Earthgrasp Totem' },
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg',
+            description: { fr: 'Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.', en: 'When first spawned, the totem deals AoE damage and heavily slows.' },
+            demoYoutubeId: null
+          },
+          {
+            level: 20,
+            name: { fr: 'Bénédiction du long-voyant', en: "Farseer's Blessing" },
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_ancestralhealing.jpg',
+            description: { fr: 'Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.', en: 'A second Ancestral Healing triggers and heals in an AoE.' },
+            demoYoutubeId: null
+          }
+        ]
       },
       {
         enabled: true,
@@ -99,7 +149,57 @@ const HEROES = [
         buildCodeTitle: { fr: "A COLLER", en: "PASTE" },
         buildCode: "[T2222222,Anduin]",
         videos: [],
-        talents: []
+        talents: [
+          {
+            level: 1,
+            name: { fr: 'Totem Colossal', en: 'Colossal Totem' },
+            icon: 'https://psionic-storm.com/media/img/talents/rehgar_earthbindtotem.png',
+            description: { fr: 'Augmente les points de vie, le rayon et la durée du totem. Permet de le repositionner une nouvelle fois.', en: 'Increases health, radius, and duration of the totem. Can be repositioned once.' },
+            demoYoutubeId: null
+          },
+          {
+            level: 4,
+            name: { fr: 'Viveterre', en: 'Earthliving Enchant' },
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg',
+            description: { fr: 'Renforce Salve de guerison pour les héros dont les points de vie sont bas.', en: 'Empowers Chain Heal for heroes at low health.' },
+            demoYoutubeId: null
+          },
+          {
+            level: 7,
+            name: { fr: 'Totem lié à la terre', en: 'Grounded Totem' },
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg',
+            description: { fr: "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.", en: 'Reduces attack and spell power of enemies in range.' },
+            demoYoutubeId: null
+          },
+          {
+            level: 10,
+            name: { fr: 'Guérison ancestrale', en: 'Ancestral Healing' },
+            icon: 'https://psionic-storm.com/media/img/talents/rehgar_ancestralhealing.png',
+            description: { fr: 'Gros soin monocible, utilisable sur soi.', en: 'Massive single-target heal, usable on self.' },
+            demoYoutubeId: null
+          },
+          {
+            level: 13,
+            name: { fr: 'Raz-de-marée', en: 'Tidal Waves' },
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg',
+            description: { fr: 'Réduit le temps de recharge de Salve de guérison et son coût en mana.', en: 'Reduces Chain Heal cooldown and mana cost.' },
+            demoYoutubeId: null
+          },
+          {
+            level: 16,
+            name: { fr: 'Totem d’emprise de la terre', en: 'Earthgrasp Totem' },
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg',
+            description: { fr: 'Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.', en: 'When first spawned, the totem deals AoE damage and heavily slows.' },
+            demoYoutubeId: null
+          },
+          {
+            level: 20,
+            name: { fr: 'Bénédiction du long-voyant', en: "Farseer's Blessing" },
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_ancestralhealing.jpg',
+            description: { fr: 'Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.', en: 'A second Ancestral Healing triggers and heals in an AoE.' },
+            demoYoutubeId: null
+          }
+        ]
       }
     ]
   },
