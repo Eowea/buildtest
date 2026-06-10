@@ -2092,7 +2092,7 @@ const HEROES = [
   },
   {
     id: 'lucio',
-    enabled: true,
+    enabled: false,
     name: { fr: 'Lúcio', en: 'Lúcio' },
     role: 'Healer',
     portrait: '',
