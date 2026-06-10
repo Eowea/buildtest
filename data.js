@@ -15,7 +15,7 @@
       ]
     };
 
-const HEALERS = [
+const HEROES = [
   {
     id: 'anduin',
     enabled: false,
