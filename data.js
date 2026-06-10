@@ -2092,7 +2092,7 @@ const HEROES = [
   },
   {
     id: 'lucio',
-    enabled: false,
+    enabled: true,
     name: { fr: 'Lúcio', en: 'Lúcio' },
     role: 'Healer',
     portrait: '',
@@ -2150,7 +2150,7 @@ const HEROES = [
     ],
     builds: [
       {
-        enabled: false,
+        enabled: true,
         order: 1,
         label: { fr: 'Build 1 (À venir)', en: 'Build 1 (TBA)' },
         summary: { fr: 'En construction.', en: 'Under construction.' },
@@ -2215,7 +2215,7 @@ const HEROES = [
         ]
       },
       {
-        enabled: false,
+        enabled: true,
         order: 2,
         label: { fr: 'Build 2 (À venir)', en: 'Build 2 (TBA)' },
         summary: { fr: 'En construction.', en: 'Under construction.' },
