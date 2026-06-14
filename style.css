@@ -1633,3 +1633,39 @@
     100% { transform: scale(1); }
 }
 
+/* ==========================================================================
+   BOUTON RETOUR EN HAUT
+   ========================================================================== */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    background: var(--bg-2);
+    border: 1px solid var(--blue-border);
+    color: var(--blue-bright);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* Apparaît quand on scrolle vers le bas */
+#backToTop.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTop:hover {
+    background: rgba(0, 229, 255, 0.15);
+    border-color: var(--blue-bright);
+    box-shadow: 0 0 15px var(--blue-glow);
+    transform: translateY(-3px);
+}
