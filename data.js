@@ -2020,7 +2020,7 @@ const HEROES = [
             level: 4,
             name: { fr: 'Récupération', en: 'Earthliving Enchant' },
             icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_regrowth.jpg',
-            description: { fr: 'Rétablissement s'applique aussi désormais à Malfurion.', en: 'Empowers Chain Heal for heroes at low health.' },
+            description: { fr: 'Rétablissement s\'applique aussi désormais à Malfurion.', en: 'Empowers Chain Heal for heroes at low health.' },
             demoYoutubeId: null
           },
           {
