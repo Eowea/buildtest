@@ -18,7 +18,7 @@
 const HEROES = [
   {
     id: 'anduin',
-    enabled: true,
+    enabled: false,
     name: { fr: 'Anduin', en: 'Anduin' },
     role: 'Healer',
     portrait: 'https://static.icy-veins.com/images/heroes/hero-portraits/anduin.jpg',
@@ -1936,13 +1936,13 @@ const HEROES = [
   },
   {
     id: 'malfurion',
-    enabled: false,
+    enabled: true,
     name: { fr: 'Malfurion', en: 'Malfurion' },
     role: 'Healer',
     portrait: 'https://static.icy-veins.com/images/heroes/hero-portraits/malfurion.jpg',
     headline: {
-      fr: 'Soins sur la durée activés par des dégâts magiques.',
-      en: 'HoT activated by spell damage.'
+      fr: 'Soins sur la durée activés par son Z.',
+      en: 'HoT activated by his W.'
     },
     gameplay: {
       fr: 'Malfurion pose des soins sur la durée sur ses alliés, puis frappe les ennemis avec Éclat lunaire pour déclencher des soins instantanés.',
@@ -1961,28 +1961,28 @@ const HEROES = [
         key: 'A',
         name: { fr: 'Rétablissement', en: 'Regrowth' },
         icon: '',
-        description: { fr: 'Soin sur la durée majeur.', en: 'Major Heal over time.' },
+        description: { fr: 'Soin sur la durée.', en: 'Heal over time.' },
         demoYoutubeId: ''
       },
       {
         key: 'Z',
         name: { fr: 'Éclat lunaire', en: 'Moonfire' },
         icon: '',
-        description: { fr: 'Dégâts de zone rapides qui soignent tous les alliés sous Q.', en: 'Quick AoE damage that heals all allies with Q active.' },
+        description: { fr: 'Dégâts de zone rapides qui soignent tous les alliés sous A et révèle les ennemis.', en: 'Quick AoE damage that heals all allies with Q active.' },
         demoYoutubeId: ''
       },
       {
         key: 'E',
         name: { fr: 'Sarments', en: 'Entangling Roots' },
         icon: '',
-        description: { fr: 'Immobilise les ennemis dans une zone grandissante.', en: 'Roots enemies in a growing area.' },
+        description: { fr: 'Immobilise les ennemis dans une zone et inflige des dégâts.', en: 'Roots enemies in a growing area.' },
         demoYoutubeId: ''
       },
       {
         key: 'R1',
         name: { fr: 'Tranquillité', en: 'Tranquility' },
         icon: '',
-        description: { fr: 'Soigne massivement tous les alliés en zone.', en: 'Massively heals all allies in an area.' },
+        description: { fr: 'SRend continuellement des points de vie aux héros alliés et proches, et donne de l'armure lorsque les alliés sont sous Rétablissement.', en: 'Massively heals all allies in an area.' },
         demoYoutubeId: ''
       },
       {
@@ -1994,17 +1994,18 @@ const HEROES = [
       }
     ],
     tips: [
-      { fr: "Maintiens ton Q sur autant d'alliés que possible.", en: 'Keep your Q on as many allies as possible.' },
-      { fr: 'Spam le W sur les ennemis pour soigner.', en: 'Spam W on enemies to heal.' }
+      { fr: "Maintiens ton A sur autant d'alliés que possible.", en: 'Keep your Q on as many allies as possible.' },
+      { fr: 'Spam le Z sur les ennemis pour soigner.', en: 'Spam W on enemies to heal.' }
+      { fr: 'Utilise ton E pour suivre des controles ou protèger tes alliés', en: 'Spam W on enemies to heal.' }
     ],
     builds: [
       {
         enabled: true,
         order: 1,
-        label: { fr: 'Build Moonfire', en: 'Moonfire Build' },
+        label: { fr: 'Build recommandé', en: 'Moonfire Build' },
         summary: { fr: 'Dégâts et soins continus très élevés.', en: 'High continuous damage and healing.' },
-        buildCodeTitle: { fr: "A COLLER", en: "PASTE" },
-        buildCode: "[T1111111,Malfurion]",
+        buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE" },
+        buildCode: "[T3131131,Malfurion]",
         videos: [],
         talents: [
           {
