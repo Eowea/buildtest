@@ -46,6 +46,7 @@
       copyError: { fr: "Copie impossible", en: "Copy failed" },
       copyHint: { fr: "Clique pour copier", en: "Click to copy" },
       optionalTalents: { fr: "Options", en: "Options" },
+      newBadge: { fr: "Nouveau", en: "New" },
     };
 
     /* =========================================================================
