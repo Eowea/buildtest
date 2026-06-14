@@ -214,7 +214,7 @@ const HEROES = [
       en: 'Waveclear, multi and single-target healing, aggressive'
     },
     gameplay: {
-      fr: "Rehgar est un soigneur aggressif qui possede beaucoup de degats et plein d'utilitaire.",
+      fr: "Rehgar est un soigneur aggressif qui possede beaucoup de dégâts et plein d'utilitaire.",
       en: 'Rehgar is an aggressive healer boasting great damage and utility.'
     },
     guideVideo: {
@@ -275,7 +275,7 @@ const HEROES = [
     ],
     tips: [
       { fr: 'Utilise ton totem pour protéger un allié ou attraper un ennemi', en: 'Use your totem to protect an ally or catch an enemy.' },
-      { fr: 'Place son Bouclier de foudre sur ton tank', en: 'Place Lightning Shield on your frontline tank.' },
+      { fr: 'Place ton Bouclier de foudre sur ton tank', en: 'Place Lightning Shield on your frontline tank.' },
       { fr: "Ne pas avoir peur d'aller mettre des attaques de base", en: "Don't be afraid to auto-attacks." }
     ],
     builds: [
@@ -2006,7 +2006,7 @@ const HEROES = [
         label: { fr: 'Build recommandé', en: 'Recommended Build' },
         updatedAt: { fr: '14 Juin 2026', en: 'June 14, 2026' },
         summary: { fr: 'Dégâts et soins continus très élevés.', en: 'Very high continuous damage and healing.' },
-        buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE INTO TALENT TREE" },
+        buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
         buildCode: "[T3131131,Malfurion]",
         videos: [],
         talents: [
