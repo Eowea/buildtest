@@ -1953,42 +1953,42 @@ const HEROES = [
       {
         key: 'Trait',
         name: { fr: 'Innervation', en: 'Innervate' },
-        icon: '',
+        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_innerrvate.jpg',
         description: { fr: 'Rend du mana à un allié et réduit ses temps de recharge.', en: 'Restores mana to an ally and reduces their cooldowns.' },
         demoYoutubeId: ''
       },
       {
         key: 'A',
         name: { fr: 'Rétablissement', en: 'Regrowth' },
-        icon: '',
+        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_regrowth.jpg',
         description: { fr: 'Soin sur la durée.', en: 'Heal over time.' },
         demoYoutubeId: ''
       },
       {
         key: 'Z',
         name: { fr: 'Éclat lunaire', en: 'Moonfire' },
-        icon: '',
+        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_moonfire.jpg',
         description: { fr: 'Dégâts de zone rapides qui soignent tous les alliés sous A et révèle les ennemis.', en: 'Quick AoE damage that heals all allies with Q active.' },
         demoYoutubeId: ''
       },
       {
         key: 'E',
         name: { fr: 'Sarments', en: 'Entangling Roots' },
-        icon: '',
+        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_entanglingroots.jpg',
         description: { fr: 'Immobilise les ennemis dans une zone et inflige des dégâts.', en: 'Roots enemies in a growing area.' },
         demoYoutubeId: ''
       },
       {
         key: 'R1',
         name: { fr: 'Tranquillité', en: 'Tranquility' },
-        icon: '',
+        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_tranquility.jpg',
         description: { fr: 'Rend continuellement des points de vie aux héros alliés et proches, et donne de l\'armure lorsque les alliés sont sous Rétablissement.', en: 'Massively heals all allies in an area.' },
         demoYoutubeId: ''
       },
       {
         key: 'R2',
         name: { fr: 'Rêve du crépuscule', en: 'Twilight Dream' },
-        icon: '',
+        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_twilightdream.jpg',
         description: { fr: 'Silence tous les ennemis autour et inflige de gros dégâts.', en: 'Silences all enemies around him and deals heavy damage.' },
         demoYoutubeId: ''
       }
@@ -2003,6 +2003,7 @@ const HEROES = [
         enabled: true,
         order: 1,
         label: { fr: 'Build recommandé', en: 'Moonfire Build' },
+         updatedAt: { fr: '14 Juin 2026', en: 'June 14, 2026' },
         summary: { fr: 'Dégâts et soins continus très élevés.', en: 'High continuous damage and healing.' },
         buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE" },
         buildCode: "[T3131131,Malfurion]",
@@ -2010,57 +2011,57 @@ const HEROES = [
         talents: [
           {
             level: 1,
-            name: { fr: 'Totem Colossal', en: 'Colossal Totem' },
-            icon: 'https://psionic-storm.com/media/img/talents/rehgar_earthbindtotem.png',
-            description: { fr: 'Augmente les points de vie, le rayon et la durée du totem. Permet de le repositionner une nouvelle fois.', en: 'Increases health, radius, and duration of the totem. Can be repositioned once.' },
+            name: { fr: 'Rêves d\émeraude', en: 'Colossal Totem' },
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_entanglingroots_a.jpg',
+            description: { fr: 'À la fin de Sarments, les cibles immobilisées sont endormis.', en: 'Increases health, radius, and duration of the totem. Can be repositioned once.' },
             demoYoutubeId: null
           },
           {
             level: 4,
-            name: { fr: 'Viveterre', en: 'Earthliving Enchant' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg',
-            description: { fr: 'Renforce Salve de guerison pour les héros dont les points de vie sont bas.', en: 'Empowers Chain Heal for heroes at low health.' },
+            name: { fr: 'Récupération', en: 'Earthliving Enchant' },
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_regrowth.jpg',
+            description: { fr: 'Rétablissement s'applique aussi désormais à Malfurion.', en: 'Empowers Chain Heal for heroes at low health.' },
             demoYoutubeId: null
           },
           {
             level: 7,
-            name: { fr: 'Totem lié à la terre', en: 'Grounded Totem' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg',
-            description: { fr: "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.", en: 'Reduces attack and spell power of enemies in range.' },
+            name: { fr: 'Soins naturels', en: 'Grounded Totem' },
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_regrowth.jpg',
+            description: { fr: "Supprime les effets incapacitants affectant les alliés à l\'activation.", en: 'Reduces attack and spell power of enemies in range.' },
             demoYoutubeId: null
           },
           {
             level: 10,
-            name: { fr: 'Guérison ancestrale', en: 'Ancestral Healing' },
-            icon: 'https://psionic-storm.com/media/img/talents/rehgar_ancestralhealing.png',
-            description: { fr: 'Gros soin monocible, utilisable sur soi.', en: 'Massive single-target heal, usable on self.' },
+            name: { fr: 'Tranquilité', en: 'Ancestral Healing' },
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_tranquility.jpg',
+            description: { fr: 'Rend continuellement des points de vie aux héros alliés et proches, et donne de l\'armure lorsque les alliés sont sous Rétablissement.', en: 'Massive single-target heal, usable on self.' },
             demoYoutubeId: null
           },
           {
             level: 13,
-            name: { fr: 'Raz-de-marée', en: 'Tidal Waves' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg',
-            description: { fr: 'Réduit le temps de recharge de Salve de guérison et son coût en mana.', en: 'Reduces Chain Heal cooldown and mana cost.' },
+            name: { fr: 'Rapidité de la nature', en: 'Tidal Waves' },
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_regrowth.jpg',
+            description: { fr: 'Les Rétablissements augmentent la vitesse de déplacement de Malfurion.', en: 'Reduces Chain Heal cooldown and mana cost.' },
             demoYoutubeId: null
           },
           {
             level: 16,
-            name: { fr: 'Totem d’emprise de la terre', en: 'Earthgrasp Totem' },
+            name: { fr: 'Haromonie lunaire', en: 'Earthgrasp Totem' },
             icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg',
-            description: { fr: 'Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.', en: 'When first spawned, the totem deals AoE damage and heavily slows.' },
+            description: { fr: 'Éclat lunaire procure plus de soins, et ce montant augmente selon le nombre de Rétablissements actifs.', en: 'When first spawned, the totem deals AoE damage and heavily slows.' },
             demoYoutubeId: null
           },
           {
             level: 20,
-            name: { fr: 'Bénédiction du long-voyant', en: "Farseer's Blessing" },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_ancestralhealing.jpg',
-            description: { fr: 'Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.', en: 'A second Ancestral Healing triggers and heals in an AoE.' },
+            name: { fr: 'Sérénité', en: "Farseer's Blessing" },
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_tranquility.jpg',
+            description: { fr: 'Éclat lunaire réduit le temps de recharge de Tranquilité. Augmente les soins de Tranquilité de base, et ce montant augmente selon le nombre de Rétablissements actifs.', en: 'A second Ancestral Healing triggers and heals in an AoE.' },
             demoYoutubeId: null
           }
         ]
       },
       {
-        enabled: true,
+        enabled: false,
         order: 2,
         label: { fr: 'Build Sarments', en: 'Roots Build' },
         summary: { fr: 'Plus de contrôle et de zoning.', en: 'More control and zoning.' },
