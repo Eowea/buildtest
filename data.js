@@ -2197,7 +2197,7 @@ const HEROES = [
         label: { fr: 'Build recommandé', en: 'Recommanded Build' },
         updatedAt: { fr: '6 Mai 2026', en: 'May 6, 2026' },
         summary: { fr: 'Build qui passe partout, peu importe le mode de jeu.', en: 'Maximizes the impact of the silence zone.' },
-        buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE" },
+        buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
         buildCode: "[T3322212,Stukov]",
         videos: [],
         talents: [
