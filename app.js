@@ -174,15 +174,15 @@ function markHeroAsSeen(heroId) {
         
         return `
         <button class="hero-link${h.id===state.heroId?' active':''}" type="button" data-hero-id="${h.id}">
-          <div class="portrait" data-fallback="${esc(initials(loc(h.name)))}">
-            <img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" />
+          <div class="portrait-wrapper" style="position: relative; flex-shrink: 0; display: flex;">
+            <div class="portrait" data-fallback="${esc(initials(loc(h.name)))}">
+              <img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" />
+            </div>
+            ${h.isNew && !hasSeenHero(h.id) ? `<span class="new-badge">New</span>` : ''}
           </div>
           <div class="hero-meta">
 <div class="hero-name-row">
               <div class="hero-name">${esc(loc(h.name))}</div>
-              
-              ${h.isNew && !hasSeenHero(h.id) ? `<span class="new-badge">New</span>` : ''}
-              
               ${bCount > 0 ? `<span class="build-count-badge">${bCount} Build${bCount > 1 ? 's' : ''}</span>` : ''}
             </div>
             <div class="hero-role">${esc(locRole(h.role))}</div>
