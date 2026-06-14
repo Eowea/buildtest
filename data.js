@@ -1938,6 +1938,7 @@ const HEROES = [
     id: 'malfurion',
     enabled: true,
     name: { fr: 'Malfurion', en: 'Malfurion' },
+    isNew: true,
     role: 'Healer',
     portrait: 'https://static.icy-veins.com/images/heroes/hero-portraits/malfurion.jpg',
     headline: {
