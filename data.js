@@ -1995,7 +1995,7 @@ const HEROES = [
     ],
     tips: [
       { fr: "Maintiens ton A sur autant d'alliés que possible.", en: 'Keep your Q on as many allies as possible.' },
-      { fr: 'Spam le Z sur les ennemis pour soigner.', en: 'Spam W on enemies to heal.' }
+      { fr: 'Spam le Z sur les ennemis pour soigner.', en: 'Spam W on enemies to heal.' },
       { fr: 'Utilise ton E pour suivre des controles ou protèger tes alliés', en: 'Spam W on enemies to heal.' }
     ],
     builds: [
