@@ -1611,18 +1611,20 @@
     pointer-events: auto !important;
 }
 .new-badge {
+    position: absolute;
+    bottom: -6px; /* Fait dépasser le badge légèrement en bas du portrait */
+    left: 50%;
+    transform: translateX(-50%); /* Permet de centrer parfaitement le badge */
     background-color: #ff4757;
     color: white;
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     font-weight: 800;
     padding: 2px 6px;
-    border-radius: 6px;
-    margin-left: 6px;
-    margin-right: auto; /* Pousse le badge des builds vers la droite si besoin */
+    border-radius: 8px;
     text-transform: uppercase;
-    display: inline-block;
-    align-self: center;
-    flex-shrink: 0; /* Empêche le badge d'être écrasé */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Ajoute une petite ombre pour le détacher de l'image */
+    z-index: 5;
+    pointer-events: none; /* Empêche le badge de bloquer le clic sur le portrait */
 }
 
 @keyframes pulse {
