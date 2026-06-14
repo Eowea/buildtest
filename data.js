@@ -1942,8 +1942,8 @@ const HEROES = [
     role: 'Healer',
     portrait: 'https://static.icy-veins.com/images/heroes/hero-portraits/malfurion.jpg',
     headline: {
-      fr: 'Soins sur la durée activés par son Z.',
-      en: 'Heal over time activated by his W.'
+      fr: 'Soins sur la durée avec beaucoup de sorts utilitaires.',
+      en: 'Heals over time with plenty of utility spells.'
     },
     gameplay: {
       fr: 'Malfurion pose des soins sur la durée sur ses alliés, puis frappe les ennemis avec Éclat lunaire pour déclencher des soins instantanés.',
