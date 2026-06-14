@@ -179,10 +179,10 @@ function markHeroAsSeen(heroId) {
           </div>
           <div class="hero-meta">
 <div class="hero-name-row">
-              <div class="hero-name">
-                ${esc(loc(h.name))}
-                ${h.isNew && !hasSeenHero(h.id) ? `<span class="new-badge">New</span>` : ''}
-              </div>
+              <div class="hero-name">${esc(loc(h.name))}</div>
+              
+              ${h.isNew && !hasSeenHero(h.id) ? `<span class="new-badge">New</span>` : ''}
+              
               ${bCount > 0 ? `<span class="build-count-badge">${bCount} Build${bCount > 1 ? 's' : ''}</span>` : ''}
             </div>
             <div class="hero-role">${esc(locRole(h.role))}</div>
