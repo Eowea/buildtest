@@ -2048,7 +2048,7 @@ const HEROES = [
           {
             level: 16,
             name: { fr: 'Harmonie lunaire', en: 'Moonlit Harmony' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg',
+            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_wildgrowth_a.jpg',
             description: { fr: 'Éclat lunaire procure plus de soins, et ce montant augmente selon le nombre de Rétablissements actifs.', en: 'Moonfire provides more healing, and this amount increases based on the number of active Regrowths.' },
             demoYoutubeId: null
           },
