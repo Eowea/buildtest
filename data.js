@@ -1982,7 +1982,7 @@ const HEROES = [
         key: 'R1',
         name: { fr: 'Tranquillité', en: 'Tranquility' },
         icon: '',
-        description: { fr: 'SRend continuellement des points de vie aux héros alliés et proches, et donne de l'armure lorsque les alliés sont sous Rétablissement.', en: 'Massively heals all allies in an area.' },
+        description: { fr: 'Rend continuellement des points de vie aux héros alliés et proches, et donne de l'armure lorsque les alliés sont sous Rétablissement.', en: 'Massively heals all allies in an area.' },
         demoYoutubeId: ''
       },
       {
