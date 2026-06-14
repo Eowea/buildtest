@@ -77,6 +77,18 @@ const getInitialLang = () => {
     /* ── Utilities ── */
     const loc = (val) => (val && typeof val === 'object' && !Array.isArray(val)) ? (val[state.lang] !== undefined ? val[state.lang] : (val['fr'] || '')) : (val || '');
 
+function hasSeenHero(heroId) {
+  const seenHeroes = JSON.parse(localStorage.getItem('seenHeroes') || '[]');
+  return seenHeroes.includes(heroId);
+}
+
+function markHeroAsSeen(heroId) {
+  const seenHeroes = JSON.parse(localStorage.getItem('seenHeroes') || '[]');
+  if (!seenHeroes.includes(heroId)) {
+      seenHeroes.push(heroId);
+      localStorage.setItem('seenHeroes', JSON.stringify(seenHeroes));
+  }
+}
     // Conversion dynamique FR (AZERTY) <-> EN (QWERTY)
     function uiSpellKey(keyRaw) {
       if (keyRaw && typeof keyRaw === 'object' && keyRaw[state.lang]) {
@@ -166,8 +178,11 @@ const getInitialLang = () => {
             <img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" />
           </div>
           <div class="hero-meta">
-            <div class="hero-name-row">
-              <div class="hero-name">${esc(loc(h.name))}</div>
+<div class="hero-name-row">
+              <div class="hero-name">
+                ${esc(loc(h.name))}
+                ${h.isNew && !hasSeenHero(h.id) ? `<span class="new-badge">New</span>` : ''}
+              </div>
               ${bCount > 0 ? `<span class="build-count-badge">${bCount} Build${bCount > 1 ? 's' : ''}</span>` : ''}
             </div>
             <div class="hero-role">${esc(locRole(h.role))}</div>
@@ -536,9 +551,13 @@ els.heroList.addEventListener('click', (e) => {
   const btn = e.target.closest('[data-hero-id]');
   if (!btn) return;
 
+  // --- NOUVEAU : On sauvegarde que ce héros a été vu ---
+  markHeroAsSeen(btn.dataset.heroId);
+  // ------------------------------------------------------
+
   state.heroId = btn.dataset.heroId;
   state.buildIndex = 0;
-  renderAll();
+  renderAll(); //
 
   setTimeout(() => {
     const detailEl = document.getElementById('detailViewWrap');
