@@ -1956,42 +1956,42 @@ const HEROES = [
         name: { fr: 'Innervation', en: 'Innervate' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_innerrvate.jpg',
         description: { fr: 'Rend du mana à un allié et réduit ses temps de recharge.', en: 'Restores Mana to an ally and reduces their cooldowns.' },
-        demoYoutubeId: ''
+        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/malfurion_trait.mp4'
       },
       {
         key: 'A',
         name: { fr: 'Rétablissement', en: 'Regrowth' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_regrowth.jpg',
         description: { fr: 'Soin sur la durée.', en: 'Heal over time.' },
-        demoYoutubeId: ''
+        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/malfurion_a.mp4'
       },
       {
         key: 'Z',
         name: { fr: 'Éclat lunaire', en: 'Moonfire' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_moonfire.jpg',
         description: { fr: 'Dégâts de zone rapides qui soignent tous les alliés sous A et révèle les ennemis.', en: 'Quick AoE damage that heals all allies with Q active and reveals enemies.' },
-        demoYoutubeId: ''
+        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/malfurion_z.mp4'
       },
       {
         key: 'E',
         name: { fr: 'Sarments', en: 'Entangling Roots' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_entanglingroots.jpg',
         description: { fr: 'Immobilise les ennemis dans une zone et inflige des dégâts.', en: 'Roots enemies in an area and deals damage.' },
-        demoYoutubeId: ''
+        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/malfurion_e.mp4'
       },
       {
         key: 'R1',
         name: { fr: 'Tranquillité', en: 'Tranquility' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_tranquility.jpg',
         description: { fr: 'Rend continuellement des points de vie aux héros alliés et proches, et donne de l\'armure lorsque les alliés sont sous Rétablissement.', en: 'Continually restores health to nearby allied Heroes, and grants Armor to allies affected by Regrowth.' },
-        demoYoutubeId: ''
+        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/malfurion_r1.mp4'
       },
       {
         key: 'R2',
         name: { fr: 'Rêve du crépuscule', en: 'Twilight Dream' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_twilightdream.jpg',
         description: { fr: 'Silence tous les ennemis autour et inflige de gros dégâts.', en: 'Silences all nearby enemies and deals heavy damage.' },
-        demoYoutubeId: ''
+        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/malfurion_r2.mp4'
       }
     ],
     tips: [
@@ -2015,7 +2015,7 @@ const HEROES = [
             name: { fr: 'Rêves d\'émeraude', en: 'Emerald Dreams' },
             icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_entanglingroots_a.jpg',
             description: { fr: 'À la fin de Sarments, les cibles immobilisées sont endormis.', en: 'When Entangling Roots expires, rooted targets are put to Sleep.' },
-            demoYoutubeId: null
+            demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/talents/malfurion_lvl1_e.mp4'
           },
           {
             level: 4,
@@ -2029,7 +2029,7 @@ const HEROES = [
             name: { fr: 'Soins naturels', en: 'Nature\'s Cure' },
             icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_regrowth.jpg',
             description: { fr: "Supprime les effets incapacitants affectant les alliés à l\'activation.", en: 'Removes disabling effects from allies upon activation.' },
-            demoYoutubeId: null
+            demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/talents/malfurion_lvl7_purge.mp4'
           },
           {
             level: 10,
