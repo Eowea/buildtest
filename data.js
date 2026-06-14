@@ -2060,8 +2060,6 @@ const HEROES = [
             demoYoutubeId: null
           }
         ]
-      }
-    ]
 },
       {
         enabled: false,
