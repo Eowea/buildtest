@@ -680,3 +680,23 @@ document.addEventListener('click', function(e) {
         socials.classList.remove('active');
     }
 });
+// =========================================================================
+// BOUTON RETOUR EN HAUT
+// =========================================================================
+const backToTopBtn = document.getElementById('backToTop');
+
+if (backToTopBtn) {
+    // 1. Fait apparaître le bouton quand on descend de 300 pixels
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('is-visible');
+        } else {
+            backToTopBtn.classList.remove('is-visible');
+        }
+    }, { passive: true });
+
+    // 2. Remonte tout en haut en douceur quand on clique dessus
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
