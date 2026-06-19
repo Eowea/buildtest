@@ -2981,191 +2981,133 @@ const HEROES = [
 /*DPS*/
      
 {
-id: 'kaelthas',
-enabled: true,
-name: { fr: 'Kael'thas', en: 'Kael'thas' },
-role: 'AssassinDistance',
-portrait: 'https://static.icy-veins.com/images/heroes/hero-portraits/kaelthas.jpg',
-headline: {
-fr: 'Mage de burst spécialisé dans les dégâts de zone et les réactions en chaîne.',
-en: 'Burst mage specialized in area damage and chain reactions.'
-},
-gameplay: {
-fr: 'Kael'thas renforce ses capacités grâce à son trait. Il punit sévèrement les ennemis regroupés avec ses bombes et ses zones de feu.',
-en: 'Kael'thas empowers his abilities using his trait. He severely punishes grouped enemies with his bombs and fire zones.'
-},
-guideVideo: null,
-spells: [
-{
-key: 'Trait',
-name: { fr: 'Sphères de verdure', en: 'Verdant Spheres' },
-icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_verdantspheres.jpg',
-description: { fr: 'Activez pour rendre la prochaine capacité de base plus puissante.', en: 'Activate to make the next Basic Ability more powerful.' },
-demoYoutubeId: ''
-},
-{
-key: 'A',
-name: { fr: 'Choc de flammes', en: 'Flamestrike' },
-icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_flamestrike.jpg',
-description: { fr: 'Inflige d'importants dégâts de zone après un court délai.', en: 'Deals high area damage after a short delay.' },
-demoYoutubeId: ''
-},
-{
-key: 'Z',
-name: { fr: 'Bombe vivante', en: 'Living Bomb' },
-icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_livingbomb.jpg',
-description: { fr: 'Inflige des dégâts sur la durée, puis explose et se propage aux ennemis proches.', en: 'Deals damage over time, then explodes and spreads to nearby enemies.' },
-demoYoutubeId: ''
-},
-{
-key: 'E',
-name: { fr: 'Distorsion gravitationnelle', en: 'Gravity Lapse' },
-icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_gravitylapse.jpg',
-description: { fr: 'Étourdit le premier ennemi touché et le soulève dans les airs.', en: 'Stuns the first enemy hit and lifts them into the air.' },
-demoYoutubeId: ''
-},
-{
-key: 'R1',
-name: { fr: 'Phénix', en: 'Phoenix' },
-icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_phoenix.jpg',
-description: { fr: 'Invoque un phénix qui inflige des dégâts de zone constants.', en: 'Summons a phoenix that deals constant area damage.' },
-demoYoutubeId: ''
-},
-{
-key: 'R2',
-name: { fr: 'Explosion pyrotechnique', en: 'Pyroblast' },
-icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_pyroblast.jpg',
-description: { fr: 'Lance une énorme boule de feu qui inflige des dégâts colossaux à une cible.', en: 'Fires a huge fireball that deals massive damage to a single target.' },
-demoYoutubeId: ''
-}
-],
-tips: [
-{ fr: 'Utilisez votre Trait avec le E pour étourdir jusqu'à trois cibles.', en: 'Use your Trait with E to stun up to three targets.' },
-{ fr: 'Ne lancez pas la Bombe vivante sur une cible déjà infectée par vous.', en: 'Do not cast Living Bomb on a target already infected by you.' },
-{ fr: 'Le Phénix est excellent pour zoner l'ennemi lors des objectifs.', en: 'Phoenix is excellent for zoning enemies during objectives.' }
-],
-builds: [
-{
-enabled: true,
-order: 1,
-label: { fr: 'Build Choc de flammes', en: 'Flamestrike Build' },
-updatedAt: { fr: '12 Juin 2026', en: 'June 12, 2026' },
-summary: { fr: 'Maximise les dégâts de zone à distance de sécurité.', en: 'Maximizes area damage from a safe distance.' },
-buildCodeTitle: { fr: "A COLLER", en: "PASTE" },
-buildCode: "[T1311211,Kaelthas]",
-videos: [],
-talents: [
-{
-level: 1,
-name: { fr: 'Convection', en: 'Convection' },
-icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_flamestrike.jpg',
-description: { fr: 'Quête : Toucher des héros avec Choc de flammes augmente ses dégâts.', en: 'Quest: Hitting heroes with Flamestrike increases its damage.' },
-demoYoutubeId: null
-},
-{
-level: 4,
-name: { fr: 'Siphon d'énergie', en: 'Mana Addict' },
-icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_verdantspheres_a.jpg',
-description: { fr: 'Récolter des globes augmente le mana et offre un bouclier actif.', en: 'Gathering globes increases mana and grants an active shield.' },
-demoYoutubeId: null
-},
-{
-level: 7,
-name: { fr: 'Chair brûlée', en: 'Burned Flesh' },
-icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_flamestrike_a.jpg',
-description: { fr: 'Choc de flammes inflige des dégâts supplémentaires si deux héros ou plus sont touchés.', en: 'Flamestrike deals bonus damage if two or more heroes are hit.' },
-demoYoutubeId: null
-},
-{
-level: 10,
-name: { fr: 'Phénix', en: 'Phoenix' },
-icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_phoenix.jpg',
-description: { fr: 'Invoque un phénix qui inflige des dégâts de zone.', en: 'Summons a phoenix that deals area damage.' },
-demoYoutubeId: null
-},
-{
-level: 13,
-name: { fr: 'Pyromane', en: 'Pyromaniac' },
-icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_livingbomb.jpg',
-description: { fr: 'Les dégâts de Bombe vivante réduisent les temps de recharge.', en: 'Living Bomb damage reduces cooldowns.' },
-demoYoutubeId: null
-},
-{
-level: 16,
-name: { fr: 'Fureur du Puits de soleil', en: 'Fury of the Sunwell' },
-icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_flamestrike.jpg',
-description: { fr: 'Un second Choc de flammes se déclenche après le premier.', en: 'A second Flamestrike triggers after the first one.' },
-demoYoutubeId: null
-},
-{
-level: 20,
-name: { fr: 'Renaissance', en: 'Rebirth' },
-icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_phoenix.jpg',
-description: { fr: 'Augmente la durée du Phénix et permet de le déplacer.', en: 'Increases Phoenix duration and allows it to be moved.' },
-demoYoutubeId: null
-}
-        ]
+    id: "kaelthas",
+    enabled: true,
+    name: { fr: "Kael\'thas", en: "Kael\'thas" },
+    role: "AssassinDistance",
+    portrait: "https://static.icy-veins.com/images/heroes/hero-portraits/kaelthas.jpg",
+    headline: {
+      fr: "Mage de burst spécialisé dans les dégâts de zone et les réactions en chaîne.",
+      en: "Burst mage specialized in area damage and chain reactions."
+    },
+    gameplay: {
+      fr: "Kael\'thas renforce ses capacités grâce à son trait. Il punit sévèrement les ennemis regroupés avec ses bombes et ses zones de feu.",
+      en: "Kael\'thas empowers his abilities using his trait. He severely punishes grouped enemies with his bombs and fire zones."
+    },
+    guideVideo: null,
+    spells: [
+      {
+        key: "Trait",
+        name: { fr: "Sphères de verdure", en: "Verdant Spheres" },
+        icon: "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_verdantspheres.jpg",
+        description: { fr: "Activez pour rendre la prochaine capacité de base plus puissante.", en: "Activate to make the next Basic Ability more powerful." },
+        demoYoutubeId: ""
       },
       {
+        key: "A",
+        name: { fr: "Choc de flammes", en: "Flamestrike" },
+        icon: "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_flamestrike.jpg",
+        description: { fr: "Inflige d'importants dégâts de zone après un court délai.", en: "Deals high area damage after a short delay." },
+        demoYoutubeId: ""
+      },
+      {
+        key: "Z",
+        name: { fr: "Bombe vivante", en: "Living Bomb" },
+        icon: "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_livingbomb.jpg",
+        description: { fr: "Inflige des dégâts sur la durée, puis explose et se propage aux ennemis proches.", en: "Deals damage over time, then explodes and spreads to nearby enemies." },
+        demoYoutubeId: ""
+      },
+      {
+        key: "E",
+        name: { fr: "Distorsion gravitationnelle", en: "Gravity Lapse" },
+        icon: "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_gravitylapse.jpg",
+        description: { fr: "Étourdit le premier ennemi touché et le soulève dans les airs.", en: "Stuns the first enemy hit and lifts them into the air." },
+        demoYoutubeId: ""
+      },
+      {
+        key: "R1",
+        name: { fr: "Phénix", en: "Phoenix" },
+        icon: "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_phoenix.jpg",
+        description: { fr: "Invoque un phénix qui inflige des dégâts de zone constants.", en: "Summons a phoenix that deals constant area damage." },
+        demoYoutubeId: ""
+      },
+      {
+        key: "R2",
+        name: { fr: "Explosion pyrotechnique", en: "Pyroblast" },
+        icon: "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_pyroblast.jpg",
+        description: { fr: "Lance une énorme boule de feu qui inflige des dégâts colossaux à une cible.", en: "Fires a huge fireball that deals massive damage to a single target." },
+        demoYoutubeId: ""
+      }
+    ],
+    tips: [
+      { fr: "Utilisez votre Trait avec le E pour étourdir jusqu'à trois cibles.", en: "Use your Trait with E to stun up to three targets." },
+      { fr: "Ne lancez pas la Bombe vivante sur une cible déjà infectée par vous.", en: "Do not cast Living Bomb on a target already infected by you." },
+      { fr: "Le Phénix est excellent pour zoner l'ennemi lors des objectifs.", en: "Phoenix is excellent for zoning enemies during objectives." }
+    ],
+    builds: [
+      {
         enabled: true,
-        order: 2,
-        label: { fr: 'Build Lumière', en: 'Light Build' },
-        summary: { fr: 'Build centré sur la Bombe de Lumière et les attaques de base.', en: 'Build centered around Lightbomb and basic attacks.' },
+        order: 1,
+        label: { fr: "Build Choc de flammes", en: "Flamestrike Build" },
+        updatedAt: { fr: "12 Juin 2026", en: "June 12, 2026" },
+        summary: { fr: "Maximise les dégâts de zone à distance de sécurité.", en: "Maximizes area damage from a safe distance." },
         buildCodeTitle: { fr: "A COLLER", en: "PASTE" },
-        buildCode: "[T2222222,Anduin]",
+        buildCode: "[T1311211,Kaelthas]",
         videos: [],
         talents: [
           {
             level: 1,
-            name: { fr: 'Totem Colossal', en: 'Colossal Totem' },
-            icon: 'https://psionic-storm.com/media/img/talents/rehgar_earthbindtotem.png',
-            description: { fr: 'Augmente les points de vie, le rayon et la durée du totem. Permet de le repositionner une nouvelle fois.', en: 'Increases health, radius, and duration of the totem. Can be repositioned once.' },
+            name: { fr: "Convection", en: "Convection" },
+            icon: "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_flamestrike.jpg",
+            description: { fr: "Quête : Toucher des héros avec Choc de flammes augmente ses dégâts.", en: "Quest: Hitting heroes with Flamestrike increases its damage." },
             demoYoutubeId: null
           },
           {
             level: 4,
-            name: { fr: 'Viveterre', en: 'Earthliving Enchant' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg',
-            description: { fr: 'Renforce Salve de guerison pour les héros dont les points de vie sont bas.', en: 'Empowers Chain Heal for heroes at low health.' },
+            name: { fr: "Siphon d'énergie", en: "Mana Addict" },
+            icon: "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_verdantspheres_a.jpg",
+            description: { fr: "Récolter des globes augmente le mana et offre un bouclier actif.", en: "Gathering globes increases mana and grants an active shield." },
             demoYoutubeId: null
           },
           {
             level: 7,
-            name: { fr: 'Totem lié à la terre', en: 'Grounded Totem' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg',
-            description: { fr: "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.", en: 'Reduces attack and spell power of enemies in range.' },
+            name: { fr: "Chair brûlée", en: "Burned Flesh" },
+            icon: "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_flamestrike_a.jpg",
+            description: { fr: "Choc de flammes inflige des dégâts supplémentaires si deux héros ou plus sont touchés.", en: "Flamestrike deals bonus damage if two or more heroes are hit." },
             demoYoutubeId: null
           },
           {
             level: 10,
-            name: { fr: 'Guérison ancestrale', en: 'Ancestral Healing' },
-            icon: 'https://psionic-storm.com/media/img/talents/rehgar_ancestralhealing.png',
-            description: { fr: 'Gros soin monocible, utilisable sur soi.', en: 'Massive single-target heal, usable on self.' },
+            name: { fr: "Phénix", en: "Phoenix" },
+            icon: "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_phoenix.jpg",
+            description: { fr: "Invoque un phénix qui inflige des dégâts de zone.", en: "Summons a phoenix that deals area damage." },
             demoYoutubeId: null
           },
           {
             level: 13,
-            name: { fr: 'Raz-de-marée', en: 'Tidal Waves' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg',
-            description: { fr: 'Réduit le temps de recharge de Salve de guérison et son coût en mana.', en: 'Reduces Chain Heal cooldown and mana cost.' },
+            name: { fr: "Pyromane", en: "Pyromaniac" },
+            icon: "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_livingbomb.jpg",
+            description: { fr: "Les dégâts de Bombe vivante réduisent les temps de recharge.", en: "Living Bomb damage reduces cooldowns." },
             demoYoutubeId: null
           },
           {
             level: 16,
-            name: { fr: 'Totem d’emprise de la terre', en: 'Earthgrasp Totem' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg',
-            description: { fr: 'Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.', en: 'When first spawned, the totem deals AoE damage and heavily slows.' },
+            name: { fr: "Fureur du Puits de soleil", en: "Fury of the Sunwell" },
+            icon: "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_flamestrike.jpg",
+            description: { fr: "Un second Choc de flammes se déclenche après le premier.", en: "A second Flamestrike triggers after the first one." },
             demoYoutubeId: null
           },
           {
             level: 20,
-            name: { fr: 'Bénédiction du long-voyant', en: "Farseer's Blessing" },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_ancestralhealing.jpg',
-            description: { fr: 'Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.', en: 'A second Ancestral Healing triggers and heals in an AoE.' },
+            name: { fr: "Renaissance", en: "Rebirth" },
+            icon: "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_kaelthas_phoenix.jpg",
+            description: { fr: "Augmente la durée du Phénix et permet de le déplacer.", en: "Increases Phoenix duration and allows it to be moved." },
             demoYoutubeId: null
           }
         ]
       }
+    ]
+  }
     ]
   }
 ];
