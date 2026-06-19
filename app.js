@@ -331,7 +331,7 @@ function renderBuildSection(hero) {
   // --- MODIFICATION ICI ---
   // On ajoute une vérification "x.isNew" sur chaque build dans le .map()
 const tabsHtml = hero.builds.map((x, i) => {
-    // On utilise la classe "new-badge" identique à la liste des héros
+    // Utilisation de la classe 'new-badge' (la même que pour les héros)
     const newBadge = x.isNew ? `<span class="new-badge">${t('newBadge')}</span>` : '';
     
     return `
