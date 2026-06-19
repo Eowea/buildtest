@@ -1679,3 +1679,21 @@
     box-shadow: 0 0 15px var(--blue-glow);
     transform: translateY(-3px);
 }
+/* Nouveau conteneur pour permettre au badge de dépasser */
+.build-tab-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* On s'assure que le badge sur l'onglet est bien au-dessus */
+.build-tab-wrapper .new-badge {
+    bottom: -10px; /* Ajustez cette valeur pour le descendre plus ou moins */
+    z-index: 10;
+    pointer-events: none; /* Évite de gêner le clic sur l'onglet */
+}
+
+/* Optionnel : ajuster légèrement la taille si besoin */
+.build-tab-wrapper .new-badge {
+    font-size: 0.55rem;
+    padding: 2px 5px;
+}
