@@ -330,13 +330,16 @@ function renderBuildSection(hero) {
   
   // --- MODIFICATION ICI ---
   // On ajoute une vérification "x.isNew" sur chaque build dans le .map()
-  const tabsHtml = hero.builds.map((x, i) => {
-    const newBadge = x.isNew ? `<span class="tab-new-badge">${t('newBadge')}</span>` : '';
-    return `<button class="build-tab${i === state.buildIndex ? ' active' : ''}" type="button" data-build-index="${i}">
-              ${esc(loc(x.label))}
-              ${newBadge}
-            </button>`;
-  }).join('');
+const tabsHtml = hero.builds.map((x, i) => {
+    // On utilise la classe "new-badge" identique à la liste des héros
+    const newBadge = x.isNew ? `<span class="new-badge">${t('newBadge')}</span>` : '';
+    
+    return `
+      <button class="build-tab${i === state.buildIndex ? ' active' : ''}" type="button" data-build-index="${i}">
+        ${esc(loc(x.label))}
+        ${newBadge}
+      </button>`;
+}).join('');
   // -------------------------
 
   const dateHtml = b.updatedAt 
