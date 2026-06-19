@@ -291,8 +291,29 @@ function renderBuildCode(b) {
 }
     
     function hasGuide(g) { return !!parseYouTubeId(g?.youtubeId||g?.youtubeUrl||g?.url||''); }
-    function renderGuide(g) { const id=parseYouTubeId(g?.youtubeId||g?.youtubeUrl||g?.url||''); if(!id) return ''; return `<section class="video-group"><button class="guide-video-card" type="button" data-youtube-id="${id}"><div class="guide-video-media"><img src="${ytThumb(id)}" alt="${esc(loc(g.title))}" loading="lazy" />${APP_CONFIG.showGuideBadge ? '<span class="youtube-badge">guide</span>' : ''}<span class="youtube-play"></span></div><div class="guide-video-content"><div class="guide-video-kicker">${t('mainVideo')}</div><div class="guide-video-title">${esc(loc(g.title)||'Guide')}</div><div class="guide-video-desc">${esc(loc(g.desc)||'')}</div><div class="guide-video-cta">${t('seeGuide')}</div></div></button></section>`; }
-    
+function renderGuide(g) {
+  const id = parseYouTubeId(g?.youtubeId || g?.youtubeUrl || g?.url || '');
+  if (!id) return '';
+
+  // On utilise un lien <a> au lieu d'un <button>
+  // On retire data-youtube-id pour que la lightbox ne s'ouvre pas
+  return `
+    <section class="video-group">
+      <a class="guide-video-card" href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex;">
+        <div class="guide-video-media">
+          <img src="${ytThumb(id)}" alt="${esc(loc(g.title))}" loading="lazy" />
+          ${APP_CONFIG.showGuideBadge ? '<span class="youtube-badge">guide</span>' : ''}
+          <span class="youtube-play"></span>
+        </div>
+        <div class="guide-video-content">
+          <div class="guide-video-kicker">${t('mainVideo')}</div>
+          <div class="guide-video-title">${esc(loc(g.title) || 'Guide')}</div>
+          <div class="guide-video-desc">${esc(loc(g.desc) || '')}</div>
+          <div class="guide-video-cta">${t('seeGuide')}</div>
+        </div>
+      </a>
+    </section>`;
+}    
     function renderVideoCards(vs) { if(!vs?.length) return ''; return `<section class="video-group combo-video-section"><div class="combo-grid">${vs.map(v=>{const id=parseYouTubeId(v.youtubeId||v.youtubeUrl||v.url||'');const th=id?ytThumb(id):''; return `<button class="youtube-card" type="button" data-youtube-id="${id}"><div class="youtube-thumb">${th?`<img src="${th}" alt="${esc(loc(v.title))}" loading="lazy" />`:''}<div class="youtube-preview" data-preview></div><span class="youtube-badge">combo</span>${id?'<span class="youtube-play"></span>':`<div class="youtube-unavailable">${t('videoUnavailable')}</div>`}</div><div class="combo-info"><div class="combo-title">${esc(loc(v.title))}</div><div class="combo-desc">${esc(loc(v.desc))}</div></div></button>`;}).join('')}</div></section>`; }
     function renderBuildVideos(h,b) { const wg=hasGuide(h?.guideVideo); return `<section class="videos-layout${wg?' with-guide':''}">${wg?renderGuide(h.guideVideo):''}${renderVideoCards(b.videos)}</section>`; }
 
