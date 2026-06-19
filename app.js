@@ -81,7 +81,8 @@ const getInitialLang = () => {
 
 function getHeroStateSignature(hero) {
     const newBuildsCount = (hero.builds || []).filter(b => b.isNew).length;
-    return `${hero.id}_${newBuildsCount}`;
+    // Si isNew est true pour le héros, la signature inclut 'h1', sinon 'h0'
+    return `${hero.id}_h${hero.isNew ? 1 : 0}_b${newBuildsCount}`;
 }
 
 function hasSeenHero(hero) {
@@ -168,49 +169,49 @@ function markHeroAsSeen(hero) {
     
     function renderFilters() { els.roleFilters.innerHTML=roles().map(r=>`<button class="filter-chip${state.role===r?' active':''}" type="button" data-role="${r}">${locRole(r)}</button>`).join(''); }
     function renderHeroList() {
-      const hList = filteredHeroes();
-      els.resultsCount.textContent = hList.length > 1 ? t('resultsCount', {n:hList.length}) : t('resultsCountSingular', {n:hList.length});
-      
-      if(!hList.length){
+    const hList = filteredHeroes();
+    els.resultsCount.textContent = hList.length > 1 ? t('resultsCount', {n:hList.length}) : t('resultsCountSingular', {n:hList.length});
+    
+    if(!hList.length){
         els.heroList.innerHTML=`<div class="empty-state">${t('emptyHeroList')}</div>`;
         return;
-      }
+    }
 
-els.heroList.innerHTML = hList.map(h => {
-    const bCount = (h.builds || []).filter(b => b.enabled !== false).length;
-    
-    // LOGIQUE DES BADGES
-    let badgeHtml = '';
-    const hasBeenSeen = hasSeenHero(h);
-    
-    if (!hasBeenSeen) {
-        if (h.isNew) {
-            // Priorité au badge "Nouveau" pour le personnage
-            badgeHtml = `<span class="new-badge list-badge">${t('newBadge')}</span>`;
-        } else if (h.builds && h.builds.some(b => b.isNew)) {
-            // Sinon, si un build est nouveau, on affiche "Mis à jour"
-            badgeHtml = `<span class="updated-badge list-badge">${t('updatedBadge')}</span>`;
+    els.heroList.innerHTML = hList.map(h => {
+        const bCount = (h.builds || []).filter(b => b.enabled !== false).length;
+        
+        let badgeHtml = '';
+        const seen = hasSeenHero(h); // Vérifie si cette version du héros a été vue
+
+        if (!seen) {
+            // SI le héros est marqué comme nouveau dans les données
+            if (h.isNew) {
+                badgeHtml = `<span class="new-badge list-badge">${t('newBadge')}</span>`;
+            } 
+            // SINON SI un de ses builds est marqué comme nouveau
+            else if (h.builds && h.builds.some(b => b.isNew)) {
+                badgeHtml = `<span class="updated-badge list-badge">${t('updatedBadge')}</span>`;
+            }
         }
-    }
 
-    return `
-    <button class="hero-link${h.id===state.heroId?' active':''}" type="button" data-hero-id="${h.id}">
-        <div class="portrait-wrapper" style="position: relative; flex-shrink: 0; display: flex;">
-            <div class="portrait" data-fallback="${esc(initials(loc(h.name)))}">
-                <img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" />
+        return `
+        <button class="hero-link${h.id===state.heroId?' active':''}" type="button" data-hero-id="${h.id}">
+            <div class="portrait-wrapper" style="position: relative; flex-shrink: 0; display: flex;">
+                <div class="portrait" data-fallback="${esc(initials(loc(h.name)))}">
+                    <img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" />
+                </div>
+                ${badgeHtml} 
             </div>
-            ${badgeHtml} 
-        </div>
-        <div class="hero-meta">
-            <div class="hero-name-row">
-                <div class="hero-name">${esc(loc(h.name))}</div>
-                ${bCount > 0 ? `<span class="build-count-badge">${bCount} Build${bCount > 1 ? 's' : ''}</span>` : ''}
+            <div class="hero-meta">
+                <div class="hero-name-row">
+                    <div class="hero-name">${esc(loc(h.name))}</div>
+                    ${bCount > 0 ? `<span class="build-count-badge">${bCount} Build${bCount > 1 ? 's' : ''}</span>` : ''}
+                </div>
+                <div class="hero-role">${esc(locRole(h.role))}</div>
             </div>
-            <div class="hero-role">${esc(locRole(h.role))}</div>
-        </div>
-    </button>`;
-}).join('');
-    }
+        </button>`;
+    }).join('');
+}
 
 function ftHTML({cls,title,desc,demoId,inner}) { 
   const dStr = String(demoId||'').toLowerCase();
@@ -605,19 +606,20 @@ window.goToBuild = (heroId, buildIndex) => {
 });
 
 els.heroList.addEventListener('click', (e) => {
-  const btn = e.target.closest('[data-hero-id]');
-  if (!btn) return;
+    const btn = e.target.closest('[data-hero-id]');
+    if (!btn) return;
 
-  const heroId = btn.dataset.heroId;
-  const heroObj = HEROES.find(h => h.id === heroId); // AJOUTEZ CETTE LIGNE
+    const heroId = btn.dataset.heroId;
+    const heroObj = HEROES.find(h => h.id === heroId);
 
-  if (heroObj) {
-    markHeroAsSeen(heroObj); // MODIFIEZ CETTE LIGNE (passer l'objet, pas l'ID)
-  }
+    // Marque cette version du héros (avec ses builds actuels) comme vue
+    if (heroObj) {
+        markHeroAsSeen(heroObj);
+    }
 
-  state.heroId = btn.dataset.heroId;
-  state.buildIndex = 0;
-  renderAll(); //
+    state.heroId = heroId;
+    state.buildIndex = 0;
+    renderAll(); //
 
   setTimeout(() => {
     const detailEl = document.getElementById('detailViewWrap');
