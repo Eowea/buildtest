@@ -79,17 +79,23 @@ const getInitialLang = () => {
     /* ── Utilities ── */
     const loc = (val) => (val && typeof val === 'object' && !Array.isArray(val)) ? (val[state.lang] !== undefined ? val[state.lang] : (val['fr'] || '')) : (val || '');
 
-function hasSeenHero(heroId) {
-  const seenHeroes = JSON.parse(localStorage.getItem('seenHeroes') || '[]');
-  return seenHeroes.includes(heroId);
+function getHeroStateSignature(hero) {
+    const newBuildsCount = (hero.builds || []).filter(b => b.isNew).length;
+    return `${hero.id}_${newBuildsCount}`;
 }
 
-function markHeroAsSeen(heroId) {
-  const seenHeroes = JSON.parse(localStorage.getItem('seenHeroes') || '[]');
-  if (!seenHeroes.includes(heroId)) {
-      seenHeroes.push(heroId);
-      localStorage.setItem('seenHeroes', JSON.stringify(seenHeroes));
-  }
+function hasSeenHero(hero) {
+    const seenSignatures = JSON.parse(localStorage.getItem('seenHeroSignatures') || '[]');
+    return seenSignatures.includes(getHeroStateSignature(hero));
+}
+
+function markHeroAsSeen(hero) {
+    const seenSignatures = JSON.parse(localStorage.getItem('seenHeroSignatures') || '[]');
+    const sig = getHeroStateSignature(hero);
+    if (!seenSignatures.includes(sig)) {
+        seenSignatures.push(sig);
+        localStorage.setItem('seenHeroSignatures', JSON.stringify(seenSignatures));
+    }
 }
     // Conversion dynamique FR (AZERTY) <-> EN (QWERTY)
     function uiSpellKey(keyRaw) {
@@ -175,7 +181,7 @@ els.heroList.innerHTML = hList.map(h => {
     
     // LOGIQUE DES BADGES
     let badgeHtml = '';
-    const hasBeenSeen = hasSeenHero(h.id);
+    const hasBeenSeen = hasSeenHero(h);
     
     if (!hasBeenSeen) {
         if (h.isNew) {
@@ -602,9 +608,12 @@ els.heroList.addEventListener('click', (e) => {
   const btn = e.target.closest('[data-hero-id]');
   if (!btn) return;
 
-  // --- NOUVEAU : On sauvegarde que ce héros a été vu ---
-  markHeroAsSeen(btn.dataset.heroId);
-  // ------------------------------------------------------
+  const heroId = btn.dataset.heroId;
+  const heroObj = HEROES.find(h => h.id === heroId); // AJOUTEZ CETTE LIGNE
+
+  if (heroObj) {
+    markHeroAsSeen(heroObj); // MODIFIEZ CETTE LIGNE (passer l'objet, pas l'ID)
+  }
 
   state.heroId = btn.dataset.heroId;
   state.buildIndex = 0;
