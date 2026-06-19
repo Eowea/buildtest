@@ -703,6 +703,7 @@
     .build-tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 16px; }
 
     .build-tab {
+      position: relative;
       display: inline-flex;
       align-items: center;
       height: 40px;
