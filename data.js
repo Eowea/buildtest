@@ -1949,7 +1949,11 @@ const HEROES = [
       fr: 'Malfurion pose des soins sur la durée sur ses alliés, puis frappe les ennemis avec Éclat lunaire pour déclencher des soins instantanés.',
       en: 'Malfurion applies heals over time on his allies, then hits enemies with Moonfire to trigger instant burst heals.'
     },
-    guideVideo: null,
+    guideVideo: {
+      title: { fr: 'Guide express: Malfurion', en: 'Express Guide: Malfurion' },
+      youtubeId: 'auMuOt9X1FQ',
+      desc: { fr: 'Guide rapide pour apprendre les mécaniques de base et quelques astuces.', en: 'Quick guide to learn basic mechanics and some tips. In French, with English subtitles and English AI voice.' }
+    },
     spells: [
       {
         key: 'Trait',
@@ -2036,7 +2040,7 @@ const HEROES = [
             name: { fr: 'Tranquilité', en: 'Tranquility' },
             icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_tranquility.jpg',
             description: { fr: 'Rend continuellement des points de vie aux héros alliés et proches, et donne de l\'armure lorsque les alliés sont sous Rétablissement.', en: 'Continually restores health to nearby allied Heroes, and grants Armor to allies affected by Regrowth.' },
-            demoYoutubeId: null
+            demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/malfurion_r1.mp4'
           },
           {
             level: 13,
@@ -2227,13 +2231,13 @@ const HEROES = [
             name: { fr: 'Poussée éruptive', en: 'Massive Shove' },
             icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_massiveshove.jpg',
             description: { fr: "Pousse un ennemi jusqu'à ce qu'il percute un obstacle.", en: 'Pushes an enemy until they hit terrain.' },
-            demoYoutubeId: null,
+            demoYoutubeId: 'assets/heroes/base_spells/stukov/videos/stukov_r1.mp4',
             alternatives: [
               {
                 name: { fr: 'Frappe chaotique', en: 'Flailing Swipe' },
                 icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_flailingswipe.jpg',
                 description: { fr: 'Balaye les ennemis en face de lui plusieurs fois.', en: 'Swipes enemies in front of him multiple times.' },
-                demoYoutubeId: null
+                demoYoutubeId: 'assets/heroes/base_spells/stukov/videos/stukov_r2.mp4'
               }
             ]
           },
