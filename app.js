@@ -85,17 +85,34 @@ function getHeroStateSignature(hero) {
     return `${hero.id}_h${hero.isNew ? 1 : 0}_b${newBuildsCount}`;
 }
 
-function hasSeenHero(hero) {
-    const seenSignatures = JSON.parse(localStorage.getItem('seenHeroSignatures') || '[]');
-    return seenSignatures.includes(getHeroStateSignature(hero));
+function hasSeenHeroEntity(heroId) {
+    const seen = JSON.parse(localStorage.getItem('seenHeroesList') || '[]');
+    return seen.includes(heroId);
 }
 
-function markHeroAsSeen(hero) {
-    const seenSignatures = JSON.parse(localStorage.getItem('seenHeroSignatures') || '[]');
-    const sig = getHeroStateSignature(hero);
-    if (!seenSignatures.includes(sig)) {
-        seenSignatures.push(sig);
-        localStorage.setItem('seenHeroSignatures', JSON.stringify(seenSignatures));
+// Vérifie si la version actuelle des builds a été vue
+function hasSeenBuildUpdate(hero) {
+    const newBuildsCount = (hero.builds || []).filter(b => b.isNew).length;
+    const seenUpdates = JSON.parse(localStorage.getItem('seenBuildUpdates') || '[]');
+    return seenUpdates.includes(`${hero.id}_${newBuildsCount}`);
+}
+
+// Marque tout comme "vu" d'un coup
+function markEverythingAsSeen(hero) {
+    // 1. Marquer le héros comme vu
+    const seenHeroes = JSON.parse(localStorage.getItem('seenHeroesList') || '[]');
+    if (!seenHeroes.includes(hero.id)) {
+        seenHeroes.push(hero.id);
+        localStorage.setItem('seenHeroesList', JSON.stringify(seenHeroes));
+    }
+
+    // 2. Marquer cette version des builds comme vue
+    const seenUpdates = JSON.parse(localStorage.getItem('seenBuildUpdates') || '[]');
+    const newBuildsCount = (hero.builds || []).filter(b => b.isNew).length;
+    const sig = `${hero.id}_${newBuildsCount}`;
+    if (!seenUpdates.includes(sig)) {
+        seenUpdates.push(sig);
+        localStorage.setItem('seenBuildUpdates', JSON.stringify(seenUpdates));
     }
 }
     // Conversion dynamique FR (AZERTY) <-> EN (QWERTY)
@@ -180,19 +197,21 @@ function markHeroAsSeen(hero) {
     els.heroList.innerHTML = hList.map(h => {
         const bCount = (h.builds || []).filter(b => b.enabled !== false).length;
         
+        // --- LOGIQUE DE PRIORITÉ DES BADGES ---
         let badgeHtml = '';
-        const seen = hasSeenHero(h); // Vérifie si cette version du héros a été vue
+        const hasNewBuilds = h.builds && h.builds.some(b => b.isNew);
+        const updateSeen = hasSeenBuildUpdate(h);
+        const heroSeen = hasSeenHeroEntity(h.id);
 
-        if (!seen) {
-            // SI le héros est marqué comme nouveau dans les données
-            if (h.isNew) {
-                badgeHtml = `<span class="new-badge list-badge">${t('newBadge')}</span>`;
-            } 
-            // SINON SI un de ses builds est marqué comme nouveau
-            else if (h.builds && h.builds.some(b => b.isNew)) {
-                badgeHtml = `<span class="updated-badge list-badge">${t('updatedBadge')}</span>`;
-            }
+        // Priorité 1 : Si un build est nouveau et que l'utilisateur ne l'a pas vu
+        if (hasNewBuilds && !updateSeen) {
+            badgeHtml = `<span class="updated-badge list-badge">${t('updatedBadge')}</span>`;
+        } 
+        // Priorité 2 : Si le héros est nouveau et que l'utilisateur ne l'a jamais ouvert
+        else if (h.isNew && !heroSeen) {
+            badgeHtml = `<span class="new-badge list-badge">${t('newBadge')}</span>`;
         }
+        // ---------------------------------------
 
         return `
         <button class="hero-link${h.id===state.heroId?' active':''}" type="button" data-hero-id="${h.id}">
@@ -612,9 +631,8 @@ els.heroList.addEventListener('click', (e) => {
     const heroId = btn.dataset.heroId;
     const heroObj = HEROES.find(h => h.id === heroId);
 
-    // Marque cette version du héros (avec ses builds actuels) comme vue
     if (heroObj) {
-        markHeroAsSeen(heroObj);
+        markEverythingAsSeen(heroObj); // On valide tout d'un coup au clic
     }
 
     state.heroId = heroId;
