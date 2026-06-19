@@ -704,6 +704,7 @@
 
     .build-tab {
       position: relative;
+      overflow: visible; 
       display: inline-flex;
       align-items: center;
       height: 40px;
@@ -718,6 +719,14 @@
       cursor: pointer;
       transition: all var(--t);
     }
+/* Ajustement spécifique pour le badge Nouveau quand il est dans un onglet */
+.build-tab .new-badge {
+    bottom: -8px;       /* Positionné légèrement en dessous de la bordure basse */
+    font-size: 9px;     /* Légèrement plus petit pour l'onglet */
+    padding: 1px 5px;
+    white-space: nowrap;
+    z-index: 10;        /* Passe au dessus de tout */
+}
     .build-tab:hover { background: rgba(0, 229, 255, 0.2); border-bottom-color: var(--blue-bright); color: var(--text-bright); }
     .build-tab.active {
       background: linear-gradient(180deg, rgba(248, 183, 0, 0.1), rgba(248, 183, 0, 0.25));
