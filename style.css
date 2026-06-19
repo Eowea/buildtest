@@ -1704,33 +1704,13 @@
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    
-    /* On réduit légèrement la taille pour le français */
-    font-size: 0.52rem; 
+    font-size: 0.6rem; /* Valeur d'origine */
     font-weight: 800;
-    
-    /* Forces une seule ligne */
-    white-space: nowrap; 
-    
-    /* Compresse légèrement les lettres pour gagner de la place */
-    letter-spacing: -0.02em; 
-    
-    padding: 2px 8px;
-    border-radius: 10px;
+    padding: 2px 6px; /* Valeur d'origine */
+    border-radius: 8px; /* Valeur d'origine */
     text-transform: uppercase;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Valeur d'origine */
     z-index: 5;
     pointer-events: none;
-    
-    /* Empêche le badge d'être trop large par rapport au portrait si besoin */
-    max-width: 90%; 
-    text-align: center;
-}
-
-.new-badge {
-    background-color: #1c7534;
-}
-
-.updated-badge {
-    background-color: #0076a3;
+    white-space: nowrap; /* On garde ça pour être sûr que ça ne coupe jamais */
 }
