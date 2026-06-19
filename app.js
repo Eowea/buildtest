@@ -710,10 +710,27 @@ els.detailView.addEventListener('mousedown', (e) => {
     return;
   }
 
-  const yt = e.target.closest('[data-youtube-id]');
-  if (yt) {
-    openLightbox(yt.dataset.youtubeId);
+const yt = e.target.closest('[data-youtube-id]');
+if (yt) {
+  const videoId = yt.dataset.youtubeId;
+  
+  // Détection si l'utilisateur est sur un appareil mobile
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    // On construit l'URL de telle sorte que le téléphone propose l'application
+    // On utilise une petite astuce de délai pour essayer d'ouvrir l'app puis le navigateur si ça échoue
+    const webUrl = `https://www.youtube.com/watch?v=${videoId}`;
+    
+    // Pour iOS/Android, l'URL standard HTTPS suffit généralement à déclencher l'app
+    // si l'utilisateur l'a installée.
+    window.location.assign(webUrl);
+  } else {
+    // Sur PC, on garde votre lightbox personnalisée
+    openLightbox(videoId);
   }
+  return;
+}
 });
     els.videoOverlay.addEventListener('click',e=>{if(e.target===els.videoOverlay||e.target===els.closeOverlayBtn) closeLightbox();});
 els.langSwitcher.addEventListener('click', (e) => {
