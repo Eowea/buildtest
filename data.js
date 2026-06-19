@@ -2983,7 +2983,7 @@ const HEROES = [
     id: 'kaelthas',
     enabled: true,
     name: { fr: 'Kael\'thas', en: 'Kael\'thas' },
-    role: 'Ranged Assassin',
+    role: 'AssassinDistance',
     portrait: 'https://static.icy-veins.com/images/heroes/hero-portraits/kaelthas.jpg',
     headline: {
       fr: 'Soins fiables, sauvetage cible et backline stable.',
