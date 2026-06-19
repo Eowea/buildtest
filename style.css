@@ -104,14 +104,10 @@
       border: 1px solid var(--blue-border);
       border-radius: var(--radius-sm);
       box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-      /*contain: paint;*/
+      contain: paint;
       width: 100%;
       box-sizing: border-box;
     }
-#buildSection {
-  overflow: visible !important; /* Indispensable pour voir le badge dépasser */
-  margin-top: 15px; /* Donne de l'espace pour que le badge ne touche pas l'élément du dessus */
-}
 
     /* ═══════════════════════════════
        HEADER
@@ -704,18 +700,9 @@
     /* ═══════════════════════════════
        BUILD SECTION
        ═══════════════════════════════ */
-    .build-tabs {
-  display: flex;
-  gap: 4px;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
-  padding-top: 12px; /* CRUCIAL : Crée l'espace vide au-dessus des boutons pour le badge */
-  overflow: visible !important;
-}
+    .build-tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 16px; }
 
     .build-tab {
-         position: relative;
-  overflow: visible !important; /* Force le badge à sortir du bouton */
       display: inline-flex;
       align-items: center;
       height: 40px;
@@ -1091,11 +1078,6 @@
     }
 
 @media (max-width: 640px) {
-    .build-tabs {
-    padding-top: 15px; /* Plus d'espace sur mobile */
-    margin-top: 10px;
-  }
-}
       .page { width: 100%; max-width: 100%; padding: 0 12px; margin: 8px auto 16px; box-sizing: border-box; }
       .topbar, .toolbar, .sidebar, .content { padding: 14px; width: 100%; box-sizing: border-box; }
       
@@ -1633,7 +1615,7 @@
     bottom: -6px; /* Fait dépasser le badge légèrement en bas du portrait */
     left: 50%;
     transform: translateX(-50%); /* Permet de centrer parfaitement le badge */
-    background-color: #ff4757;
+    background-color: #1c7534;
     color: white;
     font-size: 0.6rem;
     font-weight: 800;
@@ -1686,102 +1668,4 @@
     border-color: var(--blue-bright);
     box-shadow: 0 0 15px var(--blue-glow);
     transform: translateY(-3px);
-}
-/* ==========================================================================
-   ONGLETS DES BUILDS ET BADGE "NOUVEAU"
-   ========================================================================== */
-
-/* 1. Conteneur global : on force l'affichage du dépassement */
-#buildSection, .panel {
-    overflow: visible !important;
-    contain: none !important;
-}
-
-/* 2. Barre d'onglets : on ajoute de la marge en haut pour le badge */
-.build-tabs {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    padding-top: 18px !important; /* Espace vital pour le badge */
-    overflow: visible !important;
-}
-
-/* 3. Le bouton (onglet) */
-.build-tab {
-    position: relative !important;
-    overflow: visible !important;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    padding: 0 24px;
-    border-radius: 0;
-    clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
-    border: none;
-    background: rgba(0, 229, 255, 0.08);
-    border-bottom: 2px solid var(--blue-border);
-    font-size: 14px;
-    color: var(--text-dim);
-    cursor: pointer;
-    transition: all var(--t);
-}
-
-.build-tab.active {
-    background: linear-gradient(180deg, rgba(248, 183, 0, 0.1), rgba(248, 183, 0, 0.25));
-    border-bottom: 3px solid var(--gold-bright);
-    color: var(--gold-bright);
-    text-shadow: 0 0 8px var(--gold-glow);
-}
-
-/* 4. Le badge "Nouveau" collé au-dessus du bouton */
-.tab-new-badge {
-    position: absolute;
-    top: -14px; /* Positionné pile au-dessus de la bordure */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 110;
-    
-    /* Design */
-    background: #d4a84b;
-    color: #000;
-    font-size: 0.65rem;
-    font-weight: 900;
-    padding: 2px 8px;
-    border-radius: 3px;
-    white-space: nowrap;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
-    pointer-events: none;
-    line-height: 1;
-    text-transform: uppercase;
-    
-    /* Animation */
-    animation: pulse-new 2s infinite ease-in-out;
-}
-
-/* 5. Animation de battement */
-@keyframes pulse-new {
-    0% { transform: translateX(-50%) scale(1); }
-    50% { transform: translateX(-50%) scale(1.1); opacity: 0.9; }
-    100% { transform: translateX(-50%) scale(1); }
-}
-
-/* 6. Ajustements mobiles */
-@media (max-width: 640px) {
-    .build-tabs {
-        justify-content: center;
-        padding-top: 22px !important; /* Encore plus d'espace sur mobile */
-        gap: 8px;
-    }
-    
-    .build-tab {
-        padding: 0 14px;
-        font-size: 12px;
-        height: 36px;
-    }
-    
-    .tab-new-badge {
-        top: -16px;
-        font-size: 0.6rem;
-    }
 }
