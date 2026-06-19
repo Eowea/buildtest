@@ -317,7 +317,7 @@ function renderGuide(g) {
     function renderVideoCards(vs) { if(!vs?.length) return ''; return `<section class="video-group combo-video-section"><div class="combo-grid">${vs.map(v=>{const id=parseYouTubeId(v.youtubeId||v.youtubeUrl||v.url||'');const th=id?ytThumb(id):''; return `<button class="youtube-card" type="button" data-youtube-id="${id}"><div class="youtube-thumb">${th?`<img src="${th}" alt="${esc(loc(v.title))}" loading="lazy" />`:''}<div class="youtube-preview" data-preview></div><span class="youtube-badge">combo</span>${id?'<span class="youtube-play"></span>':`<div class="youtube-unavailable">${t('videoUnavailable')}</div>`}</div><div class="combo-info"><div class="combo-title">${esc(loc(v.title))}</div><div class="combo-desc">${esc(loc(v.desc))}</div></div></button>`;}).join('')}</div></section>`; }
     function renderBuildVideos(h,b) { const wg=hasGuide(h?.guideVideo); return `<section class="videos-layout${wg?' with-guide':''}">${wg?renderGuide(h.guideVideo):''}${renderVideoCards(b.videos)}</section>`; }
 
-    function renderBuildSection(hero) { 
+function renderBuildSection(hero) { 
   const el = $('buildSection'); 
   if (!el) return; 
   
@@ -328,14 +328,24 @@ function renderGuide(g) {
   
   const b = hero.builds[clampBuildIndex(hero)] || hero.builds[0]; 
   
-  // NOUVEAU : On prépare le code HTML de la date (avec une petite icône calendrier)
+  // --- MODIFICATION ICI ---
+  // On ajoute une vérification "x.isNew" sur chaque build dans le .map()
+  const tabsHtml = hero.builds.map((x, i) => {
+    const newBadge = x.isNew ? `<span class="tab-new-badge">${t('newBadge')}</span>` : '';
+    return `<button class="build-tab${i === state.buildIndex ? ' active' : ''}" type="button" data-build-index="${i}">
+              ${esc(loc(x.label))}
+              ${newBadge}
+            </button>`;
+  }).join('');
+  // -------------------------
+
   const dateHtml = b.updatedAt 
     ? `<div class="build-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> ${t('lastUpdate')} ${esc(loc(b.updatedAt))}</div>` 
     : '';
   
-  el.innerHTML=`<div class="build-tabs">${hero.builds.map((x,i)=>`<button class="build-tab${i===state.buildIndex?' active':''}" type="button" data-build-index="${i}">${esc(loc(x.label))}</button>`).join('')}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(b.talents)}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
-     bindFloatingTriggers(); 
-    }
+  el.innerHTML=`<div class="build-tabs">${tabsHtml}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(b.talents)}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
+  bindFloatingTriggers(); 
+}
 
 let cachedFourBuilds = null;
 
