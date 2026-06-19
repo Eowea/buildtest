@@ -1715,7 +1715,6 @@
   white-space: nowrap;
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
   pointer-events: none;
-}
   
   /* Animation pour attirer l'attention */
   animation: pulse-new 2s infinite ease-in-out;
