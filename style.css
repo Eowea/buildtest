@@ -1704,13 +1704,23 @@
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    font-size: 0.6rem; /* Valeur d'origine */
+    font-size: 0.6rem;
     font-weight: 800;
-    padding: 2px 6px; /* Valeur d'origine */
-    border-radius: 8px; /* Valeur d'origine */
+    padding: 2px 6px;
+    border-radius: 8px;
     text-transform: uppercase;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Valeur d'origine */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
     z-index: 5;
     pointer-events: none;
-    white-space: nowrap; /* On garde ça pour être sûr que ça ne coupe jamais */
+    white-space: nowrap;
+}
+
+/* Le badge Nouveau reste vert */
+.new-badge {
+    background-color: #1c7534;
+}
+
+/* Le badge Mis à jour sera bleu cyan pour le différencier */
+.updated-badge {
+    background-color: #0076a3; /* Un bleu sombre qui ressort bien */
 }
