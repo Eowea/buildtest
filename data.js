@@ -2008,7 +2008,7 @@ const HEROES = [
         enabled: true,
         order: 1,
         label: { fr: 'Build recommandé', en: 'Recommended Build' },
-        isNew: true,
+        isNew: false,
         updatedAt: { fr: '14 Juin 2026', en: 'June 14, 2026' },
         summary: { fr: 'Dégâts et soins continus très élevés.', en: 'Very high continuous damage and healing.' },
         buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE IN TALENT TREE" },
