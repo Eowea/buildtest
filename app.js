@@ -47,6 +47,7 @@
       copyHint: { fr: "Clique pour copier", en: "Click to copy" },
       optionalTalents: { fr: "Options", en: "Options" },
       newBadge: { fr: "Nouveau", en: "New" },
+      updatedBadge: { fr: "Mis à jour", en: "Updated" },
     };
 
     /* =========================================================================
@@ -169,27 +170,40 @@ function markHeroAsSeen(heroId) {
         return;
       }
 
-      els.heroList.innerHTML = hList.map(h => {
-        // On compte uniquement les builds qui ne sont pas explicitement désactivés
-        const bCount = (h.builds ||[]).filter(b => b.enabled !== false).length;
-        
-        return `
-        <button class="hero-link${h.id===state.heroId?' active':''}" type="button" data-hero-id="${h.id}">
-<div class="portrait-wrapper" style="position: relative; flex-shrink: 0; display: flex;">
+els.heroList.innerHTML = hList.map(h => {
+    const bCount = (h.builds || []).filter(b => b.enabled !== false).length;
+    
+    // LOGIQUE DES BADGES
+    let badgeHtml = '';
+    const hasBeenSeen = hasSeenHero(h.id);
+    
+    if (!hasBeenSeen) {
+        if (h.isNew) {
+            // Priorité au badge "Nouveau" pour le personnage
+            badgeHtml = `<span class="new-badge list-badge">${t('newBadge')}</span>`;
+        } else if (h.builds && h.builds.some(b => b.isNew)) {
+            // Sinon, si un build est nouveau, on affiche "Mis à jour"
+            badgeHtml = `<span class="updated-badge list-badge">${t('updatedBadge')}</span>`;
+        }
+    }
+
+    return `
+    <button class="hero-link${h.id===state.heroId?' active':''}" type="button" data-hero-id="${h.id}">
+        <div class="portrait-wrapper" style="position: relative; flex-shrink: 0; display: flex;">
             <div class="portrait" data-fallback="${esc(initials(loc(h.name)))}">
-              <img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" />
+                <img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" />
             </div>
-            ${h.isNew && !hasSeenHero(h.id) ? `<span class="new-badge">${t('newBadge')}</span>` : ''}
-          </div>
-          <div class="hero-meta">
-<div class="hero-name-row">
-              <div class="hero-name">${esc(loc(h.name))}</div>
-              ${bCount > 0 ? `<span class="build-count-badge">${bCount} Build${bCount > 1 ? 's' : ''}</span>` : ''}
+            ${badgeHtml} 
+        </div>
+        <div class="hero-meta">
+            <div class="hero-name-row">
+                <div class="hero-name">${esc(loc(h.name))}</div>
+                ${bCount > 0 ? `<span class="build-count-badge">${bCount} Build${bCount > 1 ? 's' : ''}</span>` : ''}
             </div>
             <div class="hero-role">${esc(locRole(h.role))}</div>
-          </div>
-        </button>`;
-      }).join('');
+        </div>
+    </button>`;
+}).join('');
     }
 
 function ftHTML({cls,title,desc,demoId,inner}) { 
