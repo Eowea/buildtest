@@ -1704,22 +1704,33 @@
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    font-size: 0.6rem;
+    
+    /* On réduit légèrement la taille pour le français */
+    font-size: 0.52rem; 
     font-weight: 800;
-    padding: 2px 6px;
-    border-radius: 8px;
+    
+    /* Forces une seule ligne */
+    white-space: nowrap; 
+    
+    /* Compresse légèrement les lettres pour gagner de la place */
+    letter-spacing: -0.02em; 
+    
+    padding: 2px 8px;
+    border-radius: 10px;
     text-transform: uppercase;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.6);
     z-index: 5;
     pointer-events: none;
+    
+    /* Empêche le badge d'être trop large par rapport au portrait si besoin */
+    max-width: 90%; 
+    text-align: center;
 }
 
-/* Le badge Nouveau reste vert */
 .new-badge {
     background-color: #1c7534;
 }
 
-/* Le badge Mis à jour sera bleu cyan pour le différencier */
 .updated-badge {
-    background-color: #0076a3; /* Un bleu sombre qui ressort bien */
+    background-color: #0076a3;
 }
