@@ -1669,3 +1669,33 @@
     box-shadow: 0 0 15px var(--blue-glow);
     transform: translateY(-3px);
 }
+/* Style du badge à l'intérieur des onglets */
+.build-tab {
+  position: relative; /* Permet de positionner le badge par rapport à l'onglet */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tab-new-badge {
+  background: #d4a84b; /* Couleur dorée comme vos autres badges */
+  color: #000;
+  font-size: 0.65rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Optionnel : faire briller le badge pour attirer l'oeil */
+.tab-new-badge {
+  animation: pulse-new 2s infinite;
+}
+
+@keyframes pulse-new {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
