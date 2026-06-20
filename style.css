@@ -1262,19 +1262,38 @@
       align-items: center;
     }
 
-    .random-hero-row .portrait {
-      width: 48px;
-      height: 48px;
-      flex-shrink: 0;
-      background: var(--gold-bright);
-      clip-path: var(--hex-clip);
-      padding: 2px;
-    }
-    .random-hero-row .portrait img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      clip-path: var(--hex-clip);
-    }
+/* --- PORTRAIT DANS LA LIGNE DU BUILD ALÉATOIRE --- */
+.random-hero-row .portrait {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  
+  /* On utilise la variable border (plus subtile) et non la couleur vive */
+  background: var(--gold-border); 
+  
+  clip-path: var(--hex-clip);
+  
+  /* L'épaisseur de la bordure : 1px ou 1.5px pour un rendu très fin */
+  padding: 1.5px; 
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.random-hero-row .portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: var(--hex-clip);
+  
+  /* On met un fond sombre pour que l'image ressorte bien */
+  background: var(--bg-deep); 
+  
+  /* On applique les fix d'aliasing ici aussi pour la netteté */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
 
     .random-meta .name {
       font-family: 'Rajdhani', sans-serif;
