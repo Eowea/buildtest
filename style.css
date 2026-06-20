@@ -1268,17 +1268,18 @@
   height: 48px;
   flex-shrink: 0;
   
-  /* On utilise la variable border (plus subtile) et non la couleur vive */
-  background: var(--gold-border); 
+  /* 1. On utilise une couleur de bordure plus discrète (semi-transparente) */
+  background: rgba(248, 183, 0, 0.4) !important; 
   
   clip-path: var(--hex-clip);
   
-  /* L'épaisseur de la bordure : 1px ou 1.5px pour un rendu très fin */
-  padding: 1.5px; 
+  /* 2. Bordure très fine (1px) */
+  padding: 1px !important; 
   
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none !important; /* Sécurité pour enlever toute bordure navigateur */
 }
 
 .random-hero-row .portrait img {
@@ -1287,12 +1288,14 @@
   object-fit: cover;
   clip-path: var(--hex-clip);
   
-  /* On met un fond sombre pour que l'image ressorte bien */
-  background: var(--bg-deep); 
+  /* 3. LE FIX : On force un fond sombre sur l'image pour masquer le jaune du dessous */
+  background: #0d131f !important; 
   
-  /* On applique les fix d'aliasing ici aussi pour la netteté */
+  display: block;
+  
+  /* Optimisation netteté */
   transform: translateZ(0);
-  backface-visibility: hidden;
+  image-rendering: auto;
 }
 
     .random-meta .name {
