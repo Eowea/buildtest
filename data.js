@@ -1467,14 +1467,14 @@ const HEROES = [
           {
             level: 10,
             name: { fr: 'Égide de Cristal', en: 'Crystal Aegis' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_ribboncocoon.png',
+            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_ribboncocoon.png',
             description: { fr: 'Place un allié en Stase puis inflige des dégâts autour.', en: 'Places an ally in Stasis, then deals damage around them.' },
             demoYoutubeId: null
           },
           {
             level: 13,
             name: { fr: 'Fouet perforant', en: 'Piercing Lash' },
-            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_restrainingblow.png',
+            icon: 'assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_restrainingblow.png',
             description: { fr: 'Entrave touche tous les héros adverses possibles, et son temps de recharge est réduit selon le nombre de héros touchés.', en: 'Detainment Strike pierces enemy Heroes, and its cooldown is reduced based on the number of Heroes hit.' },
             demoYoutubeId: null
           },
@@ -1488,7 +1488,7 @@ const HEROES = [
           {
             level: 20,
             name: { fr: "Résolution d'airain", en: 'Diamond Resolve' },
-            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_ribboncocoon.png',
+            icon: 'assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_ribboncocoon.png',
             description: { fr: 'Égide de Cristal confère de l\'armure à la sortie.', en: 'Crystal Aegis grants Armor when it ends.' },
             demoYoutubeId: null
           }
