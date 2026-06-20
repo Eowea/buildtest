@@ -2841,49 +2841,49 @@ const HEROES = [
       {
         key: 'Trait',
         name: { fr: 'Zèle', en: 'Zeal' },
-        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_whitemane_zeal.jpg',
+        icon: 'assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_zeal.png',
         description: { fr: 'Les alliés avec Zèle sont soignés quand Blanchetête inflige des dégâts.', en: 'Allies with Zeal are healed when Whitemane deals damage.' },
         demoYoutubeId: ''
       },
       {
         key: '&',
         name: { fr: 'Mansuétude', en: 'Inquisition' },
-        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_whitemane_clemency.jpg',
+        icon: 'assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_inquisition.png',
         description: { fr: 'Canalise un laser de soin sur un allié. Retire du Désespoir.', en: 'Channels damage and slows an enemy.' },
         demoYoutubeId: ''
       },
       {
         key: 'A',
         name: { fr: 'Supplique', en: 'Desperate Plea' },
-        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_whitemane_desperation.jpg',
+        icon: 'assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_desperation.png',
         description: { fr: 'Soigne un allié et génère du Désespoir. Désespoir: Coûte de plus en plus de mana.', en: 'Heals an ally and grants Zeal. Costs increasingly more mana.' },
         demoYoutubeId: ''
       },
       {
         key: 'Z',
         name: { fr: 'Inquisition', en: 'Inquisition' },
-        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_whitemane_inquisition.jpg',
+        icon: 'assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_inquisition.png',
         description: { fr: 'Canalise des dégâts et ralentit un ennemi. Retire du Désespoir.', en: 'Channels damage and slows an enemy.' },
         demoYoutubeId: ''
       },
       {
         key: 'E',
         name: { fr: 'Flagellation', en: 'Searing Lash' },
-        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_whitemane_lash.jpg',
+        icon: 'assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_lash.png',
         description: { fr: 'Frappe en ligne, déclenche un second coup si un héros est touché.', en: 'Strikes in a line, strikes again if a hero is hit.' },
         demoYoutubeId: ''
       },
       {
         key: 'R1',
         name: { fr: 'Égide écarlate', en: 'Scarlet Aegis' },
-        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_whitemane_aegis.jpg',
+        icon: 'assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_aegis.png',
         description: { fr: "Donne de l'armure, soigne et applique Zèle en zone.", en: 'Grants armor and Zeal in an area.' },
         demoYoutubeId: ''
       },
       {
         key: 'R2',
         name: { fr: 'Sainte colère', en: 'Divine Reckoning' },
-        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_whitemane_reckoning.jpg',
+        icon: 'assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_reckoning.png',
         description: { fr: 'Zone de dégâts qui rend du mana quand des héros sont touchés.', en: 'Massive AoE damage (and thus massive healing).' },
         demoYoutubeId: ''
       }
@@ -2907,49 +2907,49 @@ const HEROES = [
           {
             level: 1,
             name: { fr: 'Compassion', en: 'Compassion' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_whitemane_inquisition_lash.jpg',
+            icon: 'assets/heroes/base_spells/whitemane/images/talents/storm_ui_icon_whitemane_inquisition_lash.png',
             description: { fr: "Flagellation réduit le temps de recharge d'Inquisition. Les points de vie rendus aux héros avec des points de vie faibles sont augmentés.", en: 'Searing Lash reduces the cooldown of Inquisition. Healing is increased against low Health Heroes.' },
             demoYoutubeId: null
           },
           {
             level: 4,
             name: { fr: 'Martyre', en: 'Martyrdom' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_whitemane_desperation_alt_1.jpg',
+            icon: 'assets/heroes/base_spells/whitemane/images/talents/storm_ui_icon_whitemane_desperation_alt_1.png',
             description: { fr: 'Les soins de Supplique sont augmentés. Chaque Zèle augmente davantage le soin de Supplique.', en: 'Desperate Plea heals for more. Each active Zeal increases its healing.' },
             demoYoutubeId: null
           },
           {
             level: 7,
             name: { fr: 'Intercession', en: 'Intercession' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_whitemane_intercession.jpg',
+            icon: 'assets/heroes/base_spells/whitemane/images/talents/storm_ui_icon_whitemane_intercession.png',
             description: { fr: 'Rend un allié Insensible.', en: 'Grant an ally Unstoppable.' },
             demoYoutubeId: null
           },
           {
             level: 10,
             name: { fr: 'Égide écarlate', en: 'Scarlet Aegis' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_whitemane_aegis.jpg',
+            icon: 'assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_aegis.png',
             description: { fr: "Donne de l'armure, soigne et applique Zèle en zone.", en: 'Grant Armor to allies, heal them, and apply Zeal in an area.' },
             demoYoutubeId: null
           },
           {
             level: 13,
             name: { fr: 'Idolâtrie', en: 'Subjugation' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_whitemane_inquisition.jpg',
+            icon: 'assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_inquisition.png',
             description: { fr: "Inquisition réduit les dégâts de l'adversaire.", en: 'Inquisition reduces the damage dealt by enemies.' },
             demoYoutubeId: null
           },
           {
             level: 16,
             name: { fr: 'Pénitence collective', en: 'Shared Punishment' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_whitemane_inquisition.jpg',
+            icon: 'assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_inquisition.png',
             description: { fr: 'Inquisition se propage à un ennemi proche de la cible, puis réduit leurs armures.', en: 'Inquisition spreads to a nearby enemy and reduces their Armor.' },
             demoYoutubeId: null
           },
           {
             level: 20,
             name: { fr: 'Croisade écarlate', en: 'Scarlet Crusade' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_whitemane_aegis.jpg',
+            icon: 'assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_aegis.png',
             description: { fr: 'Augmente les soins procurés par Égide écarlate et rend les alliés Insensible.', en: 'Scarlet Aegis heals for more and grants Unstoppable to affected allies.' },
             demoYoutubeId: null
           }
