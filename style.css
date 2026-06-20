@@ -461,6 +461,7 @@
   transition: all var(--t);
   padding: 0 !important; /* On enlève le padding qui casse l'angle */
   position: relative;
+  filter: drop-shadow(0 0 0 transparent); /* ← le seul vrai fix AA pour clip-path */
 }
 
 /* --- L'IMAGE À L'INTÉRIEUR --- */
@@ -489,16 +490,9 @@
   width: calc(100% - 4px); 
   height: calc(100% - 4px);
   object-fit: cover;
-  clip-path: var(--hex-clip);
   background: var(--bg-deep);
   display: block;
 
-  /* FIX ALIASING : Empêche l'effet escalier */
-  image-rendering: -webkit-optimize-contrast; /* Pour la netteté */
-  image-rendering: auto;
-  
-  /* FIX BLUR : Pour que l'image reste nette lors des scale(1.05) */
-  transform: scale(1.001); /* Un micro-zoom force le moteur de rendu à rester en mode "précis" */
 }
 
 /* --- ÉTAT ACTIF (Rehgar sélectionné) --- */
