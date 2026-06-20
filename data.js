@@ -20,9 +20,9 @@ const HEROES = [
   {
     id: 'kaelthas',
     enabled: true,
-    name: { fr: 'Anduin', en: 'Anduin' },
+    name: { fr: 'Kael\'thas', en: 'Kael\'thas' },
     role: 'AssassinDistance',
-    portrait: 'https://static.icy-veins.com/images/heroes/hero-portraits/anduin.jpg',
+    portrait: 'https://static.icy-veins.com/images/heroes/hero-portraits/kaelthas.jpg',
     headline: {
       fr: 'Soins fiables, sauvetage cible et backline stable.',
       en: 'Reliable healing, targeted rescue, and stable backline.'
