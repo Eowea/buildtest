@@ -24,120 +24,120 @@ const HEROES = [
     role: 'AssassinDistance',
     portrait: 'https://static.icy-veins.com/images/heroes/hero-portraits/kaelthas.jpg',
     headline: {
-      fr: 'Soins fiables, sauvetage cible et backline stable.',
-      en: 'Reliable healing, targeted rescue, and stable backline.'
+      fr: 'Dégâts de zone massifs, punition des regroupements et contrôle puissant.',
+      en: 'Massive AoE damage, group punishment, and strong crowd control.'
     },
     gameplay: {
-      fr: 'Anduin apporte un soin lisible, un gros bouton de sauvetage et une excellente reponse aux engages front to back.',
-      en: 'Anduin provides straightforward healing, a massive rescue button, and an excellent response to front-to-back engages.'
+      fr: 'Kael\'thas est le maître du zonage. En utilisant ses Sphères verdoyantes (Trait), il peut booster ses sorts pour infliger plus de dégâts, étendre ses zones d\'effet ou étourdir plusieurs cibles.',
+      en: 'Kael\'thas is the master of zoning. By using Verdant Spheres (Trait), he can empower his spells to deal more damage, increase area of effect, or stun multiple targets.'
     },
     guideVideo: null,
     spells: [
       {
         key: 'Trait',
-        name: { fr: 'Foi désespérée', en: 'Leap of Faith' },
-        icon: '',
-        description: { fr: 'Repositionne un allié en danger.', en: 'Reposition an ally in danger.' },
+        name: { fr: 'Sphères verdoyantes', en: 'Verdant Spheres' },
+        icon: 'https://static.icy-veins.com/images/heroes/skills/kaelthas_verdant_spheres.png',
+        description: { fr: 'Activez pour que votre prochain sort de base soit plus puissant.', en: 'Activate to empower your next basic spell.' },
         demoYoutubeId: ''
       },
       {
         key: 'A',
-        name: { fr: 'Soin éclair', en: 'Flash Heal' },
-        icon: '',
-        description: { fr: 'Soin direct et fiable.', en: 'Direct and reliable heal.' },
+        name: { fr: 'Choc de flammes', en: 'Flamestrike' },
+        icon: 'https://static.icy-veins.com/images/heroes/skills/kaelthas_flamestrike.png',
+        description: { fr: 'Explosion de zone après un court délai.', en: 'AoE explosion after a short delay.' },
         demoYoutubeId: ''
       },
       {
         key: 'Z',
-        name: { fr: 'Étoile divine', en: 'Divine Star' },
-        icon: '',
-        description: { fr: 'Ligne qui soigne et poke.', en: 'A line that heals and pokes.' },
+        name: { fr: 'Bombe vivante', en: 'Living Bomb' },
+        icon: 'https://static.icy-veins.com/images/heroes/skills/kaelthas_living_bomb.png',
+        description: { fr: 'Dégâts sur la durée qui explosent et se propagent aux ennemis proches.', en: 'DoT that explodes and spreads to nearby enemies.' },
         demoYoutubeId: ''
       },
       {
         key: 'E',
-        name: { fr: 'Châtiment', en: 'Chastise' },
-        icon: '',
-        description: { fr: 'Contrôle linéaire utile pour stopper une entrée.', en: 'Linear CC useful for stopping an engage.' },
+        name: { fr: 'Distorsion gravitationnelle', en: 'Gravity Lapse' },
+        icon: 'https://static.icy-veins.com/images/heroes/skills/kaelthas_gravity_lapse.png',
+        description: { fr: 'Étourdit le premier ennemi touché (jusqu\'à 3 avec le Trait).', en: 'Stuns the first enemy hit (up to 3 with Trait).' },
         demoYoutubeId: ''
       },
       {
         key: 'R1',
-        name: { fr: 'Mot sacré : Salut', en: 'Holy Word: Salvation' },
-        icon: '',
-        description: { fr: 'Gros outil défensif de teamfight.', en: 'Massive defensive teamfight tool.' },
+        name: { fr: 'Phénix', en: 'Phoenix' },
+        icon: 'https://static.icy-veins.com/images/heroes/skills/kaelthas_phoenix.png',
+        description: { fr: 'Invoque un phénix qui inflige des dégâts de zone constants.', en: 'Summons a phoenix that deals constant AoE damage.' },
         demoYoutubeId: ''
       },
       {
         key: 'R2',
-        name: { fr: 'Bombe de lumière', en: 'Lightbomb' },
-        icon: '',
-        description: { fr: 'Excellent follow-up sur un allié qui plonge.', en: 'Excellent follow-up on an engaging ally.' },
+        name: { fr: 'Explosion pyrotechnique', en: 'Pyroblast' },
+        icon: 'https://static.icy-veins.com/images/heroes/skills/kaelthas_pyroblast.png',
+        description: { fr: 'Lance une énorme boule de feu lente mais dévastatrice.', en: 'Casts a massive, slow, but devastating fireball.' },
         demoYoutubeId: ''
       }
     ],
     tips: [
-      { fr: 'Garde ton pull pour la vraie cible menacée.', en: 'Keep your pull for the actual threatened target.' },
-      { fr: "Place Châtiment avant l'engage adverse.", en: 'Place Chastise before the enemy engage.' },
-      { fr: 'Bombe de lumière adore les tanks qui foncent.', en: 'Lightbomb loves diving tanks.' }
+      { fr: 'Utilise ton Trait (D) avant Choc de flammes (A) pour augmenter radicalement la zone d\'effet.', en: 'Use your Trait (D) before Flamestrike (A) to drastically increase the area of effect.' },
+      { fr: 'Ne lance pas Bombe vivante (Z) sur une cible déjà affectée, attends qu\'elle explose pour la propager.', en: 'Don\'t cast Living Bomb (Z) on a target already affected; wait for it to explode to spread it.' },
+      { fr: 'La Distorsion (E) boostée par le Trait est vitale pour stopper un plongeon (dive) de plusieurs ennemis.', en: 'Trait-empowered Gravity Lapse (E) is vital for stopping a multi-enemy dive.' }
     ],
     builds: [
       {
         enabled: true,
         order: 1,
-        label: { fr: 'Heal fiable', en: 'Reliable Heal' },
-        summary: { fr: 'Build généraliste pour garder régularité, contrôle et sécurité.', en: 'Generalist build to keep consistency, control, and safety.' },
+        label: { fr: 'Build Flamestrike (Poke)', en: 'Flamestrike Build (Poke)' },
+        summary: { fr: 'Maximise les dégâts à distance et la zone de Choc de flammes.', en: 'Maximizes long-range damage and Flamestrike area.' },
         buildCodeTitle: { fr: "A COLLER", en: "PASTE" },
-        buildCode: "[T1111111,Anduin]",
+        buildCode: "[T1311211,Kaelthas]",
         videos: [],
         talents: [
           {
             level: 1,
-            name: { fr: 'Totem Colossal', en: 'Colossal Totem' },
-            icon: 'https://psionic-storm.com/media/img/talents/rehgar_earthbindtotem.png',
-            description: { fr: 'Augmente les points de vie, le rayon et la durée du totem. Permet de le repositionner une nouvelle fois.', en: 'Increases health, radius, and duration of the totem. Can be repositioned once.' },
+            name: { fr: 'Convection', en: 'Convection' },
+            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_convection.png',
+            description: { fr: 'Quête : Toucher des héros avec Choc de flammes augmente ses dégâts.', en: 'Quest: Hitting heroes with Flamestrike increases its damage.' },
             demoYoutubeId: null
           },
           {
             level: 4,
-            name: { fr: 'Viveterre', en: 'Earthliving Enchant' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg',
-            description: { fr: 'Renforce Salve de guerison pour les héros dont les points de vie sont bas.', en: 'Empowers Chain Heal for heroes at low health.' },
+            name: { fr: 'Accro à la mana', en: 'Mana Addict' },
+            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_mana_addict.png',
+            description: { fr: 'Récolter des globes augmente la mana et offre un bouclier actif.', en: 'Collecting globes increases mana and grants an active shield.' },
             demoYoutubeId: null
           },
           {
             level: 7,
-            name: { fr: 'Totem lié à la terre', en: 'Grounded Totem' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg',
-            description: { fr: "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.", en: 'Reduces attack and spell power of enemies in range.' },
+            name: { fr: 'Chair brûlée', en: 'Burned Flesh' },
+            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_burned_flesh.png',
+            description: { fr: 'Choc de flammes inflige des dégâts bonus si 2 héros ou plus sont touchés.', en: 'Flamestrike deals bonus damage if 2 or more heroes are hit.' },
             demoYoutubeId: null
           },
           {
             level: 10,
-            name: { fr: 'Guérison ancestrale', en: 'Ancestral Healing' },
-            icon: 'https://psionic-storm.com/media/img/talents/rehgar_ancestralhealing.png',
-            description: { fr: 'Gros soin monocible, utilisable sur soi.', en: 'Massive single-target heal, usable on self.' },
+            name: { fr: 'Phénix', en: 'Phoenix' },
+            icon: 'https://static.icy-veins.com/images/heroes/skills/kaelthas_phoenix.png',
+            description: { fr: 'Idéal pour le contrôle de zone et les objectifs.', en: 'Ideal for zone control and objectives.' },
             demoYoutubeId: null
           },
           {
             level: 13,
-            name: { fr: 'Raz-de-marée', en: 'Tidal Waves' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg',
-            description: { fr: 'Réduit le temps de recharge de Salve de guérison et son coût en mana.', en: 'Reduces Chain Heal cooldown and mana cost.' },
+            name: { fr: 'Fureur du Puits de soleil', en: 'Fury of the Sunwell' },
+            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_fury_of_the_sunwell.png',
+            description: { fr: 'Choc de flammes explose une seconde fois après un court délai.', en: 'Flamestrike explodes a second time after a short delay.' },
             demoYoutubeId: null
           },
           {
             level: 16,
-            name: { fr: 'Totem d’emprise de la terre', en: 'Earthgrasp Totem' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg',
-            description: { fr: 'Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.', en: 'When first spawned, the totem deals AoE damage and heavily slows.' },
+            name: { fr: 'Inflammation', en: 'Ignite' },
+            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_ignite.png',
+            description: { fr: 'Choc de flammes applique aussi Bombe vivante aux héros touchés.', en: 'Flamestrike also applies Living Bomb to heroes hit.' },
             demoYoutubeId: null
           },
           {
             level: 20,
-            name: { fr: 'Bénédiction du long-voyant', en: "Farseer's Blessing" },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_ancestralhealing.jpg',
-            description: { fr: 'Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.', en: 'A second Ancestral Healing triggers and heals in an AoE.' },
+            name: { fr: 'Renaissance', en: 'Rebirth' },
+            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_rebirth.png',
+            description: { fr: 'Augmente la durée du Phénix et permet de le repositionner.', en: 'Increases Phoenix duration and allows repositioning.' },
             demoYoutubeId: null
           }
         ]
@@ -145,59 +145,59 @@ const HEROES = [
       {
         enabled: true,
         order: 2,
-        label: { fr: 'Build Lumière', en: 'Light Build' },
-        summary: { fr: 'Build centré sur la Bombe de Lumière et les attaques de base.', en: 'Build centered around Lightbomb and basic attacks.' },
+        label: { fr: 'Build Bombe Vivante (Anti-Mêlée)', en: 'Living Bomb Build (Anti-Melee)' },
+        summary: { fr: 'Dévastateur contre les compositions avec beaucoup de corps à corps.', en: 'Devastating against melee-heavy compositions.' },
         buildCodeTitle: { fr: "A COLLER", en: "PASTE" },
-        buildCode: "[T2222222,Anduin]",
+        buildCode: "[T2322131,Kaelthas]",
         videos: [],
         talents: [
           {
             level: 1,
-            name: { fr: 'Totem Colossal', en: 'Colossal Totem' },
-            icon: 'https://psionic-storm.com/media/img/talents/rehgar_earthbindtotem.png',
-            description: { fr: 'Augmente les points de vie, le rayon et la durée du totem. Permet de le repositionner une nouvelle fois.', en: 'Increases health, radius, and duration of the totem. Can be repositioned once.' },
+            name: { fr: 'Infusion gangrenée', en: 'Fel Infusion' },
+            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_fel_infusion.png',
+            description: { fr: 'Augmente la puissance de sort et soigne lors de l\'utilisation du Trait.', en: 'Increases spell power and heals when using Trait.' },
             demoYoutubeId: null
           },
           {
             level: 4,
-            name: { fr: 'Viveterre', en: 'Earthliving Enchant' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg',
-            description: { fr: 'Renforce Salve de guerison pour les héros dont les points de vie sont bas.', en: 'Empowers Chain Heal for heroes at low health.' },
+            name: { fr: 'Accro à la mana', en: 'Mana Addict' },
+            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_mana_addict.png',
+            description: { fr: 'Indispensable pour la survie tard dans la partie.', en: 'Essential for late-game survival.' },
             demoYoutubeId: null
           },
           {
             level: 7,
-            name: { fr: 'Totem lié à la terre', en: 'Grounded Totem' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg',
-            description: { fr: "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.", en: 'Reduces attack and spell power of enemies in range.' },
+            name: { fr: 'Enchantement du Feu solaire', en: 'Sunfire Enchantment' },
+            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_sunfire_enchantment.png',
+            description: { fr: 'Activer le Trait booste vos prochaines attaques de base.', en: 'Activating Trait empowers your next basic attacks.' },
             demoYoutubeId: null
           },
           {
             level: 10,
-            name: { fr: 'Guérison ancestrale', en: 'Ancestral Healing' },
-            icon: 'https://psionic-storm.com/media/img/talents/rehgar_ancestralhealing.png',
-            description: { fr: 'Gros soin monocible, utilisable sur soi.', en: 'Massive single-target heal, usable on self.' },
+            name: { fr: 'Explosion pyrotechnique', en: 'Pyroblast' },
+            icon: 'https://static.icy-veins.com/images/heroes/skills/kaelthas_pyroblast.png',
+            description: { fr: 'Pour punir une cible fragile hors de position.', en: 'To punish a fragile target out of position.' },
             demoYoutubeId: null
           },
           {
             level: 13,
-            name: { fr: 'Raz-de-marée', en: 'Tidal Waves' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg',
-            description: { fr: 'Réduit le temps de recharge de Salve de guérison et son coût en mana.', en: 'Reduces Chain Heal cooldown and mana cost.' },
+            name: { fr: 'Pyromane', en: 'Pyromaniac' },
+            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_pyromaniac.png',
+            description: { fr: 'Les dégâts de Bombe vivante réduisent vos temps de recharge.', en: 'Living Bomb damage reduces your cooldowns.' },
             demoYoutubeId: null
           },
           {
             level: 16,
-            name: { fr: 'Totem d’emprise de la terre', en: 'Earthgrasp Totem' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg',
-            description: { fr: 'Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.', en: 'When first spawned, the totem deals AoE damage and heavily slows.' },
+            name: { fr: 'Fureur du Roi-Soleil', en: 'Sun King\'s Fury' },
+            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_sun_kings_fury.png',
+            description: { fr: 'Augmente considérablement les dégâts de Bombe vivante sur les cibles principales.', en: 'Greatly increases Living Bomb damage on primary targets.' },
             demoYoutubeId: null
           },
           {
             level: 20,
-            name: { fr: 'Bénédiction du long-voyant', en: "Farseer's Blessing" },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_ancestralhealing.jpg',
-            description: { fr: 'Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.', en: 'A second Ancestral Healing triggers and heals in an AoE.' },
+            name: { fr: 'Présence d\'esprit', en: 'Presence of Mind' },
+            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_presence_of_mind.png',
+            description: { fr: 'Réduit le temps de recharge de l\'Explosion pyrotechnique.', en: 'Reduces Pyroblast cooldown.' },
             demoYoutubeId: null
           }
         ]
