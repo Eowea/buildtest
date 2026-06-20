@@ -448,71 +448,62 @@
       box-shadow: inset 0 0 15px rgba(248, 183, 0, 0.05);
     }
 
-/* --- LE CONTENEUR (Base de taille pour l'image du héros) --- */
-.hero-link .portrait, 
-.detail-portrait {
-  position: relative;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
+/* --- CONFIGURATION COMMUNE --- */
+.hero-link .portrait, .detail-portrait {
+  position: relative; /* Pour positionner le cadre par dessus */
   background: none !important;
-  border: none !important;
   padding: 0 !important;
-  overflow: visible; /* Indispensable pour que le cadre puisse dépasser */
+  display: grid;
+  place-items: center;
+  overflow: visible;
 }
 
-/* --- TAILLES DE RÉFÉRENCE --- */
-.hero-link .portrait {
-  width: 54px;  /* Taille de la photo dans la liste */
-  height: 54px;
-}
-
-.detail-portrait {
-  width: 110px; /* Taille de la photo dans le header */
-  height: 110px;
-}
-
-/* --- L'IMAGE DU HÉROS (À l'intérieur du cadre) --- */
-.hero-link .portrait img, 
-.detail-portrait img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  clip-path: var(--hex-clip); /* On coupe l'image en hexagone */
-  z-index: 1;
-}
-
-/* --- LE CADRE MÉTALLIQUE (Par-dessus) --- */
-.hero-link .portrait::after, 
-.detail-portrait::after {
+/* --- LE CADRE MÉTALLIQUE (IMAGE) --- */
+.hero-link .portrait::after, .detail-portrait::after {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centrage parfait */
-  
-  /* Le cadre doit être environ 20% plus grand que l'image pour l'embrasser */
-  width: 122%; 
-  height: 122%;
-  
-  background-image: url('https://i.ibb.co/68X968B/cadre-argent.png'); /* Remplace par ton lien */
+  /* On fait déborder le cadre légèrement pour bien couvrir les bords de l'image */
+  inset: -10%; 
+  background-image: url('assets/heroes/portraits/storm_ui_glues_draft_portrait_normal.png'); /* <--- METS LE LIEN ICI */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 2;
-  pointer-events: none;
+  pointer-events: none; /* Pour que le clic passe à travers le cadre */
   transition: all var(--t);
 }
 
-/* --- EFFET AU SURVOL / ACTIF (Optionnel : l'image zoom un peu dans le cadre) --- */
-.hero-link:hover img {
-  transform: scale(1.1);
+/* --- TAILLES SPÉCIFIQUES --- */
+
+/* Petit portrait (Liste) */
+.hero-link .portrait {
+  width: 58px;
+  height: 58px;
+}
+.hero-link .portrait img {
+  width: 82%; /* On réduit un peu l'image pour qu'elle rentre dans le cadre */
+  height: 82%;
 }
 
-/* --- VERSION DORÉE POUR LE HÉROS ACTIF --- */
+/* Gros portrait (Header) */
+.detail-portrait {
+  width: 130px;
+  height: 130px;
+  filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.2));
+}
+.detail-portrait img {
+  width: 85%;
+  height: 85%;
+}
+
+/* --- EFFET "SÉLECTIONNÉ" (Transformation Argent -> Or) --- */
+/* Si tu n'as pas d'image de cadre dorée, on utilise des filtres CSS */
 .hero-link.active .portrait::after {
-  /* Filtre pour transformer l'argent en or sans changer d'image */
-  filter: sepia(1) saturate(12) hue-rotate(-50deg) brightness(1.1) drop-shadow(0 0 8px var(--gold-glow));
+  filter: sepia(1) saturate(10) hue-rotate(-50deg) brightness(1.2) drop-shadow(0 0 5px var(--gold-glow));
+}
+
+.hero-link.active .portrait img {
+  filter: brightness(1.1);
 }
 
     .portrait.fallback::after, .detail-portrait.fallback::after, .talent-icon.fallback::after, .spell-icon.fallback::after {
