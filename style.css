@@ -492,8 +492,8 @@
   transform: translate(-50%, -50%); /* Centrage parfait */
   
   /* Le cadre doit être environ 20% plus grand que l'image pour l'embrasser */
-  width: 122%; 
-  height: 122%;
+  width: 118%; 
+  height: 118%;
   
   background-image: url('https://i.ibb.co/68X968B/cadre-argent.png'); /* Remplace par ton lien */
   background-size: contain;
