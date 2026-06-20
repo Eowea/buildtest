@@ -597,7 +597,7 @@ const HEROES = [
     enabled: true,
     name: { fr: 'Luisaile', en: 'Brightwing' },
     role: 'Healer',
-    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_britghtwing.png',
+    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_brightwing.png',
     headline: {
       fr: "Global, beaucoup d'utilitaire, et control en point and click",
       en: 'Global presence, high utility, point-and-click control'
