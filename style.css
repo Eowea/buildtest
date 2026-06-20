@@ -450,28 +450,30 @@
 
    /* --- LE PORTRAIT (Le conteneur qui sert de bordure) --- */
 .hero-link .portrait {
-  width: 64px !important;  /* Taille légèrement augmentée pour la lisibilité */
-  height: 64px !important;
-  flex-shrink: 0;
-  background: var(--blue-border); /* Couleur bordure par défaut (bleu) */
-  clip-path: var(--hex-clip);
+  width: 60px !important; 
+  height: 60px !important;
+  position: relative;
   display: flex !important;
   align-items: center;
   justify-content: center;
-  transition: all var(--t);
-  padding: 0 !important; /* On enlève le padding qui casse l'angle */
-  position: relative;
+  background: none !important;
+  padding: 0 !important;
+  border: none !important;
+  overflow: visible; /* Très important pour laisser le cadre dépasser */
+  flex-shrink: 0;
 }
 
 /* --- L'IMAGE À L'INTÉRIEUR --- */
 .hero-link .portrait img {
-  /* On réduit l'image de 4px (2px de chaque côté) pour créer la bordure */
-  width: calc(100% - 4px); 
-  height: calc(100% - 4px);
+  width: 90%; 
+  height: 90%;
   object-fit: cover;
   clip-path: var(--hex-clip);
-  background: var(--bg-deep); /* Fond noir pour éviter les fuites de pixels */
-  display: block;
+  z-index: 1;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: smooth;
+  transform: translateZ(0) rotate(0.02deg);
+  -webkit-backface-visibility: hidden;
 }
     
 /* --- ÉTAT ACTIF (Rehgar sélectionné) --- */
@@ -536,29 +538,53 @@
 
 /* --- GRAND PORTRAIT (L'encadré doré) --- */
 .detail-portrait {
-  width: 120px; 
-  height: 120px; 
-  /* Dégradé métallique HotS */
-  background: linear-gradient(135deg, var(--gold-bright), var(--gold-dim));
-  clip-path: var(--hex-clip);
-  
-  /* On remplace le padding par un alignement flex */
-  padding: 0 !important; 
+  width: 120px !important; 
+  height: 120px !important;
+  position: relative;
   display: flex !important;
   align-items: center;
   justify-content: center;
-  
+  background: none !important;
+  padding: 0 !important;
+  border: none !important;
+  overflow: visible;
   filter: drop-shadow(0 0 15px var(--gold-glow));
 }
 
 /* --- L'IMAGE DÉTAIL --- */
 .detail-portrait img { 
-  /* Pour une bordure de 3px de chaque côté : 100% - 6px */
-  width: calc(100% - 6px); 
-  height: calc(100% - 6px); 
+  width: 90%; 
+  height: 90%; 
   object-fit: cover; 
   clip-path: var(--hex-clip);
-  background: var(--bg-deep); /* Fond pour éviter les fuites de pixels */
+  z-index: 1;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: smooth;
+  transform: translateZ(0) rotate(0.02deg);
+  -webkit-backface-visibility: hidden;
+}
+/* AJOUT DU CADRE SUR TOUS LES PORTRAITS */
+.hero-link .portrait::after, 
+.detail-portrait::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 115%; 
+  height: 115%;
+  background-image: url('https://i.ibb.co/68X968B/cadre-argent.png'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+  pointer-events: none;
+  image-rendering: high-quality;
+}
+
+/* EFFET DORÉ QUAND SÉLECTIONNÉ */
+.hero-link.active .portrait::after {
+  filter: sepia(1) saturate(12) hue-rotate(-50deg) brightness(1.1) drop-shadow(0 0 8px var(--gold-glow));
 }
     .detail-title {
       font-family: 'Rajdhani', serif;
