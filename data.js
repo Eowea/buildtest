@@ -1507,21 +1507,21 @@ const HEROES = [
           {
             level: 1,
             name: { fr: 'Révélation céleste', en: 'Increasing Clarity' },
-            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_angelicsweep.png',
+            icon: 'assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_angelicsweep.png',
             description: { fr: 'Quête : Augmente les dégâts de la zone centrale. Récompense : Augmente à nouveau les dégâts de la zone centrale.', en: 'More Energy.' },
             demoYoutubeId: null
           },
           {
             level: 4,
             name: { fr: 'Amplitude majestueuse', en: 'Increasing Clarity' },
-            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_angelicsweep.png',
+            icon: 'assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_angelicsweep.png',
             description: { fr: 'Augmente le rayon de Arc vertueux.', en: 'More Energy.' },
             demoYoutubeId: null
           },
           {
             level: 7,
             name: { fr: "Lueur d'espoir", en: 'Energized Cord' },
-            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_rayofheaven.png',
+            icon: 'assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_rayofheaven.png',
             description: { fr: 'Récolter un globe réduit le coût en énergie du prochain Rayon des Cieux', en: "Increases the Energy gained from Auriel's Basic Attacks against Heroes and non-Heroic targets. Passive: increases Basic Attack range." },
             demoYoutubeId: null,
             alternatives: [
@@ -1536,7 +1536,7 @@ const HEROES = [
           {
             level: 10,
             name: { fr: 'Égide de Cristal', en: 'Crystal Aegis' },
-            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_ribboncocoon.png',
+            icon: 'assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_ribboncocoon.png',
             description: { fr: 'Place un allié en Stase puis inflige des dégâts autour.', en: 'Places an ally in Stasis, then deals damage around them.' },
             demoYoutubeId: null
           },
@@ -1557,7 +1557,7 @@ const HEROES = [
           {
             level: 20,
             name: { fr: "Résolution d'airain", en: 'Diamond Resolve' },
-            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_ribboncocoon.png',
+            icon: 'assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_ribboncocoon.png',
             description: { fr: "Égide de Cristal confère de l'armure à la sortie.", en: 'Crystal Aegis grants Armor when it ends.' },
             demoYoutubeId: null
           }
