@@ -417,49 +417,49 @@ const HEROES = [
         name: { fr: 'Purge', en: 'Purge' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_purge.jpg',
         description: { fr: 'Utiliser sur un allié le rend Insensible, sur un ennemi le ralenti.', en: 'Targeting an ally grants Unstoppable, targeting an enemy slows them.' },
-        demoYoutubeId: 'assets/heroes/base_spells/rehgar/videos/rehgar_purge.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/rehgar/videos/spells/rehgar_purge.mp4'
       },
       {
         key: 'A',
         name: { fr: 'Salve de guérison', en: 'Chain Heal' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg',
         description: { fr: 'Soin qui rebondit sur les alliés autour de la cible.', en: 'Heal that bounces to allies near the target.' },
-        demoYoutubeId: 'assets/heroes/base_spells/rehgar/videos/rehgar_a.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/rehgar/videos/spells/rehgar_a.mp4'
       },
       {
         key: 'Z',
         name: { fr: 'Bouclier de foudre', en: 'Lightning Shield' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_lightningshield.jpg',
         description: { fr: 'Place un bouclier de foudre qui inflige des dégâts et rend du mana.', en: 'Places a lightning shield that deals damage and restores mana.' },
-        demoYoutubeId: 'assets/heroes/base_spells/rehgar/videos/rehgar_z.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/rehgar/videos/spells/rehgar_z.mp4'
       },
       {
         key: 'E',
         name: { fr: 'Totem de liens terrestres', en: 'Earthbind Totem' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg',
         description: { fr: 'Pose un totem qui ralentit autour.', en: 'Spawns a totem that slows nearby enemies.' },
-        demoYoutubeId: 'assets/heroes/base_spells/rehgar/videos/rehgar_e.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/rehgar/videos/spells/rehgar_e.mp4'
       },
       {
         key: 'R1',
         name: { fr: 'Guérison ancestrale', en: 'Ancestral Healing' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_ancestralhealing.jpg',
         description: { fr: 'Gros soin qui permet de sauver.', en: 'Massive burst heal that saves lives.' },
-        demoYoutubeId: 'assets/heroes/base_spells/rehgar/videos/rehgar_ancestral.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/rehgar/videos/spells/rehgar_ancestral.mp4'
       },
       {
         key: 'R2',
         name: { fr: 'Furie sanguinaire', en: 'Bloodlust' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_bloodlust.jpg',
         description: { fr: "Augmente la vitesse de déplacement et d'attaque, les attaques de base soignent.", en: 'Increases movement & attack speed, basic attacks heal.' },
-        demoYoutubeId: 'assets/heroes/base_spells/rehgar/videos/rehgar_bloodlust.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/rehgar/videos/spells/rehgar_bloodlust.mp4'
       },
       {
         key: 'W',
         name: { fr: 'Loup fantôme', en: 'Ghost Wolf' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_ghostwolf.jpg',
         description: { fr: 'Augmente la vitesse de déplacement, la prochaine auto-attaque est plus forte.', en: 'Increases movement speed; next basic attack deals bonus damage.' },
-        demoYoutubeId: 'assets/heroes/base_spells/rehgar/videos/rehgar_mount.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/rehgar/videos/spells/rehgar_mount.mp4'
       }
     ],
     tips: [
@@ -824,42 +824,42 @@ const HEROES = [
         name: { fr: 'Fidèle auditoire', en: 'Fortitude of the Faithful' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_deckard_protectors_of_cain.jpg',
         description: { fr: "Lorsqu'au moins un allié est proche de Deckard Cain, il obtient de l'armure et ses temps de recharge se rechargent plus vite.", en: 'When at least one allied Hero is nearby, Deckard gains Armor and his Basic Abilities recharge faster.' },
-        demoYoutubeId: 'assets/heroes/base_spells/deckard/videos/deckard_trait.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/deckard/videos/spells/deckard_trait.mp4'
       },
       {
         key: 'A',
         name: { fr: 'Potion de soin', en: 'Healing Potion' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_deckard_healing_potion.jpg',
         description: { fr: 'Lance une potion qui peut rester au sol et être consommée par les alliés pour se soigner.', en: 'Throws a potion that heals the first allied Hero to touch it.' },
-        demoYoutubeId: 'assets/heroes/base_spells/deckard/videos/deckard_a.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/deckard/videos/spells/deckard_a.mp4'
       },
       {
         key: 'Z',
         name: { fr: 'Cube horadrique', en: 'Horadric Cube' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_deckard_horadric_cube.jpg',
         description: { fr: 'Cube qui inflige des dégâts et ralentit en zone.', en: 'Throws a cube that deals damage and slows enemies in an area.' },
-        demoYoutubeId: 'assets/heroes/base_spells/deckard/videos/deckard_z.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/deckard/videos/spells/deckard_z.mp4'
       },
       {
         key: 'E',
         name: { fr: 'Parchemin de confinement', en: 'Scroll of Sealing' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_deckard_scroll_of_sealing.jpg',
         description: { fr: 'Triangle qui immobilise et inflige des dégâts.', en: 'Unfurls a scroll that roots and damages enemies inside.' },
-        demoYoutubeId: 'assets/heroes/base_spells/deckard/videos/deckard_e.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/deckard/videos/spells/deckard_e.mp4'
       },
       {
         key: 'R1',
         name: { fr: 'Restez un instant et écoutez', en: 'Stay Awhile and Listen' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_deckard_stay_awhile_and_listen.jpg',
         description: { fr: 'Canalise un cône devant lui qui endort les ennemis.', en: 'Channels a large cone that puts enemies to sleep.' },
-        demoYoutubeId: 'assets/heroes/base_spells/deckard/videos/deckard_r1.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/deckard/videos/spells/deckard_r1.mp4'
       },
       {
         key: 'R2',
         name: { fr: 'Vous avez lu mon livre ?', en: 'Lorenado' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_deckard_lorenado.jpg',
         description: { fr: 'Crée une tornade qui repousse les ennemis sur son passage.', en: 'Creates a swirling tornado that knocks away enemies.' },
-        demoYoutubeId: 'assets/heroes/base_spells/deckard/videos/deckard_r2.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/deckard/videos/spells/deckard_r2.mp4'
       }
     ],
     tips: [
@@ -2149,42 +2149,42 @@ const HEROES = [
         name: { fr: 'Innervation', en: 'Innervate' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_innerrvate.jpg',
         description: { fr: 'Rend du mana à un allié et réduit ses temps de recharge.', en: 'Restores Mana to an ally and reduces their cooldowns.' },
-        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/malfurion_trait.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/spells/malfurion_trait.mp4'
       },
       {
         key: 'A',
         name: { fr: 'Rétablissement', en: 'Regrowth' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_regrowth.jpg',
         description: { fr: 'Soin sur la durée.', en: 'Heal over time.' },
-        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/malfurion_a.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/spells/malfurion_a.mp4'
       },
       {
         key: 'Z',
         name: { fr: 'Éclat lunaire', en: 'Moonfire' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_moonfire.jpg',
         description: { fr: 'Dégâts de zone rapides qui soignent tous les alliés sous A et révèle les ennemis.', en: 'Quick AoE damage that heals all allies with Q active and reveals enemies.' },
-        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/malfurion_z.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/spells/malfurion_z.mp4'
       },
       {
         key: 'E',
         name: { fr: 'Sarments', en: 'Entangling Roots' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_entanglingroots.jpg',
         description: { fr: 'Immobilise les ennemis dans une zone et inflige des dégâts.', en: 'Roots enemies in an area and deals damage.' },
-        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/malfurion_e.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/spells/malfurion_e.mp4'
       },
       {
         key: 'R1',
         name: { fr: 'Tranquillité', en: 'Tranquility' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_tranquility.jpg',
         description: { fr: 'Rend continuellement des points de vie aux héros alliés et proches, et donne de l\'armure lorsque les alliés sont sous Rétablissement.', en: 'Continually restores health to nearby allied Heroes, and grants Armor to allies affected by Regrowth.' },
-        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/malfurion_r1.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/spells/malfurion_r1.mp4'
       },
       {
         key: 'R2',
         name: { fr: 'Rêve du crépuscule', en: 'Twilight Dream' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_twilightdream.jpg',
         description: { fr: 'Silence tous les ennemis autour et inflige de gros dégâts.', en: 'Silences all nearby enemies and deals heavy damage.' },
-        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/malfurion_r2.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/malfurion/videos/spells/malfurion_r2.mp4'
       }
     ],
     tips: [
@@ -2342,42 +2342,42 @@ const HEROES = [
         name: { fr: 'Éruption éruptive', en: 'Bio-Kill Switch' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_bio-killswitch.jpg',
         description: { fr: 'Fait exploser ses virus : soigne grandement les alliés ou ralentit/blesse les ennemis.', en: 'Detonates viruses: greatly heals allies or slows/damages enemies.' },
-        demoYoutubeId: 'assets/heroes/base_spells/stukov/videos/stukov_trait.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/stukov/videos/spells/stukov_trait.mp4'
       },
       {
         key: 'A',
         name: { fr: 'Virus régénérateur', en: 'Healing Pathogen' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_healingpathogen.jpg',
         description: { fr: "Un soin qui se propage d'allié en allié.", en: 'A heal that spreads from ally to ally.' },
-        demoYoutubeId: 'assets/heroes/base_spells/stukov/videos/stukov_a.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/stukov/videos/spells/stukov_a.mp4'
       },
       {
         key: 'Z',
         name: { fr: 'Agent infectieux', en: 'Weighted Pustule' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_weightedpustule.jpg',
         description: { fr: 'Lance un projectile qui infecte et ralentit les ennemis.', en: 'Throws a projectile that infects and slows enemies.' },
-        demoYoutubeId: 'assets/heroes/base_spells/stukov/videos/stukov_z.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/stukov/videos/spells/stukov_z.mp4'
       },
       {
         key: 'E',
         name: { fr: 'Menace larvée', en: 'Lurking Arm' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_lurkingarm.jpg',
         description: { fr: 'Canalise une zone qui réduit au silence et inflige des dégâts.', en: 'Channels a zone that silences and damages enemies.' },
-        demoYoutubeId: 'assets/heroes/base_spells/stukov/videos/stukov_e.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/stukov/videos/spells/stukov_e.mp4'
       },
       {
         key: 'R1',
         name: { fr: 'Poussée éruptive', en: 'Massive Shove' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_massiveshove.jpg',
         description: { fr: "Pousse un ennemi jusqu'à ce qu'il percute un obstacle.", en: 'Pushes an enemy until they hit terrain.' },
-        demoYoutubeId: 'assets/heroes/base_spells/stukov/videos/stukov_r1.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/stukov/videos/spells/stukov_r1.mp4'
       },
       {
         key: 'R2',
         name: { fr: 'Frappe chaotique', en: 'Flailing Swipe' },
         icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_flailingswipe.jpg',
         description: { fr: 'Balaye les ennemis en face de lui plusieurs fois.', en: 'Swipes enemies in front of him multiple times.' },
-        demoYoutubeId: 'assets/heroes/base_spells/stukov/videos/stukov_r2.mp4'
+        demoYoutubeId: 'assets/heroes/base_spells/stukov/videos/spells/stukov_r2.mp4'
       }
     ],
     tips: [
