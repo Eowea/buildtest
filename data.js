@@ -36,7 +36,7 @@ const HEROES = [
       {
         key: 'Trait',
         name: { fr: 'Sphères verdoyantes', en: 'Verdant Spheres' },
-        icon: 'https://static.icy-veins.com/images/heroes/skills/kaelthas_verdant_spheres.png',
+        icon: '/kaelthas/images/spells/storm_ui_icon_kaelthas_verdantspheres',
         description: { fr: 'Activez pour que votre prochain sort de base soit plus puissant.', en: 'Activate to empower your next basic spell.' },
         demoYoutubeId: ''
       },
