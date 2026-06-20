@@ -465,13 +465,18 @@
 
 /* --- L'IMAGE À L'INTÉRIEUR --- */
 .hero-link .portrait img {
-  /* On réduit l'image de 4px (2px de chaque côté) pour créer la bordure */
   width: calc(100% - 4px); 
   height: calc(100% - 4px);
   object-fit: cover;
   clip-path: var(--hex-clip);
-  background: var(--bg-deep); /* Fond noir pour éviter les fuites de pixels */
+  background: var(--bg-deep);
   display: block;
+
+  /* --- AJOUTS POUR CORRIGER L'ALIASING --- */
+  image-rendering: -webkit-optimize-contrast; /* Améliore la netteté sur certains navigateurs */
+  image-rendering: auto;                      /* Lissage standard de haute qualité */
+  transform: translateZ(0);                  /* Force l'accélération GPU (lisse les bords du clip-path) */
+  backface-visibility: hidden;                /* Évite les micro-tremblements et le crénelage */
 }
     
 /* --- ÉTAT ACTIF (Rehgar sélectionné) --- */
