@@ -1446,21 +1446,21 @@ const HEROES = [
           {
             level: 1,
             name: { fr: 'Lumière ardente', en: 'Searing Light' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_rayofheaven.jpg',
+            icon: 'assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_rayofheaven.png',
             description: { fr: 'Rayon des Cieux inflige des dégâts aux héros adverses présents dans la zone de soin.', en: 'Ray of Heaven deals damage to enemy Heroes in the healing area.' },
             demoYoutubeId: null
           },
           {
             level: 4,
             name: { fr: 'Sentence', en: 'Repeated Offense' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_restrainingblow_a.jpg',
+            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_restrainingblow_a.png',
             description: { fr: "Augmente le repoussement d'Entrave. Quête: étourdir des héros augmente les dégats.", en: "Increases Detainment Strike's knockback distance. Quest: Stunning Heroes increases its damage." },
             demoYoutubeId: null
           },
           {
             level: 7,
             name: { fr: 'Corde sacrée', en: 'Energized Cord' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_bestowhope_a.jpg',
+            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_bestowhope_a.png',
             description: { fr: "Augmente l'énergie conférée par les attaques de base d'Auriel aux héros et aux cibles non héroïques. Passif: augmente la portée des attaques de bases", en: "Increases the Energy gained from Auriel's Basic Attacks against Heroes and non-Heroic targets. Passive: increases Basic Attack range." },
             demoYoutubeId: null
           },
@@ -1474,21 +1474,21 @@ const HEROES = [
           {
             level: 13,
             name: { fr: 'Fouet perforant', en: 'Piercing Lash' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_restrainingblow.jpg',
+            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_restrainingblow.jpg',
             description: { fr: 'Entrave touche tous les héros adverses possibles, et son temps de recharge est réduit selon le nombre de héros touchés.', en: 'Detainment Strike pierces enemy Heroes, and its cooldown is reduced based on the number of Heroes hit.' },
             demoYoutubeId: null
           },
           {
             level: 16,
             name: { fr: 'Courroux des Cieux', en: 'Wrath of Heaven' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_bestowhope_a.jpg',
+            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_bestowhope_a.jpg',
             description: { fr: "Augmente la puissance de capacité de l'allié affecté par Don d'espoir. Réduit l'armure anti-sort des héros adverses touchés par le centre d'Arc vertueux et par l'étourdissement d'Entrave.", en: "Increases the Spell Power of the ally affected by Bestow Hope. Reduces Spell Armor on enemy Heroes hit by the center of Sacred Sweep and by Detainment Strike's Stun." },
             demoYoutubeId: null
           },
           {
             level: 20,
             name: { fr: "Résolution d'airain", en: 'Diamond Resolve' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_ribboncocoon.jpg',
+            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_ribboncocoon.jpg',
             description: { fr: 'Égide de Cristal confère de l\'armure à la sortie.', en: 'Crystal Aegis grants Armor when it ends.' },
             demoYoutubeId: null
           }
@@ -1507,27 +1507,27 @@ const HEROES = [
           {
             level: 1,
             name: { fr: 'Révélation céleste', en: 'Increasing Clarity' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_angelicsweep.jpg',
+            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_angelicsweep.jpg',
             description: { fr: 'Quête : Augmente les dégâts de la zone centrale. Récompense : Augmente à nouveau les dégâts de la zone centrale.', en: 'More Energy.' },
             demoYoutubeId: null
           },
           {
             level: 4,
             name: { fr: 'Amplitude majestueuse', en: 'Increasing Clarity' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_angelicsweep.jpg',
+            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_angelicsweep.jpg',
             description: { fr: 'Augmente le rayon de Arc vertueux.', en: 'More Energy.' },
             demoYoutubeId: null
           },
           {
             level: 7,
             name: { fr: "Lueur d'espoir", en: 'Energized Cord' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_rayofheaven.jpg',
+            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_rayofheaven.jpg',
             description: { fr: 'Récolter un globe réduit le coût en énergie du prochain Rayon des Cieux', en: "Increases the Energy gained from Auriel's Basic Attacks against Heroes and non-Heroic targets. Passive: increases Basic Attack range." },
             demoYoutubeId: null,
             alternatives: [
               {
                 name: { fr: 'Corde sacrée', en: 'Energized Cord' },
-                icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_bestowhope_a.jpg',
+                icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_bestowhope_a.jpg',
                 description: { fr: "Augmente l'énergie conférée par les attaques de base d'Auriel aux héros et aux cibles non héroïques. Passif: augmente la portée des attaques de bases", en: "Increases the Energy gained from Auriel's Basic Attacks against Heroes and non-Heroic targets. Passive: increases Basic Attack range." },
                 demoYoutubeId: null
               }
@@ -1536,28 +1536,28 @@ const HEROES = [
           {
             level: 10,
             name: { fr: 'Égide de Cristal', en: 'Crystal Aegis' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_ribboncocoon.jpg',
+            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_ribboncocoon.jpg',
             description: { fr: 'Place un allié en Stase puis inflige des dégâts autour.', en: 'Places an ally in Stasis, then deals damage around them.' },
             demoYoutubeId: null
           },
           {
             level: 13,
             name: { fr: 'Force convergente', en: 'Increasing Clarity' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_angelicsweep_b.jpg',
+            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_angelicsweep_b.jpg',
             description: { fr: 'Les ennemis sont repoussés au centre.', en: 'More Energy.' },
             demoYoutubeId: null
           },
           {
             level: 16,
             name: { fr: 'Courroux des Cieux', en: 'Wrath of Heaven' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_bestowhope_a.jpg',
+            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_bestowhope_a.jpg',
             description: { fr: "Augmente la puissance de capacité de l'allié affecté par Don d'espoir. Réduit l'armure anti-sort des héros adverses touchés par le centre d'Arc vertueux et par l'étourdissement d'Entrave.", en: "Increases the Spell Power of the ally affected by Bestow Hope. Reduces Spell Armor on enemy Heroes hit by the center of Sacred Sweep and by Detainment Strike's Stun." },
             demoYoutubeId: null
           },
           {
             level: 20,
             name: { fr: "Résolution d'airain", en: 'Diamond Resolve' },
-            icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_ribboncocoon.jpg',
+            icon: 'assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_ribboncocoon.jpg',
             description: { fr: "Égide de Cristal confère de l'armure à la sortie.", en: 'Crystal Aegis grants Armor when it ends.' },
             demoYoutubeId: null
           }
