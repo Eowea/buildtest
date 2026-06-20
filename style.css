@@ -1329,9 +1329,8 @@
 /* --- TEST VUE GRILLE (Avec nom au-dessus du portrait) --- */
 .hero-list {
   display: grid !important;
-  /* On élargit un peu les colonnes pour laisser de la place aux noms */
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)) !important; 
-  gap: 16px 8px !important; /* Plus d'espace vertical entre les rangées */
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)) !important; /* Augmenté de 80 à 90 */
+  gap: 20px 10px !important; /* Augmenté l'espace vertical à 20px */
   justify-items: center;
 }
 
