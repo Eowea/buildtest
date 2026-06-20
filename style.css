@@ -1269,12 +1269,12 @@
   flex-shrink: 0;
   
   /* 1. On utilise une couleur de bordure plus discrète (semi-transparente) */
-  background: rgba(248, 183, 0, 0.4) !important; 
+  background: var(--gold-bright) !important; 
   
   clip-path: var(--hex-clip);
   
-  /* 2. Bordure très fine (1px) */
-  padding: 3px !important; 
+  /* 2. Bordure */
+  padding: 2px !important; 
   
   display: flex;
   align-items: center;
