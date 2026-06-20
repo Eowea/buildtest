@@ -1387,42 +1387,42 @@ const HEROES = [
       {
         key: 'Trait',
         name: { fr: "Don d'espoir", en: 'Bestow Hope' },
-        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_bestowhope.jpg',
+        icon: 'assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_bestowhope.png',
         description: { fr: "Place une couronne sur un allié pour récupérer de l'énergie selon ses dégâts.", en: 'Places a crown on an ally to gain Energy based on the damage they deal.' },
         demoYoutubeId: 'assets/heroes/base_spells/auriel/videos/auriel_trait.mp4'
       },
       {
         key: 'A',
         name: { fr: 'Arc vertueux', en: 'Sacred Sweep' },
-        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_angelicsweep.jpg',
+        icon: 'assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_angelicsweep.png',
         description: { fr: 'Inflige des dégâts en arc de cercle. Dégâts augmentés au centre.', en: 'Deals damage in an arc. Damage is increased in the center.' },
         demoYoutubeId: 'assets/heroes/base_spells/auriel/videos/auriel_a.mp4'
       },
       {
         key: 'Z',
         name: { fr: 'Rayon des Cieux', en: 'Ray of Heaven' },
-        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_rayofheaven.jpg',
+        icon: 'assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_rayofheaven.png',
         description: { fr: "Consomme l'énergie pour soigner en zone.", en: 'Consumes Energy to heal in an area.' },
         demoYoutubeId: 'assets/heroes/base_spells/auriel/videos/auriel_z.mp4'
       },
       {
         key: 'E',
         name: { fr: 'Entrave', en: 'Detainment Strike' },
-        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_restrainingblow.jpg',
+        icon: 'assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_restrainingblow.png',
         description: { fr: 'Repousse un ennemi (étourdit si contre un mur).', en: 'Knocks an enemy back. If they collide with terrain, they are Stunned.' },
         demoYoutubeId: 'assets/heroes/base_spells/auriel/videos/auriel_e.mp4'
       },
       {
         key: 'R1',
         name: { fr: 'Égide de cristal', en: 'Crystal Aegis' },
-        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_ribboncocoon.jpg',
+        icon: 'assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_ribboncocoon.png',
         description: { fr: 'Place un allié en Stase puis inflige des dégâts autour.', en: 'Places an ally in Stasis, then deals damage around them.' },
         demoYoutubeId: 'assets/heroes/base_spells/auriel/videos/auriel_r1.mp4'
       },
       {
         key: 'R2',
         name: { fr: 'Réssurection', en: 'Resurrect' },
-        icon: 'https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_auriel_resurrect.jpg',
+        icon: 'assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_resurrect.png',
         description: { fr: 'Ramène un allié mort à la vie. Peut être utiliser sur soi.', en: 'Brings a dead ally back to life. Can be used on yourself.' },
         demoYoutubeId: 'assets/heroes/base_spells/auriel/videos/auriel_r2.mp4'
       }
