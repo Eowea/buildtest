@@ -43,35 +43,35 @@ const HEROES = [
       {
         key: 'A',
         name: { fr: 'Choc de flammes', en: 'Flamestrike' },
-        icon: 'https://static.icy-veins.com/images/heroes/skills/kaelthas_flamestrike.png',
+        icon: 'assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_flamestrike.png',
         description: { fr: 'Explosion de zone après un court délai.', en: 'AoE explosion after a short delay.' },
         demoYoutubeId: ''
       },
       {
         key: 'Z',
         name: { fr: 'Bombe vivante', en: 'Living Bomb' },
-        icon: 'https://static.icy-veins.com/images/heroes/skills/kaelthas_living_bomb.png',
+        icon: 'assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_livingbomb.png',
         description: { fr: 'Dégâts sur la durée qui explosent et se propagent aux ennemis proches.', en: 'DoT that explodes and spreads to nearby enemies.' },
         demoYoutubeId: ''
       },
       {
         key: 'E',
         name: { fr: 'Distorsion gravitationnelle', en: 'Gravity Lapse' },
-        icon: 'https://static.icy-veins.com/images/heroes/skills/kaelthas_gravity_lapse.png',
+        icon: 'assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_gravitylapse.png',
         description: { fr: 'Étourdit le premier ennemi touché (jusqu\'à 3 avec le Trait).', en: 'Stuns the first enemy hit (up to 3 with Trait).' },
         demoYoutubeId: ''
       },
       {
         key: 'R1',
         name: { fr: 'Phénix', en: 'Phoenix' },
-        icon: 'https://static.icy-veins.com/images/heroes/skills/kaelthas_phoenix.png',
+        icon: 'assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_phoenix.png',
         description: { fr: 'Invoque un phénix qui inflige des dégâts de zone constants.', en: 'Summons a phoenix that deals constant AoE damage.' },
         demoYoutubeId: ''
       },
       {
         key: 'R2',
         name: { fr: 'Explosion pyrotechnique', en: 'Pyroblast' },
-        icon: 'https://static.icy-veins.com/images/heroes/skills/kaelthas_pyroblast.png',
+        icon: 'assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_pyroblast.png',
         description: { fr: 'Lance une énorme boule de feu lente mais dévastatrice.', en: 'Casts a massive, slow, but devastating fireball.' },
         demoYoutubeId: ''
       }
