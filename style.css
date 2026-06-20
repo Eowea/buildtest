@@ -448,26 +448,52 @@
       box-shadow: inset 0 0 15px rgba(248, 183, 0, 0.05);
     }
 
-    .hero-link .portrait {
-      width: 48px;
-      height: 48px;
-      flex-shrink: 0;
-      background: var(--blue-border);
-      clip-path: var(--hex-clip);
-      padding: 2px;
-      display: grid;
-      place-items: center;
-      transition: all var(--t);
-    }
+   /* --- LE PORTRAIT (Le conteneur qui sert de bordure) --- */
+.hero-link .portrait {
+  width: 64px !important;  /* Taille légèrement augmentée pour la lisibilité */
+  height: 64px !important;
+  flex-shrink: 0;
+  background: var(--blue-border); /* Couleur bordure par défaut (bleu) */
+  clip-path: var(--hex-clip);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--t);
+  padding: 0 !important; /* On enlève le padding qui casse l'angle */
+  position: relative;
+}
+
+/* --- L'IMAGE À L'INTÉRIEUR --- */
+.hero-link .portrait img {
+  /* On réduit l'image de 4px (2px de chaque côté) pour créer la bordure */
+  width: calc(100% - 4px); 
+  height: calc(100% - 4px);
+  object-fit: cover;
+  clip-path: var(--hex-clip);
+  background: var(--bg-deep); /* Fond noir pour éviter les fuites de pixels */
+  display: block;
+}
     
-    .hero-link .portrait img { 
-      width: 100%; 
-      height: 100%; 
-      object-fit: cover; 
-      clip-path: var(--hex-clip);
-    }
-    
-    .hero-link.active .portrait { background: var(--gold-bright); filter: drop-shadow(0 0 6px var(--gold-glow)); }
+/* --- ÉTAT ACTIF (Rehgar sélectionné) --- */
+.hero-link.active .portrait {
+  background: var(--gold-bright) !important; /* Bordure dorée */
+  filter: drop-shadow(0 0 8px var(--gold-glow));
+  transform: scale(1.05);
+}
+
+/* --- AJUSTEMENT VUE GRILLE (Pour ton test) --- */
+.hero-list .hero-link {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.hero-list .hero-name {
+  margin-top: 4px;
+  font-size: 12px !important;
+  color: var(--text-bright);
+}
 
     .portrait.fallback::after, .detail-portrait.fallback::after, .talent-icon.fallback::after, .spell-icon.fallback::after {
       content: attr(data-fallback);
