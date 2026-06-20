@@ -36,7 +36,7 @@ const HEROES = [
       {
         key: 'Trait',
         name: { fr: 'Sphères verdoyantes', en: 'Verdant Spheres' },
-        icon: 'kaelthas/images/spells/storm_ui_icon_kaelthas_verdantspheres.png',
+        icon: 'asset/kaelthas/images/spells/storm_ui_icon_kaelthas_verdantspheres.png',
         description: { fr: 'Activez pour que votre prochain sort de base soit plus puissant.', en: 'Activate to empower your next basic spell.' },
         demoYoutubeId: ''
       },
