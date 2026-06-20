@@ -534,24 +534,32 @@
       margin-bottom: 20px;
     }
 
-    .detail-portrait {
-      width: 120px; 
-      height: 120px; 
-      background: linear-gradient(135deg, var(--gold-bright), var(--gold-dim));
-      clip-path: var(--hex-clip);
-      padding: 3px;
-      display: grid;
-      place-items: center;
-      filter: drop-shadow(0 0 15px var(--gold-glow));
-    }
-    
-    .detail-portrait img { 
-      width: 100%; 
-      height: 100%; 
-      object-fit: cover; 
-      clip-path: var(--hex-clip);
-    }
+/* --- GRAND PORTRAIT (L'encadré doré) --- */
+.detail-portrait {
+  width: 120px; 
+  height: 120px; 
+  /* Dégradé métallique HotS */
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold-dim));
+  clip-path: var(--hex-clip);
+  
+  /* On remplace le padding par un alignement flex */
+  padding: 0 !important; 
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  
+  filter: drop-shadow(0 0 15px var(--gold-glow));
+}
 
+/* --- L'IMAGE DÉTAIL --- */
+.detail-portrait img { 
+  /* Pour une bordure de 3px de chaque côté : 100% - 6px */
+  width: calc(100% - 6px); 
+  height: calc(100% - 6px); 
+  object-fit: cover; 
+  clip-path: var(--hex-clip);
+  background: var(--bg-deep); /* Fond pour éviter les fuites de pixels */
+}
     .detail-title {
       font-family: 'Rajdhani', serif;
       font-size: clamp(28px, 5vw, 48px);
