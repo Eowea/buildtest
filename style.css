@@ -448,51 +448,62 @@
       box-shadow: inset 0 0 15px rgba(248, 183, 0, 0.05);
     }
 
-   /* --- LE PORTRAIT (Le conteneur qui sert de bordure) --- */
-.hero-link .portrait {
-  width: 64px !important;  /* Taille légèrement augmentée pour la lisibilité */
-  height: 64px !important;
-  flex-shrink: 0;
-  background: var(--blue-border); /* Couleur bordure par défaut (bleu) */
-  clip-path: var(--hex-clip);
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
+/* --- CONFIGURATION COMMUNE --- */
+.hero-link .portrait, .detail-portrait {
+  position: relative; /* Pour positionner le cadre par dessus */
+  background: none !important;
+  padding: 0 !important;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+}
+
+/* --- LE CADRE MÉTALLIQUE (IMAGE) --- */
+.hero-link .portrait::after, .detail-portrait::after {
+  content: '';
+  position: absolute;
+  /* On fait déborder le cadre légèrement pour bien couvrir les bords de l'image */
+  inset: -10%; 
+  background-image: url('assets/heroes/portraits/storm_ui_glues_draft_portrait_normal.png'); /* <--- METS LE LIEN ICI */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+  pointer-events: none; /* Pour que le clic passe à travers le cadre */
   transition: all var(--t);
-  padding: 0 !important; /* On enlève le padding qui casse l'angle */
-  position: relative;
 }
 
-/* --- L'IMAGE À L'INTÉRIEUR --- */
+/* --- TAILLES SPÉCIFIQUES --- */
+
+/* Petit portrait (Liste) */
+.hero-link .portrait {
+  width: 58px;
+  height: 58px;
+}
 .hero-link .portrait img {
-  /* On réduit l'image de 4px (2px de chaque côté) pour créer la bordure */
-  width: calc(100% - 4px); 
-  height: calc(100% - 4px);
-  object-fit: cover;
-  clip-path: var(--hex-clip);
-  background: var(--bg-deep); /* Fond noir pour éviter les fuites de pixels */
-  display: block;
-}
-    
-/* --- ÉTAT ACTIF (Rehgar sélectionné) --- */
-.hero-link.active .portrait {
-  background: var(--gold-bright) !important; /* Bordure dorée */
-  filter: drop-shadow(0 0 8px var(--gold-glow));
-  transform: scale(1.05);
+  width: 82%; /* On réduit un peu l'image pour qu'elle rentre dans le cadre */
+  height: 82%;
 }
 
-/* --- AJUSTEMENT VUE GRILLE (Pour ton test) --- */
-.hero-list .hero-link {
-  display: flex !important;
-  flex-direction: column-reverse !important;
-  align-items: center !important;
-  gap: 8px !important;
+/* Gros portrait (Header) */
+.detail-portrait {
+  width: 130px;
+  height: 130px;
+  filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.2));
+}
+.detail-portrait img {
+  width: 85%;
+  height: 85%;
 }
 
-.hero-list .hero-name {
-  margin-top: 4px;
-  font-size: 12px !important;
-  color: var(--text-bright);
+/* --- EFFET "SÉLECTIONNÉ" (Transformation Argent -> Or) --- */
+/* Si tu n'as pas d'image de cadre dorée, on utilise des filtres CSS */
+.hero-link.active .portrait::after {
+  filter: sepia(1) saturate(10) hue-rotate(-50deg) brightness(1.2) drop-shadow(0 0 5px var(--gold-glow));
+}
+
+.hero-link.active .portrait img {
+  filter: brightness(1.1);
 }
 
     .portrait.fallback::after, .detail-portrait.fallback::after, .talent-icon.fallback::after, .spell-icon.fallback::after {
