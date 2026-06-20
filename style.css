@@ -464,6 +464,27 @@
 }
 
 /* --- L'IMAGE À L'INTÉRIEUR --- */
+/* --- LE PORTRAIT (Le conteneur) --- */
+.hero-link .portrait {
+  width: 64px !important;
+  height: 64px !important;
+  flex-shrink: 0;
+  background: var(--blue-border);
+  clip-path: var(--hex-clip);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--t);
+  position: relative;
+
+  /* FIX ALIASING & BLUR : Force le rendu haute qualité en permanence */
+  transform: translateZ(0); 
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* --- L'IMAGE (L'intérieur) --- */
 .hero-link .portrait img {
   width: calc(100% - 4px); 
   height: calc(100% - 4px);
@@ -472,11 +493,21 @@
   background: var(--bg-deep);
   display: block;
 
-  /* --- AJOUTS POUR CORRIGER L'ALIASING --- */
-  image-rendering: -webkit-optimize-contrast; /* Améliore la netteté sur certains navigateurs */
-  image-rendering: auto;                      /* Lissage standard de haute qualité */
-  transform: translateZ(0);                  /* Force l'accélération GPU (lisse les bords du clip-path) */
-  backface-visibility: hidden;                /* Évite les micro-tremblements et le crénelage */
+  /* FIX ALIASING : Empêche l'effet escalier */
+  image-rendering: -webkit-optimize-contrast; /* Pour la netteté */
+  image-rendering: auto;
+  
+  /* FIX BLUR : Pour que l'image reste nette lors des scale(1.05) */
+  transform: scale(1.001); /* Un micro-zoom force le moteur de rendu à rester en mode "précis" */
+}
+
+/* --- ÉTAT ACTIF (Rehgar sélectionné) --- */
+.hero-link.active .portrait {
+  background: var(--gold-bright) !important;
+  filter: drop-shadow(0 0 8px var(--gold-glow));
+  
+  /* Utilisation d'un scale entier ou très proche pour éviter le flou */
+  transform: scale(1.05) translateZ(0); 
 }
     
 /* --- ÉTAT ACTIF (Rehgar sélectionné) --- */
