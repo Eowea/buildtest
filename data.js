@@ -397,7 +397,7 @@ const HEROES = [
     enabled: true,
     name: { fr: 'Rehgar', en: 'Rehgar' },
     role: 'Healer',
-    portrait: 'https://static.icy-veins.com/images/heroes/hero-portraits/rehgar.jpg',
+    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_rehgar.png',
     headline: {
       fr: 'Waveclear, soins multi comme monocible, aggressif',
       en: 'Waveclear, multi and single-target healing, aggressive'
