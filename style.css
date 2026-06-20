@@ -1274,7 +1274,7 @@
   clip-path: var(--hex-clip);
   
   /* 2. Bordure très fine (1px) */
-  padding: 1px !important; 
+  padding: 3px !important; 
   
   display: flex;
   align-items: center;
