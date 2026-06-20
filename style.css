@@ -448,92 +448,53 @@
       box-shadow: inset 0 0 15px rgba(248, 183, 0, 0.05);
     }
 
-/* ==========================================================================
-   SYSTÈME DE PORTRAITS NEXUS (Cadre + Image + Anti-Aliasing)
-   ========================================================================== */
-
-/* 1. Base du conteneur */
-.hero-link .portrait, 
-.detail-portrait {
-  position: relative;
+   /* --- LE PORTRAIT (Le conteneur qui sert de bordure) --- */
+.hero-link .portrait {
+  width: 64px !important;  /* Taille légèrement augmentée pour la lisibilité */
+  height: 64px !important;
+  flex-shrink: 0;
+  background: var(--blue-border); /* Couleur bordure par défaut (bleu) */
+  clip-path: var(--hex-clip);
   display: flex !important;
   align-items: center;
   justify-content: center;
-  background: none !important;
-  border: none !important;
-  padding: 0 !important;
-  overflow: visible; /* Autorise le cadre à dépasser de l'image */
-  flex-shrink: 0;
+  transition: all var(--t);
+  padding: 0 !important; /* On enlève le padding qui casse l'angle */
+  position: relative;
 }
 
-/* 2. Tailles calibrées */
-.hero-list .portrait {
-  width: 62px;
-  height: 62px;
-}
-
-.detail-portrait {
-  width: 124px;
-  height: 124px;
-  margin-bottom: 10px;
-}
-
-/* 3. L'image du héros (Lissée et Clippée) */
-.hero-link .portrait img, 
-.detail-portrait img {
-  width: 88%;  /* On réduit légèrement l'image pour qu'elle s'insère SOUS le métal */
-  height: 88%;
+/* --- L'IMAGE À L'INTÉRIEUR --- */
+.hero-link .portrait img {
+  /* On réduit l'image de 4px (2px de chaque côté) pour créer la bordure */
+  width: calc(100% - 4px); 
+  height: calc(100% - 4px);
   object-fit: cover;
   clip-path: var(--hex-clip);
-  z-index: 1;
-  
-  /* --- CORRECTIF ANTI-PIXELISATION --- */
-  image-rendering: -webkit-optimize-contrast; 
-  image-rendering: smooth;
-  transform: translateZ(0) rotate(0.02deg); /* Force le GPU à lisser les bords */
-  -webkit-backface-visibility: hidden;
-  filter: brightness(1.05); /* Petit boost de contraste HotS */
+  background: var(--bg-deep); /* Fond noir pour éviter les fuites de pixels */
+  display: block;
+}
+    
+/* --- ÉTAT ACTIF (Rehgar sélectionné) --- */
+.hero-link.active .portrait {
+  background: var(--gold-bright) !important; /* Bordure dorée */
+  filter: drop-shadow(0 0 8px var(--gold-glow));
+  transform: scale(1.05);
 }
 
-/* 4. Le cadre métallique (Silver Frame Overlay) */
-.hero-link .portrait::after, 
-.detail-portrait::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centrage absolu */
-  width: 105%; /* Le cadre "embrasse" l'extérieur */
-  height: 105%;
-  
-  /* Utilisation de ton image de cadre */
-  background-image: url('https://i.ibb.co/68X968B/cadre-argent.png'); 
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 2;
-  pointer-events: none;
-  
-  /* --- LISSAGE DU CADRE --- */
-  image-rendering: high-quality;
-  will-change: transform;
+/* --- AJUSTEMENT VUE GRILLE (Pour ton test) --- */
+.hero-list .hero-link {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  align-items: center !important;
+  gap: 8px !important;
 }
 
-/* 5. État Actif / Sélectionné (Transformation Argent -> Or) */
-.hero-link.active .portrait::after {
-  /* Filtre mathématique pour colorer l'argent en or brillant */
-  filter: sepia(1) saturate(12) hue-rotate(-50deg) brightness(1.1) drop-shadow(0 0 10px var(--gold-glow));
-  transform: translate(-50%, -50%) scale(1.05);
+.hero-list .hero-name {
+  margin-top: 4px;
+  font-size: 12px !important;
+  color: var(--text-bright);
 }
 
-.hero-link.active .portrait img {
-  filter: brightness(1.2) contrast(1.1);
-}
-
-/* 6. Survol (Animation légère) */
-.hero-link:hover .portrait::after {
-  filter: brightness(1.3) drop-shadow(0 0 8px var(--blue-glow));
-}
     .portrait.fallback::after, .detail-portrait.fallback::after, .talent-icon.fallback::after, .spell-icon.fallback::after {
       content: attr(data-fallback);
       width: 100%; height: 100%;
