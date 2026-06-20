@@ -19,7 +19,7 @@ const HEROES = [
   /*DPS range*/
   {
     id: 'kaelthas',
-    enabled: false,
+    enabled: true,
     name: { fr: 'Anduin', en: 'Anduin' },
     role: 'AssassinDistance',
     portrait: 'https://static.icy-veins.com/images/heroes/hero-portraits/anduin.jpg',
