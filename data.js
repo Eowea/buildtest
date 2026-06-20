@@ -210,7 +210,7 @@ const HEROES = [
     enabled: false,
     name: { fr: 'Anduin', en: 'Anduin' },
     role: 'Healer',
-    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_anduin.png',
+    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_anduin.jpg',
     headline: {
       fr: 'Soins fiables, sauvetage cible et backline stable.',
       en: 'Reliable healing, targeted rescue, and stable backline.'
@@ -804,7 +804,7 @@ const HEROES = [
     enabled: true,
     name: { fr: 'Deckard Cain', en: 'Deckard Cain' },
     role: 'Healer',
-    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_deckard.jpg',
+    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_deckard.png',
     headline: {
       fr: 'Contrôles de zone et soins de préparation.',
       en: 'Heavy crowd control, AoE healing and setup potions.'
@@ -997,7 +997,7 @@ const HEROES = [
     enabled: false,
     name: { fr: 'Alexstrasza', en: 'Alexstrasza' },
     role: 'Healer',
-    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_alexstrasza.jpg',
+    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_alexstrasza.png',
     headline: {
       fr: 'Soins en zone massifs et forme de dragon.',
       en: 'Massive AoE healing and dragon form.'
@@ -1183,7 +1183,7 @@ const HEROES = [
     enabled: false,
     name: { fr: 'Ana', en: 'Ana' },
     role: 'Healer',
-    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_ana.jpg',
+    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_ana.png',
     headline: {
       fr: 'Sniper de soins avec un anti-soin puissant.',
       en: 'Healing sniper with powerful anti-heal.'
@@ -1369,7 +1369,7 @@ const HEROES = [
     enabled: true,
     name: { fr: 'Auriel', en: 'Auriel' },
     role: 'Healer',
-    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_auriel.jpg',
+    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_auriel.png',
     headline: {
       fr: "Soigne grâce à de l'énergie procurés par ses alliés.",
       en: 'Healing fueled by Energy provided by her allies.'
@@ -1570,7 +1570,7 @@ const HEROES = [
     enabled: false,
     name: { fr: 'Kharazim', en: 'Kharazim' },
     role: 'Healer',
-    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_kharazim.jpg',
+    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_kharazim.png',
     headline: {
       fr: 'Soigneur de mêlée ultra mobile.',
       en: 'Ultra mobile melee healer.'
@@ -1756,7 +1756,7 @@ const HEROES = [
     enabled: false,
     name: { fr: 'Li Li', en: 'Li Li' },
     role: 'Healer',
-    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_lili.jpg',
+    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_lili.png',
     headline: {
       fr: 'Soigneuse esquiveuse, aveugle les attaquants.',
       en: 'Slippery healer, blinds attackers.'
@@ -1942,7 +1942,7 @@ const HEROES = [
     enabled: false,
     name: { fr: 'Lt. Morales', en: 'Lt. Morales' },
     role: 'Healer',
-    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_ltmorales.jpg',
+    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_ltmorales.png',
     headline: {
       fr: "Soins monocibles ininterrompus et gestion d'énergie.",
       en: 'Uninterrupted single-target heals and energy management.'
@@ -2129,7 +2129,7 @@ const HEROES = [
     name: { fr: 'Malfurion', en: 'Malfurion' },
     isNew: true,
     role: 'Healer',
-    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_malfurion.jpg',
+    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_malfurion.png',
     headline: {
       fr: 'Soins sur la durée avec beaucoup de sorts utilitaires.',
       en: 'Heals over time with plenty of utility spells.'
@@ -2322,7 +2322,7 @@ const HEROES = [
     enabled: true,
     name: { fr: 'Stukov', en: 'Stukov' },
     role: 'Healer',
-    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_stukov.jpg',
+    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_stukov.png',
     headline: {
       fr: 'Contrôle de zone énorme et soins propagatifs.',
       en: 'Massive zone control and spreading heals.'
@@ -2487,7 +2487,7 @@ const HEROES = [
     enabled: true,
     name: { fr: 'Tyrande', en: 'Tyrande' },
     role: 'Healer',
-    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_tyrande.jpg',
+    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_tyrande.png',
     headline: {
       fr: "Soigneur utilitaire, avec étourdissements et réduction d'armure.",
       en: 'Utility Healer with stuns and Armor reduction.'
@@ -2637,7 +2637,7 @@ const HEROES = [
     enabled: false,
     name: { fr: 'Uther', en: 'Uther' },
     role: 'Healer',
-    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_uther.jpg',
+    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_uther.png',
     headline: {
       fr: 'Soigneur tanky, armure et contrôle.',
       en: 'Tanky healer, armor and crowd control.'
@@ -2823,7 +2823,7 @@ const HEROES = [
     enabled: true,
     name: { fr: 'Blanchetête', en: 'Whitemane' },
     role: 'Healer',
-    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_whitemane.jpg',
+    portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_whitemane.png',
     headline: {
       fr: 'Soigne en infligeant des dégâts, gestion du Zèle.',
       en: 'Heals by dealing damage, Zeal management.'
