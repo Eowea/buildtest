@@ -108,36 +108,36 @@ const HEROES = [
           {
             level: 7,
             name: { fr: 'Chair brûlée', en: 'Burned Flesh' },
-            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_burned_flesh.png',
+            icon: 'assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_flamestrike.png',
             description: { fr: 'Choc de flammes inflige des dégâts bonus si plusieurs héros sont touchés.', en: 'Flamestrike deals bonus damage if 2 or more heroes are hit.' },
             demoYoutubeId: null
           },
           {
             level: 10,
             name: { fr: 'Phénix', en: 'Phoenix' },
-            icon: 'https://static.icy-veins.com/images/heroes/skills/kaelthas_phoenix.png',
+            icon: 'assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_phoenix.png',
             description: { fr: 'Idéal pour le contrôle de zone et les objectifs.', en: 'Ideal for zone control and objectives.' },
             demoYoutubeId: null
           },
           {
             level: 13,
-            name: { fr: 'Fureur du Puits de soleil', en: 'Fury of the Sunwell' },
-            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_fury_of_the_sunwell.png',
+            name: { fr: 'Pyromane', en: 'Pyromaniac' },
+            icon: 'assets/heroes/base_spells/kaelthas/images/spells/livingbomb.png',
             description: { fr: 'Choc de flammes explose une seconde fois après un court délai.', en: 'Flamestrike explodes a second time after a short delay.' },
             demoYoutubeId: null
           },
           {
             level: 16,
-            name: { fr: 'Inflammation', en: 'Ignite' },
-            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_ignite.png',
-            description: { fr: 'Choc de flammes applique aussi Bombe vivante aux héros touchés.', en: 'Flamestrike also applies Living Bomb to heroes hit.' },
+            name: { fr: 'Enflammer', en: 'Ignite' },
+            icon: 'assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_livingbomb.png',
+            description: { fr: 'Choc de flammes applique aussi Bombe vivante au héros le plus au centre.', en: 'Flamestrike also applies Living Bomb to heroes hit.' },
             demoYoutubeId: null
           },
           {
             level: 20,
-            name: { fr: 'Renaissance', en: 'Rebirth' },
-            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_rebirth.png',
-            description: { fr: 'Augmente la durée du Phénix et permet de le repositionner.', en: 'Increases Phoenix duration and allows repositioning.' },
+            name: { fr: 'Lance-flamme', en: 'Flamethrower' },
+            icon: 'assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_flamestrike.png',
+            description: { fr: 'Augmente la  portée de Choc de flammes, si plusieurs héros sont touchés, le temps de recharge de Choc de flammes est réduit.', en: 'Increases Phoenix duration and allows repositioning.' },
             demoYoutubeId: null
           }
         ]
