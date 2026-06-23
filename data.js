@@ -122,7 +122,7 @@ const HEROES = [
           {
             level: 13,
             name: { fr: 'Pyromane', en: 'Pyromaniac' },
-            icon: 'assets/heroes/base_spells/kaelthas/images/spells/livingbomb.png',
+            icon: 'assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_livingbomb.png',
             description: { fr: 'Chaque fois que Bombe vivante inflige des dégâts, réduit le temps de recharge des capacités de base.', en: 'Flamestrike explodes a second time after a short delay.' },
             demoYoutubeId: null
           },
