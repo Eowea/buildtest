@@ -77,7 +77,7 @@ const HEROES = [
       }
     ],
     tips: [
-      { fr: 'Utilise ton Trait (D) avant Choc de flammes (A) pour augmenter radicalement la zone d\'effet.', en: 'Use your Trait (D) before Flamestrike (A) to drastically increase the area of effect.' },
+      { fr: 'Utilise ton Trait (D) avant  Bombe vivante (Z) pour augmenter consommer un minimum de mana.', en: 'Use your Trait (D) before Living bomb (W) to drastically increase the area of effect.' },
       { fr: 'Ne lance pas Bombe vivante (Z) sur une cible déjà affectée, attends qu\'elle explose pour la propager.', en: 'Don\'t cast Living Bomb (Z) on a target already affected; wait for it to explode to spread it.' },
       { fr: 'La Distorsion (E) boostée par le Trait est vitale pour stopper un plongeon (dive) de plusieurs ennemis.', en: 'Trait-empowered Gravity Lapse (E) is vital for stopping a multi-enemy dive.' }
     ],
@@ -123,7 +123,7 @@ const HEROES = [
             level: 13,
             name: { fr: 'Pyromane', en: 'Pyromaniac' },
             icon: 'assets/heroes/base_spells/kaelthas/images/spells/livingbomb.png',
-            description: { fr: 'Choc de flammes explose une seconde fois après un court délai.', en: 'Flamestrike explodes a second time after a short delay.' },
+            description: { fr: 'Chaque fois que Bombe vivante inflige des dégâts, réduit le temps de recharge des capacités de base.', en: 'Flamestrike explodes a second time after a short delay.' },
             demoYoutubeId: null
           },
           {
