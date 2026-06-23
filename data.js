@@ -56,7 +56,7 @@ const HEROES = [
       },
       {
         key: 'E',
-        name: { fr: 'Distorsion gravitationnelle', en: 'Gravity Lapse' },
+        name: { fr: 'Rupture de gravité', en: 'Gravity Lapse' },
         icon: 'assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_gravitylapse.png',
         description: { fr: 'Étourdit le premier ennemi touché (jusqu\'à 3 avec le Trait).', en: 'Stuns the first enemy hit (up to 3 with Trait).' },
         demoYoutubeId: ''
@@ -85,31 +85,31 @@ const HEROES = [
       {
         enabled: true,
         order: 1,
-        label: { fr: 'Build Flamestrike (Poke)', en: 'Flamestrike Build (Poke)' },
-        summary: { fr: 'Maximise les dégâts à distance et la zone de Choc de flammes.', en: 'Maximizes long-range damage and Flamestrike area.' },
-        buildCodeTitle: { fr: "A COLLER", en: "PASTE" },
-        buildCode: "[T1311211,Kaelthas]",
+        label: { fr: 'Build recommandé', en: 'Flamestrike Build (Poke)' },
+        summary: { fr: 'Le meilleur build, tout simplement.', en: 'Maximizes long-range damage and Flamestrike area.' },
+        buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE INTO TALENT TREE" },
+        buildCode: "[T3111124,Kaelthas]",
         videos: [],
         talents: [
           {
             level: 1,
-            name: { fr: 'Convection', en: 'Convection' },
-            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_convection.png',
-            description: { fr: 'Quête : Toucher des héros avec Choc de flammes augmente ses dégâts.', en: 'Quest: Hitting heroes with Flamestrike increases its damage.' },
+            name: { fr: 'Accro au mana', en: 'Mana Addict' },
+            icon: 'assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_manaaddict.png',
+            description: { fr: 'Quête : les globes de régénération augmente le maximum de mana. Récompense : Peut activer un bouclier équivalent au montant de mana.', en: 'Quest: Hitting heroes with Flamestrike increases its damage.' },
             demoYoutubeId: null
           },
           {
             level: 4,
-            name: { fr: 'Accro à la mana', en: 'Mana Addict' },
-            icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_mana_addict.png',
-            description: { fr: 'Récolter des globes augmente la mana et offre un bouclier actif.', en: 'Collecting globes increases mana and grants an active shield.' },
+            name: { fr: 'Vent du Néant', en: 'Mana Addict' },
+            icon: 'assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_gravitylapse.png',
+            description: { fr: 'Augmente la portée de Rupture de gravité et rend du mana.', en: 'Collecting globes increases mana and grants an active shield.' },
             demoYoutubeId: null
           },
           {
             level: 7,
             name: { fr: 'Chair brûlée', en: 'Burned Flesh' },
             icon: 'https://static.icy-veins.com/images/heroes/talents/kaelthas_burned_flesh.png',
-            description: { fr: 'Choc de flammes inflige des dégâts bonus si 2 héros ou plus sont touchés.', en: 'Flamestrike deals bonus damage if 2 or more heroes are hit.' },
+            description: { fr: 'Choc de flammes inflige des dégâts bonus si plusieurs héros sont touchés.', en: 'Flamestrike deals bonus damage if 2 or more heroes are hit.' },
             demoYoutubeId: null
           },
           {
