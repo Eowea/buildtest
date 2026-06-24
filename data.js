@@ -17,7 +17,7 @@
 
 const HEROES = [
   /*DPS range*/
-  {
+{
     id: 'kaelthas',
     enabled: true,
     name: { fr: 'Kael\'thas', en: 'Kael\'thas' },
@@ -77,16 +77,16 @@ const HEROES = [
       }
     ],
     tips: [
-      { fr: 'Utilise ton Trait (D) avant  Bombe vivante (Z) pour augmenter consommer un minimum de mana.', en: 'Use your Trait (D) before Living bomb (W) to drastically increase the area of effect.' },
-      { fr: 'Ne lance pas Bombe vivante (Z) sur une cible déjà affectée, attends qu\'elle explose pour la propager.', en: 'Don\'t cast Living Bomb (Z) on a target already affected; wait for it to explode to spread it.' },
-      { fr: 'La Distorsion (E) boostée par le Trait est vitale pour stopper un plongeon (dive) de plusieurs ennemis.', en: 'Trait-empowered Gravity Lapse (E) is vital for stopping a multi-enemy dive.' }
+      { fr: 'Utilise ton Trait (D) avant Bombe vivante (Z) pour consommer un minimum de mana.', en: 'Use your Trait (D) before Living Bomb (W) to consume no mana.' },
+      { fr: 'L\'augmentation du Choc de Flamme grâce à ton trait n\'augmente que sa zone d\'effet, pas ses dégâts.', en: 'The Flamestrike (Q) empowerment from your Trait only increases its area of effect, not its damage.' },
+      { fr: 'La Rupture de gravité (E) boostée par le Trait est vitale pour stopper un plongeon (dive) de plusieurs ennemis ou suivre de très loin ton tank.', en: 'Trait-empowered Gravity Lapse (E) is vital for stopping a multi-enemy dive or following up your tank from a distance.' }
     ],
     builds: [
       {
         enabled: true,
         order: 1,
-        label: { fr: 'Build recommandé', en: 'Flamestrike Build (Poke)' },
-        summary: { fr: 'Le meilleur build, tout simplement.', en: 'Maximizes long-range damage and Flamestrike area.' },
+        label: { fr: 'Build recommandé', en: 'Recommended Build (Poke)' },
+        summary: { fr: 'Le meilleur build, tout simplement.', en: 'The best build, plain and simple.' },
         buildCodeTitle: { fr: "A COLLER DANS L'ARBRE DES TALENTS", en: "PASTE INTO TALENT TREE" },
         buildCode: "[T3111124,Kaelthas]",
         videos: [],
@@ -95,14 +95,14 @@ const HEROES = [
             level: 1,
             name: { fr: 'Accro au mana', en: 'Mana Addict' },
             icon: 'assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_manaaddict.png',
-            description: { fr: 'Quête : les globes de régénération augmente le maximum de mana. Récompense : Peut activer un bouclier équivalent au montant de mana.', en: 'Quest: Hitting heroes with Flamestrike increases its damage.' },
+            description: { fr: 'Quête : les globes de régénération augmente le maximum de mana. Récompense : Peut activer un bouclier équivalent au montant de mana.', en: 'Quest: Gathering Regeneration Globes increases maximum Mana. Reward: Activate to gain a shield based on your total Mana.' },
             demoYoutubeId: null
           },
           {
             level: 4,
-            name: { fr: 'Vent du Néant', en: 'Mana Addict' },
+            name: { fr: 'Vent du Néant', en: 'Nether Wind' },
             icon: 'assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_gravitylapse.png',
-            description: { fr: 'Augmente la portée de Rupture de gravité et rend du mana.', en: 'Collecting globes increases mana and grants an active shield.' },
+            description: { fr: 'Augmente la portée de Rupture de gravité et rend du mana.', en: 'Increases Gravity Lapse range and refunds mana.' },
             demoYoutubeId: null
           },
           {
@@ -123,7 +123,7 @@ const HEROES = [
             level: 13,
             name: { fr: 'Pyromane', en: 'Pyromaniac' },
             icon: 'assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_livingbomb.png',
-            description: { fr: 'Chaque fois que Bombe vivante inflige des dégâts, réduit le temps de recharge des capacités de base.', en: 'Flamestrike explodes a second time after a short delay.' },
+            description: { fr: 'Chaque fois que Bombe vivante inflige des dégâts, réduit le temps de recharge des capacités de base.', en: 'Each time Living Bomb deals periodic damage, reduce basic abilities cooldowns.' },
             demoYoutubeId: null
           },
           {
@@ -137,7 +137,7 @@ const HEROES = [
             level: 20,
             name: { fr: 'Lance-flamme', en: 'Flamethrower' },
             icon: 'assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_flamestrike.png',
-            description: { fr: 'Augmente la  portée de Choc de flammes, si plusieurs héros sont touchés, le temps de recharge de Choc de flammes est réduit.', en: 'Increases Phoenix duration and allows repositioning.' },
+            description: { fr: 'Augmente la portée de Choc de flammes, si plusieurs héros sont touchés, le temps de recharge de Choc de flammes est réduit.', en: 'Increases Flamestrike range. If 2 or more heroes are hit, its cooldown is reduced.' },
             demoYoutubeId: null
           }
         ]
