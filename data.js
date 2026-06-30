@@ -22,6 +22,7 @@ const HEROES = [
     enabled: true,
     name: { fr: 'Kael\'thas', en: 'Kael\'thas' },
     role: 'AssassinDistance',
+    isNew: true,
     portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_kaelthas.png',
     headline: {
       fr: 'Dégâts de zone massifs, punition des regroupements et contrôle puissant.',
@@ -143,7 +144,7 @@ const HEROES = [
         ]
       },
       {
-        enabled: true,
+        enabled: false,
         order: 2,
         label: { fr: 'Build Bombe Vivante (Anti-Mêlée)', en: 'Living Bomb Build (Anti-Melee)' },
         summary: { fr: 'Dévastateur contre les compositions avec beaucoup de corps à corps.', en: 'Devastating against melee-heavy compositions.' },
@@ -2127,7 +2128,7 @@ const HEROES = [
     id: 'malfurion',
     enabled: true,
     name: { fr: 'Malfurion', en: 'Malfurion' },
-    isNew: true,
+    isNew: false,
     role: 'Healer',
     portrait: 'assets/heroes/portraits/storm_ui_glues_draft_portrait_malfurion.png',
     headline: {
