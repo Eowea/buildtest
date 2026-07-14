@@ -1175,17 +1175,41 @@ function renderAssetGrid(kind){
     if (!exts.includes(ext)) return false;
     if (q && !item.path.toLowerCase().includes(q)) return false;
     return true;
-  }).slice(0, 300);
+  }).slice(0, 500);
   const grid = document.getElementById('assetGrid');
   if (!items.length){ grid.innerHTML = '<div class="empty-state">Aucun fichier trouvé</div>'; return; }
-  grid.innerHTML = '<div class="asset-grid">' + items.map(item => `
-    <div class="asset-tile" onclick="pickAsset('${item.path.replace(/'/g,"\\'")}')">
-      ${kind === 'video'
-        ? `<div class="vidicon">🎬</div>`
-        : `<img loading="lazy" src="${assetRawUrl(item.path)}" />`}
-      <div class="fname">${escapeHtml(item.path.split('/').pop())}</div>
-    </div>
-  `).join('') + '</div>';
+
+  // Regroupement par dossier parent (ex: heroes/base_spells/rehgar/videos/spells)
+  // afin de retrouver facilement les fichiers d'un héros/sort/talent précis.
+  const groups = {};
+  items.forEach(item => {
+    const parts = item.path.split('/');
+    const dir = parts.slice(0, -1).join('/').replace(/^assets\//, '') || '(racine)';
+    (groups[dir] = groups[dir] || []).push(item);
+  });
+  const sortedDirs = Object.keys(groups).sort((a, b) => a.localeCompare(b));
+
+  grid.innerHTML = sortedDirs.map(dir => `
+    <details class="collapsible" open>
+      <summary>
+        <span class="chevron">▸</span>
+        <span class="s-title">${escapeHtml(dir.replace(/\//g, ' › '))}</span>
+        <span class="s-sub">${groups[dir].length}</span>
+      </summary>
+      <div class="body">
+        <div class="asset-grid">
+          ${groups[dir].map(item => `
+            <div class="asset-tile" onclick="pickAsset('${item.path.replace(/'/g,"\\'")}')">
+              ${kind === 'video'
+                ? `<div class="vidicon">🎬</div>`
+                : `<img loading="lazy" src="${assetRawUrl(item.path)}" />`}
+              <div class="fname">${escapeHtml(item.path.split('/').pop())}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </details>
+  `).join('');
 }
 function pickAsset(path){
   if (assetPickerCallback) assetPickerCallback(path);
