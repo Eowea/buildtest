@@ -180,17 +180,22 @@
   <div class="token-card">
     <div class="eyebrow">Bonjour <span id="tokenGreetUser"></span></div>
     <h1>Connexion à GitHub</h1>
-    <p>Pour enregistrer tes modifications dans le dépôt, colle ici un <strong>token GitHub personnel</strong> ayant le droit d'écrire sur <code>Eowea/builds</code>. Il reste uniquement dans ton navigateur, il n'est jamais envoyé ailleurs qu'à l'API GitHub.</p>
+    <p>Pour enregistrer tes modifications dans le dépôt, colle ici un <strong>token GitHub personnel</strong> ayant le droit d'écrire sur le dépôt visé ci-dessous. Il reste uniquement dans ton navigateur, il n'est jamais envoyé ailleurs qu'à l'API GitHub.</p>
     <ol>
       <li>github.com → Settings → Developer settings → <em>Fine-grained tokens</em></li>
-      <li>Repository access → sélectionne uniquement <code>Eowea/builds</code></li>
+      <li>Repository access → sélectionne le(s) dépôt(s) concerné(s)</li>
       <li>Permissions → <em>Contents</em> : Read and write</li>
       <li>Génère puis colle le token ci-dessous</li>
     </ol>
     <div id="tokenError" class="login-error hidden"></div>
+    <div class="row">
+      <div class="field"><label>Propriétaire (owner)</label><input id="repoOwnerInput" type="text" /></div>
+      <div class="field"><label>Dépôt</label><input id="repoNameInput" type="text" /></div>
+    </div>
     <div class="field">
       <label>Token GitHub</label>
       <input id="tokenInput" type="password" placeholder="github_pat_..." />
+      <small class="help">Laisse ce champ vide pour réutiliser le token déjà utilisé lors de ta dernière connexion (si tu changes juste de dépôt, mais que ton token a accès aux deux).</small>
     </div>
     <div class="checkbox-row">
       <input id="rememberToken" type="checkbox" />
@@ -212,6 +217,7 @@
     </div>
     <div class="topbar-right">
       <button onclick="reloadFromGitHub()">↻ Recharger</button>
+      <button onclick="showChangeRepo()">⇄ Changer de dépôt</button>
       <button class="primary" id="saveBtn" onclick="saveAll()">💾 Enregistrer sur GitHub</button>
       <button class="ghost" onclick="logout()">Déconnexion</button>
     </div>
@@ -243,8 +249,8 @@
 /* =========================================================================
    CONFIGURATION DU DEPOT
    ========================================================================= */
-const REPO_OWNER = 'Eowea';
-const REPO_NAME  = 'builds';
+let REPO_OWNER = localStorage.getItem('eowea_admin_repo_owner') || 'Eowea';
+let REPO_NAME  = localStorage.getItem('eowea_admin_repo_name') || 'builds';
 const BRANCH     = 'main';
 const GITHUB_API = 'https://api.github.com';
 
@@ -351,6 +357,8 @@ async function handleLogin(){
     }
   }
   document.getElementById('tokenScreen').classList.remove('hidden');
+  document.getElementById('repoOwnerInput').value = REPO_OWNER;
+  document.getElementById('repoNameInput').value = REPO_NAME;
 }
 
 async function generateAccountSnippet(){
@@ -369,21 +377,38 @@ async function generateAccountSnippet(){
    ECRAN 2 : TOKEN GITHUB
    ========================================================================= */
 async function handleTokenSubmit(){
-  const token = document.getElementById('tokenInput').value.trim();
+  const typedToken = document.getElementById('tokenInput').value.trim();
   const remember = document.getElementById('rememberToken').checked;
   const errEl = document.getElementById('tokenError');
   errEl.classList.add('hidden');
-  if (!token){ return; }
-  githubToken = token;
+
+  const owner = document.getElementById('repoOwnerInput').value.trim() || REPO_OWNER;
+  const name  = document.getElementById('repoNameInput').value.trim() || REPO_NAME;
+  const tokenToUse = typedToken || githubToken;
+  if (!tokenToUse){ errEl.textContent = 'Merci de coller un token GitHub.'; errEl.classList.remove('hidden'); return; }
+
+  const prevOwner = REPO_OWNER, prevName = REPO_NAME, prevToken = githubToken;
+  REPO_OWNER = owner; REPO_NAME = name; githubToken = tokenToUse;
   try{
     await checkTokenAccess();
-    if (remember) localStorage.setItem('eowea_admin_token', token);
+    localStorage.setItem('eowea_admin_repo_owner', REPO_OWNER);
+    localStorage.setItem('eowea_admin_repo_name', REPO_NAME);
+    if (remember) localStorage.setItem('eowea_admin_token', tokenToUse);
     await bootApp();
   }catch(e){
+    REPO_OWNER = prevOwner; REPO_NAME = prevName; githubToken = prevToken;
     errEl.textContent = e.message;
     errEl.classList.remove('hidden');
-    githubToken = null;
   }
+}
+
+function showChangeRepo(){
+  document.getElementById('appScreen').style.display = 'none';
+  document.getElementById('tokenScreen').classList.remove('hidden');
+  document.getElementById('tokenGreetUser').textContent = currentUser || '';
+  document.getElementById('repoOwnerInput').value = REPO_OWNER;
+  document.getElementById('repoNameInput').value = REPO_NAME;
+  document.getElementById('tokenInput').value = '';
 }
 
 /* =========================================================================
