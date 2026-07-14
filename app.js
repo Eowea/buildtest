@@ -508,11 +508,12 @@ function renderDetail() {
 }
     function renderAll() { updateStaticLang(); ensureSelection(); renderHeader(); renderFilters(); renderHeroList(); renderDetail(); updateHash(); }
     // Encodage minimal : on n'échappe que ce qui casserait vraiment le fragment d'URL
-    // (espace, %, &, #, virgule et crochets, ces deux derniers servant de délimiteurs
-    // dans le format compact [code,heroId]). encodeURIComponent triplerait inutilement
-    // la taille des caractères courants dans un code de talents (+, /, =, etc.).
+    // (espace, %, & et #). Les crochets et la virgule du format compact [code,heroId]
+    // restent tels quels : encodeURIComponent triplerait inutilement la taille des
+    // caractères courants dans un code de talents (+, /, =, etc.), et un lien lisible
+    // ("[T1231121,whitemane]") est le but recherché ici.
     function looseHashEncode(str) {
-      return String(str).replace(/[%&#,\[\]\s]/g, c => encodeURIComponent(c));
+      return String(str).replace(/[%&#\s]/g, c => encodeURIComponent(c));
     }
     function updateHash() {
       const h = currentHero();
@@ -529,7 +530,7 @@ function renderDetail() {
     function restoreFromHash() {
       const raw = (location.hash || '').replace(/^#/, '');
       if (!raw) return;
-      const m = raw.match(/^\[([^,]*),(.+)\]$/);
+      const m = raw.match(/^\[(.*),([^,]+)\]$/);
       let heroId, code = '';
       if (m) {
         code = decodeURIComponent(m[1]);
