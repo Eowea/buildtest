@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eowea Builds — Admin</title>
+<link rel="icon" type="image/png" href="https://static.wikia.nocookie.net/allstars_gamepedia/images/e/e5/Emoji_Elements_Pack_Flower.png/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f1219;
+    --panel:#171c27;
+    --panel-alt:#1e2431;
+    --border:#2b3241;
+    --text:#e7e5df;
+    --text-dim:#98a1b3;
+    --gold:#c9a24b;
+    --gold-dim:#8d723a;
+    --blue:#5b8ab8;
+    --red:#c1554d;
+    --red-dim:#7a2e2a;
+    --green:#5f9e6f;
+    --radius:8px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:14px;}
+  h1,h2,h3{font-family:'Cinzel',serif;font-weight:700;letter-spacing:.02em;color:var(--gold);margin:0 0 12px;}
+  h1{font-size:22px;} h2{font-size:17px;} h3{font-size:14px;color:var(--text);}
+  a{color:var(--blue);}
+  button{
+    font-family:'Inter',sans-serif;cursor:pointer;border-radius:var(--radius);border:1px solid var(--border);
+    background:var(--panel-alt);color:var(--text);padding:8px 14px;font-size:13px;font-weight:600;transition:.15s;
+  }
+  button:hover{border-color:var(--gold-dim);}
+  button.primary{background:var(--gold);border-color:var(--gold);color:#1b1400;}
+  button.primary:hover{background:#dbb35d;}
+  button.danger{background:transparent;border-color:var(--red-dim);color:#e59b96;}
+  button.danger:hover{background:var(--red-dim);color:#fff;}
+  button.ghost{background:transparent;border-color:transparent;color:var(--text-dim);padding:6px 8px;}
+  button.ghost:hover{color:var(--text);border-color:var(--border);}
+  button:disabled{opacity:.4;cursor:not-allowed;}
+  input,textarea,select{
+    width:100%;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);
+    color:var(--text);padding:8px 10px;font-family:'Inter',sans-serif;font-size:13px;
+  }
+  textarea{resize:vertical;min-height:60px;}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold-dim);}
+  label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-dim);margin-bottom:4px;}
+  .field{margin-bottom:12px;}
+  .row{display:flex;gap:12px;}
+  .row > *{flex:1;}
+  .hidden{display:none !important;}
+
+  /* ---------- Login ---------- */
+  #loginScreen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;}
+  .login-card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:32px;width:360px;}
+  .login-card .eyebrow{color:var(--text-dim);font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px;}
+  .login-error{background:rgba(193,85,77,.15);border:1px solid var(--red-dim);color:#f0b3ae;padding:8px 10px;border-radius:6px;font-size:12px;margin-bottom:12px;}
+  .toggle-tool{margin-top:18px;padding-top:16px;border-top:1px dashed var(--border);}
+  .toggle-tool summary{cursor:pointer;color:var(--text-dim);font-size:12px;}
+  .snippet{background:#0b0d12;border:1px solid var(--border);border-radius:6px;padding:10px;font-family:monospace;font-size:11px;white-space:pre-wrap;word-break:break-all;color:#9fd6a8;margin-top:8px;}
+
+  /* ---------- Token gate ---------- */
+  #tokenScreen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;}
+  .token-card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:32px;width:460px;}
+  .token-card p{color:var(--text-dim);font-size:13px;line-height:1.5;}
+  .token-card ol{color:var(--text-dim);font-size:13px;line-height:1.7;padding-left:18px;}
+  .token-card code{background:var(--panel-alt);padding:1px 5px;border-radius:4px;color:var(--gold);}
+
+  /* ---------- App shell ---------- */
+  #appScreen{display:none;height:100vh;flex-direction:column;}
+  .topbar{
+    height:56px;flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+    padding:0 18px;border-bottom:1px solid var(--border);background:var(--panel);
+  }
+  .topbar .brand{display:flex;align-items:center;gap:10px;}
+  .topbar .brand .badge{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-dim));}
+  .topbar .status{font-size:12px;color:var(--text-dim);}
+  .topbar .status.dirty{color:#f0c36a;}
+  .topbar .status.saved{color:var(--green);}
+  .topbar-right{display:flex;align-items:center;gap:10px;}
+
+  .main{flex:1;display:flex;overflow:hidden;}
+  .sidebar{
+    width:280px;flex:0 0 auto;border-right:1px solid var(--border);background:var(--panel);
+    display:flex;flex-direction:column;overflow:hidden;
+  }
+  .sidebar-search{padding:12px;border-bottom:1px solid var(--border);}
+  .hero-list{flex:1;overflow-y:auto;padding:6px;}
+  .hero-item{
+    display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:6px;cursor:pointer;margin-bottom:2px;
+  }
+  .hero-item:hover{background:var(--panel-alt);}
+  .hero-item.active{background:var(--panel-alt);border:1px solid var(--gold-dim);}
+  .hero-item img{width:30px;height:30px;border-radius:4px;object-fit:cover;background:#000;flex:0 0 auto;}
+  .hero-item .meta{overflow:hidden;}
+  .hero-item .meta .n{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .hero-item .meta .r{font-size:11px;color:var(--text-dim);}
+  .hero-item .dot{width:7px;height:7px;border-radius:50%;margin-left:auto;flex:0 0 auto;}
+  .dot.on{background:var(--green);} .dot.off{background:var(--red);}
+  .sidebar-footer{border-top:1px solid var(--border);padding:8px;display:flex;flex-direction:column;gap:4px;}
+  .sidebar-footer button{text-align:left;}
+
+  .content{flex:1;overflow-y:auto;padding:24px;}
+  .empty-state{color:var(--text-dim);text-align:center;margin-top:80px;}
+
+  .hero-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;gap:16px;}
+  .tabs{display:flex;gap:4px;border-bottom:1px solid var(--border);margin-bottom:18px;}
+  .tab{padding:8px 14px;cursor:pointer;color:var(--text-dim);border-bottom:2px solid transparent;font-weight:600;font-size:13px;}
+  .tab.active{color:var(--gold);border-color:var(--gold);}
+
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:14px;}
+  .card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+  .card-head .title{font-weight:700;color:var(--gold);}
+  .thumb-picker{display:flex;align-items:center;gap:8px;}
+  .thumb-picker img{width:40px;height:40px;border-radius:6px;object-fit:cover;background:#000;border:1px solid var(--border);}
+  .thumb-picker .path{flex:1;font-size:11px;color:var(--text-dim);word-break:break-all;}
+  .checkbox-row{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
+  .checkbox-row input{width:auto;}
+
+  /* ---------- Asset picker modal ---------- */
+  .modal-overlay{
+    position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;
+    z-index:100;padding:24px;
+  }
+  .modal{background:var(--panel);border:1px solid var(--border);border-radius:12px;width:100%;max-width:820px;max-height:80vh;display:flex;flex-direction:column;}
+  .modal-head{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+  .modal-tabs{display:flex;gap:8px;padding:10px 20px 0;}
+  .modal-body{padding:14px 20px;overflow-y:auto;flex:1;}
+  .asset-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px;}
+  .asset-tile{background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;padding:6px;cursor:pointer;text-align:center;}
+  .asset-tile:hover{border-color:var(--gold-dim);}
+  .asset-tile img{width:100%;height:70px;object-fit:contain;background:#000;border-radius:4px;}
+  .asset-tile .fname{font-size:10px;color:var(--text-dim);margin-top:4px;word-break:break-all;}
+  .asset-tile .vidicon{width:100%;height:70px;display:flex;align-items:center;justify-content:center;background:#000;border-radius:4px;font-size:24px;}
+
+  .toast{position:fixed;bottom:20px;right:20px;background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:12px 18px;z-index:200;box-shadow:0 4px 16px rgba(0,0,0,.4);}
+  .toast.error{border-color:var(--red-dim);color:#f0b3ae;}
+  .toast.success{border-color:var(--green);color:#bfe8c8;}
+
+  .list-add-btn{margin-top:6px;}
+  .subitem{border:1px dashed var(--border);border-radius:6px;padding:12px;margin-bottom:10px;position:relative;}
+  .subitem .remove-btn{position:absolute;top:8px;right:8px;}
+  small.help{display:block;color:var(--text-dim);font-size:11px;margin-top:4px;}
+</style>
+</head>
+<body>
+
+<!-- ============ ECRAN 1 : LOGIN ============ -->
+<div id="loginScreen">
+  <div class="login-card">
+    <div class="eyebrow">Eowea Builds</div>
+    <h1>Espace administrateur</h1>
+    <div id="loginError" class="login-error hidden"></div>
+    <div class="field">
+      <label>Pseudo</label>
+      <input id="loginUser" type="text" autocomplete="username" />
+    </div>
+    <div class="field">
+      <label>Mot de passe</label>
+      <input id="loginPass" type="password" autocomplete="current-password" />
+    </div>
+    <button class="primary" style="width:100%" onclick="handleLogin()">Se connecter</button>
+
+    <details class="toggle-tool">
+      <summary>🔧 Générer un compte admin (aucune connexion requise)</summary>
+      <div style="margin-top:10px;">
+        <div class="field"><label>Pseudo souhaité</label><input id="genUser" type="text" /></div>
+        <div class="field"><label>Mot de passe souhaité</label><input id="genPass" type="password" /></div>
+        <button onclick="generateAccountSnippet()">Générer le bloc à ajouter dans admins.js</button>
+        <div id="genOutput"></div>
+      </div>
+    </details>
+  </div>
+</div>
+
+<!-- ============ ECRAN 2 : TOKEN GITHUB ============ -->
+<div id="tokenScreen" class="hidden">
+  <div class="token-card">
+    <div class="eyebrow">Bonjour <span id="tokenGreetUser"></span></div>
+    <h1>Connexion à GitHub</h1>
+    <p>Pour enregistrer tes modifications dans le dépôt, colle ici un <strong>token GitHub personnel</strong> ayant le droit d'écrire sur <code>Eowea/builds</code>. Il reste uniquement dans ton navigateur, il n'est jamais envoyé ailleurs qu'à l'API GitHub.</p>
+    <ol>
+      <li>github.com → Settings → Developer settings → <em>Fine-grained tokens</em></li>
+      <li>Repository access → sélectionne uniquement <code>Eowea/builds</code></li>
+      <li>Permissions → <em>Contents</em> : Read and write</li>
+      <li>Génère puis colle le token ci-dessous</li>
+    </ol>
+    <div id="tokenError" class="login-error hidden"></div>
+    <div class="field">
+      <label>Token GitHub</label>
+      <input id="tokenInput" type="password" placeholder="github_pat_..." />
+    </div>
+    <div class="checkbox-row">
+      <input id="rememberToken" type="checkbox" />
+      <label style="margin:0;text-transform:none;font-size:12px;">Se souvenir du token sur cet appareil</label>
+    </div>
+    <button class="primary" style="width:100%" onclick="handleTokenSubmit()">Vérifier et continuer</button>
+  </div>
+</div>
+
+<!-- ============ ECRAN 3 : APPLICATION ============ -->
+<div id="appScreen">
+  <div class="topbar">
+    <div class="brand">
+      <div class="badge"></div>
+      <div>
+        <div style="font-weight:700;">Eowea Builds — Admin</div>
+        <div class="status" id="statusLine">Synchronisé</div>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <button onclick="reloadFromGitHub()">↻ Recharger</button>
+      <button class="primary" id="saveBtn" onclick="saveAll()">💾 Enregistrer sur GitHub</button>
+      <button class="ghost" onclick="logout()">Déconnexion</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="sidebar">
+      <div class="sidebar-search">
+        <input id="heroSearch" type="text" placeholder="Rechercher un héros..." oninput="renderHeroList()" />
+      </div>
+      <div class="hero-list" id="heroListEl"></div>
+      <div class="sidebar-footer">
+        <button onclick="addHero()">+ Nouveau héros</button>
+        <button onclick="showConfigPanel()">⚙ Configuration du site</button>
+        <button onclick="showAdminsPanel()">👤 Administrateurs</button>
+      </div>
+    </div>
+    <div class="content" id="contentEl">
+      <div class="empty-state">Sélectionne un héros à gauche, ou crée-en un nouveau.</div>
+    </div>
+  </div>
+</div>
+
+<div id="modalRoot"></div>
+<div id="toastRoot"></div>
+
+<script src="admins.js"></script>
+<script>
+/* =========================================================================
+   CONFIGURATION DU DEPOT
+   ========================================================================= */
+const REPO_OWNER = 'Eowea';
+const REPO_NAME  = 'builds';
+const BRANCH     = 'main';
+const GITHUB_API = 'https://api.github.com';
+
+/* =========================================================================
+   ETAT GLOBAL
+   ========================================================================= */
+let APP_CONFIG = null;
+let STREAMER_CONFIG = null;
+let HEROES = null;
+let dataFileSha = null;
+let adminsFileSha = null;
+let githubToken = null;
+let currentUser = null;
+let currentHeroIndex = null;
+let currentTab = 'infos';
+let dirty = false;
+let assetTreeCache = null;
+let assetPickerCallback = null;
+
+/* =========================================================================
+   UTILITAIRES : hash, base64 unicode
+   ========================================================================= */
+async function sha256Hex(str){
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2,'0')).join('');
+}
+function randomSalt(){
+  const arr = new Uint8Array(16);
+  crypto.getRandomValues(arr);
+  return [...arr].map(b => b.toString(16).padStart(2,'0')).join('');
+}
+function b64EncodeUnicode(str){
+  return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (m,p1) => String.fromCharCode(parseInt(p1,16))));
+}
+function b64DecodeUnicode(str){
+  return decodeURIComponent(atob(str).split('').map(c => '%' + ('00'+c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+}
+function escapeHtml(s){
+  return (s ?? '').toString().replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function toast(msg, type){
+  const el = document.createElement('div');
+  el.className = 'toast ' + (type||'');
+  el.textContent = msg;
+  document.getElementById('toastRoot').appendChild(el);
+  setTimeout(() => el.remove(), 4500);
+}
+function markDirty(){
+  dirty = true;
+  const s = document.getElementById('statusLine');
+  if (s){ s.textContent = 'Modifications non enregistrées'; s.className = 'status dirty'; }
+}
+function markSaved(){
+  dirty = false;
+  const s = document.getElementById('statusLine');
+  if (s){ s.textContent = 'Synchronisé'; s.className = 'status saved'; }
+}
+window.addEventListener('beforeunload', (e) => {
+  if (dirty){ e.preventDefault(); e.returnValue=''; }
+});
+
+/* =========================================================================
+   ECRAN 1 : LOGIN (verrou pseudo/mdp)
+   ========================================================================= */
+async function handleLogin(){
+  const username = document.getElementById('loginUser').value.trim();
+  const password = document.getElementById('loginPass').value;
+  const errEl = document.getElementById('loginError');
+  errEl.classList.add('hidden');
+
+  if (typeof ADMINS === 'undefined' || !Array.isArray(ADMINS) || ADMINS.length === 0){
+    errEl.textContent = "Aucun compte n'est configuré dans admins.js. Utilise l'outil de génération ci-dessous pour en créer un.";
+    errEl.classList.remove('hidden');
+    return;
+  }
+  const account = ADMINS.find(a => a.username === username);
+  if (!account){
+    errEl.textContent = 'Pseudo ou mot de passe incorrect.';
+    errEl.classList.remove('hidden');
+    return;
+  }
+  const hash = await sha256Hex(account.salt + ':' + password);
+  if (hash !== account.hash){
+    errEl.textContent = 'Pseudo ou mot de passe incorrect.';
+    errEl.classList.remove('hidden');
+    return;
+  }
+  currentUser = username;
+  sessionStorage.setItem('eowea_admin_user', username);
+  document.getElementById('loginScreen').classList.add('hidden');
+  document.getElementById('tokenGreetUser').textContent = username;
+
+  // Si un token est déjà mémorisé sur cet appareil, on tente de l'utiliser directement
+  const savedToken = localStorage.getItem('eowea_admin_token');
+  if (savedToken){
+    githubToken = savedToken;
+    try{
+      await checkTokenAccess();
+      await bootApp();
+      return;
+    }catch(e){
+      localStorage.removeItem('eowea_admin_token');
+      githubToken = null;
+    }
+  }
+  document.getElementById('tokenScreen').classList.remove('hidden');
+}
+
+async function generateAccountSnippet(){
+  const username = document.getElementById('genUser').value.trim();
+  const password = document.getElementById('genPass').value;
+  if (!username || !password){ return; }
+  const salt = randomSalt();
+  const hash = await sha256Hex(salt + ':' + password);
+  const snippet = `{ username: "${username}", salt: "${salt}", hash: "${hash}" }`;
+  document.getElementById('genOutput').innerHTML =
+    '<div class="snippet">' + escapeHtml(snippet) + '</div>' +
+    '<small class="help">Copie ce bloc et ajoute-le dans le tableau ADMINS de admins.js (ou connecte-toi avec un compte existant puis utilise l\'onglet "Administrateurs" pour l\'ajouter automatiquement).</small>';
+}
+
+/* =========================================================================
+   ECRAN 2 : TOKEN GITHUB
+   ========================================================================= */
+async function handleTokenSubmit(){
+  const token = document.getElementById('tokenInput').value.trim();
+  const remember = document.getElementById('rememberToken').checked;
+  const errEl = document.getElementById('tokenError');
+  errEl.classList.add('hidden');
+  if (!token){ return; }
+  githubToken = token;
+  try{
+    await checkTokenAccess();
+    if (remember) localStorage.setItem('eowea_admin_token', token);
+    await bootApp();
+  }catch(e){
+    errEl.textContent = e.message;
+    errEl.classList.remove('hidden');
+    githubToken = null;
+  }
+}
+
+/* =========================================================================
+   API GITHUB
+   ========================================================================= */
+async function ghFetch(path, options={}){
+  const res = await fetch(GITHUB_API + path, {
+    ...options,
+    headers: {
+      'Authorization': 'Bearer ' + githubToken,
+      'Accept': 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      ...(options.headers || {})
+    }
+  });
+  if (!res.ok){
+    let detail = '';
+    try{ detail = (await res.json()).message; }catch(e){}
+    throw new Error(`Erreur GitHub (${res.status}) ${detail || ''}`);
+  }
+  return res.json();
+}
+async function checkTokenAccess(){
+  const repo = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}`);
+  if (!repo.permissions || !repo.permissions.push){
+    throw new Error("Ce token n'a pas les droits d'écriture sur ce dépôt.");
+  }
+  return true;
+}
+async function getFile(path){
+  const data = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}?ref=${BRANCH}`);
+  return { content: b64DecodeUnicode(data.content.replace(/\n/g,'')), sha: data.sha };
+}
+async function putFile(path, contentStr, sha, message){
+  const body = { message, content: b64EncodeUnicode(contentStr), branch: BRANCH };
+  if (sha) body.sha = sha;
+  const res = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`, {
+    method: 'PUT',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify(body)
+  });
+  return res.content.sha;
+}
+async function loadAssetTree(force){
+  if (assetTreeCache && !force) return assetTreeCache;
+  const data = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/git/trees/${BRANCH}?recursive=1`);
+  assetTreeCache = data.tree.filter(item => item.type === 'blob' && item.path.startsWith('assets/'));
+  return assetTreeCache;
+}
+
+/* =========================================================================
+   CHARGEMENT / SERIALISATION DE data.js
+   ========================================================================= */
+function parseDataFile(jsText){
+  const runner = new Function(jsText + '\nreturn { APP_CONFIG, STREAMER_CONFIG, HEROES };');
+  return runner();
+}
+function serializeDataFile(){
+  return [
+    'const APP_CONFIG = ' + JSON.stringify(APP_CONFIG, null, 2) + ';',
+    '',
+    'const STREAMER_CONFIG = ' + JSON.stringify(STREAMER_CONFIG, null, 2) + ';',
+    '',
+    'const HEROES = ' + JSON.stringify(HEROES, null, 2) + ';',
+    ''
+  ].join('\n');
+}
+
+async function bootApp(){
+  document.getElementById('tokenScreen').classList.add('hidden');
+  document.getElementById('appScreen').style.display = 'flex';
+  await reloadFromGitHub();
+}
+
+function normalizeLoadedData(){
+  // Corrige/complète les anciennes entrées "videos" de build qui seraient de simples
+  // chaines de texte au lieu de l'objet {title, desc, youtubeId} attendu par app.js.
+  HEROES.forEach(h => {
+    (h.builds||[]).forEach(b => {
+      b.videos = (b.videos||[]).map(v => {
+        if (typeof v === 'string'){
+          return { title:{fr:'',en:''}, desc:{fr:'',en:''}, youtubeId: v };
+        }
+        v.title = v.title || {fr:'',en:''};
+        v.desc = v.desc || {fr:'',en:''};
+        if (v.youtubeId === undefined) v.youtubeId = v.youtubeUrl || v.url || '';
+        return v;
+      });
+    });
+  });
+}
+
+async function reloadFromGitHub(){
+  try{
+    const file = await getFile('data.js');
+    const parsed = parseDataFile(file.content);
+    APP_CONFIG = parsed.APP_CONFIG;
+    STREAMER_CONFIG = parsed.STREAMER_CONFIG;
+    HEROES = parsed.HEROES;
+    normalizeLoadedData();
+    dataFileSha = file.sha;
+    currentHeroIndex = null;
+    markSaved();
+    renderHeroList();
+    document.getElementById('contentEl').innerHTML = '<div class="empty-state">Sélectionne un héros à gauche, ou crée-en un nouveau.</div>';
+    toast('Données chargées depuis GitHub', 'success');
+  }catch(e){
+    toast('Erreur de chargement : ' + e.message, 'error');
+  }
+}
+
+async function saveAll(){
+  const btn = document.getElementById('saveBtn');
+  btn.disabled = true;
+  btn.textContent = 'Enregistrement...';
+  try{
+    const content = serializeDataFile();
+    const message = prompt('Message de commit :', 'Mise à jour via le panneau admin') || 'Mise à jour via le panneau admin';
+    const newSha = await putFile('data.js', content, dataFileSha, message);
+    dataFileSha = newSha;
+    markSaved();
+    toast('Enregistré sur GitHub ✔', 'success');
+  }catch(e){
+    toast('Échec de l\'enregistrement : ' + e.message, 'error');
+  }finally{
+    btn.disabled = false;
+    btn.textContent = '💾 Enregistrer sur GitHub';
+  }
+}
+
+function logout(){
+  githubToken = null;
+  currentUser = null;
+  sessionStorage.removeItem('eowea_admin_user');
+  location.reload();
+}
+
+/* =========================================================================
+   RACCOURCI GENERIQUE POUR MODIFIER UN CHAMP IMBRIQUE
+   ========================================================================= */
+function setNested(obj, path, value){
+  const parts = path.split('.');
+  let cur = obj;
+  for (let i=0;i<parts.length-1;i++) cur = cur[parts[i]];
+  cur[parts[parts.length-1]] = value;
+  markDirty();
+}
+
+/* =========================================================================
+   LISTE DES HEROS (SIDEBAR)
+   ========================================================================= */
+function renderHeroList(){
+  const el = document.getElementById('heroListEl');
+  const q = (document.getElementById('heroSearch')?.value || '').toLowerCase();
+  el.innerHTML = '';
+  HEROES.forEach((h, idx) => {
+    const name = (h.name?.fr || h.id || '').toLowerCase();
+    if (q && !name.includes(q) && !(h.role||'').toLowerCase().includes(q)) return;
+    const item = document.createElement('div');
+    item.className = 'hero-item' + (idx === currentHeroIndex ? ' active' : '');
+    item.onclick = () => selectHero(idx);
+    item.innerHTML = `
+      <img src="${assetRawUrl(h.portrait)}" onerror="this.style.visibility='hidden'" />
+      <div class="meta">
+        <div class="n">${escapeHtml(h.name?.fr || h.id)}</div>
+        <div class="r">${escapeHtml(h.role || '')}</div>
+      </div>
+      <div class="dot ${h.enabled ? 'on':'off'}" title="${h.enabled ? 'Activé':'Désactivé'}"></div>
+    `;
+    el.appendChild(item);
+  });
+  if (!HEROES.length){
+    el.innerHTML = '<div class="empty-state" style="margin-top:20px;">Aucun héros</div>';
+  }
+}
+function assetRawUrl(path){
+  if (!path) return '';
+  if (/^https?:\/\//.test(path)) return path;
+  return `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${BRANCH}/${path}`;
+}
+
+function addHero(){
+  const id = prompt("Identifiant technique du héros (ex: 'jaina', sans espace) :");
+  if (!id) return;
+  if (HEROES.some(h => h.id === id)){ toast('Cet identifiant existe déjà', 'error'); return; }
+  HEROES.push({
+    id, enabled: false,
+    name: { fr: id, en: id },
+    role: '',
+    portrait: '',
+    headline: { fr:'', en:'' },
+    gameplay: { fr:'', en:'' },
+    guideVideo: null,
+    spells: [],
+    tips: [],
+    builds: []
+  });
+  markDirty();
+  renderHeroList();
+  selectHero(HEROES.length - 1);
+}
+
+function duplicateHero(idx){
+  const copy = JSON.parse(JSON.stringify(HEROES[idx]));
+  copy.id = copy.id + '_copie';
+  HEROES.splice(idx+1, 0, copy);
+  markDirty();
+  renderHeroList();
+  selectHero(idx+1);
+}
+
+function deleteHero(idx){
+  if (!confirm(`Supprimer définitivement "${HEROES[idx].name?.fr || HEROES[idx].id}" ?`)) return;
+  HEROES.splice(idx,1);
+  currentHeroIndex = null;
+  markDirty();
+  renderHeroList();
+  document.getElementById('contentEl').innerHTML = '<div class="empty-state">Héros supprimé. Sélectionne-en un autre.</div>';
+}
+
+/* =========================================================================
+   SELECTION D'UN HEROS + ONGLETS
+   ========================================================================= */
+function selectHero(idx){
+  currentHeroIndex = idx;
+  currentTab = 'infos';
+  renderHeroList();
+  renderHeroPanel();
+}
+function switchTab(tab){
+  currentTab = tab;
+  renderHeroPanel();
+}
+
+function renderHeroPanel(){
+  const hero = HEROES[currentHeroIndex];
+  const content = document.getElementById('contentEl');
+  content.innerHTML = `
+    <div class="hero-header">
+      <div>
+        <h2 style="margin-bottom:4px;">${escapeHtml(hero.name?.fr || hero.id)}</h2>
+        <div style="color:var(--text-dim);font-size:12px;">id: ${escapeHtml(hero.id)}</div>
+      </div>
+      <div style="display:flex;gap:8px;">
+        <button onclick="duplicateHero(${currentHeroIndex})">⧉ Dupliquer</button>
+        <button class="danger" onclick="deleteHero(${currentHeroIndex})">🗑 Supprimer</button>
+      </div>
+    </div>
+    <div class="tabs">
+      <div class="tab ${currentTab==='infos'?'active':''}" onclick="switchTab('infos')">Informations</div>
+      <div class="tab ${currentTab==='spells'?'active':''}" onclick="switchTab('spells')">Sorts</div>
+      <div class="tab ${currentTab==='tips'?'active':''}" onclick="switchTab('tips')">Astuces</div>
+      <div class="tab ${currentTab==='builds'?'active':''}" onclick="switchTab('builds')">Builds &amp; vidéos</div>
+    </div>
+    <div id="tabBody"></div>
+  `;
+  const body = document.getElementById('tabBody');
+  if (currentTab === 'infos') body.innerHTML = renderInfosTab(hero);
+  if (currentTab === 'spells') body.innerHTML = renderSpellsTab(hero);
+  if (currentTab === 'tips') body.innerHTML = renderTipsTab(hero);
+  if (currentTab === 'builds') body.innerHTML = renderBuildsTab(hero);
+}
+
+/* ---------- Onglet Informations ---------- */
+function renderInfosTab(hero){
+  const known = [...new Set(HEROES.map(h=>h.role).filter(Boolean))];
+  return `
+    <div class="card">
+      <div class="checkbox-row">
+        <input type="checkbox" ${hero.enabled?'checked':''} onchange="setNested(HEROES[${currentHeroIndex}],'enabled',this.checked)" />
+        <label style="margin:0;text-transform:none;">Héros activé (visible sur le site)</label>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" ${hero.isNew?'checked':''} onchange="setNested(HEROES[${currentHeroIndex}],'isNew',this.checked)" />
+        <label style="margin:0;text-transform:none;">Marquer comme "Nouveau"</label>
+      </div>
+      <div class="row">
+        <div class="field"><label>Nom (FR)</label><input value="${escapeHtml(hero.name?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}],'name.fr',this.value)" /></div>
+        <div class="field"><label>Nom (EN)</label><input value="${escapeHtml(hero.name?.en)}" oninput="setNested(HEROES[${currentHeroIndex}],'name.en',this.value)" /></div>
+      </div>
+      <div class="field">
+        <label>Rôle</label>
+        <input list="roleOptions" value="${escapeHtml(hero.role)}" oninput="setNested(HEROES[${currentHeroIndex}],'role',this.value)" />
+        <datalist id="roleOptions">${known.map(r=>`<option value="${escapeHtml(r)}">`).join('')}</datalist>
+      </div>
+      <div class="field">
+        <label>Portrait</label>
+        <div class="thumb-picker">
+          <img src="${assetRawUrl(hero.portrait)}" onerror="this.style.visibility='hidden'" />
+          <div class="path">${escapeHtml(hero.portrait||'(aucun)')}</div>
+          <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}],'portrait',p); renderHeroPanel(); })">Choisir</button>
+        </div>
+      </div>
+      <div class="field"><label>Accroche (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}],'headline.fr',this.value)">${escapeHtml(hero.headline?.fr)}</textarea></div>
+      <div class="field"><label>Accroche (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}],'headline.en',this.value)">${escapeHtml(hero.headline?.en)}</textarea></div>
+      <div class="field"><label>Description du gameplay (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}],'gameplay.fr',this.value)">${escapeHtml(hero.gameplay?.fr)}</textarea></div>
+      <div class="field"><label>Description du gameplay (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}],'gameplay.en',this.value)">${escapeHtml(hero.gameplay?.en)}</textarea></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div class="title">Vidéo guide express</div>
+        <div>
+          ${hero.guideVideo
+            ? `<button class="danger" onclick="removeGuideVideo(${currentHeroIndex})">Retirer</button>`
+            : `<button onclick="addGuideVideo(${currentHeroIndex})">+ Ajouter</button>`}
+        </div>
+      </div>
+      ${hero.guideVideo ? `
+        <div class="row">
+          <div class="field"><label>Titre (FR)</label><input value="${escapeHtml(hero.guideVideo.title?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].guideVideo,'title.fr',this.value)" /></div>
+          <div class="field"><label>Titre (EN)</label><input value="${escapeHtml(hero.guideVideo.title?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].guideVideo,'title.en',this.value)" /></div>
+        </div>
+        <div class="field"><label>ID YouTube</label><input value="${escapeHtml(hero.guideVideo.youtubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].guideVideo,'youtubeId',this.value)" />
+        <small class="help">L'identifiant après "v=" dans l'URL YouTube (ex: ESl4DLgmJVo)</small></div>
+        <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].guideVideo,'desc.fr',this.value)">${escapeHtml(hero.guideVideo.desc?.fr)}</textarea></div>
+        <div class="field"><label>Description (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].guideVideo,'desc.en',this.value)">${escapeHtml(hero.guideVideo.desc?.en)}</textarea></div>
+      ` : `<p style="color:var(--text-dim);font-size:13px;">Aucune vidéo guide pour ce héros.</p>`}
+    </div>
+  `;
+}
+function addGuideVideo(idx){
+  HEROES[idx].guideVideo = { title:{fr:'',en:''}, youtubeId:'', desc:{fr:'',en:''} };
+  markDirty(); renderHeroPanel();
+}
+function removeGuideVideo(idx){
+  HEROES[idx].guideVideo = null;
+  markDirty(); renderHeroPanel();
+}
+
+/* ---------- Onglet Sorts ---------- */
+function renderSpellsTab(hero){
+  let html = hero.spells.map((sp, i) => `
+    <div class="subitem">
+      <button class="ghost remove-btn" onclick="removeSpell(${currentHeroIndex},${i})">✕</button>
+      <div class="row">
+        <div class="field"><label>Touche</label><input value="${escapeHtml(sp.key)}" oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'key',this.value)" /></div>
+        <div class="field"><label>Nom (FR)</label><input value="${escapeHtml(sp.name?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'name.fr',this.value)" /></div>
+        <div class="field"><label>Nom (EN)</label><input value="${escapeHtml(sp.name?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'name.en',this.value)" /></div>
+      </div>
+      <div class="field">
+        <label>Icône</label>
+        <div class="thumb-picker">
+          <img src="${assetRawUrl(sp.icon)}" onerror="this.style.visibility='hidden'" />
+          <div class="path">${escapeHtml(sp.icon||'(aucune)')}</div>
+          <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].spells[${i}],'icon',p); renderHeroPanel(); })">Choisir</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'description.fr',this.value)">${escapeHtml(sp.description?.fr)}</textarea></div>
+        <div class="field"><label>Description (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'description.en',this.value)">${escapeHtml(sp.description?.en)}</textarea></div>
+      </div>
+      <div class="field">
+        <label>Vidéo de démo (ID YouTube ou fichier .mp4 dans assets)</label>
+        <div class="thumb-picker">
+          <input value="${escapeHtml(sp.demoYoutubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'demoYoutubeId',this.value)" />
+          <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].spells[${i}],'demoYoutubeId',p); renderHeroPanel(); })">Choisir un fichier</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  html += `<button class="list-add-btn" onclick="addSpell(${currentHeroIndex})">+ Ajouter un sort</button>`;
+  return html;
+}
+function addSpell(idx){
+  HEROES[idx].spells.push({ key:'', name:{fr:'',en:''}, icon:'', description:{fr:'',en:''}, demoYoutubeId:'' });
+  markDirty(); renderHeroPanel();
+}
+function removeSpell(idx, spIdx){
+  HEROES[idx].spells.splice(spIdx,1);
+  markDirty(); renderHeroPanel();
+}
+
+/* ---------- Onglet Astuces ---------- */
+function renderTipsTab(hero){
+  let html = hero.tips.map((tip,i) => `
+    <div class="subitem">
+      <button class="ghost remove-btn" onclick="removeTip(${currentHeroIndex},${i})">✕</button>
+      <div class="row">
+        <div class="field"><label>Astuce (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].tips[${i}],'fr',this.value)">${escapeHtml(tip.fr)}</textarea></div>
+        <div class="field"><label>Astuce (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].tips[${i}],'en',this.value)">${escapeHtml(tip.en)}</textarea></div>
+      </div>
+    </div>
+  `).join('');
+  html += `<button class="list-add-btn" onclick="addTip(${currentHeroIndex})">+ Ajouter une astuce</button>`;
+  return html;
+}
+function addTip(idx){
+  HEROES[idx].tips.push({fr:'',en:''});
+  markDirty(); renderHeroPanel();
+}
+function removeTip(idx, tIdx){
+  HEROES[idx].tips.splice(tIdx,1);
+  markDirty(); renderHeroPanel();
+}
+
+/* ---------- Onglet Builds ---------- */
+function renderBuildsTab(hero){
+  let html = hero.builds.map((b,i) => renderOneBuild(hero, b, i)).join('');
+  html += `<button class="list-add-btn" onclick="addBuild(${currentHeroIndex})">+ Ajouter un build</button>`;
+  return html;
+}
+function renderOneBuild(hero, b, i){
+  const talentsHtml = (b.talents||[]).map((t, ti) => renderTalent(i, ti, t)).join('');
+  const videosHtml = (b.videos||[]).map((v, vi) => `
+    <div class="subitem">
+      <button class="ghost remove-btn" onclick="HEROES[${currentHeroIndex}].builds[${i}].videos.splice(${vi},1); markDirty(); renderHeroPanel();">✕</button>
+      <div class="row">
+        <div class="field"><label>Titre (FR)</label><input value="${escapeHtml(v.title?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'title.fr',this.value)" /></div>
+        <div class="field"><label>Titre (EN)</label><input value="${escapeHtml(v.title?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'title.en',this.value)" /></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Description (FR)</label><input value="${escapeHtml(v.desc?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'desc.fr',this.value)" /></div>
+        <div class="field"><label>Description (EN)</label><input value="${escapeHtml(v.desc?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'desc.en',this.value)" /></div>
+      </div>
+      <div class="field">
+        <label>Vidéo (lien/ID YouTube ou fichier assets)</label>
+        <div class="thumb-picker">
+          <input value="${escapeHtml(v.youtubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'youtubeId',this.value)" />
+          <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'youtubeId',p); renderHeroPanel(); })">Choisir un fichier</button>
+        </div>
+        <small class="help">Colle un lien/ID YouTube (ex: https://youtube.com/watch?v=XXXXXXXXXXX), ou choisis un fichier .mp4/.webm/.gif/.webp du dossier assets/ avec le bouton.</small>
+      </div>
+    </div>
+  `).join('');
+  return `
+    <div class="card">
+      <div class="card-head">
+        <div class="title">${escapeHtml(b.label?.fr || 'Build sans nom')}</div>
+        <button class="danger" onclick="removeBuild(${currentHeroIndex},${i})">🗑 Supprimer ce build</button>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" ${b.enabled?'checked':''} onchange="setNested(HEROES[${currentHeroIndex}].builds[${i}],'enabled',this.checked)" />
+        <label style="margin:0;text-transform:none;">Build activé</label>
+      </div>
+      <div class="row">
+        <div class="field"><label>Ordre d'affichage</label><input type="number" value="${b.order ?? 0}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'order',parseInt(this.value||'0'))" /></div>
+        <div class="field"><label>Code du build (talents)</label><input value="${escapeHtml(b.buildCode)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'buildCode',this.value)" /></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Nom du build (FR)</label><input value="${escapeHtml(b.label?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'label.fr',this.value)" /></div>
+        <div class="field"><label>Nom du build (EN)</label><input value="${escapeHtml(b.label?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'label.en',this.value)" /></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Résumé (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'summary.fr',this.value)">${escapeHtml(b.summary?.fr)}</textarea></div>
+        <div class="field"><label>Résumé (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'summary.en',this.value)">${escapeHtml(b.summary?.en)}</textarea></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Date de mise à jour (FR)</label><input value="${escapeHtml(b.updatedAt?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'updatedAt.fr',this.value)" /></div>
+        <div class="field"><label>Date de mise à jour (EN)</label><input value="${escapeHtml(b.updatedAt?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'updatedAt.en',this.value)" /></div>
+      </div>
+      <div class="field"><label>Vidéos liées au build (YouTube uniquement)</label>
+        ${videosHtml}
+        <button onclick="HEROES[${currentHeroIndex}].builds[${i}].videos=(HEROES[${currentHeroIndex}].builds[${i}].videos||[]); HEROES[${currentHeroIndex}].builds[${i}].videos.push({title:{fr:'',en:''},desc:{fr:'',en:''},youtubeId:''}); markDirty(); renderHeroPanel();">+ Ajouter une vidéo</button>
+      </div>
+      <h3 style="margin-top:16px;">Talents</h3>
+      ${talentsHtml}
+      <button onclick="addTalent(${currentHeroIndex},${i})">+ Ajouter un talent</button>
+    </div>
+  `;
+}
+function renderTalent(buildIdx, ti, t){
+  const altHtml = (t.alternatives||[]).map((a, ai) => `
+    <div class="subitem" style="border-color:var(--gold-dim);">
+      <button class="ghost remove-btn" onclick="HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives.splice(${ai},1); markDirty(); renderHeroPanel();">✕</button>
+      <div class="row">
+        <div class="field"><label>Alternative — Nom (FR)</label><input value="${escapeHtml(a.name?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'name.fr',this.value)" /></div>
+        <div class="field"><label>Alternative — Nom (EN)</label><input value="${escapeHtml(a.name?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'name.en',this.value)" /></div>
+      </div>
+      <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'description.fr',this.value)">${escapeHtml(a.description?.fr)}</textarea></div>
+    </div>
+  `).join('');
+  return `
+    <div class="subitem">
+      <button class="ghost remove-btn" onclick="removeTalent(${currentHeroIndex},${buildIdx},${ti})">✕</button>
+      <div class="row">
+        <div class="field"><label>Niveau</label><input type="number" value="${t.level ?? ''}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'level',parseInt(this.value||'0'))" /></div>
+        <div class="field"><label>Nom (FR)</label><input value="${escapeHtml(t.name?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'name.fr',this.value)" /></div>
+        <div class="field"><label>Nom (EN)</label><input value="${escapeHtml(t.name?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'name.en',this.value)" /></div>
+      </div>
+      <div class="field">
+        <label>Icône</label>
+        <div class="thumb-picker">
+          <img src="${assetRawUrl(t.icon)}" onerror="this.style.visibility='hidden'" />
+          <div class="path">${escapeHtml(t.icon||'(aucune)')}</div>
+          <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'icon',p); renderHeroPanel(); })">Choisir</button>
+        </div>
+      </div>
+      <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'description.fr',this.value)">${escapeHtml(t.description?.fr)}</textarea></div>
+      <div class="field"><label>Description (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'description.en',this.value)">${escapeHtml(t.description?.en)}</textarea></div>
+      <div class="field">
+        <label>Vidéo de démo (ID YouTube ou fichier .mp4)</label>
+        <div class="thumb-picker">
+          <input value="${escapeHtml(t.demoYoutubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'demoYoutubeId',this.value)" />
+          <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'demoYoutubeId',p); renderHeroPanel(); })">Choisir</button>
+        </div>
+      </div>
+      <h3 style="margin-top:10px;font-size:12px;color:var(--text-dim);">Talents alternatifs</h3>
+      ${altHtml}
+      <button class="ghost" onclick="addAlternative(${currentHeroIndex},${buildIdx},${ti})">+ Ajouter une alternative</button>
+    </div>
+  `;
+}
+function addBuild(idx){
+  HEROES[idx].builds.push({
+    enabled: true, order: (HEROES[idx].builds.length+1),
+    label:{fr:'Nouveau build',en:'New build'}, updatedAt:{fr:'',en:''},
+    summary:{fr:'',en:''}, buildCodeTitle:{fr:"A COLLER DANS L'ARBRE DES TALENTS",en:"PASTE IN TALENT TREE"},
+    buildCode:'', videos:[], talents:[]
+  });
+  markDirty(); renderHeroPanel();
+}
+function removeBuild(idx, bIdx){
+  if (!confirm('Supprimer ce build ?')) return;
+  HEROES[idx].builds.splice(bIdx,1);
+  markDirty(); renderHeroPanel();
+}
+function addTalent(idx, bIdx){
+  HEROES[idx].builds[bIdx].talents.push({ level:1, name:{fr:'',en:''}, icon:'', description:{fr:'',en:''}, demoYoutubeId:null });
+  markDirty(); renderHeroPanel();
+}
+function removeTalent(idx, bIdx, tIdx){
+  HEROES[idx].builds[bIdx].talents.splice(tIdx,1);
+  markDirty(); renderHeroPanel();
+}
+function addAlternative(idx, bIdx, tIdx){
+  const t = HEROES[idx].builds[bIdx].talents[tIdx];
+  t.alternatives = t.alternatives || [];
+  t.alternatives.push({ name:{fr:'',en:''}, icon:'', description:{fr:'',en:''}, demoYoutubeId:null });
+  markDirty(); renderHeroPanel();
+}
+
+/* =========================================================================
+   SELECTEUR D'IMAGES / VIDEOS (dossier assets du repo)
+   ========================================================================= */
+async function openAssetPicker(kind, callback){
+  assetPickerCallback = callback;
+  const modalRoot = document.getElementById('modalRoot');
+  modalRoot.innerHTML = `
+    <div class="modal-overlay" onclick="if(event.target===this) closeAssetPicker()">
+      <div class="modal">
+        <div class="modal-head">
+          <h2 style="margin:0;">Choisir un fichier</h2>
+          <button class="ghost" onclick="closeAssetPicker()">✕</button>
+        </div>
+        <div style="padding:0 20px;">
+          <input id="assetSearch" placeholder="Filtrer par nom de fichier ou dossier..." oninput="renderAssetGrid('${kind}')" />
+        </div>
+        <div class="modal-body" id="assetGrid">Chargement...</div>
+      </div>
+    </div>
+  `;
+  try{
+    await loadAssetTree();
+    renderAssetGrid(kind);
+  }catch(e){
+    document.getElementById('assetGrid').textContent = 'Erreur de chargement : ' + e.message;
+  }
+}
+function closeAssetPicker(){
+  document.getElementById('modalRoot').innerHTML = '';
+  assetPickerCallback = null;
+}
+const IMAGE_EXT = ['png','jpg','jpeg','gif','webp','svg'];
+const VIDEO_EXT = ['mp4','webm'];
+function renderAssetGrid(kind){
+  const q = (document.getElementById('assetSearch')?.value || '').toLowerCase();
+  const exts = kind === 'video' ? VIDEO_EXT : IMAGE_EXT;
+  const items = assetTreeCache.filter(item => {
+    const ext = item.path.split('.').pop().toLowerCase();
+    if (!exts.includes(ext)) return false;
+    if (q && !item.path.toLowerCase().includes(q)) return false;
+    return true;
+  }).slice(0, 300);
+  const grid = document.getElementById('assetGrid');
+  if (!items.length){ grid.innerHTML = '<div class="empty-state">Aucun fichier trouvé</div>'; return; }
+  grid.innerHTML = '<div class="asset-grid">' + items.map(item => `
+    <div class="asset-tile" onclick="pickAsset('${item.path.replace(/'/g,"\\'")}')">
+      ${kind === 'video'
+        ? `<div class="vidicon">🎬</div>`
+        : `<img loading="lazy" src="${assetRawUrl(item.path)}" />`}
+      <div class="fname">${escapeHtml(item.path.split('/').pop())}</div>
+    </div>
+  `).join('') + '</div>';
+}
+function pickAsset(path){
+  if (assetPickerCallback) assetPickerCallback(path);
+  closeAssetPicker();
+}
+
+/* =========================================================================
+   CONFIGURATION DU SITE (APP_CONFIG / STREAMER_CONFIG)
+   ========================================================================= */
+function showConfigPanel(){
+  currentHeroIndex = null;
+  renderHeroList();
+  const socialsHtml = STREAMER_CONFIG.socials.map((s,i) => `
+    <div class="subitem">
+      <button class="ghost remove-btn" onclick="STREAMER_CONFIG.socials.splice(${i},1); markDirty(); showConfigPanel();">✕</button>
+      <div class="row">
+        <div class="field"><label>Label</label><input value="${escapeHtml(s.label)}" oninput="setNested(STREAMER_CONFIG.socials[${i}],'label',this.value)" /></div>
+        <div class="field"><label>Icône (twitch, youtube, x, discord, kofi...)</label><input value="${escapeHtml(s.icon)}" oninput="setNested(STREAMER_CONFIG.socials[${i}],'icon',this.value)" /></div>
+      </div>
+      <div class="field"><label>URL</label><input value="${escapeHtml(s.url)}" oninput="setNested(STREAMER_CONFIG.socials[${i}],'url',this.value)" /></div>
+    </div>
+  `).join('');
+  document.getElementById('contentEl').innerHTML = `
+    <h2>Configuration du site</h2>
+    <div class="card">
+      <div class="checkbox-row">
+        <input type="checkbox" ${APP_CONFIG.showGuideBadge?'checked':''} onchange="setNested(APP_CONFIG,'showGuideBadge',this.checked)" />
+        <label style="margin:0;text-transform:none;">Afficher le badge "guide vidéo disponible"</label>
+      </div>
+      <div class="row">
+        <div class="field"><label>Titre du site (FR)</label><input value="${escapeHtml(STREAMER_CONFIG.siteTitle?.fr)}" oninput="setNested(STREAMER_CONFIG,'siteTitle.fr',this.value)" /></div>
+        <div class="field"><label>Titre du site (EN)</label><input value="${escapeHtml(STREAMER_CONFIG.siteTitle?.en)}" oninput="setNested(STREAMER_CONFIG,'siteTitle.en',this.value)" /></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Sous-titre (FR)</label><textarea oninput="setNested(STREAMER_CONFIG,'siteSubtitle.fr',this.value)">${escapeHtml(STREAMER_CONFIG.siteSubtitle?.fr)}</textarea></div>
+        <div class="field"><label>Sous-titre (EN)</label><textarea oninput="setNested(STREAMER_CONFIG,'siteSubtitle.en',this.value)">${escapeHtml(STREAMER_CONFIG.siteSubtitle?.en)}</textarea></div>
+      </div>
+      <div class="field"><label>Chaîne Twitch</label><input value="${escapeHtml(STREAMER_CONFIG.twitchChannel)}" oninput="setNested(STREAMER_CONFIG,'twitchChannel',this.value)" /></div>
+    </div>
+    <div class="card">
+      <h3>Réseaux sociaux</h3>
+      ${socialsHtml}
+      <button onclick="STREAMER_CONFIG.socials.push({label:'',url:'',icon:''}); markDirty(); showConfigPanel();">+ Ajouter un réseau</button>
+    </div>
+  `;
+}
+
+/* =========================================================================
+   GESTION DES ADMINISTRATEURS (admins.js)
+   ========================================================================= */
+function showAdminsPanel(){
+  currentHeroIndex = null;
+  renderHeroList();
+  const list = (typeof ADMINS !== 'undefined') ? ADMINS : [];
+  const rows = list.map((a,i) => `
+    <div class="subitem">
+      <button class="ghost remove-btn" onclick="removeAdminEntry(${i})">✕</button>
+      <div><strong>${escapeHtml(a.username)}</strong></div>
+      <small class="help">Mot de passe caché (hash uniquement)</small>
+    </div>
+  `).join('');
+  document.getElementById('contentEl').innerHTML = `
+    <h2>Administrateurs</h2>
+    <div class="card">
+      <h3>Comptes existants</h3>
+      ${rows || '<p style="color:var(--text-dim);">Aucun compte pour le moment.</p>'}
+    </div>
+    <div class="card">
+      <h3>Ajouter un administrateur</h3>
+      <div class="field"><label>Pseudo</label><input id="newAdminUser" /></div>
+      <div class="field"><label>Mot de passe</label><input id="newAdminPass" type="password" /></div>
+      <button class="primary" onclick="addAdminEntry()">Ajouter et enregistrer sur GitHub</button>
+      <small class="help">Cette action committe directement le fichier admins.js sur GitHub avec le nouveau compte (mot de passe hashé, jamais en clair).</small>
+    </div>
+  `;
+}
+async function addAdminEntry(){
+  const username = document.getElementById('newAdminUser').value.trim();
+  const password = document.getElementById('newAdminPass').value;
+  if (!username || !password){ toast('Pseudo et mot de passe requis', 'error'); return; }
+  if (typeof ADMINS === 'undefined') { window.ADMINS = []; }
+  if (ADMINS.some(a => a.username === username)){ toast('Ce pseudo existe déjà', 'error'); return; }
+  const salt = randomSalt();
+  const hash = await sha256Hex(salt + ':' + password);
+  ADMINS.push({ username, salt, hash });
+  await commitAdminsFile();
+  showAdminsPanel();
+}
+function removeAdminEntry(i){
+  if (!confirm(`Retirer l'accès de "${ADMINS[i].username}" ?`)) return;
+  ADMINS.splice(i,1);
+  commitAdminsFile().then(showAdminsPanel);
+}
+function serializeAdminsFile(){
+  const header = `/*
+  admins.js — Liste des comptes autorisés à ouvrir admin.html.
+  Généré / mis à jour par le panneau admin. Ne contient aucun mot de passe en clair.
+*/
+
+`;
+  return header + 'const ADMINS = ' + JSON.stringify(ADMINS, null, 2) + ';\n';
+}
+async function commitAdminsFile(){
+  try{
+    const file = await getFile('admins.js');
+    adminsFileSha = file.sha;
+    const content = serializeAdminsFile();
+    const newSha = await putFile('admins.js', content, adminsFileSha, 'Mise à jour des administrateurs via le panneau admin');
+    adminsFileSha = newSha;
+    toast('Liste des administrateurs mise à jour sur GitHub ✔', 'success');
+  }catch(e){
+    toast("Erreur lors de l'enregistrement des admins : " + e.message, 'error');
+  }
+}
+
+/* =========================================================================
+   DEMARRAGE
+   ========================================================================= */
+(function init(){
+  // rien à faire ici : on attend l'action de l'utilisateur sur l'écran de login.
+  // (une reconnexion auto via sessionStorage pourrait être ajoutée ici si besoin)
+})();
+</script>
+</body>
+</html>
