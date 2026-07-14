@@ -188,7 +188,11 @@
       <li>Génère puis colle le token ci-dessous</li>
     </ol>
     <div id="tokenError" class="login-error hidden"></div>
-    <div class="row">
+    <div class="field">
+      <label>Dépôt cible</label>
+      <select id="repoSelect" onchange="onRepoSelectChange()"></select>
+    </div>
+    <div id="customRepoFields" class="row hidden">
       <div class="field"><label>Propriétaire (owner)</label><input id="repoOwnerInput" type="text" /></div>
       <div class="field"><label>Dépôt</label><input id="repoNameInput" type="text" /></div>
     </div>
@@ -249,8 +253,12 @@
 /* =========================================================================
    CONFIGURATION DU DEPOT
    ========================================================================= */
+const REPO_OPTIONS = [
+  { owner:'Eowea', name:'buildtest', label:'Eowea/buildtest (test)' },
+  { owner:'Eowea', name:'builds',    label:'Eowea/builds (production)' },
+];
 let REPO_OWNER = localStorage.getItem('eowea_admin_repo_owner') || 'Eowea';
-let REPO_NAME  = localStorage.getItem('eowea_admin_repo_name') || 'builds';
+let REPO_NAME  = localStorage.getItem('eowea_admin_repo_name') || 'buildtest';
 const BRANCH     = 'main';
 const GITHUB_API = 'https://api.github.com';
 
@@ -357,8 +365,35 @@ async function handleLogin(){
     }
   }
   document.getElementById('tokenScreen').classList.remove('hidden');
+  populateRepoSelect();
+}
+
+function populateRepoSelect(){
+  const sel = document.getElementById('repoSelect');
+  sel.innerHTML = REPO_OPTIONS.map(o => `<option value="${o.owner}/${o.name}">${escapeHtml(o.label)}</option>`).join('')
+    + '<option value="__custom__">Autre (saisie manuelle)</option>';
+  const current = REPO_OPTIONS.find(o => o.owner === REPO_OWNER && o.name === REPO_NAME);
+  if (current){
+    sel.value = `${current.owner}/${current.name}`;
+    document.getElementById('customRepoFields').classList.add('hidden');
+  } else {
+    sel.value = '__custom__';
+    document.getElementById('customRepoFields').classList.remove('hidden');
+  }
   document.getElementById('repoOwnerInput').value = REPO_OWNER;
   document.getElementById('repoNameInput').value = REPO_NAME;
+}
+function onRepoSelectChange(){
+  const sel = document.getElementById('repoSelect');
+  const customFields = document.getElementById('customRepoFields');
+  if (sel.value === '__custom__'){
+    customFields.classList.remove('hidden');
+  } else {
+    customFields.classList.add('hidden');
+    const [owner, name] = sel.value.split('/');
+    document.getElementById('repoOwnerInput').value = owner;
+    document.getElementById('repoNameInput').value = name;
+  }
 }
 
 async function generateAccountSnippet(){
@@ -406,8 +441,7 @@ function showChangeRepo(){
   document.getElementById('appScreen').style.display = 'none';
   document.getElementById('tokenScreen').classList.remove('hidden');
   document.getElementById('tokenGreetUser').textContent = currentUser || '';
-  document.getElementById('repoOwnerInput').value = REPO_OWNER;
-  document.getElementById('repoNameInput').value = REPO_NAME;
+  populateRepoSelect();
   document.getElementById('tokenInput').value = '';
 }
 
