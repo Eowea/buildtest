@@ -697,7 +697,7 @@ function renderHeroList(){
   }
 
   el.innerHTML = groups.map(g => {
-    const isOpen = q ? true : (roleGroupState[g.role] !== false);
+    const isOpen = q ? true : (roleGroupState[g.role] === true);
     const itemsHtml = g.items.map(({h, idx}) => `
       <div class="hero-item${idx===currentHeroIndex?' active':''}" onclick="selectHero(${idx})">
         <img src="${assetRawUrl(h.portrait)}" onerror="this.style.visibility='hidden'" />
@@ -870,7 +870,7 @@ function removeGuideVideo(idx){
 function renderSpellsTab(hero){
   const list = hero.spells;
   let html = list.map((sp, i) => `
-    <details class="collapsible"${i===list.length-1?' open':''}>
+    <details class="collapsible">
       <summary>
         <span class="chevron">▸</span>
         <span class="s-title">${escapeHtml(sp.name?.fr || sp.key || 'Sort sans nom')}</span>
@@ -942,7 +942,9 @@ function removeTip(idx, tIdx){
 
 /* ---------- Onglet Builds ---------- */
 function renderBuildsTab(hero){
-  let html = hero.builds.map((b,i) => renderOneBuild(hero, b, i)).join('');
+  const indices = hero.builds.map((_, i) => i);
+  indices.sort((a, b) => (hero.builds[a].order ?? 0) - (hero.builds[b].order ?? 0));
+  let html = indices.map(i => renderOneBuild(hero, hero.builds[i], i)).join('');
   html += `<button class="list-add-btn" onclick="addBuild(${currentHeroIndex})">+ Ajouter un build</button>`;
   return html;
 }
@@ -967,14 +969,14 @@ function renderOneBuild(hero, b, i){
     </div>
   `).join('');
   return `
-    <details class="collapsible"${i===hero.builds.length-1?' open':''}>
+    <details class="collapsible">
       <summary>
         <span class="chevron">▸</span>
         <span class="s-title">${escapeHtml(b.label?.fr || 'Build sans nom')}</span>
         <span class="s-sub">
           ${b.isNew?'<span style="color:var(--gold);">● MàJ</span>':''}
           <span class="s-dot ${b.enabled?'on':'off'}" style="background:${b.enabled?'var(--green)':'var(--red)'}"></span>
-          ordre ${b.order ?? 0}
+          <span style="color:${b.enabled?'var(--green)':'var(--red)'};font-weight:700;">${b.enabled?'PUBLIÉ':'NON PUBLIÉ'}</span>
         </span>
       </summary>
       <div class="body">
@@ -1003,7 +1005,7 @@ function renderOneBuild(hero, b, i){
         <div class="field"><label>Date de mise à jour (FR)</label><input value="${escapeHtml(b.updatedAt?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'updatedAt.fr',this.value)" /></div>
         <div class="field"><label>Date de mise à jour (EN)</label><input value="${escapeHtml(b.updatedAt?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'updatedAt.en',this.value)" /></div>
       </div>
-      <div class="field"><label>Vidéos liées au build (YouTube uniquement)</label>
+      <div class="field"><label>Vidéos liées au build (YouTube ou fichier assets)</label>
         ${videosHtml}
         <button onclick="HEROES[${currentHeroIndex}].builds[${i}].videos=(HEROES[${currentHeroIndex}].builds[${i}].videos||[]); HEROES[${currentHeroIndex}].builds[${i}].videos.push({title:{fr:'',en:''},desc:{fr:'',en:''},youtubeId:''}); markDirty(); renderHeroPanel();">+ Ajouter une vidéo</button>
       </div>
