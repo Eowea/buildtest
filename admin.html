@@ -81,7 +81,9 @@
   .topbar .status.saved{color:var(--green);}
   .topbar-right{display:flex;align-items:center;gap:10px;}
 
-  .main{flex:1;display:flex;overflow:hidden;}
+  .main{flex:1;display:flex;overflow:hidden;position:relative;}
+  .mobile-menu-btn{display:none;}
+  .sidebar-backdrop{display:none;}
   .sidebar{
     width:280px;flex:0 0 auto;border-right:1px solid var(--border);background:var(--panel);
     display:flex;flex-direction:column;overflow:hidden;
@@ -163,6 +165,43 @@
   .role-group[open] > summary .chevron{transform:rotate(90deg);}
   .role-group > summary .count{margin-left:auto;color:var(--text-dim);}
   small.help{display:block;color:var(--text-dim);font-size:11px;margin-top:4px;}
+
+  /* ================= Mobile ================= */
+  @media (max-width: 860px){
+    .topbar{padding:8px 10px;gap:8px;height:auto;flex-wrap:wrap;}
+    .topbar .brand{gap:8px;}
+    .topbar .brand > div:last-child{display:none;} /* cache le sous-titre "Synchronisé" pour gagner de la place sur une seule ligne */
+    .mobile-menu-btn{
+      display:flex;align-items:center;justify-content:center;
+      width:34px;height:34px;padding:0;font-size:18px;flex:0 0 auto;
+    }
+    .topbar-right{gap:6px;flex-wrap:wrap;width:100%;justify-content:flex-start;}
+    .topbar-right select, .topbar-right button{font-size:11px;padding:6px 8px;}
+
+    .sidebar-backdrop{
+      display:block;position:fixed;inset:0;background:rgba(0,0,0,.55);
+      z-index:40;opacity:0;pointer-events:none;transition:opacity .2s;
+    }
+    .sidebar-backdrop.open{opacity:1;pointer-events:auto;}
+    .sidebar{
+      position:fixed;top:0;left:0;bottom:0;width:82vw;max-width:320px;z-index:50;
+      transform:translateX(-100%);transition:transform .2s ease;box-shadow:4px 0 18px rgba(0,0,0,.5);
+    }
+    .sidebar.open{transform:translateX(0);}
+
+    .content{padding:14px;}
+    .hero-header{flex-direction:column;gap:10px;}
+    .row{flex-direction:column;gap:0;}
+    .row > *{flex:1;}
+    .tabs{overflow-x:auto;flex-wrap:nowrap;}
+    .tab{flex:0 0 auto;white-space:nowrap;}
+
+    .modal-overlay{padding:0;}
+    .modal{max-width:100%;max-height:100%;height:100%;border-radius:0;}
+    .asset-grid{grid-template-columns:repeat(auto-fill,minmax(90px,1fr));}
+
+    .login-card, .token-card{width:100%;padding:22px;}
+  }
 </style>
 </head>
 <body>
@@ -233,6 +272,7 @@
 <div id="appScreen">
   <div class="topbar">
     <div class="brand">
+      <button class="ghost mobile-menu-btn" onclick="toggleSidebar()" aria-label="Menu">☰</button>
       <div class="badge"></div>
       <div>
         <div style="font-weight:700;">Eowea Builds — Admin</div>
@@ -249,7 +289,8 @@
   </div>
 
   <div class="main">
-    <div class="sidebar">
+    <div class="sidebar-backdrop" onclick="toggleSidebar(false)"></div>
+    <div class="sidebar" id="sidebarEl">
       <div class="sidebar-search">
         <input id="heroSearch" type="text" placeholder="Rechercher un héros..." oninput="renderHeroList()" />
       </div>
@@ -643,6 +684,13 @@ async function saveAll(){
   }
 }
 
+function toggleSidebar(force){
+  const sidebar = document.getElementById('sidebarEl');
+  const open = typeof force === 'boolean' ? force : !sidebar.classList.contains('open');
+  sidebar.classList.toggle('open', open);
+  document.querySelector('.sidebar-backdrop').classList.toggle('open', open);
+}
+
 function logout(){
   githubToken = null;
   currentUser = null;
@@ -782,6 +830,7 @@ function selectHero(idx){
   currentTab = 'infos';
   renderHeroList();
   renderHeroPanel();
+  if (window.matchMedia('(max-width: 860px)').matches) toggleSidebar(false);
 }
 function switchTab(tab){
   currentTab = tab;
@@ -1268,6 +1317,7 @@ function pickAsset(path){
 function showConfigPanel(){
   currentHeroIndex = null;
   renderHeroList();
+  if (window.matchMedia('(max-width: 860px)').matches) toggleSidebar(false);
   const socialsHtml = STREAMER_CONFIG.socials.map((s,i) => `
     <div class="subitem">
       <button class="ghost remove-btn" onclick="STREAMER_CONFIG.socials.splice(${i},1); markDirty(); showConfigPanel();">✕</button>
@@ -1309,6 +1359,7 @@ function showConfigPanel(){
 function showAdminsPanel(){
   currentHeroIndex = null;
   renderHeroList();
+  if (window.matchMedia('(max-width: 860px)').matches) toggleSidebar(false);
   const list = (typeof ADMINS !== 'undefined') ? ADMINS : [];
   const rows = list.map((a,i) => `
     <div class="subitem">
