@@ -1069,7 +1069,7 @@
     .combo-desc { font-size: 12px; color: var(--text-dim); line-height: 1.5; overflow-wrap: break-word; }
 
     /* ---------- Carrousel de vidéos de build (survol / appui pour lire) ---------- */
-    .combo-carousel { position: relative; width: 100%; max-width: 640px; margin: 0 auto; }
+    .combo-carousel { position: relative; width: 100%; max-width: 420px; margin: 0 auto; }
     .combo-slide { display: none; }
     .combo-slide.is-active { display: block; }
     .combo-slide-title {
