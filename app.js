@@ -508,10 +508,11 @@ function renderDetail() {
 }
     function renderAll() { updateStaticLang(); ensureSelection(); renderHeader(); renderFilters(); renderHeroList(); renderDetail(); updateHash(); }
     // Encodage minimal : on n'échappe que ce qui casserait vraiment le fragment d'URL
-    // (espace, %, & et #). Les crochets et la virgule du format compact [code,heroId]
-    // restent tels quels : encodeURIComponent triplerait inutilement la taille des
-    // caractères courants dans un code de talents (+, /, =, etc.), et un lien lisible
-    // ("[T1231121,whitemane]") est le but recherché ici.
+    // (espace, %, & et #). Le "/" du format compact heroId/code reste tel quel :
+    // encodeURIComponent triplerait inutilement la taille des caractères courants
+    // dans un code de talents (+, /, =, etc.), et un lien lisible ("whitemane/T1231121")
+    // est le but recherché ici. Le héros ne contenant jamais de "/", on peut découper
+    // sur le premier "/" trouvé sans ambiguïté, même si le code lui-même en contient.
     function looseHashEncode(str) {
       return String(str).replace(/[%&#\s]/g, c => encodeURIComponent(c));
     }
@@ -522,7 +523,7 @@ function renderDetail() {
       const b = h.builds[state.buildIndex];
       const heroPart = looseHashEncode(state.heroId);
       if (b?.buildCode) {
-        history.replaceState(null,'',`#[${looseHashEncode(b.buildCode)},${heroPart}]`);
+        history.replaceState(null,'',`#${heroPart}/${looseHashEncode(b.buildCode)}`);
       } else {
         history.replaceState(null,'',`#${heroPart}`);
       }
@@ -530,11 +531,11 @@ function renderDetail() {
     function restoreFromHash() {
       const raw = (location.hash || '').replace(/^#/, '');
       if (!raw) return;
-      const m = raw.match(/^\[(.*),([^,]+)\]$/);
+      const slashIdx = raw.indexOf('/');
       let heroId, code = '';
-      if (m) {
-        code = decodeURIComponent(m[1]);
-        heroId = decodeURIComponent(m[2]);
+      if (slashIdx >= 0) {
+        heroId = decodeURIComponent(raw.slice(0, slashIdx));
+        code = decodeURIComponent(raw.slice(slashIdx + 1));
       } else {
         heroId = decodeURIComponent(raw);
       }
@@ -542,8 +543,8 @@ function renderDetail() {
         const hero = HEROES.find(h => h.id === heroId);
         state.heroId = heroId;
         if (code) {
-          const idx = hero.builds.findIndex(b => b.buildCode === code);
-          state.buildIndex = idx >= 0 ? idx : firstBuildIndex(hero);
+          const bidx = hero.builds.findIndex(b => b.buildCode === code);
+          state.buildIndex = bidx >= 0 ? bidx : firstBuildIndex(hero);
         } else {
           state.buildIndex = firstBuildIndex(hero);
         }

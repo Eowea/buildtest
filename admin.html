@@ -667,6 +667,22 @@ function setNested(obj, path, value){
 /* =========================================================================
    LISTE DES HEROS (SIDEBAR)
    ========================================================================= */
+let uidCounter = 0;
+function assignUid(obj){
+  if (!obj.__uid) {
+    Object.defineProperty(obj, '__uid', { value: 'u' + (++uidCounter), enumerable: false, configurable: true });
+  }
+  return obj.__uid;
+}
+let collapsibleState = {}; // uid -> bool (ouvert/fermé), persiste entre les re-rendus
+(function bindCollapsibleToggleTracking(){
+  const container = document.getElementById('contentEl');
+  container.addEventListener('toggle', (e) => {
+    const uid = e.target && e.target.dataset ? e.target.dataset.uid : undefined;
+    if (uid) collapsibleState[uid] = e.target.open;
+  }, true);
+})();
+
 let roleGroupState = {};
 function renderHeroList(){
   const el = document.getElementById('heroListEl');
@@ -869,8 +885,8 @@ function removeGuideVideo(idx){
 /* ---------- Onglet Sorts ---------- */
 function renderSpellsTab(hero){
   const list = hero.spells;
-  let html = list.map((sp, i) => `
-    <details class="collapsible">
+  let html = list.map((sp, i) => { const uid = assignUid(sp); return `
+    <details class="collapsible" data-uid="${uid}"${collapsibleState[uid]?' open':''}>
       <summary>
         <span class="chevron">▸</span>
         <span class="s-title">${escapeHtml(sp.name?.fr || sp.key || 'Sort sans nom')}</span>
@@ -904,7 +920,7 @@ function renderSpellsTab(hero){
         <button class="danger" onclick="removeSpell(${currentHeroIndex},${i})">🗑 Supprimer ce sort</button>
       </div>
     </details>
-  `).join('');
+  `; }).join('');
   html += `<button class="list-add-btn" onclick="addSpell(${currentHeroIndex})">+ Ajouter un sort</button>`;
   return html;
 }
@@ -949,6 +965,7 @@ function renderBuildsTab(hero){
   return html;
 }
 function renderOneBuild(hero, b, i){
+  const buildUid = assignUid(b);
   const talentsHtml = (b.talents||[]).map((t, ti) => renderTalent(i, ti, t)).join('');
   const videosHtml = (b.videos||[]).map((v, vi) => `
     <div class="subitem">
@@ -969,7 +986,7 @@ function renderOneBuild(hero, b, i){
     </div>
   `).join('');
   return `
-    <details class="collapsible">
+    <details class="collapsible" data-uid="${buildUid}"${collapsibleState[buildUid]?' open':''}>
       <summary>
         <span class="chevron">▸</span>
         <span class="s-title">${escapeHtml(b.label?.fr || 'Build sans nom')}</span>
@@ -1018,8 +1035,9 @@ function renderOneBuild(hero, b, i){
   `;
 }
 function renderTalent(buildIdx, ti, t){
-  const altHtml = (t.alternatives||[]).map((a, ai) => `
-    <details class="collapsible nested" style="border-color:var(--gold-dim);">
+  const talentUid = assignUid(t);
+  const altHtml = (t.alternatives||[]).map((a, ai) => { const altUid = assignUid(a); return `
+    <details class="collapsible nested" data-uid="${altUid}"${collapsibleState[altUid]?' open':''} style="border-color:var(--gold-dim);">
       <summary>
         <span class="chevron">▸</span>
         <span class="s-title">${escapeHtml(a.name?.fr || 'Alternative sans nom')}</span>
@@ -1049,9 +1067,9 @@ function renderTalent(buildIdx, ti, t){
         <button class="danger" onclick="HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives.splice(${ai},1); markDirty(); renderHeroPanel();">🗑 Supprimer cette alternative</button>
       </div>
     </details>
-  `).join('');
+  `; }).join('');
   return `
-    <details class="collapsible nested">
+    <details class="collapsible nested" data-uid="${talentUid}"${collapsibleState[talentUid]?' open':''}>
       <summary>
         <span class="chevron">▸</span>
         <span class="s-title">Niv. ${escapeHtml(t.level ?? '?')} — ${escapeHtml(t.name?.fr || 'Talent sans nom')}</span>
