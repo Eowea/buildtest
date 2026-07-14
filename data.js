@@ -265,7 +265,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "14 Juillet 2026",
+          "en": "July 14, 2026"
+        }
       },
       {
         "enabled": false,
@@ -376,7 +380,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       }
     ]
   },
@@ -602,7 +610,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       },
       {
         "enabled": true,
@@ -713,7 +725,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       }
     ]
   },
@@ -1330,7 +1346,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       },
       {
         "enabled": true,
@@ -2082,7 +2102,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       },
       {
         "enabled": true,
@@ -2193,7 +2217,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       }
     ]
   },
@@ -2415,7 +2443,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       },
       {
         "enabled": true,
@@ -2526,7 +2558,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       }
     ]
   },
@@ -3117,7 +3153,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       },
       {
         "enabled": true,
@@ -3228,7 +3268,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       }
     ]
   },
@@ -3450,7 +3494,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       },
       {
         "enabled": true,
@@ -3561,7 +3609,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       }
     ]
   },
@@ -3783,7 +3835,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       },
       {
         "enabled": true,
@@ -3894,7 +3950,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       }
     ]
   },
@@ -4246,7 +4306,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       }
     ]
   },
@@ -4543,7 +4607,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       }
     ]
   },
@@ -4816,7 +4884,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       }
     ]
   },
@@ -5038,7 +5110,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       },
       {
         "enabled": true,
@@ -5149,7 +5225,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       }
     ]
   },
@@ -5435,7 +5515,11 @@ const HEROES = [
             },
             "demoYoutubeId": null
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       }
     ]
   },
@@ -5706,7 +5790,11 @@ const HEROES = [
             },
             "demoYoutubeId": "ScMzIvxBSi4"
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       },
       {
         "enabled": true,
@@ -5862,7 +5950,11 @@ const HEROES = [
             },
             "demoYoutubeId": "ScMzIvxBSi4"
           }
-        ]
+        ],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        }
       }
     ]
   }
