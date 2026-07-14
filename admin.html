@@ -571,6 +571,7 @@ function normalizeLoadedData(){
   // chaines de texte au lieu de l'objet {title, desc, youtubeId} attendu par app.js.
   HEROES.forEach(h => {
     (h.builds||[]).forEach(b => {
+      b.updatedAt = b.updatedAt || {fr:'',en:''};
       b.videos = (b.videos||[]).map(v => {
         if (typeof v === 'string'){
           return { title:{fr:'',en:''}, desc:{fr:'',en:''}, youtubeId: v };
@@ -635,7 +636,10 @@ function logout(){
 function setNested(obj, path, value){
   const parts = path.split('.');
   let cur = obj;
-  for (let i=0;i<parts.length-1;i++) cur = cur[parts[i]];
+  for (let i=0;i<parts.length-1;i++){
+    if (cur[parts[i]] == null) cur[parts[i]] = {};
+    cur = cur[parts[i]];
+  }
   cur[parts[parts.length-1]] = value;
   markDirty();
 }
@@ -922,6 +926,11 @@ function renderOneBuild(hero, b, i){
         <input type="checkbox" ${b.enabled?'checked':''} onchange="setNested(HEROES[${currentHeroIndex}].builds[${i}],'enabled',this.checked)" />
         <label style="margin:0;text-transform:none;">Build activé</label>
       </div>
+      <div class="checkbox-row">
+        <input type="checkbox" ${b.isNew?'checked':''} onchange="setNested(HEROES[${currentHeroIndex}].builds[${i}],'isNew',this.checked)" />
+        <label style="margin:0;text-transform:none;">Marquer comme mis à jour / nouveau</label>
+      </div>
+      <small class="help" style="margin-top:-8px;margin-bottom:12px;">Affiche un badge "Nouveau" sur l'onglet de ce build, et un badge "Mis à jour" à côté du héros dans la liste (tant que le visiteur ne l'a pas encore vu). Pense à le décocher une fois que la mise à jour n'est plus "fraîche".</small>
       <div class="row">
         <div class="field"><label>Ordre d'affichage</label><input type="number" value="${b.order ?? 0}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'order',parseInt(this.value||'0'))" /></div>
         <div class="field"><label>Code du build (talents)</label><input value="${escapeHtml(b.buildCode)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'buildCode',this.value)" /></div>
