@@ -965,7 +965,23 @@ function renderTalent(buildIdx, ti, t){
         <div class="field"><label>Alternative — Nom (FR)</label><input value="${escapeHtml(a.name?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'name.fr',this.value)" /></div>
         <div class="field"><label>Alternative — Nom (EN)</label><input value="${escapeHtml(a.name?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'name.en',this.value)" /></div>
       </div>
+      <div class="field">
+        <label>Icône</label>
+        <div class="thumb-picker">
+          <img src="${assetRawUrl(a.icon)}" onerror="this.style.visibility='hidden'" />
+          <div class="path">${escapeHtml(a.icon||'(aucune)')}</div>
+          <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'icon',p); renderHeroPanel(); })">Choisir</button>
+        </div>
+      </div>
       <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'description.fr',this.value)">${escapeHtml(a.description?.fr)}</textarea></div>
+      <div class="field"><label>Description (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'description.en',this.value)">${escapeHtml(a.description?.en)}</textarea></div>
+      <div class="field">
+        <label>Vidéo de démo (ID YouTube ou fichier .mp4)</label>
+        <div class="thumb-picker">
+          <input value="${escapeHtml(a.demoYoutubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'demoYoutubeId',this.value)" />
+          <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'demoYoutubeId',p); renderHeroPanel(); })">Choisir</button>
+        </div>
+      </div>
     </div>
   `).join('');
   return `
