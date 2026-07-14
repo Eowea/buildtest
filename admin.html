@@ -1167,17 +1167,25 @@ function closeAssetPicker(){
 }
 const IMAGE_EXT = ['png','jpg','jpeg','gif','webp','svg'];
 const VIDEO_EXT = ['mp4','webm'];
+function normalizeForMatch(s){
+  return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+}
 function classifyAssetPath(path){
   const lower = path.toLowerCase();
   const segments = path.split('/');
   let heroMatch = null;
   for (const seg of segments){
-    const segLower = seg.toLowerCase();
-    const hero = HEROES.find(h => h.id && h.id.toLowerCase() === segLower);
+    const segNorm = normalizeForMatch(seg);
+    if (!segNorm) continue;
+    const hero = HEROES.find(h => {
+      const candidates = [h.id, h.name?.fr, h.name?.en].map(normalizeForMatch).filter(Boolean);
+      return candidates.includes(segNorm);
+    });
     if (hero){ heroMatch = hero; break; }
   }
   let sub = 'Autre';
-  if (lower.includes('talent')) sub = 'Talents';
+  if (lower.includes('portrait')) sub = 'Portraits';
+  else if (lower.includes('talent')) sub = 'Talents';
   else if (lower.includes('spell') || lower.includes('sort')) sub = 'Sorts';
   if (heroMatch) return { group: heroMatch.name?.fr || heroMatch.id, sub };
   // Pas de héros reconnu dans le chemin : on range sous un dossier générique,
@@ -1215,7 +1223,7 @@ function renderAssetGrid(kind){
     (nested[group][sub] = nested[group][sub] || []).push(item);
   });
 
-  const subOrder = ['Talents', 'Sorts'];
+  const subOrder = ['Portraits', 'Talents', 'Sorts'];
   const groupNames = Object.keys(nested).sort((a, b) => {
     if (a === 'Autres fichiers') return 1;
     if (b === 'Autres fichiers') return -1;
