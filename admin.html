@@ -1167,6 +1167,33 @@ function closeAssetPicker(){
 }
 const IMAGE_EXT = ['png','jpg','jpeg','gif','webp','svg'];
 const VIDEO_EXT = ['mp4','webm'];
+function classifyAssetPath(path){
+  const lower = path.toLowerCase();
+  const segments = path.split('/');
+  let heroMatch = null;
+  for (const seg of segments){
+    const segLower = seg.toLowerCase();
+    const hero = HEROES.find(h => h.id && h.id.toLowerCase() === segLower);
+    if (hero){ heroMatch = hero; break; }
+  }
+  let sub = 'Autre';
+  if (lower.includes('talent')) sub = 'Talents';
+  else if (lower.includes('spell') || lower.includes('sort')) sub = 'Sorts';
+  if (heroMatch) return { group: heroMatch.name?.fr || heroMatch.id, sub };
+  // Pas de héros reconnu dans le chemin : on range sous un dossier générique,
+  // avec le chemin d'origine comme sous-catégorie pour ne rien perdre de vue.
+  return { group: 'Autres fichiers', sub: segments.slice(0, -1).join('/').replace(/^assets\//, '') || '(racine)' };
+}
+function assetTileHtml(item, kind){
+  return `
+    <div class="asset-tile" onclick="pickAsset('${item.path.replace(/'/g,"\\'")}')">
+      ${kind === 'video'
+        ? `<div class="vidicon">🎬</div>`
+        : `<img loading="lazy" src="${assetRawUrl(item.path)}" />`}
+      <div class="fname">${escapeHtml(item.path.split('/').pop())}</div>
+    </div>
+  `;
+}
 function renderAssetGrid(kind){
   const q = (document.getElementById('assetSearch')?.value || '').toLowerCase();
   const exts = kind === 'video' ? VIDEO_EXT : IMAGE_EXT;
@@ -1179,37 +1206,48 @@ function renderAssetGrid(kind){
   const grid = document.getElementById('assetGrid');
   if (!items.length){ grid.innerHTML = '<div class="empty-state">Aucun fichier trouvé</div>'; return; }
 
-  // Regroupement par dossier parent (ex: heroes/base_spells/rehgar/videos/spells)
-  // afin de retrouver facilement les fichiers d'un héros/sort/talent précis.
-  const groups = {};
+  // Regroupement à deux niveaux : héros (reconnu via HEROES) puis Talents / Sorts / Autre,
+  // pour retrouver immédiatement les fichiers d'un héros précis.
+  const nested = {};
   items.forEach(item => {
-    const parts = item.path.split('/');
-    const dir = parts.slice(0, -1).join('/').replace(/^assets\//, '') || '(racine)';
-    (groups[dir] = groups[dir] || []).push(item);
+    const { group, sub } = classifyAssetPath(item.path);
+    nested[group] = nested[group] || {};
+    (nested[group][sub] = nested[group][sub] || []).push(item);
   });
-  const sortedDirs = Object.keys(groups).sort((a, b) => a.localeCompare(b));
 
-  grid.innerHTML = sortedDirs.map(dir => `
-    <details class="collapsible" open>
-      <summary>
-        <span class="chevron">▸</span>
-        <span class="s-title">${escapeHtml(dir.replace(/\//g, ' › '))}</span>
-        <span class="s-sub">${groups[dir].length}</span>
-      </summary>
-      <div class="body">
-        <div class="asset-grid">
-          ${groups[dir].map(item => `
-            <div class="asset-tile" onclick="pickAsset('${item.path.replace(/'/g,"\\'")}')">
-              ${kind === 'video'
-                ? `<div class="vidicon">🎬</div>`
-                : `<img loading="lazy" src="${assetRawUrl(item.path)}" />`}
-              <div class="fname">${escapeHtml(item.path.split('/').pop())}</div>
-            </div>
+  const subOrder = ['Talents', 'Sorts'];
+  const groupNames = Object.keys(nested).sort((a, b) => {
+    if (a === 'Autres fichiers') return 1;
+    if (b === 'Autres fichiers') return -1;
+    return a.localeCompare(b);
+  });
+
+  grid.innerHTML = groupNames.map(group => {
+    const subs = nested[group];
+    const subNames = Object.keys(subs).sort((a, b) => {
+      const ia = subOrder.indexOf(a), ib = subOrder.indexOf(b);
+      if (ia !== -1 && ib !== -1) return ia - ib;
+      if (ia !== -1) return -1;
+      if (ib !== -1) return 1;
+      return a.localeCompare(b);
+    });
+    const total = subNames.reduce((s, k) => s + subs[k].length, 0);
+    return `
+      <details class="collapsible" open>
+        <summary><span class="chevron">▸</span><span class="s-title">${escapeHtml(group)}</span><span class="s-sub">${total}</span></summary>
+        <div class="body">
+          ${subNames.map(sub => `
+            <details class="collapsible nested" open>
+              <summary><span class="chevron">▸</span><span class="s-title">${escapeHtml(sub)}</span><span class="s-sub">${subs[sub].length}</span></summary>
+              <div class="body">
+                <div class="asset-grid">${subs[sub].map(item => assetTileHtml(item, kind)).join('')}</div>
+              </div>
+            </details>
           `).join('')}
         </div>
-      </div>
-    </details>
-  `).join('');
+      </details>
+    `;
+  }).join('');
 }
 function pickAsset(path){
   if (assetPickerCallback) assetPickerCallback(path);
