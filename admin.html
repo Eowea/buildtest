@@ -142,6 +142,26 @@
   .list-add-btn{margin-top:6px;}
   .subitem{border:1px dashed var(--border);border-radius:6px;padding:12px;margin-bottom:10px;position:relative;}
   .subitem .remove-btn{position:absolute;top:8px;right:8px;}
+
+  details.collapsible{background:var(--panel-alt);border:1px solid var(--border);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+  details.collapsible > summary{list-style:none;cursor:pointer;padding:10px 14px;display:flex;align-items:center;gap:10px;user-select:none;}
+  details.collapsible > summary::-webkit-details-marker{display:none;}
+  details.collapsible > summary .chevron{color:var(--gold);font-size:11px;transition:transform .15s;flex:0 0 auto;}
+  details.collapsible[open] > summary .chevron{transform:rotate(90deg);}
+  details.collapsible > summary .s-title{font-weight:600;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  details.collapsible > summary .s-sub{font-size:11px;color:var(--text-dim);margin-left:auto;flex:0 0 auto;display:flex;align-items:center;gap:8px;}
+  details.collapsible > summary .s-dot{width:7px;height:7px;border-radius:50%;flex:0 0 auto;}
+  details.collapsible > .body{padding:2px 14px 14px;border-top:1px solid var(--border);}
+  details.collapsible.nested{background:var(--panel);}
+  details.collapsible.nested > summary{padding:8px 10px;}
+
+  .role-group{margin-bottom:4px;}
+  .role-group > summary{list-style:none;cursor:pointer;padding:8px 10px;display:flex;align-items:center;gap:8px;border-radius:6px;color:var(--text-dim);font-size:11px;text-transform:uppercase;letter-spacing:.05em;font-weight:700;}
+  .role-group > summary:hover{background:var(--panel-alt);}
+  .role-group > summary::-webkit-details-marker{display:none;}
+  .role-group > summary .chevron{transition:transform .15s;}
+  .role-group[open] > summary .chevron{transform:rotate(90deg);}
+  .role-group > summary .count{margin-left:auto;color:var(--text-dim);}
   small.help{display:block;color:var(--text-dim);font-size:11px;margin-top:4px;}
 </style>
 </head>
@@ -647,29 +667,51 @@ function setNested(obj, path, value){
 /* =========================================================================
    LISTE DES HEROS (SIDEBAR)
    ========================================================================= */
+let roleGroupState = {};
 function renderHeroList(){
   const el = document.getElementById('heroListEl');
   const q = (document.getElementById('heroSearch')?.value || '').toLowerCase();
-  el.innerHTML = '';
+
+  if (!el.dataset.toggleBound){
+    el.dataset.toggleBound = '1';
+    el.addEventListener('toggle', e => {
+      const role = e.target && e.target.dataset ? e.target.dataset.role : undefined;
+      if (role !== undefined) roleGroupState[role] = e.target.open;
+    }, true);
+  }
+
+  const groups = [];
+  const groupIndex = {};
   HEROES.forEach((h, idx) => {
     const name = (h.name?.fr || h.id || '').toLowerCase();
-    if (q && !name.includes(q) && !(h.role||'').toLowerCase().includes(q)) return;
-    const item = document.createElement('div');
-    item.className = 'hero-item' + (idx === currentHeroIndex ? ' active' : '');
-    item.onclick = () => selectHero(idx);
-    item.innerHTML = `
-      <img src="${assetRawUrl(h.portrait)}" onerror="this.style.visibility='hidden'" />
-      <div class="meta">
-        <div class="n">${escapeHtml(h.name?.fr || h.id)}</div>
-        <div class="r">${escapeHtml(h.role || '')}</div>
-      </div>
-      <div class="dot ${h.enabled ? 'on':'off'}" title="${h.enabled ? 'Activé':'Désactivé'}"></div>
-    `;
-    el.appendChild(item);
+    const matches = !q || name.includes(q) || (h.role||'').toLowerCase().includes(q);
+    if (!matches) return;
+    const role = h.role || 'Sans rôle';
+    if (!(role in groupIndex)){ groupIndex[role] = groups.length; groups.push({role, items:[]}); }
+    groups[groupIndex[role]].items.push({h, idx});
   });
-  if (!HEROES.length){
+
+  if (!groups.length){
     el.innerHTML = '<div class="empty-state" style="margin-top:20px;">Aucun héros</div>';
+    return;
   }
+
+  el.innerHTML = groups.map(g => {
+    const isOpen = q ? true : (roleGroupState[g.role] !== false);
+    const itemsHtml = g.items.map(({h, idx}) => `
+      <div class="hero-item${idx===currentHeroIndex?' active':''}" onclick="selectHero(${idx})">
+        <img src="${assetRawUrl(h.portrait)}" onerror="this.style.visibility='hidden'" />
+        <div class="meta"><div class="n">${escapeHtml(h.name?.fr || h.id)}</div></div>
+        <div class="dot ${h.enabled ? 'on':'off'}" title="${h.enabled ? 'Activé':'Désactivé'}"></div>
+      </div>
+    `).join('');
+    return `
+      <details class="role-group" data-role="${escapeHtml(g.role)}"${isOpen?' open':''}>
+        <summary><span class="chevron">▸</span><span>${escapeHtml(g.role)}</span><span class="count">${g.items.length}</span></summary>
+        <div>${itemsHtml}</div>
+      </details>
+    `;
+  }).join('');
 }
 function assetRawUrl(path){
   if (!path) return '';
@@ -826,34 +868,42 @@ function removeGuideVideo(idx){
 
 /* ---------- Onglet Sorts ---------- */
 function renderSpellsTab(hero){
-  let html = hero.spells.map((sp, i) => `
-    <div class="subitem">
-      <button class="ghost remove-btn" onclick="removeSpell(${currentHeroIndex},${i})">✕</button>
-      <div class="row">
-        <div class="field"><label>Touche</label><input value="${escapeHtml(sp.key)}" oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'key',this.value)" /></div>
-        <div class="field"><label>Nom (FR)</label><input value="${escapeHtml(sp.name?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'name.fr',this.value)" /></div>
-        <div class="field"><label>Nom (EN)</label><input value="${escapeHtml(sp.name?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'name.en',this.value)" /></div>
-      </div>
-      <div class="field">
-        <label>Icône</label>
-        <div class="thumb-picker">
-          <img src="${assetRawUrl(sp.icon)}" onerror="this.style.visibility='hidden'" />
-          <div class="path">${escapeHtml(sp.icon||'(aucune)')}</div>
-          <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].spells[${i}],'icon',p); renderHeroPanel(); })">Choisir</button>
+  const list = hero.spells;
+  let html = list.map((sp, i) => `
+    <details class="collapsible"${i===list.length-1?' open':''}>
+      <summary>
+        <span class="chevron">▸</span>
+        <span class="s-title">${escapeHtml(sp.name?.fr || sp.key || 'Sort sans nom')}</span>
+        <span class="s-sub">${escapeHtml(sp.key||'')}</span>
+      </summary>
+      <div class="body">
+        <div class="row">
+          <div class="field"><label>Touche</label><input value="${escapeHtml(sp.key)}" oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'key',this.value)" /></div>
+          <div class="field"><label>Nom (FR)</label><input value="${escapeHtml(sp.name?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'name.fr',this.value)" /></div>
+          <div class="field"><label>Nom (EN)</label><input value="${escapeHtml(sp.name?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'name.en',this.value)" /></div>
         </div>
-      </div>
-      <div class="row">
-        <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'description.fr',this.value)">${escapeHtml(sp.description?.fr)}</textarea></div>
-        <div class="field"><label>Description (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'description.en',this.value)">${escapeHtml(sp.description?.en)}</textarea></div>
-      </div>
-      <div class="field">
-        <label>Vidéo de démo (ID YouTube ou fichier .mp4 dans assets)</label>
-        <div class="thumb-picker">
-          <input value="${escapeHtml(sp.demoYoutubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'demoYoutubeId',this.value)" />
-          <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].spells[${i}],'demoYoutubeId',p); renderHeroPanel(); })">Choisir un fichier</button>
+        <div class="field">
+          <label>Icône</label>
+          <div class="thumb-picker">
+            <img src="${assetRawUrl(sp.icon)}" onerror="this.style.visibility='hidden'" />
+            <div class="path">${escapeHtml(sp.icon||'(aucune)')}</div>
+            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].spells[${i}],'icon',p); renderHeroPanel(); })">Choisir</button>
+          </div>
         </div>
+        <div class="row">
+          <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'description.fr',this.value)">${escapeHtml(sp.description?.fr)}</textarea></div>
+          <div class="field"><label>Description (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'description.en',this.value)">${escapeHtml(sp.description?.en)}</textarea></div>
+        </div>
+        <div class="field">
+          <label>Vidéo de démo (ID YouTube ou fichier .mp4 dans assets)</label>
+          <div class="thumb-picker">
+            <input value="${escapeHtml(sp.demoYoutubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'demoYoutubeId',this.value)" />
+            <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].spells[${i}],'demoYoutubeId',p); renderHeroPanel(); })">Choisir un fichier</button>
+          </div>
+        </div>
+        <button class="danger" onclick="removeSpell(${currentHeroIndex},${i})">🗑 Supprimer ce sort</button>
       </div>
-    </div>
+    </details>
   `).join('');
   html += `<button class="list-add-btn" onclick="addSpell(${currentHeroIndex})">+ Ajouter un sort</button>`;
   return html;
@@ -917,11 +967,17 @@ function renderOneBuild(hero, b, i){
     </div>
   `).join('');
   return `
-    <div class="card">
-      <div class="card-head">
-        <div class="title">${escapeHtml(b.label?.fr || 'Build sans nom')}</div>
-        <button class="danger" onclick="removeBuild(${currentHeroIndex},${i})">🗑 Supprimer ce build</button>
-      </div>
+    <details class="collapsible"${i===hero.builds.length-1?' open':''}>
+      <summary>
+        <span class="chevron">▸</span>
+        <span class="s-title">${escapeHtml(b.label?.fr || 'Build sans nom')}</span>
+        <span class="s-sub">
+          ${b.isNew?'<span style="color:var(--gold);">● MàJ</span>':''}
+          <span class="s-dot ${b.enabled?'on':'off'}" style="background:${b.enabled?'var(--green)':'var(--red)'}"></span>
+          ordre ${b.order ?? 0}
+        </span>
+      </summary>
+      <div class="body">
       <div class="checkbox-row">
         <input type="checkbox" ${b.enabled?'checked':''} onchange="setNested(HEROES[${currentHeroIndex}].builds[${i}],'enabled',this.checked)" />
         <label style="margin:0;text-transform:none;">Build activé</label>
@@ -954,65 +1010,79 @@ function renderOneBuild(hero, b, i){
       <h3 style="margin-top:16px;">Talents</h3>
       ${talentsHtml}
       <button onclick="addTalent(${currentHeroIndex},${i})">+ Ajouter un talent</button>
-    </div>
+      <button class="danger" style="margin-top:14px;" onclick="removeBuild(${currentHeroIndex},${i})">🗑 Supprimer ce build</button>
+      </div>
+    </details>
   `;
 }
 function renderTalent(buildIdx, ti, t){
   const altHtml = (t.alternatives||[]).map((a, ai) => `
-    <div class="subitem" style="border-color:var(--gold-dim);">
-      <button class="ghost remove-btn" onclick="HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives.splice(${ai},1); markDirty(); renderHeroPanel();">✕</button>
-      <div class="row">
-        <div class="field"><label>Alternative — Nom (FR)</label><input value="${escapeHtml(a.name?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'name.fr',this.value)" /></div>
-        <div class="field"><label>Alternative — Nom (EN)</label><input value="${escapeHtml(a.name?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'name.en',this.value)" /></div>
-      </div>
-      <div class="field">
-        <label>Icône</label>
-        <div class="thumb-picker">
-          <img src="${assetRawUrl(a.icon)}" onerror="this.style.visibility='hidden'" />
-          <div class="path">${escapeHtml(a.icon||'(aucune)')}</div>
-          <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'icon',p); renderHeroPanel(); })">Choisir</button>
+    <details class="collapsible nested" style="border-color:var(--gold-dim);">
+      <summary>
+        <span class="chevron">▸</span>
+        <span class="s-title">${escapeHtml(a.name?.fr || 'Alternative sans nom')}</span>
+      </summary>
+      <div class="body">
+        <div class="row">
+          <div class="field"><label>Alternative — Nom (FR)</label><input value="${escapeHtml(a.name?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'name.fr',this.value)" /></div>
+          <div class="field"><label>Alternative — Nom (EN)</label><input value="${escapeHtml(a.name?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'name.en',this.value)" /></div>
         </div>
-      </div>
-      <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'description.fr',this.value)">${escapeHtml(a.description?.fr)}</textarea></div>
-      <div class="field"><label>Description (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'description.en',this.value)">${escapeHtml(a.description?.en)}</textarea></div>
-      <div class="field">
-        <label>Vidéo de démo (ID YouTube ou fichier .mp4)</label>
-        <div class="thumb-picker">
-          <input value="${escapeHtml(a.demoYoutubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'demoYoutubeId',this.value)" />
-          <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'demoYoutubeId',p); renderHeroPanel(); })">Choisir</button>
+        <div class="field">
+          <label>Icône</label>
+          <div class="thumb-picker">
+            <img src="${assetRawUrl(a.icon)}" onerror="this.style.visibility='hidden'" />
+            <div class="path">${escapeHtml(a.icon||'(aucune)')}</div>
+            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'icon',p); renderHeroPanel(); })">Choisir</button>
+          </div>
         </div>
+        <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'description.fr',this.value)">${escapeHtml(a.description?.fr)}</textarea></div>
+        <div class="field"><label>Description (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'description.en',this.value)">${escapeHtml(a.description?.en)}</textarea></div>
+        <div class="field">
+          <label>Vidéo de démo (ID YouTube ou fichier .mp4)</label>
+          <div class="thumb-picker">
+            <input value="${escapeHtml(a.demoYoutubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'demoYoutubeId',this.value)" />
+            <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'demoYoutubeId',p); renderHeroPanel(); })">Choisir</button>
+          </div>
+        </div>
+        <button class="danger" onclick="HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives.splice(${ai},1); markDirty(); renderHeroPanel();">🗑 Supprimer cette alternative</button>
       </div>
-    </div>
+    </details>
   `).join('');
   return `
-    <div class="subitem">
-      <button class="ghost remove-btn" onclick="removeTalent(${currentHeroIndex},${buildIdx},${ti})">✕</button>
-      <div class="row">
-        <div class="field"><label>Niveau</label><input type="number" value="${t.level ?? ''}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'level',parseInt(this.value||'0'))" /></div>
-        <div class="field"><label>Nom (FR)</label><input value="${escapeHtml(t.name?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'name.fr',this.value)" /></div>
-        <div class="field"><label>Nom (EN)</label><input value="${escapeHtml(t.name?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'name.en',this.value)" /></div>
-      </div>
-      <div class="field">
-        <label>Icône</label>
-        <div class="thumb-picker">
-          <img src="${assetRawUrl(t.icon)}" onerror="this.style.visibility='hidden'" />
-          <div class="path">${escapeHtml(t.icon||'(aucune)')}</div>
-          <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'icon',p); renderHeroPanel(); })">Choisir</button>
+    <details class="collapsible nested">
+      <summary>
+        <span class="chevron">▸</span>
+        <span class="s-title">Niv. ${escapeHtml(t.level ?? '?')} — ${escapeHtml(t.name?.fr || 'Talent sans nom')}</span>
+      </summary>
+      <div class="body">
+        <div class="row">
+          <div class="field"><label>Niveau</label><input type="number" value="${t.level ?? ''}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'level',parseInt(this.value||'0'))" /></div>
+          <div class="field"><label>Nom (FR)</label><input value="${escapeHtml(t.name?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'name.fr',this.value)" /></div>
+          <div class="field"><label>Nom (EN)</label><input value="${escapeHtml(t.name?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'name.en',this.value)" /></div>
         </div>
-      </div>
-      <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'description.fr',this.value)">${escapeHtml(t.description?.fr)}</textarea></div>
-      <div class="field"><label>Description (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'description.en',this.value)">${escapeHtml(t.description?.en)}</textarea></div>
-      <div class="field">
-        <label>Vidéo de démo (ID YouTube ou fichier .mp4)</label>
-        <div class="thumb-picker">
-          <input value="${escapeHtml(t.demoYoutubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'demoYoutubeId',this.value)" />
-          <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'demoYoutubeId',p); renderHeroPanel(); })">Choisir</button>
+        <div class="field">
+          <label>Icône</label>
+          <div class="thumb-picker">
+            <img src="${assetRawUrl(t.icon)}" onerror="this.style.visibility='hidden'" />
+            <div class="path">${escapeHtml(t.icon||'(aucune)')}</div>
+            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'icon',p); renderHeroPanel(); })">Choisir</button>
+          </div>
         </div>
+        <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'description.fr',this.value)">${escapeHtml(t.description?.fr)}</textarea></div>
+        <div class="field"><label>Description (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'description.en',this.value)">${escapeHtml(t.description?.en)}</textarea></div>
+        <div class="field">
+          <label>Vidéo de démo (ID YouTube ou fichier .mp4)</label>
+          <div class="thumb-picker">
+            <input value="${escapeHtml(t.demoYoutubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'demoYoutubeId',this.value)" />
+            <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'demoYoutubeId',p); renderHeroPanel(); })">Choisir</button>
+          </div>
+        </div>
+        <h3 style="margin-top:10px;font-size:12px;color:var(--text-dim);">Talents alternatifs</h3>
+        ${altHtml}
+        <button class="ghost" onclick="addAlternative(${currentHeroIndex},${buildIdx},${ti})">+ Ajouter une alternative</button>
+        <button class="danger" style="margin-top:10px;" onclick="removeTalent(${currentHeroIndex},${buildIdx},${ti})">🗑 Supprimer ce talent</button>
       </div>
-      <h3 style="margin-top:10px;font-size:12px;color:var(--text-dim);">Talents alternatifs</h3>
-      ${altHtml}
-      <button class="ghost" onclick="addAlternative(${currentHeroIndex},${buildIdx},${ti})">+ Ajouter une alternative</button>
-    </div>
+    </details>
   `;
 }
 function addBuild(idx){
