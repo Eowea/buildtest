@@ -770,7 +770,7 @@
     /* ═══════════════════════════════
        BUILD SECTION
        ═══════════════════════════════ */
-    .build-tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 16px; }
+    .build-tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 16px; justify-content: center; }
 
     .build-tab {
       position: relative;
