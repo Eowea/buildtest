@@ -202,7 +202,7 @@
       <small class="help">Laisse ce champ vide pour réutiliser le token déjà utilisé lors de ta dernière connexion (si tu changes juste de dépôt, mais que ton token a accès aux deux).</small>
     </div>
     <div class="checkbox-row">
-      <input id="rememberToken" type="checkbox" />
+      <input id="rememberToken" type="checkbox" checked />
       <label style="margin:0;text-transform:none;font-size:12px;">Se souvenir du token sur cet appareil</label>
     </div>
     <button class="primary" style="width:100%" onclick="handleTokenSubmit()">Vérifier et continuer</button>
@@ -220,8 +220,9 @@
       </div>
     </div>
     <div class="topbar-right">
+      <select id="topbarRepoSelect" onchange="switchRepoFromTopbar()" style="width:auto;"></select>
       <button onclick="reloadFromGitHub()">↻ Recharger</button>
-      <button onclick="showChangeRepo()">⇄ Changer de dépôt</button>
+      <button onclick="editTokenPrompt()">🔑 Modifier le token</button>
       <button class="primary" id="saveBtn" onclick="saveAll()">💾 Enregistrer sur GitHub</button>
       <button class="ghost" onclick="logout()">Déconnexion</button>
     </div>
@@ -437,12 +438,59 @@ async function handleTokenSubmit(){
   }
 }
 
-function showChangeRepo(){
-  document.getElementById('appScreen').style.display = 'none';
-  document.getElementById('tokenScreen').classList.remove('hidden');
-  document.getElementById('tokenGreetUser').textContent = currentUser || '';
-  populateRepoSelect();
-  document.getElementById('tokenInput').value = '';
+function populateTopbarRepoSelect(){
+  const sel = document.getElementById('topbarRepoSelect');
+  const known = REPO_OPTIONS.some(o => o.owner === REPO_OWNER && o.name === REPO_NAME);
+  let options = REPO_OPTIONS.map(o => `<option value="${o.owner}/${o.name}">${escapeHtml(o.label)}</option>`).join('');
+  if (!known) options += `<option value="${REPO_OWNER}/${REPO_NAME}">${escapeHtml(REPO_OWNER + '/' + REPO_NAME)}</option>`;
+  options += '<option value="__custom__">Autre...</option>';
+  sel.innerHTML = options;
+  sel.value = `${REPO_OWNER}/${REPO_NAME}`;
+}
+
+async function switchRepoFromTopbar(){
+  const sel = document.getElementById('topbarRepoSelect');
+  const val = sel.value;
+  const prevOwner = REPO_OWNER, prevName = REPO_NAME;
+  let owner, name;
+
+  if (val === '__custom__'){
+    const input = prompt('Dépôt personnalisé (format proprietaire/nom) :', `${REPO_OWNER}/${REPO_NAME}`);
+    if (!input || !input.includes('/')){ populateTopbarRepoSelect(); return; }
+    [owner, name] = input.split('/').map(s => s.trim());
+  } else {
+    [owner, name] = val.split('/');
+  }
+
+  if (owner === REPO_OWNER && name === REPO_NAME){ populateTopbarRepoSelect(); return; }
+
+  REPO_OWNER = owner; REPO_NAME = name;
+  try{
+    await checkTokenAccess();
+    localStorage.setItem('eowea_admin_repo_owner', REPO_OWNER);
+    localStorage.setItem('eowea_admin_repo_name', REPO_NAME);
+    toast(`Dépôt changé : ${REPO_OWNER}/${REPO_NAME}`, 'success');
+    await reloadFromGitHub();
+  }catch(e){
+    REPO_OWNER = prevOwner; REPO_NAME = prevName;
+    toast("Impossible de passer sur ce dépôt : " + e.message, 'error');
+  }
+  populateTopbarRepoSelect();
+}
+
+async function editTokenPrompt(){
+  const newToken = prompt('Colle un nouveau token GitHub (laisse vide pour annuler) :');
+  if (!newToken) return;
+  const prevToken = githubToken;
+  githubToken = newToken.trim();
+  try{
+    await checkTokenAccess();
+    localStorage.setItem('eowea_admin_token', githubToken);
+    toast('Token mis à jour ✔', 'success');
+  }catch(e){
+    githubToken = prevToken;
+    toast('Token invalide : ' + e.message, 'error');
+  }
 }
 
 /* =========================================================================
@@ -514,6 +562,7 @@ function serializeDataFile(){
 async function bootApp(){
   document.getElementById('tokenScreen').classList.add('hidden');
   document.getElementById('appScreen').style.display = 'flex';
+  populateTopbarRepoSelect();
   await reloadFromGitHub();
 }
 
