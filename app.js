@@ -428,6 +428,7 @@ const tabsHtml = sortedBuildIndices.map(i => {
   el.innerHTML=`<div class="build-tabs">${tabsHtml}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(b.talents)}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
   bindFloatingTriggers();
   bindComboCarousel();
+  queueLayoutSync();
 }
 
 let cachedFourBuilds = null;

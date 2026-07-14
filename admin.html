@@ -1233,11 +1233,11 @@ function renderAssetGrid(kind){
     });
     const total = subNames.reduce((s, k) => s + subs[k].length, 0);
     return `
-      <details class="collapsible" open>
+      <details class="collapsible">
         <summary><span class="chevron">▸</span><span class="s-title">${escapeHtml(group)}</span><span class="s-sub">${total}</span></summary>
         <div class="body">
           ${subNames.map(sub => `
-            <details class="collapsible nested" open>
+            <details class="collapsible nested">
               <summary><span class="chevron">▸</span><span class="s-title">${escapeHtml(sub)}</span><span class="s-sub">${subs[sub].length}</span></summary>
               <div class="body">
                 <div class="asset-grid">${subs[sub].map(item => assetTileHtml(item, kind)).join('')}</div>
