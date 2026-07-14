@@ -793,17 +793,14 @@ function renderOneBuild(hero, b, i){
         <div class="field"><label>Titre (FR)</label><input value="${escapeHtml(v.title?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'title.fr',this.value)" /></div>
         <div class="field"><label>Titre (EN)</label><input value="${escapeHtml(v.title?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'title.en',this.value)" /></div>
       </div>
-      <div class="row">
-        <div class="field"><label>Description (FR)</label><input value="${escapeHtml(v.desc?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'desc.fr',this.value)" /></div>
-        <div class="field"><label>Description (EN)</label><input value="${escapeHtml(v.desc?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'desc.en',this.value)" /></div>
-      </div>
+      <small class="help">Ce titre s'affiche en jaune au-dessus de la vidéo sur le site (plus de description affichée).</small>
       <div class="field">
         <label>Vidéo (lien/ID YouTube ou fichier assets)</label>
         <div class="thumb-picker">
           <input value="${escapeHtml(v.youtubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'youtubeId',this.value)" />
           <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'youtubeId',p); renderHeroPanel(); })">Choisir un fichier</button>
         </div>
-        <small class="help">Colle un lien/ID YouTube (ex: https://youtube.com/watch?v=XXXXXXXXXXX), ou choisis un fichier .mp4/.webm/.gif/.webp du dossier assets/ avec le bouton.</small>
+        <small class="help">Colle un lien/ID YouTube (ex: https://youtube.com/watch?v=XXXXXXXXXXX), ou choisis un fichier .mp4/.webm/.gif/.webp du dossier assets/ avec le bouton. Survole la vidéo (ou appuie dessus sur mobile) pour la lire — plusieurs vidéos s'affichent en carrousel avec des flèches.</small>
       </div>
     </div>
   `).join('');

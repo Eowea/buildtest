@@ -30,6 +30,8 @@
       mainVideo: { fr: "Vidéo principale", en: "Main video" },
       seeGuide: { fr: "Voir le guide &rarr;", en: "Watch guide &rarr;" },
       videoUnavailable: { fr: "Vidéo non disponible", en: "Video unavailable" },
+      prevVideo: { fr: "Vidéo précédente", en: "Previous video" },
+      nextVideo: { fr: "Vidéo suivante", en: "Next video" },
       lastUpdate: { fr: "Dernière mise à jour :", en: "Last updated:" },
       defaultBuildCodeTitle: { fr: "À COLLER DANS L'ARBRE DES TALENTS", en: "PASTE INTO TALENT TREE" },
       emptyTalents: { fr: "Aucun talent dans ce build.", en: "No talents in this build." },
@@ -357,18 +359,30 @@ function renderGuide(g) {
 }    
     function renderVideoCards(vs) {
       if(!vs?.length) return '';
-      return `<section class="video-group combo-video-section"><div class="combo-grid">${vs.map(v=>{
+      const slides = vs.map((v,idx) => {
         const raw = v.youtubeId||v.youtubeUrl||v.url||'';
         const isMedia = isLocalMediaRef(raw);
         const id = isMedia ? '' : parseYouTubeId(raw);
         const hasSomething = isMedia || !!id;
-        const refAttr = isMedia ? raw : id;
-        const typeAttr = isMedia ? 'media' : 'youtube';
-        const thumbInner = isMedia
-          ? `<video src="${esc(raw)}" muted loop autoplay playsinline></video>`
-          : (id ? `<img src="${ytThumb(id)}" alt="${esc(loc(v.title))}" loading="lazy" />` : '');
-        return `<button class="youtube-card" type="button" data-video-ref="${esc(refAttr)}" data-video-type="${typeAttr}"><div class="youtube-thumb">${thumbInner}<div class="youtube-preview" data-preview></div>${isMedia?'':'<span class="youtube-badge">combo</span>'}${hasSomething?'<span class="youtube-play"></span>':`<div class="youtube-unavailable">${t('videoUnavailable')}</div>`}</div><div class="combo-info"><div class="combo-title">${esc(loc(v.title))}</div><div class="combo-desc">${esc(loc(v.desc))}</div></div></button>`;
-      }).join('')}</div></section>`;
+        let stageInner;
+        if (isMedia) {
+          stageInner = `<video class="combo-media" src="${esc(raw)}" muted loop playsinline preload="metadata" data-video-el></video>`;
+        } else if (id) {
+          stageInner = `<img class="combo-poster" src="${ytThumb(id)}" alt="${esc(loc(v.title))}" loading="lazy" data-poster /><div class="combo-frame" data-frame></div>`;
+        } else {
+          stageInner = `<div class="youtube-unavailable">${t('videoUnavailable')}</div>`;
+        }
+        return `<div class="combo-slide${idx===0?' is-active':''}" data-index="${idx}" data-video-type="${isMedia?'media':'youtube'}" data-video-ref="${esc(isMedia?raw:id)}">
+          <div class="combo-slide-title">${esc(loc(v.title))}</div>
+          <div class="combo-stage"${hasSomething?'':' data-empty'}>${stageInner}</div>
+        </div>`;
+      }).join('');
+      const navHtml = vs.length > 1 ? `
+        <button class="combo-nav prev" type="button" aria-label="${t('prevVideo')}">&#10094;</button>
+        <button class="combo-nav next" type="button" aria-label="${t('nextVideo')}">&#10095;</button>
+        <div class="combo-dots">${vs.map((_,idx)=>`<span class="combo-dot${idx===0?' is-active':''}" data-dot="${idx}"></span>`).join('')}</div>
+      ` : '';
+      return `<section class="video-group combo-video-section"><div class="combo-carousel">${slides}${navHtml}</div></section>`;
     }
     function renderBuildVideos(h,b) { const wg=hasGuide(h?.guideVideo); return `<section class="videos-layout${wg?' with-guide':''}">${wg?renderGuide(h.guideVideo):''}${renderVideoCards(b.videos)}</section>`; }
 
@@ -404,7 +418,8 @@ const tabsHtml = hero.builds.map((x, i) => {
     : '';
   
   el.innerHTML=`<div class="build-tabs">${tabsHtml}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(b.talents)}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
-  bindFloatingTriggers(); 
+  bindFloatingTriggers();
+  bindComboCarousel();
 }
 
 let cachedFourBuilds = null;
@@ -558,9 +573,72 @@ function bindFloatingTriggers(root = document) {
     }
   });
 }
-    function startPreview(c) { if(!c||c.classList.contains('is-previewing')) return; if(c.dataset.videoType==='media') return; const id=parseYouTubeId(c.dataset.videoRef||''),h=c.querySelector('[data-preview]'); if(!id||!h) return; h.innerHTML=`<iframe src="${ytPreview(id)}" title="Preview" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>`; c.classList.add('is-previewing'); }
-    function stopPreview(c) { if(!c) return; if(c.dataset.videoType==='media') return; const h=c.querySelector('[data-preview]'); if(h) h.innerHTML=''; c.classList.remove('is-previewing'); }
-    function bindComboVideoPreviews() { els.detailView.querySelectorAll('.combo-video-section .youtube-card').forEach(c=>{if(c.dataset.previewBound) return; c.dataset.previewBound='1'; c.addEventListener('mouseenter',()=>startPreview(c)); c.addEventListener('mouseleave',()=>stopPreview(c)); c.addEventListener('focus',()=>startPreview(c)); c.addEventListener('blur',()=>stopPreview(c));}); }
+    function stopSlideMedia(slide) {
+      if (!slide) return;
+      const stage = slide.querySelector('.combo-stage');
+      if (!stage) return;
+      if (slide.dataset.videoType === 'media') {
+        const v = stage.querySelector('[data-video-el]');
+        if (v) { v.pause(); v.currentTime = 0; }
+      } else {
+        stage.classList.remove('is-playing');
+        const frame = stage.querySelector('[data-frame]');
+        if (frame) { frame.innerHTML = ''; delete frame.dataset.loaded; }
+      }
+    }
+    function playSlideMedia(slide) {
+      if (!slide) return;
+      const stage = slide.querySelector('.combo-stage');
+      if (!stage) return;
+      if (slide.dataset.videoType === 'media') {
+        const v = stage.querySelector('[data-video-el]');
+        if (v) v.play().catch(()=>{});
+      } else {
+        const ref = slide.dataset.videoRef;
+        if (!ref) return;
+        const frame = stage.querySelector('[data-frame]');
+        if (frame && !frame.dataset.loaded) {
+          frame.dataset.loaded = '1';
+          frame.innerHTML = `<iframe src="${ytPreview(ref)}" title="Preview" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+        }
+        stage.classList.add('is-playing');
+      }
+    }
+    function bindComboCarousel() {
+      els.detailView.querySelectorAll('.combo-carousel').forEach(carousel => {
+        if (carousel.dataset.bound) return;
+        carousel.dataset.bound = '1';
+
+        const slides = [...carousel.querySelectorAll('.combo-slide')];
+        const dots = [...carousel.querySelectorAll('.combo-dot')];
+        const prevBtn = carousel.querySelector('.combo-nav.prev');
+        const nextBtn = carousel.querySelector('.combo-nav.next');
+        let active = 0;
+
+        function goTo(idx) {
+          if (idx < 0) idx = slides.length - 1;
+          if (idx >= slides.length) idx = 0;
+          if (idx === active) return;
+          stopSlideMedia(slides[active]);
+          slides[active].classList.remove('is-active');
+          dots[active]?.classList.remove('is-active');
+          active = idx;
+          slides[active].classList.add('is-active');
+          dots[active]?.classList.add('is-active');
+        }
+        prevBtn?.addEventListener('click', () => goTo(active - 1));
+        nextBtn?.addEventListener('click', () => goTo(active + 1));
+        dots.forEach(d => d.addEventListener('click', () => goTo(Number(d.dataset.dot))));
+
+        slides.forEach(slide => {
+          slide.addEventListener('mouseenter', () => playSlideMedia(slide));
+          slide.addEventListener('mouseleave', () => stopSlideMedia(slide));
+          slide.addEventListener('touchstart', () => playSlideMedia(slide), {passive:true});
+          slide.addEventListener('touchend', () => stopSlideMedia(slide));
+          slide.addEventListener('touchcancel', () => stopSlideMedia(slide));
+        });
+      });
+    }
 
     function syncTalentBoards() { els.detailView.querySelectorAll('.talent-board-scroller').forEach(s=>{const t=s.querySelector('.talent-board-track'); if(!t) return; s.classList.remove('is-centered'); s.classList.toggle('is-centered',t.scrollWidth<=s.clientWidth+4); if(t.scrollWidth<=s.clientWidth+4) s.scrollLeft=0;}); }
     function queueLayoutSync() { if(layoutRaf) return; layoutRaf=requestAnimationFrame(()=>{layoutRaf=0;syncTalentBoards();}); }
@@ -753,35 +831,6 @@ els.detailView.addEventListener('mousedown', (e) => {
     copyBuildCode(buildCodeBtn);
     return;
   }
-
-const yt = e.target.closest('[data-video-ref]');
-if (yt) {
-  const videoRef = yt.dataset.videoRef;
-  const videoType = yt.dataset.videoType || 'youtube';
-
-  if (videoType === 'media') {
-    // Fichier local (assets/...) : on l'ouvre directement dans la lightbox, pas de lien YouTube.
-    openLightbox(videoRef, 'media');
-    return;
-  }
-
-  // Détection si l'utilisateur est sur un appareil mobile
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-  if (isMobile) {
-    // On construit l'URL de telle sorte que le téléphone propose l'application
-    // On utilise une petite astuce de délai pour essayer d'ouvrir l'app puis le navigateur si ça échoue
-    const webUrl = `https://www.youtube.com/watch?v=${videoRef}`;
-    
-    // Pour iOS/Android, l'URL standard HTTPS suffit généralement à déclencher l'app
-    // si l'utilisateur l'a installée.
-    window.location.assign(webUrl);
-  } else {
-    // Sur PC, on garde votre lightbox personnalisée
-    openLightbox(videoRef, 'youtube');
-  }
-  return;
-}
 });
     els.videoOverlay.addEventListener('click',e=>{if(e.target===els.videoOverlay||e.target===els.closeOverlayBtn) closeLightbox();});
 els.langSwitcher.addEventListener('click', (e) => {

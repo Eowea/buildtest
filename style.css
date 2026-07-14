@@ -1068,6 +1068,43 @@
     .combo-title { font-size: 14px; font-weight: 700; color: var(--text-bright); margin-bottom: 4px; overflow-wrap: break-word; font-family: 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
     .combo-desc { font-size: 12px; color: var(--text-dim); line-height: 1.5; overflow-wrap: break-word; }
 
+    /* ---------- Carrousel de vidéos de build (survol / appui pour lire) ---------- */
+    .combo-carousel { position: relative; width: 100%; max-width: 640px; margin: 0 auto; }
+    .combo-slide { display: none; }
+    .combo-slide.is-active { display: block; }
+    .combo-slide-title {
+      font-family: 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 0.06em;
+      font-size: 15px; font-weight: 700; color: var(--gold); text-align: center;
+      margin-bottom: 10px; overflow-wrap: break-word;
+    }
+    .combo-stage {
+      position: relative; aspect-ratio: 16 / 9; width: 100%; background: #000;
+      border: 1px solid var(--blue-border); border-radius: var(--radius-lg);
+      overflow: hidden; cursor: default; pointer-events: none;
+    }
+    .combo-stage[data-empty] { pointer-events: none; }
+    .combo-media, .combo-poster, .combo-frame { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .combo-frame { z-index: 2; display: none; background: #000; }
+    .combo-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .combo-stage.is-playing .combo-frame { display: block; }
+    .combo-stage.is-playing .combo-poster { opacity: 0; }
+    .combo-poster { transition: opacity .25s ease; }
+
+    .combo-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 38px; height: 38px; border-radius: 50%; z-index: 5;
+      background: rgba(8, 12, 20, 0.75); border: 1px solid var(--gold-border);
+      color: var(--gold-bright); font-size: 14px; display: grid; place-items: center;
+      cursor: pointer; transition: all var(--t); backdrop-filter: blur(4px);
+    }
+    .combo-nav:hover { background: var(--gold); color: #08090c; box-shadow: 0 0 18px var(--gold-glow); }
+    .combo-nav.prev { left: -8px; }
+    .combo-nav.next { right: -8px; }
+
+    .combo-dots { display: flex; justify-content: center; gap: 8px; margin-top: 12px; }
+    .combo-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-muted); cursor: pointer; transition: all var(--t); }
+    .combo-dot.is-active { background: var(--gold); box-shadow: 0 0 8px var(--gold-glow); transform: scale(1.2); }
+
     /* ── Lightbox ── */
     .video-overlay {
       display: none; position: fixed; inset: 0; background: rgba(8, 12, 20, 0.95);
@@ -1158,6 +1195,9 @@
     }
 
 @media (max-width: 640px) {
+      .combo-nav.prev { left: 6px; }
+      .combo-nav.next { right: 6px; }
+      .combo-carousel { max-width: 100%; }
       .page { width: 100%; max-width: 100%; padding: 0 12px; margin: 8px auto 16px; box-sizing: border-box; }
       .topbar, .toolbar, .sidebar, .content { padding: 14px; width: 100%; box-sizing: border-box; }
       
