@@ -408,8 +408,12 @@ async function handleLogin(){
     errEl.classList.remove('hidden');
     return;
   }
-  currentUser = username;
   sessionStorage.setItem('eowea_admin_user', username);
+  await proceedAfterLogin(username);
+}
+
+async function proceedAfterLogin(username){
+  currentUser = username;
   document.getElementById('loginScreen').classList.add('hidden');
   document.getElementById('tokenGreetUser').textContent = username;
 
@@ -1448,8 +1452,14 @@ async function commitAdminsFile(){
    DEMARRAGE
    ========================================================================= */
 (function init(){
-  // rien à faire ici : on attend l'action de l'utilisateur sur l'écran de login.
-  // (une reconnexion auto via sessionStorage pourrait être ajoutée ici si besoin)
+  // Si l'onglet a été rafraîchi (ou rouvert dans la même session de navigateur) et
+  // qu'un pseudo valide est déjà mémorisé, on saute l'écran de connexion pseudo/mdp
+  // et on tente directement la suite (token GitHub déjà mémorisé ou son écran).
+  const savedUser = sessionStorage.getItem('eowea_admin_user');
+  if (savedUser && typeof ADMINS !== 'undefined' && ADMINS.some(a => a.username === savedUser)){
+    document.getElementById('loginScreen').classList.add('hidden');
+    proceedAfterLogin(savedUser);
+  }
 })();
 </script>
 </body>
