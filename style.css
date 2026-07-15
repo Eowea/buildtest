@@ -827,19 +827,19 @@
     .talent-board-wrap { margin-bottom: 24px; overflow: hidden; width: 100%; min-width: 0; }
 
     .talent-board-scroller {
+      display: flex;
+      justify-content: safe center; /* centre si ça tient, sinon aligne à gauche et laisse défiler */
       overflow-x: auto; overflow-y: visible;
       padding: 24px 4px 12px;
       scrollbar-width: none; -webkit-overflow-scrolling: touch;
       width: 100%;
     }
     .talent-board-scroller::-webkit-scrollbar { display: none; }
-    .talent-board-scroller.is-centered { overflow-x: hidden; }
 
     .talent-board-track {
-      display: flex; gap: 12px; width: max-content; min-width: 100%; position: relative; align-items: flex-start; padding-inline: 4px;
+      display: flex; gap: 12px; flex: 0 0 auto; position: relative; align-items: flex-start; padding-inline: 4px;
     }
-    .talent-board-scroller.is-centered .talent-board-track { width: fit-content; min-width: 0; margin-inline: auto; }
-    
+
     .talent-board-track::before {
       content: ''; position: absolute;
       left: 60px; right: 60px; top: 76px; height: 3px;
