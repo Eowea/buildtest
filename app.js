@@ -73,7 +73,7 @@ const getInitialLang = () => {
       lang: getInitialLang() 
     };
 
-    let activeFloatingTrigger = null, hideTooltipTimer = null, tooltipRaf = 0;
+    let activeFloatingTrigger = null, hideTooltipTimer = null, tooltipRaf = 0, layoutRaf = 0;
 
     const $ = id => document.getElementById(id);
     const els = { siteTitle: $('siteTitle'), siteSubtitle: $('siteSubtitle'), socials: $('socials'), desktopTwitchMount: $('desktopTwitchMount'), mobileTwitchMount: $('mobileTwitchMount'), desktopTwitchCard: $('desktopTwitchCard'), toggleTwitch: $('toggleTwitch'), searchInput: $('searchInput'), resultsCount: $('resultsCount'), roleFilters: $('roleFilters'), heroList: $('heroList'), detailView: $('detailView'), tooltipPortal: $('tooltipPortal'), videoOverlay: $('videoOverlay'), closeOverlayBtn: $('closeOverlayBtn'), overlayStatusText: $('overlayStatusText'), expandedYoutube: $('expandedYoutube'), expandedMedia: $('expandedMedia'), langSwitcher: $('langSwitcher') };
@@ -434,6 +434,7 @@ const tabsHtml = sortedBuildIndices.map(i => {
   el.innerHTML=`<div class="build-tabs">${tabsHtml}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(b.talents)}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
   bindFloatingTriggers();
   bindComboCarousel();
+  queueLayoutSync();
 }
 
 let cachedFourBuilds = null;
@@ -716,7 +717,14 @@ function bindFloatingTriggers(root = document) {
       });
     }
 
-
+    function syncTalentBoards() { els.detailView.querySelectorAll('.talent-board-scroller').forEach(s=>{const t=s.querySelector('.talent-board-track'); if(!t) return; s.classList.remove('is-centered'); s.classList.toggle('is-centered',t.scrollWidth<=s.clientWidth+4); if(t.scrollWidth<=s.clientWidth+4) s.scrollLeft=0;}); }
+    function queueLayoutSync() {
+      if (layoutRaf) return;
+      layoutRaf = requestAnimationFrame(() => { layoutRaf = 0; syncTalentBoards(); });
+      // Filet de sécurité : si des icônes ou la police web finissent de charger un peu
+      // après ce premier calcul, on revérifie une fois de plus un instant plus tard.
+      setTimeout(syncTalentBoards, 200);
+    }
 
     function openLightbox(ref, type='youtube') {
       // Cas fichier local (assets/....mp4, .webm, .gif, .webp)
@@ -926,7 +934,7 @@ els.langSwitcher.addEventListener('click', (e) => {
     hideFloatingTooltip(true);
   }
 });
-    window.addEventListener('resize',()=>{queueTooltipPosition();});
+    window.addEventListener('resize',()=>{queueTooltipPosition();queueLayoutSync();});
     window.addEventListener('scroll', queueTooltipPosition, { passive: true, capture: true });
 
 restoreFromHash(); renderAll();
