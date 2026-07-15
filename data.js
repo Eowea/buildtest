@@ -1776,7 +1776,7 @@ const HEROES = [
       {
         "title": {
           "fr": "Guide de Malganyr",
-          "en": "Guide de Malganyr"
+          "en": "Malganyr's Guide, in French"
         },
         "youtubeId": "https://www.youtube.com/watch?v=Ovv6Dc7wzyU"
       }
