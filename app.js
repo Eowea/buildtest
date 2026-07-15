@@ -339,30 +339,35 @@ function renderBuildCode(b) {
   }
 }
     
-    function hasGuide(g) { return !!parseYouTubeId(g?.youtubeId||g?.youtubeUrl||g?.url||''); }
-function renderGuide(g) {
-  const id = parseYouTubeId(g?.youtubeId || g?.youtubeUrl || g?.url || '');
-  if (!id) return '';
+    function getGuideVideos(h) {
+      if (Array.isArray(h?.guideVideos) && h.guideVideos.length) return h.guideVideos;
+      if (h?.guideVideo) return [h.guideVideo]; // compatibilité avec l'ancien format (un seul objet)
+      return [];
+    }
+    function hasGuide(h) { return getGuideVideos(h).some(g => parseYouTubeId(g?.youtubeId||g?.youtubeUrl||g?.url||'')); }
+function renderGuide(h) {
+  const slides = getGuideVideos(h)
+    .map(g => ({ g, id: parseYouTubeId(g?.youtubeId||g?.youtubeUrl||g?.url||'') }))
+    .filter(x => x.id);
+  if (!slides.length) return '';
 
-  // On utilise un lien <a> au lieu d'un <button>
-  // On retire data-youtube-id pour que la lightbox ne s'ouvre pas
-  return `
-    <section class="video-group">
-      <a class="guide-video-card" href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex;">
-        <div class="guide-video-media">
-          <img src="${ytThumb(id)}" alt="${esc(loc(g.title))}" loading="lazy" />
-          ${APP_CONFIG.showGuideBadge ? '<span class="youtube-badge">guide</span>' : ''}
-          <span class="youtube-play"></span>
-        </div>
-        <div class="guide-video-content">
-          <div class="guide-video-kicker">${t('mainVideo')}</div>
-          <div class="guide-video-title">${esc(loc(g.title) || 'Guide')}</div>
-          <div class="guide-video-desc">${esc(loc(g.desc) || '')}</div>
-          <div class="guide-video-cta">${t('seeGuide')}</div>
-        </div>
+  const slidesHtml = slides.map((x, idx) => `
+    <div class="combo-slide${idx===0?' is-active':''}" data-index="${idx}">
+      <div class="combo-slide-title">${esc(loc(x.g.title) || 'Guide')}</div>
+      <a class="combo-stage guide-stage-link" href="https://www.youtube.com/watch?v=${x.id}" target="_blank" rel="noopener noreferrer">
+        <img class="combo-poster" src="${ytThumb(x.id)}" alt="${esc(loc(x.g.title))}" loading="lazy" />
+        ${APP_CONFIG.showGuideBadge ? '<span class="youtube-badge">guide</span>' : ''}
+        <span class="youtube-play"></span>
       </a>
-    </section>`;
-}    
+    </div>
+  `).join('');
+  const navHtml = slides.length > 1 ? `
+    <button class="combo-nav prev" type="button" aria-label="${t('prevVideo')}">&#10094;</button>
+    <button class="combo-nav next" type="button" aria-label="${t('nextVideo')}">&#10095;</button>
+    <div class="combo-dots">${slides.map((_,idx)=>`<span class="combo-dot${idx===0?' is-active':''}" data-dot="${idx}"></span>`).join('')}</div>
+  ` : '';
+  return `<section class="video-group guide-video-section"><div class="combo-carousel">${slidesHtml}${navHtml}</div></section>`;
+}
     function renderVideoCards(vs) {
       if(!vs?.length) return '';
       const slides = vs.map((v,idx) => {
@@ -390,7 +395,7 @@ function renderGuide(g) {
       ` : '';
       return `<section class="video-group combo-video-section"><div class="combo-carousel">${slides}${navHtml}</div></section>`;
     }
-    function renderBuildVideos(h,b) { const wg=hasGuide(h?.guideVideo); return `<section class="videos-layout${wg?' with-guide':''}">${wg?renderGuide(h.guideVideo):''}${renderVideoCards(b.videos)}</section>`; }
+    function renderBuildVideos(h,b) { const wg=hasGuide(h); return `<section class="videos-layout${wg?' with-guide':''}">${wg?renderGuide(h):''}${renderVideoCards(b.videos)}</section>`; }
 
 function renderBuildSection(hero) { 
   const el = $('buildSection'); 

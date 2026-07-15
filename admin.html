@@ -631,6 +631,10 @@ function normalizeLoadedData(){
   // Corrige/complète les anciennes entrées "videos" de build qui seraient de simples
   // chaines de texte au lieu de l'objet {title, desc, youtubeId} attendu par app.js.
   HEROES.forEach(h => {
+    if (!Array.isArray(h.guideVideos)){
+      h.guideVideos = h.guideVideo ? [h.guideVideo] : [];
+    }
+    delete h.guideVideo;
     (h.builds||[]).forEach(b => {
       b.updatedAt = b.updatedAt || {fr:'',en:''};
       b.videos = (b.videos||[]).map(v => {
@@ -794,7 +798,7 @@ function addHero(){
     portrait: '',
     headline: { fr:'', en:'' },
     gameplay: { fr:'', en:'' },
-    guideVideo: null,
+    guideVideos: [],
     spells: [],
     tips: [],
     builds: []
@@ -902,32 +906,40 @@ function renderInfosTab(hero){
       <div class="field"><label>Description du gameplay (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}],'gameplay.en',this.value)">${escapeHtml(hero.gameplay?.en)}</textarea></div>
     </div>
     <div class="card">
-      <div class="card-head"><div class="title">Vidéo guide express</div>
-        <div>
-          ${hero.guideVideo
-            ? `<button class="danger" onclick="removeGuideVideo(${currentHeroIndex})">Retirer</button>`
-            : `<button onclick="addGuideVideo(${currentHeroIndex})">+ Ajouter</button>`}
-        </div>
-      </div>
-      ${hero.guideVideo ? `
-        <div class="row">
-          <div class="field"><label>Titre (FR)</label><input value="${escapeHtml(hero.guideVideo.title?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].guideVideo,'title.fr',this.value)" /></div>
-          <div class="field"><label>Titre (EN)</label><input value="${escapeHtml(hero.guideVideo.title?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].guideVideo,'title.en',this.value)" /></div>
-        </div>
-        <div class="field"><label>ID YouTube</label><input value="${escapeHtml(hero.guideVideo.youtubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].guideVideo,'youtubeId',this.value)" />
-        <small class="help">L'identifiant après "v=" dans l'URL YouTube (ex: ESl4DLgmJVo)</small></div>
-        <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].guideVideo,'desc.fr',this.value)">${escapeHtml(hero.guideVideo.desc?.fr)}</textarea></div>
-        <div class="field"><label>Description (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].guideVideo,'desc.en',this.value)">${escapeHtml(hero.guideVideo.desc?.en)}</textarea></div>
-      ` : `<p style="color:var(--text-dim);font-size:13px;">Aucune vidéo guide pour ce héros.</p>`}
+      <div class="card-head"><div class="title">Vidéos guide (mise en avant de créateurs)</div></div>
+      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Ces vidéos s'affichent en carrousel sur la fiche du héros, avec le titre en jaune au-dessus — comme les vidéos de build, mais elles restent cliquables et ouvrent la chaîne YouTube du créateur dans un nouvel onglet.</small>
+      ${renderGuideVideosList(hero)}
+      <button onclick="addGuideVideo(${currentHeroIndex})">+ Ajouter une vidéo guide</button>
     </div>
   `;
 }
+function renderGuideVideosList(hero){
+  const list = hero.guideVideos || [];
+  return list.map((g, i) => { const uid = assignUid(g); return `
+    <details class="collapsible" data-uid="${uid}"${collapsibleState[uid]?' open':''}>
+      <summary>
+        <span class="chevron">▸</span>
+        <span class="s-title">${escapeHtml(g.title?.fr || 'Vidéo guide sans titre')}</span>
+      </summary>
+      <div class="body">
+        <div class="row">
+          <div class="field"><label>Titre (FR)</label><input value="${escapeHtml(g.title?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].guideVideos[${i}],'title.fr',this.value)" /></div>
+          <div class="field"><label>Titre (EN)</label><input value="${escapeHtml(g.title?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].guideVideos[${i}],'title.en',this.value)" /></div>
+        </div>
+        <div class="field"><label>ID ou lien YouTube</label><input value="${escapeHtml(g.youtubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].guideVideos[${i}],'youtubeId',this.value)" />
+        <small class="help">L'identifiant après "v=" dans l'URL YouTube (ex: ESl4DLgmJVo), ou l'URL complète.</small></div>
+        <button class="danger" onclick="removeGuideVideo(${currentHeroIndex},${i})">🗑 Supprimer cette vidéo guide</button>
+      </div>
+    </details>
+  `; }).join('') || '<p style="color:var(--text-dim);font-size:13px;">Aucune vidéo guide pour ce héros.</p>';
+}
 function addGuideVideo(idx){
-  HEROES[idx].guideVideo = { title:{fr:'',en:''}, youtubeId:'', desc:{fr:'',en:''} };
+  HEROES[idx].guideVideos = HEROES[idx].guideVideos || [];
+  HEROES[idx].guideVideos.push({ title:{fr:'',en:''}, youtubeId:'' });
   markDirty(); renderHeroPanel();
 }
-function removeGuideVideo(idx){
-  HEROES[idx].guideVideo = null;
+function removeGuideVideo(idx, gIdx){
+  HEROES[idx].guideVideos.splice(gIdx, 1);
   markDirty(); renderHeroPanel();
 }
 
