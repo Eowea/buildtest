@@ -358,6 +358,7 @@ function renderGuide(h) {
         <img class="combo-poster" src="${ytThumb(x.id)}" alt="${esc(loc(x.g.title))}" loading="lazy" />
         ${APP_CONFIG.showGuideBadge ? '<span class="youtube-badge">guide</span>' : ''}
         <span class="youtube-play"></span>
+        ${x.g.duration ? `<span class="video-duration-badge">${esc(x.g.duration)}</span>` : ''}
       </a>
     </div>
   `).join('');
@@ -434,6 +435,7 @@ const tabsHtml = sortedBuildIndices.map(i => {
   bindFloatingTriggers();
   bindComboCarousel();
   queueLayoutSync();
+  observeTalentBoards();
 }
 
 let cachedFourBuilds = null;
@@ -716,8 +718,23 @@ function bindFloatingTriggers(root = document) {
       });
     }
 
-    function syncTalentBoards() { els.detailView.querySelectorAll('.talent-board-scroller').forEach(s=>{const t=s.querySelector('.talent-board-track'); if(!t) return; s.classList.remove('is-centered'); s.classList.toggle('is-centered',t.scrollWidth<=s.clientWidth+4); if(t.scrollWidth<=s.clientWidth+4) s.scrollLeft=0;}); }
+    function syncTalentBoards() { els.detailView.querySelectorAll('.talent-board-scroller').forEach(s=>{const t=s.querySelector('.talent-board-track'); if(!t) return; s.classList.remove('is-centered'); s.classList.toggle('is-centered',t.scrollWidth<=s.clientWidth+6); if(t.scrollWidth<=s.clientWidth+6) s.scrollLeft=0;}); }
     function queueLayoutSync() { if(layoutRaf) return; layoutRaf=requestAnimationFrame(()=>{layoutRaf=0;syncTalentBoards();}); }
+    // Le centrage dépend de la largeur réelle du plateau de talents, qui peut encore bouger
+    // après le premier calcul : chargement des icônes (talents optionnels compris), ou
+    // permutation de police web (Rajdhani) une fois chargée. On observe donc en continu
+    // plutôt que de ne vérifier qu'une seule fois après le rendu — ça évite les écarts de
+    // centrage vus par intermittence, notamment sur Firefox.
+    const talentBoardResizeObserver = ('ResizeObserver' in window) ? new ResizeObserver(() => queueLayoutSync()) : null;
+    function observeTalentBoards() {
+      if (!talentBoardResizeObserver) return;
+      els.detailView.querySelectorAll('.talent-board-track').forEach(track => {
+        if (track.dataset.roBound) return;
+        track.dataset.roBound = '1';
+        talentBoardResizeObserver.observe(track);
+      });
+    }
+    if (document.fonts && document.fonts.ready) { document.fonts.ready.then(() => queueLayoutSync()).catch(() => {}); }
 
     function openLightbox(ref, type='youtube') {
       // Cas fichier local (assets/....mp4, .webm, .gif, .webp)
