@@ -935,7 +935,9 @@ function renderGuideVideosList(hero){
 }
 function addGuideVideo(idx){
   HEROES[idx].guideVideos = HEROES[idx].guideVideos || [];
-  HEROES[idx].guideVideos.push({ title:{fr:'',en:''}, youtubeId:'' });
+  const g = { title:{fr:'',en:''}, youtubeId:'' };
+  collapsibleState[assignUid(g)] = true;
+  HEROES[idx].guideVideos.push(g);
   markDirty(); renderHeroPanel();
 }
 function removeGuideVideo(idx, gIdx){
@@ -986,7 +988,9 @@ function renderSpellsTab(hero){
   return html;
 }
 function addSpell(idx){
-  HEROES[idx].spells.push({ key:'', name:{fr:'',en:''}, icon:'', description:{fr:'',en:''}, demoYoutubeId:'' });
+  const sp = { key:'', name:{fr:'',en:''}, icon:'', description:{fr:'',en:''}, demoYoutubeId:'' };
+  collapsibleState[assignUid(sp)] = true;
+  HEROES[idx].spells.push(sp);
   markDirty(); renderHeroPanel();
 }
 function removeSpell(idx, spIdx){
@@ -1167,12 +1171,14 @@ function renderTalent(buildIdx, ti, t){
   `;
 }
 function addBuild(idx){
-  HEROES[idx].builds.push({
+  const b = {
     enabled: true, order: (HEROES[idx].builds.length+1),
     label:{fr:'Nouveau build',en:'New build'}, updatedAt:{fr:'',en:''},
     summary:{fr:'',en:''}, buildCodeTitle:{fr:"A COLLER DANS L'ARBRE DES TALENTS",en:"PASTE IN TALENT TREE"},
     buildCode:'', videos:[], talents:[]
-  });
+  };
+  collapsibleState[assignUid(b)] = true;
+  HEROES[idx].builds.push(b);
   markDirty(); renderHeroPanel();
 }
 function removeBuild(idx, bIdx){
@@ -1181,7 +1187,9 @@ function removeBuild(idx, bIdx){
   markDirty(); renderHeroPanel();
 }
 function addTalent(idx, bIdx){
-  HEROES[idx].builds[bIdx].talents.push({ level:1, name:{fr:'',en:''}, icon:'', description:{fr:'',en:''}, demoYoutubeId:null });
+  const t = { level:1, name:{fr:'',en:''}, icon:'', description:{fr:'',en:''}, demoYoutubeId:null };
+  collapsibleState[assignUid(t)] = true;
+  HEROES[idx].builds[bIdx].talents.push(t);
   markDirty(); renderHeroPanel();
 }
 function removeTalent(idx, bIdx, tIdx){
@@ -1191,7 +1199,9 @@ function removeTalent(idx, bIdx, tIdx){
 function addAlternative(idx, bIdx, tIdx){
   const t = HEROES[idx].builds[bIdx].talents[tIdx];
   t.alternatives = t.alternatives || [];
-  t.alternatives.push({ name:{fr:'',en:''}, icon:'', description:{fr:'',en:''}, demoYoutubeId:null });
+  const a = { name:{fr:'',en:''}, icon:'', description:{fr:'',en:''}, demoYoutubeId:null };
+  collapsibleState[assignUid(a)] = true;
+  t.alternatives.push(a);
   markDirty(); renderHeroPanel();
 }
 
