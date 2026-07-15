@@ -372,7 +372,7 @@ function renderGuide(g) {
         const hasSomething = isMedia || !!id;
         let stageInner;
         if (isMedia) {
-          stageInner = `<video class="combo-media" src="${esc(raw)}" muted loop playsinline preload="metadata" data-video-el></video>`;
+          stageInner = `<video class="combo-media" src="${esc(raw)}" muted loop playsinline preload="auto" data-video-el></video>`;
         } else if (id) {
           stageInner = `<img class="combo-poster" src="${ytThumb(id)}" alt="${esc(loc(v.title))}" loading="lazy" data-poster /><div class="combo-frame" data-frame></div>`;
         } else {
@@ -654,6 +654,24 @@ function bindFloatingTriggers(root = document) {
         stage.classList.add('is-playing');
       }
     }
+    function warmUpVideoFrame(slide) {
+      // Sur mobile (iOS Safari en particulier), une balise <video> reste noire tant
+      // qu'aucune lecture n'a été déclenchée, même avec preload="auto". On force donc
+      // un tout petit play()+pause() dès que la vidéo est prête, pour peindre la
+      // première image sans que l'utilisateur ait besoin de toucher l'écran.
+      if (!slide || slide.dataset.videoType !== 'media') return;
+      const v = slide.querySelector('[data-video-el]');
+      if (!v || v.dataset.warmed) return;
+      const doWarm = () => {
+        if (v.dataset.warmed) return;
+        v.dataset.warmed = '1';
+        const p = v.play();
+        if (p && typeof p.then === 'function') p.then(() => v.pause()).catch(() => {});
+        else v.pause();
+      };
+      if (v.readyState >= 2) doWarm();
+      else v.addEventListener('loadeddata', doWarm, { once: true });
+    }
     function bindComboCarousel() {
       els.detailView.querySelectorAll('.combo-carousel').forEach(carousel => {
         if (carousel.dataset.bound) return;
@@ -675,6 +693,7 @@ function bindFloatingTriggers(root = document) {
           active = idx;
           slides[active].classList.add('is-active');
           dots[active]?.classList.add('is-active');
+          warmUpVideoFrame(slides[active]);
         }
         prevBtn?.addEventListener('click', () => goTo(active - 1));
         nextBtn?.addEventListener('click', () => goTo(active + 1));
@@ -687,6 +706,8 @@ function bindFloatingTriggers(root = document) {
           slide.addEventListener('touchend', () => stopSlideMedia(slide));
           slide.addEventListener('touchcancel', () => stopSlideMedia(slide));
         });
+
+        warmUpVideoFrame(slides[active]);
       });
     }
 
