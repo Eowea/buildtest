@@ -849,7 +849,7 @@
     }
 
 .talent-card {
-      flex: 0 0 clamp(100px, 12vw, 120px);
+      flex: 0 0 120px;
       border: 1px solid var(--blue-border);
       border-radius: 4px;
       background: linear-gradient(180deg, rgba(20, 28, 44, 0.95), rgba(12, 18, 28, 0.98));
