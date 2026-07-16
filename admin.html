@@ -763,6 +763,10 @@ function renderHeroList(){
     groups[groupIndex[role]].items.push({h, idx});
   });
 
+  groups.forEach(g => {
+    g.items.sort((a, b) => (a.h.name?.fr || a.h.id || '').localeCompare(b.h.name?.fr || b.h.id || '', 'fr', {sensitivity:'base'}));
+  });
+
   if (!groups.length){
     el.innerHTML = '<div class="empty-state" style="margin-top:20px;">Aucun héros</div>';
     return;
