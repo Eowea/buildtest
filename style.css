@@ -854,6 +854,9 @@
 
 .talent-card {
       flex: 0 0 120px;
+      min-width: 0;
+      max-width: 120px;
+      overflow: hidden;
       border: 1px solid var(--blue-border);
       border-radius: 4px;
       background: linear-gradient(180deg, rgba(20, 28, 44, 0.95), rgba(12, 18, 28, 0.98));
@@ -1258,7 +1261,7 @@
       .build-tab { padding: 0 16px; font-size: 13px; height: 36px; }
       
       .talent-board-track { gap: 8px; }
-      .talent-card { flex-basis: 104px; padding: 10px 8px 12px; }
+      .talent-card { flex-basis: 104px; max-width: 104px; padding: 10px 8px 12px; }
       .talent-board-scroller::before { left: 52px; right: 52px; top: 68px; }
       .talent-board-scroller { scrollbar-width: thin !important; padding-bottom: 20px; }
       .talent-board-scroller::-webkit-scrollbar { display: block !important; height: 4px; }
