@@ -720,10 +720,18 @@ function bindFloatingTriggers(root = document) {
     function syncTalentBoards() { els.detailView.querySelectorAll('.talent-board-scroller').forEach(s=>{const t=s.querySelector('.talent-board-track'); if(!t) return; s.classList.remove('is-centered'); s.classList.toggle('is-centered',t.scrollWidth<=s.clientWidth+4); if(t.scrollWidth<=s.clientWidth+4) s.scrollLeft=0;}); }
     function queueLayoutSync() {
       if (layoutRaf) return;
-      layoutRaf = requestAnimationFrame(() => { layoutRaf = 0; syncTalentBoards(); });
-      // Filet de sécurité : si des icônes ou la police web finissent de charger un peu
-      // après ce premier calcul, on revérifie une fois de plus un instant plus tard.
-      setTimeout(syncTalentBoards, 200);
+      layoutRaf = requestAnimationFrame(() => {
+        layoutRaf = 0;
+        // Double rAF : on laisse le navigateur terminer un cycle complet de mise en page
+        // avant de mesurer (Firefox semble parfois mesurer avant d'avoir fini de stabiliser
+        // la largeur des cartes de talents).
+        requestAnimationFrame(syncTalentBoards);
+      });
+      // Filets de sécurité supplémentaires : si quelque chose (police web, icônes) fait
+      // encore bouger la mise en page un peu plus tard, on revérifie plusieurs fois.
+      setTimeout(syncTalentBoards, 150);
+      setTimeout(syncTalentBoards, 400);
+      setTimeout(syncTalentBoards, 900);
     }
 
     function openLightbox(ref, type='youtube') {
