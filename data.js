@@ -5488,7 +5488,7 @@ const HEROES = [
           "fr": "Lúcio va vers un allié pour le rendre Insensible et le soigner ainsi que lui-même. ",
           "en": "Lúcio moves toward an ally to make him Invulnerable and heal both them and himself. "
         },
-        "demoYoutubeId": "ysz5S6PUM-U"
+        "demoYoutubeId": ""
       },
       {
         "key": "",
@@ -5523,11 +5523,11 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build 1 (À venir)",
-          "en": "Build 1 (TBA)"
+          "fr": "Build recommandé",
+          "en": "Recommanded build"
         },
         "summary": {
-          "fr": "En construction.",
+          "fr": "LE seul build jouable",
           "en": "Under construction."
         },
         "buildCodeTitle": {
@@ -5635,7 +5635,7 @@ const HEROES = [
         }
       },
       {
-        "enabled": true,
+        "enabled": false,
         "order": 2,
         "label": {
           "fr": "Build 2 (À venir)",
