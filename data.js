@@ -5434,9 +5434,9 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundwave.png",
         "description": {
           "fr": "Repousse les ennemis et leur inflige des dégats.",
-          "en": "Under construction."
+          "en": "Pushes enemies back and deals damage to them."
         },
-        "demoYoutubeId": "ysz5S6PUM-U"
+        "demoYoutubeId": ""
       },
       {
         "key": "Z",
@@ -5446,10 +5446,10 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_crossfade_all.png",
         "description": {
-          "fr": "En construction.",
-          "en": "Under construction."
+          "fr": "Diffuse l'un des deux Beats. Beat de soin : Soigne sur la durée Lúcio et ses alliés. Beat de vitesse : Augmente la vitesse de déplacement de Lúcio et ses alliés. ",
+          "en": "Plays one of the two Beats. Healing Beat: Heals Lúcio and his allies over time. Speed Beat: Increases the movement speed of Lúcio and his allies. "
         },
-        "demoYoutubeId": "ScMzIvxBSi4"
+        "demoYoutubeId": ""
       },
       {
         "key": "E",
@@ -5459,10 +5459,10 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_ampitup.png",
         "description": {
-          "fr": "En construction.",
-          "en": "Under construction."
+          "fr": "Augmente le soin procuré par Beat de soin ou augmente la vitesse de déplacement procuré par Beat de vitesse pendant une courte durée.",
+          "en": "Increases the healing provided by \"Healing Beat\" or increases the movement speed provided by \"Speed Beat\" for a short time."
         },
-        "demoYoutubeId": "aqz-KE-bpKQ"
+        "demoYoutubeId": ""
       },
       {
         "key": "R1",
@@ -5472,10 +5472,10 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundbarrier.png",
         "description": {
-          "fr": "En construction.",
-          "en": "Under construction."
+          "fr": "Après une courte canalisation, applique un bouclier à Lúcio et ses alliés qui se réduit sur le temps.",
+          "en": "After a brief channeling period, grants Lúcio and his allies a shield that gradually diminishes over time."
         },
-        "demoYoutubeId": "M7lc1UVf-VE"
+        "demoYoutubeId": ""
       },
       {
         "key": "R2",
@@ -5485,8 +5485,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_highfive.png",
         "description": {
-          "fr": "En construction.",
-          "en": "Under construction."
+          "fr": "Lúcio va vers un allié pour le rendre Insensible et le soigner ainsi que lui-même. ",
+          "en": "Lúcio moves toward an ally to make him Invulnerable and heal both them and himself. "
         },
         "demoYoutubeId": "ysz5S6PUM-U"
       },
@@ -5498,8 +5498,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_wallride.png",
         "description": {
-          "fr": "",
-          "en": ""
+          "fr": "Permet à Lúcio de glisser sur les décors de la carte, ce qui augmente sa vitesse de déplacement.",
+          "en": "Allows Lúcio to slide across the map's terrain, increasing his movement speed. "
         },
         "demoYoutubeId": ""
       }
