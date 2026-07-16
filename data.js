@@ -5416,24 +5416,24 @@ const HEROES = [
         "key": "Trait",
         "name": {
           "fr": "Saute-Muraille",
-          "en": "Under construction."
+          "en": "Push Off"
         },
         "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_accelerando.png",
         "description": {
           "fr": "Activable utilisable pendant Wall Ride qui permet à Lúcio de se propulser. Inflige des dégâts aux ennemis et les ralentit.",
-          "en": "Under construction."
+          "en": "An ability that can be activated during Wall Ride, allowing Lúcio to propel himself forward. It deals damage to enemies and slows them down."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "En construction.",
-          "en": "Under construction."
+          "fr": "Onde sonore",
+          "en": "Soundwave"
         },
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundwave.png",
         "description": {
-          "fr": "En construction.",
+          "fr": "Repousse les ennemis et leur inflige des dégats.",
           "en": "Under construction."
         },
         "demoYoutubeId": "ysz5S6PUM-U"
@@ -5441,8 +5441,8 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "En construction.",
-          "en": "Under construction."
+          "fr": "Crossfade",
+          "en": "Crossfade"
         },
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_crossfade_all.png",
         "description": {
@@ -5454,8 +5454,8 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "En construction.",
-          "en": "Under construction."
+          "fr": "Volume max.",
+          "en": "Amp It Up"
         },
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_ampitup.png",
         "description": {
@@ -5467,8 +5467,8 @@ const HEROES = [
       {
         "key": "R1",
         "name": {
-          "fr": "En construction.",
-          "en": "Under construction."
+          "fr": "Mur du son",
+          "en": "Sound Barrier"
         },
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundbarrier.png",
         "description": {
@@ -5480,8 +5480,8 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "En construction.",
-          "en": "Under construction."
+          "fr": "Top là",
+          "en": "High Five"
         },
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_highfive.png",
         "description": {
@@ -5493,10 +5493,10 @@ const HEROES = [
       {
         "key": "",
         "name": {
-          "fr": "",
-          "en": ""
+          "fr": "Wall Ride",
+          "en": "Wall Ride"
         },
-        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_mount.png",
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_wallride.png",
         "description": {
           "fr": "",
           "en": ""
