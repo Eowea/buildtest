@@ -721,10 +721,13 @@ function bindFloatingTriggers(root = document) {
       els.detailView.querySelectorAll('.talent-board-scroller').forEach(s => {
         const t = s.querySelector('.talent-board-track');
         if (!t) return;
-        // On repart d'une largeur non contrainte pour mesurer la vraie taille du contenu
-        // (scrollWidth), sans dépendre du calcul CSS "fit-content" qui s'est avéré peu
-        // fiable sur Firefox pour ce conteneur flex précis.
+        // On neutralise temporairement "min-width: 100%" (règle de base du CSS) pour mesurer
+        // la vraie largeur du contenu — sinon, pour un build avec peu de talents, la mesure
+        // était artificiellement gonflée à la largeur du conteneur, et le JS croyait à tort
+        // que ça "remplissait" toute la largeur alors que le contenu réel était plus étroit
+        // et restait collé à gauche dedans.
         t.style.width = '';
+        t.style.minWidth = '0';
         t.style.marginInline = '';
         const naturalWidth = t.scrollWidth;
         const fits = naturalWidth <= s.clientWidth + 4;
@@ -735,6 +738,8 @@ function bindFloatingTriggers(root = document) {
           t.style.width = naturalWidth + 'px';
           t.style.marginInline = 'auto';
           s.scrollLeft = 0;
+        } else {
+          t.style.minWidth = ''; // revient au comportement par défaut : occupe toute la largeur, défilable
         }
       });
     }
