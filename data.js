@@ -386,7 +386,15 @@ const HEROES = [
         }
       }
     ],
-    "guideVideos": []
+    "guideVideos": [
+      {
+        "title": {
+          "fr": "Guide de Malganyr",
+          "en": "Malganyr's Guide"
+        },
+        "youtubeId": "https://www.youtube.com/watch?v=VTFz5fFd77A"
+      }
+    ]
   },
   {
     "id": "anduin",
