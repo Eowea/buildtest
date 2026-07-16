@@ -931,10 +931,6 @@ els.langSwitcher.addEventListener('click', (e) => {
   state.lang = btn.dataset.lang;
   localStorage.setItem('eowea_lang', state.lang);
   renderAll();
-
-  if ($('randomBuildCard').classList.contains('active')) {
-    renderRandomBuildCard();
-  }
 });
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&els.videoOverlay.classList.contains('active')) closeLightbox();});
     document.addEventListener('click', (e) => {
