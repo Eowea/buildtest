@@ -717,7 +717,27 @@ function bindFloatingTriggers(root = document) {
       });
     }
 
-    function syncTalentBoards() { els.detailView.querySelectorAll('.talent-board-scroller').forEach(s=>{const t=s.querySelector('.talent-board-track'); if(!t) return; s.classList.remove('is-centered'); s.classList.toggle('is-centered',t.scrollWidth<=s.clientWidth+4); if(t.scrollWidth<=s.clientWidth+4) s.scrollLeft=0;}); }
+    function syncTalentBoards() {
+      els.detailView.querySelectorAll('.talent-board-scroller').forEach(s => {
+        const t = s.querySelector('.talent-board-track');
+        if (!t) return;
+        // On repart d'une largeur non contrainte pour mesurer la vraie taille du contenu
+        // (scrollWidth), sans dépendre du calcul CSS "fit-content" qui s'est avéré peu
+        // fiable sur Firefox pour ce conteneur flex précis.
+        t.style.width = '';
+        t.style.marginInline = '';
+        const naturalWidth = t.scrollWidth;
+        const fits = naturalWidth <= s.clientWidth + 4;
+        s.classList.toggle('is-centered', fits);
+        if (fits) {
+          // Largeur fixée explicitement en pixels (mesurée par le JS, fiable),
+          // plutôt que "width: fit-content" recalculé par le CSS.
+          t.style.width = naturalWidth + 'px';
+          t.style.marginInline = 'auto';
+          s.scrollLeft = 0;
+        }
+      });
+    }
     function queueLayoutSync() {
       if (layoutRaf) return;
       layoutRaf = requestAnimationFrame(() => {
