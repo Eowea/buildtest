@@ -5388,7 +5388,7 @@ const HEROES = [
   },
   {
     "id": "lucio",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Lúcio",
       "en": "Lúcio"
@@ -5407,15 +5407,15 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "En construction.",
+          "fr": "Saute-Muraille",
           "en": "Under construction."
         },
         "icon": "",
         "description": {
-          "fr": "En construction.",
+          "fr": "Activable utilisable pendant Wall Ride qui permet à Lúcio de se propulser. Inflige des dégâts aux ennemis et les ralentit.",
           "en": "Under construction."
         },
-        "demoYoutubeId": "M7lc1UVf-VE"
+        "demoYoutubeId": ""
       },
       {
         "key": "A",
