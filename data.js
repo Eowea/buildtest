@@ -1092,8 +1092,8 @@ const HEROES = [
     "guideVideos": [
       {
         "title": {
-          "fr": "Guide express: Rehgar",
-          "en": "Express Guide: Rehgar"
+          "fr": "Guide express",
+          "en": "Express Guide"
         },
         "youtubeId": "ESl4DLgmJVo",
         "desc": {
@@ -1361,8 +1361,8 @@ const HEROES = [
     "guideVideos": [
       {
         "title": {
-          "fr": "Guide express: Luisaile",
-          "en": "Express Guide: Brightwing"
+          "fr": "Guide express",
+          "en": "Express Guide"
         },
         "youtubeId": "BGavE-q8NJY",
         "desc": {
@@ -1719,8 +1719,8 @@ const HEROES = [
     "guideVideos": [
       {
         "title": {
-          "fr": "Guide express: Deckard Cain",
-          "en": "Express Guide: Deckard Cain"
+          "fr": "Guide express",
+          "en": "Express Guide"
         },
         "youtubeId": "onnCA8ibYQk",
         "desc": {
@@ -2779,8 +2779,8 @@ const HEROES = [
     "guideVideos": [
       {
         "title": {
-          "fr": "Guide express: Auriel",
-          "en": "Express Guide: Auriel"
+          "fr": "Guide express",
+          "en": "Express Guide"
         },
         "youtubeId": "Sa04Z6PPmbg",
         "desc": {
@@ -4160,8 +4160,8 @@ const HEROES = [
     "guideVideos": [
       {
         "title": {
-          "fr": "Guide express: Malfurion",
-          "en": "Express Guide: Malfurion"
+          "fr": "Guide express",
+          "en": "Express Guide"
         },
         "youtubeId": "auMuOt9X1FQ",
         "desc": {
@@ -4463,8 +4463,8 @@ const HEROES = [
     "guideVideos": [
       {
         "title": {
-          "fr": "Guide express: Stukov",
-          "en": "Express Guide: Stukov"
+          "fr": "Guide express",
+          "en": "Express Guide"
         },
         "youtubeId": "VufmXqAOcAM",
         "desc": {
@@ -4742,8 +4742,8 @@ const HEROES = [
     "guideVideos": [
       {
         "title": {
-          "fr": "Guide express: Tyrande",
-          "en": "Express Guide: Tyrande"
+          "fr": "Guide express",
+          "en": "Express Guide"
         },
         "youtubeId": "UqAPjuoxI94",
         "desc": {
@@ -5375,8 +5375,8 @@ const HEROES = [
     "guideVideos": [
       {
         "title": {
-          "fr": "Guide express: Blanchetête",
-          "en": "Express Guide: Whitemane"
+          "fr": "Guide express",
+          "en": "Express Guide"
         },
         "youtubeId": "anZnNHdEhKM",
         "desc": {
@@ -5819,6 +5819,14 @@ const HEROES = [
         }
       }
     ],
-    "guideVideos": []
+    "guideVideos": [
+      {
+        "title": {
+          "fr": "Guide Express",
+          "en": "Guide Express"
+        },
+        "youtubeId": "https://youtu.be/lA3w9KGURrg"
+      }
+    ]
   }
 ];
