@@ -5410,7 +5410,7 @@ const HEROES = [
           "fr": "Saute-Muraille",
           "en": "Under construction."
         },
-        "icon": "",
+        "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_accelerando.png",
         "description": {
           "fr": "Activable utilisable pendant Wall Ride qui permet à Lúcio de se propulser. Inflige des dégâts aux ennemis et les ralentit.",
           "en": "Under construction."
@@ -5423,7 +5423,7 @@ const HEROES = [
           "fr": "En construction.",
           "en": "Under construction."
         },
-        "icon": "",
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundwave.png",
         "description": {
           "fr": "En construction.",
           "en": "Under construction."
@@ -5436,7 +5436,7 @@ const HEROES = [
           "fr": "En construction.",
           "en": "Under construction."
         },
-        "icon": "",
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_crossfade_all.png",
         "description": {
           "fr": "En construction.",
           "en": "Under construction."
@@ -5449,7 +5449,7 @@ const HEROES = [
           "fr": "En construction.",
           "en": "Under construction."
         },
-        "icon": "",
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_ampitup.png",
         "description": {
           "fr": "En construction.",
           "en": "Under construction."
@@ -5462,7 +5462,7 @@ const HEROES = [
           "fr": "En construction.",
           "en": "Under construction."
         },
-        "icon": "",
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundbarrier.png",
         "description": {
           "fr": "En construction.",
           "en": "Under construction."
@@ -5475,12 +5475,25 @@ const HEROES = [
           "fr": "En construction.",
           "en": "Under construction."
         },
-        "icon": "",
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_highfive.png",
         "description": {
           "fr": "En construction.",
           "en": "Under construction."
         },
         "demoYoutubeId": "ysz5S6PUM-U"
+      },
+      {
+        "key": "",
+        "name": {
+          "fr": "",
+          "en": ""
+        },
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_mount.png",
+        "description": {
+          "fr": "",
+          "en": ""
+        },
+        "demoYoutubeId": ""
       }
     ],
     "tips": [
