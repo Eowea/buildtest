@@ -827,6 +827,7 @@
     .talent-board-wrap { margin-bottom: 24px; overflow: hidden; width: 100%; min-width: 0; }
 
     .talent-board-scroller {
+      position: relative;
       overflow-x: auto; overflow-y: visible;
       padding: 24px 4px 12px;
       scrollbar-width: none; -webkit-overflow-scrolling: touch;
@@ -835,18 +836,21 @@
     .talent-board-scroller::-webkit-scrollbar { display: none; }
     .talent-board-scroller.is-centered { overflow-x: hidden; }
 
-    .talent-board-track {
-      display: flex; gap: 12px; width: max-content; min-width: 100%; position: relative; align-items: flex-start; padding-inline: 4px;
-    }
-    .talent-board-scroller.is-centered .talent-board-track { width: fit-content; min-width: 0; margin-inline: auto; }
-
-    .talent-board-track::before {
+    /* Ligne décorative : positionnée par rapport au scroller (largeur fixe, 100%) et
+       non plus par rapport au tableau lui-même (dont la largeur "fit-content" est calculée
+       en même temps) — évite une dépendance circulaire qui perturbait le calcul sur Firefox. */
+    .talent-board-scroller::before {
       content: ''; position: absolute;
       left: 60px; right: 60px; top: 76px; height: 3px;
       background: linear-gradient(90deg, transparent, var(--blue-bright), transparent);
       z-index: 0; pointer-events: none;
       box-shadow: 0 0 10px var(--blue-glow);
     }
+
+    .talent-board-track {
+      display: flex; gap: 12px; width: max-content; min-width: 100%; position: relative; align-items: flex-start; padding-inline: 4px;
+    }
+    .talent-board-scroller.is-centered .talent-board-track { width: fit-content; min-width: 0; margin-inline: auto; }
 
 .talent-card {
       flex: 0 0 120px;
@@ -1255,7 +1259,7 @@
       
       .talent-board-track { gap: 8px; }
       .talent-card { flex-basis: 104px; padding: 10px 8px 12px; }
-      .talent-board-track::before { left: 52px; right: 52px; top: 68px; }
+      .talent-board-scroller::before { left: 52px; right: 52px; top: 68px; }
       .talent-board-scroller { scrollbar-width: thin !important; padding-bottom: 20px; }
       .talent-board-scroller::-webkit-scrollbar { display: block !important; height: 4px; }
       .talent-board-scroller::-webkit-scrollbar-thumb { background: var(--blue-bright); border-radius: 4px; }
