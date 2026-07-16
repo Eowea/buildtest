@@ -5535,52 +5535,7 @@ const HEROES = [
           "en": "PASTE IN TALENT TREE"
         },
         "buildCode": "",
-        "videos": [
-          {
-            "title": {
-              "fr": "Combo 1",
-              "en": "Combo 1"
-            },
-            "youtubeId": "M7lc1UVf-VE",
-            "desc": {
-              "fr": "En construction.",
-              "en": "Under construction."
-            }
-          },
-          {
-            "title": {
-              "fr": "Combo 2",
-              "en": "Combo 2"
-            },
-            "youtubeId": "ysz5S6PUM-U",
-            "desc": {
-              "fr": "En construction.",
-              "en": "Under construction."
-            }
-          },
-          {
-            "title": {
-              "fr": "Combo 3",
-              "en": "Combo 3"
-            },
-            "youtubeId": "ScMzIvxBSi4",
-            "desc": {
-              "fr": "En construction.",
-              "en": "Under construction."
-            }
-          },
-          {
-            "title": {
-              "fr": "Combo 4",
-              "en": "Combo 4"
-            },
-            "youtubeId": "aqz-KE-bpKQ",
-            "desc": {
-              "fr": "En construction.",
-              "en": "Under construction."
-            }
-          }
-        ],
+        "videos": [],
         "talents": [
           {
             "level": 1,
@@ -5695,52 +5650,7 @@ const HEROES = [
           "en": "PASTE IN TALENT TREE"
         },
         "buildCode": "",
-        "videos": [
-          {
-            "title": {
-              "fr": "Combo 1",
-              "en": "Combo 1"
-            },
-            "youtubeId": "M7lc1UVf-VE",
-            "desc": {
-              "fr": "En construction.",
-              "en": "Under construction."
-            }
-          },
-          {
-            "title": {
-              "fr": "Combo 2",
-              "en": "Combo 2"
-            },
-            "youtubeId": "ysz5S6PUM-U",
-            "desc": {
-              "fr": "En construction.",
-              "en": "Under construction."
-            }
-          },
-          {
-            "title": {
-              "fr": "Combo 3",
-              "en": "Combo 3"
-            },
-            "youtubeId": "ScMzIvxBSi4",
-            "desc": {
-              "fr": "En construction.",
-              "en": "Under construction."
-            }
-          },
-          {
-            "title": {
-              "fr": "Combo 4",
-              "en": "Combo 4"
-            },
-            "youtubeId": "aqz-KE-bpKQ",
-            "desc": {
-              "fr": "En construction.",
-              "en": "Under construction."
-            }
-          }
-        ],
+        "videos": [],
         "talents": [
           {
             "level": 1,
