@@ -373,6 +373,7 @@ function toast(msg, type){
 let dirtyHeroNames = new Set();
 let dirtyHeroSections = {}; // nom du héros -> Set des sections touchées (Informations, Sorts, ...)
 let dirtyHeroFields = {}; // nom du héros -> Set des champs/actions précis touchés
+let dirtyHeroImages = {}; // nom du héros -> Set des noms de sorts/talents dont l'image a changé
 let dirtyConfigTouched = false;
 let dirtyAdminsTouched = false;
 const TAB_LABELS = { infos: 'Informations', spells: 'Sorts', tips: 'Astuces', builds: 'Builds' };
@@ -417,6 +418,7 @@ function markSaved(){
   dirtyHeroNames.clear();
   dirtyHeroSections = {};
   dirtyHeroFields = {};
+  dirtyHeroImages = {};
   dirtyConfigTouched = false;
   const s = document.getElementById('statusLine');
   if (s){ s.textContent = 'Synchronisé'; s.className = 'status saved'; }
@@ -730,7 +732,12 @@ function buildAutoCommitMessage(){
     const heroParts = [...dirtyHeroNames].map(name => {
       const fields = dirtyHeroFields[name];
       const sections = dirtyHeroSections[name];
-      const detail = (fields && fields.size) ? [...fields].join(', ') : ((sections && sections.size) ? [...sections].join(', ') : '');
+      const images = dirtyHeroImages[name];
+      const detailBits = [];
+      if (images && images.size) detailBits.push(`Modifications images ${[...images].join(', ')}`);
+      if (fields && fields.size) detailBits.push([...fields].join(', '));
+      else if (sections && sections.size) detailBits.push([...sections].join(', '));
+      const detail = detailBits.join(', ');
       return detail ? `${name} (${detail})` : name;
     });
     parts.push(heroParts.join(', '));
@@ -1064,7 +1071,7 @@ function renderSpellsTab(hero){
           <div class="thumb-picker">
             <img src="${assetRawUrl(sp.icon)}" onerror="this.style.visibility='hidden'" />
             <div class="path">${escapeHtml(sp.icon||'(aucune)')}</div>
-            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].spells[${i}],'icon',p); renderHeroPanel(); }, 'Image sorts')">Choisir</button>
+            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].spells[${i}],'icon',p); renderHeroPanel(); }, 'IMG:${(sp.name?.fr || 'Sort').replace(/'/g,"\\'")}')">Choisir</button>
           </div>
         </div>
         <div class="row">
@@ -1215,7 +1222,7 @@ function renderTalent(buildIdx, ti, t){
           <div class="thumb-picker">
             <img src="${assetRawUrl(a.icon)}" onerror="this.style.visibility='hidden'" />
             <div class="path">${escapeHtml(a.icon||'(aucune)')}</div>
-            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'icon',p); renderHeroPanel(); }, 'Image talents (alternative)')">Choisir</button>
+            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'icon',p); renderHeroPanel(); }, 'IMG:${(a.name?.fr || 'Alternative').replace(/'/g,"\\'")}')">Choisir</button>
           </div>
         </div>
         <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'description.fr',this.value)">${escapeHtml(a.description?.fr)}</textarea></div>
@@ -1248,7 +1255,7 @@ function renderTalent(buildIdx, ti, t){
           <div class="thumb-picker">
             <img src="${assetRawUrl(t.icon)}" onerror="this.style.visibility='hidden'" />
             <div class="path">${escapeHtml(t.icon||'(aucune)')}</div>
-            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'icon',p); renderHeroPanel(); }, 'Image talents')">Choisir</button>
+            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'icon',p); renderHeroPanel(); }, 'IMG:${(t.name?.fr || 'Talent').replace(/'/g,"\\'")}')">Choisir</button>
           </div>
         </div>
         <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'description.fr',this.value)">${escapeHtml(t.description?.fr)}</textarea></div>
@@ -1433,8 +1440,14 @@ function renderAssetGrid(kind){
 function pickAsset(path){
   if (assetPickerFieldLabel && assetPickerHeroIndex !== null && HEROES && HEROES[assetPickerHeroIndex]){
     const name = HEROES[assetPickerHeroIndex].name?.fr || HEROES[assetPickerHeroIndex].id;
-    if (!dirtyHeroFields[name]) dirtyHeroFields[name] = new Set();
-    dirtyHeroFields[name].add(assetPickerFieldLabel);
+    if (assetPickerFieldLabel.startsWith('IMG:')){
+      const entityName = assetPickerFieldLabel.slice(4);
+      if (!dirtyHeroImages[name]) dirtyHeroImages[name] = new Set();
+      dirtyHeroImages[name].add(entityName);
+    } else {
+      if (!dirtyHeroFields[name]) dirtyHeroFields[name] = new Set();
+      dirtyHeroFields[name].add(assetPickerFieldLabel);
+    }
   }
   if (assetPickerCallback) assetPickerCallback(path);
   closeAssetPicker();
