@@ -5574,7 +5574,21 @@ const HEROES = [
               "fr": "Tant que Volume Max est actif, le Beat de soin inflige des dégâts et le Beat de déplacement ralentit.",
               "en": "Under construction."
             },
-            "demoYoutubeId": ""
+            "demoYoutubeId": "",
+            "alternatives": [
+              {
+                "name": {
+                  "fr": "Enceinte nomade",
+                  "en": "Boombox"
+                },
+                "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_fineshrine.png",
+                "description": {
+                  "fr": "Reproduit le beat joué par Lúcio et applique de l'armure aux héros alliés présents dans la zone. Volume Max. augmente les effets. ",
+                  "en": ""
+                },
+                "demoYoutubeId": null
+              }
+            ]
           },
           {
             "level": 10,
