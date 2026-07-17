@@ -707,6 +707,40 @@ function normalizeLoadedData(){
   });
 }
 
+let currentPanelView = null; // 'config' | 'admins' | null (null = un héros ou rien de sélectionné)
+function saveViewState(){
+  let state = null;
+  if (currentHeroIndex !== null && HEROES && HEROES[currentHeroIndex]){
+    state = { type: 'hero', heroId: HEROES[currentHeroIndex].id, tab: currentTab };
+  } else if (currentPanelView === 'config'){
+    state = { type: 'config' };
+  } else if (currentPanelView === 'admins'){
+    state = { type: 'admins' };
+  }
+  if (state) sessionStorage.setItem('eowea_admin_view', JSON.stringify(state));
+  else sessionStorage.removeItem('eowea_admin_view');
+}
+function restoreViewState(){
+  const raw = sessionStorage.getItem('eowea_admin_view');
+  if (!raw) return false;
+  try{
+    const state = JSON.parse(raw);
+    if (state.type === 'hero'){
+      const idx = HEROES.findIndex(h => h.id === state.heroId);
+      if (idx < 0) return false;
+      currentHeroIndex = idx;
+      currentTab = state.tab || 'infos';
+      currentPanelView = null;
+      renderHeroList();
+      renderHeroPanel();
+      return true;
+    }
+    if (state.type === 'config'){ showConfigPanel(); return true; }
+    if (state.type === 'admins'){ showAdminsPanel(); return true; }
+  }catch(e){}
+  return false;
+}
+
 async function reloadFromGitHub(){
   try{
     const file = await getFile('data.js');
@@ -716,10 +750,13 @@ async function reloadFromGitHub(){
     HEROES = parsed.HEROES;
     normalizeLoadedData();
     dataFileSha = file.sha;
-    currentHeroIndex = null;
     markSaved();
-    renderHeroList();
-    document.getElementById('contentEl').innerHTML = '<div class="empty-state">Sélectionne un héros à gauche, ou crée-en un nouveau.</div>';
+    if (!restoreViewState()){
+      currentHeroIndex = null;
+      currentPanelView = null;
+      renderHeroList();
+      document.getElementById('contentEl').innerHTML = '<div class="empty-state">Sélectionne un héros à gauche, ou crée-en un nouveau.</div>';
+    }
     toast('Données chargées depuis GitHub', 'success');
   }catch(e){
     toast('Erreur de chargement : ' + e.message, 'error');
@@ -756,9 +793,12 @@ async function saveAll(){
     const content = serializeDataFile();
     const rawMessage = prompt('Message de commit :', buildAutoCommitMessage());
     if (rawMessage === null){
-      // L'utilisateur a cliqué "Annuler" : on abandonne l'enregistrement, sans rien envoyer.
+      // L'utilisateur a cliqué "Annuler" : on abandonne l'enregistrement ET on annule
+      // les modifications en cours, en rechargeant la dernière version enregistrée sur GitHub.
       btn.disabled = false;
       btn.textContent = '💾 Enregistrer sur GitHub';
+      toast('Modifications annulées, retour à la dernière version enregistrée', 'error');
+      await reloadFromGitHub();
       return;
     }
     const message = rawMessage.trim() || buildAutoCommitMessage();
@@ -937,13 +977,16 @@ function deleteHero(idx){
 function selectHero(idx){
   currentHeroIndex = idx;
   currentTab = 'infos';
+  currentPanelView = null;
   renderHeroList();
   renderHeroPanel();
+  saveViewState();
   if (window.matchMedia('(max-width: 860px)').matches) toggleSidebar(false);
 }
 function switchTab(tab){
   currentTab = tab;
   renderHeroPanel();
+  saveViewState();
 }
 
 function renderHeroPanel(){
@@ -1458,7 +1501,9 @@ function pickAsset(path){
    ========================================================================= */
 function showConfigPanel(){
   currentHeroIndex = null;
+  currentPanelView = 'config';
   renderHeroList();
+  saveViewState();
   if (window.matchMedia('(max-width: 860px)').matches) toggleSidebar(false);
   const socialsHtml = STREAMER_CONFIG.socials.map((s,i) => `
     <div class="subitem">
@@ -1500,7 +1545,9 @@ function showConfigPanel(){
    ========================================================================= */
 function showAdminsPanel(){
   currentHeroIndex = null;
+  currentPanelView = 'admins';
   renderHeroList();
+  saveViewState();
   if (window.matchMedia('(max-width: 860px)').matches) toggleSidebar(false);
   const list = (typeof ADMINS !== 'undefined') ? ADMINS : [];
   const rows = list.map((a,i) => `
