@@ -368,13 +368,31 @@ function toast(msg, type){
   document.getElementById('toastRoot').appendChild(el);
   setTimeout(() => el.remove(), 4500);
 }
+let dirtyHeroNames = new Set();
+let dirtyHeroSections = {}; // nom du héros -> Set des sections touchées (Informations, Sorts, ...)
+let dirtyConfigTouched = false;
+let dirtyAdminsTouched = false;
+const TAB_LABELS = { infos: 'Informations', spells: 'Sorts', tips: 'Astuces', builds: 'Builds' };
 function markDirty(){
   dirty = true;
+  if (currentHeroIndex !== null && HEROES && HEROES[currentHeroIndex]){
+    const h = HEROES[currentHeroIndex];
+    const name = h.name?.fr || h.id;
+    dirtyHeroNames.add(name);
+    if (!dirtyHeroSections[name]) dirtyHeroSections[name] = new Set();
+    dirtyHeroSections[name].add(TAB_LABELS[currentTab] || currentTab);
+  } else if (currentHeroIndex === null) {
+    // On est sur l'écran Configuration ou Administrateurs quand la modif a lieu.
+    dirtyConfigTouched = true;
+  }
   const s = document.getElementById('statusLine');
   if (s){ s.textContent = 'Modifications non enregistrées'; s.className = 'status dirty'; }
 }
 function markSaved(){
   dirty = false;
+  dirtyHeroNames.clear();
+  dirtyHeroSections = {};
+  dirtyConfigTouched = false;
   const s = document.getElementById('statusLine');
   if (s){ s.textContent = 'Synchronisé'; s.className = 'status saved'; }
 }
@@ -589,9 +607,15 @@ async function getFile(path){
   const data = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}?ref=${BRANCH}`);
   return { content: b64DecodeUnicode(data.content.replace(/\n/g,'')), sha: data.sha };
 }
-async function putFile(path, contentStr, sha, message){
+async function putFile(path, contentStr, sha, message, authorName){
   const body = { message, content: b64EncodeUnicode(contentStr), branch: BRANCH };
   if (sha) body.sha = sha;
+  if (authorName){
+    // Inscrit le pseudo du panneau admin comme auteur réel du commit (visible dans
+    // l'historique Git), en plus du compte GitHub qui reste propriétaire du token utilisé.
+    body.author = { name: authorName, email: `${authorName.replace(/\s+/g,'-').toLowerCase()}@admin-panel.local` };
+    body.committer = body.author;
+  }
   const res = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`, {
     method: 'PUT',
     headers: {'Content-Type':'application/json'},
@@ -673,14 +697,30 @@ async function reloadFromGitHub(){
   }
 }
 
+function buildAutoCommitMessage(){
+  const parts = [];
+  if (dirtyHeroNames.size){
+    const heroParts = [...dirtyHeroNames].map(name => {
+      const sections = dirtyHeroSections[name];
+      const sectionsStr = sections && sections.size ? ` (${[...sections].join(', ')})` : '';
+      return name + sectionsStr;
+    });
+    parts.push(heroParts.join(', '));
+  }
+  if (dirtyConfigTouched) parts.push('configuration du site');
+  let msg = parts.length ? 'Mise à jour : ' + parts.join(' + ') : 'Mise à jour via le panneau admin';
+  if (currentUser) msg += ` — par ${currentUser}`;
+  return msg;
+}
+
 async function saveAll(){
   const btn = document.getElementById('saveBtn');
   btn.disabled = true;
   btn.textContent = 'Enregistrement...';
   try{
     const content = serializeDataFile();
-    const message = prompt('Message de commit :', 'Mise à jour via le panneau admin') || 'Mise à jour via le panneau admin';
-    const newSha = await putFile('data.js', content, dataFileSha, message);
+    const message = prompt('Message de commit :', buildAutoCommitMessage()) || buildAutoCommitMessage();
+    const newSha = await putFile('data.js', content, dataFileSha, message, currentUser);
     dataFileSha = newSha;
     markSaved();
     toast('Enregistré sur GitHub ✔', 'success');
@@ -1444,7 +1484,7 @@ async function commitAdminsFile(){
     const file = await getFile('admins.js');
     adminsFileSha = file.sha;
     const content = serializeAdminsFile();
-    const newSha = await putFile('admins.js', content, adminsFileSha, 'Mise à jour des administrateurs via le panneau admin');
+    const newSha = await putFile('admins.js', content, adminsFileSha, 'Mise à jour des administrateurs via le panneau admin', currentUser);
     adminsFileSha = newSha;
     toast('Liste des administrateurs mise à jour sur GitHub ✔', 'success');
   }catch(e){
