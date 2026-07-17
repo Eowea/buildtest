@@ -5404,12 +5404,12 @@ const HEROES = [
     "role": "Healer",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_lucio.png",
     "headline": {
-      "fr": "En construction.",
-      "en": "Under construction."
+      "fr": "Soins sur la durée, mobilité et protection des alliés.",
+      "en": "Healing over time, mobility, and protection of allies."
     },
     "gameplay": {
-      "fr": "En construction.",
-      "en": "Under construction."
+      "fr": "Lúcio peut soigner sur la durée ainsi qu'apporter de la vitesse de déplacement à son équipe. Il possède une énorme mobilité. ",
+      "en": "Lúcio can provide sustained healing and grant his team movement speed. He has tremendous mobility. "
     },
     "spells": [
       {
@@ -5527,14 +5527,14 @@ const HEROES = [
           "en": "Recommanded build"
         },
         "summary": {
-          "fr": "LE seul build jouable",
-          "en": "Under construction."
+          "fr": "LE SEUL BUILD JOUABLE",
+          "en": "THE ONLY PLAYABLE BUILD"
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE IN TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T2322222,Lucio]",
         "videos": [],
         "talents": [
           {
@@ -5546,7 +5546,7 @@ const HEROES = [
             "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_wallride.png",
             "description": {
               "fr": "La vitesse de déplacement sous l'effet de Wall Ride augmente sur la durée.",
-              "en": "Under construction."
+              "en": "Movement speed while under the effect of Wall Ride increases over time."
             },
             "demoYoutubeId": ""
           },
@@ -5572,7 +5572,7 @@ const HEROES = [
             "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_crossfade_all.png",
             "description": {
               "fr": "Tant que Volume Max est actif, le Beat de soin inflige des dégâts et le Beat de déplacement ralentit.",
-              "en": "Under construction."
+              "en": "As long as Amp It up is active, the Healing Beat deals damage and the Movement Beat slows you down."
             },
             "demoYoutubeId": "",
             "alternatives": [
@@ -5583,8 +5583,8 @@ const HEROES = [
                 },
                 "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_fineshrine.png",
                 "description": {
-                  "fr": "Reproduis le beat joué par Lúcio et applique de l'armure aux héros alliés présents dans la zone. Volume Max. augmente les effets. ",
-                  "en": ""
+                  "fr": "Pose une enceinte qui reproduit le beat joué pet applique de l'armure aux héros alliés présents dans la zone. Volume Max. augmente les effets. ",
+                  "en": "Place a boombox that plays the beat and applies armor to allied heroes in the area. Amp It Up increases the effects. "
                 },
                 "demoYoutubeId": null
               }
@@ -5626,40 +5626,54 @@ const HEROES = [
             "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_accelerando.png",
             "description": {
               "fr": "Saute-Muraille ne ralentit plus, mais étourdit.",
-              "en": "Under construction."
+              "en": "Push Off no longer slows enemies down, but stuns them."
             },
             "demoYoutubeId": ""
           },
           {
             "level": 16,
             "name": {
-              "fr": "En construction.",
-              "en": "Under construction."
+              "fr": "Haute fréquence",
+              "en": "Up the Frequency"
             },
             "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_ampitup_b.png",
             "description": {
-              "fr": "En construction.",
-              "en": "Under construction."
+              "fr": "Les attaques de base réduisent le temps de recharge de Volume Max. Passif : Augmente la portée des attaques de base.",
+              "en": "Basic attacks reduce the cooldown of Volume Max. Passive: Increases auto-attack range."
             },
             "demoYoutubeId": ""
           },
           {
             "level": 20,
             "name": {
-              "fr": "En construction.",
-              "en": "Under construction."
+              "fr": "Mix offensif",
+              "en": "Mixing Fire"
             },
             "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_highfive.png",
             "description": {
-              "fr": "En construction.",
-              "en": "Under construction."
+              "fr": "Top là peut désormais infliger des dégâts aux ennemis et leur appliquer un anti-soin. Passif : Réduit le temps de recharge et le coût en mana de Top là. ",
+              "en": "High Five can now deal damage to enemies and apply a healing reduction effect to them. Passive: Reduces the cooldown and mana cost of High Five."
             },
-            "demoYoutubeId": ""
+            "demoYoutubeId": "",
+            "alternatives": [
+              {
+                "name": {
+                  "fr": "Méga-teuf",
+                  "en": "House Party"
+                },
+                "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_crossfade_all.png",
+                "description": {
+                  "fr": "Selon le nombre de héros présents dans Crossfade, le soin est augmenté.",
+                  "en": "The amount of healing is increased based on the number of heroes present in Crossfade."
+                },
+                "demoYoutubeId": null
+              }
+            ]
           }
         ],
         "updatedAt": {
-          "fr": "",
-          "en": ""
+          "fr": "17 Juillet 2026",
+          "en": "July 17, 2026 "
         }
       },
       {
