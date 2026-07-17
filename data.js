@@ -5814,6 +5814,7 @@ const HEROES = [
         },
         "youtubeId": "https://youtu.be/lA3w9KGURrg"
       }
-    ]
+    ],
+    "isNew": true
   }
 ];
