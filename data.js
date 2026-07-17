@@ -5540,41 +5540,41 @@ const HEROES = [
           {
             "level": 1,
             "name": {
-              "fr": "En construction.",
-              "en": "Under construction."
+              "fr": "Accelerando",
+              "en": "Accelerando"
             },
-            "icon": "",
+            "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_wallride.png",
             "description": {
-              "fr": "En construction.",
+              "fr": "La vitesse de déplacement sous l'effet de Wall Ride augmente sur la durée.",
               "en": "Under construction."
             },
-            "demoYoutubeId": "M7lc1UVf-VE"
+            "demoYoutubeId": ""
           },
           {
             "level": 4,
             "name": {
-              "fr": "En construction.",
-              "en": "Under construction."
+              "fr": "Double tempo",
+              "en": "Supersonic"
             },
             "icon": "",
             "description": {
-              "fr": "En construction.",
+              "fr": "Tant que l'effet de Wall ride est actif, le temps de recharge de Saute-Muraille est réduit.",
               "en": "Under construction."
             },
-            "demoYoutubeId": "ysz5S6PUM-U"
+            "demoYoutubeId": ""
           },
           {
             "level": 7,
             "name": {
-              "fr": "En construction.",
-              "en": "Under construction."
+              "fr": "Mauvaises ondes",
+              "en": "Reverse Amp"
             },
-            "icon": "",
+            "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_crossfade_all.png",
             "description": {
-              "fr": "En construction.",
+              "fr": "Tant que Volume Max est actif, le Beat de soin inflige des dégâts et le Beat de déplacement ralentit.",
               "en": "Under construction."
             },
-            "demoYoutubeId": "ScMzIvxBSi4"
+            "demoYoutubeId": ""
           },
           {
             "level": 10,
