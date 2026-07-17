@@ -5559,9 +5559,23 @@ const HEROES = [
             "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_accelerando.png",
             "description": {
               "fr": "Tant que l'effet de Wall ride est actif, le temps de recharge de Saute-Muraille est réduit.",
-              "en": "Under construction."
+              "en": "As long as the Wall Ride effect is active, the cooldown for Push Off is reduced."
             },
-            "demoYoutubeId": ""
+            "demoYoutubeId": "",
+            "alternatives": [
+              {
+                "name": {
+                  "fr": "Mur d'amplis",
+                  "en": "Off the Wall"
+                },
+                "icon": "",
+                "description": {
+                  "fr": "Toucher un ennemi avec Onde Sonore pendant l'effet de Wall Ride, réduit le temps de recharge et rend du mana. ",
+                  "en": "Hitting an enemy with Soundwave while the Wall Ride effect is active reduces the cooldown and restores mana."
+                },
+                "demoYoutubeId": null
+              }
+            ]
           },
           {
             "level": 7,
