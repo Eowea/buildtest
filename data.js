@@ -1749,7 +1749,7 @@ const HEROES = [
     "id": "alexstrasza",
     "enabled": false,
     "name": {
-      "fr": "Alexstrasza",
+      "fr": "Alexstraszafesfse",
       "en": "Alexstrasza"
     },
     "role": "Healer",
