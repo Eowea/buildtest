@@ -1749,11 +1749,11 @@ const HEROES = [
     "id": "alexstrasza",
     "enabled": false,
     "name": {
-      "fr": "Alexstraszafesfse",
+      "fr": "Alexstrasza",
       "en": "Alexstrasza"
     },
     "role": "Healer",
-    "portrait": "assets/heroes/base_spells/alexstrasza/images/talents/storm_ui_icon_alexstrasza_blessing_of_the_red.png",
+    "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_alexstrasza.png",
     "headline": {
       "fr": "Soins en zone massifs et forme de dragon.",
       "en": "Massive AoE healing and dragon form."
