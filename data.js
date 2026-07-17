@@ -160,7 +160,7 @@ const HEROES = [
         "order": 1,
         "label": {
           "fr": "Build recommandé",
-          "en": "Recommended Build (Poke)"
+          "en": "Recommended Build"
         },
         "summary": {
           "fr": "Le meilleur build, tout simplement.",
