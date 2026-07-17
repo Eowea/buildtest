@@ -5583,7 +5583,7 @@ const HEROES = [
                 },
                 "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_fineshrine.png",
                 "description": {
-                  "fr": "Reproduit le beat joué par Lúcio et applique de l'armure aux héros alliés présents dans la zone. Volume Max. augmente les effets. ",
+                  "fr": "Reproduis le beat joué par Lúcio et applique de l'armure aux héros alliés présents dans la zone. Volume Max. augmente les effets. ",
                   "en": ""
                 },
                 "demoYoutubeId": null
@@ -5593,28 +5593,42 @@ const HEROES = [
           {
             "level": 10,
             "name": {
-              "fr": "En construction.",
-              "en": "Under construction."
+              "fr": "Top là",
+              "en": "High Five"
             },
-            "icon": "",
+            "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_highfive.png",
             "description": {
-              "fr": "En construction.",
-              "en": "Under construction."
+              "fr": "Lúcio va vers un allié pour le rendre Insensible et le soigner ainsi que lui-même. ",
+              "en": "After a brief channeling period, grants Lúcio and his allies a shield that gradually diminishes over time."
             },
-            "demoYoutubeId": "aqz-KE-bpKQ"
+            "demoYoutubeId": "",
+            "alternatives": [
+              {
+                "name": {
+                  "fr": "Mur du son",
+                  "en": "Sound Barrier"
+                },
+                "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundbarrier.png",
+                "description": {
+                  "fr": "Après une courte canalisation, applique un bouclier à Lúcio et ses alliés qui se réduit sur le temps.",
+                  "en": "After a brief channeling period, grants Lúcio and his allies a shield that gradually diminishes over time."
+                },
+                "demoYoutubeId": null
+              }
+            ]
           },
           {
             "level": 13,
             "name": {
-              "fr": "En construction.",
-              "en": "Under construction."
+              "fr": "Patins de combat",
+              "en": "Heavy Casters"
             },
-            "icon": "",
+            "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_accelerando.png",
             "description": {
-              "fr": "En construction.",
+              "fr": "Saute-Muraille ne ralentit plus, mais étourdit.",
               "en": "Under construction."
             },
-            "demoYoutubeId": "M7lc1UVf-VE"
+            "demoYoutubeId": ""
           },
           {
             "level": 16,
@@ -5622,12 +5636,12 @@ const HEROES = [
               "fr": "En construction.",
               "en": "Under construction."
             },
-            "icon": "",
+            "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_ampitup_b.png",
             "description": {
               "fr": "En construction.",
               "en": "Under construction."
             },
-            "demoYoutubeId": "ysz5S6PUM-U"
+            "demoYoutubeId": ""
           },
           {
             "level": 20,
@@ -5635,12 +5649,12 @@ const HEROES = [
               "fr": "En construction.",
               "en": "Under construction."
             },
-            "icon": "",
+            "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_highfive.png",
             "description": {
               "fr": "En construction.",
               "en": "Under construction."
             },
-            "demoYoutubeId": "ScMzIvxBSi4"
+            "demoYoutubeId": ""
           }
         ],
         "updatedAt": {
