@@ -148,6 +148,11 @@
 
   details.collapsible{background:var(--panel-alt);border:1px solid var(--border);border-radius:8px;margin-bottom:10px;overflow:hidden;}
   details.collapsible > summary{list-style:none;cursor:pointer;padding:10px 14px;display:flex;align-items:center;gap:10px;user-select:none;}
+  .drag-handle{cursor:grab;color:var(--text-dim);font-size:14px;flex:0 0 auto;padding:2px 4px;touch-action:none;}
+  .drag-handle:hover{color:var(--gold);}
+  [data-drag-item]{transition:opacity .15s, border-color .15s;}
+  [data-drag-item].dragging{opacity:.4;}
+  [data-drag-item].drag-over{border-color:var(--gold) !important;border-width:2px;}
   details.collapsible > summary::-webkit-details-marker{display:none;}
   details.collapsible > summary .chevron{color:var(--gold);font-size:11px;transition:transform .15s;flex:0 0 auto;}
   details.collapsible[open] > summary .chevron{transform:rotate(90deg);}
@@ -1030,6 +1035,71 @@ function renderHeroPanel(){
   if (currentTab === 'builds') body.innerHTML = renderBuildsTab(hero);
 }
 
+let dragFromIndex = null;
+let dragListType = null;
+(function bindDragReorder(){
+  const container = document.getElementById('contentEl');
+
+  container.addEventListener('dragstart', (e) => {
+    const item = e.target.closest('[data-drag-item]');
+    if (!item){ e.preventDefault(); return; }
+    // On n'autorise le début du glisser que depuis la poignée, pour ne pas gêner
+    // la sélection de texte dans les champs à l'intérieur de la carte.
+    if (!e.target.closest('.drag-handle')){ e.preventDefault(); return; }
+    dragFromIndex = Number(item.dataset.dragIndex);
+    dragListType = item.dataset.dragList;
+    item.classList.add('dragging');
+    if (item.tagName === 'DETAILS') item.open = false;
+    e.dataTransfer.effectAllowed = 'move';
+  });
+
+  container.addEventListener('dragend', (e) => {
+    const item = e.target.closest('[data-drag-item]');
+    if (item) item.classList.remove('dragging');
+    container.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+    dragFromIndex = null;
+    dragListType = null;
+  });
+
+  container.addEventListener('dragover', (e) => {
+    const item = e.target.closest('[data-drag-item]');
+    if (!item || item.dataset.dragList !== dragListType) return;
+    e.preventDefault();
+    container.querySelectorAll('.drag-over').forEach(el => { if (el !== item) el.classList.remove('drag-over'); });
+    item.classList.add('drag-over');
+  });
+
+  container.addEventListener('drop', (e) => {
+    const item = e.target.closest('[data-drag-item]');
+    if (!item || item.dataset.dragList !== dragListType) return;
+    e.preventDefault();
+    item.classList.remove('drag-over');
+    const toIndex = Number(item.dataset.dragIndex);
+    if (dragFromIndex === null || toIndex === dragFromIndex) return;
+    reorderHeroList(dragListType, dragFromIndex, toIndex);
+  });
+})();
+
+function reorderHeroList(listType, from, to){
+  const hero = HEROES[currentHeroIndex];
+  if (!hero) return;
+  if (listType === 'spells' || listType === 'tips'){
+    const arr = hero[listType];
+    const [moved] = arr.splice(from, 1);
+    arr.splice(to, 0, moved);
+  } else if (listType === 'builds'){
+    // Les builds s'affichent triés par le champ "Ordre d'affichage" : on renumérote donc
+    // tous les builds selon leur nouvelle position visuelle, plutôt que de déplacer une
+    // entrée dans le tableau brut (qui n'a pas d'effet sur l'ordre affiché).
+    const indices = hero.builds.map((_, i) => i).sort((a, b) => (hero.builds[a].order ?? 0) - (hero.builds[b].order ?? 0));
+    const [movedIdx] = indices.splice(from, 1);
+    indices.splice(to, 0, movedIdx);
+    indices.forEach((realIdx, pos) => { hero.builds[realIdx].order = pos + 1; });
+  }
+  markDirty();
+  renderHeroPanel();
+}
+
 /* ---------- Onglet Informations ---------- */
 function renderInfosTab(hero){
   const known = [...new Set(HEROES.map(h=>h.role).filter(Boolean))];
@@ -1109,8 +1179,9 @@ function removeGuideVideo(idx, gIdx){
 function renderSpellsTab(hero){
   const list = hero.spells;
   let html = list.map((sp, i) => { const uid = assignUid(sp); return `
-    <details class="collapsible" data-uid="${uid}"${collapsibleState[uid]?' open':''}>
+    <details class="collapsible" data-uid="${uid}"${collapsibleState[uid]?' open':''} draggable="true" data-drag-item data-drag-list="spells" data-drag-index="${i}">
       <summary>
+        <span class="drag-handle" title="Glisser pour réordonner">⠿</span>
         <span class="chevron">▸</span>
         <span class="s-title">${escapeHtml(sp.name?.fr || sp.key || 'Sort sans nom')}</span>
         <span class="s-sub">${escapeHtml(sp.key||'')}</span>
@@ -1161,7 +1232,8 @@ function removeSpell(idx, spIdx){
 /* ---------- Onglet Astuces ---------- */
 function renderTipsTab(hero){
   let html = hero.tips.map((tip,i) => `
-    <div class="subitem">
+    <div class="subitem" draggable="true" data-drag-item data-drag-list="tips" data-drag-index="${i}" style="padding-left:34px;">
+      <span class="drag-handle" title="Glisser pour réordonner" style="position:absolute;left:8px;top:12px;">⠿</span>
       <button class="ghost remove-btn" onclick="removeTip(${currentHeroIndex},${i})">✕</button>
       <div class="row">
         <div class="field"><label>Astuce (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].tips[${i}],'fr',this.value)">${escapeHtml(tip.fr)}</textarea></div>
@@ -1185,11 +1257,11 @@ function removeTip(idx, tIdx){
 function renderBuildsTab(hero){
   const indices = hero.builds.map((_, i) => i);
   indices.sort((a, b) => (hero.builds[a].order ?? 0) - (hero.builds[b].order ?? 0));
-  let html = indices.map(i => renderOneBuild(hero, hero.builds[i], i)).join('');
+  let html = indices.map((i, pos) => renderOneBuild(hero, hero.builds[i], i, pos)).join('');
   html += `<button class="list-add-btn" onclick="addBuild(${currentHeroIndex})">+ Ajouter un build</button>`;
   return html;
 }
-function renderOneBuild(hero, b, i){
+function renderOneBuild(hero, b, i, pos){
   const buildUid = assignUid(b);
   const talentsHtml = (b.talents||[]).map((t, ti) => renderTalent(i, ti, t)).join('');
   const videosHtml = (b.videos||[]).map((v, vi) => `
@@ -1211,8 +1283,9 @@ function renderOneBuild(hero, b, i){
     </div>
   `).join('');
   return `
-    <details class="collapsible" data-uid="${buildUid}"${collapsibleState[buildUid]?' open':''}>
+    <details class="collapsible" data-uid="${buildUid}"${collapsibleState[buildUid]?' open':''} draggable="true" data-drag-item data-drag-list="builds" data-drag-index="${pos}">
       <summary>
+        <span class="drag-handle" title="Glisser pour réordonner">⠿</span>
         <span class="chevron">▸</span>
         <span class="s-title">${escapeHtml(b.label?.fr || 'Build sans nom')}</span>
         <span class="s-sub">
