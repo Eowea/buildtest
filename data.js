@@ -5506,16 +5506,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "En construction.",
-        "en": "Under construction."
+        "fr": "Pense à toujours être en Wall Ride afin de profiter au maximum de ta mobilité.",
+        "en": "Remember to always stay in the Wall Ride position to make the most of your mobility."
       },
       {
-        "fr": "En construction.",
-        "en": "Under construction."
+        "fr": "Ton Onde Sonore (A) servira dans la majorité des cas à protéger tes alliés et non à juste faire des dégâts.",
+        "en": "In most cases, your Soundwave (Q) will be used to protect your allies rather than just to deal damage."
       },
       {
-        "fr": "En construction.",
-        "en": "Under construction."
+        "fr": "Le beat de Soin est de couleur jaune, et non vert qui est le Beat de déplacement. ",
+        "en": "Healing's beat is yellow, not green, which is the movement beat. "
       }
     ],
     "builds": [
