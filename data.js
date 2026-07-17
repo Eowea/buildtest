@@ -5556,7 +5556,7 @@ const HEROES = [
               "fr": "Double tempo",
               "en": "Supersonic"
             },
-            "icon": "",
+            "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_accelerando.png",
             "description": {
               "fr": "Tant que l'effet de Wall ride est actif, le temps de recharge de Saute-Muraille est réduit.",
               "en": "Under construction."
