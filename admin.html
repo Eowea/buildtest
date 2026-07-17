@@ -381,16 +381,23 @@ const TAB_LABELS = { infos: 'Informations', spells: 'Sorts', tips: 'Astuces', bu
 function getActiveActionLabel(){
   // Regarde quel champ avait le focus (son <label>), ou quel bouton vient d'être cliqué,
   // pour savoir précisément ce qui a été modifié — sans avoir à annoter chaque champ à la main.
+  // Renvoie aussi la valeur actuelle du champ, pour un message de commit précis.
   const el = document.activeElement;
   if (!el) return null;
   if (el.matches && el.matches('input, textarea, select')){
     const field = el.closest('.field, .checkbox-row');
     const label = field?.querySelector('label');
-    if (label && label.textContent.trim()) return label.textContent.trim();
+    if (label && label.textContent.trim()){
+      let val;
+      if (el.type === 'checkbox') val = el.checked ? 'coché' : 'décoché';
+      else val = (el.value || '').toString().trim();
+      if (val.length > 40) val = val.slice(0, 37) + '...';
+      return { label: label.textContent.trim(), detail: val || null };
+    }
   }
   if (el.matches && el.matches('button')){
     const txt = el.textContent.trim().replace(/^[^\wÀ-ÿ]+/, '').trim();
-    if (txt) return txt;
+    if (txt) return { label: txt, detail: null };
   }
   return null;
 }
@@ -402,10 +409,10 @@ function markDirty(){
     dirtyHeroNames.add(name);
     if (!dirtyHeroSections[name]) dirtyHeroSections[name] = new Set();
     dirtyHeroSections[name].add(TAB_LABELS[currentTab] || currentTab);
-    const fieldLabel = getActiveActionLabel();
-    if (fieldLabel){
-      if (!dirtyHeroFields[name]) dirtyHeroFields[name] = new Set();
-      dirtyHeroFields[name].add(fieldLabel);
+    const action = getActiveActionLabel();
+    if (action){
+      if (!dirtyHeroFields[name]) dirtyHeroFields[name] = {};
+      dirtyHeroFields[name][action.label] = action.detail;
     }
   } else if (currentHeroIndex === null) {
     // On est sur l'écran Configuration ou Administrateurs quand la modif a lieu.
@@ -773,8 +780,12 @@ function buildAutoCommitMessage(){
       const images = dirtyHeroImages[name];
       const detailBits = [];
       if (images && images.size) detailBits.push(`Modifications images ${[...images].join(', ')}`);
-      if (fields && fields.size) detailBits.push([...fields].join(', '));
-      else if (sections && sections.size) detailBits.push([...sections].join(', '));
+      if (fields && Object.keys(fields).length){
+        const fieldBits = Object.entries(fields).map(([label, value]) => value ? `${label} : "${value}"` : label);
+        detailBits.push(fieldBits.join(', '));
+      } else if (sections && sections.size) {
+        detailBits.push([...sections].join(', '));
+      }
       const detail = detailBits.join(', ');
       return detail ? `${name} (${detail})` : name;
     });
@@ -1448,7 +1459,13 @@ function renderAssetGrid(kind){
   });
 
   const subOrder = ['Portraits', 'Talents', 'Sorts'];
+  const currentPickerHero = (assetPickerHeroIndex !== null && HEROES && HEROES[assetPickerHeroIndex])
+    ? (HEROES[assetPickerHeroIndex].name?.fr || HEROES[assetPickerHeroIndex].id)
+    : null;
   const groupNames = Object.keys(nested).sort((a, b) => {
+    // Le héros actuellement édité passe en premier, pour éviter d'avoir à le chercher.
+    if (a === currentPickerHero) return -1;
+    if (b === currentPickerHero) return 1;
     if (a === 'Autres fichiers') return 1;
     if (b === 'Autres fichiers') return -1;
     return a.localeCompare(b);
@@ -1456,6 +1473,7 @@ function renderAssetGrid(kind){
 
   grid.innerHTML = groupNames.map(group => {
     const subs = nested[group];
+    const isCurrentHero = group === currentPickerHero;
     const subNames = Object.keys(subs).sort((a, b) => {
       const ia = subOrder.indexOf(a), ib = subOrder.indexOf(b);
       if (ia !== -1 && ib !== -1) return ia - ib;
@@ -1465,11 +1483,11 @@ function renderAssetGrid(kind){
     });
     const total = subNames.reduce((s, k) => s + subs[k].length, 0);
     return `
-      <details class="collapsible">
+      <details class="collapsible"${isCurrentHero ? ' open' : ''}>
         <summary><span class="chevron">▸</span><span class="s-title">${escapeHtml(group)}</span><span class="s-sub">${total}</span></summary>
         <div class="body">
           ${subNames.map(sub => `
-            <details class="collapsible nested">
+            <details class="collapsible nested"${isCurrentHero ? ' open' : ''}>
               <summary><span class="chevron">▸</span><span class="s-title">${escapeHtml(sub)}</span><span class="s-sub">${subs[sub].length}</span></summary>
               <div class="body">
                 <div class="asset-grid">${subs[sub].map(item => assetTileHtml(item, kind)).join('')}</div>
