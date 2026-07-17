@@ -1108,6 +1108,13 @@ const HEROES = [
           "fr": "Guide rapide pour apprendre les mécaniques de base et quelques astuces.",
           "en": "Quick guide to learn basic mechanics and some tips. In French, with English subtitles."
         }
+      },
+      {
+        "title": {
+          "fr": "Guide de Malganyr",
+          "en": "Malganyr's Guide"
+        },
+        "youtubeId": "https://www.youtube.com/watch?v=5nT8hJGclic"
       }
     ]
   },
@@ -1377,6 +1384,13 @@ const HEROES = [
           "fr": "Guide rapide pour apprendre les mécaniques de base et quelques astuces",
           "en": "Quick guide to learn basic mechanics and some tips. In French, with English subtitles."
         }
+      },
+      {
+        "title": {
+          "fr": "Guide de Malganyr",
+          "en": "Malganyr's Guide"
+        },
+        "youtubeId": "https://www.youtube.com/watch?v=xtlSafuiFOQ"
       }
     ]
   },
@@ -2795,6 +2809,13 @@ const HEROES = [
           "fr": "Guide rapide pour apprendre les mécaniques de base et quelques astuces",
           "en": "Quick guide to learn basic mechanics and some tips. In French, with English subtitles."
         }
+      },
+      {
+        "title": {
+          "fr": "Guide de Malganyr",
+          "en": "Malgany's Guide"
+        },
+        "youtubeId": "https://www.youtube.com/watch?v=rkF9kvUTNk4"
       }
     ]
   },
@@ -4176,6 +4197,13 @@ const HEROES = [
           "fr": "Guide rapide pour apprendre les mécaniques de base et quelques astuces.",
           "en": "Quick guide to learn basic mechanics and some tips. In French, with English subtitles and English AI voice."
         }
+      },
+      {
+        "title": {
+          "fr": "Guide de Malganyr",
+          "en": "Malganyr's Guide"
+        },
+        "youtubeId": "https://www.youtube.com/watch?v=7VnV7bh9GeY"
       }
     ]
   },
@@ -4479,6 +4507,13 @@ const HEROES = [
           "fr": "Guide rapide pour apprendre les mécaniques de base et quelques astuces",
           "en": "Quick guide to learn basic mechanics and some tips. In French, with English subtitles."
         }
+      },
+      {
+        "title": {
+          "fr": "Guide de Malganyr",
+          "en": "Malganyr's Guide"
+        },
+        "youtubeId": "https://www.youtube.com/watch?v=qWDSnOgXIeA"
       }
     ]
   },
@@ -4758,6 +4793,13 @@ const HEROES = [
           "fr": "Guide rapide pour apprendre les mécaniques de base et quelques astuces. Build non à jour dans la vidéo, mais le reste est toujours d'actualité.",
           "en": "Quick guide to learn basic mechanics and some tips. In French, with English subtitles. The build shown in the video is outdated, but the rest is still relevant."
         }
+      },
+      {
+        "title": {
+          "fr": "Guide de Malganyr",
+          "en": "Malganyr's Guide"
+        },
+        "youtubeId": "https://www.youtube.com/watch?v=D_qs3gSMgNY"
       }
     ]
   },
@@ -5391,6 +5433,13 @@ const HEROES = [
           "fr": "Guide rapide pour apprendre les mécaniques de base et quelques astuces",
           "en": "Quick guide to learn basic mechanics and some tips. In French, with English subtitles."
         }
+      },
+      {
+        "title": {
+          "fr": "Guide de Malganyr",
+          "en": "Malganyr's Guide"
+        },
+        "youtubeId": "https://www.youtube.com/watch?v=wxn44r6DQRw"
       }
     ]
   },
@@ -5813,6 +5862,13 @@ const HEROES = [
           "en": "Guide Express"
         },
         "youtubeId": "https://youtu.be/lA3w9KGURrg"
+      },
+      {
+        "title": {
+          "fr": "Guide de Malganyr",
+          "en": "Malganyr's Guide"
+        },
+        "youtubeId": "https://www.youtube.com/watch?v=BBs6DDOFGS8"
       }
     ],
     "isNew": true
