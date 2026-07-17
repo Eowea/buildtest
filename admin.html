@@ -370,9 +370,26 @@ function toast(msg, type){
 }
 let dirtyHeroNames = new Set();
 let dirtyHeroSections = {}; // nom du héros -> Set des sections touchées (Informations, Sorts, ...)
+let dirtyHeroFields = {}; // nom du héros -> Set des champs/actions précis touchés
 let dirtyConfigTouched = false;
 let dirtyAdminsTouched = false;
 const TAB_LABELS = { infos: 'Informations', spells: 'Sorts', tips: 'Astuces', builds: 'Builds' };
+function getActiveActionLabel(){
+  // Regarde quel champ avait le focus (son <label>), ou quel bouton vient d'être cliqué,
+  // pour savoir précisément ce qui a été modifié — sans avoir à annoter chaque champ à la main.
+  const el = document.activeElement;
+  if (!el) return null;
+  if (el.matches && el.matches('input, textarea, select')){
+    const field = el.closest('.field, .checkbox-row');
+    const label = field?.querySelector('label');
+    if (label && label.textContent.trim()) return label.textContent.trim();
+  }
+  if (el.matches && el.matches('button')){
+    const txt = el.textContent.trim().replace(/^[^\wÀ-ÿ]+/, '').trim();
+    if (txt) return txt;
+  }
+  return null;
+}
 function markDirty(){
   dirty = true;
   if (currentHeroIndex !== null && HEROES && HEROES[currentHeroIndex]){
@@ -381,6 +398,11 @@ function markDirty(){
     dirtyHeroNames.add(name);
     if (!dirtyHeroSections[name]) dirtyHeroSections[name] = new Set();
     dirtyHeroSections[name].add(TAB_LABELS[currentTab] || currentTab);
+    const fieldLabel = getActiveActionLabel();
+    if (fieldLabel){
+      if (!dirtyHeroFields[name]) dirtyHeroFields[name] = new Set();
+      dirtyHeroFields[name].add(fieldLabel);
+    }
   } else if (currentHeroIndex === null) {
     // On est sur l'écran Configuration ou Administrateurs quand la modif a lieu.
     dirtyConfigTouched = true;
@@ -392,6 +414,7 @@ function markSaved(){
   dirty = false;
   dirtyHeroNames.clear();
   dirtyHeroSections = {};
+  dirtyHeroFields = {};
   dirtyConfigTouched = false;
   const s = document.getElementById('statusLine');
   if (s){ s.textContent = 'Synchronisé'; s.className = 'status saved'; }
@@ -701,9 +724,10 @@ function buildAutoCommitMessage(){
   const parts = [];
   if (dirtyHeroNames.size){
     const heroParts = [...dirtyHeroNames].map(name => {
+      const fields = dirtyHeroFields[name];
       const sections = dirtyHeroSections[name];
-      const sectionsStr = sections && sections.size ? ` (${[...sections].join(', ')})` : '';
-      return name + sectionsStr;
+      const detail = (fields && fields.size) ? [...fields].join(', ') : ((sections && sections.size) ? [...sections].join(', ') : '');
+      return detail ? `${name} (${detail})` : name;
     });
     parts.push(heroParts.join(', '));
   }
