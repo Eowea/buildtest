@@ -339,6 +339,8 @@ let currentTab = 'infos';
 let dirty = false;
 let assetTreeCache = null;
 let assetPickerCallback = null;
+let assetPickerFieldLabel = null;
+let assetPickerHeroIndex = null;
 
 /* =========================================================================
    UTILITAIRES : hash, base64 unicode
@@ -615,7 +617,9 @@ async function ghFetch(path, options={}){
   if (!res.ok){
     let detail = '';
     try{ detail = (await res.json()).message; }catch(e){}
-    throw new Error(`Erreur GitHub (${res.status}) ${detail || ''}`);
+    const err = new Error(`Erreur GitHub (${res.status}) ${detail || ''}`);
+    err.status = res.status;
+    throw err;
   }
   return res.json();
 }
@@ -743,9 +747,31 @@ async function saveAll(){
   btn.textContent = 'Enregistrement...';
   try{
     const content = serializeDataFile();
-    const message = prompt('Message de commit :', buildAutoCommitMessage()) || buildAutoCommitMessage();
-    const newSha = await putFile('data.js', content, dataFileSha, message, currentUser);
-    dataFileSha = newSha;
+    const rawMessage = prompt('Message de commit :', buildAutoCommitMessage());
+    if (rawMessage === null){
+      // L'utilisateur a cliqué "Annuler" : on abandonne l'enregistrement, sans rien envoyer.
+      btn.disabled = false;
+      btn.textContent = '💾 Enregistrer sur GitHub';
+      return;
+    }
+    const message = rawMessage.trim() || buildAutoCommitMessage();
+    try{
+      const newSha = await putFile('data.js', content, dataFileSha, message, currentUser);
+      dataFileSha = newSha;
+    }catch(e){
+      if (e.status === 409){
+        // Le fichier a changé sur GitHub depuis le dernier chargement (autre admin, autre onglet...).
+        // On récupère juste le sha le plus récent (sans toucher aux données en mémoire) et on retente
+        // une fois, en écrasant avec l'état actuel du panneau.
+        toast('Le fichier a changé sur GitHub entre-temps, nouvelle tentative...', 'error');
+        const fresh = await getFile('data.js');
+        dataFileSha = fresh.sha;
+        const newSha = await putFile('data.js', content, dataFileSha, message, currentUser);
+        dataFileSha = newSha;
+      } else {
+        throw e;
+      }
+    }
     markSaved();
     toast('Enregistré sur GitHub ✔', 'success');
   }catch(e){
@@ -969,7 +995,7 @@ function renderInfosTab(hero){
         <div class="thumb-picker">
           <img src="${assetRawUrl(hero.portrait)}" onerror="this.style.visibility='hidden'" />
           <div class="path">${escapeHtml(hero.portrait||'(aucun)')}</div>
-          <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}],'portrait',p); renderHeroPanel(); })">Choisir</button>
+          <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}],'portrait',p); renderHeroPanel(); }, 'Image portrait')">Choisir</button>
         </div>
       </div>
       <div class="field"><label>Accroche (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}],'headline.fr',this.value)">${escapeHtml(hero.headline?.fr)}</textarea></div>
@@ -1038,7 +1064,7 @@ function renderSpellsTab(hero){
           <div class="thumb-picker">
             <img src="${assetRawUrl(sp.icon)}" onerror="this.style.visibility='hidden'" />
             <div class="path">${escapeHtml(sp.icon||'(aucune)')}</div>
-            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].spells[${i}],'icon',p); renderHeroPanel(); })">Choisir</button>
+            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].spells[${i}],'icon',p); renderHeroPanel(); }, 'Image sorts')">Choisir</button>
           </div>
         </div>
         <div class="row">
@@ -1049,7 +1075,7 @@ function renderSpellsTab(hero){
           <label>Vidéo de démo (ID YouTube ou fichier .mp4 dans assets)</label>
           <div class="thumb-picker">
             <input value="${escapeHtml(sp.demoYoutubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'demoYoutubeId',this.value)" />
-            <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].spells[${i}],'demoYoutubeId',p); renderHeroPanel(); })">Choisir un fichier</button>
+            <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].spells[${i}],'demoYoutubeId',p); renderHeroPanel(); }, 'Vidéo de démo (sort)')">Choisir un fichier</button>
           </div>
         </div>
         <button class="danger" onclick="removeSpell(${currentHeroIndex},${i})">🗑 Supprimer ce sort</button>
@@ -1116,7 +1142,7 @@ function renderOneBuild(hero, b, i){
         <label>Vidéo (lien/ID YouTube ou fichier assets)</label>
         <div class="thumb-picker">
           <input value="${escapeHtml(v.youtubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'youtubeId',this.value)" />
-          <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'youtubeId',p); renderHeroPanel(); })">Choisir un fichier</button>
+          <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'youtubeId',p); renderHeroPanel(); }, 'Vidéo de build')">Choisir un fichier</button>
         </div>
         <small class="help">Colle un lien/ID YouTube (ex: https://youtube.com/watch?v=XXXXXXXXXXX), ou choisis un fichier .mp4/.webm/.gif/.webp du dossier assets/ avec le bouton. Survole la vidéo (ou appuie dessus sur mobile) pour la lire — plusieurs vidéos s'affichent en carrousel avec des flèches.</small>
       </div>
@@ -1189,7 +1215,7 @@ function renderTalent(buildIdx, ti, t){
           <div class="thumb-picker">
             <img src="${assetRawUrl(a.icon)}" onerror="this.style.visibility='hidden'" />
             <div class="path">${escapeHtml(a.icon||'(aucune)')}</div>
-            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'icon',p); renderHeroPanel(); })">Choisir</button>
+            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'icon',p); renderHeroPanel(); }, 'Image talents (alternative)')">Choisir</button>
           </div>
         </div>
         <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'description.fr',this.value)">${escapeHtml(a.description?.fr)}</textarea></div>
@@ -1198,7 +1224,7 @@ function renderTalent(buildIdx, ti, t){
           <label>Vidéo de démo (ID YouTube ou fichier .mp4)</label>
           <div class="thumb-picker">
             <input value="${escapeHtml(a.demoYoutubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'demoYoutubeId',this.value)" />
-            <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'demoYoutubeId',p); renderHeroPanel(); })">Choisir</button>
+            <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'demoYoutubeId',p); renderHeroPanel(); }, 'Vidéo de démo (talent alternatif)')">Choisir</button>
           </div>
         </div>
         <button class="danger" onclick="HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives.splice(${ai},1); markDirty(); renderHeroPanel();">🗑 Supprimer cette alternative</button>
@@ -1222,7 +1248,7 @@ function renderTalent(buildIdx, ti, t){
           <div class="thumb-picker">
             <img src="${assetRawUrl(t.icon)}" onerror="this.style.visibility='hidden'" />
             <div class="path">${escapeHtml(t.icon||'(aucune)')}</div>
-            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'icon',p); renderHeroPanel(); })">Choisir</button>
+            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'icon',p); renderHeroPanel(); }, 'Image talents')">Choisir</button>
           </div>
         </div>
         <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'description.fr',this.value)">${escapeHtml(t.description?.fr)}</textarea></div>
@@ -1231,7 +1257,7 @@ function renderTalent(buildIdx, ti, t){
           <label>Vidéo de démo (ID YouTube ou fichier .mp4)</label>
           <div class="thumb-picker">
             <input value="${escapeHtml(t.demoYoutubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'demoYoutubeId',this.value)" />
-            <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'demoYoutubeId',p); renderHeroPanel(); })">Choisir</button>
+            <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'demoYoutubeId',p); renderHeroPanel(); }, 'Vidéo de démo (talent)')">Choisir</button>
           </div>
         </div>
         <h3 style="margin-top:10px;font-size:12px;color:var(--text-dim);">Talents alternatifs</h3>
@@ -1280,8 +1306,10 @@ function addAlternative(idx, bIdx, tIdx){
 /* =========================================================================
    SELECTEUR D'IMAGES / VIDEOS (dossier assets du repo)
    ========================================================================= */
-async function openAssetPicker(kind, callback){
+async function openAssetPicker(kind, callback, fieldLabel){
   assetPickerCallback = callback;
+  assetPickerFieldLabel = fieldLabel || null;
+  assetPickerHeroIndex = currentHeroIndex;
   const modalRoot = document.getElementById('modalRoot');
   modalRoot.innerHTML = `
     <div class="modal-overlay" onclick="if(event.target===this) closeAssetPicker()">
@@ -1307,6 +1335,8 @@ async function openAssetPicker(kind, callback){
 function closeAssetPicker(){
   document.getElementById('modalRoot').innerHTML = '';
   assetPickerCallback = null;
+  assetPickerFieldLabel = null;
+  assetPickerHeroIndex = null;
 }
 const IMAGE_EXT = ['png','jpg','jpeg','gif','webp','svg'];
 const VIDEO_EXT = ['mp4','webm'];
@@ -1401,6 +1431,11 @@ function renderAssetGrid(kind){
   }).join('');
 }
 function pickAsset(path){
+  if (assetPickerFieldLabel && assetPickerHeroIndex !== null && HEROES && HEROES[assetPickerHeroIndex]){
+    const name = HEROES[assetPickerHeroIndex].name?.fr || HEROES[assetPickerHeroIndex].id;
+    if (!dirtyHeroFields[name]) dirtyHeroFields[name] = new Set();
+    dirtyHeroFields[name].add(assetPickerFieldLabel);
+  }
   if (assetPickerCallback) assetPickerCallback(path);
   closeAssetPicker();
 }
