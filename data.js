@@ -5491,7 +5491,7 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
-        "key": "W",
+        "key": "",
         "name": {
           "fr": "Wall Ride",
           "en": "Wall Ride"
