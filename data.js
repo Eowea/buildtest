@@ -1753,7 +1753,7 @@ const HEROES = [
       "en": "Alexstrasza"
     },
     "role": "Healer",
-    "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_alexstrasza.png",
+    "portrait": "assets/heroes/base_spells/alexstrasza/images/talents/storm_ui_icon_alexstrasza_blessing_of_the_red.png",
     "headline": {
       "fr": "Soins en zone massifs et forme de dragon.",
       "en": "Massive AoE healing and dragon form."
