@@ -5568,7 +5568,7 @@ const HEROES = [
                   "fr": "Mur d'amplis",
                   "en": "Off the Wall"
                 },
-                "icon": "",
+                "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_soundwave_a.png",
                 "description": {
                   "fr": "Toucher un ennemi avec Onde Sonore pendant l'effet de Wall Ride, réduit le temps de recharge et rend du mana. ",
                   "en": "Hitting an enemy with Soundwave while the Wall Ride effect is active reduces the cooldown and restores mana."
