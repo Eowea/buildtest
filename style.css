@@ -23,19 +23,19 @@
 
     /* ── HotS Palette (Nexus Theme) ── */
     :root {
-      --bg-deep: #0a0e28;
-      --bg-0: #10163a;
-      --bg-1: #161d45;
-      --bg-2: #1c2550;
-      --bg-3: #232e5c;
-      --bg-4: #2b3768;
+      --bg-deep: #0d0a26;
+      --bg-0: #131238;
+      --bg-1: #191642;
+      --bg-2: #201c50;
+      --bg-3: #29245e;
+      --bg-4: #332c6e;
 
-      --gold: #e8631c;
-      --gold-bright: #ff8a4a;
-      --gold-dim: #a8460f;
-      --gold-glow: rgba(232, 99, 28, 0.25);
-      --gold-border: rgba(232, 99, 28, 0.5);
-      --gold-soft: rgba(232, 99, 28, 0.08);
+      --gold: #7b5cff;
+      --gold-bright: #b39dff;
+      --gold-dim: #4c2f99;
+      --gold-glow: rgba(123, 92, 255, 0.25);
+      --gold-border: rgba(123, 92, 255, 0.5);
+      --gold-soft: rgba(123, 92, 255, 0.08);
 
       --blue: #00e5ff;
       --blue-bright: #84ffff;
