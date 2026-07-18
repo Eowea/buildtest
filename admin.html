@@ -1039,6 +1039,10 @@ let dragState = null; // { listType, fromIndex, itemEl }
 (function bindDragReorder(){
   const container = document.getElementById('contentEl');
 
+  container.addEventListener('click', (e) => {
+    if (e.target.closest('.drag-handle')){ e.preventDefault(); e.stopPropagation(); }
+  }, true);
+
   container.addEventListener('pointerdown', (e) => {
     const handle = e.target.closest('.drag-handle');
     if (!handle) return;
