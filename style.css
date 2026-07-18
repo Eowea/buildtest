@@ -952,7 +952,7 @@
       filter: drop-shadow(0 0 12px var(--gold-glow));
     }
 
-    .talent-title-card { font-size: 13px; font-weight: 600; color: var(--text-bright); line-height: 1.3; font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; }
+    .talent-title-card { font-size: 13px; font-weight: 400; color: var(--text-bright); line-height: 1.3; font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; }
 
     /* ── Build Code ── */
     .build-code-wrap {
