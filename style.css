@@ -37,12 +37,12 @@
       --gold-border: rgba(240, 180, 41, 0.5);
       --gold-soft: rgba(240, 180, 41, 0.08);
 
-      --blue: #6c63ff;
-      --blue-bright: #a8a3ff;
-      --blue-glow: rgba(108, 99, 255, 0.25);
-      --blue-soft: rgba(108, 99, 255, 0.05);
-      --blue-border: rgba(108, 99, 255, 0.35);
-      --blue-border-hover: rgba(108, 99, 255, 0.8);
+      --blue: #8f8ad1;
+      --blue-bright: #c3bfec;
+      --blue-glow: rgba(143, 138, 209, 0.25);
+      --blue-soft: rgba(143, 138, 209, 0.05);
+      --blue-border: rgba(143, 138, 209, 0.35);
+      --blue-border-hover: rgba(143, 138, 209, 0.8);
 
       --text: #e0e6ed;
       --text-bright: #ffffff;
