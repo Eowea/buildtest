@@ -564,7 +564,7 @@
     }
 
     .hero-meta { min-width: 0; }
-    .hero-name { font-size: 15px; font-weight: 600; color: var(--text-bright); line-height: 1.2; font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; }
+    .hero-name { font-size: 15px; font-weight: 400; color: var(--text-bright); line-height: 1.2; font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; }
     .hero-role { font-size: 12px; color: var(--blue); font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
 
     .empty-state {
