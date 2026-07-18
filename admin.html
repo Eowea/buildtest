@@ -1097,7 +1097,7 @@ let dragState = null; // { listType, fromIndex, itemEl }
 function reorderHeroList(listType, from, to){
   const hero = HEROES[currentHeroIndex];
   if (!hero) return;
-  if (listType === 'spells' || listType === 'tips'){
+  if (listType === 'spells' || listType === 'tips' || listType === 'guideVideos'){
     const arr = hero[listType];
     const [moved] = arr.splice(from, 1);
     arr.splice(to, 0, moved);
@@ -1109,6 +1109,18 @@ function reorderHeroList(listType, from, to){
     const [movedIdx] = indices.splice(from, 1);
     indices.splice(to, 0, movedIdx);
     indices.forEach((realIdx, pos) => { hero.builds[realIdx].order = pos + 1; });
+  } else if (listType.startsWith('talents:')){
+    const buildIdx = Number(listType.split(':')[1]);
+    const arr = hero.builds[buildIdx]?.talents;
+    if (!arr) return;
+    const [moved] = arr.splice(from, 1);
+    arr.splice(to, 0, moved);
+  } else if (listType.startsWith('buildVideos:')){
+    const buildIdx = Number(listType.split(':')[1]);
+    const arr = hero.builds[buildIdx]?.videos;
+    if (!arr) return;
+    const [moved] = arr.splice(from, 1);
+    arr.splice(to, 0, moved);
   }
   markDirty();
   renderHeroPanel();
@@ -1160,8 +1172,9 @@ function renderInfosTab(hero){
 function renderGuideVideosList(hero){
   const list = hero.guideVideos || [];
   return list.map((g, i) => { const uid = assignUid(g); return `
-    <details class="collapsible" data-uid="${uid}"${collapsibleState[uid]?' open':''}>
+    <details class="collapsible" data-uid="${uid}"${collapsibleState[uid]?' open':''} data-drag-item data-drag-list="guideVideos" data-drag-index="${i}">
       <summary>
+        <span class="drag-handle" title="Glisser pour réordonner">⠿</span>
         <span class="chevron">▸</span>
         <span class="s-title">${escapeHtml(g.title?.fr || 'Vidéo guide sans titre')}</span>
       </summary>
@@ -1279,7 +1292,8 @@ function renderOneBuild(hero, b, i, pos){
   const buildUid = assignUid(b);
   const talentsHtml = (b.talents||[]).map((t, ti) => renderTalent(i, ti, t)).join('');
   const videosHtml = (b.videos||[]).map((v, vi) => `
-    <div class="subitem">
+    <div class="subitem" data-drag-item data-drag-list="buildVideos:${i}" data-drag-index="${vi}" style="padding-left:34px;">
+      <span class="drag-handle" title="Glisser pour réordonner" style="position:absolute;left:8px;top:12px;">⠿</span>
       <button class="ghost remove-btn" onclick="HEROES[${currentHeroIndex}].builds[${i}].videos.splice(${vi},1); markDirty(); renderHeroPanel();">✕</button>
       <div class="row">
         <div class="field"><label>Titre (FR)</label><input value="${escapeHtml(v.title?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'title.fr',this.value)" /></div>
@@ -1381,8 +1395,9 @@ function renderTalent(buildIdx, ti, t){
     </details>
   `; }).join('');
   return `
-    <details class="collapsible nested" data-uid="${talentUid}"${collapsibleState[talentUid]?' open':''}>
+    <details class="collapsible nested" data-uid="${talentUid}"${collapsibleState[talentUid]?' open':''} data-drag-item data-drag-list="talents:${buildIdx}" data-drag-index="${ti}">
       <summary>
+        <span class="drag-handle" title="Glisser pour réordonner">⠿</span>
         <span class="chevron">▸</span>
         <span class="s-title">Niv. ${escapeHtml(t.level ?? '?')} — ${escapeHtml(t.name?.fr || 'Talent sans nom')}</span>
       </summary>
