@@ -775,7 +775,7 @@
     .floating-tooltip[data-placement="bottom"]::after { bottom: 100%; border-bottom: 8px solid var(--gold-dim); }
 
     .floating-tooltip-title {
-      font-family: 'Cinzel', serif;
+      font-family: 'Metronic for Blizzard', 'Cinzel', serif;
       font-size: 16px;
       font-weight: 700;
       color: var(--gold-bright);
@@ -862,7 +862,7 @@
        en même temps) — évite une dépendance circulaire qui perturbait le calcul sur Firefox. */
     .talent-board-scroller::before {
       content: ''; position: absolute;
-      left: 60px; right: 60px; top: 76px; height: 3px;
+      left: 60px; right: 60px; top: 98px; height: 3px;
       background: linear-gradient(90deg, transparent, var(--blue-bright), transparent);
       z-index: 0; pointer-events: none;
       box-shadow: 0 0 10px var(--blue-glow);
@@ -1283,7 +1283,7 @@
       
       .talent-board-track { gap: 8px; }
       .talent-card { flex-basis: 104px; max-width: 104px; padding: 10px 8px 12px; }
-      .talent-board-scroller::before { left: 52px; right: 52px; top: 68px; }
+      .talent-board-scroller::before { left: 52px; right: 52px; top: 96px; }
       .talent-board-scroller { scrollbar-width: thin !important; padding-bottom: 20px; }
       .talent-board-scroller::-webkit-scrollbar { display: block !important; height: 4px; }
       .talent-board-scroller::-webkit-scrollbar-thumb { background: var(--blue-bright); border-radius: 4px; }
