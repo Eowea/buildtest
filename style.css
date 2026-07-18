@@ -1475,12 +1475,13 @@
 }
 
 .hero-list .hero-name {
-  font-size: 13px !important;
+  font-size: 11px !important;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; /* Rajoute "..." si le nom est trop long (ex: Deckard Cain) */
-  max-width: 80px; 
+  white-space: normal;
+  overflow: visible;
+  word-break: break-word;
+  line-height: 1.2;
+  max-width: 80px;
 }
 
 /* Le portrait */
