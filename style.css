@@ -30,12 +30,12 @@
       --bg-3: #29245e;
       --bg-4: #332c6e;
 
-      --gold: #ffffff;
-      --gold-bright: #ffffff;
-      --gold-dim: #b8bec9;
-      --gold-glow: rgba(255, 255, 255, 0.25);
-      --gold-border: rgba(255, 255, 255, 0.5);
-      --gold-soft: rgba(255, 255, 255, 0.08);
+      --gold: #f0b429;
+      --gold-bright: #ffd873;
+      --gold-dim: #a67c00;
+      --gold-glow: rgba(240, 180, 41, 0.25);
+      --gold-border: rgba(240, 180, 41, 0.5);
+      --gold-soft: rgba(240, 180, 41, 0.08);
 
       --blue: #00e5ff;
       --blue-bright: #84ffff;
