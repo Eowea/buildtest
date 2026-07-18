@@ -9,43 +9,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0d0a26;
-    --panel:#151238;
-    --panel-alt:#1c1845;
-    --border:#2e2a5c;
-    --text:#e0e6ed;
+    --bg:#0f1219;
+    --panel:#171c27;
+    --panel-alt:#1e2431;
+    --border:#2b3241;
+    --text:#e7e5df;
     --text-dim:#98a1b3;
-    --gold:#f0b429;
-    --gold-dim:#a67c00;
-    --blue:#c9c0f5;
+    --gold:#c9a24b;
+    --gold-dim:#8d723a;
+    --blue:#5b8ab8;
     --red:#c1554d;
     --red-dim:#7a2e2a;
     --green:#5f9e6f;
     --radius:8px;
   }
-  @font-face {
-    font-family: 'Metronic for Blizzard';
-    src: url('assets/fonts/metronic-for-blizzard.woff2') format('woff2'),
-         url('assets/fonts/metronic-for-blizzard.woff') format('woff');
-    font-weight: 300 500;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Metronic for Blizzard';
-    src: url('assets/fonts/metronic-for-blizzard-bold.woff2') format('woff2'),
-         url('assets/fonts/metronic-for-blizzard-bold.woff') format('woff');
-    font-weight: 600 900;
-    font-style: normal;
-    font-display: swap;
-  }
   *{box-sizing:border-box;}
-  body{margin:0;background:var(--bg);color:var(--text);font-family:'Metronic for Blizzard','Inter',sans-serif;font-size:14px;}
-  h1,h2,h3{font-family:'Metronic for Blizzard','Cinzel',serif;font-weight:700;letter-spacing:.02em;color:var(--gold);margin:0 0 12px;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:14px;}
+  h1,h2,h3{font-family:'Cinzel',serif;font-weight:700;letter-spacing:.02em;color:var(--gold);margin:0 0 12px;}
   h1{font-size:22px;} h2{font-size:17px;} h3{font-size:14px;color:var(--text);}
   a{color:var(--blue);}
   button{
-    font-family:'Metronic for Blizzard','Inter',sans-serif;cursor:pointer;border-radius:var(--radius);border:1px solid var(--border);
+    font-family:'Inter',sans-serif;cursor:pointer;border-radius:var(--radius);border:1px solid var(--border);
     background:var(--panel-alt);color:var(--text);padding:8px 14px;font-size:13px;font-weight:600;transition:.15s;
   }
   button:hover{border-color:var(--gold-dim);}
@@ -58,7 +42,7 @@
   button:disabled{opacity:.4;cursor:not-allowed;}
   input,textarea,select{
     width:100%;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);
-    color:var(--text);padding:8px 10px;font-family:'Metronic for Blizzard','Inter',sans-serif;font-size:13px;
+    color:var(--text);padding:8px 10px;font-family:'Inter',sans-serif;font-size:13px;
   }
   textarea{resize:vertical;min-height:60px;}
   input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold-dim);}
