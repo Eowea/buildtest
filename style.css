@@ -1,5 +1,26 @@
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
+    /* Police de marque du site : Metronic for Blizzard (fichier hébergé localement).
+       Plage de poids large (300–800) déclarée volontairement : on ne dispose que d'une
+       seule graisse ("Book") dans ce fichier, donc on évite ainsi que le navigateur ne
+       tente de fabriquer un faux gras quand un poids plus élevé est demandé ailleurs. */
+    @font-face {
+      font-family: 'Metronic for Blizzard';
+      src: url('assets/fonts/metronic-for-blizzard.woff2') format('woff2'),
+           url('assets/fonts/metronic-for-blizzard.woff') format('woff');
+      font-weight: 300 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Metronic for Blizzard';
+      src: url('assets/fonts/metronic-for-blizzard-bold.woff2') format('woff2'),
+           url('assets/fonts/metronic-for-blizzard-bold.woff') format('woff');
+      font-weight: 600 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
     /* ── HotS Palette (Nexus Theme) ── */
     :root {
       --bg-deep: #080c14;
@@ -144,7 +165,7 @@
     }
 
     .eyebrow, .twitch-head, .filter-chip, .role-badge, .card-head, .talent-level, .build-tab, .guide-video-kicker, .youtube-badge {
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       font-weight: 700;
@@ -165,7 +186,7 @@
     }
 
     .site-title {
-      font-family: 'Rajdhani', serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', serif;
       font-size: clamp(30px, 5vw, 56px);
       font-weight: 900;
       line-height: 1;
@@ -206,7 +227,7 @@
       border-radius: 2px;
       border: 1px solid var(--blue-border);
       background: rgba(0, 229, 255, 0.05);
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       font-size: 13px;
       font-weight: 700;
       text-transform: uppercase;
@@ -266,7 +287,7 @@
       border-radius: 2px;
       border: 1px solid var(--blue-border);
       background: var(--blue-soft);
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
@@ -309,7 +330,7 @@
       outline: none;
       transition: all var(--t);
       font-size: 16px; 
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       font-weight: 600;
       letter-spacing: 0.05em;
       box-sizing: border-box;
@@ -401,7 +422,7 @@
     .content { padding: 24px; position: relative; z-index: 5; min-width: 0; }
 
     .section-title {
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       text-transform: uppercase;
       font-size: 24px;
       font-weight: 700;
@@ -536,15 +557,15 @@
       width: 100%; height: 100%;
       display: grid; place-items: center;
       font-size: 14px; font-weight: 700;
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       color: var(--gold-bright);
       background: var(--bg-3);
       clip-path: inherit;
     }
 
     .hero-meta { min-width: 0; }
-    .hero-name { font-size: 15px; font-weight: 600; color: var(--text-bright); line-height: 1.2; font-family: 'Rajdhani', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; }
-    .hero-role { font-size: 12px; color: var(--blue); font-family: 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
+    .hero-name { font-size: 15px; font-weight: 600; color: var(--text-bright); line-height: 1.2; font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; }
+    .hero-role { font-size: 12px; color: var(--blue); font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
 
     .empty-state {
       padding: 32px;
@@ -554,7 +575,7 @@
       color: var(--blue-bright);
       font-size: 14px;
       text-align: center;
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
@@ -597,7 +618,7 @@
   background: var(--bg-deep); /* Fond pour éviter les fuites de pixels */
 }
     .detail-title {
-      font-family: 'Rajdhani', serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', serif;
       font-size: clamp(28px, 5vw, 48px);
       font-weight: 900;
       line-height: 1;
@@ -728,7 +749,7 @@
       text-align: center; 
       text-transform: uppercase; 
       letter-spacing: 0.1em; 
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       text-shadow: 0 2px 5px rgba(0,0,0,1), 0 0 10px rgba(0, 229, 255, 0.4);
     }
 
@@ -884,7 +905,7 @@
       font-size: 10px;
       color: var(--text-muted);
       text-transform: uppercase;
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       margin-bottom: 2px;
     }
     .talent-trigger.alt-talent {
@@ -931,7 +952,7 @@
       filter: drop-shadow(0 0 12px var(--gold-glow));
     }
 
-    .talent-title-card { font-size: 13px; font-weight: 600; color: var(--text-bright); line-height: 1.3; font-family: 'Rajdhani', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; }
+    .talent-title-card { font-size: 13px; font-weight: 600; color: var(--text-bright); line-height: 1.3; font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; }
 
     /* ── Build Code ── */
     .build-code-wrap {
@@ -942,7 +963,7 @@
       width: 100%;
     }
     .build-code-title {
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       font-size: 13px;
       font-weight: 700;
       color: var(--gold);
@@ -1041,9 +1062,9 @@
 
     .guide-video-content { padding: 16px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1; }
     .guide-video-kicker { font-size: 12px; color: var(--gold); }
-    .guide-video-title { font-size: 15px; font-weight: 700; color: var(--text-bright); font-family: 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; overflow-wrap: break-word; }
+    .guide-video-title { font-size: 15px; font-weight: 700; color: var(--text-bright); font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; overflow-wrap: break-word; }
     .guide-video-desc { color: var(--text-dim); font-size: 13px; line-height: 1.5; overflow-wrap: break-word; }
-    .guide-video-cta { margin-top: auto; padding-top: 8px; display: inline-flex; align-items: center; gap: 6px; color: var(--gold-bright); font-weight: 700; font-size: 12px; text-transform: uppercase; font-family: 'Rajdhani', sans-serif; }
+    .guide-video-cta { margin-top: auto; padding-top: 8px; display: inline-flex; align-items: center; gap: 6px; color: var(--gold-bright); font-weight: 700; font-size: 12px; text-transform: uppercase; font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif; }
 
     .youtube-thumb::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(8, 12, 20, 0.8)); z-index: 1; pointer-events: none; }
     
@@ -1069,10 +1090,10 @@
       font-size: 10px; backdrop-filter: blur(4px);
     }
 
-    .youtube-unavailable { position: absolute; inset: 0; z-index: 4; display: grid; place-items: center; text-align: center; color: var(--text-muted); font-size: 12px; background: rgba(8, 12, 20, 0.8); padding: 12px; text-transform: uppercase; font-family: 'Rajdhani', sans-serif;}
+    .youtube-unavailable { position: absolute; inset: 0; z-index: 4; display: grid; place-items: center; text-align: center; color: var(--text-muted); font-size: 12px; background: rgba(8, 12, 20, 0.8); padding: 12px; text-transform: uppercase; font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;}
 
     .combo-info { padding: 12px 14px; min-width: 0; display: flex; flex-direction: column; flex-grow: 1; }
-    .combo-title { font-size: 14px; font-weight: 700; color: var(--text-bright); margin-bottom: 4px; overflow-wrap: break-word; font-family: 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
+    .combo-title { font-size: 14px; font-weight: 700; color: var(--text-bright); margin-bottom: 4px; overflow-wrap: break-word; font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
     .combo-desc { font-size: 12px; color: var(--text-dim); line-height: 1.5; overflow-wrap: break-word; }
 
     /* ---------- Carrousel de vidéos de build (survol / appui pour lire) ---------- */
@@ -1080,7 +1101,7 @@
     .combo-slide { display: none; }
     .combo-slide.is-active { display: block; }
     .combo-slide-title {
-      font-family: 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 0.06em;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 0.06em;
       font-size: 15px; font-weight: 700; color: var(--gold); text-align: center;
       margin-bottom: 10px; overflow-wrap: break-word;
     }
@@ -1104,7 +1125,7 @@
     .video-duration-badge {
       position: absolute; bottom: 6px; right: 6px; z-index: 3;
       background: rgba(8, 9, 12, 0.85); color: #fff; font-size: 12px; font-weight: 600;
-      padding: 2px 6px; border-radius: 4px; line-height: 1.4; font-family: 'Rajdhani', sans-serif;
+      padding: 2px 6px; border-radius: 4px; line-height: 1.4; font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
     }
 
     .combo-nav {
@@ -1136,7 +1157,7 @@
     }
     .video-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
 
-    .overlay-status { position: absolute; inset: 0; display: none; place-items: center; color: var(--text-bright); font-size: 14px; z-index: 1; font-family: 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
+    .overlay-status { position: absolute; inset: 0; display: none; place-items: center; color: var(--text-bright); font-size: 14px; z-index: 1; font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
     .video-overlay.loading .overlay-status, .video-overlay.error .overlay-status { display: grid; }
 
     .overlay-status-box { display: inline-flex; align-items: center; gap: 12px; padding: 16px 24px; border: 1px solid var(--blue-border); background: var(--bg-2); border-radius: 2px; }
@@ -1162,7 +1183,7 @@
     }
     .build-count-badge {
       font-size: 10px;
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       font-weight: 700;
       color: var(--blue-bright);
       background: rgba(0, 229, 255, 0.1);
@@ -1298,7 +1319,7 @@
       border-bottom: 1px solid var(--blue-border);
       background: linear-gradient(90deg, rgba(0, 229, 255, 0.1), transparent);
       color: var(--blue-bright);
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       font-size: 13px;
       font-weight: 700;
       text-transform: uppercase;
@@ -1356,7 +1377,7 @@
 }
 
     .random-meta .name {
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       font-size: 18px;
       font-weight: 700;
       color: var(--text-bright);
@@ -1366,12 +1387,12 @@
     .random-meta .role {
       font-size: 12px;
       color: var(--blue);
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       text-transform: uppercase;
     }
 
     .random-build-label {
-      font-family: 'Rajdhani', serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', serif;
       font-size: 14px;
       color: var(--gold-bright);
       margin: 4px 0;
@@ -1399,7 +1420,7 @@
       background: var(--blue-soft);
       border: 1px solid var(--blue-border);
       color: var(--blue-bright);
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       font-weight: 700;
       text-transform: uppercase;
       font-size: 12px;
@@ -1483,7 +1504,7 @@
 .build-date {
   font-size: 12px;
   color: var(--text-color, white);
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 12px;
@@ -1689,7 +1710,7 @@
 
 #socials .social-link span {
     margin-left: 14px;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 13px;
