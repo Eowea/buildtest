@@ -51,7 +51,15 @@ const STREAMER_CONFIG = {
       "newTab": true
     }
   ],
-  "latestVideos": [],
+  "latestVideos": [
+    {
+      "title": {
+        "fr": "Dehaka Grand Master Gameplay - Analyse & Explications",
+        "en": "Dehaka Grand Master Gameplay - Analyse & Explications"
+      },
+      "youtubeId": "Nfp1w2JU-DQ"
+    }
+  ],
   "patchVideos": []
 };
 
