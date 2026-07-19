@@ -1775,6 +1775,15 @@ function showConfigPanel(){
         <div class="field"><label>Titre du site (FR)</label><input value="${escapeHtml(STREAMER_CONFIG.siteTitle?.fr)}" oninput="setNested(STREAMER_CONFIG,'siteTitle.fr',this.value)" /></div>
         <div class="field"><label>Titre du site (EN)</label><input value="${escapeHtml(STREAMER_CONFIG.siteTitle?.en)}" oninput="setNested(STREAMER_CONFIG,'siteTitle.en',this.value)" /></div>
       </div>
+      <div class="field">
+        <label>Logo (image, remplace le titre texte si renseigné)</label>
+        <div class="thumb-picker">
+          ${STREAMER_CONFIG.logoImage ? `<img src="${assetRawUrl(STREAMER_CONFIG.logoImage)}" onerror="this.style.visibility='hidden'" />` : ''}
+          <div class="path">${escapeHtml(STREAMER_CONFIG.logoImage || '(aucun, le titre texte est affiché)')}</div>
+          <button onclick="openAssetPicker('image', (p)=>{ setNested(STREAMER_CONFIG,'logoImage',p); showConfigPanel(); }, 'Logo du site')">Choisir</button>
+          ${STREAMER_CONFIG.logoImage ? `<button class="ghost" onclick="setNested(STREAMER_CONFIG,'logoImage',''); showConfigPanel();">Retirer</button>` : ''}
+        </div>
+      </div>
       <div class="row">
         <div class="field"><label>Sous-titre (FR)</label><textarea oninput="setNested(STREAMER_CONFIG,'siteSubtitle.fr',this.value)">${escapeHtml(STREAMER_CONFIG.siteSubtitle?.fr)}</textarea></div>
         <div class="field"><label>Sous-titre (EN)</label><textarea oninput="setNested(STREAMER_CONFIG,'siteSubtitle.en',this.value)">${escapeHtml(STREAMER_CONFIG.siteSubtitle?.en)}</textarea></div>

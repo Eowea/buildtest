@@ -189,7 +189,11 @@ function markEverythingAsSeen(hero) {
     }
 
     function renderHeader() {
-      els.siteTitle.textContent = loc(STREAMER_CONFIG.siteTitle);
+      if (STREAMER_CONFIG.logoImage) {
+        els.siteTitle.innerHTML = `<img class="site-logo-img" src="${escapeHtml(STREAMER_CONFIG.logoImage)}" alt="${escapeHtml(loc(STREAMER_CONFIG.siteTitle))}" />`;
+      } else {
+        els.siteTitle.textContent = loc(STREAMER_CONFIG.siteTitle);
+      }
       els.socials.innerHTML = STREAMER_CONFIG.socials.map(s=>`<a class="social-link" data-network="${s.icon}" href="${s.url}" target="_blank" rel="noreferrer">${ICONS[s.icon]||''}<span>${s.label}</span></a>`).join('');
       els.headerNav.innerHTML = (STREAMER_CONFIG.navLinks || []).filter(l => l.enabled !== false).map(l => `<a class="header-nav-link" href="${escapeHtml(l.url || '#')}"${l.newTab ? ' target="_blank" rel="noreferrer"' : ''}>${escapeHtml(loc(l.label))}</a>`).join('');
     }

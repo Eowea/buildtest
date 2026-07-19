@@ -3,6 +3,7 @@ const APP_CONFIG = {
 };
 
 const STREAMER_CONFIG = {
+  "logoImage": "",
   "siteTitle": {
     "fr": "EOWEA BUILDS",
     "en": "EOWEA BUILDS"
