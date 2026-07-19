@@ -23180,7 +23180,7 @@ const HEROES = [
   },
   {
     "id": "tracer",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Tracer",
       "en": "Tracer"
