@@ -398,7 +398,7 @@ let dirtyHeroFields = {}; // nom du héros -> Set des champs/actions précis tou
 let dirtyHeroImages = {}; // nom du héros -> Set des noms de sorts/talents dont l'image a changé
 let dirtyConfigTouched = false;
 let dirtyAdminsTouched = false;
-const TAB_LABELS = { infos: 'Informations', spells: 'Sorts', tips: 'Astuces', builds: 'Builds' };
+const TAB_LABELS = { infos: 'Informations', spells: 'Sorts', talentpool: 'Talents', tips: 'Astuces', builds: 'Builds' };
 function getActiveActionLabel(){
   // Regarde quel champ avait le focus (son <label>), ou quel bouton vient d'être cliqué,
   // pour savoir précisément ce qui a été modifié — sans avoir à annoter chaque champ à la main.
@@ -713,6 +713,9 @@ async function bootApp(){
   await reloadFromGitHub();
 }
 
+function generatePoolId(){
+  return 't' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+}
 function normalizeLoadedData(){
   // Corrige/complète les anciennes entrées "videos" de build qui seraient de simples
   // chaines de texte au lieu de l'objet {title, desc, youtubeId} attendu par app.js.
@@ -721,6 +724,7 @@ function normalizeLoadedData(){
       h.guideVideos = h.guideVideo ? [h.guideVideo] : [];
     }
     delete h.guideVideo;
+    if (!Array.isArray(h.talentPool)) h.talentPool = [];
     (h.builds||[]).forEach(b => {
       b.updatedAt = b.updatedAt || {fr:'',en:''};
       b.videos = (b.videos||[]).map(v => {
@@ -732,6 +736,35 @@ function normalizeLoadedData(){
         if (v.youtubeId === undefined) v.youtubeId = v.youtubeUrl || v.url || '';
         return v;
       });
+      // Migration : anciens talents écrits en entier dans le build → on les range dans le
+      // réservoir du héros (en réutilisant une entrée existante si un talent identique au
+      // même palier existe déjà, pour éviter les doublons entre builds), puis on remplace
+      // le build par une simple sélection (principal / alternatifs) qui pointe vers ce réservoir.
+      if (!Array.isArray(b.talentSelections) && Array.isArray(b.talents)){
+        const findOrCreate = (level, talentLike) => {
+          const nameFr = (talentLike.name?.fr || '').trim().toLowerCase();
+          let entry = h.talentPool.find(p => p.level === level && (p.name?.fr||'').trim().toLowerCase() === nameFr && nameFr);
+          if (!entry){
+            entry = {
+              id: generatePoolId(), level,
+              name: talentLike.name || {fr:'',en:''},
+              icon: talentLike.icon || '',
+              description: talentLike.description || {fr:'',en:''},
+              demoYoutubeId: talentLike.demoYoutubeId || null,
+            };
+            h.talentPool.push(entry);
+          }
+          return entry;
+        };
+        b.talentSelections = b.talents.map(t => {
+          const level = t.level ?? 1;
+          const primary = findOrCreate(level, t);
+          const alternativeIds = (t.alternatives||[]).map(a => findOrCreate(level, a).id);
+          return { level, primaryId: primary.id, alternativeIds };
+        });
+      }
+      if (!Array.isArray(b.talentSelections)) b.talentSelections = [];
+      delete b.talents;
     });
   });
 }
@@ -978,6 +1011,7 @@ function addHero(){
     gameplay: { fr:'', en:'' },
     guideVideos: [],
     spells: [],
+    talentPool: [],
     tips: [],
     builds: []
   });
@@ -1039,6 +1073,7 @@ function renderHeroPanel(){
     <div class="tabs">
       <div class="tab ${currentTab==='infos'?'active':''}" onclick="switchTab('infos')">Informations</div>
       <div class="tab ${currentTab==='spells'?'active':''}" onclick="switchTab('spells')">Sorts</div>
+      <div class="tab ${currentTab==='talentpool'?'active':''}" onclick="switchTab('talentpool')">Talents</div>
       <div class="tab ${currentTab==='tips'?'active':''}" onclick="switchTab('tips')">Astuces</div>
       <div class="tab ${currentTab==='builds'?'active':''}" onclick="switchTab('builds')">Builds &amp; vidéos</div>
     </div>
@@ -1047,6 +1082,7 @@ function renderHeroPanel(){
   const body = document.getElementById('tabBody');
   if (currentTab === 'infos') body.innerHTML = renderInfosTab(hero);
   if (currentTab === 'spells') body.innerHTML = renderSpellsTab(hero);
+  if (currentTab === 'talentpool') body.innerHTML = renderTalentPoolTab(hero);
   if (currentTab === 'tips') body.innerHTML = renderTipsTab(hero);
   if (currentTab === 'builds') body.innerHTML = renderBuildsTab(hero);
 }
@@ -1306,7 +1342,7 @@ function renderBuildsTab(hero){
 }
 function renderOneBuild(hero, b, i, pos){
   const buildUid = assignUid(b);
-  const talentsHtml = (b.talents||[]).map((t, ti) => renderTalent(i, ti, t)).join('');
+  const talentsHtml = renderBuildTalentSelectionUI(hero, b, i);
   const videosHtml = (b.videos||[]).map((v, vi) => `
     <div class="subitem" data-drag-item data-drag-list="buildVideos:${i}" data-drag-index="${vi}" style="padding-left:34px;">
       <span class="drag-handle" title="Glisser pour réordonner" style="position:absolute;left:8px;top:12px;">⠿</span>
@@ -1368,92 +1404,165 @@ function renderOneBuild(hero, b, i, pos){
         ${videosHtml}
         <button onclick="HEROES[${currentHeroIndex}].builds[${i}].videos=(HEROES[${currentHeroIndex}].builds[${i}].videos||[]); HEROES[${currentHeroIndex}].builds[${i}].videos.push({title:{fr:'',en:''},desc:{fr:'',en:''},youtubeId:''}); markDirty(); renderHeroPanel();">+ Ajouter une vidéo</button>
       </div>
-      <h3 style="margin-top:16px;">Talents</h3>
+      <h3 style="margin-top:16px;">Talents (sélection pour ce build)</h3>
+      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Coche "Principal" pour le talent recommandé à chaque palier, et "Alternatif" pour ceux à proposer en option. Un talent non coché n'apparaîtra pas du tout sur ce build. Pour ajouter de nouveaux talents disponibles, va dans l'onglet "Talents".</small>
       ${talentsHtml}
-      <button onclick="addTalent(${currentHeroIndex},${i})">+ Ajouter un talent</button>
       <button class="danger" style="margin-top:14px;" onclick="removeBuild(${currentHeroIndex},${i})">🗑 Supprimer ce build</button>
       </div>
     </details>
   `;
 }
-function renderTalent(buildIdx, ti, t){
-  const talentUid = assignUid(t);
-  const altHtml = (t.alternatives||[]).map((a, ai) => { const altUid = assignUid(a); return `
-    <details class="collapsible nested" data-uid="${altUid}"${collapsibleState[altUid]?' open':''} style="border-color:var(--gold-dim);">
-      <summary>
-        <span class="chevron">▸</span>
-        <span class="s-title">${escapeHtml(a.name?.fr || 'Alternative sans nom')}</span>
-      </summary>
-      <div class="body">
-        <div class="row">
-          <div class="field"><label>Alternative — Nom (FR)</label><input value="${escapeHtml(a.name?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'name.fr',this.value)" /></div>
-          <div class="field"><label>Alternative — Nom (EN)</label><input value="${escapeHtml(a.name?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'name.en',this.value)" /></div>
-        </div>
-        <div class="field">
-          <label>Icône</label>
-          <div class="thumb-picker">
-            <img src="${assetRawUrl(a.icon)}" onerror="this.style.visibility='hidden'" />
-            <div class="path">${escapeHtml(a.icon||'(aucune)')}</div>
-            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'icon',p); renderHeroPanel(); }, 'IMG:${(a.name?.fr || 'Alternative').replace(/'/g,"\\'")}')">Choisir</button>
-          </div>
-        </div>
-        <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'description.fr',this.value)">${escapeHtml(a.description?.fr)}</textarea></div>
-        <div class="field"><label>Description (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'description.en',this.value)">${escapeHtml(a.description?.en)}</textarea></div>
-        <div class="field">
-          <label>Vidéo de démo (ID YouTube ou fichier .mp4)</label>
-          <div class="thumb-picker">
-            <input value="${escapeHtml(a.demoYoutubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'demoYoutubeId',this.value)" />
-            <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives[${ai}],'demoYoutubeId',p); renderHeroPanel(); }, 'Vidéo de démo (talent alternatif)')">Choisir</button>
-          </div>
-        </div>
-        <button class="danger" onclick="HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}].alternatives.splice(${ai},1); markDirty(); renderHeroPanel();">🗑 Supprimer cette alternative</button>
+function renderTalentPoolTab(hero){
+  hero.talentPool = hero.talentPool || [];
+  const levels = [...new Set(hero.talentPool.map(p => p.level))].sort((a,b) => a - b);
+  let html = `<p style="color:var(--text-dim);font-size:13px;margin-bottom:14px;">Écris ici toutes les options de talents possibles pour ce héros, une seule fois par palier (comme dans le jeu : 3 à 5 choix). Tu sélectionneras ensuite, dans chaque build (onglet "Builds &amp; vidéos"), lequel est principal, lequel est en alternative, ou lequel n'apparaît pas du tout.</p>`;
+  if (!levels.length){
+    html += `<p style="color:var(--text-dim);font-size:13px;">Aucun talent pour le moment.</p>`;
+  }
+  html += levels.map(level => `
+    <div class="card">
+      <div class="card-head"><div class="title">Palier ${escapeHtml(level)}</div></div>
+      ${hero.talentPool.filter(p => p.level === level).map(p => renderPoolTalentItem(p)).join('')}
+      <button onclick="addPoolTalent(${currentHeroIndex}, ${level})">+ Ajouter une option à ce palier</button>
+    </div>
+  `).join('');
+  html += `
+    <div class="card">
+      <label>Ajouter un nouveau palier</label>
+      <div class="row">
+        <input id="newPoolLevelInput" type="number" placeholder="Ex: 1, 4, 7, 10, 13, 16, 20" />
+        <button onclick="addPoolLevelFromInput(${currentHeroIndex})">+ Créer ce palier</button>
       </div>
-    </details>
-  `; }).join('');
+    </div>
+  `;
+  return html;
+}
+function renderPoolTalentItem(p){
+  const uid = assignUid(p);
   return `
-    <details class="collapsible nested" data-uid="${talentUid}"${collapsibleState[talentUid]?' open':''} data-drag-item data-drag-list="talents:${buildIdx}" data-drag-index="${ti}">
+    <details class="collapsible" data-uid="${uid}"${collapsibleState[uid]?' open':''}>
       <summary>
-        <span class="drag-handle" title="Glisser pour réordonner">⠿</span>
         <span class="chevron">▸</span>
-        <span class="s-title">Niv. ${escapeHtml(t.level ?? '?')} — ${escapeHtml(t.name?.fr || 'Talent sans nom')}</span>
+        <span class="s-title">${escapeHtml(p.name?.fr || 'Talent sans nom')}</span>
       </summary>
       <div class="body">
         <div class="row">
-          <div class="field"><label>Niveau</label><input type="number" value="${t.level ?? ''}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'level',parseInt(this.value||'0'))" /></div>
-          <div class="field"><label>Nom (FR)</label><input value="${escapeHtml(t.name?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'name.fr',this.value)" /></div>
-          <div class="field"><label>Nom (EN)</label><input value="${escapeHtml(t.name?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'name.en',this.value)" /></div>
+          <div class="field"><label>Nom (FR)</label><input value="${escapeHtml(p.name?.fr)}" oninput="setNested(getPoolEntry(${currentHeroIndex},'${p.id}'),'name.fr',this.value)" /></div>
+          <div class="field"><label>Nom (EN)</label><input value="${escapeHtml(p.name?.en)}" oninput="setNested(getPoolEntry(${currentHeroIndex},'${p.id}'),'name.en',this.value)" /></div>
         </div>
         <div class="field">
           <label>Icône</label>
           <div class="thumb-picker">
-            <img src="${assetRawUrl(t.icon)}" onerror="this.style.visibility='hidden'" />
-            <div class="path">${escapeHtml(t.icon||'(aucune)')}</div>
-            <button onclick="openAssetPicker('image', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'icon',p); renderHeroPanel(); }, 'IMG:${(t.name?.fr || 'Talent').replace(/'/g,"\\'")}')">Choisir</button>
+            <img src="${assetRawUrl(p.icon)}" onerror="this.style.visibility='hidden'" />
+            <div class="path">${escapeHtml(p.icon||'(aucune)')}</div>
+            <button onclick="openAssetPicker('image', (pth)=>{ setNested(getPoolEntry(${currentHeroIndex},'${p.id}'),'icon',pth); renderHeroPanel(); }, 'IMG:${(p.name?.fr||'Talent').replace(/'/g,"\\'")}')">Choisir</button>
           </div>
         </div>
-        <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'description.fr',this.value)">${escapeHtml(t.description?.fr)}</textarea></div>
-        <div class="field"><label>Description (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'description.en',this.value)">${escapeHtml(t.description?.en)}</textarea></div>
+        <div class="field"><label>Description (FR)</label><textarea oninput="setNested(getPoolEntry(${currentHeroIndex},'${p.id}'),'description.fr',this.value)">${escapeHtml(p.description?.fr)}</textarea></div>
+        <div class="field"><label>Description (EN)</label><textarea oninput="setNested(getPoolEntry(${currentHeroIndex},'${p.id}'),'description.en',this.value)">${escapeHtml(p.description?.en)}</textarea></div>
         <div class="field">
           <label>Vidéo de démo (ID YouTube ou fichier .mp4)</label>
           <div class="thumb-picker">
-            <input value="${escapeHtml(t.demoYoutubeId)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'demoYoutubeId',this.value)" />
-            <button onclick="openAssetPicker('video', (p)=>{ setNested(HEROES[${currentHeroIndex}].builds[${buildIdx}].talents[${ti}],'demoYoutubeId',p); renderHeroPanel(); }, 'Vidéo de démo (talent)')">Choisir</button>
+            <input value="${escapeHtml(p.demoYoutubeId)}" oninput="setNested(getPoolEntry(${currentHeroIndex},'${p.id}'),'demoYoutubeId',this.value)" />
+            <button onclick="openAssetPicker('video', (pth)=>{ setNested(getPoolEntry(${currentHeroIndex},'${p.id}'),'demoYoutubeId',pth); renderHeroPanel(); }, 'Vidéo de démo (talent)')">Choisir</button>
           </div>
         </div>
-        <h3 style="margin-top:10px;font-size:12px;color:var(--text-dim);">Talents alternatifs</h3>
-        ${altHtml}
-        <button class="ghost" onclick="addAlternative(${currentHeroIndex},${buildIdx},${ti})">+ Ajouter une alternative</button>
-        <button class="danger" style="margin-top:10px;" onclick="removeTalent(${currentHeroIndex},${buildIdx},${ti})">🗑 Supprimer ce talent</button>
+        <button class="danger" onclick="removePoolTalent(${currentHeroIndex}, '${p.id}')">🗑 Supprimer cette option (retirée de tous les builds qui l'utilisaient)</button>
       </div>
     </details>
   `;
+}
+function getPoolEntry(heroIdx, id){
+  return (HEROES[heroIdx].talentPool||[]).find(p => p.id === id);
+}
+function addPoolLevelFromInput(idx){
+  const input = document.getElementById('newPoolLevelInput');
+  const level = parseInt(input.value || '0');
+  if (!level) return;
+  addPoolTalent(idx, level);
+}
+function addPoolTalent(idx, level){
+  const p = { id: generatePoolId(), level, name:{fr:'',en:''}, icon:'', description:{fr:'',en:''}, demoYoutubeId:null };
+  collapsibleState[assignUid(p)] = true;
+  HEROES[idx].talentPool = HEROES[idx].talentPool || [];
+  HEROES[idx].talentPool.push(p);
+  markDirty(); renderHeroPanel();
+}
+function removePoolTalent(idx, id){
+  if (!confirm("Supprimer cette option de talent ? Elle sera retirée de tous les builds qui l'utilisaient.")) return;
+  const hero = HEROES[idx];
+  hero.talentPool = (hero.talentPool||[]).filter(p => p.id !== id);
+  (hero.builds||[]).forEach(b => {
+    (b.talentSelections||[]).forEach(sel => {
+      if (sel.primaryId === id) sel.primaryId = null;
+      sel.alternativeIds = (sel.alternativeIds||[]).filter(aid => aid !== id);
+    });
+  });
+  markDirty(); renderHeroPanel();
+}
+
+function renderBuildTalentSelectionUI(hero, build, buildIdx){
+  const pool = hero.talentPool || [];
+  const levels = [...new Set(pool.map(p => p.level))].sort((a,b) => a - b);
+  if (!levels.length){
+    return `<p style="color:var(--text-dim);font-size:13px;">Aucun talent défini pour ce héros pour l'instant. Va dans l'onglet "Talents" pour en créer, ils apparaîtront ici ensuite.</p>`;
+  }
+  build.talentSelections = build.talentSelections || [];
+  return levels.map(level => {
+    const options = pool.filter(p => p.level === level);
+    let sel = build.talentSelections.find(s => s.level === level);
+    if (!sel){
+      sel = { level, primaryId: null, alternativeIds: [] };
+      build.talentSelections.push(sel);
+    }
+    const selIdx = build.talentSelections.indexOf(sel);
+    const rows = options.map(p => {
+      const isPrimary = sel.primaryId === p.id;
+      const isAlt = (sel.alternativeIds||[]).includes(p.id);
+      return `
+        <div class="row" style="align-items:center;gap:10px;margin-bottom:6px;flex-wrap:nowrap;">
+          <img src="${assetRawUrl(p.icon)}" style="width:28px;height:28px;border-radius:4px;object-fit:cover;background:#000;flex:0 0 auto;" onerror="this.style.visibility='hidden'" />
+          <div style="flex:1;font-size:13px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${escapeHtml(p.name?.fr || 'Talent sans nom')}</div>
+          <label style="display:flex;align-items:center;gap:4px;font-size:11px;text-transform:none;margin:0;flex:0 0 auto;">
+            <input type="radio" style="width:auto;" name="primary-${currentHeroIndex}-${buildIdx}-${level}" ${isPrimary?'checked':''} onchange="setBuildTalentPrimary(${currentHeroIndex},${buildIdx},${selIdx},'${p.id}')" /> Principal
+          </label>
+          <label style="display:flex;align-items:center;gap:4px;font-size:11px;text-transform:none;margin:0;flex:0 0 auto;">
+            <input type="checkbox" style="width:auto;" ${isAlt?'checked':''} onchange="toggleBuildTalentAlternative(${currentHeroIndex},${buildIdx},${selIdx},'${p.id}',this.checked)" /> Alternatif
+          </label>
+        </div>
+      `;
+    }).join('');
+    return `
+      <div class="subitem">
+        <div style="font-weight:700;color:var(--gold);margin-bottom:8px;">Palier ${escapeHtml(level)}</div>
+        ${rows}
+      </div>
+    `;
+  }).join('');
+}
+function setBuildTalentPrimary(heroIdx, buildIdx, selIdx, poolId){
+  const sel = HEROES[heroIdx].builds[buildIdx].talentSelections[selIdx];
+  sel.primaryId = poolId;
+  sel.alternativeIds = (sel.alternativeIds||[]).filter(id => id !== poolId);
+  markDirty(); renderHeroPanel();
+}
+function toggleBuildTalentAlternative(heroIdx, buildIdx, selIdx, poolId, checked){
+  const sel = HEROES[heroIdx].builds[buildIdx].talentSelections[selIdx];
+  sel.alternativeIds = sel.alternativeIds || [];
+  if (checked){
+    if (sel.primaryId === poolId) return;
+    if (!sel.alternativeIds.includes(poolId)) sel.alternativeIds.push(poolId);
+  } else {
+    sel.alternativeIds = sel.alternativeIds.filter(id => id !== poolId);
+  }
+  markDirty(); renderHeroPanel();
 }
 function addBuild(idx){
   const b = {
     enabled: true, order: (HEROES[idx].builds.length+1),
     label:{fr:'Nouveau build',en:'New build'}, updatedAt:{fr:'',en:''},
     summary:{fr:'',en:''}, buildCodeTitle:{fr:"A COLLER DANS L'ARBRE DES TALENTS",en:"PASTE IN TALENT TREE"},
-    buildCode:'', videos:[], talents:[]
+    buildCode:'', videos:[], talentSelections:[]
   };
   collapsibleState[assignUid(b)] = true;
   HEROES[idx].builds.push(b);
@@ -1462,24 +1571,6 @@ function addBuild(idx){
 function removeBuild(idx, bIdx){
   if (!confirm('Supprimer ce build ?')) return;
   HEROES[idx].builds.splice(bIdx,1);
-  markDirty(); renderHeroPanel();
-}
-function addTalent(idx, bIdx){
-  const t = { level:1, name:{fr:'',en:''}, icon:'', description:{fr:'',en:''}, demoYoutubeId:null };
-  collapsibleState[assignUid(t)] = true;
-  HEROES[idx].builds[bIdx].talents.push(t);
-  markDirty(); renderHeroPanel();
-}
-function removeTalent(idx, bIdx, tIdx){
-  HEROES[idx].builds[bIdx].talents.splice(tIdx,1);
-  markDirty(); renderHeroPanel();
-}
-function addAlternative(idx, bIdx, tIdx){
-  const t = HEROES[idx].builds[bIdx].talents[tIdx];
-  t.alternatives = t.alternatives || [];
-  const a = { name:{fr:'',en:''}, icon:'', description:{fr:'',en:''}, demoYoutubeId:null };
-  collapsibleState[assignUid(a)] = true;
-  t.alternatives.push(a);
   markDirty(); renderHeroPanel();
 }
 

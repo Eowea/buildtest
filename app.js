@@ -254,6 +254,22 @@ function renderSpells(sp=[]) {
       if(!sp.length) return '';
       return `<div class="spell-strip">${sp.map(s=>`<div class="spell-item">${ftHTML({cls:'spell-trigger floating-trigger',title:s.name,desc:s.description,demoId:s.demoYoutubeId||s.demoYoutubeUrl,inner:`<div class="spell-icon" data-fallback="${esc(uiSpellKey(s.key)||initials(loc(s.name)))}"><img src="${s.icon||svgBadge(loc(s.name))}" alt="${esc(loc(s.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`})}<div class="spell-name">${esc(uiSpellKey(s.key)||'')}</div></div>`).join('')}</div>`;
     }
+function resolveBuildTalents(hero, build) {
+  // Nouveau format : le héros a un "réservoir" de talents (hero.talentPool), et chaque
+  // build ne stocke qu'une sélection (quel talent est principal / alternatif par palier).
+  // On reconstruit ici la même forme qu'avant (un tableau de talents avec .alternatives)
+  // pour que le reste du site n'ait rien à changer.
+  if (Array.isArray(build.talentSelections) && Array.isArray(hero?.talentPool) && hero.talentPool.length) {
+    return build.talentSelections.map(sel => {
+      const primary = hero.talentPool.find(p => p.id === sel.primaryId);
+      if (!primary) return null;
+      const alternatives = (sel.alternativeIds || []).map(id => hero.talentPool.find(p => p.id === id)).filter(Boolean);
+      return { ...primary, alternatives };
+    }).filter(Boolean);
+  }
+  // Ancien format (rétrocompatibilité) : les talents sont écrits en entier dans le build.
+  return Array.isArray(build.talents) ? build.talents : [];
+}
 function renderTalentBoard(ts=[]) { 
       if(!ts.length) return `<div class="empty-state">${t('emptyTalents')}</div>`; 
       
@@ -431,7 +447,7 @@ const tabsHtml = sortedBuildIndices.map(i => {
     ? `<div class="build-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> ${t('lastUpdate')} ${esc(loc(b.updatedAt))}</div>` 
     : '';
   
-  el.innerHTML=`<div class="build-tabs">${tabsHtml}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(b.talents)}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
+  el.innerHTML=`<div class="build-tabs">${tabsHtml}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(resolveBuildTalents(hero,b))}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
   bindFloatingTriggers();
   bindComboCarousel();
   queueLayoutSync();
@@ -479,7 +495,7 @@ function renderFourRandomBuildsHtml() {
         </div>
         <div class="random-build-label" style="margin: 15px 0;">${esc(loc(build.label))}</div>
         <div class="random-talents-strip" style="margin-bottom: 20px;">
-          ${(build.talents || []).slice(0, 7).map(td => ftHTML({
+          ${resolveBuildTalents(hero, build).slice(0, 7).map(td => ftHTML({
             cls: 'talent-trigger floating-trigger',
             title: td.name,
             desc: td.description,
@@ -678,7 +694,7 @@ function bindFloatingTriggers(root = document) {
       if (v.readyState >= 2) doWarm();
       else v.addEventListener('loadeddata', doWarm, { once: true });
     }
-function bindComboCarousel() {
+    function bindComboCarousel() {
       els.detailView.querySelectorAll('.combo-carousel').forEach(carousel => {
         if (carousel.dataset.bound) return;
         carousel.dataset.bound = '1';
@@ -687,103 +703,55 @@ function bindComboCarousel() {
         const dots = [...carousel.querySelectorAll('.combo-dot')];
         const prevBtn = carousel.querySelector('.combo-nav.prev');
         const nextBtn = carousel.querySelector('.combo-nav.next');
-        
         let active = 0;
-        let autoPlayInterval = null;
-        const isGuideCarousel = carousel.closest('.guide-video-section');
 
         function goTo(idx) {
-          // Calcul du nouvel index avec bouclage
-          let newIdx = idx;
-          if (idx < 0) newIdx = slides.length - 1;
-          if (idx >= slides.length) newIdx = 0;
-          
-          // Si on est déjà sur la slide, on ne fait rien
-          if (newIdx === active && slides[active].classList.contains('is-active')) return;
-
-          // Arrêt du média sur l'ancienne slide
+          if (idx < 0) idx = slides.length - 1;
+          if (idx >= slides.length) idx = 0;
+          if (idx === active) return;
           stopSlideMedia(slides[active]);
           slides[active].classList.remove('is-active');
-          if (dots[active]) dots[active].classList.remove('is-active');
-
-          // Mise à jour de l'index global
-          active = newIdx;
-
-          // Activation de la nouvelle slide
+          dots[active]?.classList.remove('is-active');
+          active = idx;
           slides[active].classList.add('is-active');
-          if (dots[active]) dots[active].classList.add('is-active');
-          
+          dots[active]?.classList.add('is-active');
           warmUpVideoFrame(slides[active]);
         }
-
-        // --- GESTION DU DÉFILEMENT AUTO ---
-        function startAutoPlay() {
-          if (!isGuideCarousel || slides.length <= 1) return;
-          stopAutoPlay(); // Sécurité : on nettoie avant de lancer
-          autoPlayInterval = setInterval(() => {
-            goTo(active + 1);
-          }, 5000); 
-        }
-
-        function stopAutoPlay() {
-          if (autoPlayInterval) {
-            clearInterval(autoPlayInterval);
-            autoPlayInterval = null;
-          }
-        }
-
-        // Relance le défilement après un délai (pour éviter les conflits)
-        function handleManualInteraction(direction) {
-          stopAutoPlay();
-          if (direction === 'next') goTo(active + 1);
-          else if (direction === 'prev') goTo(active - 1);
-          else if (typeof direction === 'number') goTo(direction);
-          
-          // On attend 2 secondes d'inactivité avant de reprendre le défilement auto
-          startAutoPlay();
-        }
-
-        // --- EVENTS ---
-        prevBtn?.addEventListener('click', (e) => {
-          e.preventDefault();
-          handleManualInteraction('prev');
-        });
-
-        nextBtn?.addEventListener('click', (e) => {
-          e.preventDefault();
-          handleManualInteraction('next');
-        });
-
-        dots.forEach((d, i) => {
-          d.addEventListener('click', (e) => {
-            e.preventDefault();
-            handleManualInteraction(i);
-          });
-        });
+        prevBtn?.addEventListener('click', () => { goTo(active - 1); restartAutoAdvance(); });
+        nextBtn?.addEventListener('click', () => { goTo(active + 1); restartAutoAdvance(); });
+        dots.forEach(d => d.addEventListener('click', () => { goTo(Number(d.dataset.dot)); restartAutoAdvance(); }));
 
         slides.forEach(slide => {
-          slide.addEventListener('mouseenter', () => {
-            stopAutoPlay();
-            playSlideMedia(slide);
-          });
-          slide.addEventListener('mouseleave', () => {
-            stopSlideMedia(slide);
-            startAutoPlay();
-          });
-          // Mobile
-          slide.addEventListener('touchstart', () => {
-            stopAutoPlay();
-            playSlideMedia(slide);
-          }, {passive:true});
-          slide.addEventListener('touchend', () => {
-            startAutoPlay();
-            stopSlideMedia(slide);
-          });
+          slide.addEventListener('mouseenter', () => playSlideMedia(slide));
+          slide.addEventListener('mouseleave', () => stopSlideMedia(slide));
+          slide.addEventListener('touchstart', () => playSlideMedia(slide), {passive:true});
+          slide.addEventListener('touchend', () => stopSlideMedia(slide));
+          slide.addEventListener('touchcancel', () => stopSlideMedia(slide));
         });
 
-        // Initialisation
         warmUpVideoFrame(slides[active]);
-        if (isGuideCarousel) startAutoPlay();
+
+        // Défilement automatique : uniquement pour le carrousel des vidéos guide (mise en
+        // avant de créateurs), pas pour celui des vidéos de build. En pause au survol/appui,
+        // et redémarre à zéro après une navigation manuelle (flèches/points).
+        let autoTimer = null;
+        const isGuideCarousel = !!carousel.closest('.guide-video-section');
+        function startAutoAdvance() {
+          if (!isGuideCarousel || slides.length <= 1) return;
+          stopAutoAdvance();
+          autoTimer = setInterval(() => goTo(active + 1), 7000);
+        }
+        function stopAutoAdvance() {
+          if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+        }
+        function restartAutoAdvance() { if (isGuideCarousel) startAutoAdvance(); }
+
+        if (isGuideCarousel) {
+          carousel.addEventListener('mouseenter', stopAutoAdvance);
+          carousel.addEventListener('mouseleave', startAutoAdvance);
+          carousel.addEventListener('touchstart', stopAutoAdvance, {passive:true});
+          startAutoAdvance();
+        }
       });
     }
 
