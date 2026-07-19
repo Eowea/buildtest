@@ -6381,7 +6381,7 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Souche de nuisibles",
+          "fr": "Souche de criquets",
           "en": "Locust Strain"
         },
         "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spawnlocust.png",
@@ -6420,7 +6420,7 @@ const HEROES = [
       {
         "key": "R1",
         "name": {
-          "fr": "Évolution de monstruosité",
+          "fr": "Monstruosité évoluée",
           "en": "Evolve Monstrosity"
         },
         "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_evolvemonstrosity.png",
@@ -6535,324 +6535,100 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jz18rde02",
+        "id": "tmrryr6johcnly",
         "level": 1,
         "name": {
-          "fr": "Glandes pressurisées",
+          "fr": "Pressurized Glands",
           "en": "Pressurized Glands"
         },
         "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_spikeburst.png",
         "description": {
-          "fr": "Augmente la portée de l'Explosion d'aiguillons du symbiote de 25% et en réduit le temps de recharge de 1 seconde.",
+          "fr": "Increases the range of Symbiote's Spike Burst by 25% and decreases the cooldown by 1 second.",
           "en": "Increases the range of Symbiote's Spike Burst by 25% and decreases the cooldown by 1 second."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jz2h5yyif",
-        "level": 1,
-        "name": {
-          "fr": "Nid envenimé",
-          "en": "Envenomed Nest"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_toxicnest_var1.png",
-        "description": {
-          "fr": "Nid toxique inflige 75% de dégâts supplémentaires en 3 secondes, et réduit l'armure des héros ennemis touchés de 10 pendant 4 secondes.",
-          "en": "Toxic Nest deals 75% more damage over 3 seconds and reduces the Armor of enemy Heroes hit by 10 for 4 seconds."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jz3xougl3",
-        "level": 1,
-        "name": {
-          "fr": "Carapace renforcée",
-          "en": "Reinforced Carapace"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_reinforcedcarapace.png",
-        "description": {
-          "fr": "Augmente le nombre de points de bouclier conféré par Carapace de 40%.",
-          "en": "Increase the Shield amount of Carapace by 40%."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jz4sio5se",
-        "level": 1,
-        "name": {
-          "fr": "Instincts de survie",
-          "en": "Survival Instincts"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_spawnlocust_var1.png",
-        "description": {
-          "fr": "Augmente les points de vie des nuisibles de 100% et les dégâts qu'ils infligent de 60%.",
-          "en": "Increases Locust's Health by 100% and damage by 60%."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jz5kaodzr",
+        "id": "tmrryr6jozvn10",
         "level": 4,
         "name": {
-          "fr": "Surcharge d'adrénaline",
+          "fr": "Adrenal Overload",
           "en": "Adrenal Overload"
         },
         "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_symbiote.png",
         "description": {
-          "fr": "Augmente la vitesse d'attaque de l'hôte du symbiote de 25%.",
+          "fr": "Heroic Symbiote hosts gain 25% increased Attack Speed.",
           "en": "Heroic Symbiote hosts gain 25% increased Attack Speed."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jz65sahk0",
-        "level": 4,
-        "name": {
-          "fr": "Aiguillon perforant",
-          "en": "Needlespine"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_needlespine.png",
-        "description": {
-          "fr": "Augmente les dégâts et la portée de Piqûre du symbiote de 20%.",
-          "en": "Increases the damage and range of Symbiote's Stab by 20%."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jz7ansyt2",
-        "level": 4,
-        "name": {
-          "fr": "Dispersion prolifique",
-          "en": "Prolific Dispersal"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_prolificdispersal.png",
-        "description": {
-          "fr": "Augmente la durée de Nid toxique de 45 secondes, réduit son temps de recharge de 2 secondes et lui confère 2 charges supplémentaires.",
-          "en": "Increase the duration of Toxic Nests by 45 seconds, reduce its cooldown by 2 seconds, and add 2 additional charges."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jz8d3pjk7",
+        "id": "tmrryr6jo65u4b",
         "level": 7,
         "name": {
-          "fr": "Nid infâme",
+          "fr": "Vile Nest",
           "en": "Vile Nest"
         },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_vilenest.png",
+        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_toxicnest.png",
         "description": {
-          "fr": "Les nids ralentissent les ennemis touchés de 40% pendant 2 secondes.",
+          "fr": "Toxic Nests Slow enemy Movement Speed by 40% for 2.5 seconds.",
           "en": "Toxic Nests Slow enemy Movement Speed by 40% for 2.5 seconds."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jz9oiheam",
-        "level": 7,
-        "name": {
-          "fr": "Carapace en réseau",
-          "en": "Networked Carapace"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_networkedcarapace.png",
-        "description": {
-          "fr": "L'utilisation de Carapace en applique une version sans talent à tous les héros, serviteurs et mercenaires alliés proches.",
-          "en": "Using Symbiote's Carapace also applies an untalented Carapace Shield to all nearby allied Heroes, Minions, and Mercenaries."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jza614ud0",
-        "level": 7,
-        "name": {
-          "fr": "Envoi : MULE",
-          "en": "Calldown: MULE"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_calldownmule.png",
-        "description": {
-          "fr": "Activation : envoie un MULE qui répare les bâtiments, un à un, près du point ciblé pendant 40 secondes. Rend 90 points de vie toutes les 1 seconde.",
-          "en": "Activate to calldown a Mule that repairs Structures, one at a time, near target point for 40 seconds, healing for 90 Health every 1 second."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jzba4iidp",
+        "id": "tmrryr6jomwjcq",
         "level": 10,
         "name": {
-          "fr": "Evolution ultime",
+          "fr": "Ultimate Evolution",
           "en": "Ultimate Evolution"
         },
         "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_ultimateevolution.png",
         "description": {
-          "fr": "Crée une copie du héros allié ciblé et en prend le contrôle pendant 20 secondes. Cette copie, perfectionnée par Abathur, voit la puissance de ses capacités augmentée de 20%, celle de ses attaques de 20%, et sa vitesse de déplacement de 10%. La copie ne peut toutefois pas utiliser la capacité héroïque de l'original.",
+          "fr": "Clone target allied Hero and control it for 20 seconds. Abathur has perfected the clone, granting it 20% Spell Power, 20% bonus Attack Damage, and 10% bonus Movement Speed. Cannot use their Heroic Ability.",
           "en": "Clone target allied Hero and control it for 20 seconds. Abathur has perfected the clone, granting it 20% Spell Power, 20% bonus Attack Damage, and 10% bonus Movement Speed. Cannot use their Heroic Ability."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jzcx8hq23",
-        "level": 10,
-        "name": {
-          "fr": "Évolution de monstruosité",
-          "en": "Evolve Monstrosity"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_evolvemonstrosity.png",
-        "description": {
-          "fr": "Transforme un serviteur ou un nuisible allié en monstruosité. Chaque serviteur ennemi qui meurt à proximité augmente de 2% les points de vie et de 2% les dégâts des attaques de base de la monstruosité, cumulable jusqu'à 40 fois.",
-          "en": "Turn an allied Minion or Locust into a Monstrosity. When enemy Minions near the Monstrosity die, it gains 2% Health and 2% Basic Attack damage, stacking up to 40 times."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jzdm59mfl",
+        "id": "tmrryr6jowkmum",
         "level": 13,
         "name": {
-          "fr": "Efficience volumétrique",
+          "fr": "Spatial Efficiency",
           "en": "Spatial Efficiency"
         },
         "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_stab.png",
         "description": {
-          "fr": "Piqûre du symbiote gagne 1 charge supplémentaire et son temps de recharge est réduit de 0,5 seconde.",
+          "fr": "Symbiote's Stab gains 1 additional charge and its cooldown is reduced by .5 seconds.",
           "en": "Symbiote's Stab gains 1 additional charge and its cooldown is reduced by .5 seconds."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jzeoglvky",
-        "level": 13,
-        "name": {
-          "fr": "Transfert somatique",
-          "en": "Soma Transference"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_somatransference.png",
-        "description": {
-          "fr": "Rend 64 (+4% par niveau) points de vie à l'hôte du symbiote pour chaque héros ennemi touché par Explosion d'aiguillons.",
-          "en": "Symbiote's Spike Burst heals the host for 64 (+4% per level) Health per enemy Hero hit."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jzfxjqdjt",
-        "level": 13,
-        "name": {
-          "fr": "Souche bombardier",
-          "en": "Bombard Strain"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_bombardstrain.png",
-        "description": {
-          "fr": "L'attaque de base des nuisibles devient une attaque de siège à longue portée et leur durée de vie augmente de 75%.",
-          "en": "Locust's Basic Attacks become a long-range siege attack and their duration is increased by 75%."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jzga5p4cy",
+        "id": "tmrryr6jozch9k",
         "level": 16,
         "name": {
-          "fr": "Aiguillons envenimés",
+          "fr": "Envenomed Spikes",
           "en": "Envenomed Spikes"
         },
         "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_spikeburst.png",
         "description": {
-          "fr": "Explosion d'aiguillons du symbiote réduit aussi la vitesse de déplacement des ennemis de 40% pendant 2 secondes.",
-          "en": "Symbiote's Spike Burst also Slows enemy Movement Speed by 40% for 2 seconds."
+          "fr": "Abathur's Symbiote's Spike Burst also Slows enemy Movement Speed by 40% for 2 seconds.",
+          "en": "Abathur's Symbiote's Spike Burst also Slows enemy Movement Speed by 40% for 2 seconds."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jzhw4bnvt",
-        "level": 16,
-        "name": {
-          "fr": "Décharge d'adrénaline",
-          "en": "Adrenaline Boost"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_adrenalineboost.png",
-        "description": {
-          "fr": "Carapace du symbiote augmente la vitesse de déplacement de la cible de 40% pendant 3,5 secondes.",
-          "en": "Symbiote's Carapace increases the Movement Speed of the target by 40% for 3.5 seconds."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jzi3rjyaa",
-        "level": 16,
-        "name": {
-          "fr": "Mutation volatile",
-          "en": "Volatile Mutation"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_volatilemutation.png",
-        "description": {
-          "fr": "Les clones créés par Évolution ultime et les monstruosités infligent 137 (+4% par niveau) points de dégâts toutes les 3 secondes aux ennemis proches, ainsi qu'à leur mort.",
-          "en": "Ultimate Evolution clones and Monstrosities deal 137 (+4% per level) damage to nearby enemies every 3 seconds and when they die."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jzjc6yt6j",
-        "level": 16,
-        "name": {
-          "fr": "Couvée de nuisibles",
-          "en": "Locust Brood"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_locustbrood.png",
-        "description": {
-          "fr": "Active : fait naître 3 nuisibles à un endroit proche.",
-          "en": "Activate to spawn 3 Locusts at a nearby location."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jzkca82tz",
+        "id": "tmrryr6jo06qcu",
         "level": 20,
         "name": {
-          "fr": "Chaînon évolutif",
+          "fr": "Evolutionary Link",
           "en": "Evolutionary Link"
         },
         "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_ultimateevolution.png",
         "description": {
-          "fr": "Augmente la durée d'Évolution ultime de 50%. Tant qu'Évolution ultime est active, la cible initiale du clone obtient un bouclier égal à 35% de ses points de vie maximum. Se réinitialise toutes les 5 secondes.",
-          "en": "Increase the duration of Ultimate Evolution by 50%. As long as the Ultimate Evolution is alive, the original target of the clone gains a Shield equal to 35% of their maximum Health. Refreshes every 5 seconds."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jzlfhebng",
-        "level": 20,
-        "name": {
-          "fr": "Évolution terminée",
-          "en": "Evolution Complete"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_evolutioncomplete.png",
-        "description": {
-          "fr": "Augmente les dégâts des attaques de base de la monstruosité de 100%.",
-          "en": "Increase Monstrosity's Basic Attack damage by 100%."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jzmwi9v72",
-        "level": 20,
-        "name": {
-          "fr": "Conscience collective",
-          "en": "Hivemind"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_hivemind.png",
-        "description": {
-          "fr": "Génère automatiquement un second symbiote sur un héros allié proche, qui reproduit les actions du premier, mais inflige moitié moins de dégâts et de bouclier.",
-          "en": "Symbiote creates an additional Symbiote on a nearby allied Hero. This Symbiote mimics the commands of the first, but does half damage and Shielding."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jznor0uog",
-        "level": 20,
-        "name": {
-          "fr": "Nid de nuisibles",
-          "en": "Locust Nest"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_locustnest.png",
-        "description": {
-          "fr": "Crée un nid qui génère régulièrement des nuisibles. Un seul nid peut être actif à la fois.",
-          "en": "Activate to create a nest that periodically spawns Locusts. Only one Locust Nest can be active at a time."
+          "fr": "Increase the duration of Ultimate Evolution by 50%.  As long as the Ultimate Evolution is alive, the original target of the clone gains a Shield equal to 35% of their maximum Health.  Refreshes every 5 seconds.",
+          "en": "Increase the duration of Ultimate Evolution by 50%.  As long as the Ultimate Evolution is alive, the original target of the clone gains a Shield equal to 35% of their maximum Health.  Refreshes every 5 seconds."
         },
         "demoYoutubeId": null
       }
