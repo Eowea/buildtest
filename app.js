@@ -372,10 +372,17 @@ function renderGuide(h) {
     .filter(x => x.id);
   if (!slides.length) return '';
 
+  // Sur téléphone, on ouvre le lien dans le même onglet (pas de target="_blank") : c'est ce
+  // qui permet à l'OS d'intercepter le lien youtube.com et de forcer l'ouverture de
+  // l'application YouTube si elle est installée. Un target="_blank" (nouvel onglet) empêche
+  // cette interception sur mobile. Sur PC, on garde l'ouverture dans un nouvel onglet.
+  const isTouchLike = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+  const linkAttrs = isTouchLike ? '' : ' target="_blank" rel="noopener noreferrer"';
+
   const slidesHtml = slides.map((x, idx) => `
     <div class="combo-slide${idx===0?' is-active':''}" data-index="${idx}">
       <div class="combo-slide-title">${esc(loc(x.g.title) || 'Guide')}</div>
-      <a class="combo-stage guide-stage-link" href="https://www.youtube.com/watch?v=${x.id}" target="_blank" rel="noopener noreferrer">
+      <a class="combo-stage guide-stage-link" href="https://www.youtube.com/watch?v=${x.id}"${linkAttrs}>
         <img class="combo-poster" src="${ytThumb(x.id)}" alt="${esc(loc(x.g.title))}" loading="lazy" />
         ${APP_CONFIG.showGuideBadge ? '<span class="youtube-badge">guide</span>' : ''}
         <span class="youtube-play"></span>
