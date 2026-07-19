@@ -162,6 +162,35 @@ function markEverythingAsSeen(hero) {
     function ytPreview(id) { return `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?${new URLSearchParams({autoplay:'1',mute:'1',controls:'0',rel:'0',modestbranding:'1',playsinline:'1',disablekb:'1',fs:'0',iv_load_policy:'3'})}`; }
     function ytMini(id) { return `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?${new URLSearchParams({autoplay:'1',mute:'1',controls:'0',rel:'0',modestbranding:'1',playsinline:'1',loop:'1',playlist:id,disablekb:'1',fs:'0',iv_load_policy:'3'})}`; }
 
+    // Force l'ouverture de l'application YouTube sur mobile si elle est installée. Un simple
+    // lien https en target="_blank" ne suffit pas partout (ex: Opera GX Mobile n'intercepte
+    // pas toujours les liens youtube.com pour proposer l'appli) : on passe donc par les
+    // mécanismes natifs de chaque OS, avec repli sur la page web si l'appli n'est pas installée.
+    function openYoutubeForceApp(id) {
+      const fallbackUrl = `https://www.youtube.com/watch?v=${id}`;
+      const ua = navigator.userAgent || '';
+      if (/Android/i.test(ua)) {
+        // intent:// est un mécanisme Chromium (supporté par Chrome, Opera, Edge...) qui
+        // déclenche l'Intent Android pour l'appli YouTube, avec repli intégré (S.browser_fallback_url).
+        window.location.href = `intent://www.youtube.com/watch?v=${id}#Intent;package=com.google.android.youtube;scheme=https;S.browser_fallback_url=${encodeURIComponent(fallbackUrl)};end;`;
+        return;
+      }
+      if (/iPhone|iPad|iPod/i.test(ua)) {
+        // Pas de mécanisme de repli intégré pour un schéma personnalisé côté iOS : on bascule
+        // nous-mêmes sur la page web si l'appli ne s'est pas ouverte après un court délai.
+        let appOpened = false;
+        const onHide = () => { appOpened = true; };
+        document.addEventListener('visibilitychange', onHide, { once: true });
+        window.location.href = `vnd.youtube://www.youtube.com/watch?v=${id}`;
+        setTimeout(() => {
+          document.removeEventListener('visibilitychange', onHide);
+          if (!appOpened) window.location.href = fallbackUrl;
+        }, 1200);
+        return;
+      }
+      window.location.href = fallbackUrl;
+    }
+
     const visibleHeroes = () => HEROES.filter(h=>h.enabled!==false);
     const roles = () =>['all',...new Set(visibleHeroes().map(h=>h.role))];
     function filteredHeroes() { const q=normalize(state.search); return visibleHeroes().filter(h=>(state.role==='all'||h.role===state.role)&&(!q||normalize(loc(h.name)).includes(q))).sort((a,b)=>loc(a.name).localeCompare(loc(b.name),state.lang,{sensitivity:'base'})); }
@@ -382,7 +411,7 @@ function renderGuide(h) {
   const slidesHtml = slides.map((x, idx) => `
     <div class="combo-slide${idx===0?' is-active':''}" data-index="${idx}">
       <div class="combo-slide-title">${esc(loc(x.g.title) || 'Guide')}</div>
-      <a class="combo-stage guide-stage-link" href="https://www.youtube.com/watch?v=${x.id}"${linkAttrs}>
+      <a class="combo-stage guide-stage-link" data-yt-id="${x.id}" href="https://www.youtube.com/watch?v=${x.id}"${linkAttrs}>
         <img class="combo-poster" src="${ytThumb(x.id)}" alt="${esc(loc(x.g.title))}" loading="lazy" />
         ${APP_CONFIG.showGuideBadge ? '<span class="youtube-badge">guide</span>' : ''}
         <span class="youtube-play"></span>
@@ -763,6 +792,17 @@ function bindFloatingTriggers(root = document) {
           carousel.addEventListener('mouseleave', startAutoAdvance);
           carousel.addEventListener('touchstart', stopAutoAdvance, {passive:true});
           startAutoAdvance();
+
+          if (window.matchMedia('(hover: none), (pointer: coarse)').matches) {
+            slides.forEach(slide => {
+              const link = slide.querySelector('.guide-stage-link[data-yt-id]');
+              if (!link) return;
+              link.addEventListener('click', (e) => {
+                e.preventDefault();
+                openYoutubeForceApp(link.dataset.ytId);
+              });
+            });
+          }
         }
       });
     }
