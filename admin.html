@@ -1147,6 +1147,14 @@ let dragState = null; // { listType, fromIndex, itemEl }
 })();
 
 function reorderHeroList(listType, from, to){
+  if (listType === 'navLinks'){
+    const arr = STREAMER_CONFIG.navLinks;
+    const [moved] = arr.splice(from, 1);
+    arr.splice(to, 0, moved);
+    markDirty();
+    showConfigPanel();
+    return;
+  }
   const hero = HEROES[currentHeroIndex];
   if (!hero) return;
   if (listType === 'spells' || listType === 'tips' || listType === 'guideVideos'){
@@ -1745,7 +1753,8 @@ function showConfigPanel(){
   `).join('');
   if (!Array.isArray(STREAMER_CONFIG.navLinks)) STREAMER_CONFIG.navLinks = [];
   const navLinksHtml = STREAMER_CONFIG.navLinks.map((l,i) => `
-    <div class="subitem">
+    <div class="subitem" data-drag-item data-drag-list="navLinks" data-drag-index="${i}" style="padding-left:34px;">
+      <span class="drag-handle" title="Glisser pour réordonner" style="position:absolute;left:8px;top:12px;">⠿</span>
       <button class="ghost remove-btn" onclick="STREAMER_CONFIG.navLinks.splice(${i},1); markDirty(); showConfigPanel();">✕</button>
       <div class="checkbox-row">
         <input type="checkbox" ${l.enabled !== false ? 'checked' : ''} onchange="setNested(STREAMER_CONFIG.navLinks[${i}],'enabled',this.checked)" />
