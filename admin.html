@@ -1828,13 +1828,7 @@ function showConfigPanel(){
     </div>
     <div class="card">
       <h3>Dernière vidéo (page d'accueil)</h3>
-      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Carrousel affiché sur la page d'accueil, à la place des anciennes propositions de build. Récupère automatiquement les dernières vidéos de ta chaîne, ou ajoute-les à la main.</small>
-      <div class="row">
-        <div class="field"><label>ID de la chaîne YouTube</label><input value="${escapeHtml(localStorage.getItem('eowea_admin_yt_channel_id')||'')}" oninput="localStorage.setItem('eowea_admin_yt_channel_id', this.value)" placeholder="UCxxxxxxxxxxxxxxxxxxxxxx" /></div>
-        <div class="field"><label>Clé API YouTube</label><input type="password" value="${escapeHtml(localStorage.getItem('eowea_admin_yt_api_key')||'')}" oninput="localStorage.setItem('eowea_admin_yt_api_key', this.value)" placeholder="AIza..." /></div>
-      </div>
-      <small class="help" style="margin-top:-8px;">Ces deux champs restent uniquement dans ton navigateur, jamais commités dans le dépôt.</small>
-      <button onclick="fetchLatestYoutubeVideos()">⟳ Récupérer les dernières vidéos</button>
+      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Carrousel affiché sur la page d'accueil, à la place des anciennes propositions de build.</small>
       ${latestVideosHtml}
       <button onclick="STREAMER_CONFIG.latestVideos.push({title:{fr:'',en:''},youtubeId:''}); markDirty(); showConfigPanel();">+ Ajouter une vidéo</button>
     </div>
@@ -1845,40 +1839,6 @@ function showConfigPanel(){
       <button onclick="STREAMER_CONFIG.patchVideos.push({title:{fr:'',en:''},youtubeId:''}); markDirty(); showConfigPanel();">+ Ajouter une vidéo</button>
     </div>
   `;
-}
-
-async function fetchLatestYoutubeVideos(){
-  const channelId = (localStorage.getItem('eowea_admin_yt_channel_id')||'').trim();
-  const apiKey = (localStorage.getItem('eowea_admin_yt_api_key')||'').trim();
-  if (!channelId || !apiKey){
-    toast("Renseigne l'ID de chaîne et la clé API YouTube d'abord", 'error');
-    return;
-  }
-  try{
-    const chRes = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${encodeURIComponent(channelId)}&key=${encodeURIComponent(apiKey)}`);
-    const chData = await chRes.json();
-    if (!chRes.ok) throw new Error(chData.error?.message || 'Erreur API (chaîne)');
-    const uploadsId = chData.items?.[0]?.contentDetails?.relatedPlaylists?.uploads;
-    if (!uploadsId) throw new Error("Chaîne introuvable, vérifie l'ID");
-
-    const plRes = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=5&playlistId=${encodeURIComponent(uploadsId)}&key=${encodeURIComponent(apiKey)}`);
-    const plData = await plRes.json();
-    if (!plRes.ok) throw new Error(plData.error?.message || 'Erreur API (vidéos)');
-
-    const videos = (plData.items||[]).map(it => ({
-      title: { fr: it.snippet?.title || '', en: it.snippet?.title || '' },
-      youtubeId: it.snippet?.resourceId?.videoId || '',
-    })).filter(v => v.youtubeId);
-
-    if (!videos.length) throw new Error('Aucune vidéo trouvée');
-
-    STREAMER_CONFIG.latestVideos = videos;
-    markDirty();
-    showConfigPanel();
-    toast(`${videos.length} vidéo(s) récupérée(s) ✔`, 'success');
-  }catch(e){
-    toast('Erreur YouTube : ' + e.message, 'error');
-  }
 }
 
 /* =========================================================================
