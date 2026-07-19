@@ -48,6 +48,24 @@ const STREAMER_CONFIG = {
       },
       "url": "https://nexus-patch-notes.github.io",
       "newTab": true
+    },
+    {
+      "enabled": true,
+      "label": {
+        "fr": "Patchs",
+        "en": "Patches"
+      },
+      "url": "https://nexus-patch-notes.github.io",
+      "newTab": false
+    },
+    {
+      "enabled": true,
+      "label": {
+        "fr": "Patchs",
+        "en": "Patchs"
+      },
+      "url": "https://nexus-patch-notes.github.io",
+      "newTab": false
     }
   ]
 };
