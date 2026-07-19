@@ -82,8 +82,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_flamestrike.png",
         "description": {
-          "fr": "Explosion de zone après un court délai.",
-          "en": "AoE explosion after a short delay."
+          "fr": "Explosion de zone après un court délai. Amélioré : Zone d'effet augmenté.",
+          "en": "AoE explosion after a short delay. Empowered: Increased area of effect."
         },
         "demoYoutubeId": ""
       },
@@ -95,8 +95,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_livingbomb.png",
         "description": {
-          "fr": "Dégâts sur la durée qui explosent et se propagent aux ennemis proches.",
-          "en": "DoT that explodes and spreads to nearby enemies."
+          "fr": "Dégâts sur la durée qui explosent et se propagent aux ennemis proches. Amélioré : Ne coûte plus de mana et n'a pas de temps de recharge.",
+          "en": "DoT that explodes and spreads to nearby enemies. Empowered: No longer costs mana and has no cooldown."
         },
         "demoYoutubeId": ""
       },
@@ -108,8 +108,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_gravitylapse.png",
         "description": {
-          "fr": "Étourdit le premier ennemi touché (jusqu'à 3 avec le Trait).",
-          "en": "Stuns the first enemy hit (up to 3 with Trait)."
+          "fr": "Étourdit le premier ennemi touché. Amélioré : Touche plusieurs ennemis.",
+          "en": "Stuns the first enemy hit. Empowered: Hits multiple enemies."
         },
         "demoYoutubeId": ""
       },
