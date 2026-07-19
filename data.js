@@ -11894,7 +11894,7 @@ const HEROES = [
   },
   {
     "id": "gazlowe",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Gazleu",
       "en": "Gazlowe"
