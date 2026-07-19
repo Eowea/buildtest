@@ -35,15 +35,15 @@
       lastUpdate: { fr: "Dernière mise à jour :", en: "Last updated:" },
       defaultBuildCodeTitle: { fr: "À COLLER DANS L'ARBRE DES TALENTS", en: "PASTE INTO TALENT TREE" },
       emptyTalents: { fr: "Aucun talent dans ce build.", en: "No talents in this build." },
-      emptySelection: { fr: "Sélectionne un héros dans la liste.", en: "Select a hero from the list." },
       gameplay: { fr: "Gameplay", en: "Gameplay" },
       tips: { fr: "Conseils", en: "Tips" },
       descUnavailable: { fr: "Description indisponible.", en: "Description unavailable." },
       loading: { fr: "Chargement...", en: "Loading..." },
       invalidId: { fr: "ID YouTube invalide", en: "Invalid YouTube ID" },
       loadError: { fr: "Impossible de charger la vidéo", en: "Cannot load the video" },
-      randomBuildTitle: { fr: "Proposition de build", en: "Suggested Build" },
-      viewBuild: { fr: "Voir ce build", en: "View Build" },
+      latestVideoTitle: { fr: "Dernière vidéo", en: "Latest Video" },
+      patchAnalysisTitle: { fr: "Analyse Patchs", en: "Patch Analysis" },
+      noVideosYet: { fr: "Aucune vidéo pour le moment.", en: "No videos yet." },
       copySuccess: { fr: "Build copié !", en: "Build copied!" },
       copyError: { fr: "Copie impossible", en: "Copy failed" },
       copyHint: { fr: "Clique pour copier", en: "Click to copy" },
@@ -395,9 +395,12 @@ function renderBuildCode(b) {
       return [];
     }
     function hasGuide(h) { return getGuideVideos(h).some(g => parseYouTubeId(g?.youtubeId||g?.youtubeUrl||g?.url||'')); }
-function renderGuide(h) {
-  const slides = getGuideVideos(h)
-    .map(g => ({ g, id: parseYouTubeId(g?.youtubeId||g?.youtubeUrl||g?.url||'') }))
+// Construit le carrousel de vignettes YouTube (utilisé par le guide d'un héros, et par les
+// sections "Dernière vidéo" / "Analyse Patchs" de la page d'accueil). `videos` est une liste
+// d'objets {title:{fr,en}, youtubeId}.
+function buildYoutubeCarouselMarkup(videos) {
+  const slides = (videos||[])
+    .map(v => ({ v, id: parseYouTubeId(v?.youtubeId||v?.youtubeUrl||v?.url||'') }))
     .filter(x => x.id);
   if (!slides.length) return '';
 
@@ -410,12 +413,12 @@ function renderGuide(h) {
 
   const slidesHtml = slides.map((x, idx) => `
     <div class="combo-slide${idx===0?' is-active':''}" data-index="${idx}">
-      <div class="combo-slide-title">${esc(loc(x.g.title) || 'Guide')}</div>
+      <div class="combo-slide-title">${esc(loc(x.v.title) || 'Guide')}</div>
       <a class="combo-stage guide-stage-link" data-yt-id="${x.id}" href="https://www.youtube.com/watch?v=${x.id}"${linkAttrs}>
-        <img class="combo-poster" src="${ytThumb(x.id)}" alt="${esc(loc(x.g.title))}" loading="lazy" />
+        <img class="combo-poster" src="${ytThumb(x.id)}" alt="${esc(loc(x.v.title))}" loading="lazy" />
         ${APP_CONFIG.showGuideBadge ? '<span class="youtube-badge">guide</span>' : ''}
         <span class="youtube-play"></span>
-        ${x.g.duration ? `<span class="video-duration-badge">${esc(x.g.duration)}</span>` : ''}
+        ${x.v.duration ? `<span class="video-duration-badge">${esc(x.v.duration)}</span>` : ''}
       </a>
     </div>
   `).join('');
@@ -424,7 +427,12 @@ function renderGuide(h) {
     <button class="combo-nav next" type="button" aria-label="${t('nextVideo')}">&#10095;</button>
     <div class="combo-dots">${slides.map((_,idx)=>`<span class="combo-dot${idx===0?' is-active':''}" data-dot="${idx}"></span>`).join('')}</div>
   ` : '';
-  return `<section class="video-group guide-video-section"><div class="combo-carousel">${slidesHtml}${navHtml}</div></section>`;
+  return `<div class="combo-carousel">${slidesHtml}${navHtml}</div>`;
+}
+function renderGuide(h) {
+  const markup = buildYoutubeCarouselMarkup(getGuideVideos(h));
+  if (!markup) return '';
+  return `<section class="video-group guide-video-section">${markup}</section>`;
 }
     function renderVideoCards(vs) {
       if(!vs?.length) return '';
@@ -494,76 +502,30 @@ const tabsHtml = sortedBuildIndices.map(i => {
   queueLayoutSync();
 }
 
-let cachedFourBuilds = null;
+function renderHomeVideoSections() {
+  const latestMarkup = buildYoutubeCarouselMarkup(STREAMER_CONFIG.latestVideos || []);
+  const patchMarkup = buildYoutubeCarouselMarkup(STREAMER_CONFIG.patchVideos || []);
 
-function renderFourRandomBuildsHtml() {
-  if (!cachedFourBuilds) {
-    const activeHeroes = HEROES.filter(h => h.enabled !== false && h.builds && h.builds.length > 0);
-    let pool = [];
-    if (activeHeroes.length > 0) {
-      activeHeroes.forEach(hero => {
-        hero.builds.filter(b => b.enabled !== false).forEach((build, bIdx) => {
-          pool.push({ hero, build, bIdx });
-        });
-      });
-      // Mélange aléatoire (shuffle) de tous les builds existants
-      for (let i = pool.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [pool[i], pool[j]] = [pool[j], pool[i]];
-      }
-    }
-    // On garde les 4 premiers
-    cachedFourBuilds = pool.slice(0, 4);
-  }
+  const col = (titleKey, markup) => `
+    <div class="video-group">
+      <h2 class="section-title" style="text-align:center;margin-bottom:16px;">${t(titleKey)}</h2>
+      ${markup ? `<section class="guide-video-section">${markup}</section>` : `<div class="empty-state">${t('noVideosYet')}</div>`}
+    </div>`;
 
-  if (!cachedFourBuilds.length) return `<div class="empty-state">${t('emptySelection')}</div>`;
-
-  let html = `<div class="center-random-container">`;
-  html += `<h2 class="section-title" style="text-align: center; margin-bottom: 25px;">${t('randomBuildTitle')}</h2>`;
-  html += `<div class="center-random-grid">`;
-  
-  cachedFourBuilds.forEach(item => {
-    const { hero, build, bIdx } = item;
-    // On réutilise l'esthétique de ta carte aléatoire existante
-    html += `
-      <div class="random-card-body center-random-card">
-        <div class="random-hero-row">
-          <div class="portrait"><img src="${hero.portrait}" alt=""></div>
-          <div class="random-meta">
-            <div class="name" style="font-size: 1.1rem;">${esc(loc(hero.name))}</div>
-            <div class="role" style="font-size: 0.85rem; opacity: 0.8;">${esc(locRole(hero.role))}</div>
-          </div>
-        </div>
-        <div class="random-build-label" style="margin: 15px 0;">${esc(loc(build.label))}</div>
-        <div class="random-talents-strip" style="margin-bottom: 20px;">
-          ${resolveBuildTalents(hero, build).slice(0, 7).map(td => ftHTML({
-            cls: 'talent-trigger floating-trigger',
-            title: td.name,
-            desc: td.description,
-            inner: `<div class="talent-icon"><img src="${td.icon || svgBadge(loc(td.name))}"></div>`
-          })).join('')}
-        </div>
-        <button class="btn-suggest" onclick="window.goToBuild('${hero.id}', ${bIdx})">
-          ${t('viewBuild')}
-        </button>
-      </div>
-    `;
-  });
-  
-  html += `</div></div>`;
-  return html;
+  return `<div class="videos-layout with-guide">${col('latestVideoTitle', latestMarkup)}${col('patchAnalysisTitle', patchMarkup)}</div>`;
 }
 
 function renderDetail() { 
   hideFloatingTooltip(true); 
   const h=currentHero(); 
   
-  // NOUVEAUTÉ : Si aucun héros n'est sélectionné, on affiche les 4 builds !
+  // Si aucun héros n'est sélectionné, on affiche les carrousels "Dernière vidéo" / "Analyse Patchs".
   if(!h){
-    els.detailView.innerHTML = renderFourRandomBuildsHtml();
-    bindFloatingTriggers(); // Très important pour que les infobulles marchent au centre
+    els.detailView.innerHTML = renderHomeVideoSections();
+    bindFloatingTriggers();
+    bindComboCarousel();
     return;
-  } 
+  }
   
   clampBuildIndex(h); 
   els.detailView.innerHTML=`<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${renderSpells(h.spells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||[]).map(tip=>`<li>${esc(loc(tip))}</li>`).join('')}</ul></div></article></section><div id="buildSection"></div>`; 

@@ -68,7 +68,9 @@ const STREAMER_CONFIG = {
       "url": "https://nexus-patch-notes.github.io",
       "newTab": false
     }
-  ]
+  ],
+  "latestVideos": [],
+  "patchVideos": []
 };
 
 const HEROES = [

@@ -1147,8 +1147,8 @@ let dragState = null; // { listType, fromIndex, itemEl }
 })();
 
 function reorderHeroList(listType, from, to){
-  if (listType === 'navLinks'){
-    const arr = STREAMER_CONFIG.navLinks;
+  if (listType === 'navLinks' || listType === 'latestVideos' || listType === 'patchVideos'){
+    const arr = STREAMER_CONFIG[listType];
     const [moved] = arr.splice(from, 1);
     arr.splice(to, 0, moved);
     markDirty();
@@ -1773,6 +1773,21 @@ function showConfigPanel(){
       </div>
     </div>
   `).join('');
+  if (!Array.isArray(STREAMER_CONFIG.latestVideos)) STREAMER_CONFIG.latestVideos = [];
+  if (!Array.isArray(STREAMER_CONFIG.patchVideos)) STREAMER_CONFIG.patchVideos = [];
+  const videoItemHtml = (listName, v, i) => `
+    <div class="subitem" data-drag-item data-drag-list="${listName}" data-drag-index="${i}" style="padding-left:34px;">
+      <span class="drag-handle" title="Glisser pour réordonner" style="position:absolute;left:8px;top:12px;">⠿</span>
+      <button class="ghost remove-btn" onclick="STREAMER_CONFIG.${listName}.splice(${i},1); markDirty(); showConfigPanel();">✕</button>
+      <div class="row">
+        <div class="field"><label>Titre (FR)</label><input value="${escapeHtml(v.title?.fr)}" oninput="setNested(STREAMER_CONFIG.${listName}[${i}],'title.fr',this.value)" /></div>
+        <div class="field"><label>Titre (EN)</label><input value="${escapeHtml(v.title?.en)}" oninput="setNested(STREAMER_CONFIG.${listName}[${i}],'title.en',this.value)" /></div>
+      </div>
+      <div class="field"><label>ID ou lien YouTube</label><input value="${escapeHtml(v.youtubeId)}" oninput="setNested(STREAMER_CONFIG.${listName}[${i}],'youtubeId',this.value)" /></div>
+    </div>
+  `;
+  const latestVideosHtml = STREAMER_CONFIG.latestVideos.map((v,i) => videoItemHtml('latestVideos', v, i)).join('');
+  const patchVideosHtml = STREAMER_CONFIG.patchVideos.map((v,i) => videoItemHtml('patchVideos', v, i)).join('');
   document.getElementById('contentEl').innerHTML = `
     <h2>Configuration du site</h2>
     <div class="card">
@@ -1811,7 +1826,59 @@ function showConfigPanel(){
       ${navLinksHtml}
       <button onclick="STREAMER_CONFIG.navLinks.push({enabled:true,label:{fr:'',en:''},url:'',newTab:false}); markDirty(); showConfigPanel();">+ Ajouter un lien</button>
     </div>
+    <div class="card">
+      <h3>Dernière vidéo (page d'accueil)</h3>
+      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Carrousel affiché sur la page d'accueil, à la place des anciennes propositions de build. Récupère automatiquement les dernières vidéos de ta chaîne, ou ajoute-les à la main.</small>
+      <div class="row">
+        <div class="field"><label>ID de la chaîne YouTube</label><input value="${escapeHtml(localStorage.getItem('eowea_admin_yt_channel_id')||'')}" oninput="localStorage.setItem('eowea_admin_yt_channel_id', this.value)" placeholder="UCxxxxxxxxxxxxxxxxxxxxxx" /></div>
+        <div class="field"><label>Clé API YouTube</label><input type="password" value="${escapeHtml(localStorage.getItem('eowea_admin_yt_api_key')||'')}" oninput="localStorage.setItem('eowea_admin_yt_api_key', this.value)" placeholder="AIza..." /></div>
+      </div>
+      <small class="help" style="margin-top:-8px;">Ces deux champs restent uniquement dans ton navigateur, jamais commités dans le dépôt.</small>
+      <button onclick="fetchLatestYoutubeVideos()">⟳ Récupérer les dernières vidéos</button>
+      ${latestVideosHtml}
+      <button onclick="STREAMER_CONFIG.latestVideos.push({title:{fr:'',en:''},youtubeId:''}); markDirty(); showConfigPanel();">+ Ajouter une vidéo</button>
+    </div>
+    <div class="card">
+      <h3>Analyse Patchs (page d'accueil)</h3>
+      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Carrousel de vidéos d'analyse de patch, affiché à côté de "Dernière vidéo" sur la page d'accueil.</small>
+      ${patchVideosHtml}
+      <button onclick="STREAMER_CONFIG.patchVideos.push({title:{fr:'',en:''},youtubeId:''}); markDirty(); showConfigPanel();">+ Ajouter une vidéo</button>
+    </div>
   `;
+}
+
+async function fetchLatestYoutubeVideos(){
+  const channelId = (localStorage.getItem('eowea_admin_yt_channel_id')||'').trim();
+  const apiKey = (localStorage.getItem('eowea_admin_yt_api_key')||'').trim();
+  if (!channelId || !apiKey){
+    toast("Renseigne l'ID de chaîne et la clé API YouTube d'abord", 'error');
+    return;
+  }
+  try{
+    const chRes = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${encodeURIComponent(channelId)}&key=${encodeURIComponent(apiKey)}`);
+    const chData = await chRes.json();
+    if (!chRes.ok) throw new Error(chData.error?.message || 'Erreur API (chaîne)');
+    const uploadsId = chData.items?.[0]?.contentDetails?.relatedPlaylists?.uploads;
+    if (!uploadsId) throw new Error("Chaîne introuvable, vérifie l'ID");
+
+    const plRes = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=5&playlistId=${encodeURIComponent(uploadsId)}&key=${encodeURIComponent(apiKey)}`);
+    const plData = await plRes.json();
+    if (!plRes.ok) throw new Error(plData.error?.message || 'Erreur API (vidéos)');
+
+    const videos = (plData.items||[]).map(it => ({
+      title: { fr: it.snippet?.title || '', en: it.snippet?.title || '' },
+      youtubeId: it.snippet?.resourceId?.videoId || '',
+    })).filter(v => v.youtubeId);
+
+    if (!videos.length) throw new Error('Aucune vidéo trouvée');
+
+    STREAMER_CONFIG.latestVideos = videos;
+    markDirty();
+    showConfigPanel();
+    toast(`${videos.length} vidéo(s) récupérée(s) ✔`, 'success');
+  }catch(e){
+    toast('Erreur YouTube : ' + e.message, 'error');
+  }
 }
 
 /* =========================================================================
