@@ -1161,7 +1161,8 @@
     .combo-slide-title {
       font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 0.06em;
       font-size: 15px; font-weight: 700; color: var(--gold); text-align: center;
-      margin-bottom: 10px; overflow-wrap: break-word;
+      margin-bottom: 10px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
     .combo-stage {
       position: relative; aspect-ratio: 16 / 9; width: 100%; background: #000;
