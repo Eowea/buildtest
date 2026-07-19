@@ -55,7 +55,7 @@ const STREAMER_CONFIG = {
     {
       "title": {
         "fr": "Dehaka Grand Master Gameplay - Analyse & Explications",
-        "en": "Dehaka Grand Master Gameplay - Analyse & Explications"
+        "en": "Dehaka Grandmaster Gameplay - Analysis & Explanations"
       },
       "youtubeId": "Nfp1w2JU-DQ"
     },
@@ -65,6 +65,13 @@ const STREAMER_CONFIG = {
         "en": "Dehaka Bronze 5 Blackboard"
       },
       "youtubeId": "https://youtu.be/QQ7259LX4gc?si=s1_XK3TrBcDE0ti1"
+    },
+    {
+      "title": {
+        "fr": "Zagara Grand Master Gameplay - Analyse & Explications",
+        "en": "Zagara Grandmaster Gameplay - Analysis & Explanations"
+      },
+      "youtubeId": "https://youtu.be/iPxEnYt_2Y0"
     }
   ],
   "patchVideos": [
