@@ -1,5 +1,5 @@
 const APP_CONFIG = {
-  "showGuideBadge": false
+  "showGuideBadge": true
 };
 
 const STREAMER_CONFIG = {
