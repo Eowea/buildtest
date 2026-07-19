@@ -41,7 +41,7 @@
       loading: { fr: "Chargement...", en: "Loading..." },
       invalidId: { fr: "ID YouTube invalide", en: "Invalid YouTube ID" },
       loadError: { fr: "Impossible de charger la vidéo", en: "Cannot load the video" },
-      latestVideoTitle: { fr: "Dernière vidéos", en: "Latest Videos" },
+      latestVideoTitle: { fr: "Dernières vidéos", en: "Latest Videos" },
       patchAnalysisTitle: { fr: "Analyses Patch", en: "Patch Analyses" },
       noVideosYet: { fr: "Aucune vidéo pour le moment.", en: "No videos yet." },
       copySuccess: { fr: "Build copié !", en: "Build copied!" },
