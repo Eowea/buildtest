@@ -88,6 +88,20 @@ const STREAMER_CONFIG = {
         "en": "June 2026 PTR Patch "
       },
       "youtubeId": "https://youtu.be/I3DyDDecWgM?si=0_y_wQHn99dNslst"
+    },
+    {
+      "title": {
+        "fr": "HotS PTR: Alexstrasza & Chromie",
+        "en": "HotS PTR: Alexstrasza & Chromie"
+      },
+      "youtubeId": "https://youtu.be/CDydbmVzTxo"
+    },
+    {
+      "title": {
+        "fr": "HotS PTR: Ragnaros & Abathur",
+        "en": "HotS PTR: Ragnaros & Abathur"
+      },
+      "youtubeId": "https://youtu.be/ZLLE7MErHRE"
     }
   ]
 };
