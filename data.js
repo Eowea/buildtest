@@ -1,11 +1,11 @@
 const APP_CONFIG = {
-  "showGuideBadge": true
+  "showGuideBadge": false
 };
 
 const STREAMER_CONFIG = {
   "siteTitle": {
-    "fr": "Eowea builds",
-    "en": "Eowea builds"
+    "fr": "EOWEA BUILDS",
+    "en": "EOWEA BUILDS"
   },
   "siteSubtitle": {
     "fr": "Recherche le build du héros qui t'intéresse grâce à la barre de recherche, aux filtres ou en cliquant dans la liste. Passe ton curseur sur les sorts et talents pour un descriptif écrit et vidéo.",
