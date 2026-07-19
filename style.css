@@ -134,20 +134,54 @@
        HEADER
        ═══════════════════════════════ */
     .topbar {
-      display: none !important;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       gap: 16px;
-      padding: 24px;
+      padding: 28px 24px;
       border-bottom: 2px solid var(--gold-dim);
+      border-radius: var(--radius-sm) var(--radius-sm) 0 0;
     }
 
-    .brand-block { 
-      flex: 1 1 300px;
+    /* Rattache visuellement la barre d'outils juste sous le header (annule le gap du .page),
+       sans les envelopper dans un conteneur commun : le sticky de .toolbar doit rester
+       relatif à .page (sinon il ne peut coller que dans les limites de son parent direct). */
+    .topbar + .toolbar {
+      margin-top: -16px;
+      border-top: none;
+      border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    }
+
+    .home-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--blue-border);
+      border-radius: 4px;
+      color: var(--blue);
+      background: rgba(0, 229, 255, 0.05);
+      text-decoration: none;
+      transition: all var(--t);
+      flex-shrink: 0;
+    }
+
+    .home-btn svg { width: 22px; height: 22px; }
+
+    .home-btn:hover {
+      color: var(--blue-bright);
+      border-color: var(--blue-bright);
+      background: rgba(0, 229, 255, 0.12);
+      box-shadow: 0 0 12px var(--blue-glow);
+    }
+
+    .brand-block {
       display: flex;
       flex-direction: column;
-      gap: 14px; 
-      align-content: start; 
+      align-items: center;
+      text-align: center;
     }
 
     .desktop-player {
@@ -171,20 +205,6 @@
       font-weight: 700;
     }
 
-    .eyebrow {
-      font-size: 14px;
-      color: var(--blue);
-      text-shadow: 0 0 10px var(--blue-glow);
-    }
-
-    .title-row {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
     .site-title {
       font-family: 'Metronic for Blizzard', 'Rajdhani', serif;
       font-size: clamp(30px, 5vw, 56px);
@@ -198,12 +218,37 @@
       transform: translateZ(0);
     }
 
-    .site-subtitle {
-      margin-top: 10px;
-      color: var(--text-dim);
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .header-nav-link {
+      display: inline-flex;
+      align-items: center;
+      height: 34px;
+      padding: 0 18px;
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
       font-size: 14px;
-      line-height: 1.6;
-      max-width: 62ch;
+      color: var(--text-bright);
+      text-decoration: none;
+      background: rgba(0, 229, 255, 0.08);
+      border: 1px solid var(--blue-border);
+      border-radius: 2px;
+      transition: all var(--t);
+    }
+
+    .header-nav-link:hover {
+      color: var(--gold-bright);
+      background: rgba(248, 183, 0, 0.12);
+      border-color: var(--gold-border);
+      box-shadow: 0 0 10px var(--gold-glow);
     }
 
     /* ── Header Actions (Socials + Lang) ── */
@@ -1242,10 +1287,10 @@
       .toolbar { top: 8px; } /* Ajuste l'espacement flottant sur petit écran */
       
       .topbar { text-align: center; }
+      .home-btn { width: 38px; height: 38px; }
+      .home-btn svg { width: 19px; height: 19px; }
       .brand-block { justify-items: center; text-align: center; }
-      .title-row { flex-direction: column; align-items: center; justify-content: center; width: 100%; gap: 12px; }
-      .site-title { font-size: clamp(28px, 8vw, 36px); text-align: center; } 
-      .site-subtitle { text-align: center; margin: 0 auto; }
+      .site-title { font-size: clamp(28px, 8vw, 36px); text-align: center; }
       .header-actions { justify-content: center; flex-direction: column-reverse; align-items: center; width: 100%; }
       .socials { justify-content: center; width: 100%; }
       

@@ -21,28 +21,16 @@
   <div class="page">
 <header class="panel topbar">
   <div class="brand-block">
-    <div class="eyebrow">Heroes of the Storm</div>
-    <div class="title-row">
-      <div>
-        <h1 class="site-title" id="siteTitle">Eowea builds</h1>
-        <p class="site-subtitle" id="siteSubtitle"></p>
-      </div>
-    </div>
+    <h1 class="site-title" id="siteTitle">Eowea builds</h1>
   </div>
-
-  <!-- Déplacez le switcher ici ! -->
-  <div class="lang-switcher">
-    <button class="lang-btn" data-lang="fr">
-        <img src="https://flagicons.lipis.dev/flags/4x3/fr.svg" alt="FR">
-    </button>
-    <button class="lang-btn" data-lang="en">
-        <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="EN">
-    </button>
-  </div>
+  <nav class="header-nav" id="headerNav" aria-label="Navigation"></nav>
 </header>
     <section class="panel toolbar">
       <div class="filters" id="roleFilters" role="tablist" aria-label="Filtrer par rôle"></div>
       <div class="toolbar-row">
+        <a href="#" class="home-btn" id="homeBtn" aria-label="Accueil" title="Accueil">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+        </a>
         <div class="search-wrap">
           <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
           <input class="search" id="searchInput" type="search" placeholder="Rechercher un héros..." autocomplete="off" />

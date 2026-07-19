@@ -38,6 +38,17 @@ const STREAMER_CONFIG = {
       "url": "https://ko-fi.com/eowea",
       "icon": "kofi"
     }
+  ],
+  "navLinks": [
+    {
+      "enabled": true,
+      "label": {
+        "fr": "Patchs",
+        "en": "Patches"
+      },
+      "url": "https://nexus-patch-notes.github.io",
+      "newTab": true
+    }
   ]
 };
 

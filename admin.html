@@ -1743,6 +1743,27 @@ function showConfigPanel(){
       <div class="field"><label>URL</label><input value="${escapeHtml(s.url)}" oninput="setNested(STREAMER_CONFIG.socials[${i}],'url',this.value)" /></div>
     </div>
   `).join('');
+  if (!Array.isArray(STREAMER_CONFIG.navLinks)) STREAMER_CONFIG.navLinks = [];
+  const navLinksHtml = STREAMER_CONFIG.navLinks.map((l,i) => `
+    <div class="subitem">
+      <button class="ghost remove-btn" onclick="STREAMER_CONFIG.navLinks.splice(${i},1); markDirty(); showConfigPanel();">✕</button>
+      <div class="checkbox-row">
+        <input type="checkbox" ${l.enabled !== false ? 'checked' : ''} onchange="setNested(STREAMER_CONFIG.navLinks[${i}],'enabled',this.checked)" />
+        <label style="margin:0;text-transform:none;">Lien activé (visible dans le header)</label>
+      </div>
+      <div class="row">
+        <div class="field"><label>Libellé (FR)</label><input value="${escapeHtml(l.label?.fr)}" oninput="setNested(STREAMER_CONFIG.navLinks[${i}],'label.fr',this.value)" /></div>
+        <div class="field"><label>Libellé (EN)</label><input value="${escapeHtml(l.label?.en)}" oninput="setNested(STREAMER_CONFIG.navLinks[${i}],'label.en',this.value)" /></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>URL</label><input value="${escapeHtml(l.url)}" oninput="setNested(STREAMER_CONFIG.navLinks[${i}],'url',this.value)" /></div>
+        <div class="checkbox-row" style="align-self:end;">
+          <input type="checkbox" ${l.newTab ? 'checked' : ''} onchange="setNested(STREAMER_CONFIG.navLinks[${i}],'newTab',this.checked)" />
+          <label style="margin:0;text-transform:none;">Ouvrir dans un nouvel onglet</label>
+        </div>
+      </div>
+    </div>
+  `).join('');
   document.getElementById('contentEl').innerHTML = `
     <h2>Configuration du site</h2>
     <div class="card">
@@ -1758,12 +1779,19 @@ function showConfigPanel(){
         <div class="field"><label>Sous-titre (FR)</label><textarea oninput="setNested(STREAMER_CONFIG,'siteSubtitle.fr',this.value)">${escapeHtml(STREAMER_CONFIG.siteSubtitle?.fr)}</textarea></div>
         <div class="field"><label>Sous-titre (EN)</label><textarea oninput="setNested(STREAMER_CONFIG,'siteSubtitle.en',this.value)">${escapeHtml(STREAMER_CONFIG.siteSubtitle?.en)}</textarea></div>
       </div>
+      <small class="help" style="margin-top:-8px;">Le sous-titre n'est actuellement pas affiché dans le header (qui ne montre que le titre).</small>
       <div class="field"><label>Chaîne Twitch</label><input value="${escapeHtml(STREAMER_CONFIG.twitchChannel)}" oninput="setNested(STREAMER_CONFIG,'twitchChannel',this.value)" /></div>
     </div>
     <div class="card">
       <h3>Réseaux sociaux</h3>
       ${socialsHtml}
       <button onclick="STREAMER_CONFIG.socials.push({label:'',url:'',icon:''}); markDirty(); showConfigPanel();">+ Ajouter un réseau</button>
+    </div>
+    <div class="card">
+      <h3>Liens de navigation (header)</h3>
+      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Catégories affichées sous le logo dans le header du site, pour rediriger vers d'autres pages.</small>
+      ${navLinksHtml}
+      <button onclick="STREAMER_CONFIG.navLinks.push({enabled:true,label:{fr:'',en:''},url:'',newTab:false}); markDirty(); showConfigPanel();">+ Ajouter un lien</button>
     </div>
   `;
 }
