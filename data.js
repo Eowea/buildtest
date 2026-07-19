@@ -58,9 +58,31 @@ const STREAMER_CONFIG = {
         "en": "Dehaka Grand Master Gameplay - Analyse & Explications"
       },
       "youtubeId": "Nfp1w2JU-DQ"
+    },
+    {
+      "title": {
+        "fr": "Tableau Noir Dehaka Bronze 5",
+        "en": "Dehaka Bronze 5 Blackboard"
+      },
+      "youtubeId": "https://youtu.be/QQ7259LX4gc?si=s1_XK3TrBcDE0ti1"
     }
   ],
-  "patchVideos": []
+  "patchVideos": [
+    {
+      "title": {
+        "fr": "Un NOUVEAU GROS Patch HotS sur le PTR",
+        "en": "A NEW BIG HotS Patch on the PTR"
+      },
+      "youtubeId": "https://youtu.be/KBS90rC-w5k?si=E1vDh5K36u2zpveA"
+    },
+    {
+      "title": {
+        "fr": "Patch PTR Juin 2026 ",
+        "en": "June 2026 PTR Patch "
+      },
+      "youtubeId": "https://youtu.be/I3DyDDecWgM?si=0_y_wQHn99dNslst"
+    }
+  ]
 };
 
 const HEROES = [
