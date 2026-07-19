@@ -49,24 +49,6 @@ const STREAMER_CONFIG = {
       },
       "url": "https://nexus-patch-notes.github.io",
       "newTab": true
-    },
-    {
-      "enabled": true,
-      "label": {
-        "fr": "Patchs",
-        "en": "Patches"
-      },
-      "url": "https://nexus-patch-notes.github.io",
-      "newTab": false
-    },
-    {
-      "enabled": true,
-      "label": {
-        "fr": "Patchs",
-        "en": "Patchs"
-      },
-      "url": "https://nexus-patch-notes.github.io",
-      "newTab": false
     }
   ],
   "latestVideos": [],
@@ -5545,8 +5527,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_zeal.png",
         "description": {
-          "fr": "Les alliés avec Zèle sont soignés quand Blanchetête inflige des dégâts.",
-          "en": "Allies with Zeal are healed when Whitemane deals damage."
+          "fr": "Les alliés avec Zèle sont soignés quand Blanchetête inflige des dégâts. Actif  : Augmente la puissance de capacité et réduit l'armure de Blanchetête. ",
+          "en": "Allies with Zeal are healed when Whitemane deals damage. Active: Increases Whitemane's spell power and reduces her armor. "
         },
         "demoYoutubeId": ""
       },
