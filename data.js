@@ -7734,7 +7734,7 @@ const HEROES = [
     "id": "azmodan",
     "enabled": false,
     "name": {
-      "fr": "Azmodan",
+      "fr": "Asmodan",
       "en": "Azmodan"
     },
     "role": "AssassinDistance",
@@ -21251,7 +21251,7 @@ const HEROES = [
     "id": "sgthammer",
     "enabled": false,
     "name": {
-      "fr": "Sgt. Hammer",
+      "fr": "Sgt. Marteau",
       "en": "Sgt. Hammer"
     },
     "role": "AssassinDistance",
@@ -21812,7 +21812,7 @@ const HEROES = [
     "id": "stitches",
     "enabled": false,
     "name": {
-      "fr": "Stitches",
+      "fr": "Balafré",
       "en": "Stitches"
     },
     "role": "Tank",
