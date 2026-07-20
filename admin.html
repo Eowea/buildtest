@@ -249,6 +249,13 @@
       <div style="margin-top:10px;">
         <div class="field"><label>Pseudo souhaité</label><input id="genUser" type="text" /></div>
         <div class="field"><label>Mot de passe souhaité</label><input id="genPass" type="password" /></div>
+        <div class="field">
+          <label>Rôle</label>
+          <select id="genRole">
+            <option value="admin">Administrateur (accès complet)</option>
+            <option value="editor">Éditeur (limité au dépôt Eowea/buildtest)</option>
+          </select>
+        </div>
         <button onclick="generateAccountSnippet()">Générer le bloc à ajouter dans admins.js</button>
         <div id="genOutput"></div>
       </div>
@@ -320,7 +327,7 @@
       <div class="sidebar-footer">
         <button onclick="addHero()">+ Nouveau héros</button>
         <button onclick="showConfigPanel()">⚙ Configuration du site</button>
-        <button onclick="showAdminsPanel()">👤 Administrateurs</button>
+        <button id="adminsPanelBtn" onclick="showAdminsPanel()">👤 Administrateurs</button>
       </div>
     </div>
     <div class="content" id="contentEl">
@@ -356,6 +363,7 @@ let dataFileSha = null;
 let adminsFileSha = null;
 let githubToken = null;
 let currentUser = null;
+let currentUserRole = 'admin'; // 'admin' (accès complet) ou 'editor' (limité au dépôt buildtest)
 let currentHeroIndex = null;
 let currentTab = 'infos';
 let dirty = false;
@@ -488,6 +496,18 @@ async function handleLogin(){
 
 async function proceedAfterLogin(username){
   currentUser = username;
+  const account = (typeof ADMINS !== 'undefined' ? ADMINS : []).find(a => a.username === username);
+  currentUserRole = account?.role === 'editor' ? 'editor' : 'admin';
+
+  // Un éditeur est cantonné au dépôt de test buildtest, quoi qu'il ait pu être
+  // mémorisé précédemment sur cet appareil (ex: un admin qui se serait connecté avant).
+  if (currentUserRole === 'editor'){
+    REPO_OWNER = 'Eowea';
+    REPO_NAME = 'buildtest';
+    localStorage.setItem('eowea_admin_repo_owner', REPO_OWNER);
+    localStorage.setItem('eowea_admin_repo_name', REPO_NAME);
+  }
+
   document.getElementById('loginScreen').classList.add('hidden');
   document.getElementById('tokenGreetUser').textContent = username;
 
@@ -510,6 +530,18 @@ async function proceedAfterLogin(username){
 
 function populateRepoSelect(){
   const sel = document.getElementById('repoSelect');
+  if (currentUserRole === 'editor'){
+    // Un éditeur ne peut cibler que buildtest : le champ reste visible mais verrouillé,
+    // pour que ce soit clair plutôt que de le cacher silencieusement.
+    sel.innerHTML = `<option value="Eowea/buildtest">Eowea/buildtest (test)</option>`;
+    sel.value = 'Eowea/buildtest';
+    sel.disabled = true;
+    document.getElementById('customRepoFields').classList.add('hidden');
+    document.getElementById('repoOwnerInput').value = 'Eowea';
+    document.getElementById('repoNameInput').value = 'buildtest';
+    return;
+  }
+  sel.disabled = false;
   sel.innerHTML = REPO_OPTIONS.map(o => `<option value="${o.owner}/${o.name}">${escapeHtml(o.label)}</option>`).join('')
     + '<option value="__custom__">Autre (saisie manuelle)</option>';
   const current = REPO_OPTIONS.find(o => o.owner === REPO_OWNER && o.name === REPO_NAME);
@@ -539,10 +571,11 @@ function onRepoSelectChange(){
 async function generateAccountSnippet(){
   const username = document.getElementById('genUser').value.trim();
   const password = document.getElementById('genPass').value;
+  const role = document.getElementById('genRole').value;
   if (!username || !password){ return; }
   const salt = randomSalt();
   const hash = await sha256Hex(salt + ':' + password);
-  const snippet = `{ username: "${username}", salt: "${salt}", hash: "${hash}" }`;
+  const snippet = `{ username: "${username}", salt: "${salt}", hash: "${hash}", role: "${role}" }`;
   document.getElementById('genOutput').innerHTML =
     '<div class="snippet">' + escapeHtml(snippet) + '</div>' +
     '<small class="help">Copie ce bloc et ajoute-le dans le tableau ADMINS de admins.js (ou connecte-toi avec un compte existant puis utilise l\'onglet "Administrateurs" pour l\'ajouter automatiquement).</small>';
@@ -557,8 +590,10 @@ async function handleTokenSubmit(){
   const errEl = document.getElementById('tokenError');
   errEl.classList.add('hidden');
 
-  const owner = document.getElementById('repoOwnerInput').value.trim() || REPO_OWNER;
-  const name  = document.getElementById('repoNameInput').value.trim() || REPO_NAME;
+  // Un éditeur reste cantonné à buildtest, même si les champs du formulaire étaient
+  // manipulés (ex: via les devtools) : on ignore sa saisie et on force la cible.
+  const owner = currentUserRole === 'editor' ? 'Eowea' : (document.getElementById('repoOwnerInput').value.trim() || REPO_OWNER);
+  const name  = currentUserRole === 'editor' ? 'buildtest' : (document.getElementById('repoNameInput').value.trim() || REPO_NAME);
   const tokenToUse = typedToken || githubToken;
   if (!tokenToUse){ errEl.textContent = 'Merci de coller un token GitHub.'; errEl.classList.remove('hidden'); return; }
 
@@ -579,6 +614,13 @@ async function handleTokenSubmit(){
 
 function populateTopbarRepoSelect(){
   const sel = document.getElementById('topbarRepoSelect');
+  if (currentUserRole === 'editor'){
+    sel.innerHTML = `<option value="Eowea/buildtest">Eowea/buildtest (test)</option>`;
+    sel.value = 'Eowea/buildtest';
+    sel.disabled = true;
+    return;
+  }
+  sel.disabled = false;
   const known = REPO_OPTIONS.some(o => o.owner === REPO_OWNER && o.name === REPO_NAME);
   let options = REPO_OPTIONS.map(o => `<option value="${o.owner}/${o.name}">${escapeHtml(o.label)}</option>`).join('');
   if (!known) options += `<option value="${REPO_OWNER}/${REPO_NAME}">${escapeHtml(REPO_OWNER + '/' + REPO_NAME)}</option>`;
@@ -588,6 +630,11 @@ function populateTopbarRepoSelect(){
 }
 
 async function switchRepoFromTopbar(){
+  if (currentUserRole === 'editor'){
+    toast('Ton compte éditeur est restreint au dépôt Eowea/buildtest', 'error');
+    populateTopbarRepoSelect();
+    return;
+  }
   const sel = document.getElementById('topbarRepoSelect');
   const val = sel.value;
   const prevOwner = REPO_OWNER, prevName = REPO_NAME;
@@ -709,6 +756,8 @@ function serializeDataFile(){
 async function bootApp(){
   document.getElementById('tokenScreen').classList.add('hidden');
   document.getElementById('appScreen').style.display = 'flex';
+  const adminsBtn = document.getElementById('adminsPanelBtn');
+  if (adminsBtn) adminsBtn.style.display = currentUserRole === 'editor' ? 'none' : '';
   populateTopbarRepoSelect();
   await reloadFromGitHub();
 }
@@ -1844,6 +1893,10 @@ function showConfigPanel(){
    GESTION DES ADMINISTRATEURS (admins.js)
    ========================================================================= */
 function showAdminsPanel(){
+  if (currentUserRole === 'editor'){
+    toast("Ton compte éditeur n'a pas accès à la gestion des administrateurs", 'error');
+    return;
+  }
   currentHeroIndex = null;
   currentPanelView = 'admins';
   renderHeroList();
@@ -1855,6 +1908,13 @@ function showAdminsPanel(){
       <button class="ghost remove-btn" onclick="removeAdminEntry(${i})">✕</button>
       <div><strong>${escapeHtml(a.username)}</strong></div>
       <small class="help">Mot de passe caché (hash uniquement)</small>
+      <div class="field" style="margin-top:8px;">
+        <label>Rôle</label>
+        <select onchange="changeAdminRole(${i}, this.value)">
+          <option value="admin"${a.role !== 'editor' ? ' selected' : ''}>Administrateur (accès complet)</option>
+          <option value="editor"${a.role === 'editor' ? ' selected' : ''}>Éditeur (limité au dépôt Eowea/buildtest)</option>
+        </select>
+      </div>
     </div>
   `).join('');
   document.getElementById('contentEl').innerHTML = `
@@ -1867,6 +1927,13 @@ function showAdminsPanel(){
       <h3>Ajouter un administrateur</h3>
       <div class="field"><label>Pseudo</label><input id="newAdminUser" /></div>
       <div class="field"><label>Mot de passe</label><input id="newAdminPass" type="password" /></div>
+      <div class="field">
+        <label>Rôle</label>
+        <select id="newAdminRole">
+          <option value="admin">Administrateur (accès complet)</option>
+          <option value="editor">Éditeur (limité au dépôt Eowea/buildtest)</option>
+        </select>
+      </div>
       <button class="primary" onclick="addAdminEntry()">Ajouter et enregistrer sur GitHub</button>
       <small class="help">Cette action committe directement le fichier admins.js sur GitHub avec le nouveau compte (mot de passe hashé, jamais en clair).</small>
     </div>
@@ -1875,14 +1942,19 @@ function showAdminsPanel(){
 async function addAdminEntry(){
   const username = document.getElementById('newAdminUser').value.trim();
   const password = document.getElementById('newAdminPass').value;
+  const role = document.getElementById('newAdminRole').value;
   if (!username || !password){ toast('Pseudo et mot de passe requis', 'error'); return; }
   if (typeof ADMINS === 'undefined') { window.ADMINS = []; }
   if (ADMINS.some(a => a.username === username)){ toast('Ce pseudo existe déjà', 'error'); return; }
   const salt = randomSalt();
   const hash = await sha256Hex(salt + ':' + password);
-  ADMINS.push({ username, salt, hash });
+  ADMINS.push({ username, salt, hash, role });
   await commitAdminsFile();
   showAdminsPanel();
+}
+function changeAdminRole(i, role){
+  ADMINS[i].role = role;
+  commitAdminsFile().then(showAdminsPanel);
 }
 function removeAdminEntry(i){
   if (!confirm(`Retirer l'accès de "${ADMINS[i].username}" ?`)) return;

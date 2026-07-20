@@ -5,6 +5,16 @@
   Ne contient JAMAIS de mot de passe en clair : seulement un sel aléatoire
   et le hash SHA-256 de "sel:motdepasse".
 
+  Champ "role" :
+  - "admin"  : accès complet, comme avant (tous les dépôts, gestion des
+               administrateurs, configuration du site...).
+  - "editor" : cantonné au dépôt Eowea/buildtest (le sélecteur de dépôt est
+               verrouillé dessus, impossible de basculer sur un autre dépôt
+               depuis l'admin), et sans accès à l'onglet "Administrateurs".
+               Pense à donner à ce compte un token GitHub qui n'a lui-même
+               accès qu'au dépôt buildtest (fine-grained token), pour que
+               la restriction tienne même en dehors du panneau admin.
+
   Pour ajouter un admin :
   - Le plus simple : une fois connecté à admin.html, va dans l'onglet
     "Administrateurs" -> "Ajouter un admin". Le panneau committe
@@ -23,6 +33,6 @@
 */
 
 const ADMINS = [
-  { username: "Eowea", salt: "1dfd8a6ea94668025c3b6148a5374a8d", hash: "fd6ad9dfe29789327bacc0c54cab32bfbdb82065ddd261f3dbb8b23a03ab436f" },
-  { username: "admintest", salt: "e6bb11b4133f04f47ac4750ba93512e2", hash: "32baf0ef8a962724c0b2ea967ee3959244e65dd077e09b6184bb963294d190fc" }
+  { username: "Eowea", salt: "1dfd8a6ea94668025c3b6148a5374a8d", hash: "fd6ad9dfe29789327bacc0c54cab32bfbdb82065ddd261f3dbb8b23a03ab436f", role: "admin" },
+  { username: "admintest", salt: "e6bb11b4133f04f47ac4750ba93512e2", hash: "32baf0ef8a962724c0b2ea967ee3959244e65dd077e09b6184bb963294d190fc", role: "admin" }
 ];
