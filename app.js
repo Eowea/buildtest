@@ -189,7 +189,7 @@ function markEverythingAsSeen(hero) {
 
     const visibleHeroes = () => HEROES.filter(h=>h.enabled!==false);
     const roles = () =>['all',...new Set(visibleHeroes().map(h=>h.role))];
-    function filteredHeroes() { const q=normalize(state.search); return visibleHeroes().filter(h=>(state.role==='all'||h.role===state.role)&&(!q||normalize(loc(h.name)).includes(q))).sort((a,b)=>loc(a.name).localeCompare(loc(b.name),state.lang,{sensitivity:'base'})); }
+    function filteredHeroes() { const q=normalize(state.search); return visibleHeroes().filter(h=>(state.role==='all'||h.role===state.role)&&(!q||normalize(h.name?.fr).includes(q)||normalize(h.name?.en).includes(q))).sort((a,b)=>loc(a.name).localeCompare(loc(b.name),state.lang,{sensitivity:'base'})); }
     const currentHero = () => HEROES.find(h=>h.id===state.heroId&&h.enabled!==false)||null;
     function clampBuildIndex(h) { if(!h?.builds?.length){state.buildIndex=0;return 0;} state.buildIndex=Math.min(h.builds.length-1,Math.max(0,Number(state.buildIndex)||0)); return state.buildIndex; }
     function firstBuildIndex(h) {
