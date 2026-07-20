@@ -1,38 +1,19 @@
 /*
-  admins.js
-  ---------
-  Liste des comptes autorisés à ouvrir admin.html.
-  Ne contient JAMAIS de mot de passe en clair : seulement un sel aléatoire
-  et le hash SHA-256 de "sel:motdepasse".
-
-  Champ "role" :
-  - "admin"  : accès complet, comme avant (tous les dépôts, gestion des
-               administrateurs, configuration du site...).
-  - "editor" : cantonné au dépôt Eowea/buildtest (le sélecteur de dépôt est
-               verrouillé dessus, impossible de basculer sur un autre dépôt
-               depuis l'admin), et sans accès à l'onglet "Administrateurs".
-               Pense à donner à ce compte un token GitHub qui n'a lui-même
-               accès qu'au dépôt buildtest (fine-grained token), pour que
-               la restriction tienne même en dehors du panneau admin.
-
-  Pour ajouter un admin :
-  - Le plus simple : une fois connecté à admin.html, va dans l'onglet
-    "Administrateurs" -> "Ajouter un admin". Le panneau committe
-    automatiquement la nouvelle entrée ici, dans ce fichier, via l'API GitHub.
-  - Ou manuellement : ouvre admin.html, clique sur "Générer un compte"
-    (visible sur l'écran de connexion, sans avoir besoin d'être connecté),
-    entre le pseudo + mot de passe souhaités, puis copie le bloc généré
-    ci-dessous, dans le tableau ADMINS.
-
-  Rappel sécurité : ce fichier vit dans un repo PUBLIC. Le hash empêche de
-  lire les mots de passe en clair, mais n'importe qui peut voir les pseudos
-  et pourrait tenter de deviner un mot de passe faible. Choisissez des mots
-  de passe longs et uniques. Le vrai verrou de sécurité, c'est le token
-  GitHub personnel que chaque admin doit fournir en plus du login (voir
-  ADMIN-README.md).
+  admins.js — Liste des comptes autorisés à ouvrir admin.html.
+  Généré / mis à jour par le panneau admin. Ne contient aucun mot de passe en clair.
 */
 
 const ADMINS = [
-  { username: "Eowea", salt: "1dfd8a6ea94668025c3b6148a5374a8d", hash: "fd6ad9dfe29789327bacc0c54cab32bfbdb82065ddd261f3dbb8b23a03ab436f", role: "admin" },
-  { username: "admintest", salt: "e6bb11b4133f04f47ac4750ba93512e2", hash: "32baf0ef8a962724c0b2ea967ee3959244e65dd077e09b6184bb963294d190fc", role: "admin" }
+  {
+    "username": "Eowea",
+    "salt": "1dfd8a6ea94668025c3b6148a5374a8d",
+    "hash": "fd6ad9dfe29789327bacc0c54cab32bfbdb82065ddd261f3dbb8b23a03ab436f",
+    "role": "admin"
+  },
+  {
+    "username": "admintest",
+    "salt": "e6bb11b4133f04f47ac4750ba93512e2",
+    "hash": "32baf0ef8a962724c0b2ea967ee3959244e65dd077e09b6184bb963294d190fc",
+    "role": "editor"
+  }
 ];
