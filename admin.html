@@ -1813,7 +1813,6 @@ function showConfigPanel(){
         <div class="field"><label>Sous-titre (EN)</label><textarea oninput="setNested(STREAMER_CONFIG,'siteSubtitle.en',this.value)">${escapeHtml(STREAMER_CONFIG.siteSubtitle?.en)}</textarea></div>
       </div>
       <small class="help" style="margin-top:-8px;">Le sous-titre n'est actuellement pas affiché dans le header (qui ne montre que le titre).</small>
-      <div class="field"><label>Chaîne Twitch</label><input value="${escapeHtml(STREAMER_CONFIG.twitchChannel)}" oninput="setNested(STREAMER_CONFIG,'twitchChannel',this.value)" /></div>
     </div>
     <div class="card">
       <h3>Réseaux sociaux</h3>

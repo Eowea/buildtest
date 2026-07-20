@@ -185,21 +185,7 @@
       text-align: center;
     }
 
-    .desktop-player {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      gap: 16px;
-      align-items: stretch;
-      justify-content: flex-end;
-    }
-
-    .desktop-player > * {
-      flex: 0 0 300px;
-      width: 300px;
-    }
-
-    .eyebrow, .twitch-head, .filter-chip, .role-badge, .card-head, .talent-level, .build-tab, .guide-video-kicker, .youtube-badge {
+    .eyebrow, .filter-chip, .role-badge, .card-head, .talent-level, .build-tab, .guide-video-kicker, .youtube-badge {
       font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -300,40 +286,6 @@
     }
     .social-link svg { width: 20px; height: 20px; }
     .social-link span { display: none; }
-
-
-    .twitch-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 14px;
-      border-bottom: 1px solid var(--blue-border);
-      background: linear-gradient(90deg, rgba(0, 229, 255, 0.15), transparent);
-      color: var(--blue-bright);
-      font-size: 13px;
-    }
-
-    .twitch-mount { min-height: 200px; background: #000; }
-    .twitch-mount iframe { width: 100%; height: 200px; border: 0; display: block; }
-
-    .twitch-placeholder {
-      display: none;
-      min-height: 200px;
-      place-items: center;
-      text-align: center;
-      padding: 18px;
-      color: var(--text-muted);
-      font-size: 13px;
-      background: var(--bg-deep);
-    }
-    .twitch-card.is-collapsed .twitch-mount { display: none; }
-    .twitch-card.is-collapsed .twitch-placeholder { display: grid; }
-
-    .mobile-player {
-      display: none;
-      padding: 0 14px 14px;
-      gap: 16px;
-    }
 
     /* ── Shared button ── */
     .btn {
@@ -1263,18 +1215,7 @@
     @media (max-width: 1180px) {
       .topbar { flex-direction: column; }
       .layout { grid-template-columns: minmax(0, 1fr); width: 100%; }
-      .mobile-player {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: stretch;
-        gap: 16px;
-      }
-      .mobile-player > * {
-        flex: 1 1 300px;
-      }
-      .desktop-player { display: none; }
-      
+
       .hero-list {
         max-height: 300px;
         overflow-y: auto;

@@ -21,9 +21,6 @@
       role_Support: { fr: "Soutien", en: "Support" },
       role_AssassinMelee: { fr: "Assassin Mêlée", en: "Melee Assassin" },
       role_AssassinDistance: { fr: "Assassin Distance", en: "Ranged Assassin" },
-      twitchOpen: { fr: "ouvrir", en: "open" },
-      twitchClose: { fr: "replier", en: "close" },
-      twitchPlaceholder: { fr: "Lecteur replié.", en: "Player collapsed." },
       heroesTitle: { fr: "Héros", en: "Heroes" },
       heroesNote: { fr: "Choisis un héros dans la liste, ou utilise la recherche et les filtres ci-dessus.", en: "Choose a hero from the list, or use the search and filters above." },
       level: { fr: "Niv.", en: "Lvl" },
@@ -64,19 +61,18 @@ const getInitialLang = () => {
       return (browserLang && browserLang.toLowerCase().startsWith('fr')) ? 'fr' : 'en';
     };
 
-    const state = { 
-      search: '', 
-      role: 'all', 
-      heroId: null, 
-      buildIndex: 0, 
-      twitchOpen: true,
-      lang: getInitialLang() 
+    const state = {
+      search: '',
+      role: 'all',
+      heroId: null,
+      buildIndex: 0,
+      lang: getInitialLang()
     };
 
     let activeFloatingTrigger = null, hideTooltipTimer = null, tooltipRaf = 0, layoutRaf = 0;
 
     const $ = id => document.getElementById(id);
-    const els = { siteTitle: $('siteTitle'), headerNav: $('headerNav'), socials: $('socials'), desktopTwitchMount: $('desktopTwitchMount'), mobileTwitchMount: $('mobileTwitchMount'), desktopTwitchCard: $('desktopTwitchCard'), toggleTwitch: $('toggleTwitch'), searchInput: $('searchInput'), resultsCount: $('resultsCount'), roleFilters: $('roleFilters'), heroList: $('heroList'), detailView: $('detailView'), tooltipPortal: $('tooltipPortal'), videoOverlay: $('videoOverlay'), closeOverlayBtn: $('closeOverlayBtn'), overlayStatusText: $('overlayStatusText'), expandedYoutube: $('expandedYoutube'), expandedMedia: $('expandedMedia'), langSwitcher: $('langSwitcher'), homeBtn: $('homeBtn') };
+    const els = { siteTitle: $('siteTitle'), headerNav: $('headerNav'), socials: $('socials'), searchInput: $('searchInput'), resultsCount: $('resultsCount'), roleFilters: $('roleFilters'), heroList: $('heroList'), detailView: $('detailView'), tooltipPortal: $('tooltipPortal'), videoOverlay: $('videoOverlay'), closeOverlayBtn: $('closeOverlayBtn'), overlayStatusText: $('overlayStatusText'), expandedYoutube: $('expandedYoutube'), expandedMedia: $('expandedMedia'), langSwitcher: $('langSwitcher'), homeBtn: $('homeBtn') };
 
     /* ── Utilities ── */
     const escapeHtml = (s) => (s ?? '').toString().replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -204,16 +200,11 @@ function markEverythingAsSeen(hero) {
     }
     function ensureSelection() { const l=filteredHeroes(); if(state.heroId&&(!currentHero()||!l.some(h=>h.id===state.heroId))){state.heroId=null;state.buildIndex=0;} clampBuildIndex(currentHero()); }
 
-    function twitchFrame() { if(!STREAMER_CONFIG.twitchChannel) return ''; return `<iframe src="https://player.twitch.tv/?channel=${encodeURIComponent(STREAMER_CONFIG.twitchChannel)}&parent=${encodeURIComponent(location.hostname||'localhost')}&muted=true" allowfullscreen loading="lazy"></iframe>`; }
-
-
     function updateStaticLang() {
       const el = id => { const e = $(id); if (e) return e; return { textContent: '', placeholder: '' }; };
       el('heroesTitle').textContent = t('heroesTitle');
       el('heroesNote').textContent = t('heroesNote');
       els.searchInput.placeholder = t('searchPlaceholder');
-      el('twitchPlaceholder1').textContent = t('twitchPlaceholder');
-      el('twitchPlaceholder2').textContent = t('twitchPlaceholder');
       document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === state.lang));
     }
 

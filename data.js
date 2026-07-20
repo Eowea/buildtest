@@ -12,7 +12,6 @@ const STREAMER_CONFIG = {
     "fr": "Recherche le build du héros qui t'intéresse grâce à la barre de recherche, aux filtres ou en cliquant dans la liste. Passe ton curseur sur les sorts et talents pour un descriptif écrit et vidéo.",
     "en": "Search for the hero build you're interested in using the search bar, filters, or by clicking in the list. Hover over spells and talents for a written and video description."
   },
-  "twitchChannel": "eowea",
   "socials": [
     {
       "label": "Twitch",
