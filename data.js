@@ -71,6 +71,13 @@ const STREAMER_CONFIG = {
         "en": "Zagara Grandmaster Gameplay - Analysis & Explanations"
       },
       "youtubeId": "https://youtu.be/iPxEnYt_2Y0"
+    },
+    {
+      "title": {
+        "fr": "Démo Deathwing face à 2 counters",
+        "en": "Deathwing Demo vs. 2 Counters"
+      },
+      "youtubeId": "https://youtu.be/4pxYSpCJ0Lc?si=bk3IAV7G-6j1IGG3"
     }
   ],
   "patchVideos": [
