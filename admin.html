@@ -847,7 +847,14 @@ function restoreViewState(){
       return true;
     }
     if (state.type === 'config'){ showConfigPanel(); return true; }
-    if (state.type === 'admins'){ showAdminsPanel(); return true; }
+    if (state.type === 'admins'){
+      // Un éditeur n'a pas accès à ce panneau : on ignore l'état mémorisé au lieu de
+      // renvoyer true (ce qui laisserait la vue vide, sans jamais afficher la liste
+      // des héros en repli).
+      if (currentUserRole === 'editor') return false;
+      showAdminsPanel();
+      return true;
+    }
   }catch(e){}
   return false;
 }
