@@ -69,7 +69,7 @@ const getInitialLang = () => {
       lang: getInitialLang()
     };
 
-    let activeFloatingTrigger = null, hideTooltipTimer = null, tooltipRaf = 0, layoutRaf = 0;
+    let activeFloatingTrigger = null, hideTooltipTimer = null, tooltipRaf = 0, layoutRaf = 0, layoutSyncTimers = [];
 
     const $ = id => document.getElementById(id);
     const els = { siteTitle: $('siteTitle'), headerNav: $('headerNav'), socials: $('socials'), searchInput: $('searchInput'), resultsCount: $('resultsCount'), roleFilters: $('roleFilters'), heroList: $('heroList'), detailView: $('detailView'), tooltipPortal: $('tooltipPortal'), videoOverlay: $('videoOverlay'), closeOverlayBtn: $('closeOverlayBtn'), overlayStatusText: $('overlayStatusText'), expandedYoutube: $('expandedYoutube'), expandedMedia: $('expandedMedia'), langSwitcher: $('langSwitcher'), homeBtn: $('homeBtn') };
@@ -787,6 +787,18 @@ function bindFloatingTriggers(root = document) {
       });
     }
     function queueLayoutSync() {
+      // Annule les filets de sécurité encore en attente d'un appel précédent : sinon, en cas
+      // de changements de héros rapprochés (clics répétés/rapides), ils s'accumulent et
+      // déclenchent des dizaines de recalculs de mise en page forcés (reflow) bien après que
+      // l'utilisateur soit passé à un autre héros, ce qui provoquait un effet de
+      // saccade/clignotement visible sur les icônes de talents.
+      layoutSyncTimers.forEach(clearTimeout);
+      layoutSyncTimers = [
+        setTimeout(syncTalentBoards, 150),
+        setTimeout(syncTalentBoards, 400),
+        setTimeout(syncTalentBoards, 900),
+      ];
+
       if (layoutRaf) return;
       layoutRaf = requestAnimationFrame(() => {
         layoutRaf = 0;
@@ -795,11 +807,6 @@ function bindFloatingTriggers(root = document) {
         // la largeur des cartes de talents).
         requestAnimationFrame(syncTalentBoards);
       });
-      // Filets de sécurité supplémentaires : si quelque chose (police web, icônes) fait
-      // encore bouger la mise en page un peu plus tard, on revérifie plusieurs fois.
-      setTimeout(syncTalentBoards, 150);
-      setTimeout(syncTalentBoards, 400);
-      setTimeout(syncTalentBoards, 900);
     }
 
     function openLightbox(ref, type='youtube') {
