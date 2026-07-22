@@ -26567,7 +26567,7 @@ const BATTLEGROUNDS = [
     ],
     "mercenaryCamps": [
       {
-        "image": "assets/maps/mercenaires/exemple-camp.png",
+        "image": "assets/maps/mercenaires/storm_ui_ingame_targetinfopanel_unit_hauntedmines_merc_mines_ranged.png",
         "name": {
           "fr": "Nom du camp (exemple)",
           "en": "Camp Name (example)"
