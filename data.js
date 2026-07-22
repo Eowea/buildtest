@@ -26544,7 +26544,7 @@ const HEROES = [
 const BATTLEGROUNDS = [
   {
     "id": "exemple-carte",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Nom de la carte (exemple)",
       "en": "Map Name (example)"
