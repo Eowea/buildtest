@@ -26550,6 +26550,7 @@ const BATTLEGROUNDS = [
       "en": "Map Name (example)"
     },
     "image": "assets/battlegrounds/portraits/exemple-carte.png",
+    "minimapImage": "assets/battlegrounds/minimaps/exemple-carte.png",
     "headline": {
       "fr": "Résumé en une phrase du fonctionnement de la carte.",
       "en": "One-sentence summary of how the map works."

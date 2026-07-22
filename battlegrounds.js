@@ -14,6 +14,7 @@ const BG_DICT = {
   tips: { fr: "Conseils", en: "Tips" },
   camps: { fr: "Camps de mercenaires", en: "Mercenary Camps" },
   guideVideos: { fr: "Vidéos guide", en: "Guide Videos" },
+  minimap: { fr: "Minimap", en: "Minimap" },
   noVideosYet: { fr: "Aucune vidéo pour le moment.", en: "No videos yet." },
   selectPrompt: { fr: "Sélectionne une carte dans la liste.", en: "Select a map from the list." },
   prevVideo: { fr: "Vidéo précédente", en: "Previous video" },
@@ -200,6 +201,12 @@ function renderBgDetail() {
   const videoSectionHtml = videoMarkup
     ? `<section class="guide-video-section">${videoMarkup}</section>`
     : `<div class="empty-state">${bgT('noVideosYet')}</div>`;
+  const minimapHtml = b.minimapImage
+    ? `<section class="bg-minimap-section">
+        <div class="bg-minimap-frame"><img src="${bgEsc(b.minimapImage)}" alt="${bgEsc(bgT('minimap'))} — ${bgEsc(bgLoc(b.name))}" loading="lazy" /></div>
+        <div class="bg-minimap-caption">${bgEsc(bgT('minimap'))} — ${bgEsc(bgLoc(b.name))}</div>
+      </section>`
+    : '';
 
   bgEls.detailView.innerHTML = `
     <section class="hero-header">
@@ -211,6 +218,7 @@ function renderBgDetail() {
         <p class="detail-headline">${bgEsc(bgLoc(b.headline))}</p>
       </div>
     </section>
+    ${minimapHtml}
     <section class="meta-grid">
       <article class="card">
         <div class="card-head">${bgT('objectives')}</div>

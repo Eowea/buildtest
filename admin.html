@@ -824,6 +824,8 @@ function normalizeLoadedData(){
   if (!Array.isArray(BATTLEGROUNDS)) BATTLEGROUNDS = [];
   BATTLEGROUNDS.forEach(bg => {
     bg.name = bg.name || {fr:'',en:''};
+    bg.image = bg.image || '';
+    bg.minimapImage = bg.minimapImage || '';
     bg.headline = bg.headline || {fr:'',en:''};
     bg.objectives = bg.objectives || {fr:'',en:''};
     if (!Array.isArray(bg.tips)) bg.tips = [];
@@ -2051,11 +2053,19 @@ function renderOneBattleground(bg, i){
           <div class="field"><label>Nom (EN)</label><input value="${escapeHtml(bg.name?.en)}" oninput="setNested(BATTLEGROUNDS[${i}],'name.en',this.value)" /></div>
         </div>
         <div class="field">
-          <label>Image</label>
+          <label>Image (portrait / vignette liste)</label>
           <div class="thumb-picker">
             <img src="${assetRawUrl(bg.image)}" onerror="this.style.visibility='hidden'" />
             <div class="path">${escapeHtml(bg.image||'(aucune)')}</div>
             <button onclick="openAssetPicker('image', (p)=>{ setNested(BATTLEGROUNDS[${i}],'image',p); showBattlegroundsPanel(); }, 'Image carte')">Choisir</button>
+          </div>
+        </div>
+        <div class="field">
+          <label>Image de la minimap (affichée en grand sur la fiche, comme sur icy-veins)</label>
+          <div class="thumb-picker">
+            <img src="${assetRawUrl(bg.minimapImage)}" onerror="this.style.visibility='hidden'" />
+            <div class="path">${escapeHtml(bg.minimapImage||'(aucune)')}</div>
+            <button onclick="openAssetPicker('image', (p)=>{ setNested(BATTLEGROUNDS[${i}],'minimapImage',p); showBattlegroundsPanel(); }, 'Minimap carte')">Choisir</button>
           </div>
         </div>
         <div class="row">
@@ -2093,6 +2103,7 @@ function addBattleground(){
     id, enabled: false,
     name: { fr: id, en: id },
     image: '',
+    minimapImage: '',
     headline: { fr:'', en:'' },
     objectives: { fr:'', en:'' },
     tips: [],
