@@ -5636,7 +5636,11 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_lash.png",
         "description": {
+<<<<<<< HEAD
           "fr": "Frappe en ligne, déclenche un second coup si un héros est touché. Quête : Chaque fois que Flagellation touche, augmente les points de vie et mana.",
+=======
+          "fr": "Frappe en ligne, déclenche un second coup si un héros est touché. Quête : Chaque fois que Flagellation touche, augmente les points de vie et mana. ",
+>>>>>>> ff57a6be3833dafa7b334600f2d2c918786fcda7
           "en": "Strikes in a line, strikes again if a hero is hit. Quest: Each time Searing Lash hits, it increases health and mana."
         },
         "demoYoutubeId": ""
