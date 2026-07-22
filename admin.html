@@ -1776,6 +1776,30 @@ function classifyAssetPath(path){
   else if (lower.includes('talent')) sub = 'Talents';
   else if (lower.includes('spell') || lower.includes('sort')) sub = 'Sorts';
   if (heroMatch) return { group: heroMatch.name?.fr || heroMatch.id, sub };
+
+  // Cartes (Battlegrounds) : dossier assets/maps/... reconnu à part (comme les héros),
+  // avec sa propre sous-catégorie "Minimap", et regroupé par carte si le nom/id
+  // correspond à une entrée de BATTLEGROUNDS.
+  if (segments[0] === 'assets' && segments[1] === 'maps'){
+    let mapSub = 'Autre';
+    if (lower.includes('minimap')) mapSub = 'Minimap';
+    else if (lower.includes('portrait')) mapSub = 'Portraits';
+    let bgMatch = null;
+    // Convention "fichier plat" (assets/maps/minimap/nom-carte.jpg, pas de dossier par
+    // carte) : on compare aussi le dernier segment sans son extension.
+    const segsToTry = segments.map((seg, i) => i === segments.length - 1 ? seg.replace(/\.[^.]+$/, '') : seg);
+    for (const seg of segsToTry){
+      const segNorm = normalizeForMatch(seg);
+      if (!segNorm) continue;
+      const bg = (typeof BATTLEGROUNDS !== 'undefined' ? BATTLEGROUNDS : []).find(b => {
+        const candidates = [b.id, b.name?.fr, b.name?.en].map(normalizeForMatch).filter(Boolean);
+        return candidates.includes(segNorm);
+      });
+      if (bg){ bgMatch = bg; break; }
+    }
+    return { group: '🗺 ' + (bgMatch ? (bgMatch.name?.fr || bgMatch.id) : 'Cartes'), sub: mapSub };
+  }
+
   // Pas de héros reconnu dans le chemin : on range sous un dossier générique,
   // avec le chemin d'origine comme sous-catégorie pour ne rien perdre de vue.
   return { group: 'Autres fichiers', sub: segments.slice(0, -1).join('/').replace(/^assets\//, '') || '(racine)' };
@@ -1811,7 +1835,7 @@ function renderAssetGrid(kind){
     (nested[group][sub] = nested[group][sub] || []).push(item);
   });
 
-  const subOrder = ['Portraits', 'Talents', 'Sorts'];
+  const subOrder = ['Portraits', 'Minimap', 'Talents', 'Sorts'];
   const currentPickerHero = (assetPickerHeroIndex !== null && HEROES && HEROES[assetPickerHeroIndex])
     ? (HEROES[assetPickerHeroIndex].name?.fr || HEROES[assetPickerHeroIndex].id)
     : null;
