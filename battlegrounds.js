@@ -195,7 +195,11 @@ function renderBgDetail() {
     ? `<ul class="bullet-list">${b.tips.map(tip=>`<li>${bgEsc(bgLoc(tip))}</li>`).join('')}</ul>`
     : `<p>${bgEsc(bgT('noVideosYet'))}</p>`;
   const campsHtml = (b.mercenaryCamps||[]).length
-    ? `<ul class="bullet-list">${b.mercenaryCamps.map(c=>`<li><strong>${bgEsc(bgLoc(c.name))}</strong> — ${bgEsc(bgLoc(c.description))}</li>`).join('')}</ul>`
+    ? `<ul class="camp-list">${b.mercenaryCamps.map(c=>`
+        <li class="camp-item">
+          ${c.image ? `<div class="camp-icon"><img src="${bgEsc(c.image)}" alt="${bgEsc(bgLoc(c.name))}" loading="lazy" onerror="this.parentNode.style.visibility='hidden'" /></div>` : ''}
+          <div class="camp-text"><strong>${bgEsc(bgLoc(c.name))}</strong> — ${bgEsc(bgLoc(c.description))}</div>
+        </li>`).join('')}</ul>`
     : `<p>${bgEsc(bgT('noVideosYet'))}</p>`;
   const videoMarkup = bgBuildYoutubeCarouselMarkup(b.guideVideos);
   const videoSectionHtml = videoMarkup

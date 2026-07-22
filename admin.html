@@ -830,6 +830,7 @@ function normalizeLoadedData(){
     bg.objectives = bg.objectives || {fr:'',en:''};
     if (!Array.isArray(bg.tips)) bg.tips = [];
     if (!Array.isArray(bg.mercenaryCamps)) bg.mercenaryCamps = [];
+    bg.mercenaryCamps.forEach(c => { c.image = c.image || ''; c.name = c.name || {fr:'',en:''}; c.description = c.description || {fr:'',en:''}; });
     if (!Array.isArray(bg.guideVideos)) bg.guideVideos = [];
   });
 }
@@ -1784,6 +1785,7 @@ function classifyAssetPath(path){
     let mapSub = 'Autre';
     if (lower.includes('minimap')) mapSub = 'Minimap';
     else if (lower.includes('portrait')) mapSub = 'Portraits';
+    else if (lower.includes('merc') || lower.includes('camp')) mapSub = 'Camps';
     let bgMatch = null;
     // Convention "fichier plat" (assets/maps/minimap/nom-carte.jpg, pas de dossier par
     // carte) : on compare aussi le dernier segment sans son extension.
@@ -1835,7 +1837,7 @@ function renderAssetGrid(kind){
     (nested[group][sub] = nested[group][sub] || []).push(item);
   });
 
-  const subOrder = ['Portraits', 'Minimap', 'Talents', 'Sorts'];
+  const subOrder = ['Portraits', 'Minimap', 'Camps', 'Talents', 'Sorts'];
   const currentPickerHero = (assetPickerHeroIndex !== null && HEROES && HEROES[assetPickerHeroIndex])
     ? (HEROES[assetPickerHeroIndex].name?.fr || HEROES[assetPickerHeroIndex].id)
     : null;
@@ -2037,6 +2039,14 @@ function renderOneBattleground(bg, i){
     <div class="subitem" data-drag-item data-drag-list="bgCamps:${i}" data-drag-index="${ci}" style="padding-left:34px;">
       <span class="drag-handle" title="Glisser pour réordonner" style="position:absolute;left:8px;top:12px;">⠿</span>
       <button class="ghost remove-btn" onclick="BATTLEGROUNDS[${i}].mercenaryCamps.splice(${ci},1); markDirty(); showBattlegroundsPanel();">✕</button>
+      <div class="field">
+        <label>Image du camp</label>
+        <div class="thumb-picker">
+          <img src="${assetRawUrl(c.image)}" onerror="this.style.visibility='hidden'" />
+          <div class="path">${escapeHtml(c.image||'(aucune)')}</div>
+          <button onclick="openAssetPicker('image', (p)=>{ setNested(BATTLEGROUNDS[${i}].mercenaryCamps[${ci}],'image',p); showBattlegroundsPanel(); }, 'Image camp')">Choisir</button>
+        </div>
+      </div>
       <div class="row">
         <div class="field"><label>Nom du camp (FR)</label><input value="${escapeHtml(c.name?.fr)}" oninput="setNested(BATTLEGROUNDS[${i}].mercenaryCamps[${ci}],'name.fr',this.value)" /></div>
         <div class="field"><label>Nom du camp (EN)</label><input value="${escapeHtml(c.name?.en)}" oninput="setNested(BATTLEGROUNDS[${i}].mercenaryCamps[${ci}],'name.en',this.value)" /></div>
@@ -2107,7 +2117,7 @@ function renderOneBattleground(bg, i){
 
         <h3 style="margin-top:16px;">Camps de mercenaires</h3>
         ${campsHtml || '<p style="color:var(--text-dim);font-size:13px;">Aucun camp.</p>'}
-        <button class="list-add-btn" onclick="BATTLEGROUNDS[${i}].mercenaryCamps.push({name:{fr:'',en:''},description:{fr:'',en:''}}); markDirty(); showBattlegroundsPanel();">+ Ajouter un camp</button>
+        <button class="list-add-btn" onclick="BATTLEGROUNDS[${i}].mercenaryCamps.push({image:'',name:{fr:'',en:''},description:{fr:'',en:''}}); markDirty(); showBattlegroundsPanel();">+ Ajouter un camp</button>
 
         <h3 style="margin-top:16px;">Vidéos guide</h3>
         ${videosHtml || '<p style="color:var(--text-dim);font-size:13px;">Aucune vidéo.</p>'}

@@ -26567,6 +26567,7 @@ const BATTLEGROUNDS = [
     ],
     "mercenaryCamps": [
       {
+        "image": "assets/maps/mercenaires/exemple-camp.png",
         "name": {
           "fr": "Nom du camp (exemple)",
           "en": "Camp Name (example)"
