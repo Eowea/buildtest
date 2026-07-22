@@ -47,6 +47,8 @@
       optionalTalents: { fr: "Options", en: "Options" },
       newBadge: { fr: "Nouveau", en: "New" },
       updatedBadge: { fr: "Mis à jour", en: "Updated" },
+      navHeroes: { fr: "Héros", en: "Heroes" },
+      navMaps: { fr: "Cartes", en: "Battlegrounds" },
     };
 
     /* =========================================================================
@@ -215,7 +217,9 @@ function markEverythingAsSeen(hero) {
         els.siteTitle.textContent = loc(STREAMER_CONFIG.siteTitle);
       }
       els.socials.innerHTML = STREAMER_CONFIG.socials.map(s=>`<a class="social-link" data-network="${s.icon}" href="${s.url}" target="_blank" rel="noreferrer">${ICONS[s.icon]||''}<span>${s.label}</span></a>`).join('');
-      els.headerNav.innerHTML = (STREAMER_CONFIG.navLinks || []).filter(l => l.enabled !== false).map(l => `<a class="header-nav-link" href="${escapeHtml(l.url || '#')}"${l.newTab ? ' target="_blank" rel="noreferrer"' : ''}>${escapeHtml(loc(l.label))}</a>`).join('');
+      const internalLinks = `<a class="header-nav-link active" href="index.html">${t('navHeroes')}</a><a class="header-nav-link" href="battlegrounds.html">${t('navMaps')}</a>`;
+      const configLinks = (STREAMER_CONFIG.navLinks || []).filter(l => l.enabled !== false).map(l => `<a class="header-nav-link" href="${escapeHtml(l.url || '#')}"${l.newTab ? ' target="_blank" rel="noreferrer"' : ''}>${escapeHtml(loc(l.label))}</a>`).join('');
+      els.headerNav.innerHTML = internalLinks + configLinks;
     }
     
     function renderFilters() { els.roleFilters.innerHTML=roles().map(r=>`<button class="filter-chip${state.role===r?' active':''}" type="button" data-role="${r}">${locRole(r)}</button>`).join(''); }

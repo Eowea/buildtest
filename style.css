@@ -246,6 +246,13 @@
       box-shadow: 0 0 10px var(--gold-glow);
     }
 
+    .header-nav-link.active {
+      color: var(--gold-bright);
+      background: linear-gradient(180deg, rgba(248, 183, 0, 0.1), rgba(248, 183, 0, 0.25));
+      border-color: var(--gold-border);
+      text-shadow: 0 0 8px var(--gold-glow);
+    }
+
     /* ── Header Actions (Lang switcher, bottom-right) ── */
     .header-actions {
       position: absolute;

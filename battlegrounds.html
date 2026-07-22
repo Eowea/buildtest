@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1280" />
+  <title>Eowea - Cartes HotS</title>
+  <link rel="icon" type="image/png" href="https://static.wikia.nocookie.net/allstars_gamepedia/images/e/e5/Emoji_Elements_Pack_Flower.png/">
+
+  <!-- Préchargement des polices (réduit le flash de texte au chargement) -->
+  <link rel="preload" href="assets/fonts/metronic-for-blizzard.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/metronic-for-blizzard-bold.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- C'est ici qu'on relie le design ! -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+<header class="panel topbar">
+  <div class="brand-block">
+    <h1 class="site-title" id="siteTitle">Eowea builds</h1>
+  </div>
+  <nav class="header-nav" id="headerNav" aria-label="Navigation"></nav>
+  <nav class="socials" id="socials" aria-label="Réseaux sociaux"></nav>
+  <div class="header-actions">
+    <div class="lang-switcher" id="langSwitcher">
+      <button class="lang-btn" data-lang="fr"><img src="https://flagicons.lipis.dev/flags/4x3/fr.svg" alt="FR"></button>
+      <button class="lang-btn" data-lang="en"><img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="EN"></button>
+    </div>
+  </div>
+</header>
+    <section class="panel toolbar">
+      <div class="toolbar-row">
+        <a href="index.html" class="home-btn" aria-label="Accueil" title="Accueil">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+        </a>
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input class="search" id="searchInput" type="search" placeholder="Rechercher une carte..." autocomplete="off" />
+        </div>
+        <div class="counter" id="resultsCount">0 résultats</div>
+      </div>
+    </section>
+
+    <main class="layout">
+      <aside class="panel sidebar">
+        <h2 class="section-title" id="bgTitle">Cartes</h2>
+        <p class="section-note" id="bgNote">Choisis une carte dans la liste, ou utilise la recherche ci-dessus.</p>
+        <div class="hero-list" id="bgList" role="listbox" aria-label="Liste des cartes"></div>
+      </aside>
+      <section class="panel content" id="detailViewWrap">
+        <div id="detailView"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="tooltipPortal" class="spell-portal" aria-hidden="true"></div>
+
+  <!-- BOUTON RETOUR EN HAUT -->
+  <button id="backToTop" aria-label="Remonter" title="Remonter en haut">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+          <path d="M13 7.828V20h-2V7.828l-5.364 5.364-1.414-1.414L12 4l7.778 7.778-1.414 1.414L13 7.828z"/>
+      </svg>
+  </button>
+
+  <script src="data.js"></script>
+  <script src="battlegrounds.js"></script>
+
+<script>
+  document.addEventListener("click", function(e) {
+    if (window.innerWidth <= 768) {
+      const socialLink = e.target.closest("#socials .social-link");
+      if (socialLink) {
+        if (!socialLink.classList.contains("is-open")) {
+          e.preventDefault();
+          document.querySelectorAll("#socials .social-link").forEach(l => l.classList.remove("is-open"));
+          socialLink.classList.add("is-open");
+        }
+      } else {
+        document.querySelectorAll("#socials .social-link").forEach(l => l.classList.remove("is-open"));
+      }
+    }
+  });
+  document.addEventListener("touchstart", function(e) {
+    if (window.innerWidth <= 768 && !e.target.closest("#socials")) {
+      document.querySelectorAll("#socials .social-link").forEach(l => l.classList.remove("is-open"));
+    }
+  }, { passive: true });
+</script>
+</body>
+</html>

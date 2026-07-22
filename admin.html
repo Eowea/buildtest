@@ -326,6 +326,7 @@
       <div class="hero-list" id="heroListEl"></div>
       <div class="sidebar-footer">
         <button onclick="addHero()">+ Nouveau héros</button>
+        <button onclick="showBattlegroundsPanel()">🗺 Cartes</button>
         <button onclick="showConfigPanel()">⚙ Configuration du site</button>
         <button id="adminsPanelBtn" onclick="showAdminsPanel()">👤 Administrateurs</button>
       </div>
@@ -359,6 +360,7 @@ const GITHUB_API = 'https://api.github.com';
 let APP_CONFIG = null;
 let STREAMER_CONFIG = null;
 let HEROES = null;
+let BATTLEGROUNDS = null;
 let dataFileSha = null;
 let adminsFileSha = null;
 let githubToken = null;
@@ -739,7 +741,7 @@ async function loadAssetTree(force){
    CHARGEMENT / SERIALISATION DE data.js
    ========================================================================= */
 function parseDataFile(jsText){
-  const runner = new Function(jsText + '\nreturn { APP_CONFIG, STREAMER_CONFIG, HEROES };');
+  const runner = new Function(jsText + '\nreturn { APP_CONFIG, STREAMER_CONFIG, HEROES, BATTLEGROUNDS };');
   return runner();
 }
 function serializeDataFile(){
@@ -749,6 +751,8 @@ function serializeDataFile(){
     'const STREAMER_CONFIG = ' + JSON.stringify(STREAMER_CONFIG, null, 2) + ';',
     '',
     'const HEROES = ' + JSON.stringify(HEROES, null, 2) + ';',
+    '',
+    'const BATTLEGROUNDS = ' + JSON.stringify(BATTLEGROUNDS, null, 2) + ';',
     ''
   ].join('\n');
 }
@@ -816,9 +820,19 @@ function normalizeLoadedData(){
       delete b.talents;
     });
   });
+
+  if (!Array.isArray(BATTLEGROUNDS)) BATTLEGROUNDS = [];
+  BATTLEGROUNDS.forEach(bg => {
+    bg.name = bg.name || {fr:'',en:''};
+    bg.headline = bg.headline || {fr:'',en:''};
+    bg.objectives = bg.objectives || {fr:'',en:''};
+    if (!Array.isArray(bg.tips)) bg.tips = [];
+    if (!Array.isArray(bg.mercenaryCamps)) bg.mercenaryCamps = [];
+    if (!Array.isArray(bg.guideVideos)) bg.guideVideos = [];
+  });
 }
 
-let currentPanelView = null; // 'config' | 'admins' | null (null = un héros ou rien de sélectionné)
+let currentPanelView = null; // 'config' | 'admins' | 'battlegrounds' | null (null = un héros ou rien de sélectionné)
 function saveViewState(){
   let state = null;
   if (currentHeroIndex !== null && HEROES && HEROES[currentHeroIndex]){
@@ -827,6 +841,8 @@ function saveViewState(){
     state = { type: 'config' };
   } else if (currentPanelView === 'admins'){
     state = { type: 'admins' };
+  } else if (currentPanelView === 'battlegrounds'){
+    state = { type: 'battlegrounds' };
   }
   if (state) sessionStorage.setItem('eowea_admin_view', JSON.stringify(state));
   else sessionStorage.removeItem('eowea_admin_view');
@@ -847,6 +863,7 @@ function restoreViewState(){
       return true;
     }
     if (state.type === 'config'){ showConfigPanel(); return true; }
+    if (state.type === 'battlegrounds'){ showBattlegroundsPanel(); return true; }
     if (state.type === 'admins'){
       // Un éditeur n'a pas accès à ce panneau : on ignore l'état mémorisé au lieu de
       // renvoyer true (ce qui laisserait la vue vide, sans jamais afficher la liste
@@ -866,6 +883,7 @@ async function reloadFromGitHub(){
     APP_CONFIG = parsed.APP_CONFIG;
     STREAMER_CONFIG = parsed.STREAMER_CONFIG;
     HEROES = parsed.HEROES;
+    BATTLEGROUNDS = parsed.BATTLEGROUNDS || [];
     normalizeLoadedData();
     dataFileSha = file.sha;
     markSaved();
@@ -1257,6 +1275,18 @@ function reorderHeroList(listType, from, to){
     arr.splice(to, 0, moved);
     markDirty();
     showConfigPanel();
+    return;
+  }
+  if (listType.startsWith('bgTips:') || listType.startsWith('bgCamps:') || listType.startsWith('bgVideos:')){
+    const [kind, bgIdxStr] = listType.split(':');
+    const bg = BATTLEGROUNDS[Number(bgIdxStr)];
+    if (!bg) return;
+    const key = kind === 'bgTips' ? 'tips' : kind === 'bgCamps' ? 'mercenaryCamps' : 'guideVideos';
+    const arr = bg[key];
+    const [moved] = arr.splice(from, 1);
+    arr.splice(to, 0, moved);
+    markDirty();
+    showBattlegroundsPanel();
     return;
   }
   const hero = HEROES[currentHeroIndex];
@@ -1942,6 +1972,142 @@ function showConfigPanel(){
       <button onclick="STREAMER_CONFIG.patchVideos.push({title:{fr:'',en:''},youtubeId:''}); markDirty(); showConfigPanel();">+ Ajouter une vidéo</button>
     </div>
   `;
+}
+
+/* =========================================================================
+   GESTION DES CARTES (BATTLEGROUNDS)
+   ========================================================================= */
+function showBattlegroundsPanel(){
+  currentHeroIndex = null;
+  currentPanelView = 'battlegrounds';
+  renderHeroList();
+  saveViewState();
+  if (window.matchMedia('(max-width: 860px)').matches) toggleSidebar(false);
+
+  const html = BATTLEGROUNDS.map((bg, i) => renderOneBattleground(bg, i)).join('')
+    || '<p style="color:var(--text-dim);font-size:13px;">Aucune carte pour le moment.</p>';
+
+  document.getElementById('contentEl').innerHTML = `
+    <h2>Cartes (Battlegrounds)</h2>
+    ${html}
+    <button class="list-add-btn" onclick="addBattleground()">+ Nouvelle carte</button>
+  `;
+}
+
+function renderOneBattleground(bg, i){
+  const uid = assignUid(bg);
+  const tipsHtml = (bg.tips||[]).map((tip, ti) => `
+    <div class="subitem" data-drag-item data-drag-list="bgTips:${i}" data-drag-index="${ti}" style="padding-left:34px;">
+      <span class="drag-handle" title="Glisser pour réordonner" style="position:absolute;left:8px;top:12px;">⠿</span>
+      <button class="ghost remove-btn" onclick="BATTLEGROUNDS[${i}].tips.splice(${ti},1); markDirty(); showBattlegroundsPanel();">✕</button>
+      <div class="row">
+        <div class="field"><label>Conseil (FR)</label><textarea oninput="setNested(BATTLEGROUNDS[${i}].tips[${ti}],'fr',this.value)">${escapeHtml(tip.fr)}</textarea></div>
+        <div class="field"><label>Conseil (EN)</label><textarea oninput="setNested(BATTLEGROUNDS[${i}].tips[${ti}],'en',this.value)">${escapeHtml(tip.en)}</textarea></div>
+      </div>
+    </div>
+  `).join('');
+
+  const campsHtml = (bg.mercenaryCamps||[]).map((c, ci) => `
+    <div class="subitem" data-drag-item data-drag-list="bgCamps:${i}" data-drag-index="${ci}" style="padding-left:34px;">
+      <span class="drag-handle" title="Glisser pour réordonner" style="position:absolute;left:8px;top:12px;">⠿</span>
+      <button class="ghost remove-btn" onclick="BATTLEGROUNDS[${i}].mercenaryCamps.splice(${ci},1); markDirty(); showBattlegroundsPanel();">✕</button>
+      <div class="row">
+        <div class="field"><label>Nom du camp (FR)</label><input value="${escapeHtml(c.name?.fr)}" oninput="setNested(BATTLEGROUNDS[${i}].mercenaryCamps[${ci}],'name.fr',this.value)" /></div>
+        <div class="field"><label>Nom du camp (EN)</label><input value="${escapeHtml(c.name?.en)}" oninput="setNested(BATTLEGROUNDS[${i}].mercenaryCamps[${ci}],'name.en',this.value)" /></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Description (FR)</label><textarea oninput="setNested(BATTLEGROUNDS[${i}].mercenaryCamps[${ci}],'description.fr',this.value)">${escapeHtml(c.description?.fr)}</textarea></div>
+        <div class="field"><label>Description (EN)</label><textarea oninput="setNested(BATTLEGROUNDS[${i}].mercenaryCamps[${ci}],'description.en',this.value)">${escapeHtml(c.description?.en)}</textarea></div>
+      </div>
+    </div>
+  `).join('');
+
+  const videosHtml = (bg.guideVideos||[]).map((v, vi) => `
+    <div class="subitem" data-drag-item data-drag-list="bgVideos:${i}" data-drag-index="${vi}" style="padding-left:34px;">
+      <span class="drag-handle" title="Glisser pour réordonner" style="position:absolute;left:8px;top:12px;">⠿</span>
+      <button class="ghost remove-btn" onclick="BATTLEGROUNDS[${i}].guideVideos.splice(${vi},1); markDirty(); showBattlegroundsPanel();">✕</button>
+      <div class="row">
+        <div class="field"><label>Titre (FR)</label><input value="${escapeHtml(v.title?.fr)}" oninput="setNested(BATTLEGROUNDS[${i}].guideVideos[${vi}],'title.fr',this.value)" /></div>
+        <div class="field"><label>Titre (EN)</label><input value="${escapeHtml(v.title?.en)}" oninput="setNested(BATTLEGROUNDS[${i}].guideVideos[${vi}],'title.en',this.value)" /></div>
+      </div>
+      <div class="field"><label>ID ou lien YouTube</label><input value="${escapeHtml(v.youtubeId)}" oninput="setNested(BATTLEGROUNDS[${i}].guideVideos[${vi}],'youtubeId',this.value)" /></div>
+    </div>
+  `).join('');
+
+  return `
+    <details class="collapsible" data-uid="${uid}"${collapsibleState[uid]?' open':''}>
+      <summary>
+        <span class="chevron">▸</span>
+        <span class="s-title">${escapeHtml(bg.name?.fr || bg.id || 'Carte sans nom')}</span>
+        <span class="dot ${bg.enabled?'on':'off'}" title="${bg.enabled?'Activée':'Désactivée'}"></span>
+      </summary>
+      <div class="body">
+        <div class="checkbox-row">
+          <input type="checkbox" ${bg.enabled?'checked':''} onchange="setNested(BATTLEGROUNDS[${i}],'enabled',this.checked)" />
+          <label style="margin:0;text-transform:none;">Carte activée (visible sur le site)</label>
+        </div>
+        <div class="row">
+          <div class="field"><label>Nom (FR)</label><input value="${escapeHtml(bg.name?.fr)}" oninput="setNested(BATTLEGROUNDS[${i}],'name.fr',this.value)" /></div>
+          <div class="field"><label>Nom (EN)</label><input value="${escapeHtml(bg.name?.en)}" oninput="setNested(BATTLEGROUNDS[${i}],'name.en',this.value)" /></div>
+        </div>
+        <div class="field">
+          <label>Image</label>
+          <div class="thumb-picker">
+            <img src="${assetRawUrl(bg.image)}" onerror="this.style.visibility='hidden'" />
+            <div class="path">${escapeHtml(bg.image||'(aucune)')}</div>
+            <button onclick="openAssetPicker('image', (p)=>{ setNested(BATTLEGROUNDS[${i}],'image',p); showBattlegroundsPanel(); }, 'Image carte')">Choisir</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field"><label>Résumé (FR)</label><textarea oninput="setNested(BATTLEGROUNDS[${i}],'headline.fr',this.value)">${escapeHtml(bg.headline?.fr)}</textarea></div>
+          <div class="field"><label>Résumé (EN)</label><textarea oninput="setNested(BATTLEGROUNDS[${i}],'headline.en',this.value)">${escapeHtml(bg.headline?.en)}</textarea></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>Objectif (FR)</label><textarea oninput="setNested(BATTLEGROUNDS[${i}],'objectives.fr',this.value)">${escapeHtml(bg.objectives?.fr)}</textarea></div>
+          <div class="field"><label>Objectif (EN)</label><textarea oninput="setNested(BATTLEGROUNDS[${i}],'objectives.en',this.value)">${escapeHtml(bg.objectives?.en)}</textarea></div>
+        </div>
+
+        <h3 style="margin-top:16px;">Conseils</h3>
+        ${tipsHtml || '<p style="color:var(--text-dim);font-size:13px;">Aucun conseil.</p>'}
+        <button class="list-add-btn" onclick="BATTLEGROUNDS[${i}].tips.push({fr:'',en:''}); markDirty(); showBattlegroundsPanel();">+ Ajouter un conseil</button>
+
+        <h3 style="margin-top:16px;">Camps de mercenaires</h3>
+        ${campsHtml || '<p style="color:var(--text-dim);font-size:13px;">Aucun camp.</p>'}
+        <button class="list-add-btn" onclick="BATTLEGROUNDS[${i}].mercenaryCamps.push({name:{fr:'',en:''},description:{fr:'',en:''}}); markDirty(); showBattlegroundsPanel();">+ Ajouter un camp</button>
+
+        <h3 style="margin-top:16px;">Vidéos guide</h3>
+        ${videosHtml || '<p style="color:var(--text-dim);font-size:13px;">Aucune vidéo.</p>'}
+        <button class="list-add-btn" onclick="BATTLEGROUNDS[${i}].guideVideos.push({title:{fr:'',en:''},youtubeId:''}); markDirty(); showBattlegroundsPanel();">+ Ajouter une vidéo</button>
+
+        <button class="danger" style="margin-top:16px;" onclick="deleteBattleground(${i})">🗑 Supprimer cette carte</button>
+      </div>
+    </details>
+  `;
+}
+
+function addBattleground(){
+  const id = prompt("Identifiant technique de la carte (ex: 'jardins-de-terreur', sans espace) :");
+  if (!id) return;
+  if (BATTLEGROUNDS.some(b => b.id === id)){ toast('Cet identifiant existe déjà', 'error'); return; }
+  BATTLEGROUNDS.push({
+    id, enabled: false,
+    name: { fr: id, en: id },
+    image: '',
+    headline: { fr:'', en:'' },
+    objectives: { fr:'', en:'' },
+    tips: [],
+    mercenaryCamps: [],
+    guideVideos: [],
+  });
+  markDirty();
+  showBattlegroundsPanel();
+}
+
+function deleteBattleground(i){
+  if (!confirm(`Supprimer définitivement "${BATTLEGROUNDS[i].name?.fr || BATTLEGROUNDS[i].id}" ?`)) return;
+  BATTLEGROUNDS.splice(i,1);
+  markDirty();
+  showBattlegroundsPanel();
 }
 
 /* =========================================================================
