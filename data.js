@@ -5636,8 +5636,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_lash.png",
         "description": {
-          "fr": "Frappe en ligne, déclenche un second coup si un héros est touché.",
-          "en": "Strikes in a line, strikes again if a hero is hit."
+          "fr": "Frappe en ligne, déclenche un second coup si un héros est touché. Quête : Chaque fois que Flagellation touche, augmente les points de vie et mana.",
+          "en": "Strikes in a line, strikes again if a hero is hit. Quest: Each time Searing Lash hits, it increases health and mana."
         },
         "demoYoutubeId": ""
       },
@@ -6088,7 +6088,9 @@ const HEROES = [
           {
             "level": 16,
             "primaryId": "tmrryr6jofk3td",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmrryr6jojw3or"
+            ]
           },
           {
             "level": 20,
@@ -6405,15 +6407,15 @@ const HEROES = [
         "id": "tmrryr6jojw3or",
         "level": 16,
         "name": {
-          "fr": "En construction.",
-          "en": "Under construction."
+          "fr": "Au-delà du max.",
+          "en": "Up To Eleven"
         },
-        "icon": "",
+        "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_ampitup_a.png",
         "description": {
-          "fr": "En construction.",
-          "en": "Under construction."
+          "fr": "Toucher des héros adverses avec Onde sonore et Saute-Muraille augmente la durée de Volume max. Passif : Augmente passivement la durée de Volume max.",
+          "en": "Hitting enemy heroes with Soundwave and Push Off increases the duration of Amp It Up. Passive: Passively increases the duration of Amp It Up."
         },
-        "demoYoutubeId": "ysz5S6PUM-U"
+        "demoYoutubeId": ""
       },
       {
         "id": "tmrryr6jokvrk1",
