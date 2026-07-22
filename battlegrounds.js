@@ -74,10 +74,9 @@ function renderBgHeader() {
     bgEls.siteTitle.textContent = bgLoc(STREAMER_CONFIG.siteTitle);
   }
   bgEls.socials.innerHTML = STREAMER_CONFIG.socials.map(s=>`<a class="social-link" data-network="${s.icon}" href="${s.url}" target="_blank" rel="noreferrer">${BG_ICONS[s.icon]||''}<span>${s.label}</span></a>`).join('');
-  const internalLinks = `
-    <a class="header-nav-link" href="index.html">${bgEsc(bgT('navHeroes'))}</a>
-    <a class="header-nav-link active" href="battlegrounds.html">${bgEsc(bgT('navMaps'))}</a>
-  `;
+  let internalLinks = '';
+  if (STREAMER_CONFIG.navHeroesEnabled !== false) internalLinks += `<a class="header-nav-link" href="index.html">${bgEsc(bgT('navHeroes'))}</a>`;
+  if (STREAMER_CONFIG.navMapsEnabled !== false) internalLinks += `<a class="header-nav-link active" href="battlegrounds.html">${bgEsc(bgT('navMaps'))}</a>`;
   const configLinks = (STREAMER_CONFIG.navLinks || []).filter(l => l.enabled !== false).map(l => `<a class="header-nav-link" href="${bgEsc(l.url || '#')}"${l.newTab ? ' target="_blank" rel="noreferrer"' : ''}>${bgEsc(bgLoc(l.label))}</a>`).join('');
   bgEls.headerNav.innerHTML = internalLinks + configLinks;
 }

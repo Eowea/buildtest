@@ -4,6 +4,8 @@ const APP_CONFIG = {
 
 const STREAMER_CONFIG = {
   "logoImage": "",
+  "navHeroesEnabled": true,
+  "navMapsEnabled": true,
   "siteTitle": {
     "fr": "EOWEA BUILDS",
     "en": "EOWEA BUILDS"

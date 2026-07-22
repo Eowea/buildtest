@@ -217,7 +217,9 @@ function markEverythingAsSeen(hero) {
         els.siteTitle.textContent = loc(STREAMER_CONFIG.siteTitle);
       }
       els.socials.innerHTML = STREAMER_CONFIG.socials.map(s=>`<a class="social-link" data-network="${s.icon}" href="${s.url}" target="_blank" rel="noreferrer">${ICONS[s.icon]||''}<span>${s.label}</span></a>`).join('');
-      const internalLinks = `<a class="header-nav-link active" href="index.html">${t('navHeroes')}</a><a class="header-nav-link" href="battlegrounds.html">${t('navMaps')}</a>`;
+      let internalLinks = '';
+      if (STREAMER_CONFIG.navHeroesEnabled !== false) internalLinks += `<a class="header-nav-link active" href="index.html">${t('navHeroes')}</a>`;
+      if (STREAMER_CONFIG.navMapsEnabled !== false) internalLinks += `<a class="header-nav-link" href="battlegrounds.html">${t('navMaps')}</a>`;
       const configLinks = (STREAMER_CONFIG.navLinks || []).filter(l => l.enabled !== false).map(l => `<a class="header-nav-link" href="${escapeHtml(l.url || '#')}"${l.newTab ? ' target="_blank" rel="noreferrer"' : ''}>${escapeHtml(loc(l.label))}</a>`).join('');
       els.headerNav.innerHTML = internalLinks + configLinks;
     }

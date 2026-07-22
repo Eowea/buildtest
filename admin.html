@@ -1984,6 +1984,14 @@ function showConfigPanel(){
     <div class="card">
       <h3>Liens de navigation (header)</h3>
       <small class="help" style="margin-top:-4px;margin-bottom:10px;">Catégories affichées sous le logo dans le header du site, pour rediriger vers d'autres pages.</small>
+      <div class="checkbox-row">
+        <input type="checkbox" ${STREAMER_CONFIG.navHeroesEnabled !== false ? 'checked' : ''} onchange="setNested(STREAMER_CONFIG,'navHeroesEnabled',this.checked)" />
+        <label style="margin:0;text-transform:none;">Afficher la catégorie "Héros"</label>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" ${STREAMER_CONFIG.navMapsEnabled !== false ? 'checked' : ''} onchange="setNested(STREAMER_CONFIG,'navMapsEnabled',this.checked)" />
+        <label style="margin:0;text-transform:none;">Afficher la catégorie "Cartes"</label>
+      </div>
       ${navLinksHtml}
       <button onclick="STREAMER_CONFIG.navLinks.push({enabled:true,label:{fr:'',en:''},url:'',newTab:false}); markDirty(); showConfigPanel();">+ Ajouter un lien</button>
     </div>
