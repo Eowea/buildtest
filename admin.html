@@ -907,23 +907,71 @@ function buildAutoCommitMessage(){
   return msg;
 }
 
+// Modale de confirmation avant l'envoi sur GitHub : affiche clairement le dépôt cible et
+// permet d'ajuster le message de commit. Résout avec :
+//   { action: 'push', message }  → valider et envoyer
+//   { action: 'discard' }        → annuler les modifications (retour à la version GitHub)
+//   { action: 'keep' }           → fermer sans rien faire (continuer l'édition)
+function confirmPushModal(defaultMessage){
+  return new Promise(resolve => {
+    const modalRoot = document.getElementById('modalRoot');
+    const isProd = REPO_NAME !== 'buildtest';
+    modalRoot.innerHTML = `
+      <div class="modal-overlay" id="pushConfirmOverlay">
+        <div class="modal" style="max-width:560px;">
+          <div class="modal-head">
+            <h2 style="margin:0;">Confirmer l'enregistrement</h2>
+            <button class="ghost" id="pushConfirmClose">✕</button>
+          </div>
+          <div class="modal-body">
+            <p style="margin-bottom:14px;">Tes modifications vont être envoyées (commit + push) sur le dépôt :</p>
+            <p style="text-align:center;margin-bottom:14px;">
+              <strong style="font-size:18px;${isProd ? 'color:var(--red-dim, #e05f56);' : 'color:var(--green, #7fd18f);'}">${escapeHtml(REPO_OWNER + '/' + REPO_NAME)}</strong>
+              ${isProd ? '<br><small class="help" style="margin-top:4px;">⚠ Ce n\'est pas le dépôt de test : les visiteurs verront ces changements.</small>' : ''}
+            </p>
+            <div class="field">
+              <label>Message de commit</label>
+              <textarea id="pushConfirmMessage" style="min-height:70px;">${escapeHtml(defaultMessage)}</textarea>
+            </div>
+            <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:14px;flex-wrap:wrap;">
+              <button class="danger" id="pushConfirmDiscard">🗑 Annuler mes modifications</button>
+              <button class="primary" id="pushConfirmOk">✔ Valider et envoyer</button>
+            </div>
+            <small class="help" style="margin-top:8px;">Fermer cette fenêtre (✕ ou clic à côté) ne touche à rien : tu reviens simplement à l'édition.</small>
+          </div>
+        </div>
+      </div>
+    `;
+    const close = (result) => { modalRoot.innerHTML = ''; resolve(result); };
+    document.getElementById('pushConfirmOk').onclick = () => close({ action: 'push', message: document.getElementById('pushConfirmMessage').value });
+    document.getElementById('pushConfirmDiscard').onclick = () => {
+      if (confirm('Abandonner toutes tes modifications non enregistrées et revenir à la dernière version sur GitHub ?')) close({ action: 'discard' });
+    };
+    document.getElementById('pushConfirmClose').onclick = () => close({ action: 'keep' });
+    document.getElementById('pushConfirmOverlay').onclick = (e) => { if (e.target === e.currentTarget) close({ action: 'keep' }); };
+  });
+}
+
 async function saveAll(){
   const btn = document.getElementById('saveBtn');
   btn.disabled = true;
   btn.textContent = 'Enregistrement...';
   try{
     const content = serializeDataFile();
-    const rawMessage = prompt('Message de commit :', buildAutoCommitMessage());
-    if (rawMessage === null){
-      // L'utilisateur a cliqué "Annuler" : on abandonne l'enregistrement ET on annule
-      // les modifications en cours, en rechargeant la dernière version enregistrée sur GitHub.
+    const choice = await confirmPushModal(buildAutoCommitMessage());
+    if (choice.action === 'keep'){
+      btn.disabled = false;
+      btn.textContent = '💾 Enregistrer sur GitHub';
+      return;
+    }
+    if (choice.action === 'discard'){
       btn.disabled = false;
       btn.textContent = '💾 Enregistrer sur GitHub';
       toast('Modifications annulées, retour à la dernière version enregistrée', 'error');
       await reloadFromGitHub();
       return;
     }
-    const message = rawMessage.trim() || buildAutoCommitMessage();
+    const message = choice.message.trim() || buildAutoCommitMessage();
     try{
       const newSha = await putFile('data.js', content, dataFileSha, message, currentUser);
       dataFileSha = newSha;
