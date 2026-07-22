@@ -892,11 +892,12 @@
     .camp-list { list-style: none; display: grid; gap: 12px; }
     .camp-item { display: flex; align-items: center; gap: 12px; }
     .camp-icon {
-      flex-shrink: 0; width: 44px; height: 44px;
-      background: var(--gold-bright); clip-path: var(--hex-clip);
-      padding: 2px; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; width: 72px; aspect-ratio: 128 / 56;
+      border: 1px solid var(--blue-border); border-radius: var(--radius-sm);
+      background: #0d131f; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
     }
-    .camp-icon img { width: 100%; height: 100%; object-fit: cover; clip-path: var(--hex-clip); background: #0d131f; display: block; }
+    .camp-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
     .camp-text { color: var(--text-dim); font-size: 14px; line-height: 1.6; }
     .camp-text strong { color: var(--text-bright); }
 
