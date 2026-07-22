@@ -927,7 +927,7 @@ function confirmPushModal(defaultMessage){
             <p style="margin-bottom:14px;">Tes modifications vont être envoyées (commit + push) sur le dépôt :</p>
             <p style="text-align:center;margin-bottom:14px;">
               <strong style="font-size:18px;${isProd ? 'color:var(--red-dim, #e05f56);' : 'color:var(--green, #7fd18f);'}">${escapeHtml(REPO_OWNER + '/' + REPO_NAME)}</strong>
-              ${isProd ? '<br><small class="help" style="margin-top:4px;">⚠ Ce n\'est pas le dépôt de test : les visiteurs verront ces changements.</small>' : ''}
+              ${isProd ? '<br><small style="margin-top:4px;color:#ff3b30;font-weight:800;">⚠ Ce n\'est pas le dépôt de test : les visiteurs verront ces changements.</small>' : ''}
             </p>
             <div class="field">
               <label>Message de commit</label>
@@ -937,7 +937,7 @@ function confirmPushModal(defaultMessage){
               <button class="danger" id="pushConfirmDiscard">🗑 Annuler mes modifications</button>
               <button class="primary" id="pushConfirmOk">✔ Valider et envoyer</button>
             </div>
-            <small class="help" style="margin-top:8px;">Fermer cette fenêtre (✕ ou clic à côté) ne touche à rien : tu reviens simplement à l'édition.</small>
+            <small style="display:block;margin-top:8px;color:#ff3b30;font-weight:800;">Fermer cette fenêtre (✕ ou clic à côté) ne touche à rien : tu reviens simplement à l'édition.</small>
           </div>
         </div>
       </div>
