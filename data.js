@@ -48,7 +48,7 @@ const STREAMER_CONFIG = {
       },
       "url": "index.html",
       "newTab": false,
-      "showOnBuilds": true,
+      "showOnBuilds": false,
       "showOnBattlegrounds": true
     },
     {
@@ -59,7 +59,7 @@ const STREAMER_CONFIG = {
       },
       "url": "battlegrounds.html",
       "newTab": false,
-      "showOnBuilds": true,
+      "showOnBuilds": false,
       "showOnBattlegrounds": true
     },
     {
@@ -107,31 +107,10 @@ const STREAMER_CONFIG = {
   "patchVideos": [
     {
       "title": {
-        "fr": "Un NOUVEAU GROS Patch HotS sur le PTR",
-        "en": "A NEW BIG HotS Patch on the PTR"
+        "fr": "NOUVEAU PATCH HotS : Skin Lúcio, Mine Hantée, Reworks, ...",
+        "en": " NEW HotS PATCH: Lúcio Skin, Haunted Mine, Reworks, ..."
       },
-      "youtubeId": "https://youtu.be/KBS90rC-w5k?si=E1vDh5K36u2zpveA"
-    },
-    {
-      "title": {
-        "fr": "Patch PTR Juin 2026 ",
-        "en": "June 2026 PTR Patch "
-      },
-      "youtubeId": "https://youtu.be/I3DyDDecWgM?si=0_y_wQHn99dNslst"
-    },
-    {
-      "title": {
-        "fr": "HotS PTR: Alexstrasza & Chromie",
-        "en": "HotS PTR: Alexstrasza & Chromie"
-      },
-      "youtubeId": "https://youtu.be/CDydbmVzTxo"
-    },
-    {
-      "title": {
-        "fr": "HotS PTR: Ragnaros & Abathur",
-        "en": "HotS PTR: Ragnaros & Abathur"
-      },
-      "youtubeId": "https://youtu.be/ZLLE7MErHRE"
+      "youtubeId": "https://youtu.be/m8kifCbSy-s"
     }
   ]
 };
