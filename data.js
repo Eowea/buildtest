@@ -4,8 +4,6 @@ const APP_CONFIG = {
 
 const STREAMER_CONFIG = {
   "logoImage": "",
-  "navHeroesEnabled": true,
-  "navMapsEnabled": true,
   "siteTitle": {
     "fr": "EOWEA BUILDS",
     "en": "EOWEA BUILDS"
@@ -45,11 +43,35 @@ const STREAMER_CONFIG = {
     {
       "enabled": true,
       "label": {
+        "fr": "Héros",
+        "en": "Heroes"
+      },
+      "url": "index.html",
+      "newTab": false,
+      "showOnBuilds": true,
+      "showOnBattlegrounds": true
+    },
+    {
+      "enabled": true,
+      "label": {
+        "fr": "Cartes",
+        "en": "Battlegrounds"
+      },
+      "url": "battlegrounds.html",
+      "newTab": false,
+      "showOnBuilds": true,
+      "showOnBattlegrounds": true
+    },
+    {
+      "enabled": true,
+      "label": {
         "fr": "Patchs",
         "en": "Patches"
       },
       "url": "https://nexus-patch-notes.github.io",
-      "newTab": true
+      "newTab": true,
+      "showOnBuilds": true,
+      "showOnBattlegrounds": true
     }
   ],
   "latestVideos": [

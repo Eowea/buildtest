@@ -8,8 +8,6 @@ const BG_DICT = {
   emptyList: { fr: "Aucune carte trouvée.", en: "No maps found." },
   bgTitle: { fr: "Cartes", en: "Battlegrounds" },
   bgNote: { fr: "Choisis une carte dans la liste, ou utilise la recherche ci-dessus.", en: "Choose a map from the list, or use the search above." },
-  navHeroes: { fr: "Héros", en: "Heroes" },
-  navMaps: { fr: "Cartes", en: "Battlegrounds" },
   objectives: { fr: "Objectif de la carte", en: "Map Objective" },
   tips: { fr: "Conseils", en: "Tips" },
   camps: { fr: "Camps de mercenaires", en: "Mercenary Camps" },
@@ -74,11 +72,12 @@ function renderBgHeader() {
     bgEls.siteTitle.textContent = bgLoc(STREAMER_CONFIG.siteTitle);
   }
   bgEls.socials.innerHTML = STREAMER_CONFIG.socials.map(s=>`<a class="social-link" data-network="${s.icon}" href="${s.url}" target="_blank" rel="noreferrer">${BG_ICONS[s.icon]||''}<span>${s.label}</span></a>`).join('');
-  let internalLinks = '';
-  if (STREAMER_CONFIG.navHeroesEnabled !== false) internalLinks += `<a class="header-nav-link" href="index.html">${bgEsc(bgT('navHeroes'))}</a>`;
-  if (STREAMER_CONFIG.navMapsEnabled !== false) internalLinks += `<a class="header-nav-link active" href="battlegrounds.html">${bgEsc(bgT('navMaps'))}</a>`;
-  const configLinks = (STREAMER_CONFIG.navLinks || []).filter(l => l.enabled !== false).map(l => `<a class="header-nav-link" href="${bgEsc(l.url || '#')}"${l.newTab ? ' target="_blank" rel="noreferrer"' : ''}>${bgEsc(bgLoc(l.label))}</a>`).join('');
-  bgEls.headerNav.innerHTML = internalLinks + configLinks;
+  bgEls.headerNav.innerHTML = (STREAMER_CONFIG.navLinks || [])
+    .filter(l => l.enabled !== false && l.showOnBattlegrounds !== false)
+    .map(l => {
+      const isActive = (l.url || '').replace(/^\.?\//, '') === 'battlegrounds.html';
+      return `<a class="header-nav-link${isActive ? ' active' : ''}" href="${bgEsc(l.url || '#')}"${l.newTab ? ' target="_blank" rel="noreferrer"' : ''}>${bgEsc(bgLoc(l.label))}</a>`;
+    }).join('');
 }
 
 function renderBgList() {
