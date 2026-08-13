@@ -2333,7 +2333,7 @@ const HEROES = [
   },
   {
     "id": "ana",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Ana",
       "en": "Ana"
@@ -26519,5 +26519,3 @@ const HEROES = [
     ]
   }
 ];
-
-const BATTLEGROUNDS = [];
