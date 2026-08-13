@@ -2287,16 +2287,44 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
+        "id": "tmw3k2alx01fg7",
+        "level": 1,
+        "name": {
+          "fr": "Vivre et laisser vivre",
+          "en": "Live and Let Live"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_gift_of_life.png",
+        "description": {
+          "fr": "Au-delà d'un certain seuil de vie, le temps de recharge de Don de vie s'écoule bien plus vite.",
+          "en": "While above a Health threshold, Gift of Life's cooldown recharges much faster."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6joeq0ja",
         "level": 1,
         "name": {
-          "fr": "Totem Colossal",
-          "en": "Colossal Totem"
+          "fr": "Cercle de vie",
+          "en": "Circle of Life"
         },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_earthbindtotem.png",
+        "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_abundance.png",
         "description": {
-          "fr": "Augmente les points de vie, le rayon et la durée du totem. Permet de le repositionner une nouvelle fois.",
-          "en": "Increases health, radius, and duration of the totem. Can be repositioned once."
+          "fr": "Quête : collecter des globes de régénération augmente les soins de Luxuriance, et fait finalement en sorte que son soin en zone produise un globe de régénération.",
+          "en": "Quest: collect Regeneration Globes to increase the healing of Abundance, and eventually make its healing burst create a Regeneration Globe."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw3k2alx02hj2",
+        "level": 1,
+        "name": {
+          "fr": "Fureur du dragon",
+          "en": "Flames of Fury"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_flame_buffet.png",
+        "description": {
+          "fr": "Réduit le coût en mana de Rafale de flammes. Quête : toucher des héros embrasés avec Rafale de flammes réduit le temps de recharge de Reine-dragon.",
+          "en": "Reduces Flame Buffet's Mana cost. Quest: hitting Burning Heroes with Flame Buffet reduces Dragonqueen's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -2304,13 +2332,55 @@ const HEROES = [
         "id": "tmrryr6jou3tky",
         "level": 4,
         "name": {
-          "fr": "Viveterre",
-          "en": "Earthliving Enchant"
+          "fr": "Afflux de vitalité",
+          "en": "Surge of Vitality"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg",
+        "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_abundance.png",
         "description": {
-          "fr": "Renforce Salve de guerison pour les héros dont les points de vie sont bas.",
-          "en": "Empowers Chain Heal for heroes at low health."
+          "fr": "Le soin en zone de Luxuriance procure de la vitesse de déplacement aux héros alliés pendant quelques secondes.",
+          "en": "Abundance's healing burst grants Movement Speed to allied Heroes for a few seconds."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw3k2alx03kl9",
+        "level": 4,
+        "name": {
+          "fr": "Hyperthermie",
+          "en": "Heat Exhaustion"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_flame_buffet.png",
+        "description": {
+          "fr": "Augmente le ralentissement de Rafale de flammes et l'empêche de diminuer avec le temps.",
+          "en": "Increases Flame Buffet's Slow and prevents it from decaying."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw3k2alx04mn4",
+        "level": 4,
+        "name": {
+          "fr": "Volubilité",
+          "en": "Exuberance"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/talents/storm_ui_icon_alexstrasza_exuberance.png",
+        "description": {
+          "fr": "Au-delà d'un certain seuil de vie, gagne un bonus de vitesse de déplacement.",
+          "en": "While above a Health threshold, gain bonus Movement Speed."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw3k2alx05pq1",
+        "level": 7,
+        "name": {
+          "fr": "Floraison vitale",
+          "en": "Lifeblossom"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/talents/storm_ui_icon_alexstrasza_life_blossom.png",
+        "description": {
+          "fr": "Au-delà d'un certain seuil de vie, Don de vie crée une floraison ramassable qui rend le prochain Don de vie gratuit. Passif : réduit le coût en vie de Don de vie.",
+          "en": "While above a Health threshold, Gift of Life creates a collectible blossom that makes her next Gift of Life free. Passive: reduces Gift of Life's Health cost."
         },
         "demoYoutubeId": null
       },
@@ -2318,13 +2388,27 @@ const HEROES = [
         "id": "tmrryr6jokn8xj",
         "level": 7,
         "name": {
-          "fr": "Totem lié à la terre",
-          "en": "Grounded Totem"
+          "fr": "Verdissement",
+          "en": "Verdant Flourish"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg",
+        "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_abundance.png",
         "description": {
-          "fr": "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.",
-          "en": "Reduces attack and spell power of enemies in range."
+          "fr": "Alexstrasza reçoit davantage de soins de la part de Luxuriance et des globes de régénération.",
+          "en": "Alexstrasza receives more healing from Abundance and from Regeneration Globes."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw3k2alx06rs8",
+        "level": 7,
+        "name": {
+          "fr": "Feu nourricier",
+          "en": "Fire Within"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_flame_buffet.png",
+        "description": {
+          "fr": "Toucher un héros embrasé avec Rafale de flammes soigne Alexstrasza d'une partie de son maximum de points de vie.",
+          "en": "Hitting a Burning Hero with Flame Buffet heals Alexstrasza for a portion of her maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -2332,13 +2416,55 @@ const HEROES = [
         "id": "tmrryr6joiests",
         "level": 10,
         "name": {
-          "fr": "Guérison ancestrale",
-          "en": "Ancestral Healing"
+          "fr": "Lieuse-de-Vie",
+          "en": "Life-Binder"
         },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_ancestralhealing.png",
+        "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_life_binder.png",
         "description": {
-          "fr": "Gros soin monocible, utilisable sur soi.",
-          "en": "Massive single-target heal, usable on self."
+          "fr": "Relie la force vitale d'Alexstrasza à celle d'un héros allié, soigne les deux, puis aligne leurs pourcentages de vie. Reine-dragon augmente sa portée de lancement.",
+          "en": "Binds Alexstrasza's life force with an allied Hero, healing both, then equalizes their Health percentages. Dragonqueen increases its cast range."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw3k2alx07tu3",
+        "level": 10,
+        "name": {
+          "fr": "Flammes rédemptrices",
+          "en": "Cleansing Flame"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_cleansing_flame.png",
+        "description": {
+          "fr": "S'envole et largue une série de boules de feu sur la zone ciblée, blessant les ennemis et soignant les alliés, avant d'atterrir.",
+          "en": "Takes to the skies and drops a series of fireballs at the targeted location, damaging enemies and healing allied Heroes, before landing."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw3k2alx08vw0",
+        "level": 13,
+        "name": {
+          "fr": "Peau de dragon",
+          "en": "Dragon Scales"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/talents/storm_ui_icon_alexstrasza_dragon_scales.png",
+        "description": {
+          "fr": "Gagne un bonus d'armure pendant les étourdissements, immobilisations ou silences, et brièvement après. Ne peut se déclencher qu'une fois toutes les quelques secondes.",
+          "en": "Gain bonus Armor while Stunned, Rooted, or Silenced, and briefly after. Limited to one trigger every several seconds."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw3k2alx09xy5",
+        "level": 13,
+        "name": {
+          "fr": "Pacification",
+          "en": "Pacify"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/talents/storm_ui_icon_alexstrasza_pacify.png",
+        "description": {
+          "fr": "Nouvelle capacité active : ralentit un héros adverse et réduit ses dégâts pendant quelques secondes. Soigner un allié sous contrôle des foules réduit le temps de recharge de cette capacité.",
+          "en": "New active ability: Slow an enemy Hero and reduce their damage for a few seconds. Healing a crowd-controlled ally reduces this ability's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -2346,13 +2472,27 @@ const HEROES = [
         "id": "tmrryr6jol2wqz",
         "level": 13,
         "name": {
-          "fr": "Raz-de-marée",
-          "en": "Tidal Waves"
+          "fr": "Éruption de vie",
+          "en": "Life Unbound"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg",
+        "icon": "assets/heroes/base_spells/alexstrasza/images/talents/storm_ui_icon_alexstrasza_life_unbound.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Salve de guérison et son coût en mana.",
-          "en": "Reduces Chain Heal cooldown and mana cost."
+          "fr": "Nouvelle capacité active : soigne un héros allié et blesse les ennemis proches. Soigner un allié sous contrôle des foules réduit son temps de recharge. Ne peut pas être utilisée sur Alexstrasza.",
+          "en": "New active ability: heal an allied Hero and damage nearby enemies. Healing a crowd-controlled ally reduces its cooldown. Cannot be used on Alexstrasza."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw3k2alx10za2",
+        "level": 16,
+        "name": {
+          "fr": "Force d'amour",
+          "en": "Tough Love"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_gift_of_life.png",
+        "description": {
+          "fr": "Don de vie confère à sa cible un bonus d'armure pendant quelques secondes, encore augmenté si Alexstrasza est au-delà d'un certain seuil de vie.",
+          "en": "Gift of Life grants its target bonus Armor for a few seconds, increased further while Alexstrasza is above a Health threshold."
         },
         "demoYoutubeId": null
       },
@@ -2360,13 +2500,71 @@ const HEROES = [
         "id": "tmrryr6joxdbs0",
         "level": 16,
         "name": {
-          "fr": "Totem d’emprise de la terre",
-          "en": "Earthgrasp Totem"
+          "fr": "Surprotection",
+          "en": "Overprotective"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg",
+        "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_abundance.png",
         "description": {
-          "fr": "Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.",
-          "en": "When first spawned, the totem deals AoE damage and heavily slows."
+          "fr": "Les héros soignés par Luxuriance gagnent un bouclier proportionnel au montant soigné.",
+          "en": "Heroes healed by Abundance gain a Shield based on the amount healed."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw3k2alx11bc7",
+        "level": 16,
+        "form": "dragon",
+        "name": {
+          "fr": "Maîtrise draconienne",
+          "en": "Draconic Discipline"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_dragon_queen.png",
+        "description": {
+          "fr": "Augmente la durée de Reine-dragon et les soins procurés par ses attaques de base empuissantées.",
+          "en": "Increases Dragonqueen's duration and the healing from her empowered Basic Attacks."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw3k2alx12de4",
+        "level": 20,
+        "name": {
+          "fr": "Rituel de vie",
+          "en": "Ritual of Life"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_life_binder.png",
+        "description": {
+          "fr": "Lieuse-de-Vie s'active plusieurs fois sur quelques secondes.",
+          "en": "Life-Binder activates multiple times over a few seconds."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw3k2alx13fh1",
+        "level": 20,
+        "name": {
+          "fr": "Vive la reine",
+          "en": "On Ruby Wings"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_cleansing_flame.png",
+        "description": {
+          "fr": "Soigner ou blesser suffisamment de héros avec Flammes rédemptrices active Reine-dragon à l'atterrissage.",
+          "en": "Healing or damaging enough Heroes with Cleansing Flame activates Dragonqueen upon landing."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw3k2alx14gi6",
+        "level": 20,
+        "form": "dragon",
+        "name": {
+          "fr": "Flamme ancestrale",
+          "en": "Ancient Flame"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/talents/storm_ui_icon_alexstrasza_dragon_queen_a.png",
+        "description": {
+          "fr": "Tant que Reine-dragon est active, les attaques de base d'Alexstrasza appliquent Rafale de flammes.",
+          "en": "While Dragonqueen is active, Alexstrasza's Basic Attacks apply Flame Buffet."
         },
         "demoYoutubeId": null
       },
@@ -2374,13 +2572,13 @@ const HEROES = [
         "id": "tmrryr6jo8uzwx",
         "level": 20,
         "name": {
-          "fr": "Bénédiction du long-voyant",
-          "en": "Farseer's Blessing"
+          "fr": "Bénédiction du Vol rouge",
+          "en": "Blessing of the Red"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_ancestralhealing.jpg",
+        "icon": "assets/heroes/base_spells/alexstrasza/images/talents/storm_ui_icon_alexstrasza_blessing_of_the_red.png",
         "description": {
-          "fr": "Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.",
-          "en": "A second Ancestral Healing triggers and heals in an AoE."
+          "fr": "Nouvelle capacité active : confère à un héros allié un bonus de points de vie maximum jusqu'à sa mort. Ne peut pas être utilisée sur Alexstrasza ni sur un héros qui en bénéficie déjà.",
+          "en": "New active ability: grant an allied Hero bonus maximum Health until they die. Cannot be used on Alexstrasza or a Hero who already has it."
         },
         "demoYoutubeId": null
       }
