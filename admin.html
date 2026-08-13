@@ -310,6 +310,7 @@
     </div>
     <div class="topbar-right">
       <select id="topbarRepoSelect" onchange="switchRepoFromTopbar()" style="width:auto;"></select>
+      <a id="siteViewLink" href="#" target="_blank" rel="noreferrer" class="ghost" style="display:inline-flex;align-items:center;text-decoration:none;">🔗 Voir le site</a>
       <button onclick="reloadFromGitHub()">↻ Recharger</button>
       <button onclick="editTokenPrompt()">🔑 Modifier le token</button>
       <button class="primary" id="saveBtn" onclick="saveAll()">💾 Enregistrer sur GitHub</button>
@@ -346,8 +347,8 @@
    CONFIGURATION DU DEPOT
    ========================================================================= */
 const REPO_OPTIONS = [
-  { owner:'Eowea', name:'buildtest', label:'Eowea/buildtest (test)' },
-  { owner:'Eowea', name:'builds',    label:'Eowea/builds (production)' },
+  { owner:'Eowea', name:'buildtest', label:'Eowea/buildtest (test)', siteUrl:'https://eowea.github.io/buildtest/' },
+  { owner:'Eowea', name:'builds',    label:'Eowea/builds (production)', siteUrl:'https://eowea.github.io/builds/' },
 ];
 let REPO_OWNER = localStorage.getItem('eowea_admin_repo_owner') || 'Eowea';
 let REPO_NAME  = localStorage.getItem('eowea_admin_repo_name') || 'buildtest';
@@ -614,12 +615,24 @@ async function handleTokenSubmit(){
   }
 }
 
+function getSiteUrlForCurrentRepo(){
+  const known = REPO_OPTIONS.find(o => o.owner === REPO_OWNER && o.name === REPO_NAME);
+  if (known && known.siteUrl) return known.siteUrl;
+  return `https://${REPO_OWNER.toLowerCase()}.github.io/${REPO_NAME}/`;
+}
+
+function updateSiteViewLink(){
+  const link = document.getElementById('siteViewLink');
+  if (link) link.href = getSiteUrlForCurrentRepo();
+}
+
 function populateTopbarRepoSelect(){
   const sel = document.getElementById('topbarRepoSelect');
   if (currentUserRole === 'editor'){
     sel.innerHTML = `<option value="Eowea/buildtest">Eowea/buildtest (test)</option>`;
     sel.value = 'Eowea/buildtest';
     sel.disabled = true;
+    updateSiteViewLink();
     return;
   }
   sel.disabled = false;
@@ -629,6 +642,7 @@ function populateTopbarRepoSelect(){
   options += '<option value="__custom__">Autre...</option>';
   sel.innerHTML = options;
   sel.value = `${REPO_OWNER}/${REPO_NAME}`;
+  updateSiteViewLink();
 }
 
 async function switchRepoFromTopbar(){
