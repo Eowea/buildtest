@@ -100,7 +100,7 @@ const HEROES = [
       "en": "Kael'thas"
     },
     "role": "AssassinDistance",
-    "isNew": true,
+    "isNew": false,
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_kaelthas.png",
     "headline": {
       "fr": "Dégâts de zone massifs, punition des regroupements et contrôle puissant.",
@@ -2870,7 +2870,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "isNew": true
   },
   {
     "id": "auriel",
@@ -6368,7 +6369,7 @@ const HEROES = [
         "youtubeId": "https://www.youtube.com/watch?v=BBs6DDOFGS8"
       }
     ],
-    "isNew": true,
+    "isNew": false,
     "talentPool": [
       {
         "id": "tmrryr6jofzn8j",
