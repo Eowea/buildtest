@@ -2441,7 +2441,7 @@ const HEROES = [
         ]
       },
       {
-        "enabled": true,
+        "enabled": false,
         "order": 2,
         "label": {
           "fr": "E Build",
