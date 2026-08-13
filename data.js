@@ -2569,8 +2569,36 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_biotic_grenade.png",
         "description": {
-          "fr": "Selon le nombre de héros alliés et ennemis touchés, les soins et les dégâts sont augmentés.",
-          "en": "Healing and damage are increased based on the number of allied and enemy heroes hit."
+          "fr": "Grenade biotique inflige plus de dégâts et procure plus de soins selon le nombre de héros touchés.",
+          "en": "Biotic Grenade deals more damage and provides more healing for each Hero it hits."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmsrq1hscdy86x",
+        "level": 1,
+        "name": {
+          "fr": "Cartouches léthargiques",
+          "en": "Slumber Shells"
+        },
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_sleep_dart.png",
+        "description": {
+          "fr": "Réduit le temps de recharge de Fléchette hypodermique et ralentit brièvement les ennemis à leur réveil.",
+          "en": "Reduces Sleep Dart's cooldown and Slows enemies briefly when they wake up."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmsrq338v8420j",
+        "level": 1,
+        "name": {
+          "fr": "Cartouches vampiriques",
+          "en": "Vampiric Rounds"
+        },
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_aim_down_sights.png",
+        "description": {
+          "fr": "Augmente les soins de Pie-grièche. Quêtes répétables : cumuler des Doses sur des héros et les frapper en attaque de base au maximum de Doses augmentent encore les soins de Pie-grièche.",
+          "en": "Increases Shrike's healing. Repeatable quests: stacking Doses on Heroes and basic-attacking fully-stacked Heroes further increase Shrike's healing."
         },
         "demoYoutubeId": null
       },
@@ -2583,8 +2611,36 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_biotic_grenade.png",
         "description": {
-          "fr": "Augmente la durée du bonus de soin et réduit le temps de recharge de Grenade biotique. ",
-          "en": "Increases the duration of the healing bonus and reduces the cooldown of Biotic Grenade."
+          "fr": "Augmente la durée du bonus de soin de Grenade biotique et réduit son temps de recharge.",
+          "en": "Increases Biotic Grenade's bonus healing duration and reduces its cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmt9k2ana01xy7",
+        "level": 4,
+        "name": {
+          "fr": "Surdose",
+          "en": "Overdose"
+        },
+        "icon": "assets/heroes/base_spells/ana/images/talents/storm_ui_icon_ana_overdose.png",
+        "description": {
+          "fr": "Fléchette hypodermique applique des doses supplémentaires à sa cible, et transperce tous les héros ennemis pendant l'utilisation d'Œil d'Horus.",
+          "en": "Sleep Dart applies extra Doses to its target, and pierces all enemy Heroes while Eye of Horus is active."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmt9k2ana02qz3",
+        "level": 4,
+        "name": {
+          "fr": "Fléchette débilitante",
+          "en": "Debilitating Dart"
+        },
+        "icon": "assets/heroes/base_spells/ana/images/talents/storm_ui_icon_ana_debilitatingdart.png",
+        "description": {
+          "fr": "Nouvelle capacité active : tire une fléchette qui ralentit et affaiblit le premier héros ennemi touché pendant quelques secondes. Ne toucher aucun héros réduit son temps de recharge.",
+          "en": "New active ability: fire a dart that Slows and weakens the first enemy Hero hit for a few seconds. Missing all Heroes reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -2592,13 +2648,41 @@ const HEROES = [
         "id": "tmrryr6jo5tq30",
         "level": 7,
         "name": {
-          "fr": "Totem lié à la terre",
-          "en": "Grounded Totem"
+          "fr": "Anti-soignant",
+          "en": "Anti-Healer"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg",
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_biotic_grenade.png",
         "description": {
-          "fr": "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.",
-          "en": "Reduces attack and spell power of enemies in range."
+          "fr": "Augmente la zone d'effet de Grenade biotique ainsi que la durée de sa réduction de soins.",
+          "en": "Increases Biotic Grenade's area of effect and the duration of its healing reduction."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmt9k2ana03mv8",
+        "level": 7,
+        "name": {
+          "fr": "Terreurs nocturnes",
+          "en": "Night Terrors"
+        },
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_sleep_dart.png",
+        "description": {
+          "fr": "Procure de la vitesse de déplacement pour chaque héros touché par Fléchette hypodermique, et inflige des dégâts aux ennemis à leur réveil.",
+          "en": "Grants Movement Speed for each Hero hit by Sleep Dart, and deals damage to enemies when they wake up."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmt9k2ana04pl2",
+        "level": 7,
+        "name": {
+          "fr": "Agent neutralisant",
+          "en": "Mind-Numbing Agent"
+        },
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_aim_down_sights.png",
+        "description": {
+          "fr": "Les Doses présentes sur un héros réduisent sa puissance de capacité.",
+          "en": "Doses on a Hero reduce their Spell Power."
         },
         "demoYoutubeId": null
       },
@@ -2606,13 +2690,27 @@ const HEROES = [
         "id": "tmrryr6jo6yhcn",
         "level": 10,
         "name": {
-          "fr": "Guérison ancestrale",
-          "en": "Ancestral Healing"
+          "fr": "Nanoboost",
+          "en": "Nano Boost"
         },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_ancestralhealing.png",
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_nano_bost.png",
         "description": {
-          "fr": "Gros soin monocible, utilisable sur soi.",
-          "en": "Massive single-target heal, usable on self."
+          "fr": "Restaure du mana à un allié et lui procure un bonus de puissance de capacité avec une recharge accélérée de ses capacités de base pendant quelques secondes. Ne peut pas cibler Ana.",
+          "en": "Restores Mana to an allied Hero and grants them bonus Spell Power with faster Basic Ability cooldowns for a few seconds. Cannot target Ana."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmt9k2ana05rk9",
+        "level": 10,
+        "name": {
+          "fr": "Œil d'Horus",
+          "en": "Eye of Horus"
+        },
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_overwatch.png",
+        "description": {
+          "fr": "Adopte une position de tir fixe pour tirer plusieurs balles à portée illimitée qui soignent les alliés et blessent les ennemis, avec des dégâts réduits contre les bâtiments. Ana ne peut pas se déplacer tant que la capacité est active.",
+          "en": "Assume a stationary sniping stance to fire several rounds with unlimited range that heal allies and damage enemies, dealing reduced damage to Structures. Ana cannot move while active."
         },
         "demoYoutubeId": null
       },
@@ -2620,13 +2718,41 @@ const HEROES = [
         "id": "tmrryr6jon5jc2",
         "level": 13,
         "name": {
-          "fr": "Raz-de-marée",
-          "en": "Tidal Waves"
+          "fr": "Sérum de vitesse",
+          "en": "Speed Serum"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg",
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_healing_dart.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Salve de guérison et son coût en mana.",
-          "en": "Reduces Chain Heal cooldown and mana cost."
+          "fr": "Fléchette de soins procure de la vitesse de déplacement aux héros soignés.",
+          "en": "Healing Dart grants Movement Speed to the Heroes it heals."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmt9k2ana06wj4",
+        "level": 13,
+        "name": {
+          "fr": "Fléchettes purificatrices",
+          "en": "Purifying Darts"
+        },
+        "icon": "assets/heroes/base_spells/ana/images/talents/storm_ui_icon_ana_healing_dart_a.png",
+        "description": {
+          "fr": "Fléchette de soins retire les racines et les ralentissements de sa cible, et procure un soin supplémentaire dans ce cas.",
+          "en": "Healing Dart cleanses Roots and Slows from its target and provides extra healing when doing so."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmt9k2ana07nh1",
+        "level": 13,
+        "name": {
+          "fr": "Sels de réveil",
+          "en": "Smelling Salts"
+        },
+        "icon": "assets/heroes/base_spells/ana/images/talents/storm_ui_icon_ana_healing_dart_b.png",
+        "description": {
+          "fr": "Fléchette de soins retire les étourdissements de sa cible et lui procure de l'armure temporaire dans ce cas.",
+          "en": "Healing Dart cleanses Stuns from its target and grants them temporary Armor when doing so."
         },
         "demoYoutubeId": null
       },
@@ -2634,13 +2760,41 @@ const HEROES = [
         "id": "tmrryr6joljrqh",
         "level": 16,
         "name": {
-          "fr": "Totem d’emprise de la terre",
-          "en": "Earthgrasp Totem"
+          "fr": "Tireur d'élite",
+          "en": "Sharpshooter"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg",
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_healing_dart.png",
         "description": {
-          "fr": "Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.",
-          "en": "When first spawned, the totem deals AoE damage and heavily slows."
+          "fr": "Le soin de Fléchette de soins augmente à chaque héros touché, jusqu'à un maximum, avec un bonus supplémentaire une fois ce plafond atteint. Le bonus est réinitialisé en cas d'échec.",
+          "en": "Healing Dart's healing increases each time it hits a Hero, up to a cap, with a further bonus at maximum stacks. The bonus resets if it misses."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmt9k2ana08cf6",
+        "level": 16,
+        "name": {
+          "fr": "Doses concentrées",
+          "en": "Concentrated Doses"
+        },
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_healing_dart.png",
+        "description": {
+          "fr": "Fléchette de soins soigne davantage selon le nombre de Doses actives sur l'équipe ennemie.",
+          "en": "Healing Dart heals for more based on the number of Doses active on the enemy team."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmt9k2ana09bd5",
+        "level": 16,
+        "name": {
+          "fr": "Rechargement actif",
+          "en": "Active Reload"
+        },
+        "icon": "assets/heroes/base_spells/ana/images/talents/storm_ui_icon_ana_detachableboxmagazine.png",
+        "description": {
+          "fr": "Nouvelle capacité active : recharge instantanément les charges de Fléchette de soins.",
+          "en": "New active ability: instantly refill Healing Dart's charges."
         },
         "demoYoutubeId": null
       },
@@ -2648,41 +2802,55 @@ const HEROES = [
         "id": "tmrryr6jozz7tm",
         "level": 20,
         "name": {
-          "fr": "Bénédiction du long-voyant",
-          "en": "Farseer's Blessing"
+          "fr": "Perfusion nano",
+          "en": "Nano Infusion"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_ancestralhealing.jpg",
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_nano_bost.png",
         "description": {
-          "fr": "Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.",
-          "en": "A second Ancestral Healing triggers and heals in an AoE."
+          "fr": "Les alliés boostés par Nanoboost soignent également selon les dégâts de sort qu'ils infligent.",
+          "en": "Allies boosted by Nano Boost also heal based on the Spell Damage they deal."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmsrq1hscdy86x",
-        "level": 1,
+        "id": "tmt9k2ana10tg3",
+        "level": 20,
         "name": {
-          "fr": "Cartouches léthargiques",
-          "en": "Slumber Shells"
+          "fr": "Œil de la mort",
+          "en": "Deadeye"
         },
-        "icon": "",
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_overwatch.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Flèche hypodermique et réduit la vitesse de déplacement au réveil.",
-          "en": "Reduces the cooldown time of Hypodermic Arrow and reduces movement speed upon waking."
+          "fr": "Œil d'Horus regagne des charges plus rapidement mais par plus petites quantités, et ses tirs infligent plus de dégâts et de soins pour chaque héros touché, avec une réinitialisation peu après avoir quitté la capacité.",
+          "en": "Eye of Horus regains charges faster but in smaller increments, and its rounds deal more damage and healing for each Hero hit, resetting shortly after leaving the stance."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmsrq338v8420j",
-        "level": 1,
+        "id": "tmt9k2ana11se8",
+        "level": 20,
         "name": {
-          "fr": "Cartouches vampiriques",
-          "en": " Vampiric Rounds"
+          "fr": "Position blindée",
+          "en": "Armored Stance"
         },
-        "icon": "",
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_overwatch.png",
         "description": {
-          "fr": "Augmente les soins procurés par Nuhas. Quête répétable : Cumuler les doses augmentent les soins de Nuhas. Quête répétable : Mettre une attaque de base sur un héros avec le maximum de doses augmente les soins de Nuhas.",
-          "en": "Increases the healing provided by Shrike. Repeatable quest: Accumulating doses increases Shrike' healing. Repeatable quest: Landing a basic attack on a hero with the maximum number of doses increases Shrike' healing."
+          "fr": "Augmente les dégâts de Pie-grièche, et procure de l'armure supplémentaire pendant l'utilisation d'Œil d'Horus.",
+          "en": "Increases Shrike's damage, and grants bonus Armor while Eye of Horus is active."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmt9k2ana12ux0",
+        "level": 20,
+        "name": {
+          "fr": "Optique dynamique",
+          "en": "Dynamic Optics"
+        },
+        "icon": "assets/heroes/base_spells/ana/images/talents/storm_ui_icon_ana_aim_down_sights_a.png",
+        "description": {
+          "fr": "Les attaques de base cumulent un bonus de vitesse d'attaque, et procurent une portée d'attaque de base supplémentaire pendant l'utilisation d'Œil d'Horus.",
+          "en": "Basic Attacks stack bonus Attack Speed, and grant extra Basic Attack range while Eye of Horus is active."
         },
         "demoYoutubeId": null
       }
