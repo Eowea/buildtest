@@ -2483,12 +2483,14 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jon5jc2",
-            "alternativeIds": []
+            "primaryId": "tmt9k2ana07nh1",
+            "alternativeIds": [
+              "tmt9k2ana06wj4"
+            ]
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6joljrqh",
+            "primaryId": "tmt9k2ana09bd5",
             "alternativeIds": []
           },
           {
