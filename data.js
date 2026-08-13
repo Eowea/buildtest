@@ -655,32 +655,39 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6joy25rj",
+            "primaryId": "tmk7j3and02rz3",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6joeu4zo",
-            "alternativeIds": []
+            "primaryId": "tmk7j3and03sw0",
+            "alternativeIds": [
+              "tmrryr6joeu4zo",
+              "tmk7j3and04tv5"
+            ]
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jofjb75",
+            "primaryId": "tmk7j3and06vx9",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6joopacq",
-            "alternativeIds": []
+            "primaryId": "tmk7j3and07wz4",
+            "alternativeIds": [
+              "tmrryr6joopacq"
+            ]
           },
           {
             "level": 13,
             "primaryId": "tmrryr6jopq9n2",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmk7j3and09yb6"
+            ]
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jo7jzzn",
+            "primaryId": "tmk7j3and11ad8",
             "alternativeIds": []
           },
           {
