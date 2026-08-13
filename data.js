@@ -2004,7 +2004,7 @@ const HEROES = [
   },
   {
     "id": "alexstrasza",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Alexstrasza",
       "en": "Alexstrasza"
@@ -2019,6 +2019,16 @@ const HEROES = [
       "fr": "Elle sacrifie sa propre santé pour soigner ses alliés et se transforme en Reine-dragon pour dominer les combats d'équipe.",
       "en": "She sacrifices her own health to heal allies and transforms into the Dragonqueen to dominate teamfights."
     },
+    "forms": [
+      {
+        "id": "normal",
+        "label": { "fr": "Forme normale", "en": "Normal Form" }
+      },
+      {
+        "id": "dragon",
+        "label": { "fr": "Forme dragon", "en": "Dragon Form" }
+      }
+    ],
     "spells": [
       {
         "key": "Trait",
@@ -2028,13 +2038,14 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_dragon_queen.png",
         "description": {
-          "fr": "Se transforme en dragon surpuissant.",
-          "en": "Transforms into a massively powerful dragon."
+          "fr": "Se transforme en dragon surpuissant pendant un temps, ce qui empare Don de vie, Abondance et Rafale de flammes, et réduit la durée des étourdissements, immobilisations et ralentissements subis.",
+          "en": "Transforms into a massively powerful dragon for a duration, which empowers Gift of Life, Abundance, and Flame Buffet, and reduces the duration of incoming Stuns, Roots, and Slows."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
+        "form": "normal",
         "name": {
           "fr": "Don de vie",
           "en": "Gift of Life"
@@ -2047,7 +2058,22 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
+        "key": "A",
+        "form": "dragon",
+        "name": {
+          "fr": "Souffle de vie",
+          "en": "Breath of Life"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_breath_of_life.png",
+        "description": {
+          "fr": "Version de Don de vie en forme dragon : temps de recharge fortement réduit et ne coûte plus de vie.",
+          "en": "Dragon form version of Gift of Life: greatly reduced cooldown and no longer costs health."
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "Z",
+        "form": "normal",
         "name": {
           "fr": "Abondance",
           "en": "Abundance"
@@ -2060,7 +2086,22 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
+        "key": "Z",
+        "form": "dragon",
+        "name": {
+          "fr": "Préservation",
+          "en": "Preservation"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_preservation.png",
+        "description": {
+          "fr": "Version d'Abondance en forme dragon : zone et montant de soin fortement augmentés.",
+          "en": "Dragon form version of Abundance: greatly increased heal area and amount."
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "E",
+        "form": "normal",
         "name": {
           "fr": "Rafale de flammes",
           "en": "Flame Buffet"
@@ -2069,6 +2110,20 @@ const HEROES = [
         "description": {
           "fr": "Enflamme un ennemi. Toucher un ennemi enflammé le ralentit.",
           "en": "Ignites an enemy. Hitting an ignited enemy slows them."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "E",
+        "form": "dragon",
+        "name": {
+          "fr": "Bourrasque ailée",
+          "en": "Wing Buffet"
+        },
+        "icon": "assets/heroes/base_spells/alexstrasza/images/talents/storm_ui_icon_alexstrasza_wing_buffet.png",
+        "description": {
+          "fr": "Version de Rafale de flammes en forme dragon : inflige des dégâts et repousse les ennemis en arc de cercle devant elle.",
+          "en": "Dragon form version of Flame Buffet: deals damage and knocks back enemies in an arc in front of her."
         },
         "demoYoutubeId": ""
       },

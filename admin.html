@@ -784,6 +784,25 @@ async function bootApp(){
 function generatePoolId(){
   return 't' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
 }
+function generateFormId(){
+  return 'form' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
+}
+function addForm(idx){
+  HEROES[idx].forms = HEROES[idx].forms || [];
+  const f = { id: generateFormId(), label:{fr:'',en:''} };
+  HEROES[idx].forms.push(f);
+  markDirty(); renderHeroPanel();
+}
+function removeForm(idx, formIdx){
+  const hero = HEROES[idx];
+  const removed = hero.forms[formIdx];
+  hero.forms.splice(formIdx, 1);
+  if (removed){
+    (hero.spells||[]).forEach(sp => { if (sp.form === removed.id) sp.form = ''; });
+    (hero.talentPool||[]).forEach(p => { if (p.form === removed.id) p.form = ''; });
+  }
+  markDirty(); renderHeroPanel();
+}
 function normalizeLoadedData(){
   // Corrige/complète les anciennes entrées "videos" de build qui seraient de simples
   // chaines de texte au lieu de l'objet {title, desc, youtubeId} attendu par app.js.
@@ -793,6 +812,7 @@ function normalizeLoadedData(){
     }
     delete h.guideVideo;
     if (!Array.isArray(h.talentPool)) h.talentPool = [];
+    if (!Array.isArray(h.forms)) h.forms = [];
     (h.builds||[]).forEach(b => {
       b.updatedAt = b.updatedAt || {fr:'',en:''};
       b.videos = (b.videos||[]).map(v => {
@@ -1309,7 +1329,7 @@ function reorderHeroList(listType, from, to){
   }
   const hero = HEROES[currentHeroIndex];
   if (!hero) return;
-  if (listType === 'spells' || listType === 'tips' || listType === 'guideVideos'){
+  if (listType === 'spells' || listType === 'tips' || listType === 'guideVideos' || listType === 'forms'){
     const arr = hero[listType];
     const [moved] = arr.splice(from, 1);
     arr.splice(to, 0, moved);
@@ -1374,12 +1394,32 @@ function renderInfosTab(hero){
       <div class="field"><label>Description du gameplay (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}],'gameplay.en',this.value)">${escapeHtml(hero.gameplay?.en)}</textarea></div>
     </div>
     <div class="card">
+      <div class="card-head"><div class="title">Formes (héros à transformation)</div></div>
+      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Pour les héros qui changent de sorts selon un état (ex. Alexstrasza en forme dragon). Ajoute une forme ici, puis assigne chaque sort ou talent concerné à une forme dans les onglets "Sorts" et "Talents". Un sort/talent sans forme assignée reste visible dans toutes les formes. S'il n'y a aucune forme, rien ne change sur le site.</small>
+      ${renderFormsList(hero)}
+      <button onclick="addForm(${currentHeroIndex})">+ Ajouter une forme</button>
+    </div>
+    <div class="card">
       <div class="card-head"><div class="title">Vidéos guide (mise en avant de créateurs)</div></div>
       <small class="help" style="margin-top:-4px;margin-bottom:10px;">Ces vidéos s'affichent en carrousel sur la fiche du héros, avec le titre en jaune au-dessus — comme les vidéos de build, mais elles restent cliquables et ouvrent la chaîne YouTube du créateur dans un nouvel onglet.</small>
       ${renderGuideVideosList(hero)}
       <button onclick="addGuideVideo(${currentHeroIndex})">+ Ajouter une vidéo guide</button>
     </div>
   `;
+}
+function renderFormsList(hero){
+  const list = hero.forms || [];
+  if (!list.length) return `<p style="color:var(--text-dim);font-size:13px;">Aucune forme pour ce héros (comportement normal pour la plupart des héros).</p>`;
+  return list.map((f, i) => `
+    <div class="subitem" data-drag-item data-drag-list="forms" data-drag-index="${i}" style="padding-left:34px;">
+      <span class="drag-handle" title="Glisser pour réordonner" style="position:absolute;left:8px;top:12px;">⠿</span>
+      <button class="ghost remove-btn" onclick="removeForm(${currentHeroIndex},${i})">✕</button>
+      <div class="row">
+        <div class="field"><label>Nom (FR)</label><input value="${escapeHtml(f.label?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].forms[${i}],'label.fr',this.value)" /></div>
+        <div class="field"><label>Nom (EN)</label><input value="${escapeHtml(f.label?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].forms[${i}],'label.en',this.value)" /></div>
+      </div>
+    </div>
+  `).join('');
 }
 function renderGuideVideosList(hero){
   const list = hero.guideVideos || [];
@@ -1443,6 +1483,14 @@ function renderSpellsTab(hero){
           <div class="field"><label>Description (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'description.fr',this.value)">${escapeHtml(sp.description?.fr)}</textarea></div>
           <div class="field"><label>Description (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].spells[${i}],'description.en',this.value)">${escapeHtml(sp.description?.en)}</textarea></div>
         </div>
+        ${(hero.forms && hero.forms.length) ? `
+        <div class="field">
+          <label>Forme (laisse "Toutes formes" si ce sort est toujours disponible)</label>
+          <select onchange="setNested(HEROES[${currentHeroIndex}].spells[${i}],'form',this.value)">
+            <option value="" ${!sp.form?'selected':''}>Toutes formes</option>
+            ${hero.forms.map(f=>`<option value="${escapeHtml(f.id)}" ${sp.form===f.id?'selected':''}>${escapeHtml(f.label?.fr||f.id)}</option>`).join('')}
+          </select>
+        </div>` : ''}
         <div class="field">
           <label>Vidéo de démo (ID YouTube ou fichier .mp4 dans assets)</label>
           <div class="thumb-picker">
@@ -1458,7 +1506,7 @@ function renderSpellsTab(hero){
   return html;
 }
 function addSpell(idx){
-  const sp = { key:'', name:{fr:'',en:''}, icon:'', description:{fr:'',en:''}, demoYoutubeId:'' };
+  const sp = { key:'', name:{fr:'',en:''}, icon:'', description:{fr:'',en:''}, demoYoutubeId:'', form:'' };
   collapsibleState[assignUid(sp)] = true;
   HEROES[idx].spells.push(sp);
   markDirty(); renderHeroPanel();
@@ -1582,7 +1630,7 @@ function renderTalentPoolTab(hero){
   html += levels.map(level => `
     <div class="card">
       <div class="card-head"><div class="title">Palier ${escapeHtml(level)}</div></div>
-      ${hero.talentPool.filter(p => p.level === level).map(p => renderPoolTalentItem(p)).join('')}
+      ${hero.talentPool.filter(p => p.level === level).map(p => renderPoolTalentItem(p, hero)).join('')}
       <button onclick="addPoolTalent(${currentHeroIndex}, ${level})">+ Ajouter une option à ce palier</button>
     </div>
   `).join('');
@@ -1597,7 +1645,7 @@ function renderTalentPoolTab(hero){
   `;
   return html;
 }
-function renderPoolTalentItem(p){
+function renderPoolTalentItem(p, hero){
   const uid = assignUid(p);
   return `
     <details class="collapsible" data-uid="${uid}"${collapsibleState[uid]?' open':''}>
@@ -1620,6 +1668,14 @@ function renderPoolTalentItem(p){
         </div>
         <div class="field"><label>Description (FR)</label><textarea oninput="setNested(getPoolEntry(${currentHeroIndex},'${p.id}'),'description.fr',this.value)">${escapeHtml(p.description?.fr)}</textarea></div>
         <div class="field"><label>Description (EN)</label><textarea oninput="setNested(getPoolEntry(${currentHeroIndex},'${p.id}'),'description.en',this.value)">${escapeHtml(p.description?.en)}</textarea></div>
+        ${(hero?.forms && hero.forms.length) ? `
+        <div class="field">
+          <label>Forme (laisse "Toutes formes" si ce talent est toujours disponible)</label>
+          <select onchange="setNested(getPoolEntry(${currentHeroIndex},'${p.id}'),'form',this.value)">
+            <option value="" ${!p.form?'selected':''}>Toutes formes</option>
+            ${hero.forms.map(f=>`<option value="${escapeHtml(f.id)}" ${p.form===f.id?'selected':''}>${escapeHtml(f.label?.fr||f.id)}</option>`).join('')}
+          </select>
+        </div>` : ''}
         <div class="field">
           <label>Vidéo de démo (ID YouTube ou fichier .mp4)</label>
           <div class="thumb-picker">
@@ -1642,7 +1698,7 @@ function addPoolLevelFromInput(idx){
   addPoolTalent(idx, level);
 }
 function addPoolTalent(idx, level){
-  const p = { id: generatePoolId(), level, name:{fr:'',en:''}, icon:'', description:{fr:'',en:''}, demoYoutubeId:null };
+  const p = { id: generatePoolId(), level, name:{fr:'',en:''}, icon:'', description:{fr:'',en:''}, demoYoutubeId:null, form:'' };
   collapsibleState[assignUid(p)] = true;
   HEROES[idx].talentPool = HEROES[idx].talentPool || [];
   HEROES[idx].talentPool.push(p);

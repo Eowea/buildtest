@@ -66,6 +66,7 @@ const getInitialLang = () => {
       role: 'all',
       heroId: null,
       buildIndex: 0,
+      formId: null,
       lang: getInitialLang()
     };
 
@@ -524,10 +525,20 @@ function renderDetail() {
     return;
   }
   
-  clampBuildIndex(h); 
-  els.detailView.innerHTML=`<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${renderSpells(h.spells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||[]).map(tip=>`<li>${esc(loc(tip))}</li>`).join('')}</ul></div></article></section><div id="buildSection"></div>`; 
-  renderBuildSection(h); 
-  bindFloatingTriggers(); 
+  clampBuildIndex(h);
+  const forms = h.forms || [];
+  let activeFormId = null;
+  if (forms.length) {
+    activeFormId = forms.some(f => f.id === state.formId) ? state.formId : forms[0].id;
+    state.formId = activeFormId;
+  } else {
+    state.formId = null;
+  }
+  const visibleSpells = forms.length ? (h.spells||[]).filter(s => !s.form || s.form === activeFormId) : (h.spells||[]);
+  const formSwitcherHtml = forms.length ? `<div class="form-switcher">${forms.map(f => `<button type="button" class="form-switch-btn${f.id===activeFormId?' active':''}" data-form-id="${esc(f.id)}">${esc(loc(f.label))}</button>`).join('')}</div>` : '';
+  els.detailView.innerHTML=`<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${formSwitcherHtml}${renderSpells(visibleSpells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||[]).map(tip=>`<li>${esc(loc(tip))}</li>`).join('')}</ul></div></article></section><div id="buildSection"></div>`;
+  renderBuildSection(h);
+  bindFloatingTriggers();
 }
     function renderAll() { updateStaticLang(); ensureSelection(); renderHeader(); renderFilters(); renderHeroList(); renderDetail(); updateHash(); }
     // Encodage minimal : on n'échappe que ce qui casserait vraiment le fragment d'URL
@@ -874,6 +885,7 @@ window.goToBuild = (heroId, buildIndex) => {
 
   state.heroId = heroId;
   state.buildIndex = buildIndex;
+  state.formId = null;
 
   renderAll();
 
@@ -912,6 +924,7 @@ window.goToBuild = (heroId, buildIndex) => {
   if (!matches.some(h => h.id === state.heroId)) {
     state.heroId = matches[0]?.id || null;
     state.buildIndex = firstBuildIndex(matches[0]);
+    state.formId = null;
   }
 
   renderAll();
@@ -931,6 +944,7 @@ els.heroList.addEventListener('click', (e) => {
 
     state.heroId = heroId;
     state.buildIndex = firstBuildIndex(heroObj);
+    state.formId = null;
     renderAll(); //
 
   setTimeout(() => {
@@ -957,6 +971,7 @@ els.heroList.addEventListener('click', (e) => {
           if (!state.heroId || !matches.some(h => h.id === state.heroId)) {
             state.heroId = matches[0].id;
             state.buildIndex = firstBuildIndex(matches[0]);
+            state.formId = null;
           }
         }
         
@@ -984,6 +999,12 @@ els.heroList.addEventListener('click', (e) => {
     const h = currentHero();
     if (h) renderBuildSection(h);
     updateHash();
+    return;
+  }
+  const formBtn = e.target.closest('[data-form-id]');
+  if (formBtn) {
+    state.formId = formBtn.dataset.formId;
+    renderDetail();
     return;
   }
 els.detailView.addEventListener('mousedown', (e) => {
@@ -1016,6 +1037,7 @@ els.langSwitcher.addEventListener('click', (e) => {
 els.homeBtn.addEventListener('click', (e) => {
   e.preventDefault();
   state.heroId = null;
+  state.formId = null;
   resetHeroNavigationFilters();
   renderAll();
   window.scrollTo({ top: 0, behavior: 'smooth' });

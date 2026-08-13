@@ -727,6 +727,34 @@
     }
     .card-body p { margin: 0; color: var(--text-dim); font-size: 14px; line-height: 1.6; }
 
+    /* ── Sélecteur de forme (héros à transformation) ── */
+    .form-switcher {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .form-switch-btn {
+      height: 32px;
+      padding: 0 16px;
+      border-radius: var(--radius-sm, 6px);
+      border: 1px solid var(--blue-border);
+      background: rgba(0, 229, 255, 0.08);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--text-dim);
+      cursor: pointer;
+      transition: all var(--t);
+    }
+    .form-switch-btn:hover { background: rgba(0, 229, 255, 0.2); color: var(--text-bright); }
+    .form-switch-btn.active {
+      background: linear-gradient(180deg, rgba(248, 183, 0, 0.1), rgba(248, 183, 0, 0.25));
+      border-color: var(--gold-bright, #f8b700);
+      color: var(--gold-bright, #f8b700);
+    }
+
     /* ── Spells (HotS Square Look) ── */
     .spell-strip {
       display: grid;
