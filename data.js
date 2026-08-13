@@ -43,35 +43,11 @@ const STREAMER_CONFIG = {
     {
       "enabled": true,
       "label": {
-        "fr": "Héros",
-        "en": "Heroes"
-      },
-      "url": "index.html",
-      "newTab": false,
-      "showOnBuilds": false,
-      "showOnBattlegrounds": true
-    },
-    {
-      "enabled": true,
-      "label": {
-        "fr": "Cartes",
-        "en": "Battlegrounds"
-      },
-      "url": "battlegrounds.html",
-      "newTab": false,
-      "showOnBuilds": false,
-      "showOnBattlegrounds": true
-    },
-    {
-      "enabled": true,
-      "label": {
         "fr": "Patchs",
         "en": "Patches"
       },
       "url": "https://nexus-patch-notes.github.io",
-      "newTab": true,
-      "showOnBuilds": true,
-      "showOnBattlegrounds": true
+      "newTab": true
     }
   ],
   "latestVideos": [
@@ -108,7 +84,7 @@ const STREAMER_CONFIG = {
     {
       "title": {
         "fr": "NOUVEAU PATCH HotS : Skin Lúcio, Mine Hantée, Reworks, ...",
-        "en": " NEW HotS PATCH: Lúcio Skin, Haunted Mine, Reworks, ..."
+        "en": "NEW HotS PATCH: Lúcio Skin, Haunted Mine, Reworks, ..."
       },
       "youtubeId": "https://youtu.be/m8kifCbSy-s"
     }
@@ -26541,46 +26517,5 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ]
-  }
-];
-
-const BATTLEGROUNDS = [
-  {
-    "id": "exemple-carte",
-    "enabled": true,
-    "name": {
-      "fr": "Nom de la carte (exemple)",
-      "en": "Map Name (example)"
-    },
-    "image": "assets/battlegrounds/portraits/exemple-carte.png",
-    "minimapImage": "assets/maps/minimap/map_mines.jpg",
-    "headline": {
-      "fr": "Résumé en une phrase du fonctionnement de la carte.",
-      "en": "One-sentence summary of how the map works."
-    },
-    "objectives": {
-      "fr": "Décris ici l'objectif principal de la carte : ce qu'il faut collecter/activer, ce que ça donne comme récompense, et à quelle fréquence il apparaît.",
-      "en": "Describe here the map's main objective: what to collect/activate, what reward it grants, and how often it spawns."
-    },
-    "tips": [
-      {
-        "fr": "Exemple de conseil stratégique pour cette carte.",
-        "en": "Example strategic tip for this map."
-      }
-    ],
-    "mercenaryCamps": [
-      {
-        "image": "assets/maps/mercenaires/storm_ui_ingame_targetinfopanel_unit_hauntedmines_merc_mines_ranged.png",
-        "name": {
-          "fr": "Nom du camp (exemple)",
-          "en": "Camp Name (example)"
-        },
-        "description": {
-          "fr": "Type de camp et effet une fois capturé (ex: Guerriers Brutasses, Assiégeurs, Chaman Fulmigore...).",
-          "en": "Camp type and effect once captured (e.g. Bruiser Warriors, Siege Giants, Shaman Lightning...)."
-        }
-      }
-    ],
-    "guideVideos": []
   }
 ];
