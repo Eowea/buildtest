@@ -2454,11 +2454,11 @@ const HEROES = [
           "fr": "A COLLER",
           "en": "PASTE"
         },
-        "buildCode": "[T1111111,Ana]",
+        "buildCode": "[T1111331,Ana]",
         "videos": [],
         "updatedAt": {
-          "fr": "",
-          "en": ""
+          "fr": "13 Août 2026",
+          "en": "August 13, 2026"
         },
         "talentSelections": [
           {
@@ -2479,7 +2479,9 @@ const HEROES = [
           {
             "level": 10,
             "primaryId": "tmrryr6jo6yhcn",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmt9k2ana05rk9"
+            ]
           },
           {
             "level": 13,
@@ -2496,7 +2498,9 @@ const HEROES = [
           {
             "level": 20,
             "primaryId": "tmrryr6jozz7tm",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmt9k2ana10tg3"
+            ]
           }
         ]
       },
@@ -2504,8 +2508,8 @@ const HEROES = [
         "enabled": true,
         "order": 2,
         "label": {
-          "fr": "Sleep / Trait",
-          "en": "Sleep / Trait"
+          "fr": "Sleep",
+          "en": "Sleep"
         },
         "summary": {
           "fr": "Plus de dégâts et de contrôles.",
@@ -2515,7 +2519,7 @@ const HEROES = [
           "fr": "A COLLER",
           "en": "PASTE"
         },
-        "buildCode": "[T3331333,Ana]",
+        "buildCode": "[T2221331,Ana]",
         "videos": [],
         "updatedAt": {
           "fr": "",
@@ -2524,38 +2528,48 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jotiqpq",
+            "primaryId": "tmsrq1hscdy86x",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jorgbfi",
-            "alternativeIds": []
+            "primaryId": "tmt9k2ana01xy7",
+            "alternativeIds": [
+              "tmt9k2ana02qz3"
+            ]
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jo5tq30",
-            "alternativeIds": []
+            "primaryId": "tmt9k2ana03mv8",
+            "alternativeIds": [
+              "tmt9k2ana04pl2"
+            ]
           },
           {
             "level": 10,
             "primaryId": "tmrryr6jo6yhcn",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmt9k2ana05rk9"
+            ]
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jon5jc2",
-            "alternativeIds": []
+            "primaryId": "tmt9k2ana07nh1",
+            "alternativeIds": [
+              "tmt9k2ana06wj4"
+            ]
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6joljrqh",
+            "primaryId": "tmt9k2ana09bd5",
             "alternativeIds": []
           },
           {
             "level": 20,
             "primaryId": "tmrryr6jozz7tm",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmt9k2ana10tg3"
+            ]
           }
         ]
       }
