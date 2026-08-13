@@ -2564,12 +2564,12 @@ const HEROES = [
         "id": "tmrryr6jotiqpq",
         "level": 1,
         "name": {
-          "fr": "Soin d'assaut",
+          "fr": "Soins d'assaut",
           "en": "Contact Healing"
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_biotic_grenade.png",
         "description": {
-          "fr": "Grenade biotique inflige plus de dégâts et procure plus de soins selon le nombre de héros touchés.",
+          "fr": "Toucher des héros avec Grenade biotique augmente ses dégâts et ses soins selon le nombre de héros touchés.",
           "en": "Biotic Grenade deals more damage and provides more healing for each Hero it hits."
         },
         "demoYoutubeId": null
@@ -2583,7 +2583,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_sleep_dart.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Fléchette hypodermique et ralentit brièvement les ennemis à leur réveil.",
+          "fr": "Réduit le temps de recharge de Fléchette hypodermique et ralentit brièvement les héros adverses à leur réveil.",
           "en": "Reduces Sleep Dart's cooldown and Slows enemies briefly when they wake up."
         },
         "demoYoutubeId": null
@@ -2597,7 +2597,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_aim_down_sights.png",
         "description": {
-          "fr": "Augmente les soins de Pie-grièche. Quêtes répétables : cumuler des Doses sur des héros et les frapper en attaque de base au maximum de Doses augmentent encore les soins de Pie-grièche.",
+          "fr": "Augmente les soins de Nuhas. Quêtes répétables : cumuler des doses sur des héros et les frapper en attaque de base au maximum de doses augmentent encore les soins de Nuhas.",
           "en": "Increases Shrike's healing. Repeatable quests: stacking Doses on Heroes and basic-attacking fully-stacked Heroes further increase Shrike's healing."
         },
         "demoYoutubeId": null
@@ -2625,7 +2625,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/talents/storm_ui_icon_ana_overdose.png",
         "description": {
-          "fr": "Fléchette hypodermique applique des doses supplémentaires à sa cible, et transperce tous les héros ennemis pendant l'utilisation d'Œil d'Horus.",
+          "fr": "Fléchette hypodermique applique des doses supplémentaires à sa cible, et transperce tous les héros adverses tant que Tireuse embusquée est active.",
           "en": "Sleep Dart applies extra Doses to its target, and pierces all enemy Heroes while Eye of Horus is active."
         },
         "demoYoutubeId": null
@@ -2634,12 +2634,12 @@ const HEROES = [
         "id": "tmt9k2ana02qz3",
         "level": 4,
         "name": {
-          "fr": "Fléchette débilitante",
+          "fr": "Fléchette affaiblissante",
           "en": "Debilitating Dart"
         },
         "icon": "assets/heroes/base_spells/ana/images/talents/storm_ui_icon_ana_debilitatingdart.png",
         "description": {
-          "fr": "Nouvelle capacité active : tire une fléchette qui ralentit et affaiblit le premier héros ennemi touché pendant quelques secondes. Ne toucher aucun héros réduit son temps de recharge.",
+          "fr": "Nouvelle capacité active : tire une fléchette qui ralentit et réduit les dégâts du premier héros adverse touché pendant quelques secondes. Ne toucher aucun héros réduit son temps de recharge.",
           "en": "New active ability: fire a dart that Slows and weakens the first enemy Hero hit for a few seconds. Missing all Heroes reduces its cooldown."
         },
         "demoYoutubeId": null
@@ -2648,7 +2648,7 @@ const HEROES = [
         "id": "tmrryr6jo5tq30",
         "level": 7,
         "name": {
-          "fr": "Anti-soignant",
+          "fr": "Inhibiteur de soin",
           "en": "Anti-Healer"
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_biotic_grenade.png",
@@ -2662,12 +2662,12 @@ const HEROES = [
         "id": "tmt9k2ana03mv8",
         "level": 7,
         "name": {
-          "fr": "Terreurs nocturnes",
+          "fr": "Terreur nocturne",
           "en": "Night Terrors"
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_sleep_dart.png",
         "description": {
-          "fr": "Procure de la vitesse de déplacement pour chaque héros touché par Fléchette hypodermique, et inflige des dégâts aux ennemis à leur réveil.",
+          "fr": "Augmente la vitesse de déplacement pour chaque héros touché par Fléchette hypodermique, et inflige des dégâts aux héros adverses à leur réveil.",
           "en": "Grants Movement Speed for each Hero hit by Sleep Dart, and deals damage to enemies when they wake up."
         },
         "demoYoutubeId": null
@@ -2676,12 +2676,12 @@ const HEROES = [
         "id": "tmt9k2ana04pl2",
         "level": 7,
         "name": {
-          "fr": "Agent neutralisant",
+          "fr": "Agent bêtifiant",
           "en": "Mind-Numbing Agent"
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_aim_down_sights.png",
         "description": {
-          "fr": "Les Doses présentes sur un héros réduisent sa puissance de capacité.",
+          "fr": "Chaque dose active sur un héros réduit sa puissance de capacité.",
           "en": "Doses on a Hero reduce their Spell Power."
         },
         "demoYoutubeId": null
@@ -2709,7 +2709,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_overwatch.png",
         "description": {
-          "fr": "Adopte une position de tir fixe pour tirer plusieurs balles à portée illimitée qui soignent les alliés et blessent les ennemis, avec des dégâts réduits contre les bâtiments. Ana ne peut pas se déplacer tant que la capacité est active.",
+          "fr": "S'installe dans une position de tireuse d'élite pour tirer plusieurs balles à portée illimitée qui soignent les alliés et blessent les héros adverses, avec des dégâts réduits contre les bâtiments. Ana ne peut pas se déplacer tant qu'Œil d'Horus est actif.",
           "en": "Assume a stationary sniping stance to fire several rounds with unlimited range that heal allies and damage enemies, dealing reduced damage to Structures. Ana cannot move while active."
         },
         "demoYoutubeId": null
@@ -2723,7 +2723,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_healing_dart.png",
         "description": {
-          "fr": "Fléchette de soins procure de la vitesse de déplacement aux héros soignés.",
+          "fr": "Fléchette soignante procure de la vitesse de déplacement aux héros affectés.",
           "en": "Healing Dart grants Movement Speed to the Heroes it heals."
         },
         "demoYoutubeId": null
@@ -2732,12 +2732,12 @@ const HEROES = [
         "id": "tmt9k2ana06wj4",
         "level": 13,
         "name": {
-          "fr": "Fléchettes purificatrices",
+          "fr": "Fléchette tonifiante",
           "en": "Purifying Darts"
         },
         "icon": "assets/heroes/base_spells/ana/images/talents/storm_ui_icon_ana_healing_dart_a.png",
         "description": {
-          "fr": "Fléchette de soins retire les racines et les ralentissements de sa cible, et procure un soin supplémentaire dans ce cas.",
+          "fr": "Fléchette soignante supprime les effets de ralentissement et d'immobilisation de sa cible, et procure un soin supplémentaire dans ce cas.",
           "en": "Healing Dart cleanses Roots and Slows from its target and provides extra healing when doing so."
         },
         "demoYoutubeId": null
@@ -2746,12 +2746,12 @@ const HEROES = [
         "id": "tmt9k2ana07nh1",
         "level": 13,
         "name": {
-          "fr": "Sels de réveil",
+          "fr": "Sels",
           "en": "Smelling Salts"
         },
         "icon": "assets/heroes/base_spells/ana/images/talents/storm_ui_icon_ana_healing_dart_b.png",
         "description": {
-          "fr": "Fléchette de soins retire les étourdissements de sa cible et lui procure de l'armure temporaire dans ce cas.",
+          "fr": "Fléchette soignante supprime les effets d'étourdissement de sa cible et lui procure de l'armure temporaire dans ce cas.",
           "en": "Healing Dart cleanses Stuns from its target and grants them temporary Armor when doing so."
         },
         "demoYoutubeId": null
@@ -2760,12 +2760,12 @@ const HEROES = [
         "id": "tmrryr6joljrqh",
         "level": 16,
         "name": {
-          "fr": "Tireur d'élite",
+          "fr": "Œil de lynx",
           "en": "Sharpshooter"
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_healing_dart.png",
         "description": {
-          "fr": "Le soin de Fléchette de soins augmente à chaque héros touché, jusqu'à un maximum, avec un bonus supplémentaire une fois ce plafond atteint. Le bonus est réinitialisé en cas d'échec.",
+          "fr": "Les soins de Fléchette soignante augmentent à chaque héros soigné, jusqu'à un maximum, avec un bonus supplémentaire une fois ce plafond atteint. Le bonus est réinitialisé si elle rate un héros.",
           "en": "Healing Dart's healing increases each time it hits a Hero, up to a cap, with a further bonus at maximum stacks. The bonus resets if it misses."
         },
         "demoYoutubeId": null
@@ -2774,12 +2774,12 @@ const HEROES = [
         "id": "tmt9k2ana08cf6",
         "level": 16,
         "name": {
-          "fr": "Doses concentrées",
+          "fr": "Formule concentrée",
           "en": "Concentrated Doses"
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_healing_dart.png",
         "description": {
-          "fr": "Fléchette de soins soigne davantage selon le nombre de Doses actives sur l'équipe ennemie.",
+          "fr": "Fléchette soignante soigne davantage selon le nombre de doses actives sur les héros adverses.",
           "en": "Healing Dart heals for more based on the number of Doses active on the enemy team."
         },
         "demoYoutubeId": null
@@ -2788,12 +2788,12 @@ const HEROES = [
         "id": "tmt9k2ana09bd5",
         "level": 16,
         "name": {
-          "fr": "Rechargement actif",
+          "fr": "Recharge active",
           "en": "Active Reload"
         },
         "icon": "assets/heroes/base_spells/ana/images/talents/storm_ui_icon_ana_detachableboxmagazine.png",
         "description": {
-          "fr": "Nouvelle capacité active : recharge instantanément les charges de Fléchette de soins.",
+          "fr": "Nouvelle capacité active : confère instantanément des charges de Fléchette soignante.",
           "en": "New active ability: instantly refill Healing Dart's charges."
         },
         "demoYoutubeId": null
@@ -2802,12 +2802,12 @@ const HEROES = [
         "id": "tmrryr6jozz7tm",
         "level": 20,
         "name": {
-          "fr": "Perfusion nano",
+          "fr": "Nanotransfusion",
           "en": "Nano Infusion"
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_nano_bost.png",
         "description": {
-          "fr": "Les alliés boostés par Nanoboost soignent également selon les dégâts de sort qu'ils infligent.",
+          "fr": "Les alliés affectés par Nanoboost récupèrent des points de vie équivalents à une partie des dégâts de sort qu'ils infligent.",
           "en": "Allies boosted by Nano Boost also heal based on the Spell Damage they deal."
         },
         "demoYoutubeId": null
@@ -2816,12 +2816,12 @@ const HEROES = [
         "id": "tmt9k2ana10tg3",
         "level": 20,
         "name": {
-          "fr": "Œil de la mort",
+          "fr": "Infaillible",
           "en": "Deadeye"
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_overwatch.png",
         "description": {
-          "fr": "Œil d'Horus regagne des charges plus rapidement mais par plus petites quantités, et ses tirs infligent plus de dégâts et de soins pour chaque héros touché, avec une réinitialisation peu après avoir quitté la capacité.",
+          "fr": "Œil d'Horus regagne des balles plus rapidement mais par plus petites quantités. Chaque héros touché augmente ses dégâts et ses soins, avec une réinitialisation peu après avoir quitté la capacité.",
           "en": "Eye of Horus regains charges faster but in smaller increments, and its rounds deal more damage and healing for each Hero hit, resetting shortly after leaving the stance."
         },
         "demoYoutubeId": null
@@ -2830,12 +2830,12 @@ const HEROES = [
         "id": "tmt9k2ana11se8",
         "level": 20,
         "name": {
-          "fr": "Position blindée",
+          "fr": "Posture retranchée",
           "en": "Armored Stance"
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_overwatch.png",
         "description": {
-          "fr": "Augmente les dégâts de Pie-grièche, et procure de l'armure supplémentaire pendant l'utilisation d'Œil d'Horus.",
+          "fr": "Augmente les dégâts de Nuhas, et confère de l'armure supplémentaire tant que Tireuse embusquée est active.",
           "en": "Increases Shrike's damage, and grants bonus Armor while Eye of Horus is active."
         },
         "demoYoutubeId": null
@@ -2844,12 +2844,12 @@ const HEROES = [
         "id": "tmt9k2ana12ux0",
         "level": 20,
         "name": {
-          "fr": "Optique dynamique",
+          "fr": "Lunette évolutive",
           "en": "Dynamic Optics"
         },
         "icon": "assets/heroes/base_spells/ana/images/talents/storm_ui_icon_ana_aim_down_sights_a.png",
         "description": {
-          "fr": "Les attaques de base cumulent un bonus de vitesse d'attaque, et procurent une portée d'attaque de base supplémentaire pendant l'utilisation d'Œil d'Horus.",
+          "fr": "Les attaques de base cumulent un bonus de vitesse d'attaque, et la portée des attaques de base augmente tant que Tireuse embusquée est active.",
           "en": "Basic Attacks stack bonus Attack Speed, and grant extra Basic Attack range while Eye of Horus is active."
         },
         "demoYoutubeId": null
