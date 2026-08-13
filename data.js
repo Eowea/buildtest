@@ -2793,7 +2793,7 @@ const HEROES = [
           "fr": "Recharge active",
           "en": "Active Reload"
         },
-        "icon": "assets/heroes/base_spells/ana/images/talents/storm_ui_icon_ana_detachableboxmagazine.png",
+        "icon": "assets/heroes/base_spells/ana/images/talents/storm_ui_icon_ana_healing_dart_b.png",
         "description": {
           "fr": "Nouvelle capacité active : confère instantanément des charges de Fléchette soignante.",
           "en": "New active ability: instantly refill Healing Dart's charges."
