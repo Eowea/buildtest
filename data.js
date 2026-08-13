@@ -2564,13 +2564,13 @@ const HEROES = [
         "id": "tmrryr6jotiqpq",
         "level": 1,
         "name": {
-          "fr": "Totem Colossal",
-          "en": "Colossal Totem"
+          "fr": "Soin d'assaut",
+          "en": "Contact Healing"
         },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_earthbindtotem.png",
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_biotic_grenade.png",
         "description": {
-          "fr": "Augmente les points de vie, le rayon et la durée du totem. Permet de le repositionner une nouvelle fois.",
-          "en": "Increases health, radius, and duration of the totem. Can be repositioned once."
+          "fr": "Selon le nombre de héros alliés et ennemis touchés, les soins et les dégâts sont augmentés.",
+          "en": "Healing and damage are increased based on the number of allied and enemy heroes hit."
         },
         "demoYoutubeId": null
       },
@@ -2655,6 +2655,34 @@ const HEROES = [
         "description": {
           "fr": "Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.",
           "en": "A second Ancestral Healing triggers and heals in an AoE."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmsrq1hscdy86x",
+        "level": 1,
+        "name": {
+          "fr": "Cartouches léthargiques",
+          "en": "Slumber Shells"
+        },
+        "icon": "",
+        "description": {
+          "fr": "Réduit le temps de recharge de Flèche hypodermique et réduit la vitesse de déplacement au réveil.",
+          "en": "Reduces the cooldown time of Hypodermic Arrow and reduces movement speed upon waking."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmsrq338v8420j",
+        "level": 1,
+        "name": {
+          "fr": "Cartouches vampiriques",
+          "en": " Vampiric Rounds"
+        },
+        "icon": "",
+        "description": {
+          "fr": "Augmente les soins procurés par Nuhas. Quête répétable : Cumuler les doses augmentent les soins de Nuhas. Quête répétable : Mettre une attaque de base sur un héros avec le maximum de doses augmente les soins de Nuhas.",
+          "en": "Increases the healing provided by Shrike. Repeatable quest: Accumulating doses increases Shrike' healing. Repeatable quest: Landing a basic attack on a hero with the maximum number of doses increases Shrike' healing."
         },
         "demoYoutubeId": null
       }
