@@ -2849,7 +2849,7 @@ const HEROES = [
           "fr": "Posture retranchée",
           "en": "Armored Stance"
         },
-        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_overwatch.png",
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_aim_down_sights.png",
         "description": {
           "fr": "Augmente les dégâts de Nuhas, et confère de l'armure supplémentaire tant que Tireuse embusquée est active.",
           "en": "Increases Shrike's damage, and grants bonus Armor while Eye of Horus is active."
