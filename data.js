@@ -2981,8 +2981,8 @@ const HEROES = [
           "en": "Sleep"
         },
         "summary": {
-          "fr": "Plus de dégâts et de contrôles.",
-          "en": "More damage and CC."
+          "fr": "Build apportant un peu de suivi même si la cible endormie est réveillé ",
+          "en": "A build that provides some followup even if the sleeping target is awakened"
         },
         "buildCodeTitle": {
           "fr": "A COLLER",
@@ -2991,8 +2991,8 @@ const HEROES = [
         "buildCode": "[T2221331,Ana]",
         "videos": [],
         "updatedAt": {
-          "fr": "",
-          "en": ""
+          "fr": "13 Août 2026",
+          "en": "August 13, 2026"
         },
         "talentSelections": [
           {
