@@ -516,7 +516,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "anduin",
@@ -1045,7 +1046,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "rehgar",
@@ -1466,7 +1468,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "luisaile",
@@ -1788,7 +1791,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "deckard",
@@ -2196,7 +2200,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "alexstrasza",
@@ -2218,11 +2223,17 @@ const HEROES = [
     "forms": [
       {
         "id": "normal",
-        "label": { "fr": "Forme normale", "en": "Normal Form" }
+        "label": {
+          "fr": "Forme normale",
+          "en": "Normal Form"
+        }
       },
       {
         "id": "dragon",
-        "label": { "fr": "Forme dragon", "en": "Dragon Form" }
+        "label": {
+          "fr": "Forme dragon",
+          "en": "Dragon Form"
+        }
       }
     ],
     "spells": [
@@ -2365,12 +2376,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "W Build",
-          "en": "W Build"
+          "fr": "Build recommandé",
+          "en": "Recommanded build"
         },
         "summary": {
-          "fr": "Max de soins en zone.",
-          "en": "Max AoE healing."
+          "fr": "Build pour tout faire tout seul",
+          "en": "Build to do everything on your own"
         },
         "buildCodeTitle": {
           "fr": "A COLLER",
@@ -2379,8 +2390,8 @@ const HEROES = [
         "buildCode": "[T2222222,Alexstrasza]",
         "videos": [],
         "updatedAt": {
-          "fr": "",
-          "en": ""
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
         },
         "talentSelections": [
           {
@@ -2390,33 +2401,42 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jou3tky",
+            "primaryId": "tmw3k2alx03kl9",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jokn8xj",
+            "primaryId": "tmw3k2alx06rs8",
             "alternativeIds": []
           },
           {
             "level": 10,
             "primaryId": "tmrryr6joiests",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmw3k2alx07tu3"
+            ]
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jol2wqz",
-            "alternativeIds": []
+            "primaryId": "tmw3k2alx08vw0",
+            "alternativeIds": [
+              "tmw3k2alx09xy5",
+              "tmrryr6jol2wqz"
+            ]
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6joxdbs0",
-            "alternativeIds": []
+            "primaryId": "tmw3k2alx11bc7",
+            "alternativeIds": [
+              "tmw3k2alx10za2"
+            ]
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jo8uzwx",
-            "alternativeIds": []
+            "primaryId": "tmw3k2alx12de4",
+            "alternativeIds": [
+              "tmw3k2alx14gi6"
+            ]
           }
         ]
       },
@@ -3320,7 +3340,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "isNew": true
+    "isNew": true,
+    "forms": []
   },
   {
     "id": "auriel",
@@ -3730,7 +3751,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "kharazim",
@@ -4059,7 +4081,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "lili",
@@ -4388,7 +4411,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "ltmorales",
@@ -4717,7 +4741,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "malfurion",
@@ -5168,7 +5193,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "stukov",
@@ -5532,7 +5558,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "tyrande",
@@ -5868,7 +5895,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "uther",
@@ -6197,7 +6225,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "whitemane",
@@ -6546,7 +6575,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "lucio",
@@ -7072,7 +7102,8 @@ const HEROES = [
         },
         "demoYoutubeId": "ScMzIvxBSi4"
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "abathur",
@@ -7346,7 +7377,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "alarak",
@@ -7620,7 +7652,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "anubarak",
@@ -7894,7 +7927,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "artanis",
@@ -8168,7 +8202,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "arthas",
@@ -8442,7 +8477,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "azmodan",
@@ -8716,7 +8752,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "blaze",
@@ -8990,7 +9027,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "cassia",
@@ -9264,7 +9302,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "chen",
@@ -9538,7 +9577,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "chogall",
@@ -9812,7 +9852,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "chromie",
@@ -10086,7 +10127,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "deathwing",
@@ -10360,7 +10402,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "dehaka",
@@ -10647,7 +10690,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "diablo",
@@ -10921,7 +10965,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "dva",
@@ -11208,7 +11253,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "etc",
@@ -11482,7 +11528,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "falstad",
@@ -11769,7 +11816,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "fenix",
@@ -12043,7 +12091,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "gall",
@@ -12330,7 +12379,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "garrosh",
@@ -12604,7 +12654,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "gazlowe",
@@ -12878,7 +12929,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "genji",
@@ -13152,7 +13204,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "greymane",
@@ -13426,7 +13479,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "guldan",
@@ -13700,7 +13754,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "hanzo",
@@ -13974,7 +14029,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "hogger",
@@ -14248,7 +14304,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "illidan",
@@ -14522,7 +14579,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "imperius",
@@ -14796,7 +14854,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "jaina",
@@ -15070,7 +15129,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "johanna",
@@ -15344,7 +15404,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "junkrat",
@@ -15618,7 +15679,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "kelthuzad",
@@ -15892,7 +15954,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "kerrigan",
@@ -16166,7 +16229,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "leoric",
@@ -16440,7 +16504,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "liming",
@@ -16714,7 +16779,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "lostvikings",
@@ -17001,7 +17067,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "lunara",
@@ -17288,7 +17355,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "maiev",
@@ -17562,7 +17630,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "malganis",
@@ -17836,7 +17905,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "malthael",
@@ -18110,7 +18180,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "medivh",
@@ -18397,7 +18468,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "mei",
@@ -18671,7 +18743,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "mephisto",
@@ -18945,7 +19018,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "muradin",
@@ -19219,7 +19293,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "murky",
@@ -19493,7 +19568,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "nazeebo",
@@ -19767,7 +19843,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "nova",
@@ -20041,7 +20118,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "orphea",
@@ -20315,7 +20393,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "probius",
@@ -20602,7 +20681,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "qhira",
@@ -20876,7 +20956,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "ragnaros",
@@ -21150,7 +21231,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "raynor",
@@ -21424,7 +21506,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "rexxar",
@@ -21698,7 +21781,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "samuro",
@@ -21959,7 +22043,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "sgthammer",
@@ -22246,7 +22331,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "sonya",
@@ -22520,7 +22606,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "stitches",
@@ -22794,7 +22881,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "sylvanas",
@@ -23068,7 +23156,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "tassadar",
@@ -23342,7 +23431,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "thebutcher",
@@ -23616,7 +23706,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "thrall",
@@ -23890,7 +23981,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "tracer",
@@ -24151,7 +24243,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "tychus",
@@ -24425,7 +24518,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "tyrael",
@@ -24699,7 +24793,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "valeera",
@@ -24973,7 +25068,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "valla",
@@ -25247,7 +25343,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "varian",
@@ -25534,7 +25631,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "xul",
@@ -25808,7 +25906,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "yrel",
@@ -26082,7 +26181,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "zagara",
@@ -26356,7 +26456,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "zarya",
@@ -26630,7 +26731,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "zeratul",
@@ -26904,7 +27006,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   },
   {
     "id": "zuljin",
@@ -27178,7 +27281,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "forms": []
   }
 ];
 
