@@ -2333,7 +2333,7 @@ const HEROES = [
   },
   {
     "id": "ana",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Ana",
       "en": "Ana"
@@ -2352,26 +2352,26 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Pie-grièche",
+          "fr": "Nuhas",
           "en": "Shrike"
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_aim_down_sights.png",
         "description": {
-          "fr": "Empoisonne les ennemis avec ses attaques.",
-          "en": "Poisons enemies with basic attacks."
+          "fr": "Applique du poison sur les ennemis, ce qui la soigne et améliore Fléchette soignante et Fléchette hypodermique. ",
+          "en": "Applies poison to enemies, which heals her and enhances Healing Dart and Sleep Dart. "
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "Fléchette de soins",
+          "fr": "Fléchette soignante",
           "en": "Healing Dart"
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_healing_dart.png",
         "description": {
-          "fr": "Tire un soin en ligne droite.",
-          "en": "Fires a healing dart in a line."
+          "fr": "Tire un soin en ligne droite. Sans effet sur les héros qui ont tout leurs points de vie.",
+          "en": "Fires a healing dart in a line. Has no effect on heroes who have all their health points."
         },
         "demoYoutubeId": ""
       },
@@ -2383,8 +2383,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_biotic_grenade.png",
         "description": {
-          "fr": "Soigne les alliés et empêche les ennemis de se soigner.",
-          "en": "Heals allies and prevents enemy healing."
+          "fr": "Applique un bonus de soin et soigne les alliés et/ou inflige des dégâts et applique un anti-soin sur les ennemis. Temps de recharge réduit si cela ne touche qu'Ana ou aucun adversaire.",
+          "en": "Applies a healing bonus and heals allies and/or deals damage and applies a healing suppression effect to enemies. The cooldown is reduced if it only hits Ana or no opponents."
         },
         "demoYoutubeId": ""
       },
@@ -2409,8 +2409,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_nano_bost.png",
         "description": {
-          "fr": "Booste massivement la magie d'un allié.",
-          "en": "Massively boosts an ally's spell power and cooldowns."
+          "fr": "Rend du mana, améliore la puissance de capacité et réduit les temps de recharge d'un allié. ",
+          "en": "Restores mana, increases spell power, and reduces cooldowns for an ally."
         },
         "demoYoutubeId": ""
       },
@@ -2422,8 +2422,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_overwatch.png",
         "description": {
-          "fr": "Prend position pour tirer à portée illimitée.",
-          "en": "Sets up to fire unlimited range rounds."
+          "fr": "Tire des balles à portée illimité pouvant soigner ou infliger des dégâts. Bloqué par les bâtiments. ",
+          "en": "Fires bullets with unlimited range that can heal or deal damage. Blocked by buildings."
         },
         "demoYoutubeId": ""
       }
@@ -26519,3 +26519,5 @@ const HEROES = [
     ]
   }
 ];
+
+const BATTLEGROUNDS = [];
