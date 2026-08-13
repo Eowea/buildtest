@@ -520,7 +520,7 @@ const HEROES = [
   },
   {
     "id": "anduin",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Anduin",
       "en": "Anduin"
@@ -539,26 +539,26 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Foi désespérée",
+          "fr": "Saut de foi",
           "en": "Leap of Faith"
         },
         "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_leap_of_faith.png",
         "description": {
-          "fr": "Repositionne un allié en danger.",
-          "en": "Reposition an ally in danger."
+          "fr": "Attire instantanément un héros allié vers Anduin, le rendant insensible aux effets de contrôle pendant le trajet. Les attaques de base contre des héros adverses soignent aussi l'allié proche ayant le moins de points de vie.",
+          "en": "Instantly pulls an allied Hero to Anduin, granting them Unstoppable while they travel. Basic Attacks against enemy Heroes also heal the lowest-Health nearby ally."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "Soin éclair",
+          "fr": "Soins rapides",
           "en": "Flash Heal"
         },
         "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_flash_heal.png",
         "description": {
-          "fr": "Soin direct et fiable.",
-          "en": "Direct and reliable heal."
+          "fr": "Incante brièvement pour rendre des points de vie à un héros allié.",
+          "en": "Briefly channels to heal an allied Hero."
         },
         "demoYoutubeId": ""
       },
@@ -570,8 +570,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_divine_star.png",
         "description": {
-          "fr": "Ligne qui soigne et poke.",
-          "en": "A line that heals and pokes."
+          "fr": "Projette une vague de lumière qui inflige des dégâts aux ennemis puis revient à Anduin en soignant les héros alliés sur une trajectoire élargie. Les soins rendus augmentent pour chaque héros adverse touché.",
+          "en": "Sends a wave of light that damages enemies then returns to Anduin, healing allied Heroes in a wider path. Healing increases for each enemy Hero hit."
         },
         "demoYoutubeId": ""
       },
@@ -583,8 +583,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_chastise.png",
         "description": {
-          "fr": "Contrôle linéaire utile pour stopper une entrée.",
-          "en": "Linear CC useful for stopping an engage."
+          "fr": "Projette un trait de lumière qui inflige des dégâts au premier héros adverse touché et l'immobilise.",
+          "en": "Shoves a swell of light forward, dealing damage to the first enemy Hero hit and Rooting them."
         },
         "demoYoutubeId": ""
       },
@@ -596,8 +596,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_holy_word_salvation.png",
         "description": {
-          "fr": "Gros outil défensif de teamfight.",
-          "en": "Massive defensive teamfight tool."
+          "fr": "Après un court délai, canalise pour invoquer la Lumière. Les héros alliés proches récupèrent une grande partie de leurs points de vie et sont protégés.",
+          "en": "After a brief delay, channels to invoke the Light. Nearby allied Heroes heal for a large portion of their Health and are Protected."
         },
         "demoYoutubeId": ""
       },
@@ -609,8 +609,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_light_bomb.png",
         "description": {
-          "fr": "Excellent follow-up sur un allié qui plonge.",
-          "en": "Excellent follow-up on an engaging ally."
+          "fr": "Investit un héros allié de la Lumière. Après un délai, elle explose, endommageant et étourdissant les ennemis proches. La cible obtient aussi un bouclier selon le nombre de héros adverses touchés.",
+          "en": "Imbues an allied Hero with the Light. After a delay, it explodes, damaging and Stunning nearby enemies. The target also gains a Shield based on enemy Heroes hit."
         },
         "demoYoutubeId": ""
       }
@@ -752,16 +752,58 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
+        "id": "tmk7j3and01qx8",
+        "level": 1,
+        "name": {
+          "fr": "Bénédictions égales",
+          "en": "Evenhanded Blessings"
+        },
+        "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_flash_heal.png",
+        "description": {
+          "fr": "Lancer Soins rapides sur une cible différente de la précédente augmente ses soins et rembourse une partie de son temps de recharge.",
+          "en": "Casting Flash Heal on a different target from the last increases its healing and refunds part of its cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmk7j3and02rz3",
+        "level": 1,
+        "name": {
+          "fr": "Mot de pouvoir : Bouclier",
+          "en": "Power Word: Shield"
+        },
+        "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_divine_star.png",
+        "description": {
+          "fr": "Les alliés sur la trajectoire aller d'Étoile divine obtiennent un bouclier. Si Étoile divine touche un héros adverse, Anduin obtient également un bouclier.",
+          "en": "Allies in Divine Star's outgoing path gain a Shield. If Divine Star hits an enemy Hero, Anduin also gains a Shield."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6joy25rj",
         "level": 1,
         "name": {
-          "fr": "Totem Colossal",
-          "en": "Colossal Totem"
+          "fr": "Puits de lumière",
+          "en": "Lightwell"
         },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_earthbindtotem.png",
+        "icon": "assets/heroes/base_spells/anduin/images/talents/storm_ui_icon_anduin_lightwell.png",
         "description": {
-          "fr": "Augmente les points de vie, le rayon et la durée du totem. Permet de le repositionner une nouvelle fois.",
-          "en": "Increases health, radius, and duration of the totem. Can be repositioned once."
+          "fr": "Invoque un Puits de lumière qui soigne périodiquement un héros allié proche jusqu'à ce qu'il disparaisse ou soit réinvoqué. Son temps de recharge est réduit chaque fois qu'Anduin soigne un héros allié.",
+          "en": "Summon a Lightwell that periodically heals a nearby allied Hero until it fades or is recast. Its cooldown is reduced each time Anduin heals an allied Hero."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmk7j3and03sw0",
+        "level": 4,
+        "name": {
+          "fr": "Intégrité morale",
+          "en": "Moral Compass"
+        },
+        "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_divine_star.png",
+        "description": {
+          "fr": "Étoile divine lance des attaques de base aux héros proches de son apogée. Passif : augmente la portée des attaques de base.",
+          "en": "Divine Star fires Basic Attacks at Heroes near its apex. Passive: increases Basic Attack range."
         },
         "demoYoutubeId": null
       },
@@ -769,13 +811,41 @@ const HEROES = [
         "id": "tmrryr6joeu4zo",
         "level": 4,
         "name": {
-          "fr": "Viveterre",
-          "en": "Earthliving Enchant"
+          "fr": "Vague de lumière",
+          "en": "Surge of Light"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg",
+        "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_chastise.png",
         "description": {
-          "fr": "Renforce Salve de guerison pour les héros dont les points de vie sont bas.",
-          "en": "Empowers Chain Heal for heroes at low health."
+          "fr": "Les attaques de base réduisent le temps de recharge de Châtiment. Les attaques de base contre des héros immobilisés par Châtiment lancent une attaque supplémentaire et rendent du mana.",
+          "en": "Basic Attacks reduce Chastise's cooldown. Basic Attacks against Heroes Rooted by Chastise launch an extra attack and restore Mana."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmk7j3and04tv5",
+        "level": 4,
+        "name": {
+          "fr": "Lumière transperçante",
+          "en": "Piercing Light"
+        },
+        "icon": "assets/heroes/base_spells/anduin/images/talents/storm_ui_icon_anduin_chastise_a.png",
+        "description": {
+          "fr": "Châtiment transperce sa cible et frappe un héros supplémentaire. Quête : toucher deux héros avec un seul Châtiment augmente de façon permanente la puissance de capacité, jusqu'à un maximum.",
+          "en": "Chastise pierces to hit an additional Hero. Quest: hitting two Heroes with a single Chastise permanently increases Spell Power, up to a cap."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmk7j3and05uy2",
+        "level": 7,
+        "name": {
+          "fr": "Soins de lien",
+          "en": "Binding Heal"
+        },
+        "icon": "assets/heroes/base_spells/anduin/images/talents/storm_ui_icon_anduin_flash_heal_a.png",
+        "description": {
+          "fr": "Lancer Soins rapides sur un allié rend aussi des points de vie à Anduin.",
+          "en": "Casting Flash Heal on an ally also heals Anduin."
         },
         "demoYoutubeId": null
       },
@@ -783,13 +853,27 @@ const HEROES = [
         "id": "tmrryr6jofjb75",
         "level": 7,
         "name": {
-          "fr": "Totem lié à la terre",
-          "en": "Grounded Totem"
+          "fr": "Rétablissement béni",
+          "en": "Blessed Recovery"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg",
+        "icon": "assets/heroes/base_spells/anduin/images/talents/storm_ui_icon_anduin_blessed_recovery.png",
         "description": {
-          "fr": "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.",
-          "en": "Reduces attack and spell power of enemies in range."
+          "fr": "Si Anduin perd une grande partie de ses points de vie d'un coup, il en récupère une partie en quelques secondes. Ne peut se déclencher qu'une fois toutes les quelques secondes.",
+          "en": "If Anduin loses a large portion of his Health at once, he recovers part of it over a few seconds. Limited to one trigger every several seconds."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmk7j3and06vx9",
+        "level": 7,
+        "name": {
+          "fr": "Prière du désespoir",
+          "en": "Desperate Prayer"
+        },
+        "icon": "assets/heroes/base_spells/anduin/images/talents/storm_ui_icon_anduin_desperate_prayer.png",
+        "description": {
+          "fr": "Nouvelle capacité active : soigne instantanément un héros allié, mais Anduin s'agenouille ensuite, incapable d'agir pendant quelques secondes.",
+          "en": "New active ability: instantly heal an allied Hero, but Anduin kneels afterward, unable to act for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -797,13 +881,27 @@ const HEROES = [
         "id": "tmrryr6joopacq",
         "level": 10,
         "name": {
-          "fr": "Guérison ancestrale",
-          "en": "Ancestral Healing"
+          "fr": "Mot sacré : Salut",
+          "en": "Holy Word: Salvation"
         },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_ancestralhealing.png",
+        "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_holy_word_salvation.png",
         "description": {
-          "fr": "Gros soin monocible, utilisable sur soi.",
-          "en": "Massive single-target heal, usable on self."
+          "fr": "Après un court délai, canalise pour invoquer la Lumière. Les héros alliés proches récupèrent une grande partie de leur maximum de points de vie et sont protégés.",
+          "en": "After a brief delay, channel to invoke the Light. Nearby allied Heroes heal for a large portion of their max Health and are Protected."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmk7j3and07wz4",
+        "level": 10,
+        "name": {
+          "fr": "Bombe de lumière",
+          "en": "Lightbomb"
+        },
+        "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_light_bomb.png",
+        "description": {
+          "fr": "Investit un héros allié de la Lumière. Après un délai, elle explose, endommageant et étourdissant les ennemis proches. La cible obtient aussi un bouclier basé sur le nombre de héros adverses touchés.",
+          "en": "Imbue an allied Hero with the Light. After a delay, it explodes, damaging and Stunning nearby enemies. The target also gains a Shield based on enemy Heroes hit."
         },
         "demoYoutubeId": null
       },
@@ -811,13 +909,55 @@ const HEROES = [
         "id": "tmrryr6jopq9n2",
         "level": 13,
         "name": {
-          "fr": "Raz-de-marée",
-          "en": "Tidal Waves"
+          "fr": "Rapidité du pieux",
+          "en": "Speed of the Pious"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg",
+        "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_divine_star.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Salve de guérison et son coût en mana.",
-          "en": "Reduces Chain Heal cooldown and mana cost."
+          "fr": "Tant qu'Étoile divine s'éloigne, Anduin gagne de la vitesse de déplacement. Chaque allié soigné par Étoile divine à son retour réduit son temps de recharge.",
+          "en": "While Divine Star is traveling out, Anduin gains Movement Speed. Each ally healed by Divine Star on its return reduces its cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmk7j3and08xa1",
+        "level": 13,
+        "name": {
+          "fr": "En avant !",
+          "en": "Push Forward!"
+        },
+        "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_leap_of_faith.png",
+        "description": {
+          "fr": "Infliger des dégâts à un héros adverse procure un cumul de vitesse de déplacement et augmente les soins procurés, pendant quelques secondes.",
+          "en": "Damaging an enemy Hero grants stacking Movement Speed and increases the healing from Pursued by Grace, for a few seconds."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmk7j3and09yb6",
+        "level": 13,
+        "name": {
+          "fr": "Enchantement de bottes - Vitesse du lion",
+          "en": "Enchant Boots - Lion's Speed"
+        },
+        "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_leap_of_faith.png",
+        "description": {
+          "fr": "Gagne un bonus de vitesse de déplacement, quadruplé tant que Saut de foi est disponible. Les alliés attirés par Saut de foi sont soignés au fil du temps.",
+          "en": "Gain bonus Movement Speed, quadrupled while Leap of Faith is available. Allies pulled by Leap of Faith are healed over time."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmk7j3and10zc3",
+        "level": 16,
+        "name": {
+          "fr": "Rénovation",
+          "en": "Renew"
+        },
+        "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_flash_heal.png",
+        "description": {
+          "fr": "Soins rapides soigne aussi au fil du temps. La durée de ce soin est réinitialisée chaque fois qu'Anduin touche un héros adverse avec une attaque de base.",
+          "en": "Flash Heal also heals over time. This heal's duration refreshes each time Anduin hits an enemy Hero with a Basic Attack."
         },
         "demoYoutubeId": null
       },
@@ -825,13 +965,69 @@ const HEROES = [
         "id": "tmrryr6jo7jzzn",
         "level": 16,
         "name": {
-          "fr": "Totem d’emprise de la terre",
-          "en": "Earthgrasp Totem"
+          "fr": "Nova sacrée",
+          "en": "Holy Nova"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg",
+        "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_divine_star.png",
         "description": {
-          "fr": "Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.",
-          "en": "When first spawned, the totem deals AoE damage and heavily slows."
+          "fr": "Quand Anduin rattrape Étoile divine, elle explose, soignant les héros alliés proches et infligeant des dégâts aux ennemis.",
+          "en": "When Anduin catches Divine Star, it explodes, healing nearby allied Heroes and damaging enemies."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmk7j3and11ad8",
+        "level": 16,
+        "name": {
+          "fr": "Glyphe de foi",
+          "en": "Glyph of Faith"
+        },
+        "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_leap_of_faith.png",
+        "description": {
+          "fr": "Saut de foi obtient une deuxième charge.",
+          "en": "Leap of Faith gains a second charge."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmk7j3and12be5",
+        "level": 20,
+        "name": {
+          "fr": "Phare de Hurlevent",
+          "en": "Light of Stormwind"
+        },
+        "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_holy_word_salvation.png",
+        "description": {
+          "fr": "Mot sacré : Salut confère aux héros alliés l'invulnérabilité au lieu de la protection (n'affecte pas Anduin). Canaliser la capacité jusqu'au bout réduit son temps de recharge.",
+          "en": "Holy Word: Salvation grants allied Heroes Invulnerability instead of Protected (does not affect Anduin). Channeling it fully reduces its cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmk7j3and13cf2",
+        "level": 20,
+        "name": {
+          "fr": "Feu intérieur",
+          "en": "Inner Fire"
+        },
+        "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_light_bomb.png",
+        "description": {
+          "fr": "La cible de Bombe de lumière obtient un bonus de vitesse de déplacement et d'armure pendant quelques secondes.",
+          "en": "The target of Lightbomb gains bonus Movement Speed and Armor for a few seconds."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmk7j3and14dg7",
+        "level": 20,
+        "name": {
+          "fr": "Blâme",
+          "en": "Censure"
+        },
+        "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_chastise.png",
+        "description": {
+          "fr": "Châtiment étourdit sa cible et sa durée d'immobilisation est augmentée.",
+          "en": "Chastise Stuns its target and its Root duration is increased."
         },
         "demoYoutubeId": null
       },
@@ -839,13 +1035,13 @@ const HEROES = [
         "id": "tmrryr6jop1tna",
         "level": 20,
         "name": {
-          "fr": "Bénédiction du long-voyant",
-          "en": "Farseer's Blessing"
+          "fr": "Legs de Varian",
+          "en": "Varian's Legacy"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_ancestralhealing.jpg",
+        "icon": "assets/heroes/base_spells/anduin/images/talents/storm_ui_icon_anduin_varians_legacy.png",
         "description": {
-          "fr": "Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.",
-          "en": "A second Ancestral Healing triggers and heals in an AoE."
+          "fr": "Les attaques de base brûlent les ennemis au fil du temps, et Anduin récupère des points de vie proportionnels aux dégâts infligés.",
+          "en": "Basic Attacks burn enemies over time, and Anduin heals for a portion of the damage dealt."
         },
         "demoYoutubeId": null
       }
@@ -2038,8 +2234,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_dragon_queen.png",
         "description": {
-          "fr": "Se transforme en dragon surpuissant pendant un temps, ce qui empare Don de vie, Abondance et Rafale de flammes, et réduit la durée des étourdissements, immobilisations et ralentissements subis.",
-          "en": "Transforms into a massively powerful dragon for a duration, which empowers Gift of Life, Abundance, and Flame Buffet, and reduces the duration of incoming Stuns, Roots, and Slows."
+          "fr": "Après un court délai, se transforme en dragon et gagne des points de vie. Tant qu'elle est transformée, ses capacités sont renforcées, ses attaques de base infligent des dégâts et soignent les alliés proches en cône, et la durée des étourdissements, immobilisations et ralentissements subis est réduite.",
+          "en": "After a brief delay, transforms into a dragon and gains bonus Health. While transformed, her abilities are empowered, her Basic Attacks deal damage and heal nearby allies in a cone, and the duration of incoming Stuns, Roots, and Slows is reduced."
         },
         "demoYoutubeId": ""
       },
@@ -2052,8 +2248,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_gift_of_life.png",
         "description": {
-          "fr": "Sacrifie de la vie pour soigner un allié.",
-          "en": "Sacrifices health to heal an ally."
+          "fr": "Sacrifie une partie de ses points de vie actuels pour en rendre davantage à un héros allié. Passif : augmente la régénération de points de vie d'Alexstrasza.",
+          "en": "Sacrifices a portion of her current Health to heal an allied Hero for more than that amount. Passive: increases Alexstrasza's Health regeneration."
         },
         "demoYoutubeId": ""
       },
@@ -2075,13 +2271,13 @@ const HEROES = [
         "key": "Z",
         "form": "normal",
         "name": {
-          "fr": "Abondance",
+          "fr": "Luxuriance",
           "en": "Abundance"
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_abundance.png",
         "description": {
-          "fr": "Pose une zone qui soigne après un délai.",
-          "en": "Plants an AoE that heals after a delay."
+          "fr": "Plante une graine de vie qui germe après un délai et soigne les héros alliés proches.",
+          "en": "Plants a seed of healing that blooms after a delay, healing nearby allied Heroes."
         },
         "demoYoutubeId": ""
       },
@@ -2089,12 +2285,12 @@ const HEROES = [
         "key": "Z",
         "form": "dragon",
         "name": {
-          "fr": "Préservation",
+          "fr": "Or rouge",
           "en": "Preservation"
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_preservation.png",
         "description": {
-          "fr": "Version d'Abondance en forme dragon : zone et montant de soin fortement augmentés.",
+          "fr": "Version de Luxuriance en forme dragon : zone et montant de soin fortement augmentés.",
           "en": "Dragon form version of Abundance: greatly increased heal area and amount."
         },
         "demoYoutubeId": ""
@@ -2108,8 +2304,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_flame_buffet.png",
         "description": {
-          "fr": "Enflamme un ennemi. Toucher un ennemi enflammé le ralentit.",
-          "en": "Ignites an enemy. Hitting an ignited enemy slows them."
+          "fr": "Lance une boule de feu qui embrase les ennemis touchés, leur infligeant des dégâts au fil du temps. Toucher un ennemi déjà embrasé inflige des dégâts supplémentaires, le ralentit et rembourse le coût en mana.",
+          "en": "Launches a fireball that Burns enemies hit, dealing damage over time. Hitting an already Burning enemy deals bonus damage, Slows them, and refunds the Mana cost."
         },
         "demoYoutubeId": ""
       },
@@ -2117,7 +2313,7 @@ const HEROES = [
         "key": "E",
         "form": "dragon",
         "name": {
-          "fr": "Bourrasque ailée",
+          "fr": "Rafale draconique",
           "en": "Wing Buffet"
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/talents/storm_ui_icon_alexstrasza_wing_buffet.png",
@@ -2135,21 +2331,21 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_life_binder.png",
         "description": {
-          "fr": "Égalise les pourcentages de vie entre elle et un allié.",
-          "en": "Equalizes health percentages between her and an ally."
+          "fr": "Relie la force vitale d'Alexstrasza à celle d'un héros allié, soignant les deux, puis égalise leurs pourcentages de vie sur celui du plus élevé. Reine-dragon augmente sa portée de lancement.",
+          "en": "Binds Alexstrasza's life force with an allied Hero, healing both, then equalizes their Health percentages to the higher one. Dragonqueen increases its cast range."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
         "name": {
-          "fr": "Flammes purificatrices",
+          "fr": "Flammes rédemptrices",
           "en": "Cleansing Flame"
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_cleansing_flame.png",
         "description": {
-          "fr": "S'envole et bombarde la zone.",
-          "en": "Takes to the skies and bombs the area."
+          "fr": "S'envole et largue une série de boules de feu sur la zone ciblée, blessant les ennemis et soignant les alliés proches, avant d'atterrir.",
+          "en": "Takes to the skies and drops a series of fireballs at the targeted location, damaging enemies and healing nearby allies, before landing."
         },
         "demoYoutubeId": ""
       }
@@ -2295,8 +2491,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_gift_of_life.png",
         "description": {
-          "fr": "Au-delà d'un certain seuil de vie, le temps de recharge de Don de vie s'écoule bien plus vite.",
-          "en": "While above a Health threshold, Gift of Life's cooldown recharges much faster."
+          "fr": "Au-delà d'un certain seuil de vie, le temps de recharge de Don de vie s'écoule bien plus vite. Procure aussi un bonus de recharge à Souffle de vie.",
+          "en": "While above a Health threshold, Gift of Life's cooldown recharges much faster. Also grants a recharge rate bonus to Breath of Life."
         },
         "demoYoutubeId": null
       },
@@ -2323,8 +2519,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_flame_buffet.png",
         "description": {
-          "fr": "Réduit le coût en mana de Rafale de flammes. Quête : toucher des héros embrasés avec Rafale de flammes réduit le temps de recharge de Reine-dragon.",
-          "en": "Reduces Flame Buffet's Mana cost. Quest: hitting Burning Heroes with Flame Buffet reduces Dragonqueen's cooldown."
+          "fr": "Réduit le coût en mana de Rafale de flammes. Quête : toucher des héros embrasés avec Rafale de flammes réduit le temps de recharge de Reine-dragon. Récompense mythique : toucher suffisamment de héros supplémentaires sans mourir permet de rafraîchir la durée de Reine-dragon en infligeant des dégâts à un héros adverse.",
+          "en": "Reduces Flame Buffet's Mana cost. Quest: hitting Burning Heroes with Flame Buffet reduces Dragonqueen's cooldown. Mythic Reward: hitting enough additional Heroes without dying refreshes Dragonqueen's duration when damaging an enemy Hero."
         },
         "demoYoutubeId": null
       },
@@ -2379,8 +2575,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/talents/storm_ui_icon_alexstrasza_life_blossom.png",
         "description": {
-          "fr": "Au-delà d'un certain seuil de vie, Don de vie crée une floraison ramassable qui rend le prochain Don de vie gratuit. Passif : réduit le coût en vie de Don de vie.",
-          "en": "While above a Health threshold, Gift of Life creates a collectible blossom that makes her next Gift of Life free. Passive: reduces Gift of Life's Health cost."
+          "fr": "Au-delà d'un certain seuil de vie, Don de vie crée une floraison ramassable qui rend le prochain Don de vie gratuit. Passif : réduit le coût en vie de Don de vie. Souffle de vie retire aussi les ralentissements et immobilisations de sa cible.",
+          "en": "While above a Health threshold, Gift of Life creates a collectible blossom that makes her next Gift of Life free. Passive: reduces Gift of Life's Health cost. Breath of Life also removes Slows and Roots from its target."
         },
         "demoYoutubeId": null
       },
@@ -2505,8 +2701,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_abundance.png",
         "description": {
-          "fr": "Les héros soignés par Luxuriance gagnent un bouclier proportionnel au montant soigné.",
-          "en": "Heroes healed by Abundance gain a Shield based on the amount healed."
+          "fr": "Les héros soignés par Luxuriance ou Or rouge gagnent un bouclier proportionnel au montant soigné.",
+          "en": "Heroes healed by Abundance or Preservation gain a Shield based on the amount healed."
         },
         "demoYoutubeId": null
       },
@@ -2520,8 +2716,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_dragon_queen.png",
         "description": {
-          "fr": "Augmente la durée de Reine-dragon et les soins procurés par ses attaques de base empuissantées.",
-          "en": "Increases Dragonqueen's duration and the healing from her empowered Basic Attacks."
+          "fr": "Augmente les soins procurés par les attaques de base empuissantées de Reine-dragon. Chaque allié ainsi soigné réduit aussi le temps de recharge d'Or rouge.",
+          "en": "Increases the healing from Dragonqueen's empowered Basic Attacks. Each ally healed this way also reduces Preservation's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -2548,8 +2744,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_cleansing_flame.png",
         "description": {
-          "fr": "Soigner ou blesser suffisamment de héros avec Flammes rédemptrices active Reine-dragon à l'atterrissage.",
-          "en": "Healing or damaging enough Heroes with Cleansing Flame activates Dragonqueen upon landing."
+          "fr": "Refonte : si une boule de feu de Flammes rédemptrices touche suffisamment de héros, sa charge n'est pas consommée.",
+          "en": "Rework: if a Fireball from Cleansing Flame hits enough Heroes, that charge is not consumed."
         },
         "demoYoutubeId": null
       },
@@ -2563,8 +2759,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/talents/storm_ui_icon_alexstrasza_dragon_queen_a.png",
         "description": {
-          "fr": "Tant que Reine-dragon est active, les attaques de base d'Alexstrasza appliquent Rafale de flammes.",
-          "en": "While Dragonqueen is active, Alexstrasza's Basic Attacks apply Flame Buffet."
+          "fr": "Tant que Reine-dragon est active, les attaques de base d'Alexstrasza appliquent Rafale de flammes et lui procurent un bonus de points de vie. Les brûlures ainsi appliquées ne comptent pas pour la quête de Fureur du dragon.",
+          "en": "While Dragonqueen is active, Alexstrasza's Basic Attacks apply Flame Buffet and grant her bonus Health. Burns applied this way do not count toward Flames of Fury's quest."
         },
         "demoYoutubeId": null
       },
@@ -2610,8 +2806,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_aim_down_sights.png",
         "description": {
-          "fr": "Applique du poison sur les ennemis, ce qui la soigne et améliore Fléchette soignante et Fléchette hypodermique. ",
-          "en": "Applies poison to enemies, which heals her and enhances Healing Dart and Sleep Dart. "
+          "fr": "Les attaques de base appliquent des Doses cumulables aux ennemis, infligeant des dégâts au fil du temps ; Ana récupère une partie des dégâts infligés par Nuhas. Peut activer Tireuse embusquée pour échanger de la vitesse de déplacement contre plus de portée et de transpercement pour Fléchette soignante et Fléchette hypodermique.",
+          "en": "Basic Attacks apply stacking Doses to enemies, dealing damage over time; Ana recovers a portion of the damage dealt by Shrike. Can activate Aim Down Sights to trade Movement Speed for extra range and piercing on Healing Dart and Sleep Dart."
         },
         "demoYoutubeId": ""
       },
@@ -2623,8 +2819,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_healing_dart.png",
         "description": {
-          "fr": "Tire un soin en ligne droite. Sans effet sur les héros qui ont tout leurs points de vie.",
-          "en": "Fires a healing dart in a line. Has no effect on heroes who have all their health points."
+          "fr": "Tire une fléchette qui soigne le premier héros allié touché. Sans effet sur les héros ayant tous leurs points de vie.",
+          "en": "Fires a dart that heals the first allied Hero hit. Has no effect on Heroes at full Health."
         },
         "demoYoutubeId": ""
       },
@@ -2636,8 +2832,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_biotic_grenade.png",
         "description": {
-          "fr": "Applique un bonus de soin et soigne les alliés et/ou inflige des dégâts et applique un anti-soin sur les ennemis. Temps de recharge réduit si cela ne touche qu'Ana ou aucun adversaire.",
-          "en": "Applies a healing bonus and heals allies and/or deals damage and applies a healing suppression effect to enemies. The cooldown is reduced if it only hits Ana or no opponents."
+          "fr": "Lance une grenade sur la zone ciblée. Les héros alliés touchés sont soignés et reçoivent un bonus de soin pendant quelques secondes. Les ennemis touchés subissent des dégâts et voient leurs soins reçus réduits. Le temps de recharge est réduit si elle ne touche aucun ennemi, ou seulement Ana.",
+          "en": "Tosses a grenade at the target area. Allied Heroes hit are healed and gain bonus healing for a few seconds. Enemies hit take damage and have their healing reduced. Its cooldown is reduced if it hits no enemies, or only Ana."
         },
         "demoYoutubeId": ""
       },
@@ -2649,8 +2845,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_sleep_dart.png",
         "description": {
-          "fr": "Endort le premier ennemi touché.",
-          "en": "Puts the first enemy hit to sleep."
+          "fr": "Tire une fléchette qui endort le premier héros adverse touché, l'empêchant d'agir jusqu'à ce qu'il subisse des dégâts. Ne fonctionne pas sur les véhicules.",
+          "en": "Fires a dart that puts the first enemy Hero hit to Sleep until they take damage. Cannot be used on Vehicles."
         },
         "demoYoutubeId": ""
       },
@@ -2662,8 +2858,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_nano_bost.png",
         "description": {
-          "fr": "Rend du mana, améliore la puissance de capacité et réduit les temps de recharge d'un allié. ",
-          "en": "Restores mana, increases spell power, and reduces cooldowns for an ally."
+          "fr": "Restaure instantanément du mana à un héros allié et lui procure un bonus de puissance de capacité avec une recharge accélérée de ses capacités de base pendant quelques secondes. Ne peut pas être utilisé sur Ana.",
+          "en": "Instantly restores Mana to an allied Hero and grants them bonus Spell Power with faster Basic Ability cooldowns for a few seconds. Cannot be used on Ana."
         },
         "demoYoutubeId": ""
       },
@@ -2675,8 +2871,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_overwatch.png",
         "description": {
-          "fr": "Tire des balles à portée illimité pouvant soigner ou infliger des dégâts. Bloqué par les bâtiments. ",
-          "en": "Fires bullets with unlimited range that can heal or deal damage. Blocked by buildings."
+          "fr": "Adopte une position de tireuse d'élite pour tirer plusieurs balles à portée illimitée qui soignent les alliés et blessent les ennemis, stoppées par les bâtiments sur leur trajectoire. Ana ne peut pas se déplacer tant que la capacité est active.",
+          "en": "Assume a sniping position to fire several rounds with unlimited range that heal allies and damage enemies, colliding with Structures in their path. Ana cannot move while active."
         },
         "demoYoutubeId": ""
       }
@@ -2895,7 +3091,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_sleep_dart.png",
         "description": {
           "fr": "Fléchette hypodermique applique des doses supplémentaires à sa cible, et transperce tous les héros adverses tant que Tireuse embusquée est active.",
-          "en": "Sleep Dart applies extra Doses to its target, and pierces all enemy Heroes while Eye of Horus is active."
+          "en": "Sleep Dart applies extra Doses to its target, and pierces all enemy Heroes while Aim Down Sights is active."
         },
         "demoYoutubeId": null
       },
@@ -3105,7 +3301,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_aim_down_sights.png",
         "description": {
           "fr": "Augmente les dégâts de Nuhas, et confère de l'armure supplémentaire tant que Tireuse embusquée est active.",
-          "en": "Increases Shrike's damage, and grants bonus Armor while Eye of Horus is active."
+          "en": "Increases Shrike's damage, and grants bonus Armor while Aim Down Sights is active."
         },
         "demoYoutubeId": null
       },
@@ -3119,7 +3315,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/ana/images/talents/storm_ui_icon_ana_aim_down_sights_a.png",
         "description": {
           "fr": "Les attaques de base cumulent un bonus de vitesse d'attaque, et la portée des attaques de base augmente tant que Tireuse embusquée est active.",
-          "en": "Basic Attacks stack bonus Attack Speed, and grant extra Basic Attack range while Eye of Horus is active."
+          "en": "Basic Attacks stack bonus Attack Speed, and grant extra Basic Attack range while Aim Down Sights is active."
         },
         "demoYoutubeId": null
       }
