@@ -2578,13 +2578,13 @@ const HEROES = [
         "id": "tmrryr6jorgbfi",
         "level": 4,
         "name": {
-          "fr": "Viveterre",
-          "en": "Earthliving Enchant"
+          "fr": "Condensé biotique",
+          "en": "Biotic Enhancements"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg",
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_biotic_grenade.png",
         "description": {
-          "fr": "Renforce Salve de guerison pour les héros dont les points de vie sont bas.",
-          "en": "Empowers Chain Heal for heroes at low health."
+          "fr": "Augmente la durée du bonus de soin et réduit le temps de recharge de Grenade biotique. ",
+          "en": "Increases the duration of the healing bonus and reduces the cooldown of Biotic Grenade."
         },
         "demoYoutubeId": null
       },
