@@ -2639,7 +2639,7 @@ const HEROES = [
           "fr": "Surdose",
           "en": "Overdose"
         },
-        "icon": "assets/heroes/base_spells/ana/images/talents/storm_ui_icon_ana_overdose.png",
+        "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_sleep_dart.png",
         "description": {
           "fr": "Fléchette hypodermique applique des doses supplémentaires à sa cible, et transperce tous les héros adverses tant que Tireuse embusquée est active.",
           "en": "Sleep Dart applies extra Doses to its target, and pierces all enemy Heroes while Eye of Horus is active."
