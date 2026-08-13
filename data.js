@@ -544,8 +544,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_leap_of_faith.png",
         "description": {
-          "fr": "Attire instantanément un héros allié vers Anduin, le rendant insensible aux effets de contrôle pendant le trajet. Les attaques de base contre des héros adverses soignent aussi l'allié proche ayant le moins de points de vie.",
-          "en": "Instantly pulls an allied Hero to Anduin, granting them Unstoppable while they travel. Basic Attacks against enemy Heroes also heal the lowest-Health nearby ally."
+          "fr": "Attire instantanément un héros allié vers Anduin, le rendant insensible au contrôle pendant le trajet.",
+          "en": "Instantly pulls an allied Hero to Anduin, granting them Unstoppable while they travel."
         },
         "demoYoutubeId": ""
       },
@@ -557,7 +557,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_flash_heal.png",
         "description": {
-          "fr": "Incante brièvement pour rendre des points de vie à un héros allié.",
+          "fr": "Incante brièvement pour soigner un héros allié.",
           "en": "Briefly channels to heal an allied Hero."
         },
         "demoYoutubeId": ""
@@ -570,8 +570,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_divine_star.png",
         "description": {
-          "fr": "Projette une vague de lumière qui inflige des dégâts aux ennemis puis revient à Anduin en soignant les héros alliés sur une trajectoire élargie. Les soins rendus augmentent pour chaque héros adverse touché.",
-          "en": "Sends a wave of light that damages enemies then returns to Anduin, healing allied Heroes in a wider path. Healing increases for each enemy Hero hit."
+          "fr": "Projette une lumière qui blesse les ennemis puis revient en soignant les alliés sur son passage.",
+          "en": "Sends light that damages enemies, then returns healing allies along the way."
         },
         "demoYoutubeId": ""
       },
@@ -583,8 +583,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_chastise.png",
         "description": {
-          "fr": "Projette un trait de lumière qui inflige des dégâts au premier héros adverse touché et l'immobilise.",
-          "en": "Shoves a swell of light forward, dealing damage to the first enemy Hero hit and Rooting them."
+          "fr": "Projette un trait de lumière qui blesse et immobilise le premier héros adverse touché.",
+          "en": "Shoves light forward, damaging and Rooting the first enemy Hero hit."
         },
         "demoYoutubeId": ""
       },
@@ -596,8 +596,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_holy_word_salvation.png",
         "description": {
-          "fr": "Après un court délai, canalise pour invoquer la Lumière. Les héros alliés proches récupèrent une grande partie de leurs points de vie et sont protégés.",
-          "en": "After a brief delay, channels to invoke the Light. Nearby allied Heroes heal for a large portion of their Health and are Protected."
+          "fr": "Canalise pour soigner et protéger les héros alliés proches.",
+          "en": "Channels to heal and Protect nearby allied Heroes."
         },
         "demoYoutubeId": ""
       },
@@ -609,8 +609,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/anduin/images/spells/storm_ui_icon_anduin_light_bomb.png",
         "description": {
-          "fr": "Investit un héros allié de la Lumière. Après un délai, elle explose, endommageant et étourdissant les ennemis proches. La cible obtient aussi un bouclier selon le nombre de héros adverses touchés.",
-          "en": "Imbues an allied Hero with the Light. After a delay, it explodes, damaging and Stunning nearby enemies. The target also gains a Shield based on enemy Heroes hit."
+          "fr": "Investit un allié de Lumière qui explose, blessant et étourdissant les ennemis proches.",
+          "en": "Imbues an ally with Light that explodes, damaging and Stunning nearby enemies."
         },
         "demoYoutubeId": ""
       }
@@ -2234,8 +2234,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_dragon_queen.png",
         "description": {
-          "fr": "Après un court délai, se transforme en dragon et gagne des points de vie. Tant qu'elle est transformée, ses capacités sont renforcées, ses attaques de base infligent des dégâts et soignent les alliés proches en cône, et la durée des étourdissements, immobilisations et ralentissements subis est réduite.",
-          "en": "After a brief delay, transforms into a dragon and gains bonus Health. While transformed, her abilities are empowered, her Basic Attacks deal damage and heal nearby allies in a cone, and the duration of incoming Stuns, Roots, and Slows is reduced."
+          "fr": "Se transforme en dragon, ce qui renforce ses capacités et ses attaques de base.",
+          "en": "Transforms into a dragon, empowering her abilities and Basic Attacks."
         },
         "demoYoutubeId": ""
       },
@@ -2248,8 +2248,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_gift_of_life.png",
         "description": {
-          "fr": "Sacrifie une partie de ses points de vie actuels pour en rendre davantage à un héros allié. Passif : augmente la régénération de points de vie d'Alexstrasza.",
-          "en": "Sacrifices a portion of her current Health to heal an allied Hero for more than that amount. Passive: increases Alexstrasza's Health regeneration."
+          "fr": "Sacrifie des points de vie pour soigner un allié d'un montant supérieur.",
+          "en": "Sacrifices Health to heal an allied Hero for more than the cost."
         },
         "demoYoutubeId": ""
       },
@@ -2262,8 +2262,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_breath_of_life.png",
         "description": {
-          "fr": "Version de Don de vie en forme dragon : temps de recharge fortement réduit et ne coûte plus de vie.",
-          "en": "Dragon form version of Gift of Life: greatly reduced cooldown and no longer costs health."
+          "fr": "Version dragon de Don de vie : temps de recharge très réduit et sans coût en vie.",
+          "en": "Dragon form Gift of Life: greatly reduced cooldown and no Health cost."
         },
         "demoYoutubeId": ""
       },
@@ -2276,8 +2276,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_abundance.png",
         "description": {
-          "fr": "Plante une graine de vie qui germe après un délai et soigne les héros alliés proches.",
-          "en": "Plants a seed of healing that blooms after a delay, healing nearby allied Heroes."
+          "fr": "Plante un soin qui éclot après un délai et soigne les alliés proches.",
+          "en": "Plants healing that blooms after a delay, healing nearby allies."
         },
         "demoYoutubeId": ""
       },
@@ -2290,8 +2290,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_preservation.png",
         "description": {
-          "fr": "Version de Luxuriance en forme dragon : zone et montant de soin fortement augmentés.",
-          "en": "Dragon form version of Abundance: greatly increased heal area and amount."
+          "fr": "Version dragon de Luxuriance : zone et soins fortement augmentés.",
+          "en": "Dragon form Abundance: larger area and much more healing."
         },
         "demoYoutubeId": ""
       },
@@ -2304,8 +2304,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_flame_buffet.png",
         "description": {
-          "fr": "Lance une boule de feu qui embrase les ennemis touchés, leur infligeant des dégâts au fil du temps. Toucher un ennemi déjà embrasé inflige des dégâts supplémentaires, le ralentit et rembourse le coût en mana.",
-          "en": "Launches a fireball that Burns enemies hit, dealing damage over time. Hitting an already Burning enemy deals bonus damage, Slows them, and refunds the Mana cost."
+          "fr": "Lance une boule de feu qui embrase les ennemis touchés.",
+          "en": "Launches a fireball that Burns enemies over time."
         },
         "demoYoutubeId": ""
       },
@@ -2318,8 +2318,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/talents/storm_ui_icon_alexstrasza_wing_buffet.png",
         "description": {
-          "fr": "Version de Rafale de flammes en forme dragon : inflige des dégâts et repousse les ennemis en arc de cercle devant elle.",
-          "en": "Dragon form version of Flame Buffet: deals damage and knocks back enemies in an arc in front of her."
+          "fr": "Version dragon de Rafale de flammes : dégâts et repoussement en arc de cercle.",
+          "en": "Dragon form Flame Buffet: damages and knocks back enemies in an arc."
         },
         "demoYoutubeId": ""
       },
@@ -2331,8 +2331,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_life_binder.png",
         "description": {
-          "fr": "Relie la force vitale d'Alexstrasza à celle d'un héros allié, soignant les deux, puis égalise leurs pourcentages de vie sur celui du plus élevé. Reine-dragon augmente sa portée de lancement.",
-          "en": "Binds Alexstrasza's life force with an allied Hero, healing both, then equalizes their Health percentages to the higher one. Dragonqueen increases its cast range."
+          "fr": "Lie sa force vitale à un allié, soignant les deux et égalisant leurs points de vie.",
+          "en": "Binds her life force to an ally, healing both and equalizing their Health."
         },
         "demoYoutubeId": ""
       },
@@ -2344,8 +2344,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_cleansing_flame.png",
         "description": {
-          "fr": "S'envole et largue une série de boules de feu sur la zone ciblée, blessant les ennemis et soignant les alliés proches, avant d'atterrir.",
-          "en": "Takes to the skies and drops a series of fireballs at the targeted location, damaging enemies and healing nearby allies, before landing."
+          "fr": "S'envole et largue des boules de feu qui blessent les ennemis et soignent les alliés.",
+          "en": "Flies up and drops fireballs that damage enemies and heal allies."
         },
         "demoYoutubeId": ""
       }
@@ -2806,8 +2806,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_aim_down_sights.png",
         "description": {
-          "fr": "Les attaques de base appliquent des Doses cumulables aux ennemis, infligeant des dégâts au fil du temps ; Ana récupère une partie des dégâts infligés par Nuhas. Peut activer Tireuse embusquée pour échanger de la vitesse de déplacement contre plus de portée et de transpercement pour Fléchette soignante et Fléchette hypodermique.",
-          "en": "Basic Attacks apply stacking Doses to enemies, dealing damage over time; Ana recovers a portion of the damage dealt by Shrike. Can activate Aim Down Sights to trade Movement Speed for extra range and piercing on Healing Dart and Sleep Dart."
+          "fr": "Les attaques de base appliquent des Doses qui soignent Ana. Tireuse embusquée augmente la portée et le transpercement de ses fléchettes.",
+          "en": "Basic Attacks apply Doses that heal Ana. Aim Down Sights adds range and piercing to her darts."
         },
         "demoYoutubeId": ""
       },
@@ -2819,8 +2819,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_healing_dart.png",
         "description": {
-          "fr": "Tire une fléchette qui soigne le premier héros allié touché. Sans effet sur les héros ayant tous leurs points de vie.",
-          "en": "Fires a dart that heals the first allied Hero hit. Has no effect on Heroes at full Health."
+          "fr": "Tire une fléchette qui soigne le premier héros allié touché.",
+          "en": "Fires a dart that heals the first allied Hero hit."
         },
         "demoYoutubeId": ""
       },
@@ -2832,8 +2832,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_biotic_grenade.png",
         "description": {
-          "fr": "Lance une grenade sur la zone ciblée. Les héros alliés touchés sont soignés et reçoivent un bonus de soin pendant quelques secondes. Les ennemis touchés subissent des dégâts et voient leurs soins reçus réduits. Le temps de recharge est réduit si elle ne touche aucun ennemi, ou seulement Ana.",
-          "en": "Tosses a grenade at the target area. Allied Heroes hit are healed and gain bonus healing for a few seconds. Enemies hit take damage and have their healing reduced. Its cooldown is reduced if it hits no enemies, or only Ana."
+          "fr": "Lance une grenade qui soigne les alliés et blesse les ennemis, en réduisant leurs soins.",
+          "en": "Tosses a grenade that heals allies and damages enemies, reducing their healing."
         },
         "demoYoutubeId": ""
       },
@@ -2845,8 +2845,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_sleep_dart.png",
         "description": {
-          "fr": "Tire une fléchette qui endort le premier héros adverse touché, l'empêchant d'agir jusqu'à ce qu'il subisse des dégâts. Ne fonctionne pas sur les véhicules.",
-          "en": "Fires a dart that puts the first enemy Hero hit to Sleep until they take damage. Cannot be used on Vehicles."
+          "fr": "Tire une fléchette qui endort le premier héros adverse touché.",
+          "en": "Fires a dart that puts the first enemy Hero hit to Sleep."
         },
         "demoYoutubeId": ""
       },
@@ -2858,8 +2858,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_nano_bost.png",
         "description": {
-          "fr": "Restaure instantanément du mana à un héros allié et lui procure un bonus de puissance de capacité avec une recharge accélérée de ses capacités de base pendant quelques secondes. Ne peut pas être utilisé sur Ana.",
-          "en": "Instantly restores Mana to an allied Hero and grants them bonus Spell Power with faster Basic Ability cooldowns for a few seconds. Cannot be used on Ana."
+          "fr": "Restaure du mana à un allié et lui procure puissance de capacité et recharge accélérée.",
+          "en": "Restores Mana to an ally and grants bonus Spell Power with faster cooldowns."
         },
         "demoYoutubeId": ""
       },
@@ -2871,8 +2871,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ana/images/spells/storm_ui_icon_ana_overwatch.png",
         "description": {
-          "fr": "Adopte une position de tireuse d'élite pour tirer plusieurs balles à portée illimitée qui soignent les alliés et blessent les ennemis, stoppées par les bâtiments sur leur trajectoire. Ana ne peut pas se déplacer tant que la capacité est active.",
-          "en": "Assume a sniping position to fire several rounds with unlimited range that heal allies and damage enemies, colliding with Structures in their path. Ana cannot move while active."
+          "fr": "Tire plusieurs balles à longue portée qui soignent les alliés et blessent les ennemis. Ana ne peut pas se déplacer.",
+          "en": "Fires several long-range rounds that heal allies and damage enemies. Ana cannot move while active."
         },
         "demoYoutubeId": ""
       }
