@@ -2323,8 +2323,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_flame_buffet.png",
         "description": {
-          "fr": "Lance une boule de feu qui embrase les ennemis touchés.",
-          "en": "Launches a fireball that Burns enemies over time."
+          "fr": "Lance une boule de feu qui embrase et ralentit les ennemis touchés.",
+          "en": "Launches a fireball that Burns and Slows enemies hit."
         },
         "demoYoutubeId": ""
       },
