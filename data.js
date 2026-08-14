@@ -3878,18 +3878,18 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Poings de fer",
-          "en": "Iron Fists"
+          "fr": "Build recommandé",
+          "en": "Recommanded build"
         },
         "summary": {
-          "fr": "Soins via l'élimination rapide des cibles.",
-          "en": "Healing through quick target elimination."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T2232122,Kharazim]",
+        "buildCode": "[T2312113,Kharazim]",
         "videos": [],
         "updatedAt": {
           "fr": "14 Août 2026",
@@ -3903,38 +3903,48 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmq8v3khz05y3f",
-            "alternativeIds": []
+            "primaryId": "tmq8v3khz06mqu",
+            "alternativeIds": [
+              "tmq8v3khz05y3f"
+            ]
           },
           {
             "level": 7,
-            "primaryId": "tmq8v3khz09qn6",
+            "primaryId": "tmq8v3khz07735",
             "alternativeIds": []
           },
           {
             "level": 10,
             "primaryId": "tmq8v3khz11cz2",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmq8v3khz10ocb"
+            ]
           },
           {
             "level": 13,
             "primaryId": "tmq8v3khz12bh2",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmq8v3khz14c43"
+            ]
           },
           {
             "level": 16,
-            "primaryId": "tmq8v3khz16muk",
-            "alternativeIds": []
+            "primaryId": "tmq8v3khz154yr",
+            "alternativeIds": [
+              "tmq8v3khz16muk"
+            ]
           },
           {
             "level": 20,
-            "primaryId": "tmq8v3khz193gr",
-            "alternativeIds": []
+            "primaryId": "tmq8v3khz208te",
+            "alternativeIds": [
+              "tmq8v3khz226ex"
+            ]
           }
         ]
       },
       {
-        "enabled": true,
+        "enabled": false,
         "order": 2,
         "label": {
           "fr": "Transcendance",
