@@ -727,7 +727,15 @@ async function checkTokenAccess(){
 }
 async function getFile(path){
   const data = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}?ref=${BRANCH}`);
-  return { content: b64DecodeUnicode(data.content.replace(/\n/g,'')), sha: data.sha };
+  // L'API "contents" ne renvoie le contenu que jusqu'à 1 Mo : au-delà elle répond
+  // encoding:"none" avec un contenu vide (data.js a dépassé cette taille). On repasse
+  // alors par l'API "blobs", qui accepte jusqu'à 100 Mo, via le sha déjà renvoyé ici.
+  let b64 = data.content;
+  if (data.encoding !== 'base64' || !b64){
+    const blob = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/git/blobs/${data.sha}`);
+    b64 = blob.content;
+  }
+  return { content: b64DecodeUnicode(b64.replace(/\n/g,'')), sha: data.sha };
 }
 async function putFile(path, contentStr, sha, message, authorName){
   const body = { message, content: b64EncodeUnicode(contentStr), branch: BRANCH };
@@ -757,7 +765,14 @@ async function loadAssetTree(force){
    ========================================================================= */
 function parseDataFile(jsText){
   const runner = new Function(jsText + '\nreturn { APP_CONFIG, STREAMER_CONFIG, HEROES, BATTLEGROUNDS };');
-  return runner();
+  const parsed = runner();
+  // Un contenu vide ne lèverait pas d'erreur ici : les identifiants retomberaient sur les
+  // variables globales du panneau (null au premier chargement), et l'échec ne se verrait
+  // que plus loin sous la forme d'un obscur "Cannot read properties of null".
+  if (!Array.isArray(parsed.HEROES)){
+    throw new Error('data.js n\'a pas pu être récupéré (contenu vide ou illisible).');
+  }
+  return parsed;
 }
 function serializeDataFile(){
   return [
