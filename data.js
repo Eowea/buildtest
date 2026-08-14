@@ -4542,7 +4542,7 @@ const HEROES = [
           "fr": "Boissons gratuites",
           "en": "Free Drinks"
         },
-        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_healingbrew_a.png",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_healingbrew.png",
         "description": {
           "fr": "Quand Infusion requinquante soigne un héros sous 50% de vie, rembourse son coût en mana et réduit son temps de recharge.",
           "en": "When Healing Brew heals a Hero below 50% Health, its cooldown is reduced and its Mana cost is refunded."
