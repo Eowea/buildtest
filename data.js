@@ -4316,7 +4316,7 @@ const HEROES = [
     "role": "Healer",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_lili.png",
     "headline": {
-      "fr": "Soigneuse esquiveuse, aveugle les attaquants.",
+      "fr": "Soigneuse mobile, aveugle les adversaires.",
       "en": "Slippery healer, blinds attackers."
     },
     "gameplay": {
