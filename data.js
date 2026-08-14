@@ -23675,10 +23675,10 @@ const HEROES = [
         "id": "tmw9c4hmr167vz",
         "level": 16,
         "name": {
-          "fr": "Bourreau",
+          "fr": "Exécuteur",
           "en": "Executioner"
         },
-        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_siegemode_var2.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
         "description": {
           "fr": "Attaquer un héros ralenti, immobilisé ou étourdi augmente les dégâts des attaques de base pendant quelques secondes.",
           "en": "Attacking a Slowed, Rooted, or Stunned Hero increases Basic Attack damage for a few seconds."
@@ -23689,10 +23689,10 @@ const HEROES = [
         "id": "tmw9c4hmr17xrs",
         "level": 16,
         "name": {
-          "fr": "Massacreuse de géants",
+          "fr": "Tueur de géants",
           "en": "Giant Killer"
         },
-        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_siegemode_var1.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_searing.png",
         "description": {
           "fr": "Les attaques de base infligent des dégâts supplémentaires proportionnels aux points de vie maximum de la cible.",
           "en": "Basic Attacks deal bonus damage based on the target's maximum Health."
@@ -23703,13 +23703,13 @@ const HEROES = [
         "id": "tmw9c4hmr1803u",
         "level": 20,
         "name": {
-          "fr": "BFG orbital",
+          "fr": "Canon brutal orbital",
           "en": "Orbital BFG"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_bluntforcegun.png",
         "description": {
-          "fr": "Le missile de Canon brutal fait le tour de la carte et revient frapper une seconde fois.",
-          "en": "Blunt Force Gun's missile circles the map and strikes a second time."
+          "fr": "Le missile de Canon brutal fait la trajectoire à l'infini.",
+          "en": "Blunt Force Gun's missile follows a trajectory to infinity."
         },
         "demoYoutubeId": null
       },
@@ -23731,7 +23731,7 @@ const HEROES = [
         "id": "tmw9c4hmr20c6a",
         "level": 20,
         "name": {
-          "fr": "Mines à shrapnel",
+          "fr": "Boîtes à mitraille",
           "en": "Shrapnel Mines"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_spidermines.png",
