@@ -6522,8 +6522,8 @@ const HEROES = [
       "en": "Tanky healer, armor and crowd control."
     },
     "gameplay": {
-      "fr": "Uther joue en mêlée, encaisse les dégâts, étourdit les ennemis et confère une armure vitale avec ses soins.",
-      "en": "Uther plays in melee, absorbs damage, stuns enemies, and grants vital armor with his heals."
+      "fr": "Uther joue en mêlée, encaisse les dégâts, étourdit les ennemis et confère de l'armure avec ses soins.",
+      "en": "Uther plays in melee, absorbs damage, stuns enemies, and grants armor with his heals."
     },
     "spells": [
       {
@@ -6632,6 +6632,10 @@ const HEROES = [
       {
         "fr": "N'hésite pas à mourir pour sauver ton équipe.",
         "en": "Do not hesitate to die to save your team as a ghost."
+      },
+      {
+        "fr": "Utilise ton Bouclier Divin sur les dégâts, et pas quand ton allié est sur le point de mourir.",
+        "en": "Use your Divine Shield to block damage, not when your ally is about to die."
       }
     ],
     "builds": [
@@ -6639,18 +6643,18 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build Q",
-          "en": "Q Build"
+          "fr": "Build recommandé",
+          "en": "Recommanded build"
         },
         "summary": {
-          "fr": "Soins massifs et réduction de CD sur soi.",
-          "en": "Massive heals and self-CD reduction."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "Build qui passe partout, peu importe le mode de jeu."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111114,Uther]",
+        "buildCode": "[T2231234,Uther]",
         "videos": [],
         "updatedAt": {
           "fr": "14 Août 2026",
@@ -6659,43 +6663,54 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmv7k4uth01e3e",
+            "primaryId": "tmv7k4uth02924",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmv7k4uth04wz6",
+            "primaryId": "tmv7k4uth05bvs",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmv7k4uth073ty",
-            "alternativeIds": []
+            "primaryId": "tmv7k4uth0920h",
+            "alternativeIds": [
+              "tmv7k4uth08dg7"
+            ]
           },
           {
             "level": 10,
             "primaryId": "tmv7k4uth10kza",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmv7k4uth11t30"
+            ]
           },
           {
             "level": 13,
-            "primaryId": "tmv7k4uth12up2",
-            "alternativeIds": []
+            "primaryId": "tmv7k4uth13waf",
+            "alternativeIds": [
+              "tmv7k4uth12up2"
+            ]
           },
           {
             "level": 16,
-            "primaryId": "tmv7k4uth1564j",
-            "alternativeIds": []
+            "primaryId": "tmv7k4uth17avh",
+            "alternativeIds": [
+              "tmv7k4uth1564j"
+            ]
           },
           {
             "level": 20,
             "primaryId": "tmv7k4uth21nic",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmv7k4uth18s5m",
+              "tmv7k4uth20ezi"
+            ]
           }
         ]
       },
       {
-        "enabled": true,
+        "enabled": false,
         "order": 2,
         "label": {
           "fr": "Build Tank",
