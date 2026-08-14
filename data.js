@@ -20703,7 +20703,8 @@ const HEROES = [
             "primaryId": "tmh3n8naz20fvs",
             "alternativeIds": [
               "tmh3n8naz18d5n",
-              "tmh3n8naz21id4"
+              "tmh3n8naz21id4",
+              "tmh3n8naz19on4"
             ]
           }
         ]
