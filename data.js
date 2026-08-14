@@ -2787,8 +2787,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/talents/storm_ui_icon_alexstrasza_dragon_queen_a.png",
         "description": {
-          "fr": "En Reine-dragon, les attaques de base appliquent Rafale de flammes et procurent un bonus de vie. Ne compte pas pour la quête de Fureur du dragon.",
-          "en": "While in Dragonqueen, Basic Attacks apply Flame Buffet and grant bonus Health. Doesn't count toward Flames of Fury's quest."
+          "fr": "Confère un bonus passif de points de vie, et fait appliquer Rafale de flammes par les attaques de base tant que Reine-dragon est active. Ne compte pas pour la quête de Fureur du dragon.",
+          "en": "Grants a passive Health bonus, and while Dragonqueen is active, Basic Attacks also apply Flame Buffet. Doesn't count toward Flames of Fury's quest."
         },
         "demoYoutubeId": null
       },
