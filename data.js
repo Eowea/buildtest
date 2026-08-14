@@ -6634,7 +6634,7 @@ const HEROES = [
         "en": "Do not hesitate to die to save your team as a ghost."
       },
       {
-        "fr": "Utilise ton Bouclier Divin quand ton allié saute dedans ou qu'il va prendre d'énormes dégâts ou contrôles, et pas il est sur le point de mourir.",
+        "fr": "Utilise ton Bouclier Divin quand ton allié saute dedans ou qu'il va prendre d'énormes dégâts ou contrôles, et pas quand il est sur le point de mourir.",
         "en": "Use your Divine Shield when your ally jumps into it or is about to take massive damage or be subjected to crowd control, not when he is about to die."
       }
     ],
