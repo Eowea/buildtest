@@ -20536,7 +20536,7 @@ const HEROES = [
     "id": "nazeebo",
     "enabled": true,
     "name": {
-      "fr": "Nazeebo",
+      "fr": "Nasibo",
       "en": "Nazeebo"
     },
     "role": "AssassinDistance",
@@ -20546,7 +20546,7 @@ const HEROES = [
       "en": "Area mage who becomes monstrous late game."
     },
     "gameplay": {
-      "fr": "Nazeebo accumule des points de vie en tuant des sbires grâce à sa quête, et couvre le terrain d'araignées, de crapauds et de murs de zombies.",
+      "fr": "Nasibo accumule des points de vie en tuant des sbires grâce à sa quête, et couvre le terrain d'araignées, de crapauds et de murs de zombies.",
       "en": "Nazeebo stacks Health by killing minions through his quest and covers the ground with spiders, toads, and zombie walls."
     },
     "spells": [
@@ -20558,7 +20558,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_voodooritual.png",
         "description": {
-          "fr": "Les attaques de base et les capacités de Nazeebo empoisonnent les ennemis non-héroïques. Quête : un sbire empoisonné qui meurt donne à Nazeebo des points de vie et de mana permanents.",
+          "fr": "Les attaques de base et les capacités de Nasibo empoisonnent les ennemis non-héroïques. Quête : un sbire empoisonné qui meurt donne à Nasibo des points de vie et de mana permanents.",
           "en": "Nazeebo's Basic Attacks and Abilities poison Non-Heroic enemies. Quest: a poisoned Minion that dies permanently grants Nazeebo Health and Mana."
         },
         "demoYoutubeId": ""
@@ -20623,7 +20623,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_ravenousspirit.png",
         "description": {
-          "fr": "Canalise un esprit qui inflige d'énormes dégâts autour de lui. Immobilise Nazeebo pendant sa durée.",
+          "fr": "Canalise un esprit qui inflige d'énormes dégâts autour de lui. Immobilise Nasibo pendant sa durée.",
           "en": "Channels a spirit that deals massive damage around it. Roots Nazeebo in place for its duration."
         },
         "demoYoutubeId": ""
@@ -20743,7 +20743,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_voodooritual_a.png",
         "description": {
-          "fr": "Augmente la portée des capacités de base de Nazeebo. Accumuler des charges de Rituel vaudou finit par augmenter sa puissance de capacité.",
+          "fr": "Augmente la portée des capacités de base de Nasibo. Accumuler des charges de Rituel vaudou finit par augmenter sa puissance de capacité.",
           "en": "Increases the range of Nazeebo's Basic Abilities. Stacking Voodoo Ritual charges eventually increases his Spell Power."
         },
         "demoYoutubeId": null
@@ -20757,7 +20757,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_corpsespider.png",
         "description": {
-          "fr": "Les araignées nécrophages rendent des points de vie et de mana à Nazeebo quand elles touchent un héros adverse.",
+          "fr": "Les araignées nécrophages rendent des points de vie et de mana à Nasibo quand elles touchent un héros adverse.",
           "en": "Corpse Spiders restore Health and Mana to Nazeebo when they hit an enemy Hero."
         },
         "demoYoutubeId": null
@@ -20785,7 +20785,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_voodooritual_a.png",
         "description": {
-          "fr": "Si un ennemi meurt empoisonné par Rituel vaudou, Nazeebo récupère des points de vie et de mana. Passif : les victimes confèrent des charges de Rituel vaudou.",
+          "fr": "Si un ennemi meurt empoisonné par Rituel vaudou, Nasibo récupère des points de vie et de mana. Passif : les victimes confèrent des charges de Rituel vaudou.",
           "en": "If an enemy dies while poisoned by Voodoo Ritual, Nazeebo recovers Health and Mana. Passive: takedowns grant Voodoo Ritual stacks."
         },
         "demoYoutubeId": null
@@ -20855,7 +20855,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_ravenousspirit.png",
         "description": {
-          "fr": "Canalise un esprit qui inflige d'énormes dégâts autour de lui. Immobilise Nazeebo pendant sa durée.",
+          "fr": "Canalise un esprit qui inflige d'énormes dégâts autour de lui. Immobilise Nasibo pendant sa durée.",
           "en": "Channels a spirit that deals massive damage around it. Roots Nazeebo in place for its duration."
         },
         "demoYoutubeId": null
@@ -20897,7 +20897,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_voodooritual.png",
         "description": {
-          "fr": "Nouvelle capacité active : place Nazeebo en stase et le rend invulnérable pendant quelques secondes.",
+          "fr": "Nouvelle capacité active : place Nasibo en stase et le rend invulnérable pendant quelques secondes.",
           "en": "New active ability: places Nazeebo in Stasis and grants Invulnerability for a few seconds."
         },
         "demoYoutubeId": null
@@ -20939,7 +20939,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_soulharvest.png",
         "description": {
-          "fr": "Nouvelle capacité active : augmente les points de vie et la puissance de capacité de Nazeebo selon le nombre d'ennemis proches.",
+          "fr": "Nouvelle capacité active : augmente les points de vie et la puissance de capacité de Nasibo selon le nombre d'ennemis proches.",
           "en": "New active ability: increases Nazeebo's Health and Spell Power based on the number of nearby enemies."
         },
         "demoYoutubeId": null
