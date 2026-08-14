@@ -798,7 +798,10 @@ function removeForm(idx, formIdx){
   const removed = hero.forms[formIdx];
   hero.forms.splice(formIdx, 1);
   if (removed){
-    (hero.spells||[]).forEach(sp => { if (sp.form === removed.id) sp.form = ''; });
+    (hero.spells||[]).forEach(sp => {
+      if (Array.isArray(sp.form)) sp.form = sp.form.filter(f => f !== removed.id);
+      else if (sp.form === removed.id) sp.form = '';
+    });
     (hero.talentPool||[]).forEach(p => { if (p.form === removed.id) p.form = ''; });
   }
   markDirty(); renderHeroPanel();

@@ -10991,7 +10991,7 @@ const HEROES = [
   },
   {
     "id": "deathwing",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Aile de Mort",
       "en": "Deathwing"
@@ -11010,78 +11010,111 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Aspect de la mort",
+          "fr": "Aspect de la Mort",
           "en": "Aspect of Death"
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_aspect_of_death.png",
         "description": {
-          "fr": "Imblocable en permanence, mais insensible aux soins alliés.",
-          "en": "Permanently Unstoppable, but immune to allied healing."
+          "fr": "Aile de mort dispose de plaques d'armure qui se perdent au fil des dégâts subis et se restaurent en utilisant Vol draconique. Il est aussi imblocable en permanence, inflige des dégâts de sort bonus aux héros, mais ignore tous les effets bénéfiques de ses alliés.",
+          "en": "Deathwing has Armor Plates that break off as he takes damage and are restored by using Dragonflight. He is also permanently Unstoppable and deals bonus Spell Damage to Heroes, but ignores all beneficial effects from his allies."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
+        "form": ["melee", "ranged"],
         "name": {
-          "fr": "Flamme en fusion",
+          "fr": "Flamme de la fournaise",
           "en": "Molten Flame"
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_molten_flame.png",
         "description": {
-          "fr": "Souffle continu de flammes devant toi.",
-          "en": "Continuous stream of flame in front of you."
+          "fr": "Souffle un torrent de flammes continu devant lui, au prix d'énergie.",
+          "en": "Breathes a continuous stream of flame in front of him, costing Energy over time."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "Z",
+        "form": "melee",
         "name": {
           "fr": "Incinération",
           "en": "Incinerate"
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_incinerate.png",
         "description": {
-          "fr": "Dégâts de zone autour de toi (mare de lave en forme Briseur de monde).",
-          "en": "AoE damage around you (lava pool in World Breaker form)."
+          "fr": "Bat des ailes pour infliger des dégâts à tous les ennemis proches.",
+          "en": "Flaps his wings, dealing damage to all nearby enemies."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "Z",
+        "form": "ranged",
+        "name": {
+          "fr": "Explosion de lave",
+          "en": "Lava Burst"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_lava_burst.png",
+        "description": {
+          "fr": "Version Brise-monde d'Incinération : crée une flaque de lave qui blesse et ralentit les ennemis.",
+          "en": "World Breaker version of Incinerate: creates a lava pool that damages and Slows enemies."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "E",
+        "form": "melee",
         "name": {
-          "fr": "Assaut",
+          "fr": "Offensive",
           "en": "Onslaught"
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_onslaught.png",
         "description": {
-          "fr": "Bondit en avant en mordant les ennemis.",
-          "en": "Lunges forward, biting enemies."
+          "fr": "Plonge dans une direction en blessant et ralentissant les ennemis, puis mord à la fin de sa charge pour des dégâts supplémentaires.",
+          "en": "Lunges in a direction, damaging and Slowing enemies, then bites at the end for additional damage."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "E",
+        "form": "ranged",
+        "name": {
+          "fr": "Brise-terre",
+          "en": "Earth Shatter"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_earth_shatter.png",
+        "description": {
+          "fr": "Version Brise-monde d'Offensive : inflige des dégâts et étourdit les ennemis sur deux lignes.",
+          "en": "World Breaker version of Onslaught: deals damage and Stuns enemies in two lines."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
+        "form": ["melee", "ranged"],
         "name": {
           "fr": "Cataclysme",
           "en": "Cataclysm"
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_cataclysm.png",
         "description": {
-          "fr": "Survole une ligne et laisse un sol brûlant.",
-          "en": "Flies across a line, leaving scorched ground."
+          "fr": "Survole une ligne en infligeant des dégâts à l'impact, puis laisse une zone de terre brûlée qui blesse les ennemis.",
+          "en": "Flies across a line, dealing impact damage, then leaves scorched ground that damages enemies."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "W",
+        "form": "flight",
         "name": {
           "fr": "Vol draconique",
           "en": "Dragonflight"
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_mount.png",
         "description": {
-          "fr": "S'envole pour se régénérer et se déplacer sur la carte.",
-          "en": "Fly into the sky to regenerate and reposition across the map."
+          "fr": "S'envole pour se déplacer rapidement sur la carte et restaurer ses plaques d'armure selon ses points de vie. En atterrissant, inflige des dégâts en zone et fait basculer Aile de mort entre ses formes Destructeur et Brise-monde.",
+          "en": "Takes flight to quickly reposition across the map and restore Armor Plates based on his Health. Landing deals area damage and switches Deathwing between his Destroyer and World Breaker forms."
         },
         "demoYoutubeId": ""
       }
@@ -11116,46 +11149,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Deathwing]",
+        "buildCode": "[T3231313,Deathwing]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jon5uul",
+            "primaryId": "tmz6d1dw03e46",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6joaj5gz",
+            "primaryId": "tmz6d1dw05pgg",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jox1emg",
+            "primaryId": "tmz6d1dw099pk",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jotz521",
+            "primaryId": "tmz6d1dw10gvg",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jo6ley3",
+            "primaryId": "tmz6d1dw14tmy",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6joa9gj8",
+            "primaryId": "tmz6d1dw159dq",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6joqsuyq",
+            "primaryId": "tmz6d1dw2033u",
             "alternativeIds": []
           }
         ]
@@ -11164,105 +11197,309 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jon5uul",
+        "id": "tmz6d1dw010v7",
         "level": 1,
         "name": {
-          "fr": "Dragon Soul",
+          "fr": "Âme de dragon",
           "en": "Dragon Soul"
         },
-        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_heat_wave.png",
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_incinerate.png",
         "description": {
-          "fr": "Destroyer: Incinerate heals Deathwing for 75% of the damage dealt to enemy Heroes.  World Breaker: Lava Burst's explosion damage heals Deathwing for 150% of the damage dealt to enemy Heroes.",
-          "en": "Destroyer: Incinerate heals Deathwing for 75% of the damage dealt to enemy Heroes.  World Breaker: Lava Burst's explosion damage heals Deathwing for 150% of the damage dealt to enemy Heroes."
+          "fr": "Incinération (ou Explosion de lave en Brise-monde) soigne Aile de mort selon les dégâts infligés aux héros adverses.",
+          "en": "Incinerate (or Lava Burst in World Breaker) heals Deathwing based on the damage dealt to enemy Heroes."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joaj5gz",
+        "id": "tmz6d1dw02d8e",
+        "level": 1,
+        "name": {
+          "fr": "Sang de la fournaise",
+          "en": "Molten Blood"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_aspect_of_death_alt1.png",
+        "description": {
+          "fr": "Tant qu'Aile de mort conserve suffisamment de plaques d'armure, il régénère des points de vie en continu.",
+          "en": "While Deathwing keeps enough Armor Plates, he continuously regenerates Health."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmz6d1dw03e46",
+        "level": 1,
+        "name": {
+          "fr": "Puissance draconique",
+          "en": "Draconic Might"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_aspect_of_death.png",
+        "description": {
+          "fr": "Les attaques de base d'Aile de mort contre des héros le soignent. Perdre une plaque d'armure le rend brièvement insensible aux dégâts.",
+          "en": "Deathwing's Basic Attacks against Heroes heal him. Losing an Armor Plate briefly makes him immune to damage."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmz6d1dw04qom",
         "level": 4,
         "name": {
           "fr": "Infernus",
           "en": "Infernus"
         },
-        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_molten_flame.png",
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_molten_flame.png",
         "description": {
-          "fr": "Increase the damage of Molten Flame against enemy Heroes by 25%.  Increase this damage bonus to 75% when Molten Flame is cast at 75 Energy or higher.",
-          "en": "Increase the damage of Molten Flame against enemy Heroes by 25%.  Increase this damage bonus to 75% when Molten Flame is cast at 75 Energy or higher."
+          "fr": "Augmente les dégâts de Flamme de la fournaise contre les héros adverses, encore plus avec suffisamment d'énergie.",
+          "en": "Increases Molten Flame's damage against enemy Heroes, even more with enough Energy."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jox1emg",
+        "id": "tmz6d1dw05pgg",
+        "level": 4,
+        "name": {
+          "fr": "Vague de chaleur",
+          "en": "Heat Wave"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_heat_wave.png",
+        "description": {
+          "fr": "Destructeur : toucher un héros avec Incinération applique des dégâts continus cumulables aux ennemis proches. Brise-monde : augmente les dégâts d'Explosion de lave.",
+          "en": "Destroyer: hitting a Hero with Incinerate applies stacking damage over time to nearby enemies. World Breaker: increases Lava Burst's damage."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmz6d1dw06j2d",
+        "level": 4,
+        "name": {
+          "fr": "Ire du dragon",
+          "en": "Dragon's Ire"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_aspect_of_death_alt1.png",
+        "description": {
+          "fr": "Tant qu'Aile de mort a peu de plaques d'armure, ses dégâts sont augmentés.",
+          "en": "While Deathwing has few Armor Plates, his damage is increased."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmz6d1dw07xfa",
         "level": 7,
         "name": {
-          "fr": "Firestorm",
+          "fr": "Tempête de flammes",
           "en": "Firestorm"
         },
         "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_firestorm.png",
         "description": {
-          "fr": "Reduce the cooldown of Deathwing's landing Abilities by 2 seconds.  When Deathwing lands, he drops 7 meteors near the landing area, dealing 70 (+4% per level) damage to enemies hit. Heroes hit by the meteors reduce Dragonflight's cooldown by 25 seconds.  Meteors prioritize landing on Heroes, otherwise they fall randomly in the area.",
-          "en": "Reduce the cooldown of Deathwing's landing Abilities by 2 seconds.  When Deathwing lands, he drops 7 meteors near the landing area, dealing 70 (+4% per level) damage to enemies hit. Heroes hit by the meteors reduce Dragonflight's cooldown by 25 seconds.  Meteors prioritize landing on Heroes, otherwise they fall randomly in the area."
+          "fr": "Réduit le temps de recharge des capacités d'atterrissage. À l'atterrissage, Aile de mort fait pleuvoir des météores qui privilégient les héros.",
+          "en": "Reduces the cooldown of Deathwing's landing Abilities. On landing, he rains down meteors that prioritize Heroes."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jotz521",
+        "id": "tmz6d1dw085ah",
+        "level": 7,
+        "name": {
+          "fr": "Plongeon mortel",
+          "en": "Death Drop"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_deathdrop.png",
+        "description": {
+          "fr": "Infliger des dégâts d'atterrissage à un héros réduit son armure anti-sort et le temps de recharge des capacités de base d'Aile de mort.",
+          "en": "Dealing landing damage to a Hero reduces their Spell Armor and Deathwing's Basic Ability cooldowns."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmz6d1dw099pk",
+        "level": 7,
+        "name": {
+          "fr": "Déluge",
+          "en": "Skyfall"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_skyfall.png",
+        "description": {
+          "fr": "Nouvelle capacité active : après Vol draconique, fait pleuvoir des météores n'importe où en vue, avec plusieurs charges. Soigne Aile de mort si un héros est touché.",
+          "en": "New active ability: after Dragonflight, rains down meteors anywhere in vision, with multiple charges. Heals Deathwing if a Hero is hit."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmz6d1dw10gvg",
         "level": 10,
         "name": {
-          "fr": "Burn Beneath My Shadow",
+          "fr": "Venez brûler sous mon aile",
           "en": "Burn Beneath My Shadow"
         },
-        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_cataclysm.png",
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_cataclysm.png",
         "description": {
-          "fr": "When an enemy Fort or Keep is destroyed the cooldown of Cataclysm is reset. Cataclysm's periodic damage is increased by 80%.",
-          "en": "When an enemy Fort or Keep is destroyed the cooldown of Cataclysm is reset. Cataclysm's periodic damage is increased by 80%."
+          "fr": "Détruire un fort ou un bastion réinitialise le temps de recharge de Cataclysme, dont les dégâts périodiques sont augmentés.",
+          "en": "Destroying a Fort or Keep resets Cataclysm's cooldown, and increases its periodic damage."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo6ley3",
+        "id": "tmz6d1dw1116f",
+        "level": 10,
+        "name": {
+          "fr": "Rugissement puissant",
+          "en": "Bellowing Roar"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_bellowing_roar.png",
+        "description": {
+          "fr": "Nouvelle capacité active : inflige des dégâts aux héros proches et les force à fuir.",
+          "en": "New active ability: deals damage to nearby Heroes and forces them to Fear."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmz6d1dw12y9m",
         "level": 13,
         "name": {
-          "fr": "Wicked Inferno",
+          "fr": "Inferno funeste",
           "en": "Wicked Inferno"
         },
-        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_molten_flame.png",
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_molten_flame.png",
         "description": {
-          "fr": "Molten Flame's Energy cost per second is reduced by 10.  After using Molten Flame, Deathwing gains 15 Energy over 3 seconds.",
-          "en": "Molten Flame's Energy cost per second is reduced by 10.  After using Molten Flame, Deathwing gains 15 Energy over 3 seconds."
+          "fr": "Réduit le coût en énergie de Flamme de la fournaise, et en rend après son utilisation.",
+          "en": "Reduces Molten Flame's Energy cost, and refunds some after using it."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joa9gj8",
+        "id": "tmz6d1dw13njj",
+        "level": 13,
+        "name": {
+          "fr": "Anéantissement",
+          "en": "Ruination"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_ruination.png",
+        "description": {
+          "fr": "Destructeur : la morsure d'Offensive ralentit davantage. Brise-monde : réduit le temps de recharge et le coût en énergie de Brise-terre.",
+          "en": "Destroyer: Onslaught's bite Slows for longer. World Breaker: reduces Earth Shatter's cooldown and Energy cost."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmz6d1dw14tmy",
+        "level": 13,
+        "name": {
+          "fr": "Flammes et fureur",
+          "en": "Fire and Fury"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_fire_and_fury.png",
+        "description": {
+          "fr": "Les attaques de base contre des héros immobilisés, ralentis ou étourdis infligent des dégâts bonus et réduisent le temps de recharge des capacités de base.",
+          "en": "Basic Attacks against Rooted, Slowed, or Stunned Heroes deal bonus damage and reduce Basic Ability cooldowns."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmz6d1dw159dq",
         "level": 16,
         "name": {
-          "fr": "Conflagration",
+          "fr": "Déflagration",
           "en": "Conflagration"
         },
-        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_molten_flame.png",
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_conflagration.png",
         "description": {
-          "fr": "Dealing 320 (+4% per level) damage with Molten Flame to enemy Heroes within 4 seconds causes them to burn for an additional 100 (+4% per level) damage over 4 seconds. While burning, they explode every 1 second, dealing 80 (+4% per level) damage to all nearby enemies.",
-          "en": "Dealing 320 (+4% per level) damage with Molten Flame to enemy Heroes within 4 seconds causes them to burn for an additional 100 (+4% per level) damage over 4 seconds. While burning, they explode every 1 second, dealing 80 (+4% per level) damage to all nearby enemies."
+          "fr": "Infliger suffisamment de dégâts avec Flamme de la fournaise embrase la cible, qui explose ensuite périodiquement en blessant les ennemis proches.",
+          "en": "Dealing enough damage with Molten Flame sets the target ablaze, which then periodically explodes, damaging nearby enemies."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joqsuyq",
+        "id": "tmz6d1dw161i6",
+        "level": 16,
+        "name": {
+          "fr": "Contemplez la destruction",
+          "en": "Gaze Onto Destruction"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_cancel_mount.png",
+        "description": {
+          "fr": "Infliger des dégâts d'atterrissage à des héros réduit fortement leurs dégâts infligés et les ralentit.",
+          "en": "Dealing landing damage to Heroes greatly reduces their damage dealt and Slows them."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmz6d1dw17ei7",
+        "level": 16,
+        "name": {
+          "fr": "Armure d'élémentium",
+          "en": "Elementium Plating"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_elemental_plating.png",
+        "description": {
+          "fr": "Nouvelle capacité active : gagne un bouclier basé sur les points de vie manquants, avec une régénération continue tant qu'il tient. À sa fin, restaure les plaques d'armure. S'interrompt si Aile de mort utilise Vol draconique.",
+          "en": "New active ability: gains a Shield based on missing Health, with continuous regeneration while it holds. When it ends, restores Armor Plates. Cancelled if Deathwing uses Dragonflight."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmz6d1dw18kyv",
         "level": 20,
         "name": {
-          "fr": "Stood in the Fire",
+          "fr": "Dans les flammes",
           "en": "Stood in the Fire"
         },
-        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_cataclysm.png",
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_cataclysm.png",
         "description": {
-          "fr": "Enemy Heroes are Slowed by 40% while standing in scorched ground, and its duration is increased by 50%.",
-          "en": "Enemy Heroes are Slowed by 40% while standing in scorched ground, and its duration is increased by 50%."
+          "fr": "Augmente le ralentissement et la durée de la terre brûlée laissée par Cataclysme.",
+          "en": "Increases the Slow and duration of the scorched ground left by Cataclysm."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmz6d1dw19clq",
+        "level": 20,
+        "name": {
+          "fr": "Arrivée d'un Dieu",
+          "en": "Arrival of a God"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_world_breaker.png",
+        "description": {
+          "fr": "Augmente fortement les dégâts d'atterrissage du Destructeur et du Brise-monde. Procure aussi les avantages de tous les talents de niveau 7.",
+          "en": "Greatly increases Destroyer's and World Breaker's landing damage. Also grants the benefits of all level 7 talents."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmz6d1dw2033u",
+        "level": 20,
+        "name": {
+          "fr": "Massacre du Destructeur",
+          "en": "Destroyer's Rampage"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_destroyer.png",
+        "description": {
+          "fr": "Après avoir atterri en forme Destructeur, augmente temporairement les dégâts d'Aile de mort et accélère la recharge de ses capacités de base. Se réinitialise en blessant des héros.",
+          "en": "After landing in Destroyer form, temporarily increases Deathwing's damage and speeds up his Basic Ability cooldowns. Refreshes when damaging Heroes."
         },
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [
+      {
+        "id": "melee",
+        "label": {
+          "fr": "Forme corps à corps",
+          "en": "Melee Form"
+        }
+      },
+      {
+        "id": "ranged",
+        "label": {
+          "fr": "Forme à distance",
+          "en": "Ranged Form"
+        }
+      },
+      {
+        "id": "flight",
+        "label": {
+          "fr": "Forme de vol",
+          "en": "Flight Form"
+        }
+      }
+    ]
   },
   {
     "id": "dehaka",
