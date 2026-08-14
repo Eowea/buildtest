@@ -25889,7 +25889,7 @@ const HEROES = [
   },
   {
     "id": "tychus",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Tychus",
       "en": "Tychus"
@@ -25913,21 +25913,21 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_minigun.png",
         "description": {
-          "fr": "Tes attaques successives infligent de plus en plus de dégâts.",
-          "en": "Your successive attacks deal increasing damage."
+          "fr": "Capacité active : pendant quelques secondes, les attaques de base contre les héros infligent des dégâts supplémentaires proportionnels à leur maximum de points de vie.",
+          "en": "Active: for a few seconds, Basic Attacks against Heroes deal bonus damage based on their maximum Health."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "Tir en rafale",
+          "fr": "Exécution",
           "en": "Overkill"
         },
         "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_overkill.png",
         "description": {
-          "fr": "Rafale qui inflige des dégâts basés sur la vie de la cible.",
-          "en": "Burst dealing damage based on the target's Health."
+          "fr": "Canalise une rafale sur une cible et les ennemis proches. Peut être réactivé pour changer de cible, et Tychus peut se déplacer et utiliser ses capacités pendant la canalisation.",
+          "en": "Channels a burst onto a target and nearby enemies. Can be reactivated to switch targets, and Tychus can move and use Abilities while channeling."
         },
         "demoYoutubeId": ""
       },
@@ -25939,58 +25939,58 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_fraggrenade.png",
         "description": {
-          "fr": "Explosion de zone qui repousse.",
-          "en": "Area explosion that knocks back."
+          "fr": "Lance une grenade qui explose en infligeant des dégâts et en repoussant les ennemis depuis le point d'impact.",
+          "en": "Lobs a grenade that explodes, dealing damage and knocking enemies away from the impact point."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "E",
         "name": {
-          "fr": "Cavale",
+          "fr": "Fonce et défonce",
           "en": "Run and Gun"
         },
         "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_runandgun.png",
         "description": {
-          "fr": "Déplacement rapide en tirant.",
-          "en": "Quick dash while shooting."
+          "fr": "Charge en avant sur une courte distance.",
+          "en": "Dashes forward a short distance."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
         "name": {
-          "fr": "Foreuse laser Drakken",
-          "en": "Drakken Laser Drill"
+          "fr": "Réquisition du Odin",
+          "en": "Commandeer Odin"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_drakkinlaserdrill.png",
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_commandeerodin.png",
         "description": {
-          "fr": "Un laser bombarde une zone en continu.",
-          "en": "A laser bombards an area continuously."
+          "fr": "Largue un Odin et en prend les commandes : dégâts et portée d'attaque accrus, capacités différentes, armure élevée, pour une durée limitée.",
+          "en": "Calls down an Odin and pilots it: increased damage and Attack range, different Abilities, and high Armor, for a limited time."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
         "name": {
-          "fr": "Réquisition d'Odin",
-          "en": "Commandeer Odin"
+          "fr": "Foreuse laser Drakken",
+          "en": "Drakken Laser Drill"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_commandeerodin.png",
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_drakkinlaserdrill.png",
         "description": {
-          "fr": "Pilote un Odin, très résistant et très puissant.",
-          "en": "Pilot an Odin: very tough and very powerful."
+          "fr": "Largue une foreuse laser qui attaque les ennemis proches en continu. Peut être réactivée pour désigner une nouvelle cible.",
+          "en": "Calls down a laser drill that continuously attacks nearby enemies. Can be reactivated to assign a new target."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Tes dégâts sont proportionnels à la vie : concentre les tanks.",
-        "en": "Your damage scales with Health: focus tanks."
+        "fr": "Minigun inflige des dégâts proportionnels à la vie : garde-le pour les tanks.",
+        "en": "Minigun deals damage based on max Health: save it for tanks."
       },
       {
-        "fr": "Cavale sert autant à fuir qu'à replacer ton tir.",
+        "fr": "Fonce et défonce sert autant à fuir qu'à replacer ton tir.",
         "en": "Run and Gun is as good for escaping as for repositioning."
       },
       {
@@ -26014,46 +26014,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Tychus]",
+        "buildCode": "[T3221331,Tychus]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "15 Août 2026",
+          "en": "August 15, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jp7s9yu",
+            "primaryId": "tmd9vhtv003g85",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jpq3ak9",
+            "primaryId": "tmd9vhtv0053is",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jpgxzl1",
+            "primaryId": "tmd9vhtv008fn7",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jpbaiiw",
+            "primaryId": "tmd9vhtv010203",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jp1e25e",
+            "primaryId": "tmd9vhtv014sni",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jpi88qo",
+            "primaryId": "tmd9vhtv017z33",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jp4r79i",
+            "primaryId": "tmd9vhtv018a89",
             "alternativeIds": []
           }
         ]
@@ -26062,100 +26062,296 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jp7s9yu",
+        "id": "tmd9vhtv001o7p",
         "level": 1,
         "name": {
-          "fr": "Quarterback",
+          "fr": "Discobole",
           "en": "Quarterback"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_fraggrenade.png",
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_fraggrenade_a.png",
         "description": {
-          "fr": "Increases Frag Grenade's damage by 10% and its range by 50%.",
-          "en": "Increases Frag Grenade's damage by 10% and its range by 50%."
+          "fr": "Augmente les dégâts et la portée de Grenade à fragmentation.",
+          "en": "Increases Frag Grenade's damage and range."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpq3ak9",
+        "id": "tmd9vhtv002s0h",
+        "level": 1,
+        "name": {
+          "fr": "Course effrénée",
+          "en": "Dash"
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_runandgun_a.png",
+        "description": {
+          "fr": "Augmente la portée de Fonce et défonce, et accorde temporairement de la vitesse de déplacement à l'utilisation.",
+          "en": "Increases Run and Gun's range, and grants temporary Movement Speed on cast."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmd9vhtv003g85",
+        "level": 1,
+        "name": {
+          "fr": "Défonce Alphonse",
+          "en": "Press the Advantage"
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_overkill_target.png",
+        "description": {
+          "fr": "Augmente la portée des attaques de base de Tychus.",
+          "en": "Increases Tychus's Basic Attack range."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmd9vhtv004qsu",
         "level": 4,
         "name": {
-          "fr": "In the Rhythm",
+          "fr": "En rythme",
           "en": "In the Rhythm"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_minigun.png",
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_minigun_a.png",
         "description": {
-          "fr": "Quest: While Minigun is active, Basic Attacks against Heroes permanently increase future Minigun durations by 0.03 seconds.",
-          "en": "Quest: While Minigun is active, Basic Attacks against Heroes permanently increase future Minigun durations by 0.03 seconds."
+          "fr": "Quête : tant que Minigun est actif, les attaques de base contre les héros augmentent définitivement sa durée pour les prochaines utilisations.",
+          "en": "Quest: while Minigun is active, Basic Attacks against Heroes permanently increase its duration for future uses."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpgxzl1",
+        "id": "tmd9vhtv0053is",
+        "level": 4,
+        "name": {
+          "fr": "Plus ils sont gros…",
+          "en": "The Bigger They Are..."
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_minigun_b.png",
+        "description": {
+          "fr": "Augmente le bonus de dégâts de Minigun contre les héros au-dessus de 30% de points de vie, mais il n'a plus aucun effet en dessous de ce seuil.",
+          "en": "Increases Minigun's bonus damage against Heroes above 30% Health, but it no longer has any effect below that threshold."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmd9vhtv006ir3",
+        "level": 4,
+        "name": {
+          "fr": "Maître assassin",
+          "en": "Master Assassin"
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_annihilate.png",
+        "description": {
+          "fr": "Passif : augmente la vitesse d'attaque de Tychus. Récompense : après un certain nombre de victimes, la vitesse d'attaque augmente encore.",
+          "en": "Passive: increases Tychus's Attack Speed. Reward: after a number of Takedowns, Attack Speed increases further."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmd9vhtv007zku",
         "level": 7,
         "name": {
-          "fr": "Melting Point",
+          "fr": "Fusion thermique",
           "en": "Melting Point"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_fraggrenade.png",
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_fraggrenade.png",
         "description": {
-          "fr": "Enemies hit by Frag Grenade take an additional 75 (+4% per level) damage over 3 seconds. This damage is increased by 100% against Minions, Mercenaries, and Monsters.",
-          "en": "Enemies hit by Frag Grenade take an additional 75 (+4% per level) damage over 3 seconds. This damage is increased by 100% against Minions, Mercenaries, and Monsters."
+          "fr": "Les ennemis touchés par Grenade à fragmentation subissent des dégâts supplémentaires dans la durée, bien plus élevés contre les serviteurs, mercenaires et monstres.",
+          "en": "Enemies hit by Frag Grenade take additional damage over time, much higher against Minions, Mercenaries, and Monsters."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpbaiiw",
+        "id": "tmd9vhtv008fn7",
+        "level": 7,
+        "name": {
+          "fr": "Fin tacticien",
+          "en": "Combat Tactician"
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_minigun.png",
+        "description": {
+          "fr": "Réduit le temps de recharge de Minigun, et le réduit encore davantage après l'utilisation de Fonce et défonce.",
+          "en": "Reduces Minigun's cooldown, and reduces it further after using Run and Gun."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmd9vhtv009tlp",
+        "level": 7,
+        "name": {
+          "fr": "Marche ou crève",
+          "en": "Relentless Soldier"
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_runandgun_b.png",
+        "description": {
+          "fr": "Subir un étourdissement ou une immobilisation accorde temporairement de l'armure.",
+          "en": "Being Stunned or Rooted grants temporary Armor."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmd9vhtv010203",
         "level": 10,
         "name": {
-          "fr": "Commandeer Odin",
+          "fr": "Réquisition du Odin",
           "en": "Commandeer Odin"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_commandeerodin.png",
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_commandeerodin.png",
         "description": {
-          "fr": "Call down an Odin to pilot. The Odin deals increased Damage, has 100% increased Basic Attack range, and uses different Abilities. The Odin has 25 Armor and lasts 23 seconds.",
-          "en": "Call down an Odin to pilot. The Odin deals increased Damage, has 100% increased Basic Attack range, and uses different Abilities. The Odin has 25 Armor and lasts 23 seconds."
+          "fr": "Largue un Odin et en prend les commandes : dégâts et portée d'attaque accrus, capacités différentes, armure élevée, pour une durée limitée.",
+          "en": "Calls down an Odin and pilots it: increased damage and Attack range, different Abilities, and high Armor, for a limited time."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jp1e25e",
+        "id": "tmd9vhtv0113sm",
+        "level": 10,
+        "name": {
+          "fr": "Foreuse laser Drakken",
+          "en": "Drakken Laser Drill"
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_drakkinlaserdrill.png",
+        "description": {
+          "fr": "Largue une foreuse laser qui attaque les ennemis proches en continu. Peut être réactivée pour désigner une nouvelle cible.",
+          "en": "Calls down a laser drill that continuously attacks nearby enemies. Can be reactivated to assign a new target."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmd9vhtv0122br",
         "level": 13,
         "name": {
-          "fr": "Spray 'n' Pray",
+          "fr": "J'arrose et tu douilles",
           "en": "Spray 'n' Pray"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_overkill.png",
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_overkill_a.png",
         "description": {
-          "fr": "Overkill Slows enemy Movement Speed by 25% and its range is increased by 25%.",
-          "en": "Overkill Slows enemy Movement Speed by 25% and its range is increased by 25%."
+          "fr": "Exécution ralentit les ennemis touchés et gagne en portée.",
+          "en": "Overkill Slows enemies hit and gains range."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpi88qo",
+        "id": "tmd9vhtv0138nt",
+        "level": 13,
+        "name": {
+          "fr": "C'est de la bonne !",
+          "en": "That's the Stuff!"
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_minigun_a.png",
+        "description": {
+          "fr": "À son expiration, Minigun soigne Tychus d'un montant équivalent aux dégâts bonus qu'il a infligés.",
+          "en": "When it expires, Minigun heals Tychus for the bonus damage it dealt."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmd9vhtv014sni",
+        "level": 13,
+        "name": {
+          "fr": "Enduction au NéoAcier",
+          "en": "Neosteel Coating"
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_runandgun_c.png",
+        "description": {
+          "fr": "Capacité active : accorde temporairement une forte armure anti-sort, réduisant fortement les dégâts de capacité subis.",
+          "en": "Active: temporarily grants high Spell Armor, greatly reducing Ability damage taken."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmd9vhtv015a9r",
         "level": 16,
         "name": {
-          "fr": "Armor Piercing Rounds",
+          "fr": "Munitions anti-blindage",
           "en": "Armor Piercing Rounds"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_overkill.png",
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_overkill.png",
         "description": {
-          "fr": "Each time Overkill hits an enemy, its damage against them is increased by 15%, stacking up to 60% bonus damage.",
-          "en": "Each time Overkill hits an enemy, its damage against them is increased by 15%, stacking up to 60% bonus damage."
+          "fr": "Chaque fois qu'Exécution touche un ennemi, ses dégâts contre lui augmentent, de façon cumulable.",
+          "en": "Each time Overkill hits an enemy, its damage against them increases, stacking up to a cap."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jp4r79i",
+        "id": "tmd9vhtv016frl",
+        "level": 16,
+        "name": {
+          "fr": "Grenade Titan",
+          "en": "Titan Grenade"
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_fraggrenade_a.png",
+        "description": {
+          "fr": "Grenade à fragmentation inflige aux héros des dégâts supplémentaires proportionnels à leur maximum de points de vie, et chaque héros touché réduit son temps de recharge.",
+          "en": "Frag Grenade deals Heroes bonus damage based on their maximum Health, and each Hero hit reduces its cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmd9vhtv017z33",
+        "level": 16,
+        "name": {
+          "fr": "Attaques brûlantes",
+          "en": "Sizzlin' Attacks"
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_minigun_b.png",
+        "description": {
+          "fr": "Les attaques de base infligent aux héros des dégâts supplémentaires proportionnels à leur maximum de points de vie. Cumulable avec Minigun.",
+          "en": "Basic Attacks deal Heroes bonus damage based on their maximum Health. Stacks with Minigun."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmd9vhtv018a89",
         "level": 20,
         "name": {
-          "fr": "Big Red Button",
+          "fr": "Gros bouton rouge",
           "en": "Big Red Button"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_commandeerodin.png",
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_ragnarokmissiles.png",
         "description": {
-          "fr": "Odin lasts 50% longer and Ragnarok Missiles also launches a Nuclear Missile which lands 2.5 seconds later, dealing 319 (+4% per level) damage in its area.",
-          "en": "Odin lasts 50% longer and Ragnarok Missiles also launches a Nuclear Missile which lands 2.5 seconds later, dealing 319 (+4% per level) damage in its area."
+          "fr": "Le Odin dure plus longtemps et ses missiles Ragnarok déclenchent aussi une frappe nucléaire qui inflige de lourds dégâts en zone.",
+          "en": "The Odin lasts longer and its Ragnarok Missiles also launch a nuclear strike dealing heavy area damage."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmd9vhtv01938u",
+        "level": 20,
+        "name": {
+          "fr": "Miroir de focalisation",
+          "en": "Focusing Diodes"
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_laserdrillissueorder.png",
+        "description": {
+          "fr": "Augmente la portée de la foreuse laser, et ses dégâts augmentent tant qu'elle reste focalisée sur la même cible.",
+          "en": "Increases the laser drill's range, and its damage ramps up the longer it stays on the same target."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmd9vhtv0203ml",
+        "level": 20,
+        "name": {
+          "fr": "Je peux faire ça toute la journée",
+          "en": "Can Do This All Day"
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_overkill_target.png",
+        "description": {
+          "fr": "Réduit le temps de recharge d'Exécution, et Tychus gagne de l'armure pendant sa canalisation.",
+          "en": "Reduces Overkill's cooldown, and Tychus gains Armor while channeling it."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmd9vhtv021ez3",
+        "level": 20,
+        "name": {
+          "fr": "Délit de fuite",
+          "en": "Bob and Weave"
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_thrusters.png",
+        "description": {
+          "fr": "Fonce et défonce et les propulseurs du Odin gagnent des charges supplémentaires, le coût en mana est réduit, et la portée des attaques de base augmente temporairement après utilisation.",
+          "en": "Run and Gun and the Odin's Thrusters gain extra charges, its Mana cost is reduced, and Basic Attack range temporarily increases after use."
         },
         "demoYoutubeId": null
       }
