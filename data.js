@@ -3874,7 +3874,7 @@ const HEROES = [
         "en": "Attack constantly to maximize your passive."
       },
       {
-        "fr": "Garde un Q pour fuir.",
+        "fr": "Garde un A pour fuir.",
         "en": "Keep a Q charge to escape."
       },
       {
