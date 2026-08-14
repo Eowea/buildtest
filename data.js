@@ -6541,6 +6541,7 @@ const HEROES = [
       },
       {
         "key": "A",
+        "form": "normal",
         "name": {
           "fr": "Lumière sacrée",
           "en": "Holy Light"
@@ -6553,7 +6554,22 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
+        "key": "A",
+        "form": "ghost",
+        "name": {
+          "fr": "Éclair lumineux",
+          "en": "Flash of Light"
+        },
+        "icon": "assets/heroes/base_spells/uther/images/talents/storm_ui_icon_uther_flashoflight.png",
+        "description": {
+          "fr": "Soigne les héros alliés proches. Seule capacité utilisable tant qu'Uther est sous la forme d'esprit d'Avant-garde éternelle.",
+          "en": "Heals nearby allied Heroes. The only ability usable while Uther is in his Eternal Vanguard spirit form."
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "Z",
+        "form": "normal",
         "name": {
           "fr": "Radiance sacrée",
           "en": "Holy Radiance"
@@ -6567,6 +6583,7 @@ const HEROES = [
       },
       {
         "key": "E",
+        "form": "normal",
         "name": {
           "fr": "Marteau de la justice",
           "en": "Hammer of Justice"
@@ -6580,6 +6597,7 @@ const HEROES = [
       },
       {
         "key": "R1",
+        "form": "normal",
         "name": {
           "fr": "Bouclier divin",
           "en": "Divine Shield"
@@ -6593,6 +6611,7 @@ const HEROES = [
       },
       {
         "key": "R2",
+        "form": "normal",
         "name": {
           "fr": "Tempête divine",
           "en": "Divine Storm"
@@ -6786,7 +6805,7 @@ const HEROES = [
           "fr": "Horion sacré",
           "en": "Holy Shock"
         },
-        "icon": "assets/heroes/base_spells/uther/images/talents/storm_ui_icon_uther_flashoflight.png",
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_holylight.png",
         "description": {
           "fr": "Nouvelle capacité active : inflige des dégâts à un ennemi et procure les soins de Lumière sacrée à Uther. Partage son temps de recharge avec Lumière sacrée.",
           "en": "New active ability: deals damage to an enemy and grants Uther the self-healing of Holy Light. Shares a cooldown with Holy Light."
@@ -7032,7 +7051,22 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [
+      {
+        "id": "normal",
+        "label": {
+          "fr": "Forme normale",
+          "en": "Normal Form"
+        }
+      },
+      {
+        "id": "ghost",
+        "label": {
+          "fr": "Forme fantôme",
+          "en": "Ghost Form"
+        }
+      }
+    ]
   },
   {
     "id": "whitemane",
