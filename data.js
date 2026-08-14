@@ -211,7 +211,7 @@ const HEROES = [
         "order": 1,
         "label": {
           "fr": "Build recommandé",
-          "en": "Recommended Build"
+          "en": "Recommended build"
         },
         "summary": {
           "fr": "Le meilleur build, tout simplement.",
@@ -440,7 +440,7 @@ const HEROES = [
           "fr": "Infusion gangrenée",
           "en": "Fel Infusion"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/talents/kaelthas_fel_infusion.png",
+        "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_verdantspheres_2.png",
         "description": {
           "fr": "Augmente la puissance de sort et soigne lors de l'utilisation du Trait.",
           "en": "Increases spell power and heals when using Trait."
@@ -454,7 +454,7 @@ const HEROES = [
           "fr": "Accro à la mana",
           "en": "Mana Addict"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/talents/kaelthas_mana_addict.png",
+        "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_manaaddict.png",
         "description": {
           "fr": "Indispensable pour la survie tard dans la partie.",
           "en": "Essential for late-game survival."
@@ -468,7 +468,7 @@ const HEROES = [
           "fr": "Enchantement du Feu solaire",
           "en": "Sunfire Enchantment"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/talents/kaelthas_sunfire_enchantment.png",
+        "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_arcanebarrier.png",
         "description": {
           "fr": "Activer le Trait booste vos prochaines attaques de base.",
           "en": "Activating Trait empowers your next basic attacks."
@@ -482,7 +482,7 @@ const HEROES = [
           "fr": "Explosion pyrotechnique",
           "en": "Pyroblast"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/skills/kaelthas_pyroblast.png",
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_pyroblast.png",
         "description": {
           "fr": "Pour punir une cible fragile hors de position.",
           "en": "To punish a fragile target out of position."
@@ -496,7 +496,7 @@ const HEROES = [
           "fr": "Fureur du Roi-Soleil",
           "en": "Sun King's Fury"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/talents/kaelthas_sun_kings_fury.png",
+        "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_livingbomb_b.png",
         "description": {
           "fr": "Augmente considérablement les dégâts de Bombe vivante sur les cibles principales.",
           "en": "Greatly increases Living Bomb damage on primary targets."
@@ -510,7 +510,7 @@ const HEROES = [
           "fr": "Présence d'esprit",
           "en": "Presence of Mind"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/talents/kaelthas_presence_of_mind.png",
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_pyroblast.png",
         "description": {
           "fr": "Réduit le temps de recharge de l'Explosion pyrotechnique.",
           "en": "Reduces Pyroblast cooldown."
@@ -637,7 +637,7 @@ const HEROES = [
         "order": 1,
         "label": {
           "fr": "Build recommandé",
-          "en": "Recommanded build"
+          "en": "Recommended build"
         },
         "summary": {
           "fr": "Build qui passe partout, peu importe le mode de jeu.",
@@ -1609,7 +1609,7 @@ const HEROES = [
         "order": 1,
         "label": {
           "fr": "Build recommandé",
-          "en": "Recommanded build"
+          "en": "Recommended build"
         },
         "updatedAt": {
           "fr": "6 Mai 2026",
@@ -1919,7 +1919,7 @@ const HEROES = [
         "order": 1,
         "label": {
           "fr": "Build recommandé",
-          "en": "Recommanded build"
+          "en": "Recommended build"
         },
         "updatedAt": {
           "fr": "6 Mai 2026",
@@ -2389,7 +2389,7 @@ const HEROES = [
         "order": 1,
         "label": {
           "fr": "Build recommandé",
-          "en": "Recommanded build"
+          "en": "Recommended build"
         },
         "summary": {
           "fr": "Build qui passe partout, peu importe le mode de jeu.",
@@ -3477,7 +3477,7 @@ const HEROES = [
         "order": 1,
         "label": {
           "fr": "Build recommandé",
-          "en": "Recommanded Build"
+          "en": "Recommended build"
         },
         "updatedAt": {
           "fr": "6 Mai 2026",
@@ -3888,7 +3888,7 @@ const HEROES = [
         "order": 1,
         "label": {
           "fr": "Build recommandé",
-          "en": "Recommanded build"
+          "en": "Recommended build"
         },
         "summary": {
           "fr": "Build qui passe partout, peu importe le mode de jeu.",
@@ -4442,7 +4442,7 @@ const HEROES = [
         "order": 1,
         "label": {
           "fr": "Build recommandé",
-          "en": "Recommanded build"
+          "en": "Recommended build"
         },
         "summary": {
           "fr": "Build qui passe partout, peu importe le mode de jeu.\n",
@@ -5577,7 +5577,7 @@ const HEROES = [
         "order": 1,
         "label": {
           "fr": "Build recommandé",
-          "en": "Recommended Build"
+          "en": "Recommended build"
         },
         "isNew": false,
         "updatedAt": {
@@ -6025,7 +6025,7 @@ const HEROES = [
         "order": 1,
         "label": {
           "fr": "Build recommandé",
-          "en": "Recommanded Build"
+          "en": "Recommended build"
         },
         "updatedAt": {
           "fr": "6 Mai 2026",
@@ -6750,11 +6750,11 @@ const HEROES = [
         "order": 1,
         "label": {
           "fr": "Build recommandé",
-          "en": "Recommanded build"
+          "en": "Recommended build"
         },
         "summary": {
           "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "Build qui passe partout, peu importe le mode de jeu."
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -7319,7 +7319,7 @@ const HEROES = [
         "order": 1,
         "label": {
           "fr": "Build recommandé",
-          "en": "Recommanded Build"
+          "en": "Recommended build"
         },
         "updatedAt": {
           "fr": "6 Mai 2026",
@@ -7669,7 +7669,7 @@ const HEROES = [
         "order": 1,
         "label": {
           "fr": "Build recommandé",
-          "en": "Recommanded build"
+          "en": "Recommended build"
         },
         "summary": {
           "fr": "LE SEUL BUILD JOUABLE",
@@ -17584,12 +17584,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -20863,7 +20863,7 @@ const HEROES = [
         },
         "summary": {
           "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "Build qui passe partout, peu importe le mode de jeu."
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -26003,12 +26003,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -28142,7 +28142,7 @@ const HEROES = [
         },
         "summary": {
           "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "Build qui passe partout, peu importe le mode de jeu.\n"
+          "en": "A build that works in any situation, no matter the game mode.\n"
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
