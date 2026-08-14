@@ -4422,8 +4422,8 @@ const HEROES = [
           "en": "Recommanded build"
         },
         "summary": {
-          "fr": "Parfait contre les attaquants physiques.",
-          "en": "Perfect against physical attackers."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.\n",
+          "en": "A build that works in any situation, no matter the game mode.\n"
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
