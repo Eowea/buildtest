@@ -6996,7 +6996,7 @@ const HEROES = [
           "fr": "Main de protection",
           "en": "Hand of Protection"
         },
-        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_divineshield.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_cleanse.png",
         "description": {
           "fr": "Nouvelle capacité active : rend un allié insensible au contrôle. Ne peut pas cibler Uther. Les attaques de base réduisent son temps de recharge.",
           "en": "New active ability: makes an ally Unstoppable. Cannot target Uther. Basic Attacks reduce its cooldown."
@@ -7038,7 +7038,7 @@ const HEROES = [
           "fr": "Bénédiction du champion",
           "en": "Blessed Champion"
         },
-        "icon": "assets/heroes/base_spells/uther/images/talents/storm_ui_icon_uther_holylight_var1.png",
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_holylight.png",
         "description": {
           "fr": "Après avoir utilisé Lumière sacrée, les attaques de base d'Uther soignent aussi les alliés proches selon les soins procurés.",
           "en": "After using Holy Light, Uther's Basic Attacks also heal nearby allies based on the amount healed."
@@ -7066,7 +7066,7 @@ const HEROES = [
           "fr": "Bouclier anti-sort",
           "en": "Spell Shield"
         },
-        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_divinestorm.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_spellshield.png",
         "description": {
           "fr": "Confère périodiquement de l'armure anti-sort contre la prochaine capacité adverse. Peut être désactivé.",
           "en": "Periodically grants Spell Armor against the next enemy Ability. Can be toggled off."
@@ -7080,7 +7080,7 @@ const HEROES = [
           "fr": "Guide de lumière",
           "en": "Beacon of Light"
         },
-        "icon": "assets/heroes/base_spells/uther/images/talents/storm_ui_icon_uther_beaconoflight.png",
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_holylight.png",
         "description": {
           "fr": "Uther se soigne davantage en ciblant un autre héros avec Lumière sacrée, encore plus sous 50% de vie.",
           "en": "Uther heals himself for more when targeting others with Holy Light, even more while below 50% Health."
@@ -7150,7 +7150,7 @@ const HEROES = [
           "fr": "Rédemption",
           "en": "Redemption"
         },
-        "icon": "assets/heroes/base_spells/uther/images/talents/storm_ui_icon_uther_eternaldevotion_a.png",
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_eternaldevotion.png",
         "description": {
           "fr": "Quand Avant-garde éternelle prend fin, Uther ressuscite à l'emplacement de l'esprit avec une partie de sa vie.",
           "en": "When Eternal Vanguard ends, Uther revives at the spirit's location with a portion of his Health."
@@ -7164,7 +7164,7 @@ const HEROES = [
           "fr": "Protection divine",
           "en": "Divine Protection"
         },
-        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_eternaldevotion.png",
+        "icon": "assets/heroes/base_spells/uther/images/talents/storm_ui_icon_uther_eternaldevotion_a.png",
         "description": {
           "fr": "Augmente l'armure et la durée procurées par Dévotion.",
           "en": "Increases the Armor and duration granted by Devotion."
