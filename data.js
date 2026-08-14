@@ -2924,8 +2924,8 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Grenade",
-          "en": "Grenade"
+          "fr": "Build Grenade",
+          "en": "Grenade Build"
         },
         "summary": {
           "fr": "Amplifie l'anti-heal et le soin burst.",
@@ -2989,8 +2989,8 @@ const HEROES = [
         "enabled": true,
         "order": 2,
         "label": {
-          "fr": "Sleep",
-          "en": "Sleep"
+          "fr": "Build Sleep",
+          "en": "Sleep Build"
         },
         "summary": {
           "fr": "Build apportant un peu de suivi même si la cible endormie est réveillé ",
@@ -4405,12 +4405,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Maintiens la touche Q enfoncée en combat.",
+        "fr": "Tu peux maintenir ta touche A pour soigner.",
         "en": "Hold down the Q key during combat."
       },
       {
-        "fr": "Ne te fais pas étourdir pendant ton R1.",
-        "en": "Do not get stunned during your R1."
+        "fr": "Approche toi de la cible que tu veux soigner.",
+        "en": "Move closer to the target you want to heal."
+      },
+      {
+        "fr": "De temps en temps, prends des dégâts pour bénéficier de ton trait.",
+        "en": "Sometimes, take some damage to activate your trait."
       }
     ],
     "builds": [
@@ -4418,18 +4422,18 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build Aveuglement",
-          "en": "Blind Build"
+          "fr": "Build recommandé",
+          "en": "Recommanded build"
         },
         "summary": {
-          "fr": "Parfait contre les attaquants physiques.",
-          "en": "Perfect against physical attackers."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.\n",
+          "en": "A build that works in any situation, no matter the game mode.\n"
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T3222222,LiLi]",
+        "buildCode": "[T1231111,LiLi]",
         "videos": [],
         "updatedAt": {
           "fr": "14 Août 2026",
@@ -4438,7 +4442,7 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmp5w2lil038gd",
+            "primaryId": "tmp5w2lil015y9",
             "alternativeIds": []
           },
           {
@@ -4448,27 +4452,30 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tmp5w2lil08ea4",
+            "primaryId": "tmp5w2lil096sa",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmp5w2lil119zc",
+            "primaryId": "tmp5w2lil10pzq",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmp5w2lil13hxl",
+            "primaryId": "tmp5w2lil12at1",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmp5w2lil16p6z",
-            "alternativeIds": []
+            "primaryId": "tmp5w2lil151th",
+            "alternativeIds": [
+              "tmp5w2lil16p6z",
+              "tmp5w2lil1732s"
+            ]
           },
           {
             "level": 20,
-            "primaryId": "tmp5w2lil19o9c",
+            "primaryId": "tmp5w2lil18irz",
             "alternativeIds": []
           }
         ]
@@ -4481,7 +4488,7 @@ const HEROES = [
           "en": "Serpent Build"
         },
         "summary": {
-          "fr": "Soins supplémentaires via le W.",
+          "fr": "Soins supplémentaires via le Z.",
           "en": "Extra healing via W."
         },
         "buildCodeTitle": {
@@ -4507,7 +4514,7 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tmp5w2lil07rkj",
+            "primaryId": "tmp5w2lil096sa",
             "alternativeIds": []
           },
           {
@@ -4531,6 +4538,70 @@ const HEROES = [
             "alternativeIds": []
           }
         ]
+      },
+      {
+        "enabled": true,
+        "order": 3,
+        "label": {
+          "fr": "Build Tank",
+          "en": "Tank build"
+        },
+        "updatedAt": {
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
+        },
+        "summary": {
+          "fr": "Si t'adores courir dans les sorts et faire l'appât.",
+          "en": "If you love running through spells and bait."
+        },
+        "buildCodeTitle": {
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE IN TALENT TREE"
+        },
+        "buildCode": "[T3322131,LiLi]",
+        "videos": [],
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmp5w2lil038gd",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmp5w2lil06axd",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmp5w2lil08ea4",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmp5w2lil10pzq",
+            "alternativeIds": [
+              "tmp5w2lil119zc"
+            ]
+          },
+          {
+            "level": 13,
+            "primaryId": "tmp5w2lil12at1",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmp5w2lil1732s",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmp5w2lil18irz",
+            "alternativeIds": [
+              "tmp5w2lil210v6",
+              "tmp5w2lil19o9c"
+            ]
+          }
+        ]
       }
     ],
     "guideVideos": [],
@@ -4542,7 +4613,7 @@ const HEROES = [
           "fr": "Boissons gratuites",
           "en": "Free Drinks"
         },
-        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_healingbrew_a.png",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_healingbrew.png",
         "description": {
           "fr": "Quand Infusion requinquante soigne un héros sous 50% de vie, rembourse son coût en mana et réduit son temps de recharge.",
           "en": "When Healing Brew heals a Hero below 50% Health, its cooldown is reduced and its Mana cost is refunded."
@@ -4598,7 +4669,7 @@ const HEROES = [
           "fr": "Vents soudains",
           "en": "Surging Winds"
         },
-        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_blindingwind_a.png",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_blindingwind.png",
         "description": {
           "fr": "Si Vent aveuglant touche plusieurs héros, son temps de recharge diminue instantanément et Li Li gagne de la puissance de capacité.",
           "en": "If Blinding Wind hits multiple Heroes, its cooldown is instantly reduced and Li Li gains Spell Power."
@@ -4640,7 +4711,7 @@ const HEROES = [
           "fr": "Vortex de masse",
           "en": "Mass Vortex"
         },
-        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_blindingwind_b.png",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_blindingwind.png",
         "description": {
           "fr": "Vent aveuglant touche un ennemi de plus et inflige davantage de dégâts s'il touche le nombre maximal de héros.",
           "en": "Blinding Wind hits one additional enemy and deals more damage when it hits the maximum number of Heroes."
@@ -4654,7 +4725,7 @@ const HEROES = [
           "fr": "En route !",
           "en": "Let's Go!"
         },
-        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_jugofathousandcups.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_cleanse.png",
         "description": {
           "fr": "Nouvelle capacité active : soigne un héros allié et le rend insensible au contrôle. Son temps de recharge est affecté par Prompts petons. Ne peut pas cibler Li Li.",
           "en": "New active ability: heals an allied Hero and makes them Unstoppable. Its cooldown is affected by Fast Feet. Cannot target Li Li."
@@ -4710,7 +4781,7 @@ const HEROES = [
           "fr": "Vent violent",
           "en": "Gale Force"
         },
-        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_blindingwind_a.png",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_blindingwind.png",
         "description": {
           "fr": "Augmente la durée de l'aveuglement de Vent aveuglant. Les attaques de base contre un héros aveuglé infligent davantage de dégâts.",
           "en": "Increases Blinding Wind's Blind duration. Basic Attacks against Blinded Heroes deal bonus damage."
@@ -4724,7 +4795,7 @@ const HEROES = [
           "fr": "Vent contraire",
           "en": "Hindering Winds"
         },
-        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_blindingwind_b.png",
+        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_blindingwind_a.png",
         "description": {
           "fr": "Augmente le ralentissement et la durée de Vent aveuglant.",
           "en": "Increases Blinding Wind's Slow amount and duration."
@@ -4738,7 +4809,7 @@ const HEROES = [
           "fr": "Double dose",
           "en": "Two For One"
         },
-        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_healingbrew_a.png",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_healingbrew.png",
         "description": {
           "fr": "Infusion requinquante soigne un allié supplémentaire, mais son temps de recharge augmente.",
           "en": "Healing Brew heals an additional ally, but its cooldown increases."
@@ -4752,7 +4823,7 @@ const HEROES = [
           "fr": "Coup de fouet",
           "en": "Pick Me Up"
         },
-        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_healingbrew.png",
+        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_healingbrew_a.png",
         "description": {
           "fr": "Infusion requinquante soigne davantage quand la cible est sous 50% de vie.",
           "en": "Healing Brew heals for more when the target is below 50% Health."
@@ -4822,7 +4893,7 @@ const HEROES = [
           "fr": "Ébrouement",
           "en": "Shake It Off"
         },
-        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_shakeitoff.png",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_fastfeet.png",
         "description": {
           "fr": "En cas d'étourdissement, de silence ou d'immobilisation, et brièvement après, Li Li gagne de l'armure. Passif : accélère encore le recharge de Prompts petons.",
           "en": "While Stunned, Silenced, or Rooted, and briefly after, Li Li gains Armor. Passive: further speeds up Fast Feet's cooldown refresh."
