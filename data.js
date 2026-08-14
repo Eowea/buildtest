@@ -20648,12 +20648,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "Build qui passe partout, peu importe le mode de jeu."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -20678,13 +20678,15 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tmh3n8naz097hj",
+            "primaryId": "tmh3n8naz07a8t",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmh3n8naz11x2q",
-            "alternativeIds": []
+            "primaryId": "tmh3n8naz1071r",
+            "alternativeIds": [
+              "tmh3n8naz11x2q"
+            ]
           },
           {
             "level": 13,
@@ -20698,8 +20700,77 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmh3n8naz19on4",
+            "primaryId": "tmh3n8naz20fvs",
+            "alternativeIds": [
+              "tmh3n8naz18d5n",
+              "tmh3n8naz21id4",
+              "tmh3n8naz19on4"
+            ]
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build français",
+          "en": "French build"
+        },
+        "updatedAt": {
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
+        },
+        "summary": {
+          "fr": "PLEIN DE GRENOUILLES",
+          "en": "LOTS OF FROGS"
+        },
+        "buildCodeTitle": {
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE IN TALENT TREE"
+        },
+        "buildCode": "[T2331233,Nazeebo]",
+        "videos": [],
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmh3n8naz02hq7",
             "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmh3n8naz053f0",
+            "alternativeIds": [
+              "tmh3n8naz0645y"
+            ]
+          },
+          {
+            "level": 7,
+            "primaryId": "tmh3n8naz097hj",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmh3n8naz1071r",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmh3n8naz13e86",
+            "alternativeIds": [
+              "tmh3n8naz123cf"
+            ]
+          },
+          {
+            "level": 16,
+            "primaryId": "tmh3n8naz17qjr",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmh3n8naz20fvs",
+            "alternativeIds": [
+              "tmh3n8naz18d5n"
+            ]
           }
         ]
       }
@@ -20727,7 +20798,7 @@ const HEROES = [
           "fr": "Pandémie",
           "en": "Pandemic"
         },
-        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_plagueoftoads_a.png",
+        "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_plagueoftoads.png",
         "description": {
           "fr": "Quête : toucher des héros avec Invasion de grenouilles finit par générer des grenouilles supplémentaires, puis réduire les dégâts infligés par les héros touchés.",
           "en": "Quest: hitting Heroes with Plague of Toads eventually spawns extra toads, then reduces the damage dealt by Heroes hit."
@@ -20741,7 +20812,7 @@ const HEROES = [
           "fr": "La Chose des profondeurs",
           "en": "Thing of the Deep"
         },
-        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_voodooritual_a.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_elunesgrace.png",
         "description": {
           "fr": "Augmente la portée des capacités de base de Nasibo. Accumuler des charges de Rituel vaudou finit par augmenter sa puissance de capacité.",
           "en": "Increases the range of Nazeebo's Basic Abilities. Stacking Voodoo Ritual charges eventually increases his Spell Power."
@@ -20867,7 +20938,7 @@ const HEROES = [
           "fr": "Grenouilles gardiennes",
           "en": "Guardian Toads"
         },
-        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_plagueoftoads_a.png",
+        "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_plagueoftoads.png",
         "description": {
           "fr": "Toucher un héros adverse avec Invasion de grenouilles confère de l'armure, cumulable.",
           "en": "Hitting an enemy Hero with Plague of Toads grants stacking Armor."
@@ -20895,7 +20966,7 @@ const HEROES = [
           "fr": "Bloc de glace",
           "en": "Ice Block"
         },
-        "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_voodooritual.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_iceblock.png",
         "description": {
           "fr": "Nouvelle capacité active : place Nasibo en stase et le rend invulnérable pendant quelques secondes.",
           "en": "New active ability: places Nazeebo in Stasis and grants Invulnerability for a few seconds."
