@@ -4418,8 +4418,8 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build Aveuglement",
-          "en": "Blind Build"
+          "fr": "Build recommandé",
+          "en": "Recommanded build"
         },
         "summary": {
           "fr": "Parfait contre les attaquants physiques.",
@@ -4429,7 +4429,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T3222222,LiLi]",
+        "buildCode": "[T1231111,LiLi]",
         "videos": [],
         "updatedAt": {
           "fr": "14 Août 2026",
@@ -4438,7 +4438,7 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmp5w2lil038gd",
+            "primaryId": "tmp5w2lil015y9",
             "alternativeIds": []
           },
           {
@@ -4448,27 +4448,30 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tmp5w2lil08ea4",
+            "primaryId": "tmp5w2lil096sa",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmp5w2lil119zc",
+            "primaryId": "tmp5w2lil10pzq",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmp5w2lil13hxl",
+            "primaryId": "tmp5w2lil12at1",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmp5w2lil16p6z",
-            "alternativeIds": []
+            "primaryId": "tmp5w2lil151th",
+            "alternativeIds": [
+              "tmp5w2lil16p6z",
+              "tmp5w2lil1732s"
+            ]
           },
           {
             "level": 20,
-            "primaryId": "tmp5w2lil19o9c",
+            "primaryId": "tmp5w2lil18irz",
             "alternativeIds": []
           }
         ]
@@ -4481,7 +4484,7 @@ const HEROES = [
           "en": "Serpent Build"
         },
         "summary": {
-          "fr": "Soins supplémentaires via le W.",
+          "fr": "Soins supplémentaires via le Z.",
           "en": "Extra healing via W."
         },
         "buildCodeTitle": {
@@ -4507,7 +4510,7 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tmp5w2lil07rkj",
+            "primaryId": "tmp5w2lil096sa",
             "alternativeIds": []
           },
           {
@@ -4529,6 +4532,70 @@ const HEROES = [
             "level": 20,
             "primaryId": "tmp5w2lil18irz",
             "alternativeIds": []
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "order": 3,
+        "label": {
+          "fr": "Build Tank",
+          "en": "Tank build"
+        },
+        "updatedAt": {
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
+        },
+        "summary": {
+          "fr": "Si t'adores courir dans les sorts et fait l'appât.",
+          "en": "If you love running through spells and bait."
+        },
+        "buildCodeTitle": {
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE IN TALENT TREE"
+        },
+        "buildCode": "[T3322131,LiLi]",
+        "videos": [],
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmp5w2lil038gd",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmp5w2lil06axd",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmp5w2lil08ea4",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmp5w2lil10pzq",
+            "alternativeIds": [
+              "tmp5w2lil119zc"
+            ]
+          },
+          {
+            "level": 13,
+            "primaryId": "tmp5w2lil12at1",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmp5w2lil1732s",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmp5w2lil18irz",
+            "alternativeIds": [
+              "tmp5w2lil210v6",
+              "tmp5w2lil19o9c"
+            ]
           }
         ]
       }
