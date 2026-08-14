@@ -276,8 +276,8 @@ const HEROES = [
           "en": "Devastating against melee-heavy compositions."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T2322131,Kaelthas]",
         "videos": [],
@@ -643,8 +643,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T2132134,Anduin]",
         "videos": [],
@@ -709,8 +709,8 @@ const HEROES = [
           "en": "Build centered around Lightbomb and basic attacks."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T2222222,Anduin]",
         "videos": [],
@@ -1198,7 +1198,7 @@ const HEROES = [
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE IN TALENT TREE"
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T2111121,Rehgar]",
         "videos": [],
@@ -1257,7 +1257,7 @@ const HEROES = [
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE IN TALENT TREE"
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T3131231,Rehgar]",
         "videos": [],
@@ -1620,7 +1620,7 @@ const HEROES = [
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE IN TALENT TREE"
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T2331323,Brightwing]",
         "videos": [],
@@ -1930,7 +1930,7 @@ const HEROES = [
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE IN TALENT TREE"
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T3121331,Deckard]",
         "videos": [],
@@ -1989,7 +1989,7 @@ const HEROES = [
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE IN TALENT TREE"
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T1311314,Deckard]",
         "videos": [],
@@ -2391,8 +2391,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T2231121,Alexstrasza]",
         "videos": [],
@@ -2460,8 +2460,8 @@ const HEROES = [
           "en": "Damage and frequent dragons."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T3331333,Alexstrasza]",
         "videos": [],
@@ -2928,8 +2928,8 @@ const HEROES = [
           "en": "Amplifies anti-heal and burst healing."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T1111331,Ana]",
         "videos": [],
@@ -2993,8 +2993,8 @@ const HEROES = [
           "en": "A build that provides some followup even if the sleeping target is awakened"
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T2221331,Ana]",
         "videos": [],
@@ -3480,7 +3480,7 @@ const HEROES = [
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE IN TALENT TREE"
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T3332332,Auriel]",
         "videos": [],
@@ -3539,7 +3539,7 @@ const HEROES = [
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE IN TALENT TREE"
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T1112232,Auriel]",
         "videos": [],
@@ -3882,8 +3882,8 @@ const HEROES = [
           "en": "Healing through quick target elimination."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T2232122,Kharazim]",
         "videos": [],
@@ -3941,8 +3941,8 @@ const HEROES = [
           "en": "The classic sustained healing build."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T1121331,Kharazim]",
         "videos": [],
@@ -4422,8 +4422,8 @@ const HEROES = [
           "en": "Perfect against physical attackers."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T3222222,LiLi]",
         "videos": [],
@@ -4481,8 +4481,8 @@ const HEROES = [
           "en": "Extra healing via W."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T2111131,LiLi]",
         "videos": [],
@@ -4948,8 +4948,8 @@ const HEROES = [
           "en": "Maximum armor to save targets."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T2222233,LtMorales]",
         "videos": [],
@@ -5007,8 +5007,8 @@ const HEROES = [
           "en": "More knockbacks and energy regeneration."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T3312124,LtMorales]",
         "videos": [],
@@ -5484,7 +5484,7 @@ const HEROES = [
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE IN TALENT TREE"
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T3131131,Malfurion]",
         "videos": [],
@@ -5538,8 +5538,8 @@ const HEROES = [
           "en": "More control and zoning."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T3332333,Malfurion]",
         "videos": [],
@@ -5931,7 +5931,7 @@ const HEROES = [
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE IN TALENT TREE"
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T3322212,Stukov]",
         "videos": [],
@@ -5989,8 +5989,8 @@ const HEROES = [
           "en": "Huge burst and slow on W explosion."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T1112111,Stukov]",
         "videos": [],
@@ -6300,7 +6300,7 @@ const HEROES = [
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE IN TALENT TREE"
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T2332312,Tyrande]",
         "videos": [],
@@ -6355,7 +6355,7 @@ const HEROES = [
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE IN TALENT TREE"
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T2332312,Tyrande]",
         "videos": [],
@@ -6647,8 +6647,8 @@ const HEROES = [
           "en": "Massive heals and self-CD reduction."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T1111114,Uther]",
         "videos": [],
@@ -6706,8 +6706,8 @@ const HEROES = [
           "en": "Plays like a secondary tank with his CC."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T3222222,Uther]",
         "videos": [],
@@ -7210,7 +7210,7 @@ const HEROES = [
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE IN TALENT TREE"
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T1231121,Whitemane]",
         "videos": [],
@@ -7264,8 +7264,8 @@ const HEROES = [
           "en": "Stronger direct heals but very mana intensive."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER",
-          "en": "PASTE"
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T1112111,Whitemane]",
         "videos": [],
@@ -7556,7 +7556,7 @@ const HEROES = [
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE IN TALENT TREE"
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "[T2322222,Lucio]",
         "videos": [],
@@ -7625,7 +7625,7 @@ const HEROES = [
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE IN TALENT TREE"
+          "en": "PASTE INTO TALENT TREE"
         },
         "buildCode": "",
         "videos": [],
