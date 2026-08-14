@@ -1843,6 +1843,13 @@ function classifyAssetPath(path){
     });
     if (hero){ heroMatch = hero; break; }
   }
+  // Portraits : fichier plat dans assets/heroes/portraits/, nommé d'après le codename
+  // interne du héros (ex: "monk" pour Kharazim, "medic" pour Lt. Morales), pas son id -
+  // le matching par segment ci-dessus ne peut pas le retrouver. On compare alors
+  // directement au champ "portrait" déjà enregistré pour chaque héros.
+  if (!heroMatch && lower.includes('portrait')){
+    heroMatch = HEROES.find(h => h.portrait === path) || null;
+  }
   let sub = 'Autre';
   if (lower.includes('portrait')) sub = 'Portraits';
   else if (lower.includes('talent')) sub = 'Talents';
