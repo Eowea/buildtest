@@ -2924,8 +2924,8 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Grenade",
-          "en": "Grenade"
+          "fr": "Build Grenade",
+          "en": "Grenade Build"
         },
         "summary": {
           "fr": "Amplifie l'anti-heal et le soin burst.",
@@ -2989,8 +2989,8 @@ const HEROES = [
         "enabled": true,
         "order": 2,
         "label": {
-          "fr": "Sleep",
-          "en": "Sleep"
+          "fr": "Build Sleep",
+          "en": "Sleep Build"
         },
         "summary": {
           "fr": "Build apportant un peu de suivi même si la cible endormie est réveillé ",
