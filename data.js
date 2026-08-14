@@ -3776,12 +3776,12 @@ const HEROES = [
     "role": "Healer",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_monk.png",
     "headline": {
-      "fr": "Soigneur de mêlée ultra mobile.",
+      "fr": "Soigneur mêlée ultra mobile.",
       "en": "Ultra mobile melee healer."
     },
     "gameplay": {
-      "fr": "Kharazim bondit d'allié en ennemi, infligeant des dégâts de mêlée pour générer ses soins.",
-      "en": "Kharazim dashes between allies and enemies, dealing melee damage to fuel his healing."
+      "fr": "Kharazim bondit d'allié en ennemi, tout en infligeant des dégâts et soignant ses alliés.",
+      "en": "Kharazim dashes from ally to enemy, dealing damage and healing his allies along the way."
     },
     "spells": [
       {
