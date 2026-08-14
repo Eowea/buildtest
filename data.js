@@ -11170,8 +11170,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_cataclysm.png",
         "description": {
-          "fr": "Survole une ligne en infligeant des dégâts à l'impact, puis laisse une zone de terre brûlée qui blesse les ennemis.",
-          "en": "Flies across a line, dealing impact damage, then leaves scorched ground that damages enemies."
+          "fr": "Survole une ligne en infligeant des dégâts à l'impact, puis laisse une zone de terre brûlée qui blesse les ennemis. Quête : toucher des héros avec Flamme de la fournaise ou obtenir des victimes accumule des cumuls qui débloquent, à terme, des dégâts massifs contre les bâtiments.",
+          "en": "Flies across a line, dealing impact damage, then leaves scorched ground that damages enemies. Quest: hitting Heroes with Molten Flame or getting takedowns builds stacks that eventually unlock massive bonus damage against Structures."
         },
         "demoYoutubeId": ""
       },
@@ -11184,8 +11184,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_mount.png",
         "description": {
-          "fr": "S'envole pour se déplacer rapidement sur la carte et restaurer ses plaques d'armure selon ses points de vie. En atterrissant, inflige des dégâts en zone et fait basculer Aile de mort entre ses formes Destructeur et Brise-monde.",
-          "en": "Takes flight to quickly reposition across the map and restore Armor Plates based on his Health. Landing deals area damage and switches Deathwing between his Destroyer and World Breaker forms."
+          "fr": "S'envole pour se déplacer rapidement sur la carte et restaurer ses plaques d'armure selon ses points de vie. En atterrissant, inflige des dégâts en zone et fait basculer Aile de mort entre ses formes Destructeur et Brise-monde. Son temps de recharge est retardé s'il inflige ou subit des dégâts récemment.",
+          "en": "Takes flight to quickly reposition across the map and restore Armor Plates based on his Health. Landing deals area damage and switches Deathwing between his Destroyer and World Breaker forms. Its cooldown is delayed after recently dealing or taking damage."
         },
         "demoYoutubeId": ""
       }
