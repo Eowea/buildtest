@@ -23352,8 +23352,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_bluntforcegun.png",
         "description": {
-          "fr": "Tire un missile qui traverse le champ de bataille, infligeant des dégâts à tous les ennemis sur sa trajectoire.",
-          "en": "Fires a missile across the battlefield, dealing damage to all enemies in its path."
+          "fr": "Tire un missile qui traverse le champ de bataille, infligeant des dégâts à tous les ennemis sur sa trajectoire, avec des dégâts réduits contre les structures.",
+          "en": "Fires a missile across the battlefield, dealing damage to all enemies in its path, with reduced damage against Structures."
         },
         "demoYoutubeId": ""
       },
@@ -23484,8 +23484,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_artillery.png",
         "description": {
-          "fr": "Augmente la portée des attaques de base en Mode Siège.",
-          "en": "Increases Basic Attack range while in Siege Mode."
+          "fr": "Augmente les dégâts en zone et le rayon des attaques de base en Mode Siège.",
+          "en": "Increases the splash damage and splash radius of Basic Attacks in Siege Mode."
         },
         "demoYoutubeId": null
       },
@@ -23498,8 +23498,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_siegemode.png",
         "description": {
-          "fr": "Les attaques de base en Mode Siège peuvent ricocher vers un ennemi proche supplémentaire.",
-          "en": "Basic Attacks in Siege Mode can bounce to an additional nearby enemy."
+          "fr": "Capacité active : augmente temporairement les dégâts des attaques de base. Toucher des héros ou des structures en Mode Siège réduit son temps de recharge. Possède plusieurs charges.",
+          "en": "Active: temporarily increases Basic Attack damage. Hitting Heroes or Structures with Basic Attacks in Siege Mode reduces its cooldown. Has multiple charges."
         },
         "demoYoutubeId": null
       },
@@ -23526,8 +23526,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_siegemode_var2.png",
         "description": {
-          "fr": "Réduit le temps nécessaire pour entrer et sortir du Mode Siège.",
-          "en": "Reduces the time needed to enter and exit Siege Mode."
+          "fr": "Utiliser Blindage en NéoAcier en Mode Siège rend Sgt. Hammer increvable tant qu'elle reste en Mode Siège.",
+          "en": "Using Neosteel Plating in Siege Mode grants Sgt. Hammer Unstoppable for as long as she remains in Siege Mode."
         },
         "demoYoutubeId": null
       },
@@ -23540,8 +23540,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_neosteelplating.png",
         "description": {
-          "fr": "Blindage en NéoAcier soigne également Sgt. Hammer en plus de lui accorder de l'armure.",
-          "en": "Neosteel Plating also heals Sgt. Hammer in addition to granting Armor."
+          "fr": "Les attaques de base en Mode Siège soignent Sgt. Hammer d'une partie des dégâts infligés.",
+          "en": "Basic Attacks in Siege Mode heal Sgt. Hammer for a portion of the damage dealt."
         },
         "demoYoutubeId": null
       },
@@ -23582,8 +23582,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_tankmode.png",
         "description": {
-          "fr": "La portée des attaques de base en Mode Siège augmente plus Sgt. Hammer reste immobile.",
-          "en": "Basic Attack range in Siege Mode increases the longer Sgt. Hammer remains stationary."
+          "fr": "La portée des attaques de base augmente progressivement plus Sgt. Hammer reste en Mode Siège.",
+          "en": "Basic Attack range gradually increases the longer Sgt. Hammer remains in Siege Mode."
         },
         "demoYoutubeId": null
       },
@@ -23596,8 +23596,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_bluntforcegun.png",
         "description": {
-          "fr": "Tire un missile qui traverse le champ de bataille, infligeant des dégâts à tous les ennemis sur sa trajectoire.",
-          "en": "Fires a missile across the battlefield, dealing damage to all enemies in its path."
+          "fr": "Tire un missile qui traverse le champ de bataille, infligeant des dégâts à tous les ennemis sur sa trajectoire, avec des dégâts réduits contre les structures.",
+          "en": "Fires a missile across the battlefield, dealing damage to all enemies in its path, with reduced damage against Structures."
         },
         "demoYoutubeId": null
       },
@@ -23638,8 +23638,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_neosteelplating.png",
         "description": {
-          "fr": "En Mode Siège, Sgt. Hammer ne peut plus être immobilisée et gagne de l'armure supplémentaire tant qu'elle reste stationnaire.",
-          "en": "While in Siege Mode, Sgt. Hammer can no longer be Rooted and gains bonus Armor while stationary."
+          "fr": "En Mode Siège, Décharge percutante inflige plus de dégâts et repousse plus loin.",
+          "en": "While in Siege Mode, Concussive Blast deals more damage and knocks back farther."
         },
         "demoYoutubeId": null
       },
@@ -23652,8 +23652,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_hypercoolingengines.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Blindage en NéoAcier et augmente l'armure qu'il accorde.",
-          "en": "Reduces Neosteel Plating's cooldown and increases the Armor it grants."
+          "fr": "En Mode Siège, toucher des héros ou des structures avec les attaques de base (hors dégâts de zone) réduit le temps de recharge de Propulseurs.",
+          "en": "While in Siege Mode, hitting Heroes or Structures with Basic Attacks (excluding splash damage) reduces the cooldown of Thrusters."
         },
         "demoYoutubeId": null
       },
@@ -23680,8 +23680,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_siegemode_var2.png",
         "description": {
-          "fr": "Les attaques de base et les capacités infligent davantage de dégâts aux ennemis affaiblis.",
-          "en": "Basic Attacks and Abilities deal more damage to low-Health enemies."
+          "fr": "Attaquer un héros ralenti, immobilisé ou étourdi augmente les dégâts des attaques de base pendant quelques secondes.",
+          "en": "Attacking a Slowed, Rooted, or Stunned Hero increases Basic Attack damage for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -23722,8 +23722,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_napalmstrike.png",
         "description": {
-          "fr": "Frappe de napalm laisse la zone enflammée plus longtemps et inflige davantage de dégâts en continu.",
-          "en": "Napalm Strike leaves the area ablaze longer and deals more ongoing damage."
+          "fr": "Augmente la portée de Frappe de napalm, et ses dégâts d'impact sont accrus.",
+          "en": "Increases Napalm Strike's cast range, and its impact damage is increased."
         },
         "demoYoutubeId": null
       },
@@ -23736,8 +23736,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_spidermines.png",
         "description": {
-          "fr": "Les Mines araignées infligent des dégâts supplémentaires en zone à la détonation.",
-          "en": "Spider Mines deal bonus area damage on detonation."
+          "fr": "En explosant, les Mines araignées réduisent l'armure des héros touchés.",
+          "en": "Upon detonating, Spider Mines reduce the Armor of Heroes hit."
         },
         "demoYoutubeId": null
       },
@@ -23750,8 +23750,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_siegemode.png",
         "description": {
-          "fr": "Réduit le temps de recharge des attaques de base en Mode Siège.",
-          "en": "Reduces the cooldown of Basic Attacks while in Siege Mode."
+          "fr": "Toucher des héros ou des structures avec les attaques de base (hors dégâts de zone) en Mode Siège accorde de la vitesse d'attaque, cumulable.",
+          "en": "Hitting Heroes or Structures with Basic Attacks (excluding splash damage) in Siege Mode grants stacking Attack Speed."
         },
         "demoYoutubeId": null
       }
