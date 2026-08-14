@@ -3827,8 +3827,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_deadlyreach.png",
         "description": {
-          "fr": "La prochaine attaque de base de Kharazim gagne en vitesse et en portée.",
-          "en": "Kharazim's next Basic Attack gains bonus Attack Speed and Range."
+          "fr": "Augmente temporairement la vitesse et la portée des attaques de base de Kharazim.",
+          "en": "Temporarily increases Kharazim's Attack Speed and Attack Range."
         },
         "demoYoutubeId": ""
       },
