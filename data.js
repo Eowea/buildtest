@@ -4547,7 +4547,7 @@ const HEROES = [
           "en": "August 14, 2026"
         },
         "summary": {
-          "fr": "Si t'adores courir dans les sorts et fait l'appât.",
+          "fr": "Si t'adores courir dans les sorts et faire l'appât.",
           "en": "If you love running through spells and bait."
         },
         "buildCodeTitle": {
