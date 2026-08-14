@@ -47,6 +47,8 @@
       optionalTalents: { fr: "Options", en: "Options" },
       newBadge: { fr: "Nouveau", en: "New" },
       updatedBadge: { fr: "Mis à jour", en: "Updated" },
+      heroRotationTitle: { fr: "Rotation gratuite", en: "Free Rotation" },
+      heroRotationError: { fr: "Rotation indisponible pour le moment.", en: "Rotation unavailable right now." },
     };
 
     /* =========================================================================
@@ -510,7 +512,70 @@ function renderHomeVideoSections() {
       ${markup ? `<section class="guide-video-section">${markup}</section>` : `<div class="empty-state">${t('noVideosYet')}</div>`}
     </div>`;
 
-  return `<div class="videos-layout with-guide">${col('latestVideoTitle', latestMarkup)}${col('patchAnalysisTitle', patchMarkup)}</div>`;
+  const rotationHtml = STREAMER_CONFIG.showHeroRotation !== false ? renderHeroRotationSection() : '';
+  return `<div class="videos-layout with-guide">${col('latestVideoTitle', latestMarkup)}${col('patchAnalysisTitle', patchMarkup)}</div>${rotationHtml}`;
+}
+
+/* =========================================================================
+   ROTATION DES HÉROS GRATUITS (source: nexuscompendium.com, via proxy CORS
+   car cette API ne renvoie pas d'en-têtes Access-Control-Allow-Origin)
+   ========================================================================= */
+let heroRotationCache = null;
+let heroRotationPromise = null;
+
+function renderHeroRotationSection() {
+  return `<div class="video-group">
+    <h2 class="section-title" style="text-align:center;margin-bottom:16px;">${t('heroRotationTitle')}</h2>
+    <section class="rotation-section" id="heroRotationBody"><div class="empty-state">${t('loading')}</div></section>
+  </div>`;
+}
+
+function renderHeroRotationBody(rotation) {
+  const container = document.getElementById('heroRotationBody');
+  if (!container) return;
+  if (!rotation || !Array.isArray(rotation.Heroes) || !rotation.Heroes.length) {
+    container.innerHTML = `<div class="empty-state">${t('heroRotationError')}</div>`;
+    return;
+  }
+  const fmt = new Intl.DateTimeFormat(state.lang === 'en' ? 'en-US' : 'fr-FR', { day: 'numeric', month: 'long' });
+  let dateRangeHtml = '';
+  const start = rotation.StartDate ? new Date(rotation.StartDate) : null;
+  const end = rotation.EndDate ? new Date(rotation.EndDate) : null;
+  if (start && !isNaN(start) && end && !isNaN(end)) {
+    dateRangeHtml = `<div class="rotation-date-range">${esc(fmt.format(start))} – ${esc(fmt.format(end))}</div>`;
+  }
+  const cardsHtml = rotation.Heroes.map(h => {
+    const lvl = h.ReqLevel;
+    const showLevel = lvl !== undefined && lvl !== null && lvl !== 0 && lvl !== '0' && lvl !== '';
+    return `
+    <div class="rotation-hero">
+      <div class="rotation-hero-portrait"><img src="${esc(h.ImageURL)}" alt="${esc(h.Name)}" loading="lazy" /></div>
+      <div class="rotation-hero-name">${esc(h.Name)}</div>
+      ${showLevel ? `<div class="rotation-hero-level">${esc(t('level'))} ${esc(String(lvl))}</div>` : ''}
+    </div>`;
+  }).join('');
+  container.innerHTML = `${dateRangeHtml}<div class="rotation-hero-grid">${cardsHtml}</div>`;
+}
+
+async function loadHeroRotation() {
+  const container = document.getElementById('heroRotationBody');
+  if (!container) return;
+  if (heroRotationCache) { renderHeroRotationBody(heroRotationCache); return; }
+  if (!heroRotationPromise) {
+    const target = encodeURIComponent('https://nexuscompendium.com/api/currently/herorotation');
+    heroRotationPromise = fetch('https://corsproxy.io/?url=' + target)
+      .then(res => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+      .then(data => data && data.RotationHero ? data.RotationHero : null);
+  }
+  try {
+    const rotation = await heroRotationPromise;
+    heroRotationCache = rotation;
+    renderHeroRotationBody(rotation);
+  } catch (e) {
+    heroRotationPromise = null;
+    const c = document.getElementById('heroRotationBody');
+    if (c) c.innerHTML = `<div class="empty-state">${t('heroRotationError')}</div>`;
+  }
 }
 
 function renderDetail() { 
@@ -522,6 +587,7 @@ function renderDetail() {
     els.detailView.innerHTML = renderHomeVideoSections();
     bindFloatingTriggers();
     bindComboCarousel();
+    if (STREAMER_CONFIG.showHeroRotation !== false) loadHeroRotation();
     return;
   }
   
