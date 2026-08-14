@@ -6779,8 +6779,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_holyradiance.png",
         "description": {
-          "fr": "Quête : soigner ou blesser des héros avec Radiance sacrée augmente la durée de Dévotion. Passif : rembourse du mana et réduit son temps de recharge à chaque utilisation efficace.",
-          "en": "Quest: healing or damaging Heroes with Holy Radiance increases Devotion's duration. Passive: refunds Mana and reduces its cooldown each time it connects."
+          "fr": "Quête : soigner ou blesser des héros avec Radiance sacrée augmente la durée de l'armure de Dévotion. Passif : rembourse du mana et réduit son temps de recharge à chaque utilisation efficace.",
+          "en": "Quest: healing or damaging Heroes with Holy Radiance increases the duration of Devotion's Armor. Passive: refunds Mana and reduces its cooldown each time it connects."
         },
         "demoYoutubeId": null
       },
