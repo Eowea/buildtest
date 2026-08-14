@@ -1902,7 +1902,7 @@ function renderAssetGrid(kind){
     if (!exts.includes(ext)) return false;
     if (q && !item.path.toLowerCase().includes(q)) return false;
     return true;
-  }).slice(0, 500);
+  });
   const grid = document.getElementById('assetGrid');
   if (!items.length){ grid.innerHTML = '<div class="empty-state">Aucun fichier trouvé</div>'; return; }
 
