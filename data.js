@@ -529,12 +529,12 @@ const HEROES = [
     "role": "Healer",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_anduin.png",
     "headline": {
-      "fr": "Soins fiables, sauvetage cible et backline stable.",
-      "en": "Reliable healing, targeted rescue, and stable backline."
+      "fr": "Soins fiables, sauvetage rapide.",
+      "en": "Reliable healing, fast rescue."
     },
     "gameplay": {
-      "fr": "Anduin apporte un soin lisible, un gros bouton de sauvetage et une excellente réponse aux engages front to back.",
-      "en": "Anduin provides straightforward healing, a massive rescue button, and an excellent response to front-to-back engages."
+      "fr": "Anduin offre des soins simples et efficaces et une puissante capacité de sauvetage.",
+      "en": "Anduin provides straightforward healing and a massive rescue button."
     },
     "spells": [
       {
@@ -618,16 +618,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Garde ton pull pour la vraie cible menacée.",
-        "en": "Keep your pull for the actual threatened target."
+        "fr": "N'attends pas que ton allié soit sur le point de mourir, utilise ton pull avant ! ",
+        "en": "Don't wait until your ally is about to die, use your pull sooner!"
       },
       {
-        "fr": "Place Châtiment avant l'engage adverse.",
-        "en": "Place Chastise before the enemy engage."
+        "fr": "Utilise ton Châtiment en suivi ou pour protéger tes alliés.",
+        "en": "Use your Chastise as a follow-up or to protect your allies."
       },
       {
-        "fr": "Bombe de lumière adore les tanks qui foncent.",
-        "en": "Lightbomb loves diving tanks."
+        "fr": "Bombe de lumière est à utiliser quand l'un des tes alliés engage, pas à la fin du fight !",
+        "en": "Use Lightbomb when one of your allies engages the enemy, not at the end of the fight!"
       }
     ],
     "builds": [
