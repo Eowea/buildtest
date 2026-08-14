@@ -4268,7 +4268,7 @@ const HEROES = [
           "fr": "Poings légendaires",
           "en": "Fists of Legend"
         },
-        "icon": "assets/heroes/base_spells/kharazim/images/talents/storm_ui_icon_kharazim_fistoflegend.png",
+        "icon": "assets/heroes/base_spells/kharazim/images/talents/storm_ui_icon_monk_fistoflegend.png",
         "description": {
           "fr": "Confère une partie des bénéfices des deux talents de niveau 1 qui n'ont pas été choisis.",
           "en": "Grants a portion of the benefits from both level 1 talents that weren't chosen."
@@ -4296,7 +4296,7 @@ const HEROES = [
           "fr": "Épiphanie",
           "en": "Epiphany"
         },
-        "icon": "assets/heroes/base_spells/kharazim/images/talents/storm_ui_icon_kharazim_epiphany.png",
+        "icon": "assets/heroes/base_spells/kharazim/images/talents/storm_ui_icon_monk_epiphany.png",
         "description": {
           "fr": "Nouvelle capacité active : restaure une grande partie du mana de Kharazim et des charges de Frappe éclair.",
           "en": "New active ability: restores a large portion of Kharazim's Mana and Radiant Dash charges."
