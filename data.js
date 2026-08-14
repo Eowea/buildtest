@@ -5181,7 +5181,7 @@ const HEROES = [
           "fr": "Réacteur cellulaire",
           "en": "Cellular Reactor"
         },
-        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_caduceusreactor.png",
+        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_temp_btn-upgrade-terran-mobiusreactor.png",
         "description": {
           "fr": "Nouvelle capacité active : dépense de l'énergie pour se soigner fortement, ce qui désactive temporairement Réacteur Caduceus.",
           "en": "New active ability: spends Energy to heal herself for a large amount, which disables Caduceus Reactor while active."
