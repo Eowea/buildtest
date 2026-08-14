@@ -4598,7 +4598,7 @@ const HEROES = [
           "fr": "Vents soudains",
           "en": "Surging Winds"
         },
-        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_blindingwind_a.png",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_blindingwind.png",
         "description": {
           "fr": "Si Vent aveuglant touche plusieurs héros, son temps de recharge diminue instantanément et Li Li gagne de la puissance de capacité.",
           "en": "If Blinding Wind hits multiple Heroes, its cooldown is instantly reduced and Li Li gains Spell Power."
@@ -4640,7 +4640,7 @@ const HEROES = [
           "fr": "Vortex de masse",
           "en": "Mass Vortex"
         },
-        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_blindingwind_b.png",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_blindingwind.png",
         "description": {
           "fr": "Vent aveuglant touche un ennemi de plus et inflige davantage de dégâts s'il touche le nombre maximal de héros.",
           "en": "Blinding Wind hits one additional enemy and deals more damage when it hits the maximum number of Heroes."
@@ -4710,7 +4710,7 @@ const HEROES = [
           "fr": "Vent violent",
           "en": "Gale Force"
         },
-        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_blindingwind_a.png",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_blindingwind.png",
         "description": {
           "fr": "Augmente la durée de l'aveuglement de Vent aveuglant. Les attaques de base contre un héros aveuglé infligent davantage de dégâts.",
           "en": "Increases Blinding Wind's Blind duration. Basic Attacks against Blinded Heroes deal bonus damage."
@@ -4724,7 +4724,7 @@ const HEROES = [
           "fr": "Vent contraire",
           "en": "Hindering Winds"
         },
-        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_blindingwind_b.png",
+        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_blindingwind_a.png",
         "description": {
           "fr": "Augmente le ralentissement et la durée de Vent aveuglant.",
           "en": "Increases Blinding Wind's Slow amount and duration."
@@ -4738,7 +4738,7 @@ const HEROES = [
           "fr": "Double dose",
           "en": "Two For One"
         },
-        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_healingbrew_a.png",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_healingbrew.png",
         "description": {
           "fr": "Infusion requinquante soigne un allié supplémentaire, mais son temps de recharge augmente.",
           "en": "Healing Brew heals an additional ally, but its cooldown increases."
@@ -4752,7 +4752,7 @@ const HEROES = [
           "fr": "Coup de fouet",
           "en": "Pick Me Up"
         },
-        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_healingbrew.png",
+        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_healingbrew_a.png",
         "description": {
           "fr": "Infusion requinquante soigne davantage quand la cible est sous 50% de vie.",
           "en": "Healing Brew heals for more when the target is below 50% Health."
@@ -4822,7 +4822,7 @@ const HEROES = [
           "fr": "Ébrouement",
           "en": "Shake It Off"
         },
-        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_shakeitoff.png",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_fastfeet.png",
         "description": {
           "fr": "En cas d'étourdissement, de silence ou d'immobilisation, et brièvement après, Li Li gagne de l'armure. Passif : accélère encore le recharge de Prompts petons.",
           "en": "While Stunned, Silenced, or Rooted, and briefly after, Li Li gains Armor. Passive: further speeds up Fast Feet's cooldown refresh."
