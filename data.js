@@ -88,7 +88,8 @@ const STREAMER_CONFIG = {
       },
       "youtubeId": "https://youtu.be/m8kifCbSy-s"
     }
-  ]
+  ],
+  "showHeroRotation": false
 };
 
 const HEROES = [
