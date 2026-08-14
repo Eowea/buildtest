@@ -23461,10 +23461,7 @@ const HEROES = [
           {
             "level": 20,
             "primaryId": "tmw9c4hmr216ho",
-            "alternativeIds": [
-              "tmw9c4hmr20c6a",
-              "tmw9c4hmr19hit"
-            ]
+            "alternativeIds": []
           }
         ]
       }
