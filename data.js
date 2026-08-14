@@ -25907,6 +25907,7 @@ const HEROES = [
     "spells": [
       {
         "key": "Trait",
+        "form": "normal",
         "name": {
           "fr": "Minigun",
           "en": "Minigun"
@@ -25920,6 +25921,7 @@ const HEROES = [
       },
       {
         "key": "A",
+        "form": "normal",
         "name": {
           "fr": "Exécution",
           "en": "Overkill"
@@ -25932,7 +25934,22 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
+        "key": "A",
+        "form": "odin",
+        "name": {
+          "fr": "Annihilation",
+          "en": "Annihilate"
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_annihilate.png",
+        "description": {
+          "fr": "Tire les canons de l'Odin en ligne droite, infligeant des dégâts à tout ce qui se trouve sur la trajectoire.",
+          "en": "Fires the Odin's cannons in a straight line, damaging everything in their path."
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "Z",
+        "form": "normal",
         "name": {
           "fr": "Grenade à fragmentation",
           "en": "Frag Grenade"
@@ -25945,7 +25962,22 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
+        "key": "Z",
+        "form": "odin",
+        "name": {
+          "fr": "Missiles Ragnarok",
+          "en": "Ragnarok Missiles"
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_ragnarokmissiles.png",
+        "description": {
+          "fr": "Tire un missile sur chaque ennemi proche, leur infligeant des dégâts.",
+          "en": "Fires a missile at each nearby enemy, dealing damage to them."
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "E",
+        "form": "normal",
         "name": {
           "fr": "Fonce et défonce",
           "en": "Run and Gun"
@@ -25958,7 +25990,22 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
+        "key": "E",
+        "form": "odin",
+        "name": {
+          "fr": "Propulseurs",
+          "en": "Thrusters"
+        },
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_thrusters.png",
+        "description": {
+          "fr": "Propulse l'Odin dans la direction ciblée. Ne permet pas de franchir le terrain infranchissable.",
+          "en": "Dashes the Odin in the targeted direction. Cannot cross impassable terrain."
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "R1",
+        "form": "normal",
         "name": {
           "fr": "Réquisition du Odin",
           "en": "Commandeer Odin"
@@ -25972,6 +26019,7 @@ const HEROES = [
       },
       {
         "key": "R2",
+        "form": "normal",
         "name": {
           "fr": "Foreuse laser Drakken",
           "en": "Drakken Laser Drill"
@@ -26356,7 +26404,22 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [
+      {
+        "id": "normal",
+        "label": {
+          "fr": "Forme normale",
+          "en": "Normal Form"
+        }
+      },
+      {
+        "id": "odin",
+        "label": {
+          "fr": "Odin",
+          "en": "Odin"
+        }
+      }
+    ]
   },
   {
     "id": "tyrael",
