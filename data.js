@@ -6778,7 +6778,7 @@ const HEROES = [
           "fr": "Toucher d'argent",
           "en": "Silver Touch"
         },
-        "icon": "assets/heroes/base_spells/uther/images/talents/storm_ui_icon_uther_holylight_var1.png",
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_holylight.png",
         "description": {
           "fr": "Quête : réduire les dégâts de sources héroïques avec Dévotion finit par réduire le coût en mana de Lumière sacrée et augmenter sa portée.",
           "en": "Quest: reducing damage from Heroic sources with Devotion eventually reduces Holy Light's Mana cost and increases its range."
@@ -6806,7 +6806,7 @@ const HEROES = [
           "fr": "Marteau du Porteur de Lumière",
           "en": "Hammer of the Lightbringer"
         },
-        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_hammerofjustice.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_mana.png",
         "description": {
           "fr": "Quête : les attaques de base finissent par réduire le temps de recharge de Marteau de la justice. Passif : les attaques de base rendent du mana à Uther.",
           "en": "Quest: Basic Attacks eventually reduce Hammer of Justice's cooldown. Passive: Basic Attacks restore Mana to Uther."
