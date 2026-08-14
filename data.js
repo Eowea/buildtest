@@ -3810,8 +3810,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_dash.png",
         "description": {
-          "fr": "Bondit vers un allié ou un ennemi, qui subit une attaque de base à l'arrivée. Possède plusieurs charges.",
-          "en": "Dashes to an ally or enemy, hitting them with a Basic Attack on arrival. Has multiple charges."
+          "fr": "Bondit vers un allié ou un ennemi, qui subit une attaque de base à l'arrivée. Peut stocker plusieurs charges.",
+          "en": "Dashes to an ally or enemy, hitting them with a Basic Attack on arrival. Can store multiple charges."
         },
         "demoYoutubeId": ""
       },
@@ -20597,8 +20597,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_plagueoftoads.png",
         "description": {
-          "fr": "Libère une vague de grenouilles qui explosent au contact des ennemis. Possède plusieurs charges.",
-          "en": "Releases a wave of toads that explode on contact with enemies. Has multiple charges."
+          "fr": "Libère une vague de grenouilles qui explosent au contact des ennemis. Peut stocker plusieurs charges.",
+          "en": "Releases a wave of toads that explode on contact with enemies. Can store multiple charges."
         },
         "demoYoutubeId": ""
       },
@@ -27634,8 +27634,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_creep.png",
         "description": {
-          "fr": "Pose une tumeur qui génère du mucus. Zagara et ses créatures se déplacent plus vite sur le mucus, qui révèle aussi la zone. Possède plusieurs charges.",
-          "en": "Plants a tumor that spreads Creep. Zagara and her summons move faster on Creep, which also reveals the area. Has multiple charges."
+          "fr": "Pose une tumeur qui génère du mucus. Zagara et ses créatures se déplacent plus vite sur le mucus, qui révèle aussi la zone. Peut stocker plusieurs charges.",
+          "en": "Plants a tumor that spreads Creep. Zagara and her summons move faster on Creep, which also reveals the area. Can store multiple charges."
         },
         "demoYoutubeId": ""
       },
@@ -27647,8 +27647,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_banelingbarrage.png",
         "description": {
-          "fr": "Lance des chancres qui explosent sur les ennemis touchés. Possède plusieurs charges.",
-          "en": "Launches Banelings that explode on the enemies they hit. Has multiple charges."
+          "fr": "Lance des chancres qui explosent sur les ennemis touchés. Peut stocker plusieurs charges.",
+          "en": "Launches Banelings that explode on the enemies they hit. Can store multiple charges."
         },
         "demoYoutubeId": ""
       },
@@ -27724,18 +27724,18 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "Build qui passe partout, peu importe le mode de jeu.\n"
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1211211,Zagara]",
+        "buildCode": "[T2131114,Zagara]",
         "videos": [],
         "updatedAt": {
           "fr": "14 Août 2026",
@@ -27744,17 +27744,17 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmy5r2zag01egs",
+            "primaryId": "tmy5r2zag02rpa",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmy5r2zag05g84",
+            "primaryId": "tmy5r2zag04aot",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmy5r2zag070h4",
+            "primaryId": "tmy5r2zag09nr7",
             "alternativeIds": []
           },
           {
@@ -27764,7 +27764,7 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tmy5r2zag13w2b",
+            "primaryId": "tmy5r2zag120z2",
             "alternativeIds": []
           },
           {
@@ -27774,7 +27774,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmy5r2zag18hdt",
+            "primaryId": "tmy5r2zag21tsv",
             "alternativeIds": []
           }
         ]
@@ -27789,7 +27789,7 @@ const HEROES = [
           "fr": "Acide volatil",
           "en": "Volatile Acid"
         },
-        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_banelingbarrage_a.png",
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_banelingbarrage.png",
         "description": {
           "fr": "Les chancres parcourent une plus grande distance avant d'exploser.",
           "en": "Banelings travel further before exploding."
@@ -27831,7 +27831,7 @@ const HEROES = [
           "fr": "Aiguillons envenimés",
           "en": "Envenomed Spines"
         },
-        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_hunterkiller_a.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_range.png",
         "description": {
           "fr": "Nouvelle capacité active : la prochaine attaque de base de Zagara empoisonne sa cible.",
           "en": "New active ability: Zagara's next Basic Attack poisons its target."
@@ -27845,7 +27845,7 @@ const HEROES = [
           "fr": "Lames méduses",
           "en": "Medusa Blades"
         },
-        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_hunterkiller.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_aoe.png",
         "description": {
           "fr": "Les attaques de base touchent aussi des cibles proches supplémentaires pour des dégâts réduits.",
           "en": "Basic Attacks also hit additional nearby targets for reduced damage."
@@ -27859,7 +27859,7 @@ const HEROES = [
           "fr": "Aiguillons dentés",
           "en": "Serrated Spines"
         },
-        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_rapidincubation.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
         "description": {
           "fr": "Quête : chaque attaque de base contre un héros augmente en permanence les dégâts d'attaque de Zagara.",
           "en": "Quest: each Basic Attack against a Hero permanently increases Zagara's Attack Damage."
@@ -27971,7 +27971,7 @@ const HEROES = [
           "fr": "Bouclier anti-sort",
           "en": "Spell Shield"
         },
-        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_exitnydusworm.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_spellshield.png",
         "description": {
           "fr": "Confère périodiquement de l'armure anti-sort contre la prochaine capacité adverse. Peut être désactivé.",
           "en": "Periodically grants Spell Armor against the next enemy Ability. Can be toggled off."
@@ -27985,7 +27985,7 @@ const HEROES = [
           "fr": "Salive corrosive",
           "en": "Corrosive Saliva"
         },
-        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_hunterkiller_a.png",
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_hunterkiller.png",
         "description": {
           "fr": "Les attaques du chasseur-tueur et des cancrelats contre des héros infligent des dégâts bonus selon leurs points de vie maximum.",
           "en": "Hunter Killer's and Roachlings' attacks against Heroes deal bonus damage based on their maximum Health."
@@ -28055,7 +28055,7 @@ const HEROES = [
           "fr": "Mère des couvées",
           "en": "Broodmother"
         },
-        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_banelingbarrage_a.png",
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_banelingbarrage.png",
         "description": {
           "fr": "Une attaque de base sur trois expulse aussi un chancre vers la cible. Passif : augmente la vitesse d'attaque.",
           "en": "Every 3rd Basic Attack also launches a Baneling at the target. Passive: increases Attack Speed."
