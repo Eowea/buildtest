@@ -23489,7 +23489,7 @@ const HEROES = [
         "id": "tmw9c4hmr027xm",
         "level": 1,
         "name": {
-          "fr": "Artillerie avancée",
+          "fr": "Artillerie améliorée",
           "en": "Advanced Artillery"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_siegemode.png",
@@ -23503,7 +23503,7 @@ const HEROES = [
         "id": "tmw9c4hmr03d4g",
         "level": 1,
         "name": {
-          "fr": "Salve de Maelström",
+          "fr": "Obus Maelström",
           "en": "Maelstrom Rounds"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_siegemode_var1.png",
@@ -23545,7 +23545,7 @@ const HEROES = [
         "id": "tmw9c4hmr069wm",
         "level": 4,
         "name": {
-          "fr": "Bioacier régénérant",
+          "fr": "Bio-acier régénérant",
           "en": "Regenerative Bio-Steel"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_siegemode.png",
@@ -23587,7 +23587,7 @@ const HEROES = [
         "id": "tmw9c4hmr098mu",
         "level": 7,
         "name": {
-          "fr": "Portée graduelle",
+          "fr": "Portée graduée",
           "en": "Graduating Range"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_tankmode.png",
@@ -23629,7 +23629,7 @@ const HEROES = [
         "id": "tmw9c4hmr12pad",
         "level": 13,
         "name": {
-          "fr": "Déploiement tactique de mines",
+          "fr": "Sillage miné",
           "en": "Tactical Mine Deployment"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_spidermines.png",
@@ -23643,7 +23643,7 @@ const HEROES = [
         "id": "tmw9c4hmr1313m",
         "level": 13,
         "name": {
-          "fr": "Retranchée",
+          "fr": "Glacis",
           "en": "Entrenched"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_neosteelplating.png",
@@ -23657,7 +23657,7 @@ const HEROES = [
         "id": "tmw9c4hmr14h5w",
         "level": 13,
         "name": {
-          "fr": "Moteurs hyper-refroidis",
+          "fr": "Systèmes de refroidissement",
           "en": "Hyper-Cooling Engines"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_hypercoolingengines.png",
@@ -23671,7 +23671,7 @@ const HEROES = [
         "id": "tmw9c4hmr15pc7",
         "level": 16,
         "name": {
-          "fr": "Ingéniosité mécanique",
+          "fr": "Sensibilité mécanique",
           "en": "Mechanical Know-how"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_neosteelplating.png",
