@@ -3764,7 +3764,7 @@ const HEROES = [
   },
   {
     "id": "kharazim",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Kharazim",
       "en": "Kharazim"
@@ -3783,13 +3783,13 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Dogme",
-          "en": "Dogma"
+          "fr": "Choisissez un trait",
+          "en": "Pick Your Trait"
         },
         "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
         "description": {
-          "fr": "Le Trait se choisit au niveau 1 (Dégâts, Soins ou Mana).",
-          "en": "Trait is chosen at level 1 (Damage, Heals or Mana)."
+          "fr": "Le trait se choisit au niveau 1, entre Transcendance, Poings d'acier et Spiritualité.",
+          "en": "The trait is chosen at level 1, between Transcendence, Iron Fists, and Insight."
         },
         "demoYoutubeId": ""
       },
@@ -3801,8 +3801,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_dash.png",
         "description": {
-          "fr": "Bondit vers un allié ou un ennemi.",
-          "en": "Dashes to an ally or enemy."
+          "fr": "Bondit vers un allié ou un ennemi, qui subit une attaque de base à l'arrivée. Peut stocker plusieurs charges.",
+          "en": "Dashes to an ally or enemy, hitting them with a Basic Attack on arrival. Can store multiple charges."
         },
         "demoYoutubeId": ""
       },
@@ -3814,8 +3814,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_breath0fheaven.png",
         "description": {
-          "fr": "Soigne les alliés proches et donne de la vitesse.",
-          "en": "Heals nearby allies and grants movement speed."
+          "fr": "Soigne les héros alliés proches et leur donne de la vitesse de déplacement.",
+          "en": "Heals nearby allied Heroes and grants them Movement Speed."
         },
         "demoYoutubeId": ""
       },
@@ -3827,8 +3827,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_deadlyreach.png",
         "description": {
-          "fr": "Augmente la vitesse d'attaque et la portée.",
-          "en": "Increases attack speed and range."
+          "fr": "La prochaine attaque de base de Kharazim gagne en vitesse et en portée.",
+          "en": "Kharazim's next Basic Attack gains bonus Attack Speed and Range."
         },
         "demoYoutubeId": ""
       },
@@ -3838,10 +3838,10 @@ const HEROES = [
           "fr": "Paume divine",
           "en": "Divine Palm"
         },
-        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_sevensidedstrike.png",
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_divinepalm.png",
         "description": {
-          "fr": "Sauve un allié de la mort avec un gros soin.",
-          "en": "Saves an ally from death with a massive heal."
+          "fr": "Empêche un héros allié de mourir, en le soignant s'il subit des dégâts fatals peu après.",
+          "en": "Protects an allied Hero from death, healing them if they take fatal damage shortly after."
         },
         "demoYoutubeId": ""
       },
@@ -3851,10 +3851,10 @@ const HEROES = [
           "fr": "Les Sept frappes",
           "en": "Seven-Sided Strike"
         },
-        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_divinepalm.png",
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_sevensidedstrike.png",
         "description": {
-          "fr": "Inflige des dégâts lourds en pourcentage de vie dans une zone.",
-          "en": "Deals heavy percentage health damage in an area."
+          "fr": "Devient invulnérable et frappe plusieurs fois le héros ennemi proche ayant le plus de vie.",
+          "en": "Becomes Invulnerable and strikes the nearest highest-Health enemy Hero multiple times."
         },
         "demoYoutubeId": ""
       }
@@ -3885,46 +3885,46 @@ const HEROES = [
           "fr": "A COLLER",
           "en": "PASTE"
         },
-        "buildCode": "[T1222222,Kharazim]",
+        "buildCode": "[T2232122,Kharazim]",
         "videos": [],
         "updatedAt": {
-          "fr": "",
-          "en": ""
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6joui4y6",
+            "primaryId": "tmq8v3khz02tva",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6joa02vm",
+            "primaryId": "tmq8v3khz05y3f",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6joykuho",
+            "primaryId": "tmq8v3khz09qn6",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6joh3ve9",
+            "primaryId": "tmq8v3khz11cz2",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jottn94",
+            "primaryId": "tmq8v3khz12bh2",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6job0tif",
+            "primaryId": "tmq8v3khz16muk",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6joau8lk",
+            "primaryId": "tmq8v3khz193gr",
             "alternativeIds": []
           }
         ]
@@ -3944,46 +3944,46 @@ const HEROES = [
           "fr": "A COLLER",
           "en": "PASTE"
         },
-        "buildCode": "[T2111111,Kharazim]",
+        "buildCode": "[T1121331,Kharazim]",
         "videos": [],
         "updatedAt": {
-          "fr": "",
-          "en": ""
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6joui4y6",
+            "primaryId": "tmq8v3khz01n1q",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6joa02vm",
+            "primaryId": "tmq8v3khz04eup",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6joykuho",
+            "primaryId": "tmq8v3khz0836c",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6joh3ve9",
+            "primaryId": "tmq8v3khz10ocb",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jottn94",
+            "primaryId": "tmq8v3khz14c43",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6job0tif",
+            "primaryId": "tmq8v3khz176qz",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6joau8lk",
+            "primaryId": "tmq8v3khz1842q",
             "alternativeIds": []
           }
         ]
@@ -3992,100 +3992,310 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6joui4y6",
+        "id": "tmq8v3khz01n1q",
         "level": 1,
         "name": {
-          "fr": "Totem Colossal",
-          "en": "Colossal Totem"
+          "fr": "Transcendance",
+          "en": "Transcendence"
         },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_earthbindtotem.png",
+        "icon": "assets/heroes/base_spells/kharazim/images/talents/storm_ui_icon_monk_trait_transcendence.png",
         "description": {
-          "fr": "Augmente les points de vie, le rayon et la durée du totem. Permet de le repositionner une nouvelle fois.",
-          "en": "Increases health, radius, and duration of the totem. Can be repositioned once."
+          "fr": "Chaque 3e attaque de base soigne le héros allié proche ayant le moins de vie et augmente la vitesse de déplacement.",
+          "en": "Every 3rd Basic Attack heals the lowest-Health nearby allied Hero and grants Movement Speed."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joa02vm",
+        "id": "tmq8v3khz02tva",
+        "level": 1,
+        "name": {
+          "fr": "Poings d'acier",
+          "en": "Iron Fists"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/talents/storm_ui_icon_monk_trait_ironfist.png",
+        "description": {
+          "fr": "Chaque 3e attaque de base inflige des dégâts bonus et augmente la vitesse de déplacement.",
+          "en": "Every 3rd Basic Attack deals bonus damage and grants Movement Speed."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmq8v3khz037hg",
+        "level": 1,
+        "name": {
+          "fr": "Spiritualité",
+          "en": "Insight"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/talents/storm_ui_icon_monk_trait_insight.png",
+        "description": {
+          "fr": "Quête : chaque 3e attaque de base rend du mana et augmente la vitesse de déplacement. Récompense : à terme, réduit aussi le temps de recharge des capacités de base.",
+          "en": "Quest: every 3rd Basic Attack restores Mana and grants Movement Speed. Reward: eventually also reduces Basic Ability cooldowns."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmq8v3khz04eup",
         "level": 4,
         "name": {
-          "fr": "Viveterre",
-          "en": "Earthliving Enchant"
+          "fr": "Allié d'esprit",
+          "en": "Spirit Ally"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg",
+        "icon": "assets/heroes/base_spells/kharazim/images/talents/storm_ui_icon_monk_allyspirit.png",
         "description": {
-          "fr": "Renforce Salve de guerison pour les héros dont les points de vie sont bas.",
-          "en": "Empowers Chain Heal for heroes at low health."
+          "fr": "Place un allié d'esprit qui soigne les héros alliés proches au fil du temps. Kharazim peut Bondir vers lui.",
+          "en": "Places a Spirit Ally that heals nearby allied Heroes over time. Kharazim can Dash to it."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joykuho",
+        "id": "tmq8v3khz05y3f",
+        "level": 4,
+        "name": {
+          "fr": "Allié de terre",
+          "en": "Earth Ally"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/talents/storm_ui_icon_monk_allyearth.png",
+        "description": {
+          "fr": "Place un allié de terre qui confère de l'armure physique aux héros alliés proches contre les attaques de base. Kharazim peut Bondir vers lui.",
+          "en": "Places an Earth Ally that grants nearby allied Heroes Physical Armor against Basic Attacks. Kharazim can Dash to it."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmq8v3khz06mqu",
+        "level": 4,
+        "name": {
+          "fr": "Allié d'air",
+          "en": "Air Ally"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/talents/storm_ui_icon_monk_allyair.png",
+        "description": {
+          "fr": "Place un allié d'air qui donne de la puissance de capacité aux alliés et dévoile une large zone. Kharazim peut Bondir vers lui.",
+          "en": "Places an Air Ally that grants allies Spell Power and reveals a large area. Kharazim can Dash to it."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmq8v3khz07735",
         "level": 7,
         "name": {
-          "fr": "Totem lié à la terre",
-          "en": "Grounded Totem"
+          "fr": "Vitesse fulgurante",
+          "en": "Blinding Speed"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg",
+        "icon": "assets/heroes/base_spells/kharazim/images/talents/storm_ui_icon_monk_dash_a.png",
         "description": {
-          "fr": "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.",
-          "en": "Reduces attack and spell power of enemies in range."
+          "fr": "Réduit le temps de recharge de Frappe éclair et augmente son nombre maximal de charges.",
+          "en": "Reduces Radiant Dash's cooldown and increases its maximum charges."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joh3ve9",
+        "id": "tmq8v3khz0836c",
+        "level": 7,
+        "name": {
+          "fr": "Zèle divin",
+          "en": "Heavenly Zeal"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_breath0fheaven.png",
+        "description": {
+          "fr": "Augmente le bonus de vitesse de déplacement de Souffle divin. Bondir vers un allié augmente aussi les soins qu'il reçoit de Souffle divin peu après.",
+          "en": "Increases Breath of Heaven's Movement Speed bonus. Dashing to an ally also boosts the healing they receive from Breath of Heaven shortly after."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmq8v3khz09qn6",
+        "level": 7,
+        "name": {
+          "fr": "Poings ardents",
+          "en": "Blazing Fists"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/talents/storm_ui_icon_monk_deadlyreachactive.png",
+        "description": {
+          "fr": "Augmente la durée de Frappe mortelle. Chaque 3e attaque de base réduit son temps de recharge.",
+          "en": "Increases Deadly Reach's duration. Every 3rd Basic Attack reduces its cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmq8v3khz10ocb",
         "level": 10,
         "name": {
-          "fr": "Guérison ancestrale",
-          "en": "Ancestral Healing"
+          "fr": "Paume divine",
+          "en": "Divine Palm"
         },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_ancestralhealing.png",
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_divinepalm.png",
         "description": {
-          "fr": "Gros soin monocible, utilisable sur soi.",
-          "en": "Massive single-target heal, usable on self."
+          "fr": "Empêche un héros allié de mourir, en le soignant s'il subit des dégâts fatals peu après.",
+          "en": "Protects an allied Hero from death, healing them if they take fatal damage shortly after."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jottn94",
+        "id": "tmq8v3khz11cz2",
+        "level": 10,
+        "name": {
+          "fr": "Les Sept frappes",
+          "en": "Seven-Sided Strike"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_sevensidedstrike.png",
+        "description": {
+          "fr": "Devient invulnérable et frappe plusieurs fois le héros ennemi proche ayant le plus de vie.",
+          "en": "Becomes Invulnerable and strikes the nearest highest-Health enemy Hero multiple times."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmq8v3khz12bh2",
         "level": 13,
         "name": {
-          "fr": "Raz-de-marée",
-          "en": "Tidal Waves"
+          "fr": "Vif-argent",
+          "en": "Quicksilver"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg",
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_dash.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Salve de guérison et son coût en mana.",
-          "en": "Reduces Chain Heal cooldown and mana cost."
+          "fr": "Bondir vers un allié donne de la vitesse de déplacement à Kharazim et à sa cible.",
+          "en": "Dashing to an ally grants Kharazim and the target bonus Movement Speed."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6job0tif",
+        "id": "tmq8v3khz13sw2",
+        "level": 13,
+        "name": {
+          "fr": "Bouclier anti-sort",
+          "en": "Spell Shield"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Confère périodiquement de l'armure anti-sort contre la prochaine capacité adverse. Peut être désactivé.",
+          "en": "Periodically grants Spell Armor against the next enemy Ability. Can be toggled off."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmq8v3khz14c43",
+        "level": 13,
+        "name": {
+          "fr": "Sixième sens",
+          "en": "Sixth Sense"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_deadlyreach.png",
+        "description": {
+          "fr": "En cas d'étourdissement ou d'immobilisation, confère de l'armure physique contre les attaques de base de héros.",
+          "en": "While Stunned or Rooted, grants Physical Armor against Hero Basic Attacks."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmq8v3khz154yr",
         "level": 16,
         "name": {
-          "fr": "Totem d’emprise de la terre",
-          "en": "Earthgrasp Totem"
+          "fr": "Toucher purificateur",
+          "en": "Cleansing Touch"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg",
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_dash.png",
         "description": {
-          "fr": "Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.",
-          "en": "When first spawned, the totem deals AoE damage and heavily slows."
+          "fr": "Bondir vers un allié le rend insensible au contrôle pendant un court instant.",
+          "en": "Dashing to an ally makes them Unstoppable for a brief moment."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joau8lk",
+        "id": "tmq8v3khz16muk",
+        "level": 16,
+        "name": {
+          "fr": "La Voie des mille poings",
+          "en": "Way of the Hundred Fists"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/talents/storm_ui_icon_monk_dash_a.png",
+        "description": {
+          "fr": "Bondir vers un ennemi déclenche une rafale d'attaques de base supplémentaires.",
+          "en": "Dashing to an enemy triggers a rapid volley of extra Basic Attacks."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmq8v3khz176qz",
+        "level": 16,
+        "name": {
+          "fr": "Écho divin",
+          "en": "Echo of Heaven"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/talents/storm_ui_icon_monk_breath0fheaven_var1.png",
+        "description": {
+          "fr": "Souffle divin soigne moins au premier soin, mais se déclenche une seconde fois peu après.",
+          "en": "Breath of Heaven heals for less initially, but triggers a second time shortly after."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmq8v3khz1842q",
         "level": 20,
         "name": {
-          "fr": "Bénédiction du long-voyant",
-          "en": "Farseer's Blessing"
+          "fr": "Sommeil paisible",
+          "en": "Peaceful Repose"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_ancestralhealing.jpg",
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_divinepalm.png",
         "description": {
-          "fr": "Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.",
-          "en": "A second Ancestral Healing triggers and heals in an AoE."
+          "fr": "Augmente les soins de Paume divine et réduit fortement son temps de recharge si le héros protégé ne meurt pas.",
+          "en": "Increases Divine Palm's healing and greatly reduces its cooldown if the protected Hero doesn't die."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmq8v3khz193gr",
+        "level": 20,
+        "name": {
+          "fr": "Transgression",
+          "en": "Transgression"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_sevensidedstrike.png",
+        "description": {
+          "fr": "Les Sept frappes touche plusieurs cibles supplémentaires.",
+          "en": "Seven-Sided Strike hits several additional targets."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmq8v3khz208te",
+        "level": 20,
+        "name": {
+          "fr": "Poings légendaires",
+          "en": "Fists of Legend"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Confère une partie des bénéfices des deux talents de niveau 1 qui n'ont pas été choisis.",
+          "en": "Grants a portion of the benefits from both level 1 talents that weren't chosen."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmq8v3khz215jl",
+        "level": 20,
+        "name": {
+          "fr": "Bouclier du Nexus",
+          "en": "Storm Shield"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/talents/storm_ui_icon_monk_allyearth.png",
+        "description": {
+          "fr": "Nouvelle capacité active : confère un bouclier à tous les héros alliés proches.",
+          "en": "New active ability: grants a Shield to all nearby allied Heroes."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmq8v3khz226ex",
+        "level": 20,
+        "name": {
+          "fr": "Épiphanie",
+          "en": "Epiphany"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_dash.png",
+        "description": {
+          "fr": "Nouvelle capacité active : restaure une grande partie du mana de Kharazim et des charges de Frappe éclair.",
+          "en": "New active ability: restores a large portion of Kharazim's Mana and Radiant Dash charges."
         },
         "demoYoutubeId": null
       }
