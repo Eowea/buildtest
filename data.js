@@ -2350,8 +2350,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_life_binder.png",
         "description": {
-          "fr": "Lie sa force vitale à un allié, soignant les deux et égalisant leurs points de vie.",
-          "en": "Binds her life force to an ally, healing both and equalizing their Health."
+          "fr": "Lie sa force vitale à un allié, soignant les deux et égalisant leurs points de vie. Reine-dragon augmente sa portée.",
+          "en": "Binds her life force to an ally, healing both and equalizing their Health. Dragonqueen increases its range."
         },
         "demoYoutubeId": ""
       },
