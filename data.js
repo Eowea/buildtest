@@ -23482,7 +23482,7 @@ const HEROES = [
           "fr": "Artillerie avancée",
           "en": "Advanced Artillery"
         },
-        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_artillery.png",
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_siegemode.png",
         "description": {
           "fr": "Augmente les dégâts de zone et le rayon des attaque de base en mode Siège.",
           "en": "Increases area-of-effect damage and the range of basic attacks in Siege mode."
@@ -23496,7 +23496,7 @@ const HEROES = [
           "fr": "Salve de Maelström",
           "en": "Maelstrom Rounds"
         },
-        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_siegemode.png",
+        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_siegemode_var1.png",
         "description": {
           "fr": "Capacité active : augmente temporairement les dégâts des attaques de base. Toucher des héros ou des structures en Mode Siège réduit son temps de recharge. Possède plusieurs charges.",
           "en": "Active: temporarily increases Basic Attack damage. Hitting Heroes or Structures with Basic Attacks in Siege Mode reduces its cooldown. Has multiple charges."
@@ -23521,12 +23521,12 @@ const HEROES = [
         "id": "tmw9c4hmr05wul",
         "level": 4,
         "name": {
-          "fr": "Tactiques de siège",
+          "fr": "Poliocétique",
           "en": "Siege Tactics"
         },
-        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_siegemode_var2.png",
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_neosteelplating.png",
         "description": {
-          "fr": "Utiliser Blindage en NéoAcier en Mode Siège rend Sgt. Hammer increvable tant qu'elle reste en Mode Siège.",
+          "fr": "Utiliser Blindage en NéoAcier en Mode Siège rend Sgt. Hammer Insensible tant qu'elle reste en Mode Siège.",
           "en": "Using Neosteel Plating in Siege Mode grants Sgt. Hammer Unstoppable for as long as she remains in Siege Mode."
         },
         "demoYoutubeId": null
@@ -23535,10 +23535,10 @@ const HEROES = [
         "id": "tmw9c4hmr069wm",
         "level": 4,
         "name": {
-          "fr": "Acier biorégénérant",
+          "fr": "Bioacier régénérant",
           "en": "Regenerative Bio-Steel"
         },
-        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_neosteelplating.png",
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_siegemode.png",
         "description": {
           "fr": "Les attaques de base en Mode Siège soignent Sgt. Hammer d'une partie des dégâts infligés.",
           "en": "Basic Attacks in Siege Mode heal Sgt. Hammer for a portion of the damage dealt."
@@ -23549,7 +23549,7 @@ const HEROES = [
         "id": "tmw9c4hmr07lsz",
         "level": 7,
         "name": {
-          "fr": "Noyau à détonation d'impulsion",
+          "fr": "Charge à fragmentation",
           "en": "Pulse Detonation Core"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_spidermines.png",
@@ -23563,10 +23563,10 @@ const HEROES = [
         "id": "tmw9c4hmr08o8j",
         "level": 7,
         "name": {
-          "fr": "Mode Siège flottant",
+          "fr": "Aérosiège",
           "en": "Hover Siege Mode"
         },
-        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_mount.png",
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_siegemode.png",
         "description": {
           "fr": "Sgt. Hammer peut se déplacer lentement en Mode Siège.",
           "en": "Sgt. Hammer can move slowly while in Siege Mode."
