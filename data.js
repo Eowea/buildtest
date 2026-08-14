@@ -23403,12 +23403,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.\n",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -23423,38 +23423,48 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmw9c4hmr027xm",
+            "primaryId": "tmw9c4hmr03d4g",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmw9c4hmr04gwf",
-            "alternativeIds": []
+            "primaryId": "tmw9c4hmr05wul",
+            "alternativeIds": [
+              "tmw9c4hmr069wm"
+            ]
           },
           {
             "level": 7,
-            "primaryId": "tmw9c4hmr07lsz",
+            "primaryId": "tmw9c4hmr08o8j",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmw9c4hmr114cz",
-            "alternativeIds": []
+            "primaryId": "tmw9c4hmr10wg7",
+            "alternativeIds": [
+              "tmw9c4hmr114cz"
+            ]
           },
           {
             "level": 13,
-            "primaryId": "tmw9c4hmr1313m",
+            "primaryId": "tmw9c4hmr14h5w",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmw9c4hmr15pc7",
-            "alternativeIds": []
+            "primaryId": "tmw9c4hmr17xrs",
+            "alternativeIds": [
+              "tmw9c4hmr167vz",
+              "tmw9c4hmr15pc7"
+            ]
           },
           {
             "level": 20,
-            "primaryId": "tmw9c4hmr19hit",
-            "alternativeIds": []
+            "primaryId": "tmw9c4hmr216ho",
+            "alternativeIds": [
+              "tmw9c4hmr20c6a",
+              "tmw9c4hmr19hit"
+            ]
           }
         ]
       }
