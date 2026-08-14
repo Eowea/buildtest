@@ -6926,7 +6926,7 @@ const HEROES = [
           "fr": "Horion sacré",
           "en": "Holy Shock"
         },
-        "icon": "assets/heroes/base_spells/uther/images/talents/storm_ui_icon_uther_holylight_var1.png",
+        "icon": "assets/heroes/base_spells/uther/images/talents/storm_ui_icon_uther_holyshock.png",
         "description": {
           "fr": "Nouvelle capacité active : inflige des dégâts à un ennemi et procure les soins de Lumière sacrée à Uther. Partage son temps de recharge avec Lumière sacrée.",
           "en": "New active ability: deals damage to an enemy and grants Uther the self-healing of Holy Light. Shares a cooldown with Holy Light."
