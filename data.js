@@ -4405,12 +4405,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Maintiens la touche Q enfoncée en combat.",
+        "fr": "Tu peux maintenir ta touche A pour soigner.",
         "en": "Hold down the Q key during combat."
       },
       {
-        "fr": "Ne te fais pas étourdir pendant ton R1.",
-        "en": "Do not get stunned during your R1."
+        "fr": "Approche toi de la cible que tu veux soigner.",
+        "en": "Move closer to the target you want to heal."
+      },
+      {
+        "fr": "De temps en temps, prends des dégâts pour bénéficier de ton trait.",
+        "en": "Sometimes, take some damage to activate your trait."
       }
     ],
     "builds": [
