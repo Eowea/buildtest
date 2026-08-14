@@ -2224,7 +2224,7 @@ const HEROES = [
       "en": "Massive AoE healing and dragon form."
     },
     "gameplay": {
-      "fr": "Elle sacrifie sa propre santé pour soigner ses alliés et se transforme en Reine-dragon pour dominer les combats d'équipe.",
+      "fr": "Elle sacrifie sa propre santé pour soigner ses alliés et se transforme en Reine-dragon pour dominer les combats.",
       "en": "She sacrifices her own health to heal allies and transforms into the Dragonqueen to dominate teamfights."
     },
     "forms": [
@@ -2370,12 +2370,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "N'utilise pas ton D pour un petit combat.",
-        "en": "Do not waste your D for a small skirmish."
+        "fr": "N'utilise pas ton D pour un petit combat, favorise les phases objectifs. ",
+        "en": "Don't use your D for a small skirmish; focus on objective-based gameplay instead."
       },
       {
-        "fr": "Pose ton W là où tes alliés vont reculer.",
-        "en": "Place your W where your allies will retreat."
+        "fr": "Pose ton Z là où tes alliés vont.",
+        "en": "Place your W where your allies will go."
+      },
+      {
+        "fr": "Pendant la transformation en dragon et un court instant, tu deviens inciblable. ",
+        "en": "While you're transforming into a dragon, you become untargetable for a brief moment."
       }
     ],
     "builds": [
