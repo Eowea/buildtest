@@ -4304,7 +4304,7 @@ const HEROES = [
   },
   {
     "id": "lili",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Li Li",
       "en": "Li Li"
@@ -4323,39 +4323,39 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Pied véloce",
+          "fr": "Prompts petons",
           "en": "Fast Feet"
         },
         "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_fastfeet.png",
         "description": {
-          "fr": "Gagne en vitesse de déplacement quand elle prend des dégâts.",
-          "en": "Gains movement speed when taking damage."
+          "fr": "Prendre des dégâts accélère la recharge des capacités de base et donne une vitesse de déplacement bonus.",
+          "en": "Taking damage refreshes Basic Ability cooldowns faster and grants brief bonus Movement Speed."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "Cruche des mille tasses",
+          "fr": "Infusion requinquante",
           "en": "Healing Brew"
         },
         "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_healingbrew.png",
         "description": {
-          "fr": "Soigne automatiquement l'allié le plus blessé à portée.",
-          "en": "Automatically heals the most injured ally in range."
+          "fr": "Soigne automatiquement l'allié le moins en vie à portée.",
+          "en": "Automatically heals the lowest-Health ally in range."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "Z",
         "name": {
-          "fr": "Serpent nuageux",
+          "fr": "Serpent-nuage",
           "en": "Cloud Serpent"
         },
         "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_cloudserpent.png",
         "description": {
-          "fr": "Place un serpent sur un allié qui attaque et soigne.",
-          "en": "Places a serpent on an ally that attacks and heals."
+          "fr": "Invoque un serpent qui se met au service d'un allié et attaque les ennemis proches, le soignant à chaque coup.",
+          "en": "Summons a serpent that fights for an ally, attacking nearby enemies and healing them with each hit."
         },
         "demoYoutubeId": ""
       },
@@ -4367,21 +4367,21 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_blindingwind.png",
         "description": {
-          "fr": "Aveugle automatiquement les cibles proches.",
-          "en": "Automatically blinds nearby targets."
+          "fr": "Lance une bourrasque sur les ennemis proches, qui aveugle et ralentit les héros touchés.",
+          "en": "Throws a gust at nearby enemies, Blinding and Slowing the Heroes it hits."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
         "name": {
-          "fr": "Cruche des 1 000 tasses",
+          "fr": "Gourde à 1 000 tasses",
           "en": "Jug of 1,000 Cups"
         },
         "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_jugofathousandcups.png",
         "description": {
-          "fr": "Canalise d'énormes soins continus en zone.",
-          "en": "Channels massive continuous AoE heals."
+          "fr": "Canalise pour soigner à plusieurs reprises l'allié le moins en vie proche, au prix d'un temps de recharge de plus en plus long.",
+          "en": "Channels to repeatedly heal the lowest-Health nearby ally, at the cost of an increasingly long cooldown."
         },
         "demoYoutubeId": ""
       },
@@ -4393,8 +4393,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_waterdragon.png",
         "description": {
-          "fr": "Invoque un dragon qui ralentit et blesse un ennemi.",
-          "en": "Summons a dragon that slows and damages an enemy."
+          "fr": "Invoque un dragon d'eau qui frappe l'ennemi le plus proche et les héros autour de lui, les ralentissant.",
+          "en": "Summons a Water Dragon that strikes the nearest enemy and nearby Heroes, slowing them."
         },
         "demoYoutubeId": ""
       }
@@ -4425,46 +4425,46 @@ const HEROES = [
           "fr": "A COLLER",
           "en": "PASTE"
         },
-        "buildCode": "[T3331333,LiLi]",
+        "buildCode": "[T3222222,LiLi]",
         "videos": [],
         "updatedAt": {
-          "fr": "",
-          "en": ""
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6johevnj",
+            "primaryId": "tmp5w2lil038gd",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jobg6i4",
+            "primaryId": "tmp5w2lil054tm",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jo0r4c1",
+            "primaryId": "tmp5w2lil08ea4",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jon76p9",
+            "primaryId": "tmp5w2lil119zc",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6joi0k87",
+            "primaryId": "tmp5w2lil13hxl",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jofjzpn",
+            "primaryId": "tmp5w2lil16p6z",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6joscwni",
+            "primaryId": "tmp5w2lil19o9c",
             "alternativeIds": []
           }
         ]
@@ -4484,46 +4484,46 @@ const HEROES = [
           "fr": "A COLLER",
           "en": "PASTE"
         },
-        "buildCode": "[T1111111,LiLi]",
+        "buildCode": "[T2111131,LiLi]",
         "videos": [],
         "updatedAt": {
-          "fr": "",
-          "en": ""
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6johevnj",
+            "primaryId": "tmp5w2lil024yi",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jobg6i4",
+            "primaryId": "tmp5w2lil04dsr",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jo0r4c1",
+            "primaryId": "tmp5w2lil07rkj",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jon76p9",
+            "primaryId": "tmp5w2lil10pzq",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6joi0k87",
+            "primaryId": "tmp5w2lil12at1",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jofjzpn",
+            "primaryId": "tmp5w2lil1732s",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6joscwni",
+            "primaryId": "tmp5w2lil18irz",
             "alternativeIds": []
           }
         ]
@@ -4532,100 +4532,296 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6johevnj",
+        "id": "tmp5w2lil015y9",
         "level": 1,
         "name": {
-          "fr": "Totem Colossal",
-          "en": "Colossal Totem"
+          "fr": "Boissons gratuites",
+          "en": "Free Drinks"
         },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_earthbindtotem.png",
+        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_healingbrew_a.png",
         "description": {
-          "fr": "Augmente les points de vie, le rayon et la durée du totem. Permet de le repositionner une nouvelle fois.",
-          "en": "Increases health, radius, and duration of the totem. Can be repositioned once."
+          "fr": "Quand Infusion requinquante soigne un héros sous 50% de vie, rembourse son coût en mana et réduit son temps de recharge.",
+          "en": "When Healing Brew heals a Hero below 50% Health, its cooldown is reduced and its Mana cost is refunded."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jobg6i4",
+        "id": "tmp5w2lil024yi",
+        "level": 1,
+        "name": {
+          "fr": "Serpent personnel",
+          "en": "Serpent Sidekick"
+        },
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_cloudserpent.png",
+        "description": {
+          "fr": "Serpent-nuage ne coûte plus de mana, et son temps de recharge diminue encore plus vite tant que Prompts petons est actif.",
+          "en": "Cloud Serpent no longer costs Mana, and its cooldown refreshes even faster while Fast Feet is active."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp5w2lil038gd",
+        "level": 1,
+        "name": {
+          "fr": "Vraie aventurière",
+          "en": "Eager Adventurer"
+        },
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_fastfeet.png",
+        "description": {
+          "fr": "Augmente fortement la durée de Prompts petons et la régénération de mana tant qu'il est actif.",
+          "en": "Greatly increases Fast Feet's duration and Mana regeneration while it's active."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp5w2lil04dsr",
         "level": 4,
         "name": {
-          "fr": "Viveterre",
-          "en": "Earthliving Enchant"
+          "fr": "Serpent des vents",
+          "en": "Wind Serpent"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_cloudserpent.png",
         "description": {
-          "fr": "Renforce Salve de guerison pour les héros dont les points de vie sont bas.",
-          "en": "Empowers Chain Heal for heroes at low health."
+          "fr": "Serpent-nuage donne de la vitesse de déplacement à son porteur, encore augmentée brièvement après un Vent aveuglant. Passif : le serpent attaque plus vite.",
+          "en": "Cloud Serpent grants its bearer Movement Speed, further increased briefly after casting Blinding Wind. Passive: the serpent attacks faster."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo0r4c1",
+        "id": "tmp5w2lil054tm",
+        "level": 4,
+        "name": {
+          "fr": "Vents soudains",
+          "en": "Surging Winds"
+        },
+        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_blindingwind_a.png",
+        "description": {
+          "fr": "Si Vent aveuglant touche plusieurs héros, son temps de recharge diminue instantanément et Li Li gagne de la puissance de capacité.",
+          "en": "If Blinding Wind hits multiple Heroes, its cooldown is instantly reduced and Li Li gains Spell Power."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp5w2lil06axd",
+        "level": 4,
+        "name": {
+          "fr": "En arrière toute !",
+          "en": "Safety Sprint"
+        },
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_fastfeet.png",
+        "description": {
+          "fr": "Nouvelle capacité active : active Prompts petons et donne de l'armure et de la vitesse de déplacement. Passif : de l'armure bonus tant que Prompts petons est actif.",
+          "en": "New active ability: activates Fast Feet and grants Armor and Movement Speed. Passive: bonus Armor while Fast Feet is active."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp5w2lil07rkj",
         "level": 7,
         "name": {
-          "fr": "Totem lié à la terre",
-          "en": "Grounded Totem"
+          "fr": "Remède miracle",
+          "en": "The Good Stuff"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_healingbrew.png",
         "description": {
-          "fr": "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.",
-          "en": "Reduces attack and spell power of enemies in range."
+          "fr": "Infusion requinquante soigne aussi au fil du temps, avec un effet doublé tant que Prompts petons est actif.",
+          "en": "Healing Brew also heals over time, doubled while Fast Feet is active."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jon76p9",
+        "id": "tmp5w2lil08ea4",
+        "level": 7,
+        "name": {
+          "fr": "Vortex de masse",
+          "en": "Mass Vortex"
+        },
+        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_blindingwind_b.png",
+        "description": {
+          "fr": "Vent aveuglant touche un ennemi de plus et inflige davantage de dégâts s'il touche le nombre maximal de héros.",
+          "en": "Blinding Wind hits one additional enemy and deals more damage when it hits the maximum number of Heroes."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp5w2lil096sa",
+        "level": 7,
+        "name": {
+          "fr": "En route !",
+          "en": "Let's Go!"
+        },
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_jugofathousandcups.png",
+        "description": {
+          "fr": "Nouvelle capacité active : soigne un héros allié et le rend insensible au contrôle. Son temps de recharge est affecté par Prompts petons. Ne peut pas cibler Li Li.",
+          "en": "New active ability: heals an allied Hero and makes them Unstoppable. Its cooldown is affected by Fast Feet. Cannot target Li Li."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp5w2lil10pzq",
         "level": 10,
         "name": {
-          "fr": "Guérison ancestrale",
-          "en": "Ancestral Healing"
+          "fr": "Gourde à 1 000 tasses",
+          "en": "Jug of 1,000 Cups"
         },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_ancestralhealing.png",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_jugofathousandcups.png",
         "description": {
-          "fr": "Gros soin monocible, utilisable sur soi.",
-          "en": "Massive single-target heal, usable on self."
+          "fr": "Canalise pour soigner à plusieurs reprises l'allié le moins en vie proche, au prix d'un temps de recharge de plus en plus long.",
+          "en": "Channels to repeatedly heal the lowest-Health nearby ally, at the cost of an increasingly long cooldown."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joi0k87",
+        "id": "tmp5w2lil119zc",
+        "level": 10,
+        "name": {
+          "fr": "Dragon d'eau",
+          "en": "Water Dragon"
+        },
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_waterdragon.png",
+        "description": {
+          "fr": "Invoque un dragon d'eau qui frappe l'ennemi le plus proche et les héros autour de lui, les ralentissant.",
+          "en": "Summons a Water Dragon that strikes the nearest enemy and nearby Heroes, slowing them."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp5w2lil12at1",
         "level": 13,
         "name": {
-          "fr": "Raz-de-marée",
-          "en": "Tidal Waves"
+          "fr": "Serpent de foudre",
+          "en": "Lightning Serpent"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_cloudserpent.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Salve de guérison et son coût en mana.",
-          "en": "Reduces Chain Heal cooldown and mana cost."
+          "fr": "Les attaques du serpent-nuage rebondissent vers des cibles supplémentaires, infligeant des dégâts et soignant l'allié.",
+          "en": "Cloud Serpent's attacks bounce to additional targets, dealing damage and healing the ally."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jofjzpn",
+        "id": "tmp5w2lil13hxl",
+        "level": 13,
+        "name": {
+          "fr": "Vent violent",
+          "en": "Gale Force"
+        },
+        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_blindingwind_a.png",
+        "description": {
+          "fr": "Augmente la durée de l'aveuglement de Vent aveuglant. Les attaques de base contre un héros aveuglé infligent davantage de dégâts.",
+          "en": "Increases Blinding Wind's Blind duration. Basic Attacks against Blinded Heroes deal bonus damage."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp5w2lil14lzh",
+        "level": 13,
+        "name": {
+          "fr": "Vent contraire",
+          "en": "Hindering Winds"
+        },
+        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_blindingwind_b.png",
+        "description": {
+          "fr": "Augmente le ralentissement et la durée de Vent aveuglant.",
+          "en": "Increases Blinding Wind's Slow amount and duration."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp5w2lil151th",
         "level": 16,
         "name": {
-          "fr": "Totem d’emprise de la terre",
-          "en": "Earthgrasp Totem"
+          "fr": "Double dose",
+          "en": "Two For One"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg",
+        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_healingbrew_a.png",
         "description": {
-          "fr": "Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.",
-          "en": "When first spawned, the totem deals AoE damage and heavily slows."
+          "fr": "Infusion requinquante soigne un allié supplémentaire, mais son temps de recharge augmente.",
+          "en": "Healing Brew heals an additional ally, but its cooldown increases."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joscwni",
+        "id": "tmp5w2lil16p6z",
+        "level": 16,
+        "name": {
+          "fr": "Coup de fouet",
+          "en": "Pick Me Up"
+        },
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_healingbrew.png",
+        "description": {
+          "fr": "Infusion requinquante soigne davantage quand la cible est sous 50% de vie.",
+          "en": "Healing Brew heals for more when the target is below 50% Health."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp5w2lil1732s",
+        "level": 16,
+        "name": {
+          "fr": "Bénédictions de Yu'lon",
+          "en": "Blessings Of Yu'lon"
+        },
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_cloudserpent.png",
+        "description": {
+          "fr": "Serpent-nuage augmente les soins reçus par son porteur, et lui rend un peu de vie à chaque attaque.",
+          "en": "Cloud Serpent increases healing received by its bearer, and heals them a bit with each of its attacks."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp5w2lil18irz",
         "level": 20,
         "name": {
-          "fr": "Bénédiction du long-voyant",
-          "en": "Farseer's Blessing"
+          "fr": "Gourde à 1 000 000 tasses",
+          "en": "Jug of 1,000,000 Cups"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_ancestralhealing.jpg",
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_jugofathousandcups.png",
         "description": {
-          "fr": "Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.",
-          "en": "A second Ancestral Healing triggers and heals in an AoE."
+          "fr": "Gourde à 1 000 tasses soigne deux alliés à la fois.",
+          "en": "Jug of 1,000 Cups heals two allies at a time."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp5w2lil19o9c",
+        "level": 20,
+        "name": {
+          "fr": "Double dragon",
+          "en": "Double Dragon"
+        },
+        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_waterdragon.png",
+        "description": {
+          "fr": "Après avoir touché une cible, Dragon d'eau invoque un second dragon au point d'impact.",
+          "en": "After hitting a target, Water Dragon summons a second dragon at the point of impact."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp5w2lil201b0",
+        "level": 20,
+        "name": {
+          "fr": "Tisse-brume",
+          "en": "Mistweaver"
+        },
+        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_mistweaver.png",
+        "description": {
+          "fr": "Nouvelle capacité active : soigne les héros alliés proches. Les attaques de base et celles du serpent-nuage réduisent son temps de recharge.",
+          "en": "New active ability: heals nearby allied Heroes. Basic Attacks and Cloud Serpent's attacks reduce its cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp5w2lil210v6",
+        "level": 20,
+        "name": {
+          "fr": "Ébrouement",
+          "en": "Shake It Off"
+        },
+        "icon": "assets/heroes/base_spells/lili/images/talents/storm_ui_icon_lili_shakeitoff.png",
+        "description": {
+          "fr": "En cas d'étourdissement, de silence ou d'immobilisation, et brièvement après, Li Li gagne de l'armure. Passif : accélère encore le recharge de Prompts petons.",
+          "en": "While Stunned, Silenced, or Rooted, and briefly after, Li Li gains Armor. Passive: further speeds up Fast Feet's cooldown refresh."
         },
         "demoYoutubeId": null
       }
