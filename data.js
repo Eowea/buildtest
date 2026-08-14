@@ -17470,7 +17470,7 @@ const HEROES = [
   },
   {
     "id": "liming",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Li-Ming",
       "en": "Li-Ming"
@@ -17494,21 +17494,21 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_criticalmass.png",
         "description": {
-          "fr": "Tes temps de recharge sont réinitialisés à chaque élimination.",
-          "en": "Your cooldowns reset on every takedown."
+          "fr": "Une élimination réinitialise le temps de recharge de toutes tes capacités.",
+          "en": "A takedown resets the cooldown of all your Abilities."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "Missiles magiques",
+          "fr": "Projectiles magiques",
           "en": "Magic Missiles"
         },
         "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_magicmissiles.png",
         "description": {
-          "fr": "Trois missiles qui suivent la cible.",
-          "en": "Three homing missiles."
+          "fr": "Lance trois projectiles qui infligent des dégâts au premier ennemi touché, avec des dégâts réduits contre les bâtiments.",
+          "en": "Fires three missiles that deal damage to the first enemy hit, with reduced damage against Structures."
         },
         "demoYoutubeId": ""
       },
@@ -17520,8 +17520,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_arcaneorb.png",
         "description": {
-          "fr": "Orbe qui fait plus de dégâts de loin.",
-          "en": "Orb that deals more damage at range."
+          "fr": "Projette un orbe qui gagne en puissance avec la distance parcourue, infligeant plus de dégâts au premier ennemi touché à longue portée.",
+          "en": "Fires an orb that grows more powerful the farther it travels, dealing more damage to the first enemy hit at range."
         },
         "demoYoutubeId": ""
       },
@@ -17533,8 +17533,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_teleport.png",
         "description": {
-          "fr": "Se téléporte sur une courte distance.",
-          "en": "Teleports a short distance."
+          "fr": "Se téléporte instantanément sur une courte distance.",
+          "en": "Teleports instantly a short distance."
         },
         "demoYoutubeId": ""
       },
@@ -17546,21 +17546,21 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_disintegrate.png",
         "description": {
-          "fr": "Rayon canalisé orientable.",
-          "en": "Channeled beam you can steer."
+          "fr": "Canalise un puissant rayon orientable qui inflige des dégâts continus aux ennemis touchés.",
+          "en": "Channels a powerful steerable beam that deals ongoing damage to enemies caught in it."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
         "name": {
-          "fr": "Vague de force",
+          "fr": "Onde de choc",
           "en": "Wave of Force"
         },
         "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_waveofforce.png",
         "description": {
-          "fr": "Repousse les ennemis proches.",
-          "en": "Knocks nearby enemies back."
+          "fr": "Repousse et inflige des dégâts à tous les ennemis proches.",
+          "en": "Knocks back and damages all nearby enemies."
         },
         "demoYoutubeId": ""
       }
@@ -17595,46 +17595,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Wizard]",
+        "buildCode": "[T1211312,LiMing]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jonupaj",
+            "primaryId": "tmr7gscbm01fv3",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jotbsn3",
+            "primaryId": "tmr7gscbm05cgj",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jow4khn",
+            "primaryId": "tmr7gscbm079y3",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jo4z76i",
+            "primaryId": "tmr7gscbm10v34",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6joc6xfn",
+            "primaryId": "tmr7gscbm143f7",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6josj97v",
+            "primaryId": "tmr7gscbm153cg",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6josnvzg",
+            "primaryId": "tmr7gscbm19e5t",
             "alternativeIds": []
           }
         ]
@@ -17643,100 +17643,310 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jonupaj",
+        "id": "tmr7gscbm01fv3",
         "level": 1,
         "name": {
-          "fr": "Force Armor",
+          "fr": "Armure de force",
           "en": "Force Armor"
         },
-        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_magicmissiles.png",
+        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_magicmissiles_b.png",
         "description": {
-          "fr": "When Magic Missiles damages an enemy Hero, gain 50 Spell Armor, reducing the damage taken by the next Ability by 50%. Gain 1 charge per cast and store up to 4 charges.  Passive: Li-Ming's Mana regeneration is increased by 100% while below 35% Mana.",
-          "en": "When Magic Missiles damages an enemy Hero, gain 50 Spell Armor, reducing the damage taken by the next Ability by 50%. Gain 1 charge per cast and store up to 4 charges.  Passive: Li-Ming's Mana regeneration is increased by 100% while below 35% Mana."
+          "fr": "Toucher un héros avec Projectiles magiques accorde de l'armure anti-sort, réduisant les dégâts de la prochaine capacité subie. Possède plusieurs charges. Passif : régénération de mana augmentée sous 35% de mana.",
+          "en": "Hitting a Hero with Magic Missiles grants Spell Armor, reducing the damage of the next Ability taken. Has multiple charges. Passive: Mana regeneration is increased below 35% Mana."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jotbsn3",
+        "id": "tmr7gscbm02hjv",
+        "level": 1,
+        "name": {
+          "fr": "Naviguéther",
+          "en": "Aether Walker"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_teleport.png",
+        "description": {
+          "fr": "Téléportation ne coûte plus de mana et son temps de recharge est réduit si tu n'as pas subi de dégâts récemment. L'utiliser augmente les dégâts du prochain Projectiles magiques.",
+          "en": "Teleport no longer costs Mana and its cooldown is reduced if you haven't taken damage recently. Using it increases the damage of your next Magic Missiles."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmr7gscbm03oq3",
+        "level": 1,
+        "name": {
+          "fr": "Avide de puissance",
+          "en": "Power Hungry"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_criticalmass.png",
+        "description": {
+          "fr": "Les globes de régénération rendent bien plus de mana et accordent temporairement de la puissance de capacité.",
+          "en": "Regeneration Globes restore much more Mana and temporarily grant Spell Power."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmr7gscbm04gko",
         "level": 4,
         "name": {
-          "fr": "Charged Blast",
+          "fr": "Éclair chargé",
           "en": "Charged Blast"
         },
-        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_magicmissiles.png",
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_magicmissiles.png",
         "description": {
-          "fr": "Basic Attacking a target recently hit by a Magic Missile does an extra 87 (+4% per level) damage.",
-          "en": "Basic Attacking a target recently hit by a Magic Missile does an extra 87 (+4% per level) damage."
+          "fr": "L'attaque de base contre une cible récemment touchée par Projectiles magiques inflige des dégâts supplémentaires.",
+          "en": "Basic Attacking a target recently hit by Magic Missiles deals bonus damage."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jow4khn",
+        "id": "tmr7gscbm05cgj",
+        "level": 4,
+        "name": {
+          "fr": "Triumvirat",
+          "en": "Triumvirate"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_arcaneorb_b.png",
+        "description": {
+          "fr": "Si Orbe arcanique touche un héros après avoir parcouru une grande distance, son temps de recharge est réduit et une partie du mana est remboursée.",
+          "en": "If Arcane Orb hits a Hero after traveling a long distance, its cooldown is reduced and part of its Mana cost is refunded."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmr7gscbm06biv",
+        "level": 4,
+        "name": {
+          "fr": "Suprématie",
+          "en": "Dominance"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_criticalmass.png",
+        "description": {
+          "fr": "Les éliminations rendent une partie des points de vie manquants de Li-Ming.",
+          "en": "Takedowns restore a portion of Li-Ming's missing Health."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmr7gscbm079y3",
         "level": 7,
         "name": {
-          "fr": "Seeker",
+          "fr": "Focalisation des Arcanes",
           "en": "Seeker"
         },
-        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_magicmissiles.png",
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_magicmissiles.png",
         "description": {
-          "fr": "If three Magic Missiles hit the same target, the third one deals an additional 140 (+4% per level) damage.",
-          "en": "If three Magic Missiles hit the same target, the third one deals an additional 140 (+4% per level) damage."
+          "fr": "Si trois Projectiles magiques touchent la même cible, le troisième inflige des dégâts supplémentaires.",
+          "en": "If three Magic Missiles hit the same target, the third deals bonus damage."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo4z76i",
+        "id": "tmr7gscbm08cmq",
+        "level": 7,
+        "name": {
+          "fr": "Vengeance de Zei",
+          "en": "Zei's Vengeance"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_arcaneorb.png",
+        "description": {
+          "fr": "Augmente le bonus de dégâts d'Orbe arcanique selon la distance parcourue, et réduit son temps de recharge.",
+          "en": "Increases Arcane Orb's distance-based damage bonus, and reduces its cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmr7gscbm09r01",
+        "level": 7,
+        "name": {
+          "fr": "Calamité",
+          "en": "Calamity"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_teleport.png",
+        "description": {
+          "fr": "Téléportation inflige des dégâts aux héros ennemis proches du point d'arrivée.",
+          "en": "Teleport deals damage to enemy Heroes near the landing point."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmr7gscbm10v34",
         "level": 10,
         "name": {
-          "fr": "Disintegrate",
+          "fr": "Désintégration",
           "en": "Disintegrate"
         },
-        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_disintegrate.png",
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_disintegrate.png",
         "description": {
-          "fr": "Channel a powerful beam, dealing 480 (+5% per level) damage over 2.6 seconds to enemies while they are in it. The direction of the beam changes with your mouse cursor position.",
-          "en": "Channel a powerful beam, dealing 480 (+5% per level) damage over 2.6 seconds to enemies while they are in it. The direction of the beam changes with your mouse cursor position."
+          "fr": "Canalise un puissant rayon orientable qui inflige des dégâts continus aux ennemis touchés.",
+          "en": "Channels a powerful steerable beam that deals ongoing damage to enemies caught in it."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joc6xfn",
+        "id": "tmr7gscbm119lm",
+        "level": 10,
+        "name": {
+          "fr": "Onde de choc",
+          "en": "Wave of Force"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_waveofforce.png",
+        "description": {
+          "fr": "Repousse et inflige des dégâts à tous les ennemis proches.",
+          "en": "Knocks back and damages all nearby enemies."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmr7gscbm12w83",
         "level": 13,
         "name": {
-          "fr": "Illusionist",
+          "fr": "Illusionniste",
           "en": "Illusionist"
         },
-        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_teleport.png",
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_teleport.png",
         "description": {
-          "fr": "If Li-Ming loses more than 20% of her Health at once, its cooldown is instantly refreshed.  This effect has a 4 second cooldown.  Passive: Increases Teleport range by 50%",
-          "en": "If Li-Ming loses more than 20% of her Health at once, its cooldown is instantly refreshed.  This effect has a 4 second cooldown.  Passive: Increases Teleport range by 50%"
+          "fr": "Perdre une grande partie de ses points de vie d'un coup réinitialise instantanément Téléportation. Passif : augmente la portée de Téléportation.",
+          "en": "Losing a large portion of Health at once instantly refreshes Teleport's cooldown. Passive: increases Teleport's range."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6josj97v",
+        "id": "tmr7gscbm13cxt",
+        "level": 13,
+        "name": {
+          "fr": "Canonnier",
+          "en": "Cannoneer"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_magicmissiles_b.png",
+        "description": {
+          "fr": "Utiliser une capacité augmente les dégâts de la prochaine attaque de base et la transforme en dégâts de capacité. Possède plusieurs charges.",
+          "en": "Using an Ability increases the damage of the next Basic Attack and converts it to Spell damage. Has multiple charges."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmr7gscbm143f7",
+        "level": 13,
+        "name": {
+          "fr": "Dragon de papier",
+          "en": "Glass Cannon"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_criticalmass.png",
+        "description": {
+          "fr": "Augmente la puissance de capacité, mais réduit les points de vie maximum.",
+          "en": "Increases Spell Power, but reduces maximum Health."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmr7gscbm153cg",
         "level": 16,
         "name": {
-          "fr": "Fireflies",
+          "fr": "Lucioles",
           "en": "Fireflies"
         },
-        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_magicmissiles.png",
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_magicmissiles.png",
         "description": {
-          "fr": "Drastically increases Magic Missiles speed. Its cooldown is reduced by 1 second, and its Mana cost is reduced by 5.",
-          "en": "Drastically increases Magic Missiles speed. Its cooldown is reduced by 1 second, and its Mana cost is reduced by 5."
+          "fr": "Augmente fortement la vitesse de Projectiles magiques, et réduit son temps de recharge et son coût en mana.",
+          "en": "Greatly increases Magic Missiles' speed, and reduces its cooldown and Mana cost."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6josnvzg",
+        "id": "tmr7gscbm1609s",
+        "level": 16,
+        "name": {
+          "fr": "Boule à facettes",
+          "en": "Mirrorball"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_magicmissiles_b.png",
+        "description": {
+          "fr": "Projectiles magiques lance des projectiles supplémentaires, mais son coût en mana augmente.",
+          "en": "Magic Missiles fires additional missiles, but its Mana cost increases."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmr7gscbm17rok",
+        "level": 16,
+        "name": {
+          "fr": "Orbite arcanique",
+          "en": "Arcane Orbit"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_arcaneorb.png",
+        "description": {
+          "fr": "Orbe arcanique parcourt une plus grande distance, augmentant son bonus de dégâts maximal.",
+          "en": "Arcane Orb travels farther, increasing its maximum damage bonus."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmr7gscbm18w3d",
         "level": 20,
         "name": {
-          "fr": "Temporal Flux",
+          "fr": "Peau de diamant",
+          "en": "Diamond Skin"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_teleport.png",
+        "description": {
+          "fr": "Téléportation accorde un bouclier temporaire à Li-Ming.",
+          "en": "Teleport grants Li-Ming a temporary Shield."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmr7gscbm19e5t",
+        "level": 20,
+        "name": {
+          "fr": "Fluctuation temporelle",
           "en": "Temporal Flux"
         },
-        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_disintegrate.png",
+        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_disintegrate_b.png",
         "description": {
-          "fr": "Disintegrate gradually slows enemies caught in its beam, to a maximum of 60%.",
-          "en": "Disintegrate gradually slows enemies caught in its beam, to a maximum of 60%."
+          "fr": "Désintégration ralentit progressivement les ennemis pris dans son rayon.",
+          "en": "Disintegrate gradually Slows enemies caught in its beam."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmr7gscbm203yd",
+        "level": 20,
+        "name": {
+          "fr": "Répulsion",
+          "en": "Repulsion"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_waveofforce.png",
+        "description": {
+          "fr": "Augmente la distance de recul et la portée d'Onde de choc.",
+          "en": "Increases Wave of Force's knockback distance and cast range."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmr7gscbm21a5l",
+        "level": 20,
+        "name": {
+          "fr": "Les Éléments de Tal Rasha",
+          "en": "Tal Rasha's Elements"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_criticalmass.png",
+        "description": {
+          "fr": "Lancer une capacité augmente les dégâts de la prochaine capacité différente, jusqu'à un maximum.",
+          "en": "Casting an Ability increases the damage of the next different Ability, up to a cap."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmr7gscbm22ej0",
+        "level": 20,
+        "name": {
+          "fr": "Archonte : puissance pure",
+          "en": "Archon: Pure Power"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_archon.png",
+        "description": {
+          "fr": "Capacité active : Li-Ming se transforme en archonte, pouvant lancer Désintégration en continu mais plus aucune autre capacité.",
+          "en": "Active: Li-Ming transforms into an Archon, allowing her to repeatedly cast Disintegrate but no other Abilities."
         },
         "demoYoutubeId": null
       }
