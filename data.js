@@ -3865,12 +3865,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tape sans arrêt pour maximiser ton passif.",
+        "fr": "Tape sans arrêt pour maximiser ton passif. ",
         "en": "Attack constantly to maximize your passive."
       },
       {
         "fr": "Garde un Q pour fuir.",
         "en": "Keep a Q charge to escape."
+      },
+      {
+        "fr": "Les Sept Frappes inflige + de dégâts à une seule cible qu'à plusieurs. ",
+        "en": "Seven Strikes deals more damage to a single target than to multiple targets."
       }
     ],
     "builds": [
@@ -5012,18 +5016,22 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Surveille ton niveau d'énergie.",
-        "en": "Monitor your energy level."
+        "fr": "Tu peux soigner les sbires.",
+        "en": "You can heal the minions."
       },
       {
         "fr": "Ta grenade est ton seul moyen de te défendre.",
         "en": "Your grenade is your only self-defense tool."
+      },
+      {
+        "fr": "Pense à mettre ton A sur un allié ou sbire pour te soigner grâce à ton trait !",
+        "en": "Remember to target an ally or minion with your Q to heal yourself using your trait!"
       }
     ],
     "builds": [
       {
-        "enabled": true,
-        "order": 1,
+        "enabled": false,
+        "order": 2,
         "label": {
           "fr": "Build Protection",
           "en": "Safeguard Build"
@@ -5082,7 +5090,7 @@ const HEROES = [
       },
       {
         "enabled": true,
-        "order": 2,
+        "order": 1,
         "label": {
           "fr": "Build Grenade",
           "en": "Grenade Build"
@@ -5119,23 +5127,31 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tmn4x9mor11txh",
-            "alternativeIds": []
+            "primaryId": "tmn4x9mor10xz7",
+            "alternativeIds": [
+              "tmn4x9mor11txh"
+            ]
           },
           {
             "level": 13,
-            "primaryId": "tmn4x9mor12abb",
-            "alternativeIds": []
+            "primaryId": "tmn4x9mor13dsf",
+            "alternativeIds": [
+              "tmn4x9mor1401a"
+            ]
           },
           {
             "level": 16,
-            "primaryId": "tmn4x9mor16puu",
-            "alternativeIds": []
+            "primaryId": "tmn4x9mor172j9",
+            "alternativeIds": [
+              "tmn4x9mor16puu"
+            ]
           },
           {
             "level": 20,
-            "primaryId": "tmn4x9mor210fp",
-            "alternativeIds": []
+            "primaryId": "tmn4x9mor20bc9",
+            "alternativeIds": [
+              "tmn4x9mor18jn9"
+            ]
           }
         ]
       }
@@ -5191,7 +5207,7 @@ const HEROES = [
           "fr": "Réacteur cellulaire",
           "en": "Cellular Reactor"
         },
-        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_temp_btn-upgrade-terran-mobiusreactor.png",
+        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_caduceusreactor.png",
         "description": {
           "fr": "Nouvelle capacité active : dépense de l'énergie pour se soigner fortement, ce qui désactive temporairement Réacteur Caduceus.",
           "en": "New active ability: spends Energy to heal herself for a large amount, which disables Caduceus Reactor while active."
