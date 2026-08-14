@@ -2387,14 +2387,14 @@ const HEROES = [
           "en": "Recommanded build"
         },
         "summary": {
-          "fr": "Build pour tout faire tout seul",
-          "en": "Build to do everything on your own"
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER",
           "en": "PASTE"
         },
-        "buildCode": "[T2222222,Alexstrasza]",
+        "buildCode": "[T2231121,Alexstrasza]",
         "videos": [],
         "updatedAt": {
           "fr": "14 Août 2026",
@@ -2433,9 +2433,10 @@ const HEROES = [
           },
           {
             "level": 16,
-            "primaryId": "tmw3k2alx11bc7",
+            "primaryId": "tmrryr6joxdbs0",
             "alternativeIds": [
-              "tmw3k2alx10za2"
+              "tmw3k2alx10za2",
+              "tmw3k2alx11bc7"
             ]
           },
           {
