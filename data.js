@@ -2918,6 +2918,10 @@ const HEROES = [
       {
         "fr": "Place-toi très en arrière pour soigner.",
         "en": "Position yourself very far back to heal."
+      },
+      {
+        "fr": "Lorsque tu touches un ennemi avec ton E, pendant 0,5secondes il ne peut pas être réveillé. ",
+        "en": "When you hit an enemy with your E, they cannot be woken up for 0.5 seconds."
       }
     ],
     "builds": [
