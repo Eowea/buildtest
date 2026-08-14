@@ -5149,7 +5149,7 @@ const HEROES = [
           "fr": "Retour d'énergie",
           "en": "Caduceus Feedback"
         },
-        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_caduceusreactor.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_mana.png",
         "description": {
           "fr": "Augmente la portée des attaques de base, qui génèrent aussi de l'énergie contre les héros.",
           "en": "Increases Basic Attack range, and Basic Attacks against Heroes also generate Energy."
@@ -5163,7 +5163,7 @@ const HEROES = [
           "fr": "Automédication",
           "en": "Life Support"
         },
-        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_healingbeam_target.png",
+        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_healingbeam.png",
         "description": {
           "fr": "Rayon de soins régénère bien plus d'énergie au début de sa régénération. Passif : augmente l'énergie maximale.",
           "en": "Healing Beam regenerates much more Energy at the start of its regeneration. Passive: increases maximum Energy."
@@ -5177,7 +5177,7 @@ const HEROES = [
           "fr": "On dégage !",
           "en": "Clear!"
         },
-        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_displacementgrenade_b.png",
+        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_displacementgrenade.png",
         "description": {
           "fr": "Quête : toucher des héros avec Grenade de distorsion rend de l'énergie et finit par réduire son temps de recharge et augmenter sa zone d'effet.",
           "en": "Quest: hitting Heroes with Displacement Grenade restores Energy, eventually reducing its cooldown and increasing its detonation area."
@@ -5219,7 +5219,7 @@ const HEROES = [
           "fr": "Bouclier de distorsion",
           "en": "Blast Shield"
         },
-        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_displacementgrenade_c.png",
+        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_displacementgrenade.png",
         "description": {
           "fr": "Les héros touchés par Grenade de distorsion sont ralentis après avoir été repoussés, et confèrent un bouclier cumulable à Lt. Morales.",
           "en": "Heroes hit by Displacement Grenade are Slowed after being knocked back, and grant Lt. Morales a stacking Shield."
@@ -5247,7 +5247,7 @@ const HEROES = [
           "fr": "Blindage en vanadium",
           "en": "Vanadium Plating"
         },
-        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_deployshield_b.png",
+        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_deployshield_c.png",
         "description": {
           "fr": "Protection donne de l'armure supplémentaire si sa cible est étourdie ou immobilisée. Passif : augmente sa durée.",
           "en": "Safeguard grants extra Armor if its target is Stunned or Rooted. Passive: increases its duration."
@@ -5261,7 +5261,7 @@ const HEROES = [
           "fr": "Médi-drone",
           "en": "Medi-Drone"
         },
-        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_deployshield_c.png",
+        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_deployshield_b.png",
         "description": {
           "fr": "Les alliés sous Protection reçoivent une partie des soins de Rayon de soins lancé sur un autre allié.",
           "en": "Allies with Safeguard receive a portion of the healing from Healing Beam cast on another ally."
@@ -5345,7 +5345,7 @@ const HEROES = [
           "fr": "Soins sans frontières",
           "en": "Extended Care"
         },
-        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_healingbeam_b.png",
+        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_healingbeam.png",
         "description": {
           "fr": "Canaliser Rayon de soins assez longtemps sur un allié le soigne aussi au fil du temps une fois terminé. Passif : augmente sa portée.",
           "en": "Channeling Healing Beam long enough on an ally also heals them over time once it ends. Passive: increases its range."
@@ -5373,7 +5373,7 @@ const HEROES = [
           "fr": "Séquenceur de bouclier",
           "en": "Shield Sequencer"
         },
-        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_advancedblock.png",
+        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_deployshield.png",
         "description": {
           "fr": "Protection obtient une charge supplémentaire et une portée accrue.",
           "en": "Safeguard gains an additional charge and increased range."
@@ -5401,7 +5401,7 @@ const HEROES = [
           "fr": "Zone sûre",
           "en": "Safe Zone"
         },
-        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_medivacdropship_b.png",
+        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_medivacdropship.png",
         "description": {
           "fr": "En sortant du Médivac, les alliés sont protégés contre tous les dégâts. Passif : réduit le temps de recharge des capacités de transport.",
           "en": "Allies exiting the Medivac are protected from all damage. Passive: reduces the transport abilities' cooldown."
@@ -5429,7 +5429,7 @@ const HEROES = [
           "fr": "Seconde opinion",
           "en": "Second Opinion"
         },
-        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_displacementgrenade_b.png",
+        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_displacementgrenade.png",
         "description": {
           "fr": "Toucher plusieurs héros avec Grenade de distorsion réduit fortement son temps de recharge.",
           "en": "Hitting multiple Heroes with Displacement Grenade greatly reduces its cooldown."
