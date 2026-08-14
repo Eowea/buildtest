@@ -4830,7 +4830,7 @@ const HEROES = [
   },
   {
     "id": "ltmorales",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Lt. Morales",
       "en": "Lt. Morales"
@@ -4854,8 +4854,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_caduceusreactor.png",
         "description": {
-          "fr": "Régénère de la vie quand le rayon de soins n'est pas utilisé.",
-          "en": "Regenerates health when healing beam is not active."
+          "fr": "Tant qu'elle canalise Rayon de soins, Lt. Morales régénère un pourcentage de ses points de vie chaque seconde.",
+          "en": "While channeling Healing Beam, Lt. Morales regenerates a percentage of her Health each second."
         },
         "demoYoutubeId": ""
       },
@@ -4867,8 +4867,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_healingbeam.png",
         "description": {
-          "fr": "Canalise un soin continu sur un allié.",
-          "en": "Channels a continuous heal on an ally."
+          "fr": "Canalise un soin continu sur un allié tant qu'il reste à portée. L'énergie se régénère plus vite sans canalisation.",
+          "en": "Channels a continuous heal on an ally as long as they stay in range. Energy regenerates faster while not channeling."
         },
         "demoYoutubeId": ""
       },
@@ -4880,47 +4880,47 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_deployshield.png",
         "description": {
-          "fr": "Donne de l'armure à un allié.",
-          "en": "Grants armor to an ally."
+          "fr": "Confère de l'armure temporaire à un héros allié.",
+          "en": "Grants temporary Armor to an allied Hero."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "E",
         "name": {
-          "fr": "Grenade de déplacement",
+          "fr": "Grenade de distorsion",
           "en": "Displacement Grenade"
         },
         "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_displacementgrenade.png",
         "description": {
-          "fr": "Tire une grenade qui explose et repousse les ennemis.",
-          "en": "Fires a grenade that explodes and knocks enemies back."
+          "fr": "Tire une grenade qui peut être déclenchée manuellement, repoussant et blessant les ennemis proches.",
+          "en": "Fires a grenade that can be manually detonated, knocking back and damaging nearby enemies."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
         "name": {
-          "fr": "Drone de transport",
-          "en": "Medivac Dropship"
+          "fr": "Drone de stimulants",
+          "en": "Stim Drone"
         },
         "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_stim.png",
         "description": {
-          "fr": "Transporte l'équipe n'importe où sur la carte.",
-          "en": "Transports the team anywhere on the map."
+          "fr": "Donne un gros bonus de vitesse d'attaque et de déplacement à un héros allié.",
+          "en": "Grants an allied Hero a large boost to Attack Speed and Movement Speed."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
         "name": {
-          "fr": "Rayon stimulant",
-          "en": "Stim Drone"
+          "fr": "Transports Médivac",
+          "en": "Medivac Dropships"
         },
         "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_medivacdropship.png",
         "description": {
-          "fr": "Augmente massivement la vitesse d'un allié.",
-          "en": "Massively increases an ally's speed."
+          "fr": "Débloque un transport qui vient chercher les alliés pour les déplacer ailleurs sur la carte.",
+          "en": "Unlocks a transport that picks up allies to move them elsewhere on the map."
         },
         "demoYoutubeId": ""
       }
@@ -4951,46 +4951,46 @@ const HEROES = [
           "fr": "A COLLER",
           "en": "PASTE"
         },
-        "buildCode": "[T2222222,LtMorales]",
+        "buildCode": "[T2222233,LtMorales]",
         "videos": [],
         "updatedAt": {
-          "fr": "",
-          "en": ""
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jo9zwh9",
+            "primaryId": "tmn4x9mor0223a",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jo0cg7a",
+            "primaryId": "tmn4x9mor05tb2",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jodpj3a",
+            "primaryId": "tmn4x9mor084ww",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jobpccn",
+            "primaryId": "tmn4x9mor11txh",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6joi10l5",
+            "primaryId": "tmn4x9mor13dsf",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jomqwbp",
+            "primaryId": "tmn4x9mor172j9",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jonimet",
+            "primaryId": "tmn4x9mor20bc9",
             "alternativeIds": []
           }
         ]
@@ -5010,46 +5010,46 @@ const HEROES = [
           "fr": "A COLLER",
           "en": "PASTE"
         },
-        "buildCode": "[T3332333,LtMorales]",
+        "buildCode": "[T3312124,LtMorales]",
         "videos": [],
         "updatedAt": {
-          "fr": "",
-          "en": ""
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jo9zwh9",
+            "primaryId": "tmn4x9mor03448",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jo0cg7a",
+            "primaryId": "tmn4x9mor0610a",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jodpj3a",
+            "primaryId": "tmn4x9mor07ckk",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jobpccn",
+            "primaryId": "tmn4x9mor11txh",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6joi10l5",
+            "primaryId": "tmn4x9mor12abb",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jomqwbp",
+            "primaryId": "tmn4x9mor16puu",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jonimet",
+            "primaryId": "tmn4x9mor210fp",
             "alternativeIds": []
           }
         ]
@@ -5058,100 +5058,296 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jo9zwh9",
+        "id": "tmn4x9mor01f9k",
         "level": 1,
         "name": {
-          "fr": "Totem Colossal",
-          "en": "Colossal Totem"
+          "fr": "Retour d'énergie",
+          "en": "Caduceus Feedback"
         },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_earthbindtotem.png",
+        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_caduceusreactor.png",
         "description": {
-          "fr": "Augmente les points de vie, le rayon et la durée du totem. Permet de le repositionner une nouvelle fois.",
-          "en": "Increases health, radius, and duration of the totem. Can be repositioned once."
+          "fr": "Augmente la portée des attaques de base, qui génèrent aussi de l'énergie contre les héros.",
+          "en": "Increases Basic Attack range, and Basic Attacks against Heroes also generate Energy."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo0cg7a",
+        "id": "tmn4x9mor0223a",
+        "level": 1,
+        "name": {
+          "fr": "Automédication",
+          "en": "Life Support"
+        },
+        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_healingbeam_target.png",
+        "description": {
+          "fr": "Rayon de soins régénère bien plus d'énergie au début de sa régénération. Passif : augmente l'énergie maximale.",
+          "en": "Healing Beam regenerates much more Energy at the start of its regeneration. Passive: increases maximum Energy."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmn4x9mor03448",
+        "level": 1,
+        "name": {
+          "fr": "On dégage !",
+          "en": "Clear!"
+        },
+        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_displacementgrenade_b.png",
+        "description": {
+          "fr": "Quête : toucher des héros avec Grenade de distorsion rend de l'énergie et finit par réduire son temps de recharge et augmenter sa zone d'effet.",
+          "en": "Quest: hitting Heroes with Displacement Grenade restores Energy, eventually reducing its cooldown and increasing its detonation area."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmn4x9mor042ll",
         "level": 4,
         "name": {
-          "fr": "Viveterre",
-          "en": "Earthliving Enchant"
+          "fr": "Réacteur cellulaire",
+          "en": "Cellular Reactor"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg",
+        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_caduceusreactor.png",
         "description": {
-          "fr": "Renforce Salve de guerison pour les héros dont les points de vie sont bas.",
-          "en": "Empowers Chain Heal for heroes at low health."
+          "fr": "Nouvelle capacité active : dépense de l'énergie pour se soigner fortement, ce qui désactive temporairement Réacteur Caduceus.",
+          "en": "New active ability: spends Energy to heal herself for a large amount, which disables Caduceus Reactor while active."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jodpj3a",
+        "id": "tmn4x9mor05tb2",
+        "level": 4,
+        "name": {
+          "fr": "Déclenchement de traumatisme",
+          "en": "Trauma Trigger"
+        },
+        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_advancedblock.png",
+        "description": {
+          "fr": "Subir des dégâts sous un certain seuil de vie confère de l'armure. Passif : augmente les soins de Réacteur Caduceus.",
+          "en": "Taking damage below a Health threshold grants Armor. Passive: increases Caduceus Reactor's healing."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmn4x9mor0610a",
+        "level": 4,
+        "name": {
+          "fr": "Bouclier de distorsion",
+          "en": "Blast Shield"
+        },
+        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_displacementgrenade_c.png",
+        "description": {
+          "fr": "Les héros touchés par Grenade de distorsion sont ralentis après avoir été repoussés, et confèrent un bouclier cumulable à Lt. Morales.",
+          "en": "Heroes hit by Displacement Grenade are Slowed after being knocked back, and grant Lt. Morales a stacking Shield."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmn4x9mor07ckk",
         "level": 7,
         "name": {
-          "fr": "Totem lié à la terre",
-          "en": "Grounded Totem"
+          "fr": "Kinésithérapie",
+          "en": "Physical Therapy"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg",
+        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_deployshield.png",
         "description": {
-          "fr": "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.",
-          "en": "Reduces attack and spell power of enemies in range."
+          "fr": "Protection dissipe les ralentissements de sa cible et voit son temps de recharge réduit.",
+          "en": "Safeguard cleanses Slows from its target and has its cooldown reduced."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jobpccn",
+        "id": "tmn4x9mor084ww",
+        "level": 7,
+        "name": {
+          "fr": "Blindage en vanadium",
+          "en": "Vanadium Plating"
+        },
+        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_deployshield_b.png",
+        "description": {
+          "fr": "Protection donne de l'armure supplémentaire si sa cible est étourdie ou immobilisée. Passif : augmente sa durée.",
+          "en": "Safeguard grants extra Armor if its target is Stunned or Rooted. Passive: increases its duration."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmn4x9mor09da8",
+        "level": 7,
+        "name": {
+          "fr": "Médi-drone",
+          "en": "Medi-Drone"
+        },
+        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_deployshield_c.png",
+        "description": {
+          "fr": "Les alliés sous Protection reçoivent une partie des soins de Rayon de soins lancé sur un autre allié.",
+          "en": "Allies with Safeguard receive a portion of the healing from Healing Beam cast on another ally."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmn4x9mor10xz7",
         "level": 10,
         "name": {
-          "fr": "Guérison ancestrale",
-          "en": "Ancestral Healing"
+          "fr": "Drone de stimulants",
+          "en": "Stim Drone"
         },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_ancestralhealing.png",
+        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_stim.png",
         "description": {
-          "fr": "Gros soin monocible, utilisable sur soi.",
-          "en": "Massive single-target heal, usable on self."
+          "fr": "Donne un gros bonus de vitesse d'attaque et de déplacement à un héros allié.",
+          "en": "Grants an allied Hero a large boost to Attack Speed and Movement Speed."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joi10l5",
+        "id": "tmn4x9mor11txh",
+        "level": 10,
+        "name": {
+          "fr": "Transports Médivac",
+          "en": "Medivac Dropships"
+        },
+        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_medivacdropship.png",
+        "description": {
+          "fr": "Débloque un transport qui vient chercher les alliés pour les déplacer ailleurs sur la carte.",
+          "en": "Unlocks a transport that picks up allies to move them elsewhere on the map."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmn4x9mor12abb",
         "level": 13,
         "name": {
-          "fr": "Raz-de-marée",
-          "en": "Tidal Waves"
+          "fr": "Grenade IEM",
+          "en": "EMP Grenade"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg",
+        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_displacementgrenade.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Salve de guérison et son coût en mana.",
-          "en": "Reduces Chain Heal cooldown and mana cost."
+          "fr": "Grenade de distorsion inflige des dégâts supplémentaires au fil du temps, et davantage aux boucliers des héros.",
+          "en": "Displacement Grenade deals additional damage over time, and bonus damage to Heroes' Shields."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jomqwbp",
+        "id": "tmn4x9mor13dsf",
+        "level": 13,
+        "name": {
+          "fr": "Choc systémique",
+          "en": "System Shock"
+        },
+        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_displacementgrenade_b.png",
+        "description": {
+          "fr": "Les héros touchés par Grenade de distorsion infligent moins de dégâts pendant quelques secondes.",
+          "en": "Heroes hit by Displacement Grenade deal reduced damage for a few seconds."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmn4x9mor1401a",
+        "level": 13,
+        "name": {
+          "fr": "Au chevet des malades",
+          "en": "Bedside Manner"
+        },
+        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_displacementgrenade_c.png",
+        "description": {
+          "fr": "Les attaques de base contre des héros infligent des dégâts bonus, fortement augmentés après un coup de Grenade de distorsion.",
+          "en": "Basic Attacks against Heroes deal bonus damage, greatly increased after landing Displacement Grenade."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmn4x9mor15btz",
         "level": 16,
         "name": {
-          "fr": "Totem d’emprise de la terre",
-          "en": "Earthgrasp Totem"
+          "fr": "Soins sans frontières",
+          "en": "Extended Care"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg",
+        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_healingbeam_b.png",
         "description": {
-          "fr": "Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.",
-          "en": "When first spawned, the totem deals AoE damage and heavily slows."
+          "fr": "Canaliser Rayon de soins assez longtemps sur un allié le soigne aussi au fil du temps une fois terminé. Passif : augmente sa portée.",
+          "en": "Channeling Healing Beam long enough on an ally also heals them over time once it ends. Passive: increases its range."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jonimet",
+        "id": "tmn4x9mor16puu",
+        "level": 16,
+        "name": {
+          "fr": "Primo-intervenante",
+          "en": "First Responder"
+        },
+        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_healingbeam_c.png",
+        "description": {
+          "fr": "Au-delà d'un certain seuil d'énergie, Rayon de soins soigne davantage et donne de la vitesse de déplacement à Lt. Morales et sa cible.",
+          "en": "Above a certain Energy threshold, Healing Beam heals for more and grants Movement Speed to Lt. Morales and its target."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmn4x9mor172j9",
+        "level": 16,
+        "name": {
+          "fr": "Séquenceur de bouclier",
+          "en": "Shield Sequencer"
+        },
+        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_advancedblock.png",
+        "description": {
+          "fr": "Protection obtient une charge supplémentaire et une portée accrue.",
+          "en": "Safeguard gains an additional charge and increased range."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmn4x9mor18jn9",
         "level": 20,
         "name": {
-          "fr": "Bénédiction du long-voyant",
-          "en": "Farseer's Blessing"
+          "fr": "Hyperactivité",
+          "en": "Hyperactivity"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_ancestralhealing.jpg",
+        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_stim.png",
         "description": {
-          "fr": "Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.",
-          "en": "A second Ancestral Healing triggers and heals in an AoE."
+          "fr": "Réduit fortement le temps de recharge de Drone de stimulants et augmente son bonus de vitesse de déplacement.",
+          "en": "Greatly reduces Stim Drone's cooldown and increases its Movement Speed bonus."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmn4x9mor19z3e",
+        "level": 20,
+        "name": {
+          "fr": "Zone sûre",
+          "en": "Safe Zone"
+        },
+        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_medivacdropship_b.png",
+        "description": {
+          "fr": "En sortant du Médivac, les alliés sont protégés contre tous les dégâts. Passif : réduit le temps de recharge des capacités de transport.",
+          "en": "Allies exiting the Medivac are protected from all damage. Passive: reduces the transport abilities' cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmn4x9mor20bc9",
+        "level": 20,
+        "name": {
+          "fr": "Soins palliatifs",
+          "en": "Hospice Care"
+        },
+        "icon": "assets/heroes/base_spells/ltmorales/images/spells/storm_ui_icon_medic_deployshield.png",
+        "description": {
+          "fr": "Protection rend sa cible impossible à tuer brièvement, puis la soigne si elle est toujours sous 50% de vie.",
+          "en": "Safeguard makes its target briefly Unkillable, then heals them if they're still below 50% Health."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmn4x9mor210fp",
+        "level": 20,
+        "name": {
+          "fr": "Seconde opinion",
+          "en": "Second Opinion"
+        },
+        "icon": "assets/heroes/base_spells/ltmorales/images/talents/storm_ui_icon_medic_displacementgrenade_b.png",
+        "description": {
+          "fr": "Toucher plusieurs héros avec Grenade de distorsion réduit fortement son temps de recharge.",
+          "en": "Hitting multiple Heroes with Displacement Grenade greatly reduces its cooldown."
         },
         "demoYoutubeId": null
       }
@@ -6314,7 +6510,7 @@ const HEROES = [
   },
   {
     "id": "uther",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Uther",
       "en": "Uther"
@@ -6333,13 +6529,13 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Dévotion d'avant-garde",
-          "en": "Vanguard"
+          "fr": "Dévotion",
+          "en": "Devotion"
         },
         "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_eternaldevotion.png",
         "description": {
-          "fr": "Les soins d'Uther donnent de l'armure. S'il meurt, il soigne en fantôme.",
-          "en": "Uther's heals grant armor. If he dies, he heals as a ghost."
+          "fr": "Les capacités de base d'Uther confèrent de l'armure temporaire aux alliés touchés et à lui-même. À sa mort, il devient un esprit invulnérable qui peut soigner avec Éclair lumineux.",
+          "en": "Uther's Basic Abilities grant temporary Armor to allied targets and himself. Upon dying, he becomes an Invulnerable spirit that can heal with Flash of Light."
         },
         "demoYoutubeId": ""
       },
@@ -6351,8 +6547,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_holylight.png",
         "description": {
-          "fr": "Soin monocible massif.",
-          "en": "Massive single-target heal."
+          "fr": "Soigne fortement un héros allié. Lancé sur un autre héros qu'Uther, le soigne aussi lui-même.",
+          "en": "Heavily heals an allied Hero. When cast on someone other than Uther, also heals himself."
         },
         "demoYoutubeId": ""
       },
@@ -6364,8 +6560,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_holyradiance.png",
         "description": {
-          "fr": "Vague qui soigne les alliés et blesse les ennemis.",
-          "en": "Wave that heals allies and damages enemies."
+          "fr": "Vague qui soigne les alliés et blesse les ennemis sur une ligne.",
+          "en": "A wave that heals allies and damages enemies in a line."
         },
         "demoYoutubeId": ""
       },
@@ -6377,8 +6573,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_hammerofjustice.png",
         "description": {
-          "fr": "Étourdit un ennemi au corps-à-corps.",
-          "en": "Stuns an enemy in melee range."
+          "fr": "Inflige des dégâts et étourdit un ennemi au corps-à-corps.",
+          "en": "Deals damage and Stuns an enemy in melee range."
         },
         "demoYoutubeId": ""
       },
@@ -6390,8 +6586,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_divineshield.png",
         "description": {
-          "fr": "Rend un allié invulnérable.",
-          "en": "Makes an ally Invulnerable."
+          "fr": "Rend un héros allié invulnérable et augmente sa vitesse de déplacement.",
+          "en": "Makes an allied Hero Invulnerable and increases their Movement Speed."
         },
         "demoYoutubeId": ""
       },
@@ -6403,8 +6599,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_divinestorm.png",
         "description": {
-          "fr": "Étourdit tous les ennemis en zone.",
-          "en": "Stuns all enemies in an area."
+          "fr": "Inflige des dégâts et étourdit tous les ennemis proches.",
+          "en": "Deals damage and Stuns all nearby enemies."
         },
         "demoYoutubeId": ""
       }
@@ -6435,46 +6631,46 @@ const HEROES = [
           "fr": "A COLLER",
           "en": "PASTE"
         },
-        "buildCode": "[T1111111,Uther]",
+        "buildCode": "[T1111114,Uther]",
         "videos": [],
         "updatedAt": {
-          "fr": "",
-          "en": ""
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6joiw0g8",
+            "primaryId": "tmv7k4uth01e3e",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jo83h5w",
+            "primaryId": "tmv7k4uth04wz6",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jozq27b",
+            "primaryId": "tmv7k4uth073ty",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jo3kqgp",
+            "primaryId": "tmv7k4uth10kza",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jo3f78a",
+            "primaryId": "tmv7k4uth12up2",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jo5uuj6",
+            "primaryId": "tmv7k4uth1564j",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6joafxbi",
+            "primaryId": "tmv7k4uth21nic",
             "alternativeIds": []
           }
         ]
@@ -6494,46 +6690,46 @@ const HEROES = [
           "fr": "A COLLER",
           "en": "PASTE"
         },
-        "buildCode": "[T3332333,Uther]",
+        "buildCode": "[T3222222,Uther]",
         "videos": [],
         "updatedAt": {
-          "fr": "",
-          "en": ""
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6joiw0g8",
+            "primaryId": "tmv7k4uth03r7e",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jo83h5w",
+            "primaryId": "tmv7k4uth05bvs",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jozq27b",
+            "primaryId": "tmv7k4uth08dg7",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jo3kqgp",
+            "primaryId": "tmv7k4uth11t30",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jo3f78a",
+            "primaryId": "tmv7k4uth13waf",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jo5uuj6",
+            "primaryId": "tmv7k4uth161sx",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6joafxbi",
+            "primaryId": "tmv7k4uth19egw",
             "alternativeIds": []
           }
         ]
@@ -6542,100 +6738,296 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6joiw0g8",
+        "id": "tmv7k4uth01e3e",
         "level": 1,
         "name": {
-          "fr": "Totem Colossal",
-          "en": "Colossal Totem"
+          "fr": "Toucher d'argent",
+          "en": "Silver Touch"
         },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_earthbindtotem.png",
+        "icon": "assets/heroes/base_spells/uther/images/talents/storm_ui_icon_uther_holylight_var1.png",
         "description": {
-          "fr": "Augmente les points de vie, le rayon et la durée du totem. Permet de le repositionner une nouvelle fois.",
-          "en": "Increases health, radius, and duration of the totem. Can be repositioned once."
+          "fr": "Quête : réduire les dégâts de sources héroïques avec Dévotion finit par réduire le coût en mana de Lumière sacrée et augmenter sa portée.",
+          "en": "Quest: reducing damage from Heroic sources with Devotion eventually reduces Holy Light's Mana cost and increases its range."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo83h5w",
+        "id": "tmv7k4uth02924",
+        "level": 1,
+        "name": {
+          "fr": "Onde de lumière",
+          "en": "Wave of Light"
+        },
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_holyradiance.png",
+        "description": {
+          "fr": "Quête : soigner ou blesser des héros avec Radiance sacrée augmente la durée de Dévotion. Passif : rembourse du mana et réduit son temps de recharge à chaque utilisation efficace.",
+          "en": "Quest: healing or damaging Heroes with Holy Radiance increases Devotion's duration. Passive: refunds Mana and reduces its cooldown each time it connects."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmv7k4uth03r7e",
+        "level": 1,
+        "name": {
+          "fr": "Marteau du Porteur de Lumière",
+          "en": "Hammer of the Lightbringer"
+        },
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_hammerofjustice.png",
+        "description": {
+          "fr": "Quête : les attaques de base finissent par réduire le temps de recharge de Marteau de la justice. Passif : les attaques de base rendent du mana à Uther.",
+          "en": "Quest: Basic Attacks eventually reduce Hammer of Justice's cooldown. Passive: Basic Attacks restore Mana to Uther."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmv7k4uth04wz6",
         "level": 4,
         "name": {
-          "fr": "Viveterre",
-          "en": "Earthliving Enchant"
+          "fr": "Horion sacré",
+          "en": "Holy Shock"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg",
+        "icon": "assets/heroes/base_spells/uther/images/talents/storm_ui_icon_uther_flashoflight.png",
         "description": {
-          "fr": "Renforce Salve de guerison pour les héros dont les points de vie sont bas.",
-          "en": "Empowers Chain Heal for heroes at low health."
+          "fr": "Nouvelle capacité active : inflige des dégâts à un ennemi et procure les soins de Lumière sacrée à Uther. Partage son temps de recharge avec Lumière sacrée.",
+          "en": "New active ability: deals damage to an enemy and grants Uther the self-healing of Holy Light. Shares a cooldown with Holy Light."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jozq27b",
+        "id": "tmv7k4uth05bvs",
+        "level": 4,
+        "name": {
+          "fr": "Poursuite de la justice",
+          "en": "Pursuit of Justice"
+        },
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_hammerofjustice.png",
+        "description": {
+          "fr": "Marteau de la justice donne de la vitesse de déplacement à Uther.",
+          "en": "Hammer of Justice grants Uther Movement Speed."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmv7k4uth06x1u",
+        "level": 4,
+        "name": {
+          "fr": "Flammes sacrées",
+          "en": "Holy Fire"
+        },
+        "icon": "assets/heroes/base_spells/uther/images/talents/storm_ui_icon_uther_holyfire.png",
+        "description": {
+          "fr": "Inflige des dégâts au fil du temps aux ennemis proches, augmentés temporairement par les attaques de base.",
+          "en": "Deals damage over time to nearby enemies, temporarily increased by Basic Attacks."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmv7k4uth073ty",
         "level": 7,
         "name": {
-          "fr": "Totem lié à la terre",
-          "en": "Grounded Totem"
+          "fr": "Armure de foi",
+          "en": "Armor of Faith"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg",
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_holylight.png",
         "description": {
-          "fr": "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.",
-          "en": "Reduces attack and spell power of enemies in range."
+          "fr": "Subir un étourdissement, une immobilisation ou un silence rend du mana à Uther et accélère fortement la recharge de Lumière sacrée.",
+          "en": "Being Stunned, Rooted, or Silenced grants Uther Mana and greatly speeds up Holy Light's cooldown."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo3kqgp",
+        "id": "tmv7k4uth08dg7",
+        "level": 7,
+        "name": {
+          "fr": "Gardien des anciens rois",
+          "en": "Guardian of Ancient Kings"
+        },
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_eternaldevotion.png",
+        "description": {
+          "fr": "Soigner avec une capacité de base un héros étourdi, immobilisé ou réduit au silence lui confère de l'armure.",
+          "en": "Healing a Stunned, Rooted, or Silenced Hero with a Basic Ability grants them Armor."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmv7k4uth0920h",
+        "level": 7,
+        "name": {
+          "fr": "Main de protection",
+          "en": "Hand of Protection"
+        },
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_divineshield.png",
+        "description": {
+          "fr": "Nouvelle capacité active : rend un allié insensible au contrôle. Ne peut pas cibler Uther. Les attaques de base réduisent son temps de recharge.",
+          "en": "New active ability: makes an ally Unstoppable. Cannot target Uther. Basic Attacks reduce its cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmv7k4uth10kza",
         "level": 10,
         "name": {
-          "fr": "Guérison ancestrale",
-          "en": "Ancestral Healing"
+          "fr": "Bouclier divin",
+          "en": "Divine Shield"
         },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_ancestralhealing.png",
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_divineshield.png",
         "description": {
-          "fr": "Gros soin monocible, utilisable sur soi.",
-          "en": "Massive single-target heal, usable on self."
+          "fr": "Rend un héros allié invulnérable et augmente sa vitesse de déplacement.",
+          "en": "Makes an allied Hero Invulnerable and increases their Movement Speed."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo3f78a",
+        "id": "tmv7k4uth11t30",
+        "level": 10,
+        "name": {
+          "fr": "Tempête divine",
+          "en": "Divine Storm"
+        },
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_divinestorm.png",
+        "description": {
+          "fr": "Inflige des dégâts et étourdit tous les ennemis proches.",
+          "en": "Deals damage and Stuns all nearby enemies."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmv7k4uth12up2",
         "level": 13,
         "name": {
-          "fr": "Raz-de-marée",
-          "en": "Tidal Waves"
+          "fr": "Bénédiction du champion",
+          "en": "Blessed Champion"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg",
+        "icon": "assets/heroes/base_spells/uther/images/talents/storm_ui_icon_uther_holylight_var1.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Salve de guérison et son coût en mana.",
-          "en": "Reduces Chain Heal cooldown and mana cost."
+          "fr": "Après avoir utilisé Lumière sacrée, les attaques de base d'Uther soignent aussi les alliés proches selon les soins procurés.",
+          "en": "After using Holy Light, Uther's Basic Attacks also heal nearby allies based on the amount healed."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo5uuj6",
+        "id": "tmv7k4uth13waf",
+        "level": 13,
+        "name": {
+          "fr": "C'est un plaisir",
+          "en": "Well Met"
+        },
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_hammerofjustice.png",
+        "description": {
+          "fr": "Marteau de la justice réduit aussi la vitesse de déplacement et les dégâts infligés par sa cible.",
+          "en": "Hammer of Justice also reduces its target's Movement Speed and damage dealt."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmv7k4uth141qa",
+        "level": 13,
+        "name": {
+          "fr": "Bouclier anti-sort",
+          "en": "Spell Shield"
+        },
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_divinestorm.png",
+        "description": {
+          "fr": "Confère périodiquement de l'armure anti-sort contre la prochaine capacité adverse. Peut être désactivé.",
+          "en": "Periodically grants Spell Armor against the next enemy Ability. Can be toggled off."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmv7k4uth1564j",
         "level": 16,
         "name": {
-          "fr": "Totem d’emprise de la terre",
-          "en": "Earthgrasp Totem"
+          "fr": "Guide de lumière",
+          "en": "Beacon of Light"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg",
+        "icon": "assets/heroes/base_spells/uther/images/talents/storm_ui_icon_uther_beaconoflight.png",
         "description": {
-          "fr": "Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.",
-          "en": "When first spawned, the totem deals AoE damage and heavily slows."
+          "fr": "Uther se soigne davantage en ciblant un autre héros avec Lumière sacrée, encore plus sous 50% de vie.",
+          "en": "Uther heals himself for more when targeting others with Holy Light, even more while below 50% Health."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joafxbi",
+        "id": "tmv7k4uth161sx",
+        "level": 16,
+        "name": {
+          "fr": "Délivrance de Tyr",
+          "en": "Tyr's Deliverance"
+        },
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_holyradiance.png",
+        "description": {
+          "fr": "Augmente les dégâts et les soins de Radiance sacrée. Les attaques de base augmentent encore ce bonus pour sa prochaine utilisation.",
+          "en": "Increases Holy Radiance's damage and healing. Basic Attacks further boost this bonus for its next cast."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmv7k4uth17avh",
+        "level": 16,
+        "name": {
+          "fr": "Bénédiction",
+          "en": "Benediction"
+        },
+        "icon": "assets/heroes/base_spells/uther/images/talents/storm_ui_icon_uther_benediction.png",
+        "description": {
+          "fr": "Nouvelle capacité active : réduit le coût en mana et le temps de recharge de la prochaine capacité de base.",
+          "en": "New active ability: reduces the Mana cost and cooldown of Uther's next Basic Ability."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmv7k4uth18s5m",
         "level": 20,
         "name": {
-          "fr": "Bénédiction du long-voyant",
-          "en": "Farseer's Blessing"
+          "fr": "Rempart de lumière",
+          "en": "Bulwark of Light"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_ancestralhealing.jpg",
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_divineshield.png",
         "description": {
-          "fr": "Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.",
-          "en": "A second Ancestral Healing triggers and heals in an AoE."
+          "fr": "Bouclier divin s'applique aussi à tous les héros alliés proches et dure plus longtemps.",
+          "en": "Divine Shield also applies to all nearby allied Heroes and lasts longer."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmv7k4uth19egw",
+        "level": 20,
+        "name": {
+          "fr": "Ouragan divin",
+          "en": "Divine Hurricane"
+        },
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_divinestorm.png",
+        "description": {
+          "fr": "Augmente le rayon de Tempête divine et réduit fortement son temps de recharge.",
+          "en": "Increases Divine Storm's radius and greatly reduces its cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmv7k4uth20ezi",
+        "level": 20,
+        "name": {
+          "fr": "Rédemption",
+          "en": "Redemption"
+        },
+        "icon": "assets/heroes/base_spells/uther/images/talents/storm_ui_icon_uther_eternaldevotion_a.png",
+        "description": {
+          "fr": "Quand Avant-garde éternelle prend fin, Uther ressuscite à l'emplacement de l'esprit avec une partie de sa vie.",
+          "en": "When Eternal Vanguard ends, Uther revives at the spirit's location with a portion of his Health."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmv7k4uth21nic",
+        "level": 20,
+        "name": {
+          "fr": "Protection divine",
+          "en": "Divine Protection"
+        },
+        "icon": "assets/heroes/base_spells/uther/images/spells/storm_ui_icon_uther_eternaldevotion.png",
+        "description": {
+          "fr": "Augmente l'armure et la durée procurées par Dévotion.",
+          "en": "Increases the Armor and duration granted by Devotion."
         },
         "demoYoutubeId": null
       }
