@@ -11552,15 +11552,15 @@ const HEROES = [
       {
         "id": "melee",
         "label": {
-          "fr": "Forme corps à corps",
-          "en": "Melee Form"
+          "fr": "Destructeur",
+          "en": "Destroyer"
         }
       },
       {
         "id": "ranged",
         "label": {
-          "fr": "Forme à distance",
-          "en": "Ranged Form"
+          "fr": "Brise-monde",
+          "en": "World Breaker"
         }
       },
       {
