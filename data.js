@@ -4654,7 +4654,7 @@ const HEROES = [
           "fr": "En route !",
           "en": "Let's Go!"
         },
-        "icon": "assets/heroes/base_spells/lili/images/spells/storm_ui_icon_lili_jugofathousandcups.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_cleanse.png",
         "description": {
           "fr": "Nouvelle capacité active : soigne un héros allié et le rend insensible au contrôle. Son temps de recharge est affecté par Prompts petons. Ne peut pas cibler Li Li.",
           "en": "New active ability: heals an allied Hero and makes them Unstoppable. Its cooldown is affected by Fast Feet. Cannot target Li Li."
