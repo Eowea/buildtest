@@ -20534,7 +20534,7 @@ const HEROES = [
   },
   {
     "id": "nazeebo",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Nazeebo",
       "en": "Nazeebo"
@@ -20558,21 +20558,21 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_voodooritual.png",
         "description": {
-          "fr": "Empoisonne les ennemis ; les sbires tués accumulent ta quête.",
-          "en": "Poisons enemies; slain minions stack your quest."
+          "fr": "Les attaques de base et les capacités de Nazeebo empoisonnent les ennemis non-héroïques. Quête : un sbire empoisonné qui meurt donne à Nazeebo des points de vie et de mana permanents.",
+          "en": "Nazeebo's Basic Attacks and Abilities poison Non-Heroic enemies. Quest: a poisoned Minion that dies permanently grants Nazeebo Health and Mana."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "Araignées de cadavre",
+          "fr": "Araignées nécrophages",
           "en": "Corpse Spiders"
         },
         "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_corpsespider.png",
         "description": {
-          "fr": "Invoque des araignées qui poursuivent les ennemis.",
-          "en": "Summons spiders that chase enemies."
+          "fr": "Projette une jarre qui invoque des araignées poursuivant les ennemis touchés.",
+          "en": "Hurls a jar that summons spiders chasing the enemies it hits."
         },
         "demoYoutubeId": ""
       },
@@ -20584,47 +20584,47 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_zombiewall.png",
         "description": {
-          "fr": "Emprisonne les ennemis dans un cercle de zombies.",
-          "en": "Traps enemies inside a ring of zombies."
+          "fr": "Entoure une zone d'un anneau de zombies qui blessent les ennemis à leur contact.",
+          "en": "Surrounds an area with a ring of zombies that damage enemies on contact."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "E",
         "name": {
-          "fr": "Peste de crapauds",
+          "fr": "Invasion de grenouilles",
           "en": "Plague of Toads"
         },
         "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_plagueoftoads.png",
         "description": {
-          "fr": "Crapauds qui se propagent et explosent.",
-          "en": "Toads that spread and explode."
+          "fr": "Libère une vague de grenouilles qui explosent au contact des ennemis. Peut stocker plusieurs charges.",
+          "en": "Releases a wave of toads that explode on contact with enemies. Can store multiple charges."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
         "name": {
-          "fr": "Gargantuesque",
+          "fr": "Gargantua",
           "en": "Gargantuan"
         },
         "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_gargantuan.png",
         "description": {
-          "fr": "Invoque un géant qui combat pour toi.",
-          "en": "Summons a giant that fights for you."
+          "fr": "Invoque un gargantua qui garde une zone, attaque les ennemis proches et peut piétiner sur commande.",
+          "en": "Summons a Gargantuan that guards an area, attacks nearby enemies, and can be ordered to stomp."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
         "name": {
-          "fr": "Esprit vorace",
+          "fr": "Esprit affamé",
           "en": "Ravenous Spirit"
         },
         "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_ravenousspirit.png",
         "description": {
-          "fr": "Esprit canalisé qui inflige d'énormes dégâts de zone.",
-          "en": "Channeled spirit dealing huge area damage."
+          "fr": "Canalise un esprit qui inflige d'énormes dégâts autour de lui. Immobilise Nazeebo pendant sa durée.",
+          "en": "Channels a spirit that deals massive damage around it. Roots Nazeebo in place for its duration."
         },
         "demoYoutubeId": ""
       }
@@ -20639,7 +20639,7 @@ const HEROES = [
         "en": "Zombie Wall blocks an escape or cuts off a diver."
       },
       {
-        "fr": "Esprit vorace est très puissant, mais te laisse immobile : protège-toi.",
+        "fr": "Esprit affamé est très puissant, mais te laisse immobile : protège-toi.",
         "en": "Ravenous Spirit is very strong but leaves you channeling: stay safe."
       }
     ],
@@ -20659,46 +20659,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,WitchDoctor]",
+        "buildCode": "[T1132212,Nazeebo]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jox2oe0",
+            "primaryId": "tmh3n8naz01xd0",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jollflx",
+            "primaryId": "tmh3n8naz041da",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jo6ym40",
+            "primaryId": "tmh3n8naz097hj",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jo3fl6c",
+            "primaryId": "tmh3n8naz11x2q",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jokwyx0",
+            "primaryId": "tmh3n8naz13e86",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jojxk2w",
+            "primaryId": "tmh3n8naz15myb",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jonokbk",
+            "primaryId": "tmh3n8naz19on4",
             "alternativeIds": []
           }
         ]
@@ -20707,100 +20707,296 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jox2oe0",
+        "id": "tmh3n8naz01xd0",
         "level": 1,
         "name": {
-          "fr": "Widowmakers",
+          "fr": "Venimosité",
           "en": "Widowmakers"
         },
-        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_corpsespider.png",
+        "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_corpsespider.png",
         "description": {
-          "fr": "Enemies hit by Corpse Spiders' jar are Slowed by 25% for 1 second.  Reward: After Corpse Spiders attack Heroes 100 times, their attack damage is increased by 25% and their duration is increased by 1 second.",
-          "en": "Enemies hit by Corpse Spiders' jar are Slowed by 25% for 1 second.  Reward: After Corpse Spiders attack Heroes 100 times, their attack damage is increased by 25% and their duration is increased by 1 second."
+          "fr": "Les araignées nécrophages ralentissent les ennemis touchés par la jarre. À terme, elles infligent plus de dégâts et durent plus longtemps.",
+          "en": "Corpse Spiders Slow enemies hit by the jar. Eventually they deal more damage and last longer."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jollflx",
+        "id": "tmh3n8naz02hq7",
+        "level": 1,
+        "name": {
+          "fr": "Pandémie",
+          "en": "Pandemic"
+        },
+        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_plagueoftoads_a.png",
+        "description": {
+          "fr": "Quête : toucher des héros avec Invasion de grenouilles finit par générer des grenouilles supplémentaires, puis réduire les dégâts infligés par les héros touchés.",
+          "en": "Quest: hitting Heroes with Plague of Toads eventually spawns extra toads, then reduces the damage dealt by Heroes hit."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmh3n8naz0352b",
+        "level": 1,
+        "name": {
+          "fr": "La Chose des profondeurs",
+          "en": "Thing of the Deep"
+        },
+        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_voodooritual_a.png",
+        "description": {
+          "fr": "Augmente la portée des capacités de base de Nazeebo. Accumuler des charges de Rituel vaudou finit par augmenter sa puissance de capacité.",
+          "en": "Increases the range of Nazeebo's Basic Abilities. Stacking Voodoo Ritual charges eventually increases his Spell Power."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmh3n8naz041da",
         "level": 4,
         "name": {
-          "fr": "Hexed Crawlers",
+          "fr": "Morsure maléfique",
           "en": "Hexed Crawlers"
         },
-        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_corpsespider.png",
+        "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_corpsespider.png",
         "description": {
-          "fr": "Corpse Spiders restore 1% of Nazeebo's maximum Health and Mana when they attack an enemy Hero.",
-          "en": "Corpse Spiders restore 1% of Nazeebo's maximum Health and Mana when they attack an enemy Hero."
+          "fr": "Les araignées nécrophages rendent des points de vie et de mana à Nazeebo quand elles touchent un héros adverse.",
+          "en": "Corpse Spiders restore Health and Mana to Nazeebo when they hit an enemy Hero."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo6ym40",
+        "id": "tmh3n8naz053f0",
+        "level": 4,
+        "name": {
+          "fr": "Le grand vaudou",
+          "en": "Big Voodoo"
+        },
+        "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_voodooritual.png",
+        "description": {
+          "fr": "Augmente les bonus de points de vie et de mana procurés par Rituel vaudou.",
+          "en": "Increases the Health and Mana bonuses granted by Voodoo Ritual."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmh3n8naz0645y",
+        "level": 4,
+        "name": {
+          "fr": "Rite de sang",
+          "en": "Blood Ritual"
+        },
+        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_voodooritual_a.png",
+        "description": {
+          "fr": "Si un ennemi meurt empoisonné par Rituel vaudou, Nazeebo récupère des points de vie et de mana. Passif : les victimes confèrent des charges de Rituel vaudou.",
+          "en": "If an enemy dies while poisoned by Voodoo Ritual, Nazeebo recovers Health and Mana. Passive: takedowns grant Voodoo Ritual stacks."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmh3n8naz07a8t",
         "level": 7,
         "name": {
-          "fr": "Spirit of Arachyr",
+          "fr": "Esprit d'Arachyr",
           "en": "Spirit of Arachyr"
         },
-        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_corpsespider.png",
+        "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_corpsespider.png",
         "description": {
-          "fr": "The number of Corpse Spiders spawned is increased from 3 to 4. If Corpse Spiders' jar hits only one enemy, it creates an additional spider.",
-          "en": "The number of Corpse Spiders spawned is increased from 3 to 4. If Corpse Spiders' jar hits only one enemy, it creates an additional spider."
+          "fr": "Augmente le nombre d'araignées nécrophages générées. Toucher un seul ennemi avec la jarre génère une araignée supplémentaire.",
+          "en": "Increases the number of Corpse Spiders spawned. Hitting only one enemy with the jar spawns an extra spider."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo3fl6c",
+        "id": "tmh3n8naz08gl6",
+        "level": 7,
+        "name": {
+          "fr": "Ruée de morts",
+          "en": "Dead Rush"
+        },
+        "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_zombiewall.png",
+        "description": {
+          "fr": "Mur de zombies inflige davantage de dégâts. À la fin de son effet, les zombies restants sortent du sol pour attaquer les ennemis proches.",
+          "en": "Zombie Wall deals more damage. When it ends, the remaining Zombies uproot and attack nearby enemies."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmh3n8naz097hj",
+        "level": 7,
+        "name": {
+          "fr": "Grenouilles monumentales",
+          "en": "Toads of Hugeness"
+        },
+        "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_plagueoftoads.png",
+        "description": {
+          "fr": "Chaque bond d'Invasion de grenouilles augmente ses dégâts et sa zone d'effet.",
+          "en": "Each hop of Plague of Toads increases its damage and explosion radius."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmh3n8naz1071r",
         "level": 10,
         "name": {
-          "fr": "Gargantuan",
+          "fr": "Gargantua",
           "en": "Gargantuan"
         },
-        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_gargantuan.png",
+        "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_gargantuan.png",
         "description": {
-          "fr": "Summon a Gargantuan to guard an area for 20 seconds. Deals 100 (+4% per level) damage when summoned, attacks for 140 (+4% per level) damage, and can be ordered to stomp nearby enemies. The Gargantuan's Stomp deals 140 (+4% per level) damage and Slows by 30% for 2 seconds.",
-          "en": "Summon a Gargantuan to guard an area for 20 seconds. Deals 100 (+4% per level) damage when summoned, attacks for 140 (+4% per level) damage, and can be ordered to stomp nearby enemies. The Gargantuan's Stomp deals 140 (+4% per level) damage and Slows by 30% for 2 seconds."
+          "fr": "Invoque un gargantua qui garde une zone, attaque les ennemis proches et peut piétiner sur commande.",
+          "en": "Summons a Gargantuan that guards an area, attacks nearby enemies, and can be ordered to stomp."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jokwyx0",
+        "id": "tmh3n8naz11x2q",
+        "level": 10,
+        "name": {
+          "fr": "Esprit affamé",
+          "en": "Ravenous Spirit"
+        },
+        "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_ravenousspirit.png",
+        "description": {
+          "fr": "Canalise un esprit qui inflige d'énormes dégâts autour de lui. Immobilise Nazeebo pendant sa durée.",
+          "en": "Channels a spirit that deals massive damage around it. Roots Nazeebo in place for its duration."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmh3n8naz123cf",
         "level": 13,
         "name": {
-          "fr": "Guardian Toads",
+          "fr": "Grenouilles gardiennes",
           "en": "Guardian Toads"
         },
-        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_plagueoftoads.png",
+        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_plagueoftoads_a.png",
         "description": {
-          "fr": "Hitting an enemy Hero with Plague of Toads grants 30 Armor for 3 seconds, stacking up to 6 seconds.",
-          "en": "Hitting an enemy Hero with Plague of Toads grants 30 Armor for 3 seconds, stacking up to 6 seconds."
+          "fr": "Toucher un héros adverse avec Invasion de grenouilles confère de l'armure, cumulable.",
+          "en": "Hitting an enemy Hero with Plague of Toads grants stacking Armor."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jojxk2w",
+        "id": "tmh3n8naz13e86",
+        "level": 13,
+        "name": {
+          "fr": "Superstition",
+          "en": "Superstition"
+        },
+        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_suprerstition.png",
+        "description": {
+          "fr": "Confère de l'armure anti-sort en permanence. Une attaque de base héroïque annule ce bonus temporairement et fait apparaître une araignée nécrophage.",
+          "en": "Grants permanent Spell Armor. A Heroic Basic Attack removes this bonus temporarily and spawns a Corpse Spider."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmh3n8naz14wxk",
+        "level": 13,
+        "name": {
+          "fr": "Bloc de glace",
+          "en": "Ice Block"
+        },
+        "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_voodooritual.png",
+        "description": {
+          "fr": "Nouvelle capacité active : place Nazeebo en stase et le rend invulnérable pendant quelques secondes.",
+          "en": "New active ability: places Nazeebo in Stasis and grants Invulnerability for a few seconds."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmh3n8naz15myb",
         "level": 16,
         "name": {
-          "fr": "Spider Colony",
+          "fr": "Colonie d'araignées",
           "en": "Spider Colony"
         },
-        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_corpsespider.png",
+        "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_corpsespider.png",
         "description": {
-          "fr": "Corpse Spider Attacks against Heroes reduce the cooldown of Nazeebo's Basic Abilities by 0.125 seconds.",
-          "en": "Corpse Spider Attacks against Heroes reduce the cooldown of Nazeebo's Basic Abilities by 0.125 seconds."
+          "fr": "Les attaques des araignées nécrophages contre des héros réduisent le temps de recharge des capacités de base.",
+          "en": "Corpse Spider attacks against Heroes reduce Basic Ability cooldowns."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jonokbk",
+        "id": "tmh3n8naz16ktl",
+        "level": 16,
+        "name": {
+          "fr": "Anneau de poison",
+          "en": "Ring of Poison"
+        },
+        "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_zombiewall.png",
+        "description": {
+          "fr": "Mur de zombies dure plus longtemps et son centre se remplit de poison infligeant des dégâts croissants.",
+          "en": "Zombie Wall lasts longer and its center fills with poison dealing increasing damage."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmh3n8naz17qjr",
+        "level": 16,
+        "name": {
+          "fr": "Moisson d'âmes",
+          "en": "Soul Harvest"
+        },
+        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_soulharvest.png",
+        "description": {
+          "fr": "Nouvelle capacité active : augmente les points de vie et la puissance de capacité de Nazeebo selon le nombre d'ennemis proches.",
+          "en": "New active ability: increases Nazeebo's Health and Spell Power based on the number of nearby enemies."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmh3n8naz18d5n",
         "level": 20,
         "name": {
-          "fr": "Humongoid",
+          "fr": "Démesuré",
           "en": "Humongoid"
         },
-        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_gargantuan.png",
+        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_gargantuanstomp.png",
         "description": {
-          "fr": "Gargantuan Stomp's area is increased by 25% and its Slow amount is increased to 50%.  Passive: Reduce Gargantuan's cooldown by 40 seconds and its Mana cost by 50%.",
-          "en": "Gargantuan Stomp's area is increased by 25% and its Slow amount is increased to 50%.  Passive: Reduce Gargantuan's cooldown by 40 seconds and its Mana cost by 50%."
+          "fr": "Augmente la zone et le ralentissement du piétinement du gargantua. Passif : réduit le temps de recharge et le coût en mana de Gargantua.",
+          "en": "Increases the Gargantuan's Stomp area and Slow. Passive: reduces Gargantuan's cooldown and Mana cost."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmh3n8naz19on4",
+        "level": 20,
+        "name": {
+          "fr": "Esprit annihilateur",
+          "en": "Annihilating Spirit"
+        },
+        "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_ravenousspirit.png",
+        "description": {
+          "fr": "Esprit affamé réduit les soins reçus par les héros touchés et gagne en dégâts au fil du canal. Passif : augmente sa portée.",
+          "en": "Ravenous Spirit reduces healing received by Heroes hit and gains damage the longer it channels. Passive: increases its range."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmh3n8naz20fvs",
+        "level": 20,
+        "name": {
+          "fr": "Contagion ignoble",
+          "en": "Vile Infection"
+        },
+        "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_voodooritual.png",
+        "description": {
+          "fr": "Quête : accumuler des charges de Rituel vaudou finit par le rendre applicable aux héros, avec des dégâts augmentés.",
+          "en": "Quest: stacking Voodoo Ritual charges eventually makes it applicable to Heroes, with increased damage."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmh3n8naz21id4",
+        "level": 20,
+        "name": {
+          "fr": "Mauvais remède",
+          "en": "Bad Medicine"
+        },
+        "icon": "assets/heroes/base_spells/nazeebo/images/talents/storm_ui_icon_nazeebo_voodooritual_a.png",
+        "description": {
+          "fr": "Nouvelle capacité active : consomme des charges de Rituel vaudou pour devenir insensible au contrôle et gagner de la vitesse et de l'armure.",
+          "en": "New active ability: consumes Voodoo Ritual stacks to become Unstoppable and gain Movement Speed and Armor."
         },
         "demoYoutubeId": null
       }
@@ -23009,7 +23205,7 @@ const HEROES = [
   },
   {
     "id": "sgthammer",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Sgt. Marteau",
       "en": "Sgt. Hammer"
@@ -23028,78 +23224,78 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Mode siège",
+          "fr": "Mode Siège",
           "en": "Siege Mode"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_siegemode.png",
         "description": {
-          "fr": "Immobile mais portée et dégâts considérablement augmentés.",
-          "en": "Immobile, but greatly increased range and damage."
+          "fr": "Passe en Mode Siège : attaques de base plus puissantes, à plus longue portée et infligeant des dégâts en zone autour de la cible.",
+          "en": "Enters Siege Mode: Basic Attacks deal more damage, gain range, and deal splash damage around the target."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "Mines à araignées",
+          "fr": "Mines araignées",
           "en": "Spider Mines"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_spidermines.png",
         "description": {
-          "fr": "Pose des mines qui explosent au contact.",
-          "en": "Places mines that detonate on contact."
+          "fr": "Pose des mines qui explosent au contact d'un ennemi, blessant et ralentissant les cibles proches. Portée accrue en Mode Siège.",
+          "en": "Places mines that detonate when an enemy comes near, damaging and Slowing nearby targets. Increased range in Siege Mode."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "Z",
         "name": {
-          "fr": "Souffle à concussion",
+          "fr": "Décharge percutante",
           "en": "Concussive Blast"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_concussiveblast.png",
         "description": {
-          "fr": "Repousse fortement les ennemis proches.",
-          "en": "Strongly knocks back nearby enemies."
+          "fr": "Blesse et repousse fortement les ennemis devant Sgt. Hammer. Rayon augmenté en Mode Siège.",
+          "en": "Damages and strongly knocks back enemies in front of Sgt. Hammer. Increased radius in Siege Mode."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "E",
         "name": {
-          "fr": "Blindage néo-acier",
+          "fr": "Blindage en NéoAcier",
           "en": "Neosteel Plating"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_neosteelplating.png",
         "description": {
-          "fr": "Gagne de l'armure temporairement.",
-          "en": "Temporarily gain Armor."
+          "fr": "Gagne de l'armure temporairement, encore plus en Mode Siège.",
+          "en": "Temporarily gains Armor, even more while in Siege Mode."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
         "name": {
-          "fr": "Frappe au napalm",
-          "en": "Napalm Strike"
+          "fr": "Canon brutal",
+          "en": "Blunt Force Gun"
         },
-        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_napalmstrike.png",
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_bluntforcegun.png",
         "description": {
-          "fr": "Bombarde une zone en la laissant enflammée.",
-          "en": "Bombards an area, leaving it burning."
+          "fr": "Tire un missile qui traverse le champ de bataille, infligeant des dégâts à tous les ennemis sur sa trajectoire.",
+          "en": "Fires a missile across the battlefield, dealing damage to all enemies in its path."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
         "name": {
-          "fr": "Canon de force brute",
-          "en": "Blunt Force Gun"
+          "fr": "Frappe de napalm",
+          "en": "Napalm Strike"
         },
-        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_bluntforcegun.png",
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_napalmstrike.png",
         "description": {
-          "fr": "Tir global qui inflige des dégâts massifs.",
-          "en": "Global shot dealing massive damage."
+          "fr": "Bombarde une zone qui reste enflammée, infligeant des dégâts à l'impact puis en continu.",
+          "en": "Bombards an area that stays ablaze, dealing impact damage and then ongoing damage."
         },
         "demoYoutubeId": ""
       },
@@ -23123,7 +23319,7 @@ const HEROES = [
         "en": "Only deploy if your team can protect you."
       },
       {
-        "fr": "Souffle à concussion repousse : c'est ta seule échappatoire.",
+        "fr": "Décharge percutante repousse : c'est ta seule échappatoire.",
         "en": "Concussive Blast knocks back: it's your only escape."
       },
       {
@@ -23147,46 +23343,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,SgtHammer]",
+        "buildCode": "[T2112212,SgtHammer]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jo3sun5",
+            "primaryId": "tmw9c4hmr027xm",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jodkd9k",
+            "primaryId": "tmw9c4hmr04gwf",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jov7hmk",
+            "primaryId": "tmw9c4hmr07lsz",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jos1465",
+            "primaryId": "tmw9c4hmr114cz",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6joln008",
+            "primaryId": "tmw9c4hmr1313m",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jozc7dk",
+            "primaryId": "tmw9c4hmr15pc7",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jogeqcn",
+            "primaryId": "tmw9c4hmr19hit",
             "alternativeIds": []
           }
         ]
@@ -23195,100 +23391,296 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jo3sun5",
+        "id": "tmw9c4hmr01nhk",
         "level": 1,
         "name": {
           "fr": "Ambush",
           "en": "Ambush"
         },
-        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_siegemode.png",
+        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_siegemode_var1.png",
         "description": {
-          "fr": "Gain Stealth when entering Siege Mode or after not taking or dealing damage for 3 seconds while in Siege Mode. Basic Attacks while Stealthed deal 125% more damage.  Remaining stationary for at least 1.5 seconds while Stealthed grants Invisible.",
-          "en": "Gain Stealth when entering Siege Mode or after not taking or dealing damage for 3 seconds while in Siege Mode. Basic Attacks while Stealthed deal 125% more damage.  Remaining stationary for at least 1.5 seconds while Stealthed grants Invisible."
+          "fr": "Devient furtive en entrant en Mode Siège ou après un moment sans subir ni infliger de dégâts en Mode Siège. Les attaques de base depuis la discrétion infligent bien plus de dégâts, et rester immobile permet de devenir invisible.",
+          "en": "Gains Stealth upon entering Siege Mode or after a moment without dealing or taking damage in Siege Mode. Basic Attacks from Stealth deal much more damage, and staying still grants Invisibility."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jodkd9k",
+        "id": "tmw9c4hmr027xm",
+        "level": 1,
+        "name": {
+          "fr": "Artillerie avancée",
+          "en": "Advanced Artillery"
+        },
+        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_artillery.png",
+        "description": {
+          "fr": "Augmente la portée des attaques de base en Mode Siège.",
+          "en": "Increases Basic Attack range while in Siege Mode."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw9c4hmr03d4g",
+        "level": 1,
+        "name": {
+          "fr": "Salve de Maelström",
+          "en": "Maelstrom Rounds"
+        },
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_siegemode.png",
+        "description": {
+          "fr": "Les attaques de base en Mode Siège peuvent ricocher vers un ennemi proche supplémentaire.",
+          "en": "Basic Attacks in Siege Mode can bounce to an additional nearby enemy."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw9c4hmr04gwf",
         "level": 4,
         "name": {
           "fr": "Barricade",
           "en": "Barricade"
         },
-        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_concussiveblast.png",
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_concussiveblast.png",
         "description": {
-          "fr": "Reduce Concussive Blast's cooldown by 4 seconds, its Mana cost by 40, and when cast create an impassable wall in front of Sgt. Hammer for 4 seconds.",
-          "en": "Reduce Concussive Blast's cooldown by 4 seconds, its Mana cost by 40, and when cast create an impassable wall in front of Sgt. Hammer for 4 seconds."
+          "fr": "Réduit le temps de recharge et le coût en mana de Décharge percutante, qui érige aussi un mur infranchissable devant Sgt. Hammer.",
+          "en": "Reduces Concussive Blast's cooldown and Mana cost, and it now also raises an impassable wall in front of Sgt. Hammer."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jov7hmk",
+        "id": "tmw9c4hmr05wul",
+        "level": 4,
+        "name": {
+          "fr": "Tactiques de siège",
+          "en": "Siege Tactics"
+        },
+        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_siegemode_var2.png",
+        "description": {
+          "fr": "Réduit le temps nécessaire pour entrer et sortir du Mode Siège.",
+          "en": "Reduces the time needed to enter and exit Siege Mode."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw9c4hmr069wm",
+        "level": 4,
+        "name": {
+          "fr": "Acier biorégénérant",
+          "en": "Regenerative Bio-Steel"
+        },
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_neosteelplating.png",
+        "description": {
+          "fr": "Blindage en NéoAcier soigne également Sgt. Hammer en plus de lui accorder de l'armure.",
+          "en": "Neosteel Plating also heals Sgt. Hammer in addition to granting Armor."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw9c4hmr07lsz",
         "level": 7,
         "name": {
-          "fr": "Pulse Detonation Core",
+          "fr": "Noyau à détonation d'impulsion",
           "en": "Pulse Detonation Core"
         },
-        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_spidermines.png",
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_spidermines.png",
         "description": {
-          "fr": "Spider Mines detonate 3 times over 3 seconds.  Basic Attacks against enemy Heroes grant 5 Mana and reduce the cooldown of Spider Mines by 1.5 seconds.  Increase this bonus to 2.5 seconds while in Siege Mode.",
-          "en": "Spider Mines detonate 3 times over 3 seconds.  Basic Attacks against enemy Heroes grant 5 Mana and reduce the cooldown of Spider Mines by 1.5 seconds.  Increase this bonus to 2.5 seconds while in Siege Mode."
+          "fr": "Mines araignées explosent en plusieurs vagues, et les attaques de base contre des héros réduisent leur temps de recharge et rendent du mana.",
+          "en": "Spider Mines detonates in multiple waves, and Basic Attacks against Heroes reduce its cooldown and restore Mana."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jos1465",
+        "id": "tmw9c4hmr08o8j",
+        "level": 7,
+        "name": {
+          "fr": "Mode Siège flottant",
+          "en": "Hover Siege Mode"
+        },
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_mount.png",
+        "description": {
+          "fr": "Sgt. Hammer peut se déplacer lentement en Mode Siège.",
+          "en": "Sgt. Hammer can move slowly while in Siege Mode."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw9c4hmr098mu",
+        "level": 7,
+        "name": {
+          "fr": "Portée graduelle",
+          "en": "Graduating Range"
+        },
+        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_tankmode.png",
+        "description": {
+          "fr": "La portée des attaques de base en Mode Siège augmente plus Sgt. Hammer reste immobile.",
+          "en": "Basic Attack range in Siege Mode increases the longer Sgt. Hammer remains stationary."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw9c4hmr10wg7",
         "level": 10,
         "name": {
-          "fr": "Blunt Force Gun",
+          "fr": "Canon brutal",
           "en": "Blunt Force Gun"
         },
-        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_bluntforcegun.png",
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_bluntforcegun.png",
         "description": {
-          "fr": "Fire a missile across the battlefield, dealing 500 (+3% per level) damage to non-Structure enemies in its path.",
-          "en": "Fire a missile across the battlefield, dealing 500 (+3% per level) damage to non-Structure enemies in its path."
+          "fr": "Tire un missile qui traverse le champ de bataille, infligeant des dégâts à tous les ennemis sur sa trajectoire.",
+          "en": "Fires a missile across the battlefield, dealing damage to all enemies in its path."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joln008",
+        "id": "tmw9c4hmr114cz",
+        "level": 10,
+        "name": {
+          "fr": "Frappe de napalm",
+          "en": "Napalm Strike"
+        },
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_napalmstrike.png",
+        "description": {
+          "fr": "Bombarde une zone qui reste enflammée, infligeant des dégâts à l'impact puis en continu.",
+          "en": "Bombards an area that stays ablaze, dealing impact damage and then ongoing damage."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw9c4hmr12pad",
         "level": 13,
         "name": {
-          "fr": "Tactical Mine Deployment",
+          "fr": "Déploiement tactique de mines",
           "en": "Tactical Mine Deployment"
         },
-        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_spidermines.png",
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_spidermines.png",
         "description": {
-          "fr": "Moving while Thrusters is active leaves a trail of up to 5 Spider Mines. Additionally, increase the Slow of Spider Mines by 15%.",
-          "en": "Moving while Thrusters is active leaves a trail of up to 5 Spider Mines. Additionally, increase the Slow of Spider Mines by 15%."
+          "fr": "Se déplacer avec Propulseurs laisse une traînée de Mines araignées, et augmente leur effet de ralentissement.",
+          "en": "Moving with Thrusters leaves a trail of Spider Mines, and increases their Slow effect."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jozc7dk",
+        "id": "tmw9c4hmr1313m",
+        "level": 13,
+        "name": {
+          "fr": "Retranchée",
+          "en": "Entrenched"
+        },
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_neosteelplating.png",
+        "description": {
+          "fr": "En Mode Siège, Sgt. Hammer ne peut plus être immobilisée et gagne de l'armure supplémentaire tant qu'elle reste stationnaire.",
+          "en": "While in Siege Mode, Sgt. Hammer can no longer be Rooted and gains bonus Armor while stationary."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw9c4hmr14h5w",
+        "level": 13,
+        "name": {
+          "fr": "Moteurs hyper-refroidis",
+          "en": "Hyper-Cooling Engines"
+        },
+        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_hypercoolingengines.png",
+        "description": {
+          "fr": "Réduit le temps de recharge de Blindage en NéoAcier et augmente l'armure qu'il accorde.",
+          "en": "Reduces Neosteel Plating's cooldown and increases the Armor it grants."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw9c4hmr15pc7",
         "level": 16,
         "name": {
-          "fr": "Mechanical Know-how",
+          "fr": "Ingéniosité mécanique",
           "en": "Mechanical Know-how"
         },
-        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_neosteelplating.png",
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_neosteelplating.png",
         "description": {
-          "fr": "Neosteel Plating grants 20% maximum Health as a Shield for 2 seconds and increases Basic Attack damage by 30% for 5 seconds.",
-          "en": "Neosteel Plating grants 20% maximum Health as a Shield for 2 seconds and increases Basic Attack damage by 30% for 5 seconds."
+          "fr": "Blindage en NéoAcier accorde aussi un bouclier et augmente temporairement les dégâts des attaques de base.",
+          "en": "Neosteel Plating also grants a Shield and temporarily increases Basic Attack damage."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jogeqcn",
+        "id": "tmw9c4hmr167vz",
+        "level": 16,
+        "name": {
+          "fr": "Bourreau",
+          "en": "Executioner"
+        },
+        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_siegemode_var2.png",
+        "description": {
+          "fr": "Les attaques de base et les capacités infligent davantage de dégâts aux ennemis affaiblis.",
+          "en": "Basic Attacks and Abilities deal more damage to low-Health enemies."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw9c4hmr17xrs",
+        "level": 16,
+        "name": {
+          "fr": "Massacreuse de géants",
+          "en": "Giant Killer"
+        },
+        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_siegemode_var1.png",
+        "description": {
+          "fr": "Les attaques de base infligent des dégâts supplémentaires proportionnels aux points de vie maximum de la cible.",
+          "en": "Basic Attacks deal bonus damage based on the target's maximum Health."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw9c4hmr1803u",
         "level": 20,
         "name": {
-          "fr": "Orbital BFG",
+          "fr": "BFG orbital",
           "en": "Orbital BFG"
         },
-        "icon": "assets/heroes/base_spells/sgthammer/images/talents/storm_ui_icon_sgthammer_bluntforcegun.png",
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_bluntforcegun.png",
         "description": {
-          "fr": "Blunt Force Gun's missile orbits the planet every 5 seconds. Only the last missile fired orbits.",
-          "en": "Blunt Force Gun's missile orbits the planet every 5 seconds. Only the last missile fired orbits."
+          "fr": "Le missile de Canon brutal fait le tour de la carte et revient frapper une seconde fois.",
+          "en": "Blunt Force Gun's missile circles the map and strikes a second time."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw9c4hmr19hit",
+        "level": 20,
+        "name": {
+          "fr": "Frappe de lave avancée",
+          "en": "Advanced Lava Strike"
+        },
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_napalmstrike.png",
+        "description": {
+          "fr": "Frappe de napalm laisse la zone enflammée plus longtemps et inflige davantage de dégâts en continu.",
+          "en": "Napalm Strike leaves the area ablaze longer and deals more ongoing damage."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw9c4hmr20c6a",
+        "level": 20,
+        "name": {
+          "fr": "Mines à shrapnel",
+          "en": "Shrapnel Mines"
+        },
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_spidermines.png",
+        "description": {
+          "fr": "Les Mines araignées infligent des dégâts supplémentaires en zone à la détonation.",
+          "en": "Spider Mines deal bonus area damage on detonation."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw9c4hmr216ho",
+        "level": 20,
+        "name": {
+          "fr": "Ultra-condensateurs",
+          "en": "Ultra Capacitors"
+        },
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_siegemode.png",
+        "description": {
+          "fr": "Réduit le temps de recharge des attaques de base en Mode Siège.",
+          "en": "Reduces the cooldown of Basic Attacks while in Siege Mode."
         },
         "demoYoutubeId": null
       }
@@ -27147,7 +27539,7 @@ const HEROES = [
   },
   {
     "id": "zagara",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Zagara",
       "en": "Zagara"
@@ -27166,78 +27558,78 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Tumeur de mucus",
+          "fr": "Tumeur muqueuse",
           "en": "Creep Tumor"
         },
         "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_creep.png",
         "description": {
-          "fr": "Pose du mucus qui donne vision et vitesse.",
-          "en": "Places creep that grants vision and speed."
+          "fr": "Pose une tumeur qui génère du mucus. Zagara et ses créatures se déplacent plus vite sur le mucus, qui révèle aussi la zone. Peut stocker plusieurs charges.",
+          "en": "Plants a tumor that spreads Creep. Zagara and her summons move faster on Creep, which also reveals the area. Can store multiple charges."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "Barrage de banelings",
+          "fr": "Barrage de chancres",
           "en": "Baneling Barrage"
         },
         "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_banelingbarrage.png",
         "description": {
-          "fr": "Lance des banelings qui explosent en zone.",
-          "en": "Throws banelings that explode in an area."
+          "fr": "Lance des chancres qui explosent sur les ennemis touchés. Peut stocker plusieurs charges.",
+          "en": "Launches Banelings that explode on the enemies they hit. Can store multiple charges."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "Z",
         "name": {
-          "fr": "Chasseur tueur",
+          "fr": "Chasseur-tueur",
           "en": "Hunter Killer"
         },
         "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_hunterkiller.png",
         "description": {
-          "fr": "Invoque un hydralisk qui poursuit une cible.",
-          "en": "Summons a hydralisk that chases a target."
+          "fr": "Invoque un hydralisk qui poursuit et attaque une cible unique, puis perd de la vie avec le temps.",
+          "en": "Summons a Hydralisk that chases and attacks a single target, then loses Health over time."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "E",
         "name": {
-          "fr": "Largage infesté",
+          "fr": "Largage contaminé",
           "en": "Infested Drop"
         },
         "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_infesteddrop.png",
         "description": {
-          "fr": "Invoque des zergs qui bloquent et attaquent.",
-          "en": "Summons zerg that block and attack."
+          "fr": "Largue une capsule qui blesse la zone ciblée et invoque des cancrelats qui attaquent et perdent de la vie avec le temps.",
+          "en": "Drops a pod that damages the targeted area and spawns Roachlings that attack and lose Health over time."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
         "name": {
-          "fr": "Réseau de nydus",
-          "en": "Nydus Network"
+          "fr": "Gueule vorace",
+          "en": "Devouring Maw"
         },
-        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_nydusworm.png",
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_devouringmaw.png",
         "description": {
-          "fr": "Crée des vers de nydus pour te déplacer sur la carte.",
-          "en": "Creates Nydus worms to travel across the map."
+          "fr": "Invoque une gueule qui dévore les ennemis d'une zone, les empêchant de combattre pendant quelques secondes.",
+          "en": "Summons a maw that devours enemies in an area, preventing them from fighting for a few seconds."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
         "name": {
-          "fr": "Gueule dévorante",
-          "en": "Devouring Maw"
+          "fr": "Réseau de Nydus",
+          "en": "Nydus Network"
         },
-        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_devouringmaw.png",
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_nydusworm.png",
         "description": {
-          "fr": "Avale les ennemis d'une zone pendant plusieurs secondes.",
-          "en": "Swallows enemies in an area for several seconds."
+          "fr": "Invoque un ver de Nydus sur le mucus. Zagara peut voyager entre plusieurs vers et récupère des points de vie et de mana à l'intérieur.",
+          "en": "Summons a Nydus Worm on Creep. Zagara can travel between worms and regenerates Health and Mana while inside."
         },
         "demoYoutubeId": ""
       }
@@ -27272,46 +27664,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Zagara]",
+        "buildCode": "[T1211211,Zagara]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jphvmr4",
+            "primaryId": "tmy5r2zag01egs",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jpu2ulv",
+            "primaryId": "tmy5r2zag05g84",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jpdo4h5",
+            "primaryId": "tmy5r2zag070h4",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jp610sg",
+            "primaryId": "tmy5r2zag10avs",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jpl7w7r",
+            "primaryId": "tmy5r2zag13w2b",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jpyxbcr",
+            "primaryId": "tmy5r2zag15lm2",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jp9er44",
+            "primaryId": "tmy5r2zag18hdt",
             "alternativeIds": []
           }
         ]
@@ -27320,100 +27712,296 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jphvmr4",
+        "id": "tmy5r2zag01egs",
         "level": 1,
         "name": {
-          "fr": "Volatile Acid",
+          "fr": "Acide volatil",
           "en": "Volatile Acid"
         },
-        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_banelingbarrage.png",
+        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_banelingbarrage_a.png",
         "description": {
-          "fr": "Banelings can travel 50% further before exploding.",
-          "en": "Banelings can travel 50% further before exploding."
+          "fr": "Les chancres parcourent une plus grande distance avant d'exploser.",
+          "en": "Banelings travel further before exploding."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpu2ulv",
+        "id": "tmy5r2zag02rpa",
+        "level": 1,
+        "name": {
+          "fr": "Charognards",
+          "en": "Corpse Feeders"
+        },
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_infesteddrop.png",
+        "description": {
+          "fr": "Réduit le temps de recharge de Largage contaminé et augmente les points de vie des cancrelats.",
+          "en": "Reduces Infested Drop's cooldown and increases Roachlings' Health."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmy5r2zag03ty6",
+        "level": 1,
+        "name": {
+          "fr": "Contamination",
+          "en": "Infest"
+        },
+        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_infest.png",
+        "description": {
+          "fr": "Nouvelle capacité active : les sbires à distance proches infligent plus de dégâts. Quête : les dégâts de siège de Zagara augmentent encore ce bonus.",
+          "en": "New active ability: nearby ranged Minions deal bonus damage. Quest: Zagara's Siege damage further increases this bonus."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmy5r2zag04aot",
         "level": 4,
         "name": {
-          "fr": "Envenomed Spines",
+          "fr": "Aiguillons envenimés",
           "en": "Envenomed Spines"
         },
-        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_talent_autoattack_range.png",
+        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_hunterkiller_a.png",
         "description": {
-          "fr": "Activate to have Zagara's next Basic Attack apply 230 (+4% per level) damage over 5 seconds.",
-          "en": "Activate to have Zagara's next Basic Attack apply 230 (+4% per level) damage over 5 seconds."
+          "fr": "Nouvelle capacité active : la prochaine attaque de base de Zagara empoisonne sa cible.",
+          "en": "New active ability: Zagara's next Basic Attack poisons its target."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpdo4h5",
+        "id": "tmy5r2zag05g84",
+        "level": 4,
+        "name": {
+          "fr": "Lames méduses",
+          "en": "Medusa Blades"
+        },
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_hunterkiller.png",
+        "description": {
+          "fr": "Les attaques de base touchent aussi des cibles proches supplémentaires pour des dégâts réduits.",
+          "en": "Basic Attacks also hit additional nearby targets for reduced damage."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmy5r2zag0638o",
+        "level": 4,
+        "name": {
+          "fr": "Aiguillons dentés",
+          "en": "Serrated Spines"
+        },
+        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_rapidincubation.png",
+        "description": {
+          "fr": "Quête : chaque attaque de base contre un héros augmente en permanence les dégâts d'attaque de Zagara.",
+          "en": "Quest: each Basic Attack against a Hero permanently increases Zagara's Attack Damage."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmy5r2zag070h4",
         "level": 7,
         "name": {
-          "fr": "Baneling Massacre",
+          "fr": "Massacre de chancres",
           "en": "Baneling Massacre"
         },
-        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_banelingbarrage.png",
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_banelingbarrage.png",
         "description": {
-          "fr": "Gain 2 additional charges of Banelings Barrage, but increase its cooldown by 2 seconds.",
-          "en": "Gain 2 additional charges of Banelings Barrage, but increase its cooldown by 2 seconds."
+          "fr": "Confère des charges supplémentaires de Barrage de chancres, au prix d'un temps de recharge plus long.",
+          "en": "Grants additional Baneling Barrage charges, at the cost of a longer cooldown."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jp610sg",
+        "id": "tmy5r2zag08ajs",
+        "level": 7,
+        "name": {
+          "fr": "Acide visqueux",
+          "en": "Viscous Acid"
+        },
+        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_banelingbarrage_a.png",
+        "description": {
+          "fr": "Les chancres ralentissent les ennemis touchés.",
+          "en": "Banelings Slow the enemies they hit."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmy5r2zag09nr7",
+        "level": 7,
+        "name": {
+          "fr": "Largage bilieux",
+          "en": "Bile Drop"
+        },
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_infesteddrop.png",
+        "description": {
+          "fr": "Quête : augmente passivement le rayon de Largage contaminé, qui finit par générer un cancrelat supplémentaire sur les héros touchés.",
+          "en": "Quest: passively increases Infested Drop's radius, which eventually spawns an extra Roachling on Heroes hit."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmy5r2zag10avs",
         "level": 10,
         "name": {
-          "fr": "Devouring Maw",
+          "fr": "Gueule vorace",
           "en": "Devouring Maw"
         },
-        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_devouringmaw.png",
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_devouringmaw.png",
         "description": {
-          "fr": "Summon a Devouring Maw that devours enemies for 4 seconds. Devoured enemies cannot fight and take 94 (+4% per level) damage per second.  Usable on Unstoppable enemies.",
-          "en": "Summon a Devouring Maw that devours enemies for 4 seconds. Devoured enemies cannot fight and take 94 (+4% per level) damage per second.  Usable on Unstoppable enemies."
+          "fr": "Invoque une gueule qui dévore les ennemis d'une zone, les empêchant de combattre. Fonctionne même sur les ennemis insensibles au contrôle.",
+          "en": "Summons a maw that devours enemies in an area, preventing them from fighting. Works even on Unstoppable enemies."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpl7w7r",
+        "id": "tmy5r2zag119ms",
+        "level": 10,
+        "name": {
+          "fr": "Réseau de Nydus",
+          "en": "Nydus Network"
+        },
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_nydusworm.png",
+        "description": {
+          "fr": "Invoque un ver de Nydus sur le mucus. Zagara peut voyager entre plusieurs vers et y récupère des points de vie et de mana. Passif : étend la propagation du mucus et réduit les temps de recharge en attaquant dessus.",
+          "en": "Summons a Nydus Worm on Creep. Zagara can travel between worms and regenerates Health and Mana inside. Passive: extends Creep's spread and reduces cooldowns when attacking on it."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmy5r2zag120z2",
         "level": 13,
         "name": {
-          "fr": "Hydralisk Transfusion",
+          "fr": "Transfusion d'hydralisk",
           "en": "Hydralisk Transfusion"
         },
-        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_hunterkiller.png",
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_hunterkiller.png",
         "description": {
-          "fr": "Zagara is healed for 60% of the damage dealt by Hunter Killers' Basic Attacks to Heroes.",
-          "en": "Zagara is healed for 60% of the damage dealt by Hunter Killers' Basic Attacks to Heroes."
+          "fr": "Soigne Zagara selon les dégâts infligés aux héros par les attaques de base du chasseur-tueur.",
+          "en": "Heals Zagara based on the damage Hunter Killer's Basic Attacks deal to Heroes."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpyxbcr",
+        "id": "tmy5r2zag13w2b",
+        "level": 13,
+        "name": {
+          "fr": "Enduction protectrice",
+          "en": "Protective Coating"
+        },
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_creep.png",
+        "description": {
+          "fr": "Sur le mucus, Zagara gagne de l'armure qui réduit les dégâts subis.",
+          "en": "While on Creep, Zagara gains Armor that reduces the damage she takes."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmy5r2zag14h70",
+        "level": 13,
+        "name": {
+          "fr": "Bouclier anti-sort",
+          "en": "Spell Shield"
+        },
+        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_exitnydusworm.png",
+        "description": {
+          "fr": "Confère périodiquement de l'armure anti-sort contre la prochaine capacité adverse. Peut être désactivé.",
+          "en": "Periodically grants Spell Armor against the next enemy Ability. Can be toggled off."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmy5r2zag15lm2",
         "level": 16,
         "name": {
-          "fr": "Corrosive Saliva",
+          "fr": "Salive corrosive",
           "en": "Corrosive Saliva"
         },
-        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_hunterkiller.png",
+        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_hunterkiller_a.png",
         "description": {
-          "fr": "When attacking Heroes, Hunter Killers and Roachlings deal additional damage equal to 1.75% of their maximum Health.",
-          "en": "When attacking Heroes, Hunter Killers and Roachlings deal additional damage equal to 1.75% of their maximum Health."
+          "fr": "Les attaques du chasseur-tueur et des cancrelats contre des héros infligent des dégâts bonus selon leurs points de vie maximum.",
+          "en": "Hunter Killer's and Roachlings' attacks against Heroes deal bonus damage based on their maximum Health."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jp9er44",
+        "id": "tmy5r2zag1686k",
+        "level": 16,
+        "name": {
+          "fr": "Mutalisk",
+          "en": "Mutalisk"
+        },
+        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_hunterkillermuta.png",
+        "description": {
+          "fr": "Réduit le temps de recharge de Chasseur-tueur, qui invoque désormais un mutalisk aux attaques rebondissantes.",
+          "en": "Reduces Hunter Killer's cooldown, which now summons a Mutalisk with a bouncing attack."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmy5r2zag17y20",
+        "level": 16,
+        "name": {
+          "fr": "Pointes dentelées",
+          "en": "Jagged Barbs"
+        },
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_creep.png",
+        "description": {
+          "fr": "Sur le mucus, les attaques de base de Zagara infligent plus de dégâts et gagnent en portée.",
+          "en": "While on Creep, Zagara's Basic Attacks deal more damage and gain range."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmy5r2zag18hdt",
         "level": 20,
         "name": {
-          "fr": "Tyrant Maw",
+          "fr": "Gueule tyrannique",
           "en": "Tyrant Maw"
         },
-        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_devouringmaw.png",
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_devouringmaw.png",
         "description": {
-          "fr": "Devouring Maw deals 50% more damage. Takedowns reduce its cooldown by 25 seconds.",
-          "en": "Devouring Maw deals 50% more damage. Takedowns reduce its cooldown by 25 seconds."
+          "fr": "Gueule vorace inflige plus de dégâts. Les victimes réduisent son temps de recharge.",
+          "en": "Devouring Maw deals more damage. Takedowns reduce its cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmy5r2zag19hch",
+        "level": 20,
+        "name": {
+          "fr": "Mucus sans fin",
+          "en": "Endless Creep"
+        },
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_nydusworm.png",
+        "description": {
+          "fr": "Augmente fortement la portée et la durée de Tumeur muqueuse. Sur le mucus, Zagara gagne encore plus de vitesse de déplacement.",
+          "en": "Greatly increases Creep Tumor's range and duration. While on Creep, Zagara gains even more Movement Speed."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmy5r2zag20jaj",
+        "level": 20,
+        "name": {
+          "fr": "Mère des couvées",
+          "en": "Broodmother"
+        },
+        "icon": "assets/heroes/base_spells/zagara/images/talents/storm_ui_icon_zagara_banelingbarrage_a.png",
+        "description": {
+          "fr": "Une attaque de base sur trois expulse aussi un chancre vers la cible. Passif : augmente la vitesse d'attaque.",
+          "en": "Every 3rd Basic Attack also launches a Baneling at the target. Passive: increases Attack Speed."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmy5r2zag21tsv",
+        "level": 20,
+        "name": {
+          "fr": "Instinct de meute",
+          "en": "Pack Instinct"
+        },
+        "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_hunterkiller.png",
+        "description": {
+          "fr": "Zagara et ses créatures infligent plus de dégâts aux ennemis récemment attaqués par le chasseur-tueur.",
+          "en": "Zagara and her summons deal more damage to enemies recently attacked by Hunter Killer."
         },
         "demoYoutubeId": null
       }
