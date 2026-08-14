@@ -533,7 +533,7 @@ const HEROES = [
       "en": "Reliable healing, targeted rescue, and stable backline."
     },
     "gameplay": {
-      "fr": "Anduin apporte un soin lisible, un gros bouton de sauvetage et une excellente reponse aux engages front to back.",
+      "fr": "Anduin apporte un soin lisible, un gros bouton de sauvetage et une excellente réponse aux engages front to back.",
       "en": "Anduin provides straightforward healing, a massive rescue button, and an excellent response to front-to-back engages."
     },
     "spells": [
@@ -635,22 +635,22 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Heal fiable",
-          "en": "Reliable Heal"
+          "fr": "Build recommandé",
+          "en": "Recommanded build"
         },
         "summary": {
-          "fr": "Build généraliste pour garder régularité, contrôle et sécurité.",
-          "en": "Generalist build to keep consistency, control, and safety."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER",
           "en": "PASTE"
         },
-        "buildCode": "[T1111111,Anduin]",
+        "buildCode": "[T2132134,Anduin]",
         "videos": [],
         "updatedAt": {
-          "fr": "",
-          "en": ""
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
         },
         "talentSelections": [
           {
@@ -698,7 +698,7 @@ const HEROES = [
         ]
       },
       {
-        "enabled": true,
+        "enabled": false,
         "order": 2,
         "label": {
           "fr": "Build Lumière",
