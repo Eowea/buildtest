@@ -27622,8 +27622,8 @@ const HEROES = [
       "en": "Zerg specialist who pushes lanes without ever exposing herself."
     },
     "gameplay": {
-      "fr": "Zagara couvre la carte de mucus pour la vision, invoque des zergs pour pousser en continu et peut se téléporter avec son réseau de nydus.",
-      "en": "Zagara covers the map in creep for vision, summons zerg to push constantly, and can teleport with her Nydus Network."
+      "fr": "Zagara couvre la carte de mucus pour la vision, invoque des zergs pour sièger en continu ",
+      "en": "Zagara covers the map in creep for vision, summons zerg to push constantly."
     },
     "spells": [
       {
