@@ -3810,7 +3810,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_dash.png",
         "description": {
-          "fr": "Bondit vers un allié ou un ennemi, qui subit une attaque de base à l'arrivée. Peut stocker plusieurs charges.",
+          "fr": "Bondit vers un allié ou un ennemi, qui subit une attaque de base à l'arrivée. Possède plusieurs charges.",
           "en": "Dashes to an ally or enemy, hitting them with a Basic Attack on arrival. Can store multiple charges."
         },
         "demoYoutubeId": ""
@@ -20597,7 +20597,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/nazeebo/images/spells/storm_ui_icon_nazeebo_plagueoftoads.png",
         "description": {
-          "fr": "Libère une vague de grenouilles qui explosent au contact des ennemis. Peut stocker plusieurs charges.",
+          "fr": "Libère une vague de grenouilles qui explosent au contact des ennemis. Possède plusieurs charges.",
           "en": "Releases a wave of toads that explode on contact with enemies. Can store multiple charges."
         },
         "demoYoutubeId": ""
@@ -27563,7 +27563,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_creep.png",
         "description": {
-          "fr": "Pose une tumeur qui génère du mucus. Zagara et ses créatures se déplacent plus vite sur le mucus, qui révèle aussi la zone. Peut stocker plusieurs charges.",
+          "fr": "Pose une tumeur qui génère du mucus. Zagara et ses créatures se déplacent plus vite sur le mucus, qui révèle aussi la zone. Possède plusieurs charges.",
           "en": "Plants a tumor that spreads Creep. Zagara and her summons move faster on Creep, which also reveals the area. Can store multiple charges."
         },
         "demoYoutubeId": ""
@@ -27576,7 +27576,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zagara/images/spells/storm_ui_icon_zagara_banelingbarrage.png",
         "description": {
-          "fr": "Lance des chancres qui explosent sur les ennemis touchés. Peut stocker plusieurs charges.",
+          "fr": "Lance des chancres qui explosent sur les ennemis touchés. Possède plusieurs charges.",
           "en": "Launches Banelings that explode on the enemies they hit. Can store multiple charges."
         },
         "demoYoutubeId": ""
