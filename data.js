@@ -23505,7 +23505,7 @@ const HEROES = [
       "en": "Siege specialist with enormous range in Siege Mode."
     },
     "gameplay": {
-      "fr": "Sgt. Hammer se déploie en mode siège pour bombarder les forts et les regroupements ennemis depuis une distance impossible à contester.",
+      "fr": "Sgt. Hammer se déploie en mode siège pour bombarder les forts et les ennemis depuis une distance quasi impossible à contester.",
       "en": "Sgt. Hammer deploys into Siege Mode to bombard forts and enemy groups from an untouchable distance."
     },
     "spells": [
@@ -23603,7 +23603,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ne te déploie que si ton équipe peut te protéger.",
+        "fr": "Tu peux activer tes Propulseurs en mode Siège pour fuir.",
         "en": "Only deploy if your team can protect you."
       },
       {
