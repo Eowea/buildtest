@@ -17604,38 +17604,44 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmr7gscbm01fv3",
-            "alternativeIds": []
+            "primaryId": "tmr7gscbm02hjv",
+            "alternativeIds": [
+              "tmr7gscbm01fv3"
+            ]
           },
           {
             "level": 4,
             "primaryId": "tmr7gscbm05cgj",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmr7gscbm04gko"
+            ]
           },
           {
             "level": 7,
-            "primaryId": "tmr7gscbm079y3",
+            "primaryId": "tmr7gscbm09r01",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmr7gscbm10v34",
+            "primaryId": "tmr7gscbm119lm",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmr7gscbm143f7",
+            "primaryId": "tmr7gscbm12w83",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmr7gscbm153cg",
+            "primaryId": "tmr7gscbm1609s",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmr7gscbm19e5t",
-            "alternativeIds": []
+            "primaryId": "tmr7gscbm203yd",
+            "alternativeIds": [
+              "tmr7gscbm21a5l"
+            ]
           }
         ]
       }
@@ -17831,7 +17837,7 @@ const HEROES = [
           "fr": "Dragon de papier",
           "en": "Glass Cannon"
         },
-        "icon": "assets/heroes/base_spells/liming/images/talents/storm_btn_d3_traits_wizard_glasscannon.png",
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_criticalmass.png",
         "description": {
           "fr": "Augmente la puissance de capacité, mais réduit les points de vie maximum.",
           "en": "Increases Spell Power, but reduces maximum Health."
