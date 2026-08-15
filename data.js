@@ -23607,12 +23607,12 @@ const HEROES = [
         "en": "Only deploy if your team can protect you."
       },
       {
-        "fr": "Décharge percutante repousse : c'est ta seule échappatoire.",
-        "en": "Concussive Blast knocks back: it's your only escape."
+        "fr": "Décharge percutante peut cancel des sorts, mais surtout te sauver !",
+        "en": "Concussive Blast can cancel spells—but more importantly, it can save your life!"
       },
       {
-        "fr": "Tes mines donnent de la vision et bloquent les approches.",
-        "en": "Your mines give vision and deny approaches."
+        "fr": "Tes mines donnent de la vision et peuvent ralentir un gank.",
+        "en": "Your mines provide vision and can slow down a gank."
       }
     ],
     "builds": [
