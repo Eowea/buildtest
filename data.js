@@ -26304,7 +26304,7 @@ const HEROES = [
           "fr": "Enduction au NéoAcier",
           "en": "Neosteel Coating"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_runandgun_c.png",
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_temp_btn-upgrade-terran-neosteelframe.png",
         "description": {
           "fr": "Capacité active : accorde temporairement une forte armure anti-sort, réduisant fortement les dégâts de capacité subis.",
           "en": "Active: temporarily grants high Spell Armor, greatly reducing Ability damage taken."
