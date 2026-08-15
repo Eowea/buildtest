@@ -99,6 +99,26 @@ function hasSeenBuildUpdate(hero) {
     return seenUpdates.includes(`${hero.id}_${newBuildsCount}`);
 }
 
+// Suivi "build vu", distinct du suivi par héros : le badge d'un build ne doit disparaître
+// que lorsque ce build précis a été affiché, pas dès l'ouverture du héros. On se base sur
+// le libellé FR (stable quelle que soit la langue affichée) plutôt que sur l'index, qui
+// change si les builds sont réordonnés.
+function buildSeenKey(heroId, build) {
+    return `${heroId}::${(build.label && build.label.fr) || build.order || ''}`;
+}
+function hasSeenBuild(heroId, build) {
+    const seen = JSON.parse(localStorage.getItem('seenBuilds') || '[]');
+    return seen.includes(buildSeenKey(heroId, build));
+}
+function markBuildSeen(heroId, build) {
+    const seen = JSON.parse(localStorage.getItem('seenBuilds') || '[]');
+    const key = buildSeenKey(heroId, build);
+    if (!seen.includes(key)) {
+        seen.push(key);
+        localStorage.setItem('seenBuilds', JSON.stringify(seen));
+    }
+}
+
 // Marque tout comme "vu" d'un coup
 function markEverythingAsSeen(hero) {
     // 1. Marquer le héros comme vu
@@ -479,7 +499,7 @@ function renderBuildSection(hero) {
 const sortedBuildIndices = hero.builds.map((_, i) => i).sort((a, b) => (hero.builds[a].order ?? 0) - (hero.builds[b].order ?? 0));
 const tabsHtml = sortedBuildIndices.map(i => {
     const x = hero.builds[i];
-    const newBadge = x.isNew ? `<span class="new-badge">${t('newBadge')}</span>` : '';
+    const newBadge = (x.isNew && !hasSeenBuild(hero.id, x)) ? `<span class="new-badge">${t('newBadge')}</span>` : '';
     
     // On entoure le bouton d'un "wrapper" pour que le badge ne soit pas coupé par le clip-path du bouton
     return `
@@ -497,6 +517,9 @@ const tabsHtml = sortedBuildIndices.map(i => {
     : '';
   
   el.innerHTML=`<div class="build-tabs">${tabsHtml}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(resolveBuildTalents(hero,b))}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
+  // Le build qu'on vient d'afficher est désormais vu : son badge disparaîtra au prochain
+  // rendu. Le marquage est différé pour qu'il reste visible sur celui-ci.
+  if (b.isNew) setTimeout(() => markBuildSeen(hero.id, b), 0);
   bindFloatingTriggers();
   bindComboCarousel();
   queueLayoutSync();
