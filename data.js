@@ -17935,7 +17935,7 @@ const HEROES = [
           "fr": "Les Éléments de Tal Rasha",
           "en": "Tal Rasha's Elements"
         },
-        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_criticalmass.png",
+        "icon": "assets/heroes/base_spells/liming/images/talents/storm_btn_d3_traits_wizard_elementalexposure.png",
         "description": {
           "fr": "Lancer une capacité augmente les dégâts de la prochaine capacité différente, jusqu'à un maximum.",
           "en": "Casting an Ability increases the damage of the next different Ability, up to a cap."
