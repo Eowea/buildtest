@@ -169,6 +169,7 @@
   [data-drag-item]{transition:opacity .15s, border-color .15s;}
   [data-drag-item].dragging{opacity:.4;}
   [data-drag-item].drag-over{border-color:var(--gold) !important;border-width:2px;}
+  [data-drop-level].drop-target{outline:2px dashed var(--gold);outline-offset:2px;}
   details.collapsible > summary::-webkit-details-marker{display:none;}
   details.collapsible > summary .chevron{color:var(--gold);font-size:11px;transition:transform .15s;flex:0 0 auto;}
   details.collapsible[open] > summary .chevron{transform:rotate(90deg);}
@@ -1282,6 +1283,7 @@ let dragState = null; // { listType, fromIndex, itemEl }
     dragState = {
       listType: item.dataset.dragList,
       fromIndex: Number(item.dataset.dragIndex),
+      fromId: item.dataset.dragId,
       itemEl: item,
     };
     item.classList.add('dragging');
@@ -1294,8 +1296,15 @@ let dragState = null; // { listType, fromIndex, itemEl }
     const target = document.elementFromPoint(e.clientX, e.clientY);
     const overItem = target ? target.closest('[data-drag-item]') : null;
     container.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+    container.querySelectorAll('.drop-target').forEach(el => el.classList.remove('drop-target'));
     if (overItem && overItem.dataset.dragList === dragState.listType && overItem !== dragState.itemEl){
       overItem.classList.add('drag-over');
+    }
+    // Un talent se dépose aussi sur un palier entier, pas seulement sur un autre talent :
+    // c'est ce qui permet de le faire changer de palier.
+    if (dragState.listType === 'talentPool' && target){
+      const overLevel = target.closest('[data-drop-level]');
+      if (overLevel) overLevel.classList.add('drop-target');
     }
   });
 
@@ -1305,7 +1314,17 @@ let dragState = null; // { listType, fromIndex, itemEl }
     const overItem = target ? target.closest('[data-drag-item]') : null;
     dragState.itemEl.classList.remove('dragging');
     container.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+    container.querySelectorAll('.drop-target').forEach(el => el.classList.remove('drop-target'));
     document.body.style.userSelect = '';
+    if (dragState.listType === 'talentPool'){
+      const overLevel = target ? target.closest('[data-drop-level]') : null;
+      const beforeId = (overItem && overItem.dataset.dragList === 'talentPool') ? overItem.dataset.dragId : null;
+      if (overLevel || beforeId){
+        movePoolTalent(currentHeroIndex, dragState.fromId, overLevel ? Number(overLevel.dataset.dropLevel) : null, beforeId);
+      }
+      dragState = null;
+      return;
+    }
     if (overItem && overItem.dataset.dragList === dragState.listType){
       const toIndex = Number(overItem.dataset.dragIndex);
       if (toIndex !== dragState.fromIndex){
@@ -1319,6 +1338,7 @@ let dragState = null; // { listType, fromIndex, itemEl }
     if (!dragState) return;
     dragState.itemEl.classList.remove('dragging');
     container.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+    container.querySelectorAll('.drop-target').forEach(el => el.classList.remove('drop-target'));
     document.body.style.userSelect = '';
     dragState = null;
   });
@@ -1646,7 +1666,7 @@ function renderTalentPoolTab(hero){
     html += `<p style="color:var(--text-dim);font-size:13px;">Aucun talent pour le moment.</p>`;
   }
   html += levels.map(level => `
-    <div class="card">
+    <div class="card" data-drop-level="${escapeHtml(level)}">
       <div class="card-head"><div class="title">Palier ${escapeHtml(level)}</div></div>
       ${hero.talentPool.filter(p => p.level === level).map(p => renderPoolTalentItem(p, hero)).join('')}
       <button onclick="addPoolTalent(${currentHeroIndex}, ${level})">+ Ajouter une option à ce palier</button>
@@ -1666,8 +1686,9 @@ function renderTalentPoolTab(hero){
 function renderPoolTalentItem(p, hero){
   const uid = assignUid(p);
   return `
-    <details class="collapsible" data-uid="${uid}"${collapsibleState[uid]?' open':''}>
+    <details class="collapsible" data-uid="${uid}"${collapsibleState[uid]?' open':''} data-drag-item data-drag-list="talentPool" data-drag-id="${escapeHtml(p.id)}">
       <summary>
+        <span class="drag-handle" title="Glisser vers un autre palier, ou sur un talent pour le placer avant lui">⠿</span>
         <span class="chevron">▸</span>
         <span class="s-title">${escapeHtml(p.name?.fr || 'Talent sans nom')}</span>
       </summary>
@@ -1708,6 +1729,39 @@ function renderPoolTalentItem(p, hero){
 }
 function getPoolEntry(heroIdx, id){
   return (HEROES[heroIdx].talentPool||[]).find(p => p.id === id);
+}
+// Déplace un talent d'un palier à l'autre (ou le réordonne à l'intérieur de son palier).
+// L'ordre à l'intérieur d'un palier compte : c'est lui qui donne la position 1/2/3/4 du
+// talent, celle que reprend le code de build.
+function movePoolTalent(idx, talentId, toLevel, beforeId){
+  const hero = HEROES[idx];
+  const pool = hero.talentPool || [];
+  const from = pool.findIndex(p => p.id === talentId);
+  if (from < 0 || talentId === beforeId) return;
+  const talent = pool[from];
+  const changingLevel = toLevel !== null && !isNaN(toLevel) && toLevel !== talent.level;
+
+  pool.splice(from, 1);
+  if (changingLevel){
+    talent.level = toLevel;
+    // Le talent quitte son palier : les builds qui le sélectionnaient là pointeraient sur
+    // un talent absent de ce palier. On retire donc la référence, comme à la suppression.
+    (hero.builds||[]).forEach(b => (b.talentSelections||[]).forEach(sel => {
+      if (sel.primaryId === talentId) sel.primaryId = null;
+      sel.alternativeIds = (sel.alternativeIds||[]).filter(aid => aid !== talentId);
+    }));
+  }
+
+  // Déposé sur un talent : on s'insère juste avant lui. Déposé sur le palier : on se met
+  // à la suite des talents déjà présents (ou en fin de liste si le palier était vide).
+  let at = beforeId ? pool.findIndex(p => p.id === beforeId) : -1;
+  if (at < 0){
+    let last = -1;
+    pool.forEach((p, i) => { if (p.level === talent.level) last = i; });
+    at = last >= 0 ? last + 1 : pool.length;
+  }
+  pool.splice(at, 0, talent);
+  markDirty(); renderHeroPanel();
 }
 function addPoolLevelFromInput(idx){
   const input = document.getElementById('newPoolLevelInput');
