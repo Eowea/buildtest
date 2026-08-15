@@ -17677,7 +17677,7 @@ const HEROES = [
           "fr": "Avide de puissance",
           "en": "Power Hungry"
         },
-        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_criticalmass.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_powerhungry.png",
         "description": {
           "fr": "Les globes de régénération rendent bien plus de mana et accordent temporairement de la puissance de capacité.",
           "en": "Regeneration Globes restore much more Mana and temporarily grant Spell Power."
