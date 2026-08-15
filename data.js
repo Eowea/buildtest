@@ -2253,8 +2253,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_dragon_queen.png",
         "description": {
-          "fr": "Se transforme en dragon, ce qui renforce ses capacités et ses attaques de base.",
-          "en": "Transforms into a dragon, empowering her abilities and Basic Attacks."
+          "fr": "Se transforme en dragon pour une durée limitée : gagne des points de vie, ses capacités sont renforcées, et ses attaques de base frappent en arc de cercle en soignant les alliés touchés. Réduit aussi de moitié la durée des étourdissements, immobilisations et ralentissements subis.",
+          "en": "Transforms into a dragon for a limited time: gains bonus Health, her Abilities are empowered, and her Basic Attacks strike in an arc while healing allies hit. Also halves the duration of incoming Stuns, Roots, and Slows."
         },
         "demoYoutubeId": ""
       },
@@ -2267,8 +2267,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_gift_of_life.png",
         "description": {
-          "fr": "Sacrifie des points de vie pour soigner un allié d'un montant supérieur.",
-          "en": "Sacrifices Health to heal an allied Hero for more than the cost."
+          "fr": "Sacrifie une part de ses points de vie actuels pour en rendre davantage à un héros allié. Passif : augmente fortement sa propre régénération de points de vie.",
+          "en": "Sacrifices part of her current Health to heal an allied Hero for more than that amount. Passive: greatly increases her own Health regeneration."
         },
         "demoYoutubeId": ""
       },
@@ -2323,8 +2323,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_flame_buffet.png",
         "description": {
-          "fr": "Lance une boule de feu qui embrase et ralentit les ennemis touchés.",
-          "en": "Launches a fireball that Burns and Slows enemies hit."
+          "fr": "Projette une boule de feu qui embrase les ennemis touchés. Toucher un ennemi déjà embrasé lui inflige des dégâts supplémentaires, le ralentit, et rembourse le coût en mana.",
+          "en": "Launches a fireball that Burns enemies hit. Hitting an enemy that is already Burning deals bonus damage, Slows them, and refunds the Mana cost."
         },
         "demoYoutubeId": ""
       },
@@ -2350,8 +2350,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_life_binder.png",
         "description": {
-          "fr": "Lie sa force vitale à un allié, soignant les deux et égalisant leurs points de vie. Reine-dragon augmente sa portée.",
-          "en": "Binds her life force to an ally, healing both and equalizing their Health. Dragonqueen increases its range."
+          "fr": "Lie sa force vitale à celle d'un allié : les deux sont soignés, puis celui dont le pourcentage de points de vie est le plus bas est remonté au niveau de l'autre. Reine-dragon augmente sa portée.",
+          "en": "Binds her life force to an ally: both are healed, then whichever of the two has the lower Health percentage is brought up to match the other. Dragonqueen increases its range."
         },
         "demoYoutubeId": ""
       },
@@ -2650,8 +2650,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/spells/storm_ui_icon_alexstrasza_life_binder.png",
         "description": {
-          "fr": "Lie sa force vitale à un allié, soignant les deux et égalisant leurs points de vie. Reine-dragon augmente sa portée.",
-          "en": "Binds her life force to an ally, healing both and equalizing their Health. Dragonqueen increases its range."
+          "fr": "Lie sa force vitale à celle d'un allié : les deux sont soignés, puis celui dont le pourcentage de points de vie est le plus bas est remonté au niveau de l'autre. Reine-dragon augmente sa portée.",
+          "en": "Binds her life force to an ally: both are healed, then whichever of the two has the lower Health percentage is brought up to match the other. Dragonqueen increases its range."
         },
         "demoYoutubeId": null
       },
