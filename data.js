@@ -17478,11 +17478,11 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_wizard.png",
     "headline": {
-      "fr": "Mage de burst extrême qui se recharge à chaque élimination.",
+      "fr": "Mage avec gros burst.",
       "en": "Extreme burst mage whose cooldowns reset on takedowns."
     },
     "gameplay": {
-      "fr": "Li-Ming supprime les cibles fragiles en un combo. Chaque élimination réinitialise ses temps de recharge et lui permet d'enchaîner.",
+      "fr": "Li-Ming tue les cibles fragiles en un combo. Chaque élimination réinitialise ses temps de recharge et lui permet d'enchaîner.",
       "en": "Li-Ming deletes squishy targets in a single combo. Every takedown resets her cooldowns, letting her chain kills."
     },
     "spells": [
@@ -17571,12 +17571,12 @@ const HEROES = [
         "en": "A takedown resets your abilities: chain immediately."
       },
       {
-        "fr": "Téléportation est ta seule survie : ne la gaspille pas pour l'agression.",
-        "en": "Teleport is your only survival tool: don't waste it on aggression."
+        "fr": "Pense à poke les structure de temps en temps.",
+        "en": "Remember to poke the structures from time to time."
       },
       {
-        "fr": "Orbe arcanique fait beaucoup plus mal à longue distance.",
-        "en": "Arcane Orb hits far harder at long range."
+        "fr": "Téléportation peut annuler des attaques de base des héros ou structures.",
+        "en": "Teleportation can cancel basic attacks by heroes or structures."
       }
     ],
     "builds": [
@@ -17655,7 +17655,7 @@ const HEROES = [
           "fr": "Armure de force",
           "en": "Force Armor"
         },
-        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_magicmissiles_b.png",
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_magicmissiles.png",
         "description": {
           "fr": "Toucher un héros avec Projectiles magiques accorde de l'armure anti-sort, réduisant les dégâts de la prochaine capacité subie. Possède plusieurs charges. Passif : régénération de mana augmentée sous 35% de mana.",
           "en": "Hitting a Hero with Magic Missiles grants Spell Armor, reducing the damage of the next Ability taken. Has multiple charges. Passive: Mana regeneration is increased below 35% Mana."
@@ -17837,7 +17837,7 @@ const HEROES = [
           "fr": "Dragon de papier",
           "en": "Glass Cannon"
         },
-        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_criticalmass.png",
+        "icon": "assets/heroes/base_spells/liming/images/talents/storm_btn_d3_traits_wizard_glasscannon.png",
         "description": {
           "fr": "Augmente la puissance de capacité, mais réduit les points de vie maximum.",
           "en": "Increases Spell Power, but reduces maximum Health."
@@ -17873,20 +17873,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmr7gscbm18w3d",
-        "level": 16,
-        "name": {
-          "fr": "Peau de diamant",
-          "en": "Diamond Skin"
-        },
-        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_teleport.png",
-        "description": {
-          "fr": "Téléportation accorde un bouclier temporaire à Li-Ming.",
-          "en": "Teleport grants Li-Ming a temporary Shield."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmr7gscbm17rok",
         "level": 16,
         "name": {
@@ -17897,6 +17883,20 @@ const HEROES = [
         "description": {
           "fr": "Orbe arcanique parcourt une plus grande distance, augmentant son bonus de dégâts maximal.",
           "en": "Arcane Orb travels farther, increasing its maximum damage bonus."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmr7gscbm18w3d",
+        "level": 16,
+        "name": {
+          "fr": "Peau de diamant",
+          "en": "Diamond Skin"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_teleport.png",
+        "description": {
+          "fr": "Téléportation accorde un bouclier temporaire à Li-Ming.",
+          "en": "Teleport grants Li-Ming a temporary Shield."
         },
         "demoYoutubeId": null
       },
@@ -25907,8 +25907,8 @@ const HEROES = [
       "en": "Anti-tank assassin dealing percentage-of-Health damage."
     },
     "gameplay": {
-      "fr": "Tychus fond sur les cibles les plus résistantes grâce à ses dégâts en pourcentage, et tient les combats longs avec Cavale.",
-      "en": "Tychus melts the toughest targets thanks to %-Health damage and survives long fights with Run and Gun."
+      "fr": "Tychus détruit les cibles les plus résistantes grâce à ses dégâts en pourcentage.",
+      "en": "Tychus melts the toughest targets thanks to %-Health damage."
     },
     "spells": [
       {
@@ -26122,7 +26122,7 @@ const HEROES = [
           "fr": "Discobole",
           "en": "Quarterback"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_fraggrenade_a.png",
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_fraggrenade.png",
         "description": {
           "fr": "Augmente les dégâts et la portée de Grenade à fragmentation.",
           "en": "Increases Frag Grenade's damage and range."
@@ -26136,7 +26136,7 @@ const HEROES = [
           "fr": "Course effrénée",
           "en": "Dash"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_runandgun_a.png",
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_runandgun.png",
         "description": {
           "fr": "Augmente la portée de Fonce et défonce, et accorde temporairement de la vitesse de déplacement à l'utilisation.",
           "en": "Increases Run and Gun's range, and grants temporary Movement Speed on cast."
@@ -26150,7 +26150,7 @@ const HEROES = [
           "fr": "Défonce Alphonse",
           "en": "Press the Advantage"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_overkill_target.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_range.png",
         "description": {
           "fr": "Augmente la portée des attaques de base de Tychus.",
           "en": "Increases Tychus's Basic Attack range."
@@ -26164,7 +26164,7 @@ const HEROES = [
           "fr": "En rythme",
           "en": "In the Rhythm"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_minigun_a.png",
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_minigun.png",
         "description": {
           "fr": "Quête : tant que Minigun est actif, les attaques de base contre les héros augmentent définitivement sa durée pour les prochaines utilisations.",
           "en": "Quest: while Minigun is active, Basic Attacks against Heroes permanently increase its duration for future uses."
@@ -26178,7 +26178,7 @@ const HEROES = [
           "fr": "Plus ils sont gros…",
           "en": "The Bigger They Are..."
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_minigun_b.png",
+        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_minigun_a.png",
         "description": {
           "fr": "Augmente le bonus de dégâts de Minigun contre les héros au-dessus de 30% de points de vie, mais il n'a plus aucun effet en dessous de ce seuil.",
           "en": "Increases Minigun's bonus damage against Heroes above 30% Health, but it no longer has any effect below that threshold."
@@ -26192,7 +26192,7 @@ const HEROES = [
           "fr": "Maître assassin",
           "en": "Master Assassin"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_annihilate.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_speed.png",
         "description": {
           "fr": "Passif : augmente la vitesse d'attaque de Tychus. Récompense : après un certain nombre de victimes, la vitesse d'attaque augmente encore.",
           "en": "Passive: increases Tychus's Attack Speed. Reward: after a number of Takedowns, Attack Speed increases further."
@@ -26234,7 +26234,7 @@ const HEROES = [
           "fr": "Marche ou crève",
           "en": "Relentless Soldier"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_runandgun_b.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_relentless.png",
         "description": {
           "fr": "Subir un étourdissement ou une immobilisation accorde temporairement de l'armure.",
           "en": "Being Stunned or Rooted grants temporary Armor."
@@ -26276,7 +26276,7 @@ const HEROES = [
           "fr": "J'arrose et tu douilles",
           "en": "Spray 'n' Pray"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_overkill_a.png",
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_overkill.png",
         "description": {
           "fr": "Exécution ralentit les ennemis touchés et gagne en portée.",
           "en": "Overkill Slows enemies hit and gains range."
@@ -26290,7 +26290,7 @@ const HEROES = [
           "fr": "C'est de la bonne !",
           "en": "That's the Stuff!"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_minigun_a.png",
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_minigun.png",
         "description": {
           "fr": "À son expiration, Minigun soigne Tychus d'un montant équivalent aux dégâts bonus qu'il a infligés.",
           "en": "When it expires, Minigun heals Tychus for the bonus damage it dealt."
@@ -26332,7 +26332,7 @@ const HEROES = [
           "fr": "Grenade Titan",
           "en": "Titan Grenade"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_fraggrenade_a.png",
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_fraggrenade.png",
         "description": {
           "fr": "Grenade à fragmentation inflige aux héros des dégâts supplémentaires proportionnels à leur maximum de points de vie, et chaque héros touché réduit son temps de recharge.",
           "en": "Frag Grenade deals Heroes bonus damage based on their maximum Health, and each Hero hit reduces its cooldown."
@@ -26346,7 +26346,7 @@ const HEROES = [
           "fr": "Attaques brûlantes",
           "en": "Sizzlin' Attacks"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_minigun_b.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_searing.png",
         "description": {
           "fr": "Les attaques de base infligent aux héros des dégâts supplémentaires proportionnels à leur maximum de points de vie. Cumulable avec Minigun.",
           "en": "Basic Attacks deal Heroes bonus damage based on their maximum Health. Stacks with Minigun."
@@ -26360,7 +26360,7 @@ const HEROES = [
           "fr": "Gros bouton rouge",
           "en": "Big Red Button"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_ragnarokmissiles.png",
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_commandeerodin.png",
         "description": {
           "fr": "Le Odin dure plus longtemps et ses missiles Ragnarok déclenchent aussi une frappe nucléaire qui inflige de lourds dégâts en zone.",
           "en": "The Odin lasts longer and its Ragnarok Missiles also launch a nuclear strike dealing heavy area damage."
@@ -26374,7 +26374,7 @@ const HEROES = [
           "fr": "Miroir de focalisation",
           "en": "Focusing Diodes"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_laserdrillissueorder.png",
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_drakkinlaserdrill.png",
         "description": {
           "fr": "Augmente la portée de la foreuse laser, et ses dégâts augmentent tant qu'elle reste focalisée sur la même cible.",
           "en": "Increases the laser drill's range, and its damage ramps up the longer it stays on the same target."
@@ -26388,7 +26388,7 @@ const HEROES = [
           "fr": "Je peux faire ça toute la journée",
           "en": "Can Do This All Day"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_overkill_target.png",
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_overkill.png",
         "description": {
           "fr": "Réduit le temps de recharge d'Exécution, et Tychus gagne de l'armure pendant sa canalisation.",
           "en": "Reduces Overkill's cooldown, and Tychus gains Armor while channeling it."
@@ -26402,7 +26402,7 @@ const HEROES = [
           "fr": "Délit de fuite",
           "en": "Bob and Weave"
         },
-        "icon": "assets/heroes/base_spells/tychus/images/talents/storm_ui_icon_tychus_thrusters.png",
+        "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_runandgun.png",
         "description": {
           "fr": "Fonce et défonce et les propulseurs du Odin gagnent des charges supplémentaires, le coût en mana est réduit, et la portée des attaques de base augmente temporairement après utilisation.",
           "en": "Run and Gun and the Odin's Thrusters gain extra charges, its Mana cost is reduced, and Basic Attack range temporarily increases after use."
