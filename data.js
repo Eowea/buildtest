@@ -17831,7 +17831,7 @@ const HEROES = [
           "fr": "Dragon de papier",
           "en": "Glass Cannon"
         },
-        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_criticalmass.png",
+        "icon": "assets/heroes/base_spells/liming/images/talents/storm_btn_d3_traits_wizard_glasscannon.png",
         "description": {
           "fr": "Augmente la puissance de capacité, mais réduit les points de vie maximum.",
           "en": "Increases Spell Power, but reduces maximum Health."
