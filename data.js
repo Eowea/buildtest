@@ -17705,7 +17705,7 @@ const HEROES = [
           "fr": "Triumvirat",
           "en": "Triumvirate"
         },
-        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_arcaneorb_b.png",
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_arcaneorb.png",
         "description": {
           "fr": "Si Orbe arcanique touche un héros après avoir parcouru une grande distance, son temps de recharge est réduit et une partie du mana est remboursée.",
           "en": "If Arcane Orb hits a Hero after traveling a long distance, its cooldown is reduced and part of its Mana cost is refunded."
@@ -17817,7 +17817,7 @@ const HEROES = [
           "fr": "Canonnier",
           "en": "Cannoneer"
         },
-        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_magicmissiles_b.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
         "description": {
           "fr": "Utiliser une capacité augmente les dégâts de la prochaine attaque de base et la transforme en dégâts de capacité. Possède plusieurs charges.",
           "en": "Using an Ability increases the damage of the next Basic Attack and converts it to Spell damage. Has multiple charges."
@@ -17901,7 +17901,7 @@ const HEROES = [
           "fr": "Fluctuation temporelle",
           "en": "Temporal Flux"
         },
-        "icon": "assets/heroes/base_spells/liming/images/talents/storm_ui_icon_wizard_disintegrate_b.png",
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_disintegrate.png",
         "description": {
           "fr": "Désintégration ralentit progressivement les ennemis pris dans son rayon.",
           "en": "Disintegrate gradually Slows enemies caught in its beam."
