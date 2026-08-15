@@ -17571,8 +17571,8 @@ const HEROES = [
         "en": "A takedown resets your abilities: chain immediately."
       },
       {
-        "fr": "Li-Ming n'aime pas les sbires.",
-        "en": "Li-Ming doesn't like minions."
+        "fr": "Pense à poke les structure de temps en temps.",
+        "en": "Remember to poke the structures from time to time."
       },
       {
         "fr": "Téléportation peut annuler des attaques de base des héros ou structures.",
