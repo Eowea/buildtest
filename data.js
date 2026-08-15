@@ -17873,6 +17873,20 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmr7gscbm18w3d",
+        "level": 16,
+        "name": {
+          "fr": "Peau de diamant",
+          "en": "Diamond Skin"
+        },
+        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_teleport.png",
+        "description": {
+          "fr": "Téléportation accorde un bouclier temporaire à Li-Ming.",
+          "en": "Teleport grants Li-Ming a temporary Shield."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmr7gscbm17rok",
         "level": 16,
         "name": {
@@ -17883,20 +17897,6 @@ const HEROES = [
         "description": {
           "fr": "Orbe arcanique parcourt une plus grande distance, augmentant son bonus de dégâts maximal.",
           "en": "Arcane Orb travels farther, increasing its maximum damage bonus."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmr7gscbm18w3d",
-        "level": 20,
-        "name": {
-          "fr": "Peau de diamant",
-          "en": "Diamond Skin"
-        },
-        "icon": "assets/heroes/base_spells/liming/images/spells/storm_ui_icon_wizard_teleport.png",
-        "description": {
-          "fr": "Téléportation accorde un bouclier temporaire à Li-Ming.",
-          "en": "Teleport grants Li-Ming a temporary Shield."
         },
         "demoYoutubeId": null
       },
