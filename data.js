@@ -17478,11 +17478,11 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_wizard.png",
     "headline": {
-      "fr": "Mage de burst extrême qui se recharge à chaque élimination.",
+      "fr": "Mage avec gros burst.",
       "en": "Extreme burst mage whose cooldowns reset on takedowns."
     },
     "gameplay": {
-      "fr": "Li-Ming supprime les cibles fragiles en un combo. Chaque élimination réinitialise ses temps de recharge et lui permet d'enchaîner.",
+      "fr": "Li-Ming tue les cibles fragiles en un combo. Chaque élimination réinitialise ses temps de recharge et lui permet d'enchaîner.",
       "en": "Li-Ming deletes squishy targets in a single combo. Every takedown resets her cooldowns, letting her chain kills."
     },
     "spells": [
@@ -17571,12 +17571,12 @@ const HEROES = [
         "en": "A takedown resets your abilities: chain immediately."
       },
       {
-        "fr": "Téléportation est ta seule survie : ne la gaspille pas pour l'agression.",
-        "en": "Teleport is your only survival tool: don't waste it on aggression."
+        "fr": "Li-Ming n'aime pas les sbires.",
+        "en": "Li-Ming doesn't like minions."
       },
       {
-        "fr": "Orbe arcanique fait beaucoup plus mal à longue distance.",
-        "en": "Arcane Orb hits far harder at long range."
+        "fr": "Téléportation peut annuler des attaques de base des héros ou structures.",
+        "en": "Teleportation can cancel basic attacks by heroes or structures."
       }
     ],
     "builds": [
