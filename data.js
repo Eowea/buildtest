@@ -21297,7 +21297,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "isNew": true
   },
   {
     "id": "nova",
@@ -26443,7 +26444,8 @@ const HEROES = [
           "en": "Odin"
         }
       }
-    ]
+    ],
+    "isNew": true
   },
   {
     "id": "tyrael",
