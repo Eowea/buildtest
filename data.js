@@ -26129,7 +26129,7 @@ const HEROES = [
             "alternativeIds": []
           }
         ],
-        "isNew": true
+        "isNew": false
       }
     ],
     "guideVideos": [],
