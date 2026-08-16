@@ -1054,6 +1054,41 @@ function applyAutoSiteUpdateDate(){
   };
 }
 
+// Affichée quand GitHub refuse l'écriture (409) : data.js a changé depuis que ce panneau
+// l'a chargé. Résout avec 'reload' (reprendre la version de GitHub), 'overwrite' (écraser
+// quand même) ou 'cancel' (ne rien faire).
+function confirmConflictModal(){
+  return new Promise(resolve => {
+    const modalRoot = document.getElementById('modalRoot');
+    modalRoot.innerHTML = `
+      <div class="modal-overlay" id="conflictOverlay">
+        <div class="modal" style="max-width:600px;">
+          <div class="modal-head">
+            <h2 style="margin:0;">⚠ Le fichier a changé sur GitHub</h2>
+            <button class="ghost" id="conflictClose">✕</button>
+          </div>
+          <div class="modal-body">
+            <p style="margin-bottom:12px;">Le fichier <strong>data.js</strong> a été modifié depuis que ce panneau l'a chargé — par un autre onglet, un autre administrateur, ou une modification faite entre-temps.</p>
+            <p style="margin-bottom:14px;color:#ff3b30;font-weight:700;">Si tu écrases, tout ce qui a été ajouté au fichier depuis l'ouverture de cet onglet sera définitivement perdu.</p>
+            <div style="display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;">
+              <button class="danger" id="conflictOverwrite">Écraser quand même</button>
+              <button class="primary" id="conflictReload">Recharger la version de GitHub</button>
+            </div>
+            <small style="display:block;margin-top:10px;color:var(--text-dim);">« Recharger » abandonne tes modifications non enregistrées dans ce panneau et repart de la version en ligne. Fermer cette fenêtre ne touche à rien.</small>
+          </div>
+        </div>
+      </div>
+    `;
+    const close = (r) => { modalRoot.innerHTML = ''; resolve(r); };
+    document.getElementById('conflictReload').onclick = () => close('reload');
+    document.getElementById('conflictOverwrite').onclick = () => {
+      if (confirm('Écraser la version présente sur GitHub avec le contenu de cet onglet ?')) close('overwrite');
+    };
+    document.getElementById('conflictClose').onclick = () => close('cancel');
+    document.getElementById('conflictOverlay').onclick = (e) => { if (e.target === e.currentTarget) close('cancel'); };
+  });
+}
+
 async function saveAll(){
   const btn = document.getElementById('saveBtn');
   btn.disabled = true;
@@ -1080,10 +1115,17 @@ async function saveAll(){
       dataFileSha = newSha;
     }catch(e){
       if (e.status === 409){
-        // Le fichier a changé sur GitHub depuis le dernier chargement (autre admin, autre onglet...).
-        // On récupère juste le sha le plus récent (sans toucher aux données en mémoire) et on retente
-        // une fois, en écrasant avec l'état actuel du panneau.
-        toast('Le fichier a changé sur GitHub entre-temps, nouvelle tentative...', 'error');
+        // GitHub refuse l'écriture parce que data.js a changé depuis notre chargement (autre
+        // onglet, autre admin, modification faite entre-temps). C'est une protection : on ne
+        // la contourne pas tout seul, car réécrire depuis la mémoire de cet onglet effacerait
+        // silencieusement tout ce qui a été ajouté au fichier depuis son ouverture.
+        const suite = await confirmConflictModal();
+        if (suite === 'reload'){
+          toast('Rechargement de la version présente sur GitHub…', 'error');
+          await reloadFromGitHub();
+          return;
+        }
+        if (suite !== 'overwrite') return;   // fermeture : on ne touche à rien
         const fresh = await getFile('data.js');
         dataFileSha = fresh.sha;
         const newSha = await putFile('data.js', content, dataFileSha, message, currentUser);
