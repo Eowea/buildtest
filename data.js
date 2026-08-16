@@ -15828,7 +15828,7 @@ const HEROES = [
   },
   {
     "id": "jaina",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Jaina",
       "en": "Jaina"
@@ -15847,26 +15847,26 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Morsure du froid",
+          "fr": "Morsure de givre",
           "en": "Frostbite"
         },
         "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_frostbite.png",
         "description": {
-          "fr": "Tes sorts ralentissent et augmentent tes dégâts sur les cibles gelées.",
-          "en": "Your abilities slow and increase your damage against chilled targets."
+          "fr": "Les capacités de Jaina glacent leurs cibles : elles sont ralenties et subissent davantage de dégâts de ses capacités. Quête : infliger des dégâts de capacité à des héros glacés débloque Bloc de glace amélioré, qui la rend temporairement invulnérable, puis Glaciation, qui lui permet de se déplacer et de lancer des sorts pendant l'effet.",
+          "en": "Jaina's Abilities Chill their targets: they are Slowed and take increased damage from her Abilities. Quest: dealing Ability damage to Chilled Heroes unlocks Improved Ice Block, granting temporary Invulnerability, then Ice Cold, which lets her move and cast during it."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "Trait de givre",
+          "fr": "Éclair de givre",
           "en": "Frostbolt"
         },
         "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_frostbolt.png",
         "description": {
-          "fr": "Projectile qui blesse et ralentit.",
-          "en": "Projectile that damages and slows."
+          "fr": "Projectile qui inflige des dégâts et glace la cible.",
+          "en": "Projectile that deals damage and Chills the target."
         },
         "demoYoutubeId": ""
       },
@@ -15878,8 +15878,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_blizzard.png",
         "description": {
-          "fr": "Zone de dégâts répétés.",
-          "en": "Area of repeated damage."
+          "fr": "Bombarde une zone de plusieurs vagues de glace successives, glaçant les ennemis touchés.",
+          "en": "Bombards an area with several successive waves of ice, Chilling enemies hit."
         },
         "demoYoutubeId": ""
       },
@@ -15891,42 +15891,42 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_coneofcold.png",
         "description": {
-          "fr": "Explosion de zone devant toi.",
-          "en": "Burst of damage in an area in front of you."
+          "fr": "Inflige des dégâts dans un cône devant Jaina et glace les cibles touchées.",
+          "en": "Deals damage in a cone in front of Jaina and Chills targets hit."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
         "name": {
-          "fr": "Élémentaire d'eau",
-          "en": "Summon Water Elemental"
+          "fr": "Anneau de givre",
+          "en": "Ring of Frost"
         },
-        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_summonwaterelemental.png",
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_ringoffrost.png",
         "description": {
-          "fr": "Invoque un élémentaire qui blesse et ralentit.",
-          "en": "Summons an elemental that damages and slows."
+          "fr": "Après un court délai, crée un anneau qui inflige des dégâts et immobilise les ennemis. L'anneau persiste ensuite et glace ceux qui le touchent.",
+          "en": "After a short delay, creates a ring that damages and Roots enemies. The ring then persists, Chilling anyone who touches it."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
         "name": {
-          "fr": "Anneau de givre",
-          "en": "Ring of Frost"
+          "fr": "Élémentaire d'eau",
+          "en": "Summon Water Elemental"
         },
-        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_ringoffrost.png",
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_summonwaterelemental.png",
         "description": {
-          "fr": "Gèle tous les ennemis pris dans l'anneau.",
-          "en": "Freezes all enemies caught in the ring."
+          "fr": "Invoque un élémentaire dont les attaques infligent des dégâts de zone et glacent. Peut être réactivé pour lui assigner une nouvelle cible.",
+          "en": "Summons an elemental whose attacks deal splash damage and Chill. Can be reactivated to assign it a new target."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Applique toujours ton ralentissement avant ton burst.",
-        "en": "Always apply your slow before your burst."
+        "fr": "Glace toujours ta cible avant ton burst : tes capacités lui feront plus mal.",
+        "en": "Always Chill your target before your burst: your Abilities will hit harder."
       },
       {
         "fr": "Blizzard sur une vague de sbires accélère énormément ta ligne.",
@@ -15942,57 +15942,57 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Jaina]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jo4okkp",
+            "primaryId": "tm0illd8e01lrb",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jouynv0",
+            "primaryId": "tm0illd8e05oah",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6joi8q47",
+            "primaryId": "tm0illd8e073b4",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6josygjr",
+            "primaryId": "tm0illd8e104u0",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jo7bsis",
+            "primaryId": "tm0illd8e133zm",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jopdypt",
+            "primaryId": "tm0illd8e17mbe",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6joo977e",
+            "primaryId": "tm0illd8e189lz",
             "alternativeIds": []
           }
         ]
@@ -16001,100 +16001,296 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jo4okkp",
+        "id": "tm0illd8e01lrb",
         "level": 1,
         "name": {
-          "fr": "Winter's Reach",
+          "fr": "Hiver sans fin",
           "en": "Winter's Reach"
         },
-        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_frostbolt.png",
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_frostbolt.png",
         "description": {
-          "fr": "Increase the range and travel speed of Frostbolt by 30%.",
-          "en": "Increase the range and travel speed of Frostbolt by 30%."
+          "fr": "Augmente la portée et la vitesse de déplacement d'Éclair de givre.",
+          "en": "Increases Frostbolt's range and travel speed."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jouynv0",
+        "id": "tm0illd8e02n9p",
+        "level": 1,
+        "name": {
+          "fr": "Froid persistant",
+          "en": "Lingering Chill"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_frostbite.png",
+        "description": {
+          "fr": "Allonge la durée de l'effet de glace.",
+          "en": "Increases the duration of Chill."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm0illd8e03zo5",
+        "level": 1,
+        "name": {
+          "fr": "Doigts de givre",
+          "en": "Fingers of Frost"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_frostbite_var1.png",
+        "description": {
+          "fr": "Quête : collecter des globes de régénération augmente la régénération de mana. Récompense : au bout d'un certain nombre, le bonus de dégâts de Morsure de givre est accru.",
+          "en": "Quest: gathering Regeneration Globes increases Mana regeneration. Reward: after enough Globes, Frostbite's damage bonus is increased."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm0illd8e04yhw",
         "level": 4,
         "name": {
-          "fr": "Frost Shards",
+          "fr": "Éclats de givre",
           "en": "Frost Shards"
         },
-        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_frostbolt.png",
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_frostbolt.png",
         "description": {
-          "fr": "Frostbolt will now pierce the first two targets.",
-          "en": "Frostbolt will now pierce the first two targets."
+          "fr": "Éclair de givre transperce désormais les premières cibles touchées.",
+          "en": "Frostbolt now pierces the first targets it hits."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joi8q47",
+        "id": "tm0illd8e05oah",
+        "level": 4,
+        "name": {
+          "fr": "Intelligence des arcanes",
+          "en": "Arcane Intellect"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_arcaneintellect.png",
+        "description": {
+          "fr": "Infliger des dégâts à une cible glacée rend du mana. Passif : au-dessus d'un certain seuil de mana, la puissance de capacité est augmentée.",
+          "en": "Damaging a Chilled target restores Mana. Passive: above a certain Mana threshold, Spell Power is increased."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm0illd8e06awu",
+        "level": 4,
+        "name": {
+          "fr": "Armure de givre",
+          "en": "Frost Armor"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_frostarmor.png",
+        "description": {
+          "fr": "Glace les ennemis qui attaquent Jaina, et lui confère régulièrement de l'armure physique contre la prochaine attaque de base adverse.",
+          "en": "Chills enemies that attack Jaina, and periodically grants her Physical Armor against the next enemy Basic Attack."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm0illd8e073b4",
         "level": 7,
         "name": {
-          "fr": "Ice Lance",
+          "fr": "Javelot de glace",
           "en": "Ice Lance"
         },
-        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_frostbolt.png",
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_frostbolt.png",
         "description": {
-          "fr": "Hitting a Chilled target with Frostbolt reduces its cooldown by 1.5 seconds and restores 10 Mana.",
-          "en": "Hitting a Chilled target with Frostbolt reduces its cooldown by 1.5 seconds and restores 10 Mana."
+          "fr": "Toucher une cible déjà glacée avec Éclair de givre réduit son temps de recharge et rend du mana.",
+          "en": "Hitting an already Chilled target with Frostbolt reduces its cooldown and restores Mana."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6josygjr",
+        "id": "tm0illd8e08qke",
+        "level": 7,
+        "name": {
+          "fr": "Iceberg",
+          "en": "Ice Floes"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_coneofcold.png",
+        "description": {
+          "fr": "Élargit fortement Cône de froid, et chaque héros touché réduit son temps de recharge, davantage encore si la cible est glacée.",
+          "en": "Greatly widens Cone of Cold, and each Hero hit reduces its cooldown, more so against Chilled targets."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm0illd8e09aqd",
+        "level": 7,
+        "name": {
+          "fr": "Baguette furie-de-glace",
+          "en": "Icefury Wand"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_blizzard.png",
+        "description": {
+          "fr": "Les attaques de base contre les ennemis glacés infligent plus de dégâts et réduisent le temps de recharge de Blizzard.",
+          "en": "Basic Attacks against Chilled enemies deal more damage and reduce Blizzard's cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm0illd8e104u0",
         "level": 10,
         "name": {
-          "fr": "Ring of Frost",
+          "fr": "Anneau de givre",
           "en": "Ring of Frost"
         },
-        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_ringoffrost.png",
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_ringoffrost.png",
         "description": {
-          "fr": "After a 1.5 second delay, create a Ring of Frost in an area that deals 310 (+4% per level) damage and Roots enemies for 3 seconds. The ring persists for 3 seconds afterward, Chilling any enemies who touch it.",
-          "en": "After a 1.5 second delay, create a Ring of Frost in an area that deals 310 (+4% per level) damage and Roots enemies for 3 seconds. The ring persists for 3 seconds afterward, Chilling any enemies who touch it."
+          "fr": "Après un court délai, crée un anneau qui inflige des dégâts et immobilise les ennemis. L'anneau persiste ensuite et glace ceux qui le touchent.",
+          "en": "After a short delay, creates a ring that damages and Roots enemies. The ring then persists, Chilling anyone who touches it."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo7bsis",
+        "id": "tm0illd8e11dj7",
+        "level": 10,
+        "name": {
+          "fr": "Élémentaire d'eau",
+          "en": "Summon Water Elemental"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_summonwaterelemental.png",
+        "description": {
+          "fr": "Invoque un élémentaire dont les attaques infligent des dégâts de zone et glacent. Peut être réactivé pour lui assigner une nouvelle cible.",
+          "en": "Summons an elemental whose attacks deal splash damage and Chill. Can be reactivated to assign it a new target."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm0illd8e12xox",
         "level": 13,
         "name": {
-          "fr": "Storm Front",
+          "fr": "Front de tempête",
           "en": "Storm Front"
         },
-        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_blizzard.png",
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_blizzard.png",
         "description": {
-          "fr": "Increase the cast range of Blizzard by 75% and its radius by 30%.",
-          "en": "Increase the cast range of Blizzard by 75% and its radius by 30%."
+          "fr": "Augmente la portée de lancement et le rayon de Blizzard.",
+          "en": "Increases Blizzard's cast range and radius."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jopdypt",
+        "id": "tm0illd8e133zm",
+        "level": 13,
+        "name": {
+          "fr": "Barrière de glace",
+          "en": "Ice Barrier"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_improvediceblock.png",
+        "description": {
+          "fr": "Confère un bouclier temporaire proportionnel aux dégâts de capacité infligés aux cibles glacées.",
+          "en": "Grants a temporary Shield based on Ability damage dealt to Chilled targets."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm0illd8e14x3i",
+        "level": 13,
+        "name": {
+          "fr": "Veines glaciales",
+          "en": "Icy Veins"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_icyveins.png",
+        "description": {
+          "fr": "Capacité active : pendant quelques secondes, les capacités de base se rechargent beaucoup plus vite et coûtent moins de mana.",
+          "en": "Active: for a few seconds, Basic Abilities recharge much faster and cost less Mana."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm0illd8e15eeo",
         "level": 16,
         "name": {
-          "fr": "Snowstorm",
+          "fr": "Tempête de neige",
           "en": "Snowstorm"
         },
-        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_blizzard.png",
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_blizzard.png",
         "description": {
-          "fr": "The damage of the second wave of Blizzard is increased by 50%. The damage of the third wave is increased by 100%.",
-          "en": "The damage of the second wave of Blizzard is increased by 50%. The damage of the third wave is increased by 100%."
+          "fr": "Augmente les dégâts des vagues suivantes de Blizzard.",
+          "en": "Increases the damage of Blizzard's later waves."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joo977e",
+        "id": "tm0illd8e16b97",
+        "level": 16,
+        "name": {
+          "fr": "Exposition nord",
+          "en": "Northern Exposure"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_coneofcold.png",
+        "description": {
+          "fr": "Les ennemis touchés par Cône de froid voient leur armure réduite, augmentant tous les dégâts qu'ils subissent.",
+          "en": "Enemies hit by Cone of Cold have their Armor reduced, increasing all damage they take."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm0illd8e17mbe",
+        "level": 16,
+        "name": {
+          "fr": "Engourdissement",
+          "en": "Numbing Blast"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_coneofcold_var1.png",
+        "description": {
+          "fr": "Cône de froid immobilise brièvement les cibles déjà glacées.",
+          "en": "Cone of Cold briefly Roots targets that are already Chilled."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm0illd8e189lz",
         "level": 20,
         "name": {
-          "fr": "Cold Snap",
+          "fr": "Morsure du froid",
           "en": "Cold Snap"
         },
-        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_ringoffrost.png",
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_ringoffrost.png",
         "description": {
-          "fr": "The center area of Ring of Frost deals 310 (+4% per level) damage and Roots enemies after the outer ring expires. Each enemy Hero hit reduces its cooldown by 15 seconds.",
-          "en": "The center area of Ring of Frost deals 310 (+4% per level) damage and Roots enemies after the outer ring expires. Each enemy Hero hit reduces its cooldown by 15 seconds."
+          "fr": "La zone centrale d'Anneau de givre inflige des dégâts et immobilise à son tour après l'expiration de l'anneau extérieur. Chaque héros touché réduit son temps de recharge.",
+          "en": "Ring of Frost's center area also damages and Roots once the outer ring expires. Each Hero hit reduces its cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm0illd8e19n51",
+        "level": 20,
+        "name": {
+          "fr": "Muetdhiver",
+          "en": "Wintermute"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_commandwaterelemental.png",
+        "description": {
+          "fr": "Augmente la portée d'invocation de l'élémentaire d'eau, qui reproduit désormais les capacités de base de Jaina pour une partie de leurs dégâts.",
+          "en": "Increases the Water Elemental's summon range, and it now mimics Jaina's Basic Abilities for part of their damage."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm0illd8e208wk",
+        "level": 20,
+        "name": {
+          "fr": "Courant d'air",
+          "en": "Ice Blink"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_improvediceblock_new_active.png",
+        "description": {
+          "fr": "Capacité active : se téléporte sur une courte distance et glace les ennemis proches.",
+          "en": "Active: teleports a short distance and Chills nearby enemies."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm0illd8e213mx",
+        "level": 20,
+        "name": {
+          "fr": "Froid absolu",
+          "en": "Deep Chill"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_frostbite.png",
+        "description": {
+          "fr": "L'effet de glace de Morsure de givre peut se cumuler une seconde fois, renforçant le ralentissement.",
+          "en": "Frostbite's Chill can stack a second time, deepening the Slow."
         },
         "demoYoutubeId": null
       }
