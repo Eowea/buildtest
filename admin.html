@@ -2170,14 +2170,10 @@ function showConfigPanel(){
 
     <div class="card">
       <h3>Mise à jour du site (header)</h3>
-      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Petit bandeau affiché sous la navigation, sur la page Builds et la page Cartes. Laisse les deux textes vides pour ne rien afficher du tout.</small>
+      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Affiche « Mise à jour » suivi de la date, au-dessus des réseaux sociaux, sur la page Builds et la page Cartes. Laisse les dates vides pour ne rien afficher du tout.</small>
       <div class="checkbox-row">
         <input type="checkbox" ${STREAMER_CONFIG.siteUpdate?.enabled !== false ? 'checked' : ''} onchange="setNested(STREAMER_CONFIG,'siteUpdate.enabled',this.checked)" />
-        <label style="margin:0;text-transform:none;">Afficher le bandeau de mise à jour</label>
-      </div>
-      <div class="row">
-        <div class="field"><label>Information (FR)</label><input value="${escapeHtml(STREAMER_CONFIG.siteUpdate?.text?.fr)}" oninput="setNested(STREAMER_CONFIG,'siteUpdate.text.fr',this.value)" placeholder="Ex: Tychus ajouté, avec sa forme Odin." /></div>
-        <div class="field"><label>Information (EN)</label><input value="${escapeHtml(STREAMER_CONFIG.siteUpdate?.text?.en)}" oninput="setNested(STREAMER_CONFIG,'siteUpdate.text.en',this.value)" placeholder="Ex: Tychus added, including his Odin form." /></div>
+        <label style="margin:0;text-transform:none;">Afficher la date de mise à jour</label>
       </div>
       <div class="row">
         <div class="field"><label>Date (FR)</label><input value="${escapeHtml(STREAMER_CONFIG.siteUpdate?.date?.fr)}" oninput="setNested(STREAMER_CONFIG,'siteUpdate.date.fr',this.value)" placeholder="Ex: 15 Août 2026" /></div>

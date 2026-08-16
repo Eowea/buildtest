@@ -254,18 +254,19 @@
     }
 
     /* ── Bandeau "Mise à jour du site" (header, sous la navigation) ── */
+    /* Calé juste au-dessus des réseaux sociaux (eux-mêmes en absolu, bas-gauche) :
+       16px du bas + 28px de hauteur d'icône + 8px d'écart = 52px. */
     .site-update {
+      position: absolute;
+      left: 16px;
+      bottom: 52px;
       display: flex;
       align-items: baseline;
-      justify-content: center;
+      justify-content: flex-start;
       flex-wrap: wrap;
       gap: 2px 7px;
-      max-width: 100%;
-      margin-top: -4px;
-      opacity: .7;
-      transition: opacity .2s ease;
+      max-width: calc(100% - 32px);
     }
-    .site-update:hover { opacity: 1; }
     .site-update[hidden] { display: none; }
     .site-update-label {
       font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
@@ -275,8 +276,7 @@
       font-size: 9px;
       color: var(--gold-dim);
     }
-    .site-update-text { font-size: 11px; color: var(--text-dim); }
-    .site-update-date { font-size: 11px; color: var(--text-dim); opacity: .7; white-space: nowrap; }
+    .site-update-date { font-size: 11px; color: var(--text-dim); white-space: nowrap; }
 
     /* ── Header Actions (Lang switcher, bottom-right) ── */
     .header-actions {
@@ -1415,6 +1415,9 @@
       .site-title { font-size: clamp(28px, 8vw, 36px); text-align: center; }
       .header-actions { justify-content: center; flex-direction: column-reverse; align-items: center; width: 100%; }
       .socials { justify-content: center; width: 100%; }
+      /* En mobile les icônes sociales passent sur deux rangées : un décalage fixe
+         provoquerait un chevauchement, on remet donc le bandeau dans le flux. */
+      .site-update { position: static; width: 100%; max-width: 100%; justify-content: center; }
       
       .hero-header { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 14px; padding-bottom: 16px; margin-bottom: 16px; }
       .detail-portrait { width: 100px; height: 100px; margin: 0 auto; }

@@ -249,18 +249,16 @@ function markEverythingAsSeen(hero) {
       renderSiteUpdate();
     }
 
-    // Bandeau "Mise à jour du site" dans le header : masqué tant qu'aucun texte n'est saisi,
-    // pour ne pas laisser un cadre vide quand il n'y a rien à annoncer.
+    // Bandeau "Mise à jour du site" dans le header : masqué tant qu'aucune date n'est
+    // saisie, pour ne pas laisser un libellé seul quand il n'y a rien à annoncer.
     function renderSiteUpdate() {
       if (!els.siteUpdate) return;
       const u = STREAMER_CONFIG.siteUpdate || {};
-      const text = u.enabled === false ? '' : loc(u.text);
       const date = u.enabled === false ? '' : loc(u.date);
-      if (!text && !date) { els.siteUpdate.innerHTML = ''; els.siteUpdate.hidden = true; return; }
+      if (!date) { els.siteUpdate.innerHTML = ''; els.siteUpdate.hidden = true; return; }
       els.siteUpdate.hidden = false;
       els.siteUpdate.innerHTML = `<span class="site-update-label">${t('siteUpdateLabel')}</span>`
-        + (text ? `<span class="site-update-text">${escapeHtml(text)}</span>` : '')
-        + (date ? `<span class="site-update-date">${escapeHtml(date)}</span>` : '');
+        + `<span class="site-update-date">${escapeHtml(date)}</span>`;
     }
     
     function renderFilters() { els.roleFilters.innerHTML=roles().map(r=>`<button class="filter-chip${state.role===r?' active':''}" type="button" data-role="${r}">${locRole(r)}</button>`).join(''); }

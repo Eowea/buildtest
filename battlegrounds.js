@@ -86,13 +86,11 @@ function renderBgHeader() {
 function renderBgSiteUpdate() {
   if (!bgEls.siteUpdate) return;
   const u = STREAMER_CONFIG.siteUpdate || {};
-  const text = u.enabled === false ? '' : bgLoc(u.text);
   const date = u.enabled === false ? '' : bgLoc(u.date);
-  if (!text && !date) { bgEls.siteUpdate.innerHTML = ''; bgEls.siteUpdate.hidden = true; return; }
+  if (!date) { bgEls.siteUpdate.innerHTML = ''; bgEls.siteUpdate.hidden = true; return; }
   bgEls.siteUpdate.hidden = false;
   bgEls.siteUpdate.innerHTML = `<span class="site-update-label">${bgT('siteUpdateLabel')}</span>`
-    + (text ? `<span class="site-update-text">${bgEsc(text)}</span>` : '')
-    + (date ? `<span class="site-update-date">${bgEsc(date)}</span>` : '');
+    + `<span class="site-update-date">${bgEsc(date)}</span>`;
 }
 
 function renderBgList() {
