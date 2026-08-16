@@ -1027,11 +1027,27 @@ function confirmPushModal(defaultMessage){
   });
 }
 
+// Date de "mise à jour du site" affichée dans le header. Elle est renseignée toute seule
+// au moment de l'enregistrement : c'est le seul instant où l'on sait qu'une modification
+// part réellement en ligne. Décocher l'auto-date dans la configuration rend la main.
+function applyAutoSiteUpdateDate(){
+  const u = STREAMER_CONFIG.siteUpdate;
+  if (!u || u.autoDate === false) return;
+  const d = new Date();
+  u.date = {
+    // "15 août 2026" → "15 Août 2026", pour coller au style des dates déjà saisies.
+    fr: d.toLocaleDateString('fr-FR', { day:'numeric', month:'long', year:'numeric' })
+         .replace(/ (\p{L})/u, (m, c) => ' ' + c.toUpperCase()),
+    en: d.toLocaleDateString('en-US', { month:'long', day:'numeric', year:'numeric' })
+  };
+}
+
 async function saveAll(){
   const btn = document.getElementById('saveBtn');
   btn.disabled = true;
   btn.textContent = 'Enregistrement...';
   try{
+    applyAutoSiteUpdateDate();
     const content = serializeDataFile();
     const choice = await confirmPushModal(buildAutoCommitMessage());
     if (choice.action === 'keep'){
@@ -2170,14 +2186,21 @@ function showConfigPanel(){
 
     <div class="card">
       <h3>Mise à jour du site (header)</h3>
-      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Affiche « Mise à jour » suivi de la date, au-dessus des réseaux sociaux, sur la page Builds et la page Cartes. Laisse les dates vides pour ne rien afficher du tout.</small>
+      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Affiche « Mise à jour » suivi de la date, au-dessus des réseaux sociaux, sur la page Builds et la page Cartes.</small>
       <div class="checkbox-row">
         <input type="checkbox" ${STREAMER_CONFIG.siteUpdate?.enabled !== false ? 'checked' : ''} onchange="setNested(STREAMER_CONFIG,'siteUpdate.enabled',this.checked)" />
         <label style="margin:0;text-transform:none;">Afficher la date de mise à jour</label>
       </div>
+      <div class="checkbox-row">
+        <input type="checkbox" ${STREAMER_CONFIG.siteUpdate?.autoDate !== false ? 'checked' : ''} onchange="setNested(STREAMER_CONFIG,'siteUpdate.autoDate',this.checked); showConfigPanel();" />
+        <label style="margin:0;text-transform:none;">Mettre la date à aujourd'hui à chaque enregistrement</label>
+      </div>
+      ${STREAMER_CONFIG.siteUpdate?.autoDate !== false
+        ? `<small class="help">La date ci-dessous est remplie automatiquement au moment où tu enregistres : tu n'as rien à saisir. Décoche la case au-dessus pour la fixer toi-même.</small>`
+        : `<small class="help">Saisie manuelle : la date restera telle quelle jusqu'à ce que tu la changes.</small>`}
       <div class="row">
-        <div class="field"><label>Date (FR)</label><input value="${escapeHtml(STREAMER_CONFIG.siteUpdate?.date?.fr)}" oninput="setNested(STREAMER_CONFIG,'siteUpdate.date.fr',this.value)" placeholder="Ex: 15 Août 2026" /></div>
-        <div class="field"><label>Date (EN)</label><input value="${escapeHtml(STREAMER_CONFIG.siteUpdate?.date?.en)}" oninput="setNested(STREAMER_CONFIG,'siteUpdate.date.en',this.value)" placeholder="Ex: August 15, 2026" /></div>
+        <div class="field"><label>Date (FR)</label><input ${STREAMER_CONFIG.siteUpdate?.autoDate !== false ? 'disabled' : ''} value="${escapeHtml(STREAMER_CONFIG.siteUpdate?.date?.fr)}" oninput="setNested(STREAMER_CONFIG,'siteUpdate.date.fr',this.value)" placeholder="Ex: 15 Août 2026" /></div>
+        <div class="field"><label>Date (EN)</label><input ${STREAMER_CONFIG.siteUpdate?.autoDate !== false ? 'disabled' : ''} value="${escapeHtml(STREAMER_CONFIG.siteUpdate?.date?.en)}" oninput="setNested(STREAMER_CONFIG,'siteUpdate.date.en',this.value)" placeholder="Ex: August 15, 2026" /></div>
       </div>
     </div>
   `;

@@ -92,6 +92,7 @@ const STREAMER_CONFIG = {
   "showHeroRotation": false,
   "siteUpdate": {
     "enabled": true,
+    "autoDate": true,
     "date": {
       "fr": "15 Août 2026",
       "en": "August 15, 2026"
