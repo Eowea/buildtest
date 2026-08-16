@@ -253,6 +253,31 @@
       text-shadow: 0 0 8px var(--gold-glow);
     }
 
+    /* ── Bandeau "Mise à jour du site" (header, sous la navigation) ── */
+    .site-update {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 10px;
+      max-width: 100%;
+      padding: 6px 14px;
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-sm);
+      background: rgba(0, 0, 0, 0.25);
+    }
+    .site-update[hidden] { display: none; }
+    .site-update-label {
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      font-size: 11px;
+      color: var(--gold-bright);
+    }
+    .site-update-text { font-size: 13px; color: var(--text); }
+    .site-update-date { font-size: 12px; color: var(--text-dim); white-space: nowrap; }
+
     /* ── Header Actions (Lang switcher, bottom-right) ── */
     .header-actions {
       position: absolute;

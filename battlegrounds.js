@@ -2,6 +2,7 @@
    DICTIONNAIRE MULTILINGUE (Interface) — page Cartes
    ========================================================================= */
 const BG_DICT = {
+  siteUpdateLabel: { fr: "Mise à jour", en: "Update" },
   searchPlaceholder: { fr: "Rechercher une carte...", en: "Search for a map..." },
   resultsCount: { fr: "{n} résultats", en: "{n} results" },
   resultsCountSingular: { fr: "{n} résultat", en: "{n} result" },
@@ -31,7 +32,7 @@ const bgState = { search: '', bgId: null, lang: getInitialLangBg() };
 
 const $bg = id => document.getElementById(id);
 const bgEls = {
-  siteTitle: $bg('siteTitle'), headerNav: $bg('headerNav'), socials: $bg('socials'),
+  siteTitle: $bg('siteTitle'), headerNav: $bg('headerNav'), socials: $bg('socials'), siteUpdate: $bg('siteUpdate'),
   langSwitcher: $bg('langSwitcher'), searchInput: $bg('searchInput'), resultsCount: $bg('resultsCount'),
   bgTitle: $bg('bgTitle'), bgNote: $bg('bgNote'), bgList: $bg('bgList'), detailView: $bg('detailView'),
 };
@@ -78,6 +79,20 @@ function renderBgHeader() {
       const isActive = (l.url || '').replace(/^\.?\//, '') === 'battlegrounds.html';
       return `<a class="header-nav-link${isActive ? ' active' : ''}" href="${bgEsc(l.url || '#')}"${l.newTab ? ' target="_blank" rel="noreferrer"' : ''}>${bgEsc(bgLoc(l.label))}</a>`;
     }).join('');
+  renderBgSiteUpdate();
+}
+
+// Bandeau "Mise à jour du site", identique à celui de la page Builds (même donnée partagée).
+function renderBgSiteUpdate() {
+  if (!bgEls.siteUpdate) return;
+  const u = STREAMER_CONFIG.siteUpdate || {};
+  const text = u.enabled === false ? '' : bgLoc(u.text);
+  const date = u.enabled === false ? '' : bgLoc(u.date);
+  if (!text && !date) { bgEls.siteUpdate.innerHTML = ''; bgEls.siteUpdate.hidden = true; return; }
+  bgEls.siteUpdate.hidden = false;
+  bgEls.siteUpdate.innerHTML = `<span class="site-update-label">${bgT('siteUpdateLabel')}</span>`
+    + (text ? `<span class="site-update-text">${bgEsc(text)}</span>` : '')
+    + (date ? `<span class="site-update-date">${bgEsc(date)}</span>` : '');
 }
 
 function renderBgList() {

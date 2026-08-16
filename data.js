@@ -89,7 +89,18 @@ const STREAMER_CONFIG = {
       "youtubeId": "https://youtu.be/m8kifCbSy-s"
     }
   ],
-  "showHeroRotation": false
+  "showHeroRotation": false,
+  "siteUpdate": {
+    "enabled": true,
+    "text": {
+      "fr": "Tychus ajouté, avec sa forme Odin.",
+      "en": "Tychus added, including his Odin form."
+    },
+    "date": {
+      "fr": "15 Août 2026",
+      "en": "August 15, 2026"
+    }
+  }
 };
 
 const HEROES = [

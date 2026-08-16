@@ -46,6 +46,7 @@
       copyHint: { fr: "Clique pour copier", en: "Click to copy" },
       optionalTalents: { fr: "Options", en: "Options" },
       newBadge: { fr: "Nouveau", en: "New" },
+      siteUpdateLabel: { fr: "Mise à jour", en: "Update" },
       updatedBadge: { fr: "Mis à jour", en: "Updated" },
       heroRotationTitle: { fr: "Rotation gratuite", en: "Free Rotation" },
       heroRotationError: { fr: "Rotation indisponible pour le moment.", en: "Rotation unavailable right now." },
@@ -75,7 +76,7 @@ const getInitialLang = () => {
     let activeFloatingTrigger = null, hideTooltipTimer = null, tooltipRaf = 0, layoutRaf = 0, layoutSyncTimers = [];
 
     const $ = id => document.getElementById(id);
-    const els = { siteTitle: $('siteTitle'), headerNav: $('headerNav'), socials: $('socials'), searchInput: $('searchInput'), resultsCount: $('resultsCount'), roleFilters: $('roleFilters'), heroList: $('heroList'), detailView: $('detailView'), tooltipPortal: $('tooltipPortal'), videoOverlay: $('videoOverlay'), closeOverlayBtn: $('closeOverlayBtn'), overlayStatusText: $('overlayStatusText'), expandedYoutube: $('expandedYoutube'), expandedMedia: $('expandedMedia'), langSwitcher: $('langSwitcher'), homeBtn: $('homeBtn') };
+    const els = { siteTitle: $('siteTitle'), headerNav: $('headerNav'), socials: $('socials'), searchInput: $('searchInput'), resultsCount: $('resultsCount'), roleFilters: $('roleFilters'), heroList: $('heroList'), detailView: $('detailView'), tooltipPortal: $('tooltipPortal'), videoOverlay: $('videoOverlay'), closeOverlayBtn: $('closeOverlayBtn'), overlayStatusText: $('overlayStatusText'), expandedYoutube: $('expandedYoutube'), expandedMedia: $('expandedMedia'), langSwitcher: $('langSwitcher'), homeBtn: $('homeBtn'), siteUpdate: $('siteUpdate') };
 
     /* ── Utilities ── */
     const escapeHtml = (s) => (s ?? '').toString().replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -245,6 +246,21 @@ function markEverythingAsSeen(hero) {
           const isActive = (l.url || '').replace(/^\.?\//, '') === 'index.html';
           return `<a class="header-nav-link${isActive ? ' active' : ''}" href="${escapeHtml(l.url || '#')}"${l.newTab ? ' target="_blank" rel="noreferrer"' : ''}>${escapeHtml(loc(l.label))}</a>`;
         }).join('');
+      renderSiteUpdate();
+    }
+
+    // Bandeau "Mise à jour du site" dans le header : masqué tant qu'aucun texte n'est saisi,
+    // pour ne pas laisser un cadre vide quand il n'y a rien à annoncer.
+    function renderSiteUpdate() {
+      if (!els.siteUpdate) return;
+      const u = STREAMER_CONFIG.siteUpdate || {};
+      const text = u.enabled === false ? '' : loc(u.text);
+      const date = u.enabled === false ? '' : loc(u.date);
+      if (!text && !date) { els.siteUpdate.innerHTML = ''; els.siteUpdate.hidden = true; return; }
+      els.siteUpdate.hidden = false;
+      els.siteUpdate.innerHTML = `<span class="site-update-label">${t('siteUpdateLabel')}</span>`
+        + (text ? `<span class="site-update-text">${escapeHtml(text)}</span>` : '')
+        + (date ? `<span class="site-update-date">${escapeHtml(date)}</span>` : '');
     }
     
     function renderFilters() { els.roleFilters.innerHTML=roles().map(r=>`<button class="filter-chip${state.role===r?' active':''}" type="button" data-role="${r}">${locRole(r)}</button>`).join(''); }
