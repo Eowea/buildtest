@@ -22624,7 +22624,7 @@ const HEROES = [
   },
   {
     "id": "ragnaros",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Ragnaros",
       "en": "Ragnaros"
@@ -22642,86 +22642,134 @@ const HEROES = [
     "spells": [
       {
         "key": "Trait",
+        "form": "normal",
         "name": {
-          "fr": "Noyau en fusion",
+          "fr": "Cœur du Magma",
           "en": "Molten Core"
         },
         "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_moltencore.png",
         "description": {
-          "fr": "Prends possession d'une structure et deviens une tourelle géante.",
-          "en": "Take over a structure and become a giant turret."
+          "fr": "Canalise sur un fort ou un bastion, allié ou détruit, pour le remplacer par la forme ultime de Ragnaros : il gagne de nouvelles capacités et un énorme réservoir de points de vie qui se consume avec le temps. Il reprend sa forme initiale une fois épuisé.",
+          "en": "Channels on an allied or destroyed Fort or Keep to replace it with Ragnaros's ultimate form: he gains new Abilities and a huge pool of Health that burns away over time. He reverts once it runs out."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
+        "form": "normal",
         "name": {
-          "fr": "Sulfuras renforcé",
+          "fr": "Renforcement de Sulfuras",
           "en": "Empower Sulfuras"
         },
         "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_empowersulfuras.png",
         "description": {
-          "fr": "Renforce tes prochaines attaques avec des dégâts de zone et des soins.",
-          "en": "Empowers your next attacks with AoE damage and healing."
+          "fr": "Rend la prochaine attaque de base instantanée et la fait frapper en zone, en soignant Ragnaros proportionnellement aux dégâts, davantage encore sur les héros.",
+          "en": "Makes the next Basic Attack instant and hit in an area, healing Ragnaros for part of the damage, more so against Heroes."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "A",
+        "form": "moltencore",
+        "name": {
+          "fr": "Frappe de magma",
+          "en": "Molten Swing"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_moltenswing.png",
+        "description": {
+          "fr": "Version Cœur du Magma de Renforcement de Sulfuras : inflige des dégâts aux ennemis proches et les étourdit.",
+          "en": "Molten Core version of Empower Sulfuras: damages nearby enemies and Stuns them."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "Z",
+        "form": "normal",
         "name": {
           "fr": "Météore vivant",
           "en": "Living Meteor"
         },
         "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_livingmeteor.png",
         "description": {
-          "fr": "Météore qui roule, blesse, puis revient vers toi.",
-          "en": "A meteor that rolls, damages, then returns to you."
+          "fr": "Invoque un météore qui roule dans la direction choisie en brûlant les ennemis sur son passage.",
+          "en": "Summons a meteor that rolls in the chosen direction, burning enemies in its path."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "Z",
+        "form": "moltencore",
+        "name": {
+          "fr": "Déluge de météores",
+          "en": "Meteor Shower"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_meteorshower.png",
+        "description": {
+          "fr": "Version Cœur du Magma de Météore vivant : fait tomber une ligne d'impacts de météores.",
+          "en": "Molten Core version of Living Meteor: drops a line of meteor impacts."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "E",
+        "form": "normal",
         "name": {
-          "fr": "Onde de choc",
+          "fr": "Vague explosive",
           "en": "Blast Wave"
         },
         "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_blastwave.png",
         "description": {
-          "fr": "Repousse les ennemis proches.",
-          "en": "Knocks back nearby enemies."
+          "fr": "Enveloppe Ragnaros ou un allié de flammes, ce qui accélère sa course avant d'exploser sur les ennemis proches.",
+          "en": "Ignites Ragnaros or an ally, granting Movement Speed before exploding on nearby enemies."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "E",
+        "form": "moltencore",
+        "name": {
+          "fr": "Rune explosive",
+          "en": "Explosive Rune"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_explosiverune.png",
+        "description": {
+          "fr": "Version Cœur du Magma de Vague explosive : provoque une détonation à retardement sur une large zone.",
+          "en": "Molten Core version of Blast Wave: causes a delayed detonation over a large area."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
+        "form": "normal",
         "name": {
           "fr": "Frappe de Sulfuras",
           "en": "Sulfuras Smash"
         },
         "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_sulfurassmash.png",
         "description": {
-          "fr": "Saute et frappe le sol, étourdissant les ennemis.",
-          "en": "Leaps and slams the ground, stunning enemies."
+          "fr": "Projette Sulfuras sur la zone ciblée. Les ennemis touchés subissent des dégâts, bien davantage au centre où ils sont aussi étourdis.",
+          "en": "Hurls Sulfuras at the target area. Enemies hit take damage, far more at the center where they are also Stunned."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
+        "form": "normal",
         "name": {
           "fr": "Vague de lave",
           "en": "Lava Wave"
         },
         "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_lavawave.png",
         "description": {
-          "fr": "Envoie une vague de lave qui détruit la vague de sbires.",
-          "en": "Sends a lava wave that wipes the minion wave."
+          "fr": "Libère une vague de lave qui parcourt la voie ciblée, blessant les ennemis sur son passage et tuant instantanément les serviteurs adverses.",
+          "en": "Releases a wave of lava down the targeted lane, damaging enemies in its path and instantly killing enemy Minions."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Noyau en fusion sert autant à sauver un fort qu'à en détruire un.",
+        "fr": "Cœur du Magma sert autant à sauver un fort qu'à en détruire un.",
         "en": "Molten Core is as good at saving a fort as destroying one."
       },
       {
@@ -22738,57 +22786,57 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Ragnaros]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jov0aau",
+            "primaryId": "tm2l3mj2c021rh",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6joqk5r3",
+            "primaryId": "tm2l3mj2c056g3",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jodz7mx",
+            "primaryId": "tm2l3mj2c093os",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6joo7p5s",
+            "primaryId": "tm2l3mj2c111qd",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jon7blo",
+            "primaryId": "tm2l3mj2c13x0y",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jooeymc",
+            "primaryId": "tm2l3mj2c163oz",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jo3osyq",
+            "primaryId": "tm2l3mj2c20h65",
             "alternativeIds": []
           }
         ]
@@ -22797,105 +22845,316 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jov0aau",
+        "id": "tm2l3mj2c01uz6",
         "level": 1,
         "name": {
-          "fr": "Sulfuras Hungers",
+          "fr": "Sulfuras a faim",
           "en": "Sulfuras Hungers"
         },
-        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_empowersulfuras.png",
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_empowersulfuras.png",
         "description": {
-          "fr": "Quest: Every time Empower Sulfuras kills a Minion, its damage is increased by 1, up to 25.  Reward: After killing 25 Minions, increase its damage by an additional 100.",
-          "en": "Quest: Every time Empower Sulfuras kills a Minion, its damage is increased by 1, up to 25.  Reward: After killing 25 Minions, increase its damage by an additional 100."
+          "fr": "Quête : tuer des serviteurs avec Renforcement de Sulfuras augmente durablement ses dégâts. Récompense : au bout d'un certain nombre, il gagne un bonus de dégâts important.",
+          "en": "Quest: killing Minions with Empower Sulfuras permanently increases its damage. Reward: after enough kills, it gains a large bonus."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joqk5r3",
+        "id": "tm2l3mj2c021rh",
+        "level": 1,
+        "name": {
+          "fr": "Comète",
+          "en": "Shifting Meteor"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_shiftingmeteor.png",
+        "description": {
+          "fr": "Météore vivant inflige davantage de dégâts à chaque fois qu'il touche le même ennemi. Quête : toucher des héros avec lui allonge sa durée et permet de changer sa direction en cours de route.",
+          "en": "Living Meteor deals more damage each time it hits the same enemy. Quest: hitting Heroes with it extends its duration and lets it change direction mid-course."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm2l3mj2c03ee4",
+        "level": 1,
+        "name": {
+          "fr": "Linceul de flammes",
+          "en": "Engulfing Flame"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_blastwave.png",
+        "description": {
+          "fr": "Augmente les dégâts et le rayon de Vague explosive.",
+          "en": "Increases Blast Wave's damage and radius."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm2l3mj2c04fq4",
         "level": 4,
         "name": {
-          "fr": "Fire Ward",
+          "fr": "Gardien de feu",
           "en": "Fire Ward"
         },
-        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_livingmeteor.png",
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_livingmeteor.png",
         "description": {
-          "fr": "When Living Meteor hits an enemy Hero, gain a charge of Spell Armor, reducing damage from the next enemy ability by 50%.  Stores up to 2 charges.",
-          "en": "When Living Meteor hits an enemy Hero, gain a charge of Spell Armor, reducing damage from the next enemy ability by 50%.  Stores up to 2 charges."
+          "fr": "Toucher un héros avec Météore vivant confère une charge d'armure anti-sort, qui réduit les dégâts de la prochaine capacité subie. Possède plusieurs charges.",
+          "en": "Hitting a Hero with Living Meteor grants a charge of Spell Armor, reducing the damage of the next Ability taken. Has multiple charges."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jodz7mx",
+        "id": "tm2l3mj2c056g3",
+        "level": 4,
+        "name": {
+          "fr": "À feu doux",
+          "en": "Slow Burn"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_blastwave.png",
+        "description": {
+          "fr": "Vague explosive ralentit les ennemis touchés.",
+          "en": "Blast Wave Slows enemies hit."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm2l3mj2c06n2g",
+        "level": 4,
+        "name": {
+          "fr": "Embrasement",
+          "en": "Catching Fire"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_catchingfire.png",
+        "description": {
+          "fr": "Quête : collecter des globes de régénération augmente la récupération de points de vie. Récompense : débloque une capacité active qui confère temporairement de l'armure.",
+          "en": "Quest: gathering Regeneration Globes increases Health regeneration. Reward: unlocks an active ability granting temporary Armor."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm2l3mj2c0720t",
         "level": 7,
         "name": {
-          "fr": "Hand of Ragnaros",
+          "fr": "Main de Ragnaros",
           "en": "Hand of Ragnaros"
         },
-        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_empowersulfuras.png",
+        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_empowersulfuras_active.png",
         "description": {
-          "fr": "If Empower Sulfuras hits at least 2 enemy Heroes, refund 10 Mana and its cooldown recharges 100% faster for 4 seconds.",
-          "en": "If Empower Sulfuras hits at least 2 enemy Heroes, refund 10 Mana and its cooldown recharges 100% faster for 4 seconds."
+          "fr": "Si Renforcement de Sulfuras touche plusieurs héros, il rend du mana et son temps de recharge s'écoule bien plus vite pendant quelques secondes.",
+          "en": "If Empower Sulfuras hits several Heroes, it refunds Mana and its cooldown recharges much faster for a few seconds."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joo7p5s",
+        "id": "tm2l3mj2c08t1k",
+        "level": 7,
+        "name": {
+          "fr": "Puissance du magma",
+          "en": "Molten Power"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_livingmeteor.png",
+        "description": {
+          "fr": "Toucher plusieurs fois des héros avec Météore vivant réduit son temps de recharge et rend du mana.",
+          "en": "Hitting Heroes several times with Living Meteor reduces its cooldown and refunds Mana."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm2l3mj2c093os",
+        "level": 7,
+        "name": {
+          "fr": "Attaques cuisantes",
+          "en": "Blistering Attacks"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_empowersulfuras.png",
+        "description": {
+          "fr": "Régulièrement, la prochaine attaque de base contre un héros inflige des dégâts supplémentaires. Toucher des ennemis avec une capacité de base accélère ce cycle.",
+          "en": "Periodically, the next Basic Attack against a Hero deals bonus damage. Hitting enemies with Basic Abilities speeds up this cycle."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm2l3mj2c10x6f",
         "level": 10,
         "name": {
-          "fr": "Sulfuras Smash",
+          "fr": "Frappe de Sulfuras",
           "en": "Sulfuras Smash"
         },
-        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_sulfurassmash.png",
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_sulfurassmash.png",
         "description": {
-          "fr": "Hurl Sulfuras at the target area, landing after 0.75 seconds, dealing 250 (+4% per level) damage. Enemies in the center take 594 (+4% per level) damage instead and are Stunned for 0.5 seconds.",
-          "en": "Hurl Sulfuras at the target area, landing after 0.75 seconds, dealing 250 (+4% per level) damage. Enemies in the center take 594 (+4% per level) damage instead and are Stunned for 0.5 seconds."
+          "fr": "Projette Sulfuras sur la zone ciblée. Les ennemis touchés subissent des dégâts, bien davantage au centre où ils sont aussi étourdis.",
+          "en": "Hurls Sulfuras at the target area. Enemies hit take damage, far more at the center where they are also Stunned."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jon7blo",
+        "id": "tm2l3mj2c111qd",
+        "level": 10,
+        "name": {
+          "fr": "Vague de lave",
+          "en": "Lava Wave"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_lavawave.png",
+        "description": {
+          "fr": "Libère une vague de lave qui parcourt la voie ciblée, blessant les ennemis sur son passage et tuant instantanément les serviteurs adverses.",
+          "en": "Releases a wave of lava down the targeted lane, damaging enemies in its path and instantly killing enemy Minions."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm2l3mj2c12nlu",
         "level": 13,
         "name": {
-          "fr": "Cauterize Wounds",
+          "fr": "Cautérisation",
           "en": "Cauterize Wounds"
         },
-        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_empowersulfuras.png",
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_empowersulfuras.png",
         "description": {
-          "fr": "Empower Sulfuras heals for an additional 45% of damage dealt to Heroes over 2 seconds.",
-          "en": "Empower Sulfuras heals for an additional 45% of damage dealt to Heroes over 2 seconds."
+          "fr": "Renforcement de Sulfuras rend des points de vie supplémentaires dans la durée quand il touche des héros.",
+          "en": "Empower Sulfuras restores additional Health over time when it hits Heroes."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jooeymc",
+        "id": "tm2l3mj2c13x0y",
+        "level": 13,
+        "name": {
+          "fr": "Flamme trempée",
+          "en": "Tempered Flame"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_blastwave.png",
+        "description": {
+          "fr": "Blesser un héros avec Vague explosive confère à Ragnaros un bouclier temporaire proportionnel aux dégâts infligés.",
+          "en": "Damaging a Hero with Blast Wave grants Ragnaros a temporary Shield based on the damage dealt."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm2l3mj2c144np",
+        "level": 13,
+        "name": {
+          "fr": "Flamme persistante",
+          "en": "Resilient Flame"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_return.png",
+        "description": {
+          "fr": "Être étourdi confère temporairement de l'armure à Ragnaros.",
+          "en": "Being Stunned temporarily grants Ragnaros Armor."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm2l3mj2c15wgx",
         "level": 16,
         "name": {
-          "fr": "Giant Scorcher",
+          "fr": "Brûlure intense",
           "en": "Giant Scorcher"
         },
-        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_empowersulfuras.png",
+        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_empowersulfuras_active.png",
         "description": {
-          "fr": "Empower Sulfuras burns enemy Heroes for 9% of their maximum Health over 3 seconds. This additional damage does not heal Ragnaros.",
-          "en": "Empower Sulfuras burns enemy Heroes for 9% of their maximum Health over 3 seconds. This additional damage does not heal Ragnaros."
+          "fr": "Renforcement de Sulfuras consume les héros adverses proportionnellement à leur maximum de points de vie. Ces dégâts ne soignent pas Ragnaros.",
+          "en": "Empower Sulfuras burns enemy Heroes based on their maximum Health. This damage does not heal Ragnaros."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo3osyq",
+        "id": "tm2l3mj2c163oz",
+        "level": 16,
+        "name": {
+          "fr": "Bombe météorique",
+          "en": "Meteor Bomb"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_livingmeteor.png",
+        "description": {
+          "fr": "Météore vivant explose en fin de trajectoire, infligeant davantage de dégâts aux ennemis situés au centre.",
+          "en": "Living Meteor explodes at the end of its path, dealing more damage to enemies at its center."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm2l3mj2c17kk5",
+        "level": 16,
+        "name": {
+          "fr": "Écho explosif",
+          "en": "Blast Echo"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_blastwave.png",
+        "description": {
+          "fr": "Quand Vague explosive expire, une seconde est lancée sur Ragnaros.",
+          "en": "When Blast Wave expires, a second one is created on Ragnaros."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm2l3mj2c180q5",
         "level": 20,
         "name": {
-          "fr": "Flames of Sulfuron",
+          "fr": "Flammes de Sulfuron",
           "en": "Flames of Sulfuron"
         },
-        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_sulfurassmash.png",
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_sulfurassmash.png",
         "description": {
-          "fr": "Sulfuras Smash Slows enemies by 50% for 2.5 seconds, and the Stun duration of enemies hit in the center is increased by 1 second.",
-          "en": "Sulfuras Smash Slows enemies by 50% for 2.5 seconds, and the Stun duration of enemies hit in the center is increased by 1 second."
+          "fr": "Frappe de Sulfuras ralentit les ennemis touchés, et allonge l'étourdissement infligé au centre.",
+          "en": "Sulfuras Smash Slows enemies hit, and lengthens the Stun dealt at the center."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm2l3mj2c19yr7",
+        "level": 20,
+        "name": {
+          "fr": "Déferlante de lave",
+          "en": "Lava Surge"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_lavawave.png",
+        "description": {
+          "fr": "Vague de lave gagne une charge supplémentaire et son temps de recharge est réduit.",
+          "en": "Lava Wave gains an extra charge and its cooldown is reduced."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm2l3mj2c20h65",
+        "level": 20,
+        "name": {
+          "fr": "Mode héroïque",
+          "en": "Heroic Difficulty"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_moltencore.png",
+        "description": {
+          "fr": "Cœur du Magma gagne des points de vie et des dégâts, et son temps de recharge est fortement réduit.",
+          "en": "Molten Core gains Health and damage, and its cooldown is greatly reduced."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm2l3mj2c21agi",
+        "level": 20,
+        "name": {
+          "fr": "Cratère",
+          "en": "Submerge"
+        },
+        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_submerge.png",
+        "description": {
+          "fr": "Capacité active : Ragnaros s'immerge, ce qui le place en stase et lui rend des points de vie.",
+          "en": "Active: Ragnaros submerges, entering Stasis and restoring Health."
         },
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [
+      {
+        "id": "normal",
+        "label": {
+          "fr": "Forme normale",
+          "en": "Normal Form"
+        }
+      },
+      {
+        "id": "moltencore",
+        "label": {
+          "fr": "Cœur du Magma",
+          "en": "Molten Core"
+        }
+      }
+    ]
   },
   {
     "id": "raynor",
