@@ -875,6 +875,15 @@ function normalizeLoadedData(){
     });
   });
 
+  // Garde-fou : un data.js enregistré par un onglet admin antérieur à cette fonctionnalité
+  // n'a pas la clé "siteUpdate", et un nouvel enregistrement la ferait disparaître
+  // silencieusement. On la recrée systématiquement au chargement.
+  STREAMER_CONFIG.siteUpdate = STREAMER_CONFIG.siteUpdate || {};
+  const su = STREAMER_CONFIG.siteUpdate;
+  if (su.enabled === undefined) su.enabled = true;
+  if (su.autoDate === undefined) su.autoDate = true;
+  su.date = su.date || { fr: '', en: '' };
+
   if (!Array.isArray(BATTLEGROUNDS)) BATTLEGROUNDS = [];
   BATTLEGROUNDS.forEach(bg => {
     bg.name = bg.name || {fr:'',en:''};
@@ -1031,8 +1040,11 @@ function confirmPushModal(defaultMessage){
 // au moment de l'enregistrement : c'est le seul instant où l'on sait qu'une modification
 // part réellement en ligne. Décocher l'auto-date dans la configuration rend la main.
 function applyAutoSiteUpdateDate(){
+  // On recrée la clé au besoin plutôt que d'abandonner : sinon un état incomplet se
+  // propagerait à l'enregistrement, et la date resterait absente du site.
+  STREAMER_CONFIG.siteUpdate = STREAMER_CONFIG.siteUpdate || { enabled: true, autoDate: true, date: { fr: '', en: '' } };
   const u = STREAMER_CONFIG.siteUpdate;
-  if (!u || u.autoDate === false) return;
+  if (u.autoDate === false) return;
   const d = new Date();
   u.date = {
     // "15 août 2026" → "15 Août 2026", pour coller au style des dates déjà saisies.

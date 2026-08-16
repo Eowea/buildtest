@@ -89,7 +89,15 @@ const STREAMER_CONFIG = {
       "youtubeId": "https://youtu.be/m8kifCbSy-s"
     }
   ],
-  "showHeroRotation": false
+  "showHeroRotation": false,
+  "siteUpdate": {
+    "enabled": true,
+    "autoDate": true,
+    "date": {
+      "fr": "16 Août 2026",
+      "en": "August 16, 2026"
+    }
+  }
 };
 
 const HEROES = [
