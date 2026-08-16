@@ -258,25 +258,23 @@
        16px du bas + 28px de hauteur d'icône + 8px d'écart = 52px. */
     /* La typographie (police, majuscules, graisse) vient de la règle partagée plus haut,
        comme les autres libellés du site. Ici on ne règle que la taille et les couleurs,
-       reprises du cluster bas-gauche du header auquel ce bandeau appartient désormais :
-       même gris que les icônes sociales au repos, même accent doré au survol que la nav. */
+       reprises du cluster bas-gauche du header auquel ce bandeau appartient désormais.
+       Le décalage à 20px aligne le texte sur le trait de l'icône Twitch et non sur le
+       bord de son lien : l'icône fait 20px, centrée dans une zone cliquable de 28px. */
     .site-update {
       position: absolute;
-      left: 16px;
+      left: 20px;
       bottom: 52px;
       display: inline-flex;
       align-items: center;
       flex-wrap: wrap;
       gap: 2px 8px;
-      max-width: calc(100% - 32px);
+      max-width: calc(100% - 40px);
       font-size: 11px;
       color: var(--text-dim);
-      transition: color var(--t);
     }
-    .site-update:hover { color: var(--gold-bright); }
     .site-update[hidden] { display: none; }
     .site-update-date { color: var(--text); white-space: nowrap; }
-    .site-update:hover .site-update-date { color: inherit; }
 
     /* ── Header Actions (Lang switcher, bottom-right) ── */
     .header-actions {
