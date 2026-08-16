@@ -89,15 +89,7 @@ const STREAMER_CONFIG = {
       "youtubeId": "https://youtu.be/m8kifCbSy-s"
     }
   ],
-  "showHeroRotation": false,
-  "siteUpdate": {
-    "enabled": true,
-    "autoDate": true,
-    "date": {
-      "fr": "15 Août 2026",
-      "en": "August 15, 2026"
-    }
-  }
+  "showHeroRotation": false
 };
 
 const HEROES = [
@@ -20767,8 +20759,8 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_witchdoctor.png",
     "headline": {
-      "fr": "Mage de zone qui devient monstrueux en fin de partie.",
-      "en": "Area mage who becomes monstrous late game."
+      "fr": "Mage qui devient monstrueux en fin de partie.",
+      "en": "Mage who becomes monstrous late game."
     },
     "gameplay": {
       "fr": "Nasibo accumule des points de vie en tuant des sbires grâce à sa quête, et couvre le terrain d'araignées, de crapauds et de murs de zombies.",
@@ -20856,16 +20848,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Accumule ta quête sur les sbires dès les premières minutes.",
-        "en": "Start stacking your quest on minions from the first minutes."
+        "fr": "Tu n'es pas obligé d'avoir tes stacks pour le talent 20 à la fin de la game !",
+        "en": "You don't need to have your stacks for Talent 20 by the end of the game!"
       },
       {
-        "fr": "Mur de zombies bloque une fuite ou coupe un plongeur.",
-        "en": "Zombie Wall blocks an escape or cuts off a diver."
+        "fr": "Mur de zombies bloque les gens à l'intérieur, pense à le désactiver si c'est un allié.",
+        "en": "Zombies wall is trapping people inside; remember to deactivate it if it's an ally."
       },
       {
-        "fr": "Esprit affamé est très puissant, mais te laisse immobile : protège-toi.",
-        "en": "Ravenous Spirit is very strong but leaves you channeling: stay safe."
+        "fr": "Essaye de viser un seul sbire avec tes araignées pour optimiser ton waveclear.",
+        "en": "Try to target a single minion with your spiders to optimize your waveclear."
       }
     ],
     "builds": [
@@ -26054,12 +26046,12 @@ const HEROES = [
         "en": "Minigun deals damage based on max Health: save it for tanks."
       },
       {
-        "fr": "Fonce et défonce sert autant à fuir qu'à replacer ton tir.",
+        "fr": "Fonce et défonce sert autant à fuir qu'à se replacer.",
         "en": "Run and Gun is as good for escaping as for repositioning."
       },
       {
-        "fr": "Odin transforme un combat d'objectif entier.",
-        "en": "Odin can swing an entire objective fight."
+        "fr": "Tes attaques de base font plus de dégâts que ton A (sans talent), utilise le utiliser pour poursuivre un ennemi. ",
+        "en": "Your basic attacks deal more damage than your A (without a talent), so use it to chase an enemy."
       }
     ],
     "builds": [
@@ -28207,16 +28199,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ton mucus donne de la vision : couvre les objectifs.",
-        "en": "Your creep grants vision: cover the objectives."
+        "fr": "Ton mucus donne de la vision : couvre les objectifs et les buissons.",
+        "en": "Your creep grants vision: cover the objectives and the bushes."
       },
       {
         "fr": "Chasseur tueur est une excellente source de dégâts à distance.",
         "en": "Hunter Killer is an excellent ranged damage source."
       },
       {
-        "fr": "Réseau de nydus te permet d'être partout sur la carte.",
-        "en": "Nydus Network lets you be everywhere on the map."
+        "fr": "Tes invocations peuvent tanker les sorts ennemis.",
+        "en": "Your summons can tank enemy spells."
       }
     ],
     "builds": [
