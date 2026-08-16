@@ -15921,6 +15921,19 @@ const HEROES = [
           "en": "Summons an elemental whose attacks deal splash damage and Chill. Can be reactivated to assign it a new target."
         },
         "demoYoutubeId": ""
+      },
+      {
+        "key": "&",
+        "name": {
+          "fr": "Bloc de glace amélioré",
+          "en": "Improved Ice Block"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_improvediceblock.png",
+        "description": {
+          "fr": "Capacité débloquée par la quête de Morsure de givre : rend Jaina temporairement invulnérable. La récompense mythique la fait devenir Glaciation, qui lui permet en plus de se déplacer et de lancer des sorts pendant l'effet.",
+          "en": "Ability unlocked by Frostbite's quest: makes Jaina temporarily Invulnerable. The mythic reward turns it into Ice Cold, which additionally lets her move and cast during it."
+        },
+        "demoYoutubeId": ""
       }
     ],
     "tips": [
@@ -16175,7 +16188,7 @@ const HEROES = [
           "fr": "Barrière de glace",
           "en": "Ice Barrier"
         },
-        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_improvediceblock.png",
+        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_frostarmor.png",
         "description": {
           "fr": "Confère un bouclier temporaire proportionnel aux dégâts de capacité infligés aux cibles glacées.",
           "en": "Grants a temporary Shield based on Ability damage dealt to Chilled targets."
