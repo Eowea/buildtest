@@ -185,7 +185,7 @@
       text-align: center;
     }
 
-    .eyebrow, .filter-chip, .role-badge, .card-head, .talent-level, .build-tab, .guide-video-kicker, .youtube-badge {
+    .eyebrow, .filter-chip, .role-badge, .card-head, .talent-level, .build-tab, .guide-video-kicker, .youtube-badge, .site-update {
       font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -256,27 +256,27 @@
     /* ── Bandeau "Mise à jour du site" (header, sous la navigation) ── */
     /* Calé juste au-dessus des réseaux sociaux (eux-mêmes en absolu, bas-gauche) :
        16px du bas + 28px de hauteur d'icône + 8px d'écart = 52px. */
+    /* La typographie (police, majuscules, graisse) vient de la règle partagée plus haut,
+       comme les autres libellés du site. Ici on ne règle que la taille et les couleurs,
+       reprises du cluster bas-gauche du header auquel ce bandeau appartient désormais :
+       même gris que les icônes sociales au repos, même accent doré au survol que la nav. */
     .site-update {
       position: absolute;
       left: 16px;
       bottom: 52px;
-      display: flex;
-      align-items: baseline;
-      justify-content: flex-start;
+      display: inline-flex;
+      align-items: center;
       flex-wrap: wrap;
-      gap: 2px 7px;
+      gap: 2px 8px;
       max-width: calc(100% - 32px);
+      font-size: 11px;
+      color: var(--text-dim);
+      transition: color var(--t);
     }
+    .site-update:hover { color: var(--gold-bright); }
     .site-update[hidden] { display: none; }
-    .site-update-label {
-      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 700;
-      font-size: 9px;
-      color: var(--gold-dim);
-    }
-    .site-update-date { font-size: 11px; color: var(--text-dim); white-space: nowrap; }
+    .site-update-date { color: var(--text); white-space: nowrap; }
+    .site-update:hover .site-update-date { color: inherit; }
 
     /* ── Header Actions (Lang switcher, bottom-right) ── */
     .header-actions {
