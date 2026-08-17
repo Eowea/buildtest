@@ -22636,8 +22636,8 @@ const HEROES = [
       "en": "Siege bruiser who can take control of a fort."
     },
     "gameplay": {
-      "fr": "Ragnaros alterne entre combat rapproché et poussée de ligne, et peut se transformer en Noyau en fusion pour défendre ou attaquer une structure.",
-      "en": "Ragnaros alternates between melee brawling and lane pushing, and can become a Molten Core to defend or attack a structure."
+      "fr": "Ragnaros alterne entre corps-à-corps et poussée de ligne. Renforcement de Sulfuras le soigne à chaque échange, ce qui lui permet de rester en ligne sans soigneur, et Cœur du Magma le transforme en fort pour tenir une position ou verrouiller une voie entière.",
+      "en": "Ragnaros alternates between brawling and pushing lanes. Empower Sulfuras heals him in every trade, letting him hold a lane without a healer, and Molten Core turns him into a Fort to hold a position or lock down an entire lane."
     },
     "spells": [
       {
@@ -22769,16 +22769,24 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Cœur du Magma sert autant à sauver un fort qu'à en détruire un.",
-        "en": "Molten Core is as good at saving a fort as destroying one."
+        "fr": "Cœur du Magma sert autant à sauver un fort menacé qu'à t'installer sur les ruines d'un fort détruit pour verrouiller la voie.",
+        "en": "Molten Core is as good at saving a threatened Fort as it is at settling on a destroyed one to lock down the lane."
       },
       {
-        "fr": "Météore vivant revient vers toi : place-toi pour le toucher deux fois.",
-        "en": "Living Meteor returns to you: position to hit twice."
+        "fr": "Météore vivant se vise en deux temps : tu choisis d'abord son point de chute, puis la direction dans laquelle il roule.",
+        "en": "Living Meteor is aimed in two steps: first its landing point, then the direction it rolls."
       },
       {
-        "fr": "Vague de lave permet de pousser une ligne entière depuis la sécurité.",
-        "en": "Lava Wave lets you push a whole lane from safety."
+        "fr": "Renforcement de Sulfuras te soigne bien plus sur les héros que sur les sbires : garde-le pour les échanges plutôt que pour nettoyer la vague.",
+        "en": "Empower Sulfuras heals you far more off Heroes than Minions: save it for trades rather than clearing the wave."
+      },
+      {
+        "fr": "En sortant du Cœur du Magma tu es étourdi un instant : quitte la forme avant d'être à sec, pas au milieu d'un combat.",
+        "en": "You are briefly Stunned when leaving Molten Core: exit before running dry, not in the middle of a fight."
+      },
+      {
+        "fr": "Vague explosive peut être lancée sur un allié : elle sert autant à accélérer une poursuite qu'à protéger une fuite.",
+        "en": "Blast Wave can be cast on an ally: it speeds up a chase as well as it covers an escape."
       }
     ],
     "builds": [
