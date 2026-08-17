@@ -22649,8 +22649,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_moltencore.png",
         "description": {
-          "fr": "Canalise sur un fort ou un bastion, allié ou détruit, pour le remplacer par la forme ultime de Ragnaros : il gagne de nouvelles capacités et un énorme réservoir de points de vie qui se consume avec le temps. Il reprend sa forme initiale une fois épuisé.",
-          "en": "Channels on an allied or destroyed Fort or Keep to replace it with Ragnaros's ultimate form: he gains new Abilities and a huge pool of Health that burns away over time. He reverts once it runs out."
+          "fr": "Canalise sur un fort ou un bastion, allié ou détruit, pour le remplacer par la forme ultime de Ragnaros : il gagne de nouvelles capacités et un énorme réservoir de points de vie qui se consume avec le temps. Il reprend sa forme initiale une fois épuisé et se retrouve alors brièvement étourdi. La portée de ses capacités démarre réduite puis s'étend progressivement, sauf pour Frappe de magma.",
+          "en": "Channels on an allied or destroyed Fort or Keep to replace it with Ragnaros's ultimate form: he gains new Abilities and a huge pool of Health that burns away over time. He reverts once it runs out and is briefly Stunned. His Abilities start at reduced range then gradually extend, except for Molten Swing."
         },
         "demoYoutubeId": ""
       },
@@ -22677,8 +22677,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_moltenswing.png",
         "description": {
-          "fr": "Version Cœur du Magma de Renforcement de Sulfuras : inflige des dégâts aux ennemis proches et les étourdit.",
-          "en": "Molten Core version of Empower Sulfuras: damages nearby enemies and Stuns them."
+          "fr": "Version Cœur du Magma de Renforcement de Sulfuras : inflige des dégâts aux ennemis proches, les étourdit et les repousse.",
+          "en": "Molten Core version of Empower Sulfuras: damages nearby enemies, Stuns them and knocks them back."
         },
         "demoYoutubeId": ""
       },
@@ -22705,8 +22705,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_meteorshower.png",
         "description": {
-          "fr": "Version Cœur du Magma de Météore vivant : fait tomber une ligne d'impacts de météores.",
-          "en": "Molten Core version of Living Meteor: drops a line of meteor impacts."
+          "fr": "Version Cœur du Magma de Météore vivant : fait tomber une ligne d'impacts de météores qui ralentissent les ennemis touchés.",
+          "en": "Molten Core version of Living Meteor: drops a line of meteor impacts that Slow enemies hit."
         },
         "demoYoutubeId": ""
       },
@@ -22733,8 +22733,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_explosiverune.png",
         "description": {
-          "fr": "Version Cœur du Magma de Vague explosive : provoque une détonation à retardement sur une large zone.",
-          "en": "Molten Core version of Blast Wave: causes a delayed detonation over a large area."
+          "fr": "Version Cœur du Magma de Vague explosive : provoque une détonation à retardement sur une large zone, qui brûle les ennemis touchés dans la durée.",
+          "en": "Molten Core version of Blast Wave: causes a delayed detonation over a large area that burns enemies hit over time."
         },
         "demoYoutubeId": ""
       },
@@ -22747,8 +22747,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_sulfurassmash.png",
         "description": {
-          "fr": "Projette Sulfuras sur la zone ciblée. Les ennemis touchés subissent des dégâts, bien davantage au centre où ils sont aussi étourdis.",
-          "en": "Hurls Sulfuras at the target area. Enemies hit take damage, far more at the center where they are also Stunned."
+          "fr": "Projette Sulfuras sur la zone ciblée. Les ennemis touchés subissent des dégâts, bien davantage au centre où ils sont aussi étourdis. Quête mythique : toucher suffisamment de héros avec le centre de la frappe lui accorde une charge supplémentaire.",
+          "en": "Hurls Sulfuras at the target area. Enemies hit take damage, far more at the center where they are also Stunned. Mythic quest: hitting enough Heroes with the center grants it an extra charge."
         },
         "demoYoutubeId": ""
       },
@@ -22979,8 +22979,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_sulfurassmash.png",
         "description": {
-          "fr": "Projette Sulfuras sur la zone ciblée. Les ennemis touchés subissent des dégâts, bien davantage au centre où ils sont aussi étourdis.",
-          "en": "Hurls Sulfuras at the target area. Enemies hit take damage, far more at the center where they are also Stunned."
+          "fr": "Projette Sulfuras sur la zone ciblée. Les ennemis touchés subissent des dégâts, bien davantage au centre où ils sont aussi étourdis. Quête mythique : toucher suffisamment de héros avec le centre de la frappe lui accorde une charge supplémentaire.",
+          "en": "Hurls Sulfuras at the target area. Enemies hit take damage, far more at the center where they are also Stunned. Mythic quest: hitting enough Heroes with the center grants it an extra charge."
         },
         "demoYoutubeId": null
       },
@@ -23105,8 +23105,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_lavawave.png",
         "description": {
-          "fr": "Vague de lave gagne une charge supplémentaire et son temps de recharge est réduit.",
-          "en": "Lava Wave gains an extra charge and its cooldown is reduced."
+          "fr": "Vague de lave gagne une charge supplémentaire, et accélère fortement les serviteurs et mercenaires alliés se trouvant sur son passage.",
+          "en": "Lava Wave gains an extra charge, and greatly speeds up allied Minions and Mercenaries caught in its path."
         },
         "demoYoutubeId": null
       },
@@ -23119,8 +23119,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_moltencore.png",
         "description": {
-          "fr": "Cœur du Magma gagne des points de vie et des dégâts, et son temps de recharge est fortement réduit.",
-          "en": "Molten Core gains Health and damage, and its cooldown is greatly reduced."
+          "fr": "Utiliser Cœur du Magma sur un fort ou un bastion détruit réduit fortement son temps de recharge. Passif : augmente la portée initiale et maximale des capacités du Cœur du Magma, sauf Frappe de magma.",
+          "en": "Using Molten Core on a destroyed Fort or Keep greatly reduces its cooldown. Passive: increases the starting and maximum range of Molten Core's Abilities, except Molten Swing."
         },
         "demoYoutubeId": null
       },
