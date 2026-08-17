@@ -22769,24 +22769,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Cœur du Magma sert autant à sauver un fort menacé qu'à t'installer sur les ruines d'un fort détruit pour verrouiller la voie.",
-        "en": "Molten Core is as good at saving a threatened Fort as it is at settling on a destroyed one to lock down the lane."
+        "fr": "Cœur du Magma sauve un fort menacé, ou verrouille la voie sur ses ruines.",
+        "en": "Molten Core saves a threatened Fort, or locks the lane on its ruins."
       },
       {
-        "fr": "Météore vivant se vise en deux temps : tu choisis d'abord son point de chute, puis la direction dans laquelle il roule.",
-        "en": "Living Meteor is aimed in two steps: first its landing point, then the direction it rolls."
+        "fr": "Météore vivant se vise en deux temps : le point de chute, puis la direction.",
+        "en": "Living Meteor is aimed in two steps: the landing point, then the direction."
       },
       {
-        "fr": "Renforcement de Sulfuras te soigne bien plus sur les héros que sur les sbires : garde-le pour les échanges plutôt que pour nettoyer la vague.",
-        "en": "Empower Sulfuras heals you far more off Heroes than Minions: save it for trades rather than clearing the wave."
-      },
-      {
-        "fr": "En sortant du Cœur du Magma tu es étourdi un instant : quitte la forme avant d'être à sec, pas au milieu d'un combat.",
-        "en": "You are briefly Stunned when leaving Molten Core: exit before running dry, not in the middle of a fight."
-      },
-      {
-        "fr": "Vague explosive peut être lancée sur un allié : elle sert autant à accélérer une poursuite qu'à protéger une fuite.",
-        "en": "Blast Wave can be cast on an ally: it speeds up a chase as well as it covers an escape."
+        "fr": "Garde Renforcement de Sulfuras pour les héros : il t'y soigne bien plus.",
+        "en": "Save Empower Sulfuras for Heroes: it heals you far more off them."
       }
     ],
     "builds": [
