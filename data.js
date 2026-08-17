@@ -8088,7 +8088,7 @@ const HEROES = [
       "en": "Global support who influences the whole map without ever being there."
     },
     "gameplay": {
-      "fr": "Abathur reste à l'abri et se greffe sur ses alliés pour les protéger et amplifier leurs dégâts, tout en poussant les lignes avec ses sbires.",
+      "fr": "Abathur reste à l'abri et se greffe sur ses alliés pour les protéger et amplifier leurs dégâts, tout en poussant les lanes avec ses sbires.",
       "en": "Abathur stays safe and symbiotes onto allies to protect them and amplify their damage, while pushing lanes with his minions."
     },
     "spells": [
@@ -8100,7 +8100,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spawnlocust.png",
         "description": {
-          "fr": "Génère régulièrement des criquets qui poussent les lignes.",
+          "fr": "Génère régulièrement des criquets qui poussent les lanes.",
           "en": "Periodically spawns locusts that push lanes."
         },
         "demoYoutubeId": ""
@@ -8638,7 +8638,7 @@ const HEROES = [
       "en": "Diving tank who isolates a target and soaks damage for his team."
     },
     "gameplay": {
-      "fr": "Anub'arak entre en combat avec Charge fouisseuse pour étourdir la ligne arrière, puis survit grâce à Carapace durcie et à ses scarabées qui le soignent en permanence.",
+      "fr": "Anub'arak entre en combat avec Charge fouisseuse pour étourdir la backline, puis survit grâce à Carapace durcie et à ses scarabées qui le soignent en permanence.",
       "en": "Anub'arak engages with Burrow Charge to stun the back line, then survives thanks to Harden Carapace and his beetles, which heal him constantly."
     },
     "spells": [
@@ -8913,7 +8913,7 @@ const HEROES = [
       "en": "Engage bruiser who swaps position with an enemy."
     },
     "gameplay": {
-      "fr": "Artanis attire un héros ennemi hors de position avec Prisme de phase, encaisse grâce à ses boucliers automatiques et pousse fort en ligne.",
+      "fr": "Artanis attire un héros ennemi hors de position avec Prisme de phase, encaisse grâce à ses boucliers automatiques et pousse fort en lane.",
       "en": "Artanis pulls an enemy Hero out of position with Phase Prism, tanks through his automatic shields, and pushes lanes hard."
     },
     "spells": [
@@ -9281,7 +9281,7 @@ const HEROES = [
         "en": "Frozen Tempest drains mana continuously: turn it off out of combat."
       },
       {
-        "fr": "Armée des morts est excellente pour pousser une ligne et bloquer les ennemis.",
+        "fr": "Armée des morts est excellente pour pousser une lane et bloquer les ennemis.",
         "en": "Army of the Dead is great for pushing a lane and body-blocking."
       }
     ],
@@ -9459,7 +9459,7 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_azmodan.png",
     "headline": {
-      "fr": "Assassin de siège qui pousse les lignes et frappe de très loin.",
+      "fr": "Assassin de siège qui pousse les lanes et frappe de très loin.",
       "en": "Siege assassin who pushes lanes and hits from very far away."
     },
     "gameplay": {
@@ -9475,7 +9475,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/azmodan/images/spells/storm_ui_icon_azmodan_generalofhell.png",
         "description": {
-          "fr": "Invoque un démon qui pousse la ligne pour toi.",
+          "fr": "Invoque un démon qui pousse la lane pour toi.",
           "en": "Summons a demon that pushes the lane for you."
         },
         "demoYoutubeId": ""
@@ -9552,7 +9552,7 @@ const HEROES = [
         "en": "Throw your Globe at minion waves to stack your quests."
       },
       {
-        "fr": "Tes démons poussent une ligne pendant que tu joues ailleurs.",
+        "fr": "Tes démons poussent une lane pendant que tu joues ailleurs.",
         "en": "Your demons push a lane while you play elsewhere."
       },
       {
@@ -11490,7 +11490,7 @@ const HEROES = [
         "en": "Pick up Essence from minions: it's your main source of healing."
       },
       {
-        "fr": "Traqueur des fourrés te rend présent partout : soutiens tes lignes.",
+        "fr": "Traqueur des fourrés te rend présent partout : soutiens tes lanes.",
         "en": "Brushstalker lets you be everywhere: support every lane."
       },
       {
@@ -12612,7 +12612,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Vol permet de sauver une ligne ou de fuir : garde-le pour les moments clés.",
+        "fr": "Vol permet de sauver une lane ou de fuir : garde-le pour les moments clés.",
         "en": "Flight can save a lane or escape: keep it for key moments."
       },
       {
@@ -15840,7 +15840,7 @@ const HEROES = [
       "en": "Burst mage who freezes and deletes squishy targets."
     },
     "gameplay": {
-      "fr": "Jaina ralentit tout ce qu'elle touche avec Morsure du froid, ce qui augmente ses propres dégâts et rend les fuites impossibles.",
+      "fr": "Jaina glace tout ce qu'elle touche avec Morsure de givre, ce qui augmente ses propres dégâts et rend les fuites impossibles.",
       "en": "Jaina slows everything she hits with Frostbite, which boosts her own damage and makes escaping impossible."
     },
     "spells": [
@@ -15942,7 +15942,7 @@ const HEROES = [
         "en": "Always Chill your target before your burst: your Abilities will hit harder."
       },
       {
-        "fr": "Blizzard sur une vague de sbires accélère énormément ta ligne.",
+        "fr": "Blizzard sur une vague de sbires accélère énormément ta lane.",
         "en": "Blizzard on a minion wave clears your lane very fast."
       },
       {
@@ -16324,7 +16324,7 @@ const HEROES = [
       "en": "Unkillable tank, the go-to answer against crowd-control comps."
     },
     "gameplay": {
-      "fr": "Johanna encaisse énormément grâce à Peau de fer et à son immunité aux ralentissements. Elle excelle à protéger sa ligne arrière avec Éclat du bouclier.",
+      "fr": "Johanna encaisse énormément grâce à Peau de fer et à son immunité aux ralentissements. Elle excelle à protéger sa backline avec Éclat du bouclier.",
       "en": "Johanna soaks enormous damage with Iron Skin and her slow immunity. She excels at protecting her back line with Shield Glare."
     },
     "spells": [
@@ -18191,7 +18191,7 @@ const HEROES = [
       "en": "Three Heroes for the price of one: the best map presence in the game."
     },
     "gameplay": {
-      "fr": "Les Vikings occupent trois lignes en même temps. Le défi est de les garder en vie tout en gagnant beaucoup plus d'expérience que l'adversaire.",
+      "fr": "Les Vikings occupent trois lanes en même temps. Le défi est de les garder en vie tout en gagnant beaucoup plus d'expérience que l'adversaire.",
       "en": "The Vikings soak three lanes at once. The challenge is keeping them alive while gaining far more experience than the enemy."
     },
     "spells": [
@@ -18289,7 +18289,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Sépare les Vikings sur trois lignes pour prendre l'avantage en niveaux.",
+        "fr": "Sépare les Vikings sur trois lanes pour prendre l'avantage en niveaux.",
         "en": "Split the Vikings across three lanes to build an XP lead."
       },
       {
@@ -20248,7 +20248,7 @@ const HEROES = [
         "en": "Shade of Mephisto: go in, cast, then return to safety."
       },
       {
-        "fr": "Consumer les âmes est global : sers-t'en pour aider une autre ligne.",
+        "fr": "Consumer les âmes est global : sers-t'en pour aider une autre lane.",
         "en": "Consume Souls is global: use it to help another lane."
       }
     ],
@@ -20705,7 +20705,7 @@ const HEROES = [
       "en": "Endless nuisance who keeps coming back thanks to his egg."
     },
     "gameplay": {
-      "fr": "Murky pousse les lignes et harcèle l'ennemi. Sa mort ne coûte pas d'expérience à son équipe tant que son œuf est bien caché.",
+      "fr": "Murky pousse les lanes et harcèle l'ennemi. Sa mort ne coûte pas d'expérience à son équipe tant que son œuf est bien caché.",
       "en": "Murky pushes lanes and harasses the enemy. His death costs his team no experience as long as his egg is well hidden."
     },
     "spells": [
@@ -22636,8 +22636,8 @@ const HEROES = [
       "en": "Siege bruiser who can take control of a fort."
     },
     "gameplay": {
-      "fr": "Ragnaros alterne entre corps-à-corps et poussée de ligne. Renforcement de Sulfuras le soigne à chaque échange, ce qui lui permet de rester en ligne sans soigneur, et Cœur du Magma le transforme en fort pour tenir une position ou verrouiller une voie entière.",
-      "en": "Ragnaros alternates between brawling and pushing lanes. Empower Sulfuras heals him in every trade, letting him hold a lane without a healer, and Molten Core turns him into a Fort to hold a position or lock down an entire lane."
+      "fr": "Ragnaros tient sa lane seul grâce au soin de Renforcement de Sulfuras, et se transforme en fort pour verrouiller une voie entière.",
+      "en": "Ragnaros holds his lane alone thanks to Empower Sulfuras's healing, and turns into a Fort to lock down an entire lane."
     },
     "spells": [
       {
@@ -23445,7 +23445,7 @@ const HEROES = [
       "en": "Bruiser duo: Rexxar stays back while Misha tanks."
     },
     "gameplay": {
-      "fr": "Rexxar dirige Misha, son ours, qui charge et encaisse pour lui. Il peut soigner Misha en permanence, ce qui le rend très difficile à évincer d'une ligne.",
+      "fr": "Rexxar dirige Misha, son ours, qui charge et encaisse pour lui. Il peut soigner Misha en permanence, ce qui le rend très difficile à évincer d'une lane.",
       "en": "Rexxar commands Misha, his bear, who charges and tanks for him. He can heal Misha constantly, making him very hard to push out of a lane."
     },
     "spells": [
@@ -23720,7 +23720,7 @@ const HEROES = [
       "en": "Stealth assassin who sows confusion with mirror images."
     },
     "gameplay": {
-      "fr": "Samuro crée des clones indiscernables pour tromper l'ennemi, pousser plusieurs lignes et frapper depuis l'invisibilité.",
+      "fr": "Samuro crée des clones indiscernables pour tromper l'ennemi, pousser plusieurs lanes et frapper depuis l'invisibilité.",
       "en": "Samuro creates indistinguishable clones to deceive the enemy, push multiple lanes, and strike from stealth."
     },
     "spells": [
@@ -23792,7 +23792,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Utilise tes images pour pousser une ligne pendant que tu es ailleurs.",
+        "fr": "Utilise tes images pour pousser une lane pendant que tu es ailleurs.",
         "en": "Use your images to push a lane while you are elsewhere."
       },
       {
@@ -24474,7 +24474,7 @@ const HEROES = [
       "en": "Self-sufficient bruiser who needs neither mana nor a healer."
     },
     "gameplay": {
-      "fr": "Sonya génère de la Furie pour se soigner avec Tourbillon. Elle est la meilleure ligne solo du jeu grâce à son autonomie totale.",
+      "fr": "Sonya génère de la Furie pour se soigner avec Tourbillon. Elle excelle en solo lane grâce à son autonomie totale.",
       "en": "Sonya builds Fury to heal herself with Whirlwind. She's one of the best solo laners in the game thanks to her total self-sufficiency."
     },
     "spells": [
@@ -24563,7 +24563,7 @@ const HEROES = [
         "en": "Ancient Spear lets you close on a target or escape."
       },
       {
-        "fr": "Tourbillon te soigne : utilise-le sur un groupe de sbires pour rester en ligne.",
+        "fr": "Tourbillon te soigne : utilise-le sur un groupe de sbires pour rester en lane.",
         "en": "Whirlwind heals you: use it on minions to stay in lane."
       },
       {
@@ -25934,7 +25934,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Utilise Éclair en chaîne pour rester en ligne : il te soigne.",
+        "fr": "Utilise Éclair en chaîne pour rester en lane : il te soigne.",
         "en": "Use Chain Lightning to stay in lane: it heals you."
       },
       {
@@ -28588,7 +28588,7 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_zagara.png",
     "headline": {
-      "fr": "Spécialiste zerg qui pousse les lignes sans jamais s'exposer.",
+      "fr": "Spécialiste zerg qui pousse les lanes sans jamais s'exposer.",
       "en": "Zerg specialist who pushes lanes without ever exposing herself."
     },
     "gameplay": {
