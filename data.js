@@ -515,7 +515,7 @@ const HEROES = [
         "id": "tmrryr6jowrwxu",
         "level": 20,
         "name": {
-          "fr": "Présence d'esprit",
+          "fr": "Présence spirituelle",
           "en": "Presence of Mind"
         },
         "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_pyroblast.png",
@@ -1125,7 +1125,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Totem de liens terrestres",
+          "fr": "Totem de lien terrestre",
           "en": "Earthbind Totem"
         },
         "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_earthbindtotem.png",
@@ -5767,7 +5767,7 @@ const HEROES = [
         "id": "tmrryr6jok08jz",
         "level": 10,
         "name": {
-          "fr": "Tranquilité",
+          "fr": "Tranquillité",
           "en": "Tranquility"
         },
         "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_tranquility.jpg",
@@ -6511,7 +6511,7 @@ const HEROES = [
         "id": "tmrryr6jo5wcgu",
         "level": 1,
         "name": {
-          "fr": "Flèche lunaires",
+          "fr": "Flèches lunaires",
           "en": "Moonlit Arrows"
         },
         "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_elunesgrace.png",
@@ -6609,7 +6609,7 @@ const HEROES = [
         "id": "tmrryr6joux1d1",
         "level": 1,
         "name": {
-          "fr": "Ranger",
+          "fr": "Éclaireuse",
           "en": "Ranger"
         },
         "icon": "",
@@ -8190,12 +8190,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -8204,8 +8204,8 @@ const HEROES = [
         "buildCode": "[T1111111,Abathur]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -8465,12 +8465,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -8479,8 +8479,8 @@ const HEROES = [
         "buildCode": "[T1111111,Alarak]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -8740,12 +8740,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -8754,8 +8754,8 @@ const HEROES = [
         "buildCode": "[T1111111,Anubarak]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -9015,12 +9015,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -9029,8 +9029,8 @@ const HEROES = [
         "buildCode": "[T1111111,Artanis]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -9290,12 +9290,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -9304,8 +9304,8 @@ const HEROES = [
         "buildCode": "[T1111111,Arthas]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -9565,12 +9565,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -9579,8 +9579,8 @@ const HEROES = [
         "buildCode": "[T1111111,Azmodan]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -9840,12 +9840,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -9854,8 +9854,8 @@ const HEROES = [
         "buildCode": "[T1111111,Firebat]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -10115,12 +10115,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -10129,8 +10129,8 @@ const HEROES = [
         "buildCode": "[T1111111,Amazon]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -10390,12 +10390,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -10404,8 +10404,8 @@ const HEROES = [
         "buildCode": "[T1111111,Chen]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -10665,12 +10665,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -10679,8 +10679,8 @@ const HEROES = [
         "buildCode": "[T1111111,Cho]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -10940,12 +10940,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -10954,8 +10954,8 @@ const HEROES = [
         "buildCode": "[T1111111,Chromie]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -11215,12 +11215,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -11229,8 +11229,8 @@ const HEROES = [
         "buildCode": "[T1111111,Deathwing]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -11503,12 +11503,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -11517,8 +11517,8 @@ const HEROES = [
         "buildCode": "[T1111111,Dehaka]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -11778,12 +11778,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -11792,8 +11792,8 @@ const HEROES = [
         "buildCode": "[T1111111,Diablo]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -12066,12 +12066,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -12080,8 +12080,8 @@ const HEROES = [
         "buildCode": "[T1111111,DVa]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -12341,12 +12341,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -12355,8 +12355,8 @@ const HEROES = [
         "buildCode": "[T1111111,L90ETC]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -12629,12 +12629,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -12643,8 +12643,8 @@ const HEROES = [
         "buildCode": "[T1111111,Falstad]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -12904,12 +12904,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -12918,8 +12918,8 @@ const HEROES = [
         "buildCode": "[T1111111,Fenix]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -13192,12 +13192,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -13206,8 +13206,8 @@ const HEROES = [
         "buildCode": "[T1111111,Gall]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -13467,12 +13467,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -13481,8 +13481,8 @@ const HEROES = [
         "buildCode": "[T1111111,Garrosh]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -13742,12 +13742,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -13756,8 +13756,8 @@ const HEROES = [
         "buildCode": "[T1111111,Tinker]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -14017,12 +14017,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -14031,8 +14031,8 @@ const HEROES = [
         "buildCode": "[T1111111,Genji]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -14292,12 +14292,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -14306,8 +14306,8 @@ const HEROES = [
         "buildCode": "[T1111111,Greymane]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -14567,12 +14567,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -14581,8 +14581,8 @@ const HEROES = [
         "buildCode": "[T1111111,Guldan]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -14842,12 +14842,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -14856,8 +14856,8 @@ const HEROES = [
         "buildCode": "[T1111111,Hanzo]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -15117,12 +15117,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -15131,8 +15131,8 @@ const HEROES = [
         "buildCode": "[T1111111,Hogger]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -15392,12 +15392,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -15406,8 +15406,8 @@ const HEROES = [
         "buildCode": "[T1111111,Illidan]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -15553,9 +15553,9 @@ const HEROES = [
   },
   {
     "id": "imperius",
-    "enabled": false,
+    "enabled": true,
     "name": {
-      "fr": "Imperius",
+      "fr": "Impérius",
       "en": "Imperius"
     },
     "role": "Bruiser",
@@ -15572,13 +15572,13 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Marque valeureuse",
+          "fr": "Fer de vaillance",
           "en": "Valorous Brand"
         },
         "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_trait.png",
         "description": {
-          "fr": "Marque les ennemis ; la marque explose et te soigne.",
-          "en": "Brands enemies; the brand detonates and heals you."
+          "fr": "Chaque capacité de base marque les héros touchés. Les attaques de base consomment ces marques : elles infligent des dégâts supplémentaires et rendent des points de vie à Impérius pour chacune.",
+          "en": "Each Basic Ability marks Heroes hit. Basic Attacks consume those marks, dealing bonus damage and restoring Health to Imperius for each one."
         },
         "demoYoutubeId": ""
       },
@@ -15590,60 +15590,60 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_q.png",
         "description": {
-          "fr": "Fonce en avant et repousse les ennemis touchés.",
-          "en": "Charges forward, knocking enemies back."
+          "fr": "Fonce dans la direction ciblée et porte un coup de lance. Si un héros est touché, canalise pour l’étourdir et lui infliger des dégâts supplémentaires.",
+          "en": "Lunges in the target direction and stabs. If a Hero is hit, Channels to Stun them and deal additional damage."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "Z",
         "name": {
-          "fr": "Feu de Solarion",
+          "fr": "Flamme de Solarion",
           "en": "Solarion's Fire"
         },
         "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_w.png",
         "description": {
-          "fr": "Vague de flammes en cône.",
-          "en": "Wave of flame in a cone."
+          "fr": "Déchaîne une vague de flammes. Les ennemis pris dans la zone centrale subissent bien plus de dégâts et sont ralentis.",
+          "en": "Unleashes a wave of flame. Enemies caught in the center take far more damage and are Slowed."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "E",
         "name": {
-          "fr": "Armure de feu",
+          "fr": "Radiance",
           "en": "Molten Armor"
         },
         "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_e.png",
         "description": {
-          "fr": "Aura de dégâts autour de toi qui applique ta marque.",
-          "en": "Damaging aura around you that applies your brand."
+          "fr": "Enveloppe Impérius de flammes qui frappent un ennemi proche à intervalles réguliers. Il récupère une part des dégâts infligés, bien davantage contre les héros.",
+          "en": "Shrouds Imperius in flames that strike a nearby enemy at regular intervals. He recovers part of the damage dealt, far more against Heroes."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
         "name": {
-          "fr": "Armement angélique",
+          "fr": "Arsenal angélique",
           "en": "Angelic Armaments"
         },
         "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_r1.png",
         "description": {
-          "fr": "Bouclier et lames tournoyantes que tu peux projeter.",
-          "en": "Shield and spinning blades you can launch outward."
+          "fr": "Invoque un cercle d’épées de feu qui confère un large bouclier. Si le bouclier tient jusqu’au bout, la capacité peut être réactivée pour projeter les épées vers une zone.",
+          "en": "Summons a ring of blazing swords granting a large Shield. If the Shield lasts, the ability can be reactivated to launch the swords toward an area."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
         "name": {
-          "fr": "Courroux des Angiris",
+          "fr": "Fureur des Angiris",
           "en": "Wrath of the Angiris"
         },
         "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_r2.png",
         "description": {
-          "fr": "S'envole et frappe un héros, étourdissant les ennemis proches.",
-          "en": "Flies up and slams a Hero, stunning nearby enemies."
+          "fr": "Charge dans la direction ciblée et emporte le premier héros touché dans les Cieux. Impérius dirige sa chute, puis le fracasse au sol en l’étourdissant, plus fort si la cible est marquée.",
+          "en": "Charges in the target direction and carries the first Hero hit into the Heavens. Imperius steers the landing, then slams them down and Stuns them, harder if the target is marked."
         },
         "demoYoutubeId": ""
       }
@@ -15654,11 +15654,11 @@ const HEROES = [
         "en": "Apply your brand to as many targets as possible before triggering it."
       },
       {
-        "fr": "Armement angélique te donne un bouclier : engage avec.",
+        "fr": "Arsenal angélique te donne un bouclier : engage avec.",
         "en": "Angelic Armaments gives you a shield: engage with it."
       },
       {
-        "fr": "Courroux des Angiris est un excellent outil pour isoler un soigneur.",
+        "fr": "Fureur des Angiris est un excellent outil pour isoler un soigneur.",
         "en": "Wrath of the Angiris is a great tool to isolate a healer."
       }
     ],
@@ -15667,57 +15667,57 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Imperius]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jorjzdo",
+            "primaryId": "tmfp1zq8g03kem",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jopt9ou",
+            "primaryId": "tmfp1zq8g05wqu",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jow176u",
+            "primaryId": "tmfp1zq8g072o5",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jou4upd",
+            "primaryId": "tmfp1zq8g108jg",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jo97mla",
+            "primaryId": "tmfp1zq8g139xr",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jo5b9iq",
+            "primaryId": "tmfp1zq8g163r7",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jossi2v",
+            "primaryId": "tmfp1zq8g184ck",
             "alternativeIds": []
           }
         ]
@@ -15726,100 +15726,310 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jorjzdo",
+        "id": "tmfp1zq8g01qf3",
         "level": 1,
         "name": {
-          "fr": "Impaling Light",
+          "fr": "Illumination",
           "en": "Impaling Light"
         },
-        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_q.png",
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_q.png",
         "description": {
-          "fr": "Celestial Charge's final damage is increased by 75% and its cooldown is reduced by 1.25 seconds for each Valorous Brand on the target when the Stun completes.",
-          "en": "Celestial Charge's final damage is increased by 75% and its cooldown is reduced by 1.25 seconds for each Valorous Brand on the target when the Stun completes."
+          "fr": "Charge céleste inflige bien plus de dégâts aux héros, l'effet diminuant à chaque cible supplémentaire touchée. Chaque marque présente sur la cible réduit son temps de recharge, déjà abaissé passivement avec son coût en mana.",
+          "en": "Celestial Charge deals far more damage to Heroes, reduced for each additional Hero hit. Each mark on the target lowers its cooldown, which is also passively reduced along with its Mana cost."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jopt9ou",
+        "id": "tmfp1zq8g02r1d",
+        "level": 1,
+        "name": {
+          "fr": "Ardeur",
+          "en": "Consuming Flame"
+        },
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_w.png",
+        "description": {
+          "fr": "Augmente fortement les dégâts et le ralentissement de la zone centrale de Flamme de Solarion. Le premier héros touché rend du mana.",
+          "en": "Greatly increases the center damage and Slow of Solarion's Fire. The first Hero hit restores Mana."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmfp1zq8g03kem",
+        "level": 1,
+        "name": {
+          "fr": "Au bûcher !",
+          "en": "Burn the Impure"
+        },
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_trait.png",
+        "description": {
+          "fr": "Consommer une marque inflige des dégâts supplémentaires proportionnels au maximum de points de vie du héros.",
+          "en": "Consuming a mark deals bonus damage based on the Hero's maximum Health."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmfp1zq8g043u7",
         "level": 4,
         "name": {
-          "fr": "Sovereign Armor",
+          "fr": "Armure souveraine",
           "en": "Sovereign Armor"
         },
-        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_e.png",
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_e.png",
         "description": {
-          "fr": "Molten Armor grants 20 Armor for 1.5 seconds. Damaging an enemy Hero with Molten Armor increases the duration of the Armor by 0.5 seconds.",
-          "en": "Molten Armor grants 20 Armor for 1.5 seconds. Damaging an enemy Hero with Molten Armor increases the duration of the Armor by 0.5 seconds."
+          "fr": "Radiance confère de l'armure, dont la durée s'allonge chaque fois qu'elle touche un héros adverse.",
+          "en": "Radiance grants Armor, whose duration extends each time it strikes an enemy Hero."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jow176u",
+        "id": "tmfp1zq8g05wqu",
+        "level": 4,
+        "name": {
+          "fr": "Conflit salvateur",
+          "en": "Battle Hunger"
+        },
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_trait.png",
+        "description": {
+          "fr": "Augmente fortement les soins rendus par Fer de vaillance.",
+          "en": "Greatly increases the healing from Valorous Brand."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmfp1zq8g06m0n",
+        "level": 4,
+        "name": {
+          "fr": "Percée",
+          "en": "Press Forward"
+        },
+        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_globe.png",
+        "description": {
+          "fr": "Confère de l'armure tant qu'un globe de régénération soigne Impérius, et blesser un héros prolonge l'effet du globe en cours.",
+          "en": "Grants Armor while a Regeneration Globe is healing Imperius, and damaging a Hero extends the active Globe."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmfp1zq8g072o5",
         "level": 7,
         "name": {
-          "fr": "Flash of Anger",
+          "fr": "Pointe de colère",
           "en": "Flash of Anger"
         },
-        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_q.png",
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_q.png",
         "description": {
-          "fr": "Consuming a mark from Celestial Charge deals 150 (+4% per level) damage to the target and nearby enemies and grants Imperius a 250 (+4% per level) point Shield for 4 seconds.",
-          "en": "Consuming a mark from Celestial Charge deals 150 (+4% per level) damage to the target and nearby enemies and grants Imperius a 250 (+4% per level) point Shield for 4 seconds."
+          "fr": "Consommer une marque posée par Charge céleste inflige des dégâts à la cible et aux ennemis proches, et confère un bouclier temporaire.",
+          "en": "Consuming a mark from Celestial Charge damages the target and nearby enemies, and grants a temporary Shield."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jou4upd",
+        "id": "tmfp1zq8g08zu3",
+        "level": 7,
+        "name": {
+          "fr": "Rayon de gloire",
+          "en": "Blaze of Glory"
+        },
+        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_w_alt_01.png",
+        "description": {
+          "fr": "Flamme de Solarion laisse une traînée de braises qui explose après un court délai, avec un bonus de dégâts sur les cibles marquées.",
+          "en": "Solarion's Fire leaves a trail of embers that explodes after a short delay, dealing bonus damage to marked targets."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmfp1zq8g09iv6",
+        "level": 7,
+        "name": {
+          "fr": "Sainte ferveur",
+          "en": "Holy Fervor"
+        },
+        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_item_01.png",
+        "description": {
+          "fr": "Capacité active : réinitialise l'attaque de base et rend les suivantes plus puissantes tout en frappant en zone pendant quelques secondes.",
+          "en": "Active: resets the Basic Attack and makes the next few stronger while cleaving for a few seconds."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmfp1zq8g108jg",
         "level": 10,
         "name": {
-          "fr": "Angelic Armaments",
+          "fr": "Arsenal angélique",
           "en": "Angelic Armaments"
         },
-        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_r1.png",
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_r1.png",
         "description": {
-          "fr": "Summon a ring of blazing swords that grants 850 (+4% per level) Shield for 3 seconds.  If the Shield lasts the full duration, this ability can be reactivated within 5 seconds to launch 6 swords toward an area, each dealing 140 (+4% per level) damage to the first enemy hit.",
-          "en": "Summon a ring of blazing swords that grants 850 (+4% per level) Shield for 3 seconds.  If the Shield lasts the full duration, this ability can be reactivated within 5 seconds to launch 6 swords toward an area, each dealing 140 (+4% per level) damage to the first enemy hit."
+          "fr": "Invoque un cercle d'épées de feu qui confère un large bouclier. Si le bouclier tient jusqu'au bout, la capacité peut être réactivée pour projeter les épées vers une zone.",
+          "en": "Summons a ring of blazing swords granting a large Shield. If the Shield lasts, the ability can be reactivated to launch the swords toward an area."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo97mla",
+        "id": "tmfp1zq8g11xcm",
+        "level": 10,
+        "name": {
+          "fr": "Fureur des Angiris",
+          "en": "Wrath of the Angiris"
+        },
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_r2.png",
+        "description": {
+          "fr": "Charge dans la direction ciblée et emporte le premier héros touché dans les cieux. Impérius dirige sa chute, puis fracasse sa cible au sol en l'étourdissant, plus fort si elle est marquée.",
+          "en": "Charges in the target direction and carries the first Hero hit into the sky. Imperius steers the landing, then slams the target down and Stuns them, harder if they are marked."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmfp1zq8g12x7e",
         "level": 13,
         "name": {
-          "fr": "Pathetic Mortals",
+          "fr": "Pitoyables mortels",
           "en": "Pathetic Mortals"
         },
-        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_q.png",
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_q.png",
         "description": {
-          "fr": "Stunning enemy Heroes with Celestial Charge reduces their Movement Speed by 25% and their damage by 50% for 4 seconds.",
-          "en": "Stunning enemy Heroes with Celestial Charge reduces their Movement Speed by 25% and their damage by 50% for 4 seconds."
+          "fr": "Les héros étourdis par Charge céleste voient leur vitesse de déplacement et leurs dégâts fortement réduits pendant quelques secondes.",
+          "en": "Heroes Stunned by Celestial Charge have their Movement Speed and damage greatly reduced for a few seconds."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo5b9iq",
+        "id": "tmfp1zq8g139xr",
+        "level": 13,
+        "name": {
+          "fr": "Rage divine",
+          "en": "Divine Rage"
+        },
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_e.png",
+        "description": {
+          "fr": "Consommer une marque réduit le temps de recharge de Radiance.",
+          "en": "Consuming a mark reduces Radiance's cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmfp1zq8g14fy5",
+        "level": 13,
+        "name": {
+          "fr": "Adversité",
+          "en": "Heat of Battle"
+        },
+        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_e_alt_01.png",
+        "description": {
+          "fr": "Les soins de Radiance sur les héros augmentent à mesure qu'Impérius perd des points de vie.",
+          "en": "Radiance's healing against Heroes increases the more Health Imperius is missing."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmfp1zq8g15nz1",
         "level": 16,
         "name": {
-          "fr": "Celestial Swiftness",
+          "fr": "Élan céleste",
           "en": "Celestial Swiftness"
         },
-        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_q.png",
+        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_item_02.png",
         "description": {
-          "fr": "Gain 20% Movement Speed for 5 seconds after casting Celestial Charge. Gain 40% Attack Speed for 5 seconds for each Hero stunned with Celestial Charge.",
-          "en": "Gain 20% Movement Speed for 5 seconds after casting Celestial Charge. Gain 40% Attack Speed for 5 seconds for each Hero stunned with Celestial Charge."
+          "fr": "Lancer Charge céleste accorde de la vitesse de déplacement, et chaque héros étourdi par elle accorde de la vitesse d'attaque.",
+          "en": "Casting Celestial Charge grants Movement Speed, and each Hero Stunned by it grants Attack Speed."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jossi2v",
+        "id": "tmfp1zq8g163r7",
+        "level": 16,
+        "name": {
+          "fr": "Toucher fusionnel",
+          "en": "Melting Touch"
+        },
+        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_e_alt_01.png",
+        "description": {
+          "fr": "Consommer une marque posée par Radiance réduit temporairement l'armure de la cible.",
+          "en": "Consuming a mark from Radiance temporarily reduces the target's Armor."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmfp1zq8g17x31",
+        "level": 16,
+        "name": {
+          "fr": "Traque des impies",
+          "en": "Valorous Pursuit"
+        },
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_trait.png",
+        "description": {
+          "fr": "Capacité active : se téléporte sur un ennemi marqué et confère temporairement de l'armure.",
+          "en": "Active: teleports to a marked enemy and grants temporary Armor."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmfp1zq8g184ck",
         "level": 20,
         "name": {
-          "fr": "Heavenly Host",
+          "fr": "Armée des Cieux",
           "en": "Heavenly Host"
         },
-        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_r1.png",
+        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_r1_activate.png",
         "description": {
-          "fr": "Nearby allied Heroes gain 600 (+4% per level) Shield for 3 seconds.  If the Shield lasts the full duration, fire a sword at the nearest enemy Hero, dealing 140 (+4% per level) damage.",
-          "en": "Nearby allied Heroes gain 600 (+4% per level) Shield for 3 seconds.  If the Shield lasts the full duration, fire a sword at the nearest enemy Hero, dealing 140 (+4% per level) damage."
+          "fr": "Les boucliers d'Arsenal angélique n'expirent plus, et les alliés proches en reçoivent un à l'activation. Un bouclier allié qui tient assez longtemps décoche une épée sur un ennemi proche.",
+          "en": "Angelic Armaments' Shields no longer expire, and nearby allies gain one on activation. An allied Shield that lasts long enough fires a sword at a nearby enemy."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmfp1zq8g19o91",
+        "level": 20,
+        "name": {
+          "fr": "Déchéance",
+          "en": "Unrelenting Descent"
+        },
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_r2.png",
+        "description": {
+          "fr": "Retomber des cieux rend une part des points de vie et du mana d'Impérius. Consommer une marque réduit le temps de recharge de Fureur des Angiris.",
+          "en": "Descending from the sky restores part of Imperius's Health and Mana. Consuming a mark reduces Wrath of the Angiris's cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmfp1zq8g209cm",
+        "level": 20,
+        "name": {
+          "fr": "Courroux ardent",
+          "en": "Molten Wrath"
+        },
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_e.png",
+        "description": {
+          "fr": "Augmente le rayon de Radiance, qui frappe désormais toujours des cibles supplémentaires, même en présence de héros.",
+          "en": "Increases Radiance's radius, and it now always strikes additional targets, even with Heroes in range."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmfp1zq8g21aki",
+        "level": 20,
+        "name": {
+          "fr": "Brûlure de Solarion",
+          "en": "Brand of Solarion"
+        },
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_trait.png",
+        "description": {
+          "fr": "Réduit la durée de Fer de vaillance, mais la marque n'est plus consommée lorsqu'elle se déclenche.",
+          "en": "Reduces Valorous Brand's duration, but the mark is no longer consumed when triggered."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmfp1zq8g22yka",
+        "level": 20,
+        "name": {
+          "fr": "Inexorable",
+          "en": "Impervious"
+        },
+        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_item_03.png",
+        "description": {
+          "fr": "Capacité active : rend Impérius increvable et lui confère de l'armure anti-sort. Toucher des héros avec le centre de Flamme de Solarion réduit son temps de recharge.",
+          "en": "Active: makes Imperius Unstoppable and grants Spell Armor. Hitting Heroes with the center of Solarion's Fire reduces its cooldown."
         },
         "demoYoutubeId": null
       }
@@ -16426,12 +16636,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -16440,8 +16650,8 @@ const HEROES = [
         "buildCode": "[T1111111,Crusader]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -16701,12 +16911,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -16715,8 +16925,8 @@ const HEROES = [
         "buildCode": "[T1111111,Junkrat]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -16976,12 +17186,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -16990,8 +17200,8 @@ const HEROES = [
         "buildCode": "[T1111111,KelThuzad]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -17251,12 +17461,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -17265,8 +17475,8 @@ const HEROES = [
         "buildCode": "[T1111111,Kerrigan]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -17526,12 +17736,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -17540,8 +17750,8 @@ const HEROES = [
         "buildCode": "[T1111111,Leoric]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -18306,12 +18516,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -18320,8 +18530,8 @@ const HEROES = [
         "buildCode": "[T1111111,LostVikings]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -18594,12 +18804,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -18608,8 +18818,8 @@ const HEROES = [
         "buildCode": "[T1111111,Dryad]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -18869,12 +19079,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -18883,8 +19093,8 @@ const HEROES = [
         "buildCode": "[T1111111,Maiev]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -19144,12 +19354,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -19158,8 +19368,8 @@ const HEROES = [
         "buildCode": "[T1111111,MalGanis]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -19419,12 +19629,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -19433,8 +19643,8 @@ const HEROES = [
         "buildCode": "[T1111111,Malthael]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -19707,12 +19917,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -19721,8 +19931,8 @@ const HEROES = [
         "buildCode": "[T1111111,Medivh]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -19982,12 +20192,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -19996,8 +20206,8 @@ const HEROES = [
         "buildCode": "[T1111111,MeiOW]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -20257,12 +20467,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -20271,8 +20481,8 @@ const HEROES = [
         "buildCode": "[T1111111,Mephisto]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -20532,12 +20742,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -20546,8 +20756,8 @@ const HEROES = [
         "buildCode": "[T1111111,Muradin]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -20807,12 +21017,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -20821,8 +21031,8 @@ const HEROES = [
         "buildCode": "[T1111111,Murky]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -21625,12 +21835,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -21639,8 +21849,8 @@ const HEROES = [
         "buildCode": "[T1111111,Nova]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -21900,12 +22110,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -21914,8 +22124,8 @@ const HEROES = [
         "buildCode": "[T1111111,Orphea]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -22188,12 +22398,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -22202,8 +22412,8 @@ const HEROES = [
         "buildCode": "[T1111111,Probius]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -22463,12 +22673,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -22477,8 +22687,8 @@ const HEROES = [
         "buildCode": "[T1111111,NexusHunter]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -23272,12 +23482,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -23286,8 +23496,8 @@ const HEROES = [
         "buildCode": "[T1111111,Raynor]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -23547,12 +23757,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -23561,8 +23771,8 @@ const HEROES = [
         "buildCode": "[T1111111,Rexxar]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -23809,12 +24019,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -23823,8 +24033,8 @@ const HEROES = [
         "buildCode": "[T1111111,Samuro]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -24222,7 +24432,7 @@ const HEROES = [
         "id": "tmw9c4hmr05wul",
         "level": 4,
         "name": {
-          "fr": "Poliocétique",
+          "fr": "Poliorcétique",
           "en": "Siege Tactics"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_neosteelplating.png",
@@ -24418,7 +24628,7 @@ const HEROES = [
         "id": "tmw9c4hmr19hit",
         "level": 20,
         "name": {
-          "fr": "Frappe de lave avancée",
+          "fr": "Frappe de lave améliorée",
           "en": "Advanced Lava Strike"
         },
         "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_napalmstrike.png",
@@ -24576,12 +24786,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -24590,8 +24800,8 @@ const HEROES = [
         "buildCode": "[T1111111,Barbarian]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -24851,12 +25061,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -24865,8 +25075,8 @@ const HEROES = [
         "buildCode": "[T1111111,Stitches]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -25126,12 +25336,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -25140,8 +25350,8 @@ const HEROES = [
         "buildCode": "[T1111111,Sylvanas]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -25401,12 +25611,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -25415,8 +25625,8 @@ const HEROES = [
         "buildCode": "[T1111111,Tassadar]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -25676,12 +25886,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -25690,8 +25900,8 @@ const HEROES = [
         "buildCode": "[T1111111,Butcher]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -25951,12 +26161,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -25965,8 +26175,8 @@ const HEROES = [
         "buildCode": "[T1111111,Thrall]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -26213,12 +26423,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -26227,8 +26437,8 @@ const HEROES = [
         "buildCode": "[T1111111,Tracer]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -26802,7 +27012,7 @@ const HEROES = [
         "id": "tmd9vhtv015a9r",
         "level": 16,
         "name": {
-          "fr": "Munitions anti-blindage",
+          "fr": "Munitions anti blindage",
           "en": "Armor Piercing Rounds"
         },
         "icon": "assets/heroes/base_spells/tychus/images/spells/storm_ui_icon_tychus_overkill.png",
@@ -27031,12 +27241,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -27045,8 +27255,8 @@ const HEROES = [
         "buildCode": "[T1111111,Tyrael]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -27306,12 +27516,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -27320,8 +27530,8 @@ const HEROES = [
         "buildCode": "[T1111111,Valeera]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -27581,12 +27791,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -27595,8 +27805,8 @@ const HEROES = [
         "buildCode": "[T1111111,DemonHunter]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -27869,12 +28079,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -27883,8 +28093,8 @@ const HEROES = [
         "buildCode": "[T1111111,Varian]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -28144,12 +28354,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -28158,8 +28368,8 @@ const HEROES = [
         "buildCode": "[T1111111,Necromancer]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -28419,12 +28629,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -28433,8 +28643,8 @@ const HEROES = [
         "buildCode": "[T1111111,Yrel]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -29166,12 +29376,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -29180,8 +29390,8 @@ const HEROES = [
         "buildCode": "[T1111111,Zarya]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -29441,12 +29651,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -29455,8 +29665,8 @@ const HEROES = [
         "buildCode": "[T1111111,Zeratul]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
@@ -29716,12 +29926,12 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build de départ",
-          "en": "Starter Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
-          "fr": "Une base solide et polyvalente, à personnaliser selon la partie.",
-          "en": "A solid, versatile baseline to adapt to each game."
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -29730,8 +29940,8 @@ const HEROES = [
         "buildCode": "[T1111111,Zuljin]",
         "videos": [],
         "updatedAt": {
-          "fr": "19 Juillet 2026",
-          "en": "July 19, 2026"
+          "fr": "16 Août 2026",
+          "en": "August 16, 2026"
         },
         "talentSelections": [
           {
