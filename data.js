@@ -8076,7 +8076,7 @@ const HEROES = [
   },
   {
     "id": "abathur",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Abathur",
       "en": "Abathur"
@@ -8094,79 +8094,127 @@ const HEROES = [
     "spells": [
       {
         "key": "Trait",
+        "form": "normal",
         "name": {
           "fr": "Souche nuisible",
           "en": "Locust Strain"
         },
         "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spawnlocust.png",
         "description": {
-          "fr": "Génère régulièrement des criquets qui poussent les lanes.",
-          "en": "Periodically spawns locusts that push lanes."
+          "fr": "Invoque des nuisibles qui partent au combat dans la voie la plus proche.",
+          "en": "Spawn locusts that attack down the nearest lane"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
+        "form": "normal",
         "name": {
           "fr": "Symbiote",
           "en": "Symbiote"
         },
         "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_symbiote.png",
         "description": {
-          "fr": "Se greffe sur un allié pour lui donner un bouclier et des capacités.",
-          "en": "Attaches to an ally, granting a shield and extra abilities."
+          "fr": "Aide un allié et gagne de nouvelles capacités.",
+          "en": "Assist an ally and gain new abilities"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "Z",
+        "form": "normal",
         "name": {
           "fr": "Nid toxique",
           "en": "Toxic Nest"
         },
         "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_toxicnest.png",
         "description": {
-          "fr": "Pose une mine qui explose au passage d'un ennemi.",
-          "en": "Places a mine that explodes when an enemy walks over it."
+          "fr": "Pose une mine.",
+          "en": "Spawn a mine"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
+        "form": "normal",
         "name": {
-          "fr": "Monstruosité évoluée",
+          "fr": "Évolution de monstruosité",
           "en": "Evolve Monstrosity"
         },
         "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_evolvemonstrosity.png",
         "description": {
-          "fr": "Crée une monstruosité qui grandit à chaque victime.",
-          "en": "Creates a Monstrosity that grows with every kill."
+          "fr": "Change un serviteur ou un nuisible en monstruosité.",
+          "en": "Minion or Locust becomes a powerful Monstrosity"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
+        "form": "normal",
         "name": {
           "fr": "Évolution ultime",
           "en": "Ultimate Evolution"
         },
         "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_ultimateevolution.png",
         "description": {
-          "fr": "Clone un héros allié et le contrôle temporairement.",
-          "en": "Clones an allied Hero and controls it temporarily."
+          "fr": "Clone un héros allié ciblé et en prend le contrôle.",
+          "en": "Clone target allied Hero and control it"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "W",
+        "form": "normal",
         "name": {
           "fr": "Tunnel",
           "en": "Deep Tunnel"
         },
         "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_mount.png",
         "description": {
-          "fr": "Se téléporte vers n'importe quelle zone visible de la carte.",
-          "en": "Teleports to any visible area of the map."
+          "fr": "Transfère à un endroit ciblé.",
+          "en": "Tunnel to a location."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "A",
+        "form": "symbiote",
+        "name": {
+          "fr": "Piqûre",
+          "en": "Stab"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_stab.png",
+        "description": {
+          "fr": "Projette un aiguillon qui inflige des dégâts au premier ennemi qu’il touche.",
+          "en": "Shoots a spike that deals damage to the first enemy it contacts."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "Z",
+        "form": "symbiote",
+        "name": {
+          "fr": "Explosion d’aiguillons",
+          "en": "Spike Burst"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spikeburst.png",
+        "description": {
+          "fr": "Frappe les ennemis proches.",
+          "en": "Damage nearby enemies"
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "E",
+        "form": "symbiote",
+        "name": {
+          "fr": "Carapace",
+          "en": "Carapace"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_carapace.png",
+        "description": {
+          "fr": "Confère un bouclier temporaire à l'allié porteur du symbiote.",
+          "en": "Grants the Symbiote host a temporary Shield."
         },
         "demoYoutubeId": ""
       }
@@ -8201,7 +8249,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Abathur]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -8210,37 +8258,37 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6johcnly",
+            "primaryId": "tmatgxdrn01uxs",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jozvn10",
+            "primaryId": "tmatgxdrn05moo",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jo65u4b",
+            "primaryId": "tmatgxdrn08bvh",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jomwjcq",
+            "primaryId": "tmatgxdrn11cb0",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jowkmum",
+            "primaryId": "tmatgxdrn139l6",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jozch9k",
+            "primaryId": "tmatgxdrn16gp5",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jo06qcu",
+            "primaryId": "tmatgxdrn20bss",
             "alternativeIds": []
           }
         ]
@@ -8249,105 +8297,344 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6johcnly",
+        "id": "tmatgxdrn01uxs",
         "level": 1,
         "name": {
-          "fr": "Pressurized Glands",
+          "fr": "Glandes pressurisées",
           "en": "Pressurized Glands"
         },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_spikeburst.png",
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spikeburst.png",
         "description": {
-          "fr": "Increases the range of Symbiote's Spike Burst by 25% and decreases the cooldown by 1 second.",
-          "en": "Increases the range of Symbiote's Spike Burst by 25% and decreases the cooldown by 1 second."
+          "fr": "Augmente la portée d’Explosion d’aiguillons et en réduit le temps de recharge.",
+          "en": "Increases Spike Burst range and decreases cooldown"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jozvn10",
+        "id": "tmatgxdrn02dut",
+        "level": 1,
+        "name": {
+          "fr": "Nid envenimé",
+          "en": "Envenomed Nest"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_toxicnest.png",
+        "description": {
+          "fr": "Nid toxique inflige plus de dégâts et réduit l’armure.",
+          "en": "Toxic Nests deal more damage, reduce Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn033o3",
+        "level": 1,
+        "name": {
+          "fr": "Carapace renforcée",
+          "en": "Reinforced Carapace"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_carapace.png",
+        "description": {
+          "fr": "Augmente le bouclier de Carapace.",
+          "en": "Increase Carapace Shield"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn04o4s",
+        "level": 1,
+        "name": {
+          "fr": "Instinct de survie",
+          "en": "Survival Instincts"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spawnlocust.png",
+        "description": {
+          "fr": "Augmente les points de vie et les dégâts des nuisibles.",
+          "en": "Increases Locust Health and damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn05moo",
         "level": 4,
         "name": {
-          "fr": "Adrenal Overload",
+          "fr": "Surcharge d’adrénaline",
           "en": "Adrenal Overload"
         },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_symbiote.png",
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_symbiote.png",
         "description": {
-          "fr": "Heroic Symbiote hosts gain 25% increased Attack Speed.",
-          "en": "Heroic Symbiote hosts gain 25% increased Attack Speed."
+          "fr": "Augmente la vitesse d’attaque de l’hôte du symbiote.",
+          "en": "Symbiote host gains Attack Speed"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo65u4b",
+        "id": "tmatgxdrn061cy",
+        "level": 4,
+        "name": {
+          "fr": "Aiguillon perforant",
+          "en": "Needlespine"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_stab.png",
+        "description": {
+          "fr": "Augmente les dégâts et la portée de Piqûre.",
+          "en": "Increases Stab damage and range"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn07jwj",
+        "level": 4,
+        "name": {
+          "fr": "Dispersion prolifique",
+          "en": "Prolific Dispersal"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_toxicnest.png",
+        "description": {
+          "fr": "Augmente les charges de Nid toxique et leur durée.",
+          "en": "Increases Toxic Nest charges, duration"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn08bvh",
         "level": 7,
         "name": {
-          "fr": "Vile Nest",
+          "fr": "Nid infâme",
           "en": "Vile Nest"
         },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_toxicnest.png",
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_toxicnest.png",
         "description": {
-          "fr": "Toxic Nests Slow enemy Movement Speed by 40% for 2.5 seconds.",
-          "en": "Toxic Nests Slow enemy Movement Speed by 40% for 2.5 seconds."
+          "fr": "Nid toxique diminue la vitesse de déplacement.",
+          "en": "Toxic Nests slow Move Speed"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jomwjcq",
+        "id": "tmatgxdrn09dop",
+        "level": 7,
+        "name": {
+          "fr": "Carapace en réseau",
+          "en": "Networked Carapace"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_carapace.png",
+        "description": {
+          "fr": "Carapace protège tous les alliés proches.",
+          "en": "Carapace Shields all nearby allies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn10wc1",
+        "level": 7,
+        "name": {
+          "fr": "Envoi : MULE",
+          "en": "Calldown: MULE"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_mule.png",
+        "description": {
+          "fr": "Répare les bâtiments.",
+          "en": "Activate to heal Structures"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn11cb0",
         "level": 10,
         "name": {
-          "fr": "Ultimate Evolution",
+          "fr": "Évolution ultime",
           "en": "Ultimate Evolution"
         },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_ultimateevolution.png",
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_ultimateevolution.png",
         "description": {
-          "fr": "Clone target allied Hero and control it for 20 seconds. Abathur has perfected the clone, granting it 20% Spell Power, 20% bonus Attack Damage, and 10% bonus Movement Speed. Cannot use their Heroic Ability.",
-          "en": "Clone target allied Hero and control it for 20 seconds. Abathur has perfected the clone, granting it 20% Spell Power, 20% bonus Attack Damage, and 10% bonus Movement Speed. Cannot use their Heroic Ability."
+          "fr": "Clone un héros allié ciblé et en prend le contrôle.",
+          "en": "Clone target allied Hero and control it"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jowkmum",
+        "id": "tmatgxdrn125az",
+        "level": 10,
+        "name": {
+          "fr": "Évolution de monstruosité",
+          "en": "Evolve Monstrosity"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_evolvemonstrosity.png",
+        "description": {
+          "fr": "Change un serviteur ou un nuisible en monstruosité.",
+          "en": "Minion or Locust becomes a powerful Monstrosity"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn139l6",
         "level": 13,
         "name": {
-          "fr": "Spatial Efficiency",
+          "fr": "Efficience volumétrique",
           "en": "Spatial Efficiency"
         },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_stab.png",
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_stab.png",
         "description": {
-          "fr": "Symbiote's Stab gains 1 additional charge and its cooldown is reduced by .5 seconds.",
-          "en": "Symbiote's Stab gains 1 additional charge and its cooldown is reduced by .5 seconds."
+          "fr": "Piqûre gagne une charge.",
+          "en": "Stab gains an additional charge"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jozch9k",
+        "id": "tmatgxdrn14tlp",
+        "level": 13,
+        "name": {
+          "fr": "Transfert somatique",
+          "en": "Soma Transference"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spikeburst.png",
+        "description": {
+          "fr": "Rend des points de vie pour chaque héros adverse touché.",
+          "en": "Spike Burst heals for each Hero hit"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn15853",
+        "level": 13,
+        "name": {
+          "fr": "Souche bombardier",
+          "en": "Bombard Strain"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spawnlocust.png",
+        "description": {
+          "fr": "Les nuisibles gagnent une attaque à longue portée et durent plus longtemps.",
+          "en": "Locusts gain a ranged attack, increased duration"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn16gp5",
         "level": 16,
         "name": {
-          "fr": "Envenomed Spikes",
+          "fr": "Aiguillons envenimés",
           "en": "Envenomed Spikes"
         },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_spikeburst.png",
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spikeburst.png",
         "description": {
-          "fr": "Abathur's Symbiote's Spike Burst also Slows enemy Movement Speed by 40% for 2 seconds.",
-          "en": "Abathur's Symbiote's Spike Burst also Slows enemy Movement Speed by 40% for 2 seconds."
+          "fr": "Explosion d’aiguillons ralentit les ennemis.",
+          "en": "Spike Burst Slows Move Speed"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo06qcu",
+        "id": "tmatgxdrn170r2",
+        "level": 16,
+        "name": {
+          "fr": "Décharge d’adrénaline",
+          "en": "Adrenaline Boost"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_carapace.png",
+        "description": {
+          "fr": "Carapace augmente la vitesse de déplacement.",
+          "en": "Carapace increases Move Speed"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn18c37",
+        "level": 16,
+        "name": {
+          "fr": "Mutation volatile",
+          "en": "Volatile Mutation"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_volatilemutation.png",
+        "description": {
+          "fr": "Les créatures héroïques invoquées ont une aura de dégâts.",
+          "en": "Heroic summons radiate damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn19z3h",
+        "level": 16,
+        "name": {
+          "fr": "Couvée de nuisibles",
+          "en": "Locust Brood"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spawnlocust.png",
+        "description": {
+          "fr": "Génère un groupe de nuisibles.",
+          "en": "Spawn a group of Locusts"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn20bss",
         "level": 20,
         "name": {
-          "fr": "Evolutionary Link",
+          "fr": "Chaînon évolutif",
           "en": "Evolutionary Link"
         },
-        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_ultimateevolution.png",
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_ultimateevolution.png",
         "description": {
-          "fr": "Increase the duration of Ultimate Evolution by 50%.  As long as the Ultimate Evolution is alive, the original target of the clone gains a Shield equal to 35% of their maximum Health.  Refreshes every 5 seconds.",
-          "en": "Increase the duration of Ultimate Evolution by 50%.  As long as the Ultimate Evolution is alive, the original target of the clone gains a Shield equal to 35% of their maximum Health.  Refreshes every 5 seconds."
+          "fr": "La cible d’Évolution ultime obtient un bouclier.",
+          "en": "Ultimate Evolution target gets a Shield"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn21jsg",
+        "level": 20,
+        "name": {
+          "fr": "Évolution terminée",
+          "en": "Evolution Complete"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_evolvemonstrosity.png",
+        "description": {
+          "fr": "Augmente les dégâts d’attaque de la monstruosité.",
+          "en": "Monstrosity gains Attack Damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn22bhc",
+        "level": 20,
+        "name": {
+          "fr": "Conscience collective",
+          "en": "Hivemind"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_symbiote.png",
+        "description": {
+          "fr": "Crée deux symbiotes.",
+          "en": "Symbiote two targets"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn23c7b",
+        "level": 20,
+        "name": {
+          "fr": "Nid de nuisibles",
+          "en": "Locust Nest"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_locustnest.png",
+        "description": {
+          "fr": "Crée un nid qui génère des nuisibles.",
+          "en": "Create Locust Nests"
         },
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [
+      {
+        "id": "normal",
+        "label": {
+          "fr": "Forme normale",
+          "en": "Normal Form"
+        }
+      },
+      {
+        "id": "symbiote",
+        "label": {
+          "fr": "Symbiote",
+          "en": "Symbiote"
+        }
+      }
+    ]
   },
   {
     "id": "alarak",
@@ -18389,7 +18676,7 @@ const HEROES = [
   },
   {
     "id": "lostvikings",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Les Vikings perdus",
       "en": "The Lost Vikings"
@@ -18408,15 +18695,16 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Trésor viking",
+          "fr": "Butin viking",
           "en": "Viking Hoard"
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_vikinghoard.png",
         "description": {
-          "fr": "Les Vikings accumulent des bonus en survivant et en collectant.",
-          "en": "The Vikings gain bonuses by surviving and collecting."
+          "fr": "Collecter des globes de régénération augmente la récupération de vie.",
+          "en": "Gather Regen Globes to increase Health Regen"
         },
-        "demoYoutubeId": ""
+        "demoYoutubeId": "",
+        "form": "normal"
       },
       {
         "key": "A",
@@ -18426,10 +18714,11 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_spintowin.png",
         "description": {
-          "fr": "Olaf tournoie et inflige des dégâts autour de lui.",
-          "en": "Olaf spins, damaging enemies around him."
+          "fr": "Inflige des dégâts autour de chacun des Vikings.",
+          "en": "Deals damage around each Viking"
         },
-        "demoYoutubeId": ""
+        "demoYoutubeId": "",
+        "form": "normal"
       },
       {
         "key": "Z",
@@ -18439,10 +18728,11 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_jump.png",
         "description": {
-          "fr": "Erik bondit pour se repositionner.",
-          "en": "Erik leaps to reposition."
+          "fr": "Rend momentanément invulnérable",
+          "en": "Grants temporary Invulnerability"
         },
-        "demoYoutubeId": ""
+        "demoYoutubeId": "",
+        "form": "normal"
       },
       {
         "key": "E",
@@ -18450,12 +18740,13 @@ const HEROES = [
           "fr": "Graissage de patte",
           "en": "Viking Bribery"
         },
-        "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_talent_bribe.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_bribe.png",
         "description": {
-          "fr": "Corrompt un camp de mercenaires pour le rallier.",
-          "en": "Bribes a mercenary camp to join you."
+          "fr": "Tuer des serviteurs permet de recruter des mercenaires.",
+          "en": "Kill Minions to bribe a Mercenary"
         },
-        "demoYoutubeId": ""
+        "demoYoutubeId": "",
+        "form": "normal"
       },
       {
         "key": "R1",
@@ -18465,10 +18756,11 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_longboatraid.png",
         "description": {
-          "fr": "Les trois Vikings montent dans un drakkar et bombardent.",
-          "en": "The three Vikings board a longboat and bombard enemies."
+          "fr": "Fait monter dans un drakkar pour attaquer les ennemis.",
+          "en": "Load into a Longboat to attack enemies"
         },
-        "demoYoutubeId": ""
+        "demoYoutubeId": "",
+        "form": "normal"
       },
       {
         "key": "R2",
@@ -18478,10 +18770,11 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_playagain.png",
         "description": {
-          "fr": "Les Vikings ressuscitent bien plus vite.",
-          "en": "The Vikings respawn much faster."
+          "fr": "Ranime et invoque les Vikings",
+          "en": "Revive and summon Vikings"
         },
-        "demoYoutubeId": ""
+        "demoYoutubeId": "",
+        "form": "normal"
       },
       {
         "key": "W",
@@ -18491,8 +18784,23 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_mount.png",
         "description": {
-          "fr": "Augmente la vitesse de déplacement des trois Vikings.",
-          "en": "Increases all three Vikings' Movement Speed."
+          "fr": "Augmente de <c val=\"#TooltipNumbers\"><d ref=\"100*Behavior,LostVikingsGoGoGo,Modification.UnifiedMoveSpeedFactor\"/>%</c> la vitesse de déplacement.",
+          "en": "Gain <c val=\"bfd4fd\">30%</c> increased Movement Speed"
+        },
+        "demoYoutubeId": "",
+        "form": "normal"
+      },
+      {
+        "key": "A",
+        "form": "drakkar",
+        "name": {
+          "fr": "Mortier",
+          "en": "Mortar"
+        },
+        "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_mortar.png",
+        "description": {
+          "fr": "Tire un obus de mortier sur l'endroit ciblé, infligeant des dégâts dans une large zone.",
+          "en": "Fires a mortar at the targeted location, dealing damage in a large area."
         },
         "demoYoutubeId": ""
       }
@@ -18527,7 +18835,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,LostVikings]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -18536,37 +18844,37 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jottmsq",
+            "primaryId": "tmdxk6lgh01fy9",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jolz5hd",
+            "primaryId": "tmdxk6lgh05dw0",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6joplq4y",
+            "primaryId": "tmdxk6lgh09qgj",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6joubqlk",
+            "primaryId": "tmdxk6lgh1223j",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jok4izl",
+            "primaryId": "tmdxk6lgh143k8",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jomttxx",
+            "primaryId": "tmdxk6lgh171du",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6joz1okt",
+            "primaryId": "tmdxk6lgh21dbr",
             "alternativeIds": []
           }
         ]
@@ -18575,105 +18883,358 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jottmsq",
+        "id": "tmdxk6lgh01fy9",
         "level": 1,
         "name": {
-          "fr": "Olaf the Stout",
+          "fr": "Olaf le Coriace",
           "en": "Olaf the Stout"
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_selectolaf.png",
         "description": {
-          "fr": "Passive: Olaf gains 20% bonus maximum Health.  Every 5 seconds, Olaf gains 75 Physical Armor against the next enemy Hero Basic Attack, reducing the damage taken by 75%.  Stores up to 2 charges.",
-          "en": "Passive: Olaf gains 20% bonus maximum Health.  Every 5 seconds, Olaf gains 75 Physical Armor against the next enemy Hero Basic Attack, reducing the damage taken by 75%.  Stores up to 2 charges."
+          "fr": "Olaf gagne des points de vie supplémentaires et de l’armure physique.",
+          "en": "Olaf gains Health, Physical Armor"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jolz5hd",
+        "id": "tmdxk6lgh02o0s",
+        "level": 1,
+        "name": {
+          "fr": "Jeu d’espions",
+          "en": "Spy Games"
+        },
+        "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_selecterik.png",
+        "description": {
+          "fr": "Camoufle Erik et augmente sa vision s’il reste immobile.",
+          "en": "Erik gains Stealth and increases vision if stationary"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh03hhm",
+        "level": 1,
+        "name": {
+          "fr": "Attaques explosives",
+          "en": "Explosive Attacks"
+        },
+        "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_selectbaleog.png",
+        "description": {
+          "fr": "Augmente les dégâts de zone infligés par Baleog aux ennemis non héroïques.",
+          "en": "Increases Baleog splash to non-Heroic enemies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh047gf",
+        "level": 1,
+        "name": {
+          "fr": "Graissage de patte",
+          "en": "Viking Bribery"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_bribe.png",
+        "description": {
+          "fr": "Tuer des serviteurs permet de recruter des mercenaires.",
+          "en": "Kill Minions to bribe a Mercenary"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh05dw0",
         "level": 4,
         "name": {
-          "fr": "Pain Don't Hurt",
+          "fr": "Douleur exquise",
           "en": "Pain Don't Hurt"
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_selectbaleog.png",
         "description": {
-          "fr": "Baleog's Basic Attacks and splash damage heal for 20% of the damage dealt. Healing is doubled against Heroes.",
-          "en": "Baleog's Basic Attacks and splash damage heal for 20% of the damage dealt. Healing is doubled against Heroes."
+          "fr": "Permet à Baleog de récupérer des points de vie en attaquant.",
+          "en": "Baleog's attacks heal himself"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joplq4y",
+        "id": "tmdxk6lgh06jxr",
+        "level": 4,
+        "name": {
+          "fr": "Erik le Rapide",
+          "en": "Erik the Swift"
+        },
+        "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_selecterik.png",
+        "description": {
+          "fr": "Augmente la vitesse de déplacement d’Erik et lui rend des points de vie tant qu’il court.",
+          "en": "Increases Erik's Move Speed and heal while running"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh07db2",
+        "level": 4,
+        "name": {
+          "fr": "C’est du sabotage !",
+          "en": "It's a Sabotage!"
+        },
+        "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_selecterik_var1.png",
+        "description": {
+          "fr": "Renforce les attaques d’Erik portées aux bâtiments. ",
+          "en": "Erik's attacks stronger against Structures"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh08bpa",
+        "level": 4,
+        "name": {
+          "fr": "Seigneur mercenaire",
+          "en": "Mercenary Lord"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_mercenarylord.png",
+        "description": {
+          "fr": "Renforce les mercenaires proches.",
+          "en": "Empower nearby Mercenaries"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh09qgj",
         "level": 7,
         "name": {
-          "fr": "Baleog the Fierce",
+          "fr": "Baleog le Féroce",
           "en": "Baleog the Fierce"
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_selectbaleog.png",
         "description": {
-          "fr": "Increase Baleog's attack range by 2.5.  While near Olaf and Erik, he becomes inspired by the power of teamwork and his Attack Speed is increased by 50%.",
-          "en": "Increase Baleog's attack range by 2.5.  While near Olaf and Erik, he becomes inspired by the power of teamwork and his Attack Speed is increased by 50%."
+          "fr": "Augmente la vitesse d’attaque et la portée de Baleog.",
+          "en": "Baleog gains Attack Speed, Range"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joubqlk",
+        "id": "tmdxk6lgh10a8l",
+        "level": 7,
+        "name": {
+          "fr": "Tourner, c’est gagné !",
+          "en": "Spin To Win!"
+        },
+        "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_spintowin.png",
+        "description": {
+          "fr": "Inflige des dégâts autour de chacun des Vikings.",
+          "en": "Deals damage around each Viking"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh11ona",
+        "level": 7,
+        "name": {
+          "fr": "Norrois de cœur !",
+          "en": "Norse Force!"
+        },
+        "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_norseforce.png",
+        "description": {
+          "fr": "Confère un bouclier à tous les Vikings.",
+          "en": "All Vikings gain a Shield"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh1223j",
         "level": 10,
         "name": {
-          "fr": "Longboat Raid!",
+          "fr": "Tous au drakkar !",
           "en": "Longboat Raid!"
         },
-        "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_longboatraid.png",
+        "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_longboatraid.png",
         "description": {
-          "fr": "Hop into an Unstoppable Longboat that fires at nearby enemies for 128 (+4% per level) damage per second and can fire a mortar that deals 228 (+4% per level) damage in an area.  The boat has increased Health for each Viking inside. If the boat is destroyed by enemies, all Vikings are Stunned for 1 second. Lasts 15 seconds.  Requires all surviving Vikings to be nearby.",
-          "en": "Hop into an Unstoppable Longboat that fires at nearby enemies for 128 (+4% per level) damage per second and can fire a mortar that deals 228 (+4% per level) damage in an area.  The boat has increased Health for each Viking inside. If the boat is destroyed by enemies, all Vikings are Stunned for 1 second. Lasts 15 seconds.  Requires all surviving Vikings to be nearby."
+          "fr": "Fait monter dans un drakkar pour attaquer les ennemis.",
+          "en": "Load into a Longboat to attack enemies"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jok4izl",
+        "id": "tmdxk6lgh13vxj",
+        "level": 10,
+        "name": {
+          "fr": "Jouer encore !",
+          "en": "Play Again!"
+        },
+        "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_playagain.png",
+        "description": {
+          "fr": "Ranime et invoque les Vikings",
+          "en": "Revive and summon Vikings"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh143k8",
         "level": 13,
         "name": {
-          "fr": "Hunka' Burning Olaf",
+          "fr": "Chaud patate",
           "en": "Hunka' Burning Olaf"
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_selectolaf.png",
         "description": {
-          "fr": "Olaf deals 34 (+4% per level) damage every second to nearby enemies.",
-          "en": "Olaf deals 34 (+4% per level) damage every second to nearby enemies."
+          "fr": "Olaf inflige des dégâts aux ennemis proches.",
+          "en": "Olaf deals damage to nearby enemies"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jomttxx",
+        "id": "tmdxk6lgh157j9",
+        "level": 13,
+        "name": {
+          "fr": "Saut groupé !",
+          "en": "Jump!"
+        },
+        "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_jump.png",
+        "description": {
+          "fr": "Rend momentanément invulnérable",
+          "en": "Grants temporary Invulnerability"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh16tis",
+        "level": 13,
+        "name": {
+          "fr": "Gang de Vikings",
+          "en": "Nordic Attack Squad"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_searing.png",
+        "description": {
+          "fr": "Les Vikings infligent des dégâts supplémentaires quand ils sont ensemble.",
+          "en": "Vikings deal bonus damage when together"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh171du",
         "level": 16,
         "name": {
-          "fr": "Large and In Charge",
+          "fr": "En chair et en charge",
           "en": "Large and In Charge"
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_selectolaf.png",
         "description": {
-          "fr": "When Olaf charges enemies, they are stunned for 1 second.",
-          "en": "When Olaf charges enemies, they are stunned for 1 second."
+          "fr": "Charger sur les ennemis les étourdit",
+          "en": "Charge stuns enemies"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joz1okt",
+        "id": "tmdxk6lgh18j70",
+        "level": 16,
+        "name": {
+          "fr": "L’impatience est une vertu",
+          "en": "Impatience Is a Virtue"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_cooldown.png",
+        "description": {
+          "fr": "Réduit les temps de recharge des capacités des Vikings pour chacune de leurs attaques de base.",
+          "en": "Vikings' attacks reduce cooldowns of all Vikings"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh1945k",
+        "level": 16,
+        "name": {
+          "fr": "Marathon 64 ko",
+          "en": "64 KB Marathon"
+        },
+        "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_64kbmarathon.png",
+        "description": {
+          "fr": "Accélère la course et dissipe les ralentissements et immobilisations",
+          "en": "Run faster and break Slows and Roots"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh20spz",
+        "level": 16,
+        "name": {
+          "fr": "Exécuteur",
+          "en": "Executioner"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
+        "description": {
+          "fr": "Augmente les dégâts infligés aux héros diminués.",
+          "en": "Attacking disabled Heroes increases damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh21dbr",
         "level": 20,
         "name": {
-          "fr": "Ragnarok 'n' Roll!",
+          "fr": "Ragnarok’n’roll !",
           "en": "Ragnarok 'n' Roll!"
         },
-        "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_longboatraid.png",
+        "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_longboatraid.png",
         "description": {
-          "fr": "The Longboat can attack two targets at once and the range of its Mortar is increased by 100%. Reduce Longboat Raid!'s cooldown by 30 seconds.",
-          "en": "The Longboat can attack two targets at once and the range of its Mortar is increased by 100%. Reduce Longboat Raid!'s cooldown by 30 seconds."
+          "fr": "Augmente la puissance du drakkar.",
+          "en": "Increased combat prowess"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh224js",
+        "level": 20,
+        "name": {
+          "fr": "Point de sauvegarde atteint",
+          "en": "Checkpoint Reached"
+        },
+        "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_playagain.png",
+        "description": {
+          "fr": "Résurrection et soins supplémentaires.",
+          "en": "Additional revive and heal"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh238x2",
+        "level": 20,
+        "name": {
+          "fr": "Le Retour de la Vengeance !",
+          "en": "The Sequel!"
+        },
+        "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_fastrestart.png",
+        "description": {
+          "fr": "Réduit le temps de résurrection de tous les Vikings.",
+          "en": "Reduces death timer for all Vikings"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdxk6lgh24wen",
+        "level": 20,
+        "name": {
+          "fr": "Fureur du Nexus",
+          "en": "Fury of the Storm"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
+        "description": {
+          "fr": "Répercute les attaques de base sur les cibles non héroïques.",
+          "en": "Basic Attacks chain to non-Heroes"
         },
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [
+      {
+        "id": "normal",
+        "label": {
+          "fr": "Forme normale",
+          "en": "Normal Form"
+        }
+      },
+      {
+        "id": "drakkar",
+        "label": {
+          "fr": "Drakkar",
+          "en": "Longboat"
+        }
+      }
+    ]
   },
   {
     "id": "lunara",
@@ -19790,7 +20351,7 @@ const HEROES = [
   },
   {
     "id": "medivh",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Medivh",
       "en": "Medivh"
@@ -19814,8 +20375,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_ravenform.png",
         "description": {
-          "fr": "Se transforme en corbeau, intouchable mais incapable d'agir.",
-          "en": "Transform into a raven, untargetable but unable to act."
+          "fr": "Transforme en corbeau.",
+          "en": "Transform into a raven"
         },
         "demoYoutubeId": ""
       },
@@ -19827,8 +20388,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_arcanemissile.png",
         "description": {
-          "fr": "Projette une faille qui explose sur les ennemis.",
-          "en": "Fires a rift that explodes on enemies."
+          "fr": "Lance un éclair des Arcanes qui inflige des dégâts sur une ligne.",
+          "en": "Launch an arcane bolt that damages enemies in a line"
         },
         "demoYoutubeId": ""
       },
@@ -19840,8 +20401,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_forceofwill.png",
         "description": {
-          "fr": "Protège un allié et absorbe les dégâts subis.",
-          "en": "Shields an ally and absorbs damage taken."
+          "fr": "Protège un héros allié contre les dégâts.",
+          "en": "Protect an allied Hero from damage"
         },
         "demoYoutubeId": ""
       },
@@ -19853,47 +20414,34 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_portal.png",
         "description": {
-          "fr": "Crée deux portails reliés que ton équipe peut emprunter.",
-          "en": "Creates two linked portals your team can use."
+          "fr": "Crée un portail que Medivh et ses alliés peuvent emprunter.",
+          "en": "Create a portal that allies can pass through"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
         "name": {
-          "fr": "Bombe polymorphe",
+          "fr": "Bombe métamorphique",
           "en": "Poly Bomb"
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_polybomb.png",
         "description": {
-          "fr": "Transforme les ennemis touchés en moutons en chaîne.",
-          "en": "Turns hit enemies into sheep, spreading between them."
+          "fr": "Métamorphose un héros et se propage aux autres héros proches.",
+          "en": "Polymorph a Hero that spreads to other Heroes"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
         "name": {
-          "fr": "Sceau de ligne tellurique",
+          "fr": "Sceau tellurique",
           "en": "Ley Line Seal"
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_leylineblast.png",
         "description": {
-          "fr": "Une ligne d'énergie étourdit les ennemis touchés.",
-          "en": "A ley line stuns enemies caught in it."
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "W",
-        "name": {
-          "fr": "Forme de corbeau",
-          "en": "Raven Form"
-        },
-        "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_mount.png",
-        "description": {
-          "fr": "Monture volante.",
-          "en": "Flying mount."
+          "fr": "Projette une vague qui plonge les héros adverses en stase.",
+          "en": "Unleash a wave that Time Stops enemy Heroes"
         },
         "demoYoutubeId": ""
       }
@@ -19928,7 +20476,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Medivh]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -19937,37 +20485,37 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jon3onf",
+            "primaryId": "tmxb709kx01le6",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jof9o9n",
+            "primaryId": "tmxb709kx04isw",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jotczzv",
+            "primaryId": "tmxb709kx07wqp",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6joyw5wj",
+            "primaryId": "tmxb709kx1053u",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jo7dufs",
+            "primaryId": "tmxb709kx121i4",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6joyqpjq",
+            "primaryId": "tmxb709kx154f0",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jowk9ga",
+            "primaryId": "tmxb709kx18oub",
             "alternativeIds": []
           }
         ]
@@ -19976,100 +20524,310 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jon3onf",
+        "id": "tmxb709kx01le6",
         "level": 1,
         "name": {
-          "fr": "Winds of Celerity",
+          "fr": "Vents de célérité",
           "en": "Winds of Celerity"
         },
-        "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_ravenform.png",
+        "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_ravenform.png",
         "description": {
-          "fr": "Increases Raven Form's Movement Speed bonus by 50%.",
-          "en": "Increases Raven Form's Movement Speed bonus by 50%."
+          "fr": "Augmente la vitesse de déplacement sous forme de corbeau.",
+          "en": "Increases Raven Form Movement Speed"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jof9o9n",
+        "id": "tmxb709kx020w4",
+        "level": 1,
+        "name": {
+          "fr": "Intelligence du corbeau",
+          "en": "Raven’s Intellect"
+        },
+        "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_ravenform_b.png",
+        "description": {
+          "fr": "Forme de corbeau augmente la récupération de points de vie et de mana.",
+          "en": "Raven Form increases Health and Mana Regen"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxb709kx03g7p",
+        "level": 1,
+        "name": {
+          "fr": "Maîtrise du portail",
+          "en": "Portal Mastery"
+        },
+        "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_portal.png",
+        "description": {
+          "fr": "Permet de placer les deux portails.",
+          "en": "Place both Portal locations"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxb709kx04isw",
         "level": 4,
         "name": {
-          "fr": "Mage Armor",
+          "fr": "Armure du mage",
           "en": "Mage Armor"
         },
-        "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_portal.png",
+        "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_portal.png",
         "description": {
-          "fr": "The first time an ally uses a Portal, they gain 30 Armor for 4 seconds, reducing their damage taken by 30%.",
-          "en": "The first time an ally uses a Portal, they gain 30 Armor for 4 seconds, reducing their damage taken by 30%."
+          "fr": "Emprunter un portail confère de l’armure.",
+          "en": "Using a Portal grants Armor"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jotczzv",
+        "id": "tmxb709kx05f4i",
+        "level": 4,
+        "name": {
+          "fr": "Familier corbeau",
+          "en": "Raven Familiar"
+        },
+        "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_portal_a.png",
+        "description": {
+          "fr": "Emprunter un portail confère un familier corbeau.",
+          "en": "Using a Portal grants a Raven Familiar"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxb709kx06c0d",
+        "level": 4,
+        "name": {
+          "fr": "Poussière révélatrice",
+          "en": "Dust of Appearance"
+        },
+        "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_dustofappearance.png",
+        "description": {
+          "fr": "Révèle les héros proches.",
+          "en": "Activate to reveal nearby Heroes"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxb709kx07wqp",
         "level": 7,
         "name": {
-          "fr": "Mystic Assault",
+          "fr": "Attaque mystique",
           "en": "Mystic Assault"
         },
-        "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_arcanemissile.png",
+        "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_arcanemissile.png",
         "description": {
-          "fr": "If Arcane Rift hits an enemy Hero, Medivh's next Basic Attack within 6 seconds deals 50% more damage and heals for 50% of the damage dealt.",
-          "en": "If Arcane Rift hits an enemy Hero, Medivh's next Basic Attack within 6 seconds deals 50% more damage and heals for 50% of the damage dealt."
+          "fr": "Faille arcanique renforce les attaques de base.",
+          "en": "Arcane Rift empowers Basic Attacks"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joyw5wj",
+        "id": "tmxb709kx083a3",
+        "level": 7,
+        "name": {
+          "fr": "Explosion des Arcanes",
+          "en": "Arcane Explosion"
+        },
+        "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_forceofwill.png",
+        "description": {
+          "fr": "Force de volonté inflige des dégâts de zone.",
+          "en": "Force of Will deals area damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxb709kx09wc0",
+        "level": 7,
+        "name": {
+          "fr": "Force de magie",
+          "en": "Force of Magic"
+        },
+        "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_forceofwill_a.png",
+        "description": {
+          "fr": "Force de volonté peut conférer de la puissance de capacité.",
+          "en": "Force of Will can grant Spell Power"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxb709kx1053u",
         "level": 10,
         "name": {
-          "fr": "Poly Bomb",
+          "fr": "Bombe métamorphique",
           "en": "Poly Bomb"
         },
-        "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_polybomb.png",
+        "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_polybomb.png",
         "description": {
-          "fr": "Polymorph an enemy Hero for 2 seconds, Silencing them and making them unable to attack. On expiration, Poly Bomb spreads to other nearby enemy Heroes.",
-          "en": "Polymorph an enemy Hero for 2 seconds, Silencing them and making them unable to attack. On expiration, Poly Bomb spreads to other nearby enemy Heroes."
+          "fr": "Métamorphose un héros et se propage aux autres héros proches.",
+          "en": "Polymorph a Hero that spreads to other Heroes"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo7dufs",
+        "id": "tmxb709kx11akh",
+        "level": 10,
+        "name": {
+          "fr": "Sceau tellurique",
+          "en": "Ley Line Seal"
+        },
+        "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_leylineblast.png",
+        "description": {
+          "fr": "Projette une vague qui plonge les héros adverses en stase.",
+          "en": "Unleash a wave that Time Stops enemy Heroes"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxb709kx121i4",
         "level": 13,
         "name": {
-          "fr": "Circle of Protection",
+          "fr": "Cercle de protection",
           "en": "Circle of Protection"
         },
-        "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_forceofwill.png",
+        "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_forceofwill.png",
         "description": {
-          "fr": "Force of Will also applies to allies near the target, but its cooldown is increased by 2 seconds.",
-          "en": "Force of Will also applies to allies near the target, but its cooldown is increased by 2 seconds."
+          "fr": "Force de volonté s’applique aussi aux alliés proches de la cible.",
+          "en": "Force of Will applies to allies near target"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joyqpjq",
+        "id": "tmxb709kx133h4",
+        "level": 13,
+        "name": {
+          "fr": "Volonté tenace",
+          "en": "Enduring Will"
+        },
+        "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_forceofwill_a.png",
+        "description": {
+          "fr": "Empêcher des dégâts réduit le temps de recharge de Force de volonté.",
+          "en": "Preventing damage reduces Force of Will cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxb709kx14z5a",
+        "level": 13,
+        "name": {
+          "fr": "Réabsorption",
+          "en": "Reabsorption"
+        },
+        "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_forceofwill_b.png",
+        "description": {
+          "fr": "Augmente les soins de Force de volonté.",
+          "en": "Increase Force of Will healing"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxb709kx154f0",
         "level": 16,
         "name": {
-          "fr": "Arcane Charge",
+          "fr": "Charge arcanique",
           "en": "Arcane Charge"
         },
-        "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_arcanemissile.png",
+        "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_arcanemissile.png",
         "description": {
-          "fr": "When Arcane Rift damages an enemy Hero, the next Arcane Rift deals 15% more damage.",
-          "en": "When Arcane Rift damages an enemy Hero, the next Arcane Rift deals 15% more damage."
+          "fr": "Inflige davantage de dégâts après avoir touché un héros.",
+          "en": "Arcane Rift deals more damage after hitting a Hero"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jowk9ga",
+        "id": "tmxb709kx16tx1",
+        "level": 16,
+        "name": {
+          "fr": "Flux temporel",
+          "en": "Temporal Flux"
+        },
+        "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_arcanemissile_a.png",
+        "description": {
+          "fr": "Faille arcanique réduit le temps de recharge de la capacité héroïque.",
+          "en": "Arcane Rift reduces Heroic cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxb709kx17fls",
+        "level": 16,
+        "name": {
+          "fr": "Stabilité",
+          "en": "Stable Portal"
+        },
+        "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_portal.png",
+        "description": {
+          "fr": "Augmente la durée de portail.",
+          "en": "Increases Portal uptime"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxb709kx18oub",
         "level": 20,
         "name": {
-          "fr": "Glyph Of Poly Bomb",
+          "fr": "Glyphe de Bombe métamorphique",
           "en": "Glyph Of Poly Bomb"
         },
-        "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_polybomb.png",
+        "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_polybomb.png",
         "description": {
-          "fr": "Poly Bomb explodes 1 second sooner and the spread radius is increased by 25%.",
-          "en": "Poly Bomb explodes 1 second sooner and the spread radius is increased by 25%."
+          "fr": "Bombe métamorphique s’étale instantanément sur une large zone.",
+          "en": "Poly Bomb instantly spreads in a larger area"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxb709kx1923s",
+        "level": 20,
+        "name": {
+          "fr": "Medivh triche !",
+          "en": "Medivh Cheats!"
+        },
+        "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_leylineblast.png",
+        "description": {
+          "fr": "Sceau tellurique peut être redirigé après activation.",
+          "en": "Ley Line Seal can be redirected while active"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxb709kx20aai",
+        "level": 20,
+        "name": {
+          "fr": "Gardien de Tirisfal",
+          "en": "Guardian of Tirisfal"
+        },
+        "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_arcanemissile.png",
+        "description": {
+          "fr": "Tue les serviteurs instantanément, portée augmentée.",
+          "en": "Arcane Rift kills Minions instantly, increased range"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxb709kx21djf",
+        "level": 20,
+        "name": {
+          "fr": "Illumination des Arcanes",
+          "en": "Arcane Brilliance"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_arcaneintellect.png",
+        "description": {
+          "fr": "Confère de la puissance de capacité et du mana aux alliés.",
+          "en": "Grant Spell Power and Mana to allies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxb709kx22f4o",
+        "level": 20,
+        "name": {
+          "fr": "Poussière de disparition",
+          "en": "Dust of Disappearance"
+        },
+        "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_invisibility.png",
+        "description": {
+          "fr": "Camoufle un héros allié.",
+          "en": "Stealth an allied Hero"
         },
         "demoYoutubeId": null
       }
@@ -29262,7 +30020,7 @@ const HEROES = [
   },
   {
     "id": "zarya",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Zarya",
       "en": "Zarya"
@@ -29286,8 +30044,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_energy.png",
         "description": {
-          "fr": "Les dégâts absorbés par tes boucliers augmentent tes dégâts.",
-          "en": "Damage absorbed by your shields increases your damage."
+          "fr": "Les dégâts absorbés par les écrans de Zarya augmentent ceux qu’elle inflige.",
+          "en": "Damage absorbed by Zarya's Shields increase her damage."
         },
         "demoYoutubeId": ""
       },
@@ -29299,60 +30057,60 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_particlegrenade.png",
         "description": {
-          "fr": "Grenade qui rebondit et inflige des dégâts de zone.",
-          "en": "Bouncing grenade that deals area damage."
+          "fr": "Inflige des dégâts aux ennemis dans une zone restreinte.",
+          "en": "Deals damage to enemies in a small area"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "Z",
         "name": {
-          "fr": "Barrière personnelle",
+          "fr": "Écran personnel",
           "en": "Personal Barrier"
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_personalbarrier.png",
         "description": {
-          "fr": "Te bouclie et te charge en énergie.",
-          "en": "Shields you and charges your Energy."
+          "fr": "Confère un bouclier qui absorbe les dégâts.",
+          "en": "Gain a Shield that absorbs damage"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "E",
         "name": {
-          "fr": "Bouclier allié",
+          "fr": "Écran généré",
           "en": "Shield Ally"
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_shieldally.png",
         "description": {
-          "fr": "Bouclie un allié et te charge en énergie.",
-          "en": "Shields an ally and charges your Energy."
+          "fr": "Confère un bouclier à un allié.",
+          "en": "Grant an ally a Shield that absorbs damage"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
         "name": {
-          "fr": "Onde de gravité",
+          "fr": "Orbe à gravitons",
           "en": "Graviton Surge"
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_gravitonsurge.png",
         "description": {
-          "fr": "Attire et emprisonne les ennemis dans une zone.",
-          "en": "Pulls and traps enemies in an area."
+          "fr": "Lance une bombe gravitationnelle qui attire les ennemis.",
+          "en": "Launch a gravity bomb that draws in enemies"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
         "name": {
-          "fr": "Zone d'expulsion",
+          "fr": "Zone d’exclusion",
           "en": "Expulsion Zone"
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_expulsionzone.png",
         "description": {
-          "fr": "Repousse les ennemis et interdit la zone.",
-          "en": "Knocks enemies back and denies the area."
+          "fr": "Lance une bombe qui repousse les ennemis continuellement.",
+          "en": "Launch a bomb that continually pushes enemies"
         },
         "demoYoutubeId": ""
       }
@@ -29387,7 +30145,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Zarya]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -29396,37 +30154,37 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jpfmmxl",
+            "primaryId": "tmrsrymnm011ox",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jpthtkk",
+            "primaryId": "tmrsrymnm05jis",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jpw3t2z",
+            "primaryId": "tmrsrymnm09ord",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jpy9b3c",
+            "primaryId": "tmrsrymnm12geh",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jp42w4b",
+            "primaryId": "tmrsrymnm14ll7",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jpnkspe",
+            "primaryId": "tmrsrymnm187h0",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jp8wkwh",
+            "primaryId": "tmrsrymnm21bb2",
             "alternativeIds": []
           }
         ]
@@ -29435,100 +30193,338 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jpfmmxl",
+        "id": "tmrsrymnm011ox",
         "level": 1,
         "name": {
-          "fr": "Demolitions Expert",
+          "fr": "Experte en démolition",
           "en": "Demolitions Expert"
         },
-        "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_particlegrenade.png",
+        "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_particlegrenade.png",
         "description": {
-          "fr": "Quest: For every 5 enemy Heroes hit by Particle Grenade, its recharge rate lowers by 0.4375 seconds, up to 3.5 seconds.  Reward: Once Particle Grenade has hit 40 enemy Heroes, its radius is increased by 15%.",
-          "en": "Quest: For every 5 enemy Heroes hit by Particle Grenade, its recharge rate lowers by 0.4375 seconds, up to 3.5 seconds.  Reward: Once Particle Grenade has hit 40 enemy Heroes, its radius is increased by 15%."
+          "fr": "<c val=\"#TooltipQuest\">Quête :</c> augmente le rayon et diminue le temps de recharge de Grenade à particules.",
+          "en": "<c val=\"e4b800\">Quest</c>: Increases Particle Grenade radius and reduces cooldown"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpthtkk",
+        "id": "tmrsrymnm02l32",
+        "level": 1,
+        "name": {
+          "fr": "L’union fait la force",
+          "en": "Together We Are Strong"
+        },
+        "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_shieldally.png",
+        "description": {
+          "fr": "Les dégâts infligés par les alliés protégés par Écran généré alimentent la réserve d’énergie.",
+          "en": "Allied damage dealt with Shield Ally contributes to Energy"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm03cb7",
+        "level": 1,
+        "name": {
+          "fr": "À bout portant",
+          "en": "Feel the Heat"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
+        "description": {
+          "fr": "Les attaques de base infligent davantage de dégâts à proximité, amplitude augmentée.",
+          "en": "Basic Attack deals more damage to close enemies, increased size"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm04yde",
+        "level": 1,
+        "name": {
+          "fr": "Charge maximale",
+          "en": "Maximum Charge"
+        },
+        "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_energy.png",
+        "description": {
+          "fr": "Les globes de régénération donnent de l’énergie<n/><c val=\"#TooltipQuest\">Quête :</c> augmente l’énergie maximale.",
+          "en": "Regen Globes grant Energy<n/><c val=\"e4b800\">Quest</c>: Increases maximum Energy"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm05jis",
         "level": 4,
         "name": {
-          "fr": "I Am the Strongest",
+          "fr": "Baraquée et féminine",
           "en": "I Am the Strongest"
         },
-        "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_personalbarrier.png",
+        "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_personalbarrier.png",
         "description": {
-          "fr": "Personal Barrier absorbs an additional 140 (+4% per level) damage.  Passive: Damage absorbed by Zarya's Shields contributes 20% more Energy.",
-          "en": "Personal Barrier absorbs an additional 140 (+4% per level) damage.  Passive: Damage absorbed by Zarya's Shields contributes 20% more Energy."
+          "fr": "Renforce le bouclier d’Écran personnel et augmente l’énergie reçue.",
+          "en": "Increases Personal Barrier Shield amount, Energy received"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpw3t2z",
+        "id": "tmrsrymnm06de4",
+        "level": 4,
+        "name": {
+          "fr": "Fais-moi vingt pompes !",
+          "en": "Give Me Twenty"
+        },
+        "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_shieldally.png",
+        "description": {
+          "fr": "<c val=\"#TooltipQuest\">Quête :</c> augmente les dégâts que peut absorber Écran généré et réduit son temps de recharge.",
+          "en": "<c val=\"e4b800\">Quest</c>: Increases Shield Ally absorb amount and reduces cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm0725p",
+        "level": 4,
+        "name": {
+          "fr": "Écran accélérateur",
+          "en": "Speed Barrier"
+        },
+        "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_shieldally_a.png",
+        "description": {
+          "fr": "Écran généré augmente la vitesse de déplacement.",
+          "en": "Shield Ally grants Movement Speed"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm087ty",
+        "level": 4,
+        "name": {
+          "fr": "Bouclier défensif",
+          "en": "Defensive Shielding"
+        },
+        "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_pumped.png",
+        "description": {
+          "fr": "Écran personnel et Écran généré confèrent de l’armure physique.",
+          "en": "Personal Barrier, Shield Ally grant Physical Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm09ord",
         "level": 7,
         "name": {
-          "fr": "Pinpoint Accuracy",
+          "fr": "Précision du geste",
           "en": "Pinpoint Accuracy"
         },
-        "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_particlegrenade.png",
+        "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_particlegrenade.png",
         "description": {
-          "fr": "Particle Grenade deals 30 (+4% per level) more damage and Slows Movement Speed by 25% for 2 seconds to enemies hit by the center of the blast.",
-          "en": "Particle Grenade deals 30 (+4% per level) more damage and Slows Movement Speed by 25% for 2 seconds to enemies hit by the center of the blast."
+          "fr": "Grenade à particules inflige davantage de dégâts dans la zone centrale et ralentit.",
+          "en": "Particle Grenade center deals more damage, Slows"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpy9b3c",
+        "id": "tmrsrymnm10q37",
+        "level": 7,
+        "name": {
+          "fr": "Brûlure sévère",
+          "en": "Deep Burn"
+        },
+        "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_particlegrenade_a.png",
+        "description": {
+          "fr": "Grenade à particules peut générer de l’énergie.",
+          "en": "Particle Grenade can generate Energy"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm11kxl",
+        "level": 7,
+        "name": {
+          "fr": "Écran explosif",
+          "en": "Explosive Barrier"
+        },
+        "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_personalbarrier.png",
+        "description": {
+          "fr": "Écran personnel inflige des dégâts de zone.",
+          "en": "Personal Barrier deals area damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm12geh",
         "level": 10,
         "name": {
-          "fr": "Graviton Surge",
+          "fr": "Orbe à gravitons",
           "en": "Graviton Surge"
         },
-        "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_gravitonsurge.png",
+        "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_gravitonsurge.png",
         "description": {
-          "fr": "Launch a gravity bomb that detonates after 1 second and draws enemy Heroes toward the center for 2.5 seconds. Affected Heroes take 30 (+4% per level) damage a second.",
-          "en": "Launch a gravity bomb that detonates after 1 second and draws enemy Heroes toward the center for 2.5 seconds. Affected Heroes take 30 (+4% per level) damage a second."
+          "fr": "Lance une bombe gravitationnelle qui attire les ennemis.",
+          "en": "Launch a gravity bomb that draws in enemies"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jp42w4b",
+        "id": "tmrsrymnm13n67",
+        "level": 10,
+        "name": {
+          "fr": "Zone d’exclusion",
+          "en": "Expulsion Zone"
+        },
+        "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_expulsionzone.png",
+        "description": {
+          "fr": "Lance une bombe qui repousse les ennemis continuellement.",
+          "en": "Launch a bomb that continually pushes enemies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm14ll7",
         "level": 13,
         "name": {
-          "fr": "Unstoppable Competitor",
+          "fr": "Athlète insensible",
           "en": "Unstoppable Competitor"
         },
-        "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_personalbarrier.png",
+        "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_personalbarrier.png",
         "description": {
-          "fr": "Personal Barrier makes Zarya Unstoppable for up to 2 seconds.",
-          "en": "Personal Barrier makes Zarya Unstoppable for up to 2 seconds."
+          "fr": "Écran personnel rend insensible aux effets de contrôle.",
+          "en": "Personal Barrier grants Unstoppable"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpnkspe",
+        "id": "tmrsrymnm1508l",
+        "level": 13,
+        "name": {
+          "fr": "Écran anti-sort",
+          "en": "Spell Barrier"
+        },
+        "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_personalbarrier_a.png",
+        "description": {
+          "fr": "Écran personnel confère de l’armure anti-sort.",
+          "en": "Personal Barrier grants Spell Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm16clc",
+        "level": 13,
+        "name": {
+          "fr": "Travail d’endurance",
+          "en": "Endurance Training"
+        },
+        "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_energy.png",
+        "description": {
+          "fr": "À niveau d’énergie élevé, confère de l’armure.",
+          "en": "Gain Armor at high Energy"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm175fp",
+        "level": 13,
+        "name": {
+          "fr": "Douleur éphémère",
+          "en": "Pain is Temporary"
+        },
+        "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_painistemporary.png",
+        "description": {
+          "fr": "Consomme l’énergie pour obtenir un bouclier.",
+          "en": "Consume Energy to gain a Shield"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm187h0",
         "level": 16,
         "name": {
-          "fr": "Cleansing Shield",
+          "fr": "Écran purificateur",
           "en": "Cleansing Shield"
         },
-        "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_shieldally.png",
+        "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_shieldally.png",
         "description": {
-          "fr": "Causes Shield Ally to remove all disabling effects and reduces its cooldown by 3 seconds.",
-          "en": "Causes Shield Ally to remove all disabling effects and reduces its cooldown by 3 seconds."
+          "fr": "Écran généré supprime tous les effets incapacitants.",
+          "en": "Shield Ally removes all disabling effects"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jp8wkwh",
+        "id": "tmrsrymnm19l5m",
+        "level": 16,
+        "name": {
+          "fr": "Émulation",
+          "en": "Gain Train"
+        },
+        "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_shieldally_a.png",
+        "description": {
+          "fr": "Écran généré se propage à un second allié.",
+          "en": "Shield Ally now affects a second ally"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm20g6d",
+        "level": 16,
+        "name": {
+          "fr": "Fleur de combat",
+          "en": "Born in Battle"
+        },
+        "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_energy.png",
+        "description": {
+          "fr": "À niveau d’énergie élevé, réduit les temps de recharge.",
+          "en": "Reduces cooldowns at high Energy"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm21bb2",
         "level": 20,
         "name": {
-          "fr": "Gravity Kills",
+          "fr": "Gravité fatale",
           "en": "Gravity Kills"
         },
-        "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_gravitonsurge.png",
+        "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_gravitonsurge.png",
         "description": {
-          "fr": "Increases Graviton Surge's duration by 1 second and it Silences Heroes caught in its area.",
-          "en": "Increases Graviton Surge's duration by 1 second and it Silences Heroes caught in its area."
+          "fr": "Augmente la durée d’Orbe à gravitons et lui permet de réduire l’ennemi au silence. ",
+          "en": "Graviton Surge has increased duration and Silences"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm22yxc",
+        "level": 20,
+        "name": {
+          "fr": "Périmètre évacué",
+          "en": "Clear Out"
+        },
+        "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_expulsionzone.png",
+        "description": {
+          "fr": "Réduit le temps de recharge de la Zone d’exclusion et augmente sa durée.",
+          "en": "Reduce Expulsion Zone cooldown, increase duration"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm230q1",
+        "level": 20,
+        "name": {
+          "fr": "Grenadière",
+          "en": "Grenadier"
+        },
+        "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_particlegrenade.png",
+        "description": {
+          "fr": "Restaure instantanément toutes les charges de Grenade à particules.",
+          "en": "Particle Grenade charges are returned at once"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrsrymnm246jr",
+        "level": 20,
+        "name": {
+          "fr": "Défense inflexible",
+          "en": "Unyielding Defender"
+        },
+        "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_unyieldingdefender.png",
+        "description": {
+          "fr": "Réinitialise le temps de recharge des écrans.",
+          "en": "Activate to reset Shield cooldowns"
         },
         "demoYoutubeId": null
       }
