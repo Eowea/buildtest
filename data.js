@@ -9628,7 +9628,7 @@ const HEROES = [
       "en": "He shapes the whole Battleground without ever joining a fight."
     },
     "gameplay": {
-      "fr": "Abathur ne se bat jamais lui-même : ses sauterelles poussent les lignes pendant qu'il colle un Symbiote sur un allié et joue à travers lui.",
+      "fr": "Abathur ne se bat jamais lui-même : ses nuisibles poussent les lignes pendant qu'il colle un Symbiote sur un allié et joue à travers lui.",
       "en": "Abathur never fights himself: his Locusts push lanes while he attaches a Symbiote to an ally and plays through them."
     },
     "spells": [
@@ -15087,8 +15087,8 @@ const HEROES = [
         "en": "Your Armor Plates only recharge while flying: take off to get them back."
       },
       {
-        "fr": "Forme Destructeur pour le corps à corps, Brise-monde pour le zonage.",
-        "en": "Destroyer form for close quarters, World Breaker for zoning."
+        "fr": "Forme Destructeur pour le corps à corps, Brise-monde pour le contrôle de zone.",
+        "en": "Destroyer form for close quarters, World Breaker for zone control."
       },
       {
         "fr": "Personne ne peut te soigner : chaque combat pris est un aller simple.",
@@ -40873,8 +40873,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ouvre toujours depuis la furtivité : hors camouflage tu es extrêmement fragile.",
-        "en": "Always open from Stealth: out of it you are extremely fragile."
+        "fr": "Ouvre toujours depuis le camouflage : à découvert tu es extrêmement fragile.",
+        "en": "Always open from Stealth: out in the open you are extremely fragile."
       },
       {
         "fr": "Attends quelques secondes camouflée : tes capacités te téléportent alors sur la cible.",
@@ -43783,8 +43783,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Lance ton bouclier juste avant les dégâts : un bouclier gaspillé, c'est de l'Énergie perdue.",
-        "en": "Cast your Shield just before the damage: a wasted Shield is lost Energy."
+        "fr": "Lance Écran généré juste avant les dégâts : un écran gaspillé, c'est de l'Énergie perdue.",
+        "en": "Cast Shield Ally just before the damage: a wasted Shield is lost Energy."
       },
       {
         "fr": "Ton Énergie monte en encaissant : cherche les échanges, ne les fuis pas.",
