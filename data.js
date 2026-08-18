@@ -9624,7 +9624,7 @@ const HEROES = [
     "role": "Support",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_abathur.png",
     "headline": {
-      "fr": "Il pèse sur toute le champ de bataille sans jamais aller au combat.",
+      "fr": "Il pèse sur tout le champ de bataille sans jamais aller au combat.",
       "en": "He shapes the whole Battleground without ever joining a fight."
     },
     "gameplay": {
@@ -10754,8 +10754,8 @@ const HEROES = [
         "en": "Use your Abilities before the engage to build up Beetles."
       },
       {
-        "fr": "Cocon met un héros hors du combat quelques secondes, sauf si ses alliés brisent le cocon.",
-        "en": "Cocoon removes a Hero for a few seconds, unless their allies break the cocoon."
+        "fr": "Cocon met un héros hors du combat quelques secondes, à moins que ses alliés ne le libèrent.",
+        "en": "Cocoon takes a Hero out of the fight for a few seconds, unless their allies free them."
       }
     ],
     "builds": [
@@ -13030,8 +13030,8 @@ const HEROES = [
       "en": "Standing still she is fragile, on the move she soaks everything."
     },
     "gameplay": {
-      "fr": "Cassia gagne de l'armure tant qu'elle bouge et la perd dès qu'elle s'arrête. Elle aveugle les assassins d'attaques de base et les punit ensuite.",
-      "en": "Cassia gains Armor while moving and loses it the moment she stops. She Blinds auto-attackers and then punishes them."
+      "fr": "Cassia gagne de l'armure tant qu'elle bouge et la perd dès qu'elle s'arrête. Elle aveugle les héros qui vivent de leurs attaques de base, puis les punit.",
+      "en": "Cassia gains Armor while moving and loses it the moment she stops. She Blinds the Heroes who live off their Basic Attacks, then punishes them."
     },
     "spells": [
       {
@@ -14457,8 +14457,8 @@ const HEROES = [
       "en": "She is always a talent ahead of everyone else."
     },
     "gameplay": {
-      "fr": "Chromie obtient ses talents avant tout le monde et frappe de très loin. Extrêmement fragile, elle ne survit qu'en restant hors de portée.",
-      "en": "Chromie gains her Talents ahead of everyone and hits from extreme range. Extremely fragile, she survives only by staying out of reach."
+      "fr": "Chromie frappe de très loin et débloque ses talents en avance. Extrêmement fragile, elle ne survit qu'en restant hors de portée.",
+      "en": "Chromie hits from extreme range and unlocks her Talents early. Extremely fragile, she survives only by staying out of reach."
     },
     "spells": [
       {
@@ -15083,8 +15083,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tes plaques d'armure ne se rechargent qu'en vol : décolle pour te refaire.",
-        "en": "Your Armor Plates only recharge while flying: take off to restore them."
+        "fr": "Tes plaques d'armure ne se rechargent qu'en vol : décolle pour les regagner.",
+        "en": "Your Armor Plates only recharge while flying: take off to get them back."
       },
       {
         "fr": "Forme Destructeur pour le corps à corps, Brise-monde pour le zonage.",
@@ -15473,8 +15473,8 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_dehaka.png",
     "headline": {
-      "fr": "Il surgit de n'importe quel buisson du champ de bataille.",
-      "en": "He erupts from any bush on the Battleground."
+      "fr": "Il surgit d'un buisson que personne ne surveillait.",
+      "en": "He erupts from a bush nobody was watching."
     },
     "gameplay": {
       "fr": "Dehaka récolte l'essence des victimes pour se soigner et grandir, et rejoint n'importe quel buisson du champ de bataille avec Traqueur de la jungle.",
@@ -15957,8 +15957,8 @@ const HEROES = [
     "role": "Tank",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_diablo.png",
     "headline": {
-      "fr": "Il isole une cible et la ramène chez lui.",
-      "en": "He isolates a target and drags it home."
+      "fr": "Il isole une cible et la ramène dans son équipe.",
+      "en": "He isolates a target and drags it back to his team."
     },
     "gameplay": {
       "fr": "Diablo enchaîne Charge d'ombre et Correction pour ramener une cible dans son équipe. Ses âmes accumulées lui offrent une seconde vie en fin de partie.",
@@ -16587,7 +16587,7 @@ const HEROES = [
         "en": "In Pilot Mode, keep attacking: every hit brings your new mech closer."
       },
       {
-        "fr": "Matrice défensive réduit énormément les dégâts : couvre ton assassin avec.",
+        "fr": "Matrice défensive réduit énormément les dégâts : sers-t'en pour couvrir ton assassin.",
         "en": "Defense Matrix heavily cuts damage: use it to cover your assassin."
       }
     ],
@@ -17563,7 +17563,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Vol traverse toute le champ de bataille : sers-t'en pour tourner un objectif, pas pour fuir.",
+        "fr": "Vol traverse tout le champ de bataille : sers-t'en pour tourner un objectif, pas pour fuir.",
         "en": "Flight crosses the whole Battleground: use it to flank an objective, not to escape."
       },
       {
@@ -18034,8 +18034,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ton bouclier se recharge hors combat : recule quelques secondes plutôt que rentrer.",
-        "en": "Your Shield regenerates out of combat: back off a few seconds instead of recalling to the Hall of Storms."
+        "fr": "Ton bouclier se recharge hors combat : recule quelques secondes plutôt que de rentrer.",
+        "en": "Your Shield regenerates out of combat: back off a few seconds instead of using your Hearthstone."
       },
       {
         "fr": "Découpeur à plasma décrit deux cercles : place-le pour toucher deux fois.",
@@ -18914,8 +18914,8 @@ const HEROES = [
     "role": "Tank",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_garrosh.png",
     "headline": {
-      "fr": "Il jette les ennemis chez toi et tes alliés hors de danger.",
-      "en": "He throws enemies to you and allies out of danger."
+      "fr": "Il jette les ennemis dans son équipe et ses alliés hors de danger.",
+      "en": "He hurls enemies into his team and his allies out of danger."
     },
     "gameplay": {
       "fr": "Garrosh saisit un ennemi avec Boulet de démolition pour le jeter dans son équipe, ou éjecte un allié en danger avec Dans la mêlée. Plus il perd de vie, plus il encaisse.",
@@ -19398,8 +19398,8 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_tinker.png",
     "headline": {
-      "fr": "Il installe le terrain et l'ennemi se débrouille avec.",
-      "en": "He sets up the terrain and the enemy has to deal with it."
+      "fr": "Il aménage le terrain et laisse l'ennemi se débrouiller.",
+      "en": "He reshapes the ground and lets the enemy deal with it."
     },
     "gameplay": {
       "fr": "Gazleu installe des tourelles pour tenir une zone, ramasse les débris qui alimentent ses capacités et démolit les bâtiments plus vite que quiconque.",
@@ -21824,12 +21824,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_hogger.png",
     "headline": {
-      "fr": "Il projette les ennemis contre les murs, encore et encore.",
-      "en": "He slams enemies into walls, again and again."
+      "fr": "Le décor est sa meilleure arme.",
+      "en": "The terrain is his best weapon."
     },
     "gameplay": {
-      "fr": "Lardeur génère de la rage en frappant, se soigne sur son butin et projette les ennemis contre le décor pour les étourdir.",
-      "en": "Hogger builds Rage by hitting, heals off his loot, and slams enemies into terrain to Stun them."
+      "fr": "Lardeur génère de la rage en frappant, se soigne en ramassant son butin et projette les ennemis contre le décor pour les étourdir.",
+      "en": "Hogger builds Rage by hitting, heals by picking up his loot, and slams enemies into terrain to Stun them."
     },
     "spells": [
       {
@@ -21918,7 +21918,7 @@ const HEROES = [
       },
       {
         "fr": "Ramasse ton butin après un combat pour te soigner sans rentrer.",
-        "en": "Pick up your loot after a fight to heal without recalling to the Hall of Storms."
+        "en": "Pick up your loot after a fight to heal without using your Hearthstone."
       },
       {
         "fr": "Lardée sauvage rebondit sur les obstacles : sert autant à fuir qu'à poursuivre.",
@@ -23828,8 +23828,8 @@ const HEROES = [
         "en": "Iron Skin absorbs burst: anticipate rather than casting it too late."
       },
       {
-        "fr": "Éblouissement aveugle : parfait contre les assassins d'attaques de base.",
-        "en": "Shield Glare Blinds: perfect against auto-attack assassins."
+        "fr": "Éblouissement aveugle : parfait contre les héros qui vivent de leurs attaques de base.",
+        "en": "Shield Glare Blinds: perfect against Heroes who live off their Basic Attacks."
       },
       {
         "fr": "Couperet rejoint un allié en difficulté à l'autre bout du combat.",
@@ -32022,8 +32022,8 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_nova.png",
     "headline": {
-      "fr": "Personne ne la voit venir, et elle ne revient pas.",
-      "en": "Nobody sees her coming, and she does not come back."
+      "fr": "Personne ne la voit venir, et sa cible ne se relève pas.",
+      "en": "Nobody sees her coming, and her target does not get up."
     },
     "gameplay": {
       "fr": "Nova se déplace en camouflage permanent et cherche l'occasion de supprimer une cible isolée d'un seul Tir de précision.",
@@ -33545,7 +33545,7 @@ const HEROES = [
         "en": "During the rotation you ignore all crowd control: that is your engage window."
       },
       {
-        "fr": "Soif de sang te soigne selon le nombre de saignements : frappe large avant de l'utiliser.",
+        "fr": "Soif de sang soigne selon les saignements en cours : répands-les avant de l'utiliser.",
         "en": "Blood Rage heals based on the bleeds out there: spread them before using it."
       }
     ],
@@ -34450,7 +34450,7 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_raynor.png",
     "headline": {
-      "fr": "Simple, solide, il ne rate jamais une partie.",
+      "fr": "Simple, solide, il n'a jamais de mauvaise partie.",
       "en": "Simple, solid, he never has a bad game."
     },
     "gameplay": {
@@ -34935,8 +34935,8 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_rexxar.png",
     "headline": {
-      "fr": "Deux corps à gérer, deux fois plus dur à sortir d'une ligne.",
-      "en": "Two bodies to handle, twice as hard to push off a lane."
+      "fr": "Deux corps à déloger au lieu d'un.",
+      "en": "Two bodies to shift instead of one."
     },
     "gameplay": {
       "fr": "Rexxar dirige Misha, qui charge et encaisse à sa place. Il peut la soigner en permanence, ce qui les rend très difficiles à évincer d'une ligne.",
@@ -35424,8 +35424,8 @@ const HEROES = [
       "en": "The enemy never knows which one is real."
     },
     "gameplay": {
-      "fr": "Samuro sème des images miroir, échange sa place avec elles pour se soigner des effets négatifs, et frappe en camouflage quand personne ne l'attend.",
-      "en": "Samuro scatters Mirror Images, swaps places with them to cleanse himself, and strikes from Stealth when nobody expects it."
+      "fr": "Samuro sème des images miroir, échange sa place avec elles pour se débarrasser des effets négatifs, et frappe en camouflage quand personne ne l'attend.",
+      "en": "Samuro scatters Mirror Images, swaps places with them to shed negative effects, and strikes from Stealth when nobody expects it."
     },
     "spells": [
       {
@@ -35517,8 +35517,8 @@ const HEROES = [
         "en": "Constantly swap between image and real body to scramble enemy targeting."
       },
       {
-        "fr": "Marche du vent te soigne : recule quelques secondes plutôt que de rentrer au hall des Tempêtes.",
-        "en": "Wind Walk heals you: back off for a few seconds instead of recalling to the Hall of Storms."
+        "fr": "Marche du vent te soigne : recule quelques secondes plutôt que de rentrer à la base.",
+        "en": "Wind Walk heals you: back off for a few seconds instead of using your Hearthstone."
       }
     ],
     "builds": [
@@ -36383,11 +36383,11 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_barbarian.png",
     "headline": {
-      "fr": "Ni mana, ni soigneur, ni raison de rentrer au hall des Tempêtes.",
-      "en": "No Mana, no healer, no reason to go home."
+      "fr": "Ni mana, ni soigneur, ni raison de rentrer à la base.",
+      "en": "No Mana, no healer, no reason to use your Hearthstone."
     },
     "gameplay": {
-      "fr": "Sonya génère de la fureur en frappant et se soigne avec Trombe. Son autonomie totale en fait la reine de la ligne solitaire.",
+      "fr": "Sonya génère de la fureur en frappant et se soigne avec Trombe. Son autonomie totale en fait la reine de la solo lane.",
       "en": "Sonya builds Fury by hitting and heals with Whirlwind. Her complete self-sufficiency makes her the queen of the solo lane."
     },
     "spells": [
@@ -37809,8 +37809,8 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_tassadar.png",
     "headline": {
-      "fr": "Il coupe le terrain en deux avec un mur.",
-      "en": "He splits the ground in two with a wall."
+      "fr": "Un mur bien posé, et le combat est coupé en deux.",
+      "en": "One well-placed wall, and the fight is cut in half."
     },
     "gameplay": {
       "fr": "Tassadar canalise son rayon pour monter en puissance, puis coupe le combat en deux avec Mur de force au moment décisif.",
@@ -38280,8 +38280,8 @@ const HEROES = [
     "role": "AssassinMelee",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_butcher.png",
     "headline": {
-      "fr": "Sa viande fait toute sa puissance, et elle se perd.",
-      "en": "His meat is his entire power, and it can be lost."
+      "fr": "Toute sa puissance tient dans sa viande, et elle part avec lui.",
+      "en": "All his power sits in his meat, and it leaves with him."
     },
     "gameplay": {
       "fr": "Le Boucher collecte de la viande fraîche pour augmenter définitivement ses dégâts, puis fonce sur une cible unique et la déchiquette.",
@@ -38751,8 +38751,8 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_thrall.png",
     "headline": {
-      "fr": "Il se soigne en frappant et coupe le champ de bataille en deux.",
-      "en": "He heals by hitting and cuts the Battleground in half."
+      "fr": "Il se soigne en frappant et tient sa lane tout seul.",
+      "en": "He heals by hitting and holds his lane alone."
     },
     "gameplay": {
       "fr": "Thrall alimente son trait à chaque capacité qui touche, ce qui le soigne d'un coup une fois plein. Il tient une lane seul, et Fracture coupe une équipe en deux.",
@@ -38840,8 +38840,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Chaque capacité qui touche alimente ton trait, qui te soigne d'un coup une fois plein.",
-        "en": "Every Ability that connects feeds your trait, which heals you in one burst once full."
+        "fr": "Ne recule pas trop tôt : c'est en touchant que tu remplis ton trait.",
+        "en": "Do not back off too early: connecting is what fills your trait."
       },
       {
         "fr": "Esprit farouche immobilise et va plus loin à chaque héros touché.",
@@ -41395,8 +41395,8 @@ const HEROES = [
         "en": "Vault is for dodging crowd control, not just for running."
       },
       {
-        "fr": "Rafale frappe seule les ennemis proches : Acrobatie reste utilisable pendant.",
-        "en": "Strafe fires on nearby enemies by itself: Vault stays usable throughout."
+        "fr": "Rafale frappe seule les ennemis proches, et Acrobatie reste utilisable pendant ce temps.",
+        "en": "Strafe fires on nearby enemies by itself, and Vault stays usable throughout."
       }
     ],
     "builds": [
@@ -43783,16 +43783,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Bouclie juste avant les dégâts, pas après : un bouclier gaspillé, c'est de l'Énergie perdue.",
-        "en": "Shield just before the damage, not after: a wasted Shield is lost Energy."
+        "fr": "Lance ton bouclier juste avant les dégâts : un bouclier gaspillé, c'est de l'Énergie perdue.",
+        "en": "Cast your Shield just before the damage: a wasted Shield is lost Energy."
       },
       {
         "fr": "Ton Énergie monte en encaissant : cherche les échanges, ne les fuis pas.",
         "en": "Your Energy builds by absorbing: seek trades, don't avoid them."
       },
       {
-        "fr": "Orbe à gravitons regroupe une équipe entière pour tes alliés à dégâts de zone.",
-        "en": "Graviton Surge bunches a whole team up for your area damage allies."
+        "fr": "Orbe à gravitons rassemble toute une équipe : le rêve de tes alliés qui frappent en zone.",
+        "en": "Graviton Surge bunches up a whole team: a gift to your allies who hit in an area."
       }
     ],
     "builds": [
