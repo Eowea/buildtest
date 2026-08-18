@@ -23143,7 +23143,7 @@ const HEROES = [
   },
   {
     "id": "kelthuzad",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Kel'Thuzad",
       "en": "Kel'Thuzad"
@@ -23165,10 +23165,10 @@ const HEROES = [
           "fr": "Maître des ténèbres glaciales",
           "en": "Master of the Cold Dark"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_powerofthecolddark.png",
         "description": {
-          "fr": "Kel’Thuzad gagne en puissance à mesure qu’il affecte le déplacement des héros adverses.",
-          "en": "Kel'Thuzad becomes increasingly stronger as he disrupts enemies"
+          "fr": "Quête : immobiliser des héros avec Nova de givre ou les toucher avec Chaînes de Kel'Thuzad accumule des unités de chancre, qui lui débloquent d'abord Pointe glaciaire, puis renforcent durablement sa puissance de capacité.",
+          "en": "Quest: Rooting Heroes with Frost Nova or hitting them with Chains of Kel'Thuzad builds Blight, which first unlocks Glacial Spike, then lastingly increases his Spell Power."
         },
         "demoYoutubeId": ""
       },
@@ -23178,10 +23178,10 @@ const HEROES = [
           "fr": "Mort et décomposition",
           "en": "Death and Decay"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_deathanddecay.png",
         "description": {
-          "fr": "Inflige des dégâts et crée une nappe de dégâts.",
-          "en": "Damage enemies and create a damaging pool"
+          "fr": "Après un court délai, lance un orbe qui explose sur le premier ennemi touché et laisse une nappe qui ronge les ennemis qui s'y attardent.",
+          "en": "After a short delay, launches an orb that bursts on the first enemy hit and leaves a pool that eats away at enemies lingering in it."
         },
         "demoYoutubeId": ""
       },
@@ -23191,10 +23191,10 @@ const HEROES = [
           "fr": "Nova de givre",
           "en": "Frost Nova"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_frostnova.png",
         "description": {
-          "fr": "Inflige des dégâts aux ennemis et les neutralise.",
-          "en": "Damage and disable enemies"
+          "fr": "Après un court délai, blesse et ralentit les ennemis de la zone ; ceux pris en plein centre sont immobilisés.",
+          "en": "After a short delay, damages and Slows enemies in the area; those caught dead center are Rooted."
         },
         "demoYoutubeId": ""
       },
@@ -23204,10 +23204,23 @@ const HEROES = [
           "fr": "Chaînes de Kel’Thuzad",
           "en": "Chains of Kel'Thuzad"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_chains.png",
         "description": {
-          "fr": "Rapproche les héros adverses.",
-          "en": "Pull enemy Heroes together"
+          "fr": "Lance une chaîne sur un héros adverse. La relancer sur une seconde cible les attire l'un vers l'autre et les étourdit.",
+          "en": "Throws a chain at an enemy Hero. Reactivating it on a second target pulls them together and Stuns them."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "&",
+        "name": {
+          "fr": "Pointe glaciaire",
+          "en": "Glacial Spike"
+        },
+        "icon": "assets/heroes/base_spells/kelthuzad/images/talents/storm_ui_icon_kelthuzad_glacialspike.png",
+        "description": {
+          "fr": "Débloquée par la quête du trait. Plante une pointe qui explose peu après ; Chaînes de Kel'Thuzad peut la prendre pour cible.",
+          "en": "Unlocked by the trait's quest. Plants a spike that explodes shortly after; Chains of Kel'Thuzad can target it."
         },
         "demoYoutubeId": ""
       },
@@ -23217,10 +23230,10 @@ const HEROES = [
           "fr": "Explosion de givre",
           "en": "Frost Blast"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_frozentomb.png",
         "description": {
-          "fr": "Immobilise les ennemis autour de la cible et leur inflige des dégâts.",
-          "en": "Root and damage enemies around a target"
+          "fr": "Projette un météore de glace sur un héros adverse : lui et les ennemis autour sont blessés et immobilisés.",
+          "en": "Hurls an ice meteor at an enemy Hero: they and the enemies around them are damaged and Rooted."
         },
         "demoYoutubeId": ""
       },
@@ -23230,10 +23243,10 @@ const HEROES = [
           "fr": "Fissure d’ombre",
           "en": "Shadow Fissure"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_shadowfissure.png",
         "description": {
-          "fr": "Inflige de lourds dégâts dans une zone.",
-          "en": "Deal high damage in an area"
+          "fr": "Crée une fissure n'importe où sur le champ de bataille, qui explose peu après. Toucher un héros la rend presque aussitôt réutilisable.",
+          "en": "Creates a fissure anywhere on the battlefield that erupts shortly after. Hitting a Hero makes it reusable almost at once."
         },
         "demoYoutubeId": ""
       }
@@ -23277,37 +23290,37 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmq5ddhp701p4x",
+            "primaryId": "tmkvpkqvt01dj2",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmq5ddhp7040xl",
+            "primaryId": "tmkvpkqvt04196",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmq5ddhp707t8n",
+            "primaryId": "tmkvpkqvt07gax",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmq5ddhp710x17",
+            "primaryId": "tmkvpkqvt1052v",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmq5ddhp712uh0",
+            "primaryId": "tmkvpkqvt12fxx",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmq5ddhp715fb2",
+            "primaryId": "tmkvpkqvt15t05",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmq5ddhp718q7u",
+            "primaryId": "tmkvpkqvt18esk",
             "alternativeIds": []
           }
         ]
@@ -23316,13 +23329,13 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmq5ddhp701p4x",
+        "id": "tmkvpkqvt01dj2",
         "level": 1,
         "name": {
           "fr": "Maleterres",
           "en": "The Plaguelands"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_deathanddecay.png",
         "description": {
           "fr": "Augmente la durée et le rayon de Mort et décomposition.",
           "en": "Increase Death and Decay duration, radius"
@@ -23330,13 +23343,13 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp702p5n",
+        "id": "tmkvpkqvt02qct",
         "level": 1,
         "name": {
           "fr": "Chancregivre",
           "en": "Blighted Frost"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_frostnova.png",
         "description": {
           "fr": "Augmente les dégâts dans la zone centrale et la durée de Nova de givre.",
           "en": "Increase Frost Nova center damage, duration"
@@ -23344,13 +23357,13 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp703gks",
+        "id": "tmkvpkqvt03624",
         "level": 1,
         "name": {
           "fr": "Chaînes barbelées",
           "en": "Barbed Chains"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_chains.png",
         "description": {
           "fr": "Les chaînes infligent plus de dégâts et réduisent l’armure.",
           "en": "Chains deals more damage, reduces Armor"
@@ -23358,55 +23371,55 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp7040xl",
+        "id": "tmkvpkqvt04196",
         "level": 4,
         "name": {
           "fr": "Boucle liée",
           "en": "Strip Shields"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_chains.png",
         "description": {
-          "fr": "Les chaînes confèrent un bouclier et infligent des dégâts aux boucliers.",
-          "en": "Chains grants Shield, damages Shields"
+          "fr": "Attirer un héros avec les chaînes confère un bouclier permanent, cumulable. Les chaînes frappent aussi plus fort les boucliers adverses.",
+          "en": "Pulling a Hero with the chains grants a permanent stacking Shield. The chains also hit enemy Shields harder."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp705hmr",
+        "id": "tmkvpkqvt05qzg",
         "level": 4,
         "name": {
           "fr": "Phylactère",
           "en": "Phylactery of Kel'Thuzad"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/talents/storm_ui_icon_kelthuzad_phylactery.png",
         "description": {
-          "fr": "Quête : collecter des globes de régénération permet de ressusciter instantanément.",
-          "en": "Quest: Collect Regen Globes for instant respawn"
+          "fr": "Quête : collecter des globes de régénération charge le phylactère, qui permet de ressusciter instantanément une fois mort. Tant qu'il est chargé, les dégâts de capacité soignent Kel'Thuzad.",
+          "en": "Quest: gathering Regeneration Globes charges the phylactery, allowing an instant respawn once dead. While charged, Ability damage heals Kel'Thuzad."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp706nv6",
+        "id": "tmkvpkqvt06b1y",
         "level": 4,
         "name": {
           "fr": "Armure de l’archiliche",
           "en": "Armor of the Archlich"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/talents/storm_ui_icon_kelthuzad_armorofthearchlich.png",
         "description": {
-          "fr": "Confère de l’armure physique et ralentit les ennemis.",
-          "en": "Activate to gain Physical Armor, Slow enemies"
+          "fr": "Confère à Kel'Thuzad une forte armure physique et, à l'activation, blesse et ralentit les ennemis proches.",
+          "en": "Grants Kel'Thuzad heavy Physical Armor and, on activation, damages and Slows nearby enemies."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp707t8n",
+        "id": "tmkvpkqvt07gax",
         "level": 7,
         "name": {
           "fr": "Décomposition accélérée",
           "en": "Accelerated Decay"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_deathanddecay.png",
         "description": {
           "fr": "Les dégâts de Mort et décomposition augmentent.",
           "en": "Death and Decay damage increases"
@@ -23414,27 +23427,27 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp708x22",
+        "id": "tmkvpkqvt087i1",
         "level": 7,
         "name": {
           "fr": "Toucher glacial",
           "en": "Chilling Touch"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/talents/storm_ui_icon_kelthuzad_chillingtouch.png",
         "description": {
-          "fr": "Les attaques peuvent infliger des dégâts de capacité en zone.",
-          "en": "Basic Attacks periodically deal area Spell damage"
+          "fr": "Régulièrement, la prochaine attaque de base frappe en zone, ralentit et inflige des dégâts de capacité au lieu de dégâts physiques.",
+          "en": "Regularly, the next Basic Attack splashes, Slows, and deals Ability damage instead of Physical damage."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp709345",
+        "id": "tmkvpkqvt09b59",
         "level": 7,
         "name": {
           "fr": "Glaciation",
           "en": "Ice Cold"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/talents/storm_ui_icon_kelthuzad_glacialspike.png",
         "description": {
           "fr": "Réduit le temps de recharge de Pointe glaciaire.",
           "en": "Reduce cooldown of Glacial Spike"
@@ -23442,41 +23455,41 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp710x17",
+        "id": "tmkvpkqvt1052v",
         "level": 10,
         "name": {
           "fr": "Explosion de givre",
           "en": "Frost Blast"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_frozentomb.png",
         "description": {
-          "fr": "Immobilise les ennemis autour de la cible et leur inflige des dégâts.",
-          "en": "Root and damage enemies around a target"
+          "fr": "Projette un météore de glace sur un héros adverse : lui et les ennemis autour sont blessés et immobilisés.",
+          "en": "Hurls an ice meteor at an enemy Hero: they and the enemies around them are damaged and Rooted."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp711moz",
+        "id": "tmkvpkqvt111rs",
         "level": 10,
         "name": {
           "fr": "Fissure d’ombre",
           "en": "Shadow Fissure"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_shadowfissure.png",
         "description": {
-          "fr": "Inflige de lourds dégâts dans une zone.",
-          "en": "Deal high damage in an area"
+          "fr": "Crée une fissure n'importe où sur le champ de bataille, qui explose peu après. Toucher un héros la rend presque aussitôt réutilisable.",
+          "en": "Creates a fissure anywhere on the battlefield that erupts shortly after. Hitting a Hero makes it reusable almost at once."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp712uh0",
+        "id": "tmkvpkqvt12fxx",
         "level": 13,
         "name": {
           "fr": "Étreinte de glace",
           "en": "Icy Grasp"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_frostnova.png",
         "description": {
           "fr": "Augmente l’intensité du ralentissement de Nova de givre et réduit son temps de recharge.",
           "en": "Increase Frost Nova Slow, reduce cooldown"
@@ -23484,13 +23497,13 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp7137n6",
+        "id": "tmkvpkqvt13le3",
         "level": 13,
         "name": {
           "fr": "Chaînes de glace",
           "en": "Chains of Ice"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_chains.png",
         "description": {
           "fr": "Les chaînes ralentissent leur cible.",
           "en": "Chains Slows after pull"
@@ -23498,13 +23511,13 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp714vpy",
+        "id": "tmkvpkqvt14zc6",
         "level": 13,
         "name": {
           "fr": "Maillons faibles",
           "en": "Chain-Link"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/talents/storm_ui_icon_kelthuzad_chains_a.png",
         "description": {
           "fr": "Rapprocher des héros réduit le temps de recharge des chaînes.",
           "en": "Pulling Heroes reduces Chains cooldown"
@@ -23512,13 +23525,13 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp715fb2",
+        "id": "tmkvpkqvt15t05",
         "level": 16,
         "name": {
           "fr": "Échos arcaniques",
           "en": "Arcane Echoes"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_deathanddecay.png",
         "description": {
           "fr": "Réduit le temps de recharge de Mort et décomposition.",
           "en": "Reduce Death and Decay cooldown"
@@ -23526,7 +23539,7 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp716sc0",
+        "id": "tmkvpkqvt1668z",
         "level": 16,
         "name": {
           "fr": "Morsure du givre",
@@ -23540,13 +23553,13 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp7172vn",
+        "id": "tmkvpkqvt17w0u",
         "level": 16,
         "name": {
           "fr": "Puissance de la Couronne de glace",
           "en": "Power of Icecrown"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/talents/storm_ui_icon_kelthuzad_poweroficecrown.png",
         "description": {
           "fr": "Neutraliser des ennemis confère de la puissance de capacité.",
           "en": "Disabling enemies grants Spell Power"
@@ -23554,13 +23567,13 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp718q7u",
+        "id": "tmkvpkqvt18esk",
         "level": 20,
         "name": {
           "fr": "Froid de la mort",
           "en": "Deathchill"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_frozentomb.png",
         "description": {
           "fr": "Ralentit. Tuer des ennemis déclenche des explosions supplémentaires.",
           "en": "Frost Blast Slows, Takedowns release blasts"
@@ -23568,44 +23581,44 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp719k4a",
+        "id": "tmkvpkqvt19817",
         "level": 20,
         "name": {
           "fr": "Pouvoir du Fléau",
           "en": "Might of the Scourge"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_shadowfissure.png",
         "description": {
-          "fr": "Toucher des héros relance Fissure d’ombre.",
-          "en": "Hitting Heroes recasts Shadow Fissure"
+          "fr": "Toucher un héros avec Fissure d'ombre en déclenche une seconde sous lui peu après.",
+          "en": "Hitting a Hero with Shadow Fissure triggers a second one beneath them shortly after."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp720tp6",
+        "id": "tmkvpkqvt20v5t",
         "level": 20,
         "name": {
           "fr": "Projection des damnés",
           "en": "Shifting Malice"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/talents/storm_ui_icon_kelthuzad_shiftingmalice.png",
         "description": {
-          "fr": "Projette vers l’avant et inflige des dégâts.",
-          "en": "Activate to dash and deal damage"
+          "fr": "Projette Kel'Thuzad vers l'avant en blessant les ennemis sur son passage. Faire une victime le rend aussitôt réutilisable.",
+          "en": "Dashes Kel'Thuzad forward, damaging the enemies in his path. A Takedown makes it immediately reusable."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmq5ddhp721uoq",
+        "id": "tmkvpkqvt21vs2",
         "level": 20,
         "name": {
           "fr": "Ombre de Naxxramas",
           "en": "The Damned Return"
         },
-        "icon": null,
+        "icon": "assets/heroes/base_spells/kelthuzad/images/talents/storm_ui_icon_kelthuzad_cultofthedamned.png",
         "description": {
-          "fr": "Crée une ombre qui reproduit Mort et décomposition.",
-          "en": "Create Shades that mimic Death and Decay"
+          "fr": "Invoque une ombre qui reproduit chaque Mort et décomposition lancée par Kel'Thuzad.",
+          "en": "Summons a Shade that mirrors every Death and Decay Kel'Thuzad casts."
         },
         "demoYoutubeId": null
       }
