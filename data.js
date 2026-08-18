@@ -9066,7 +9066,7 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Saute-Muraille",
+          "fr": "Saute-muraille",
           "en": "Push Off"
         },
         "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_accelerando.png",
@@ -9118,7 +9118,7 @@ const HEROES = [
       {
         "key": "R1",
         "name": {
-          "fr": "Mur du son",
+          "fr": "Mur de son",
           "en": "Sound Barrier"
         },
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundbarrier.png",
@@ -9131,7 +9131,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "Top là",
+          "fr": "Tope là",
           "en": "High Five"
         },
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_highfive.png",
@@ -9149,8 +9149,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_wallride.png",
         "description": {
-          "fr": "Permet à Lúcio de glisser sur les décors de la carte, ce qui augmente sa vitesse de déplacement.",
-          "en": "Allows Lúcio to slide across the map's terrain, increasing his movement speed. "
+          "fr": "Lúcio traverse librement les unités et file bien plus vite le long des obstacles.",
+          "en": "Lúcio passes freely through units and rides far faster alongside terrain."
         },
         "demoYoutubeId": ""
       }
@@ -15441,13 +15441,6 @@ const HEROES = [
     ],
     "forms": [
       {
-        "id": "vol",
-        "label": {
-          "fr": "Vol draconique",
-          "en": "Dragonflight"
-        }
-      },
-      {
         "id": "destructeur",
         "label": {
           "fr": "Destructeur",
@@ -15459,6 +15452,13 @@ const HEROES = [
         "label": {
           "fr": "Brise-monde",
           "en": "World Breaker"
+        }
+      },
+      {
+        "id": "vol",
+        "label": {
+          "fr": "Vol draconique",
+          "en": "Dragonflight"
         }
       }
     ]
@@ -17522,6 +17522,19 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
+        "key": "W",
+        "name": {
+          "fr": "Vol",
+          "en": "Flight"
+        },
+        "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_mount.png",
+        "description": {
+          "fr": "Au lieu d’utiliser la monture, peut survoler le terrain sur une longue distance.",
+          "en": "Instead of mounting, Falstad can fly a great distance over terrain"
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "R1",
         "name": {
           "fr": "Bourrasque violente",
@@ -17544,19 +17557,6 @@ const HEROES = [
         "description": {
           "fr": "Après un temps de visée, un rayon frappe les ennemis sur une très longue ligne ; chaque héros touché en rapproche la prochaine utilisation.",
           "en": "After aiming, a beam strikes enemies along a very long line; each Hero hit brings the next cast closer."
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "W",
-        "name": {
-          "fr": "Vol",
-          "en": "Flight"
-        },
-        "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_mount.png",
-        "description": {
-          "fr": "Au lieu d’utiliser la monture, peut survoler le terrain sur une longue distance.",
-          "en": "Instead of mounting, Falstad can fly a great distance over terrain"
         },
         "demoYoutubeId": ""
       }
@@ -18491,6 +18491,19 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
+        "key": "W",
+        "name": {
+          "fr": "Bourrade",
+          "en": "Shove"
+        },
+        "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_shove.png",
+        "description": {
+          "fr": "Pousse Cho sur une courte distance.",
+          "en": "Nudge Cho a short distance"
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "R1",
         "name": {
           "fr": "Néant distordu",
@@ -18513,19 +18526,6 @@ const HEROES = [
         "description": {
           "fr": "Déchaîne une longue salve de traits de l'ombre qui suivent le pointeur.",
           "en": "Unleashes a long volley of shadow bolts that follow the cursor."
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "W",
-        "name": {
-          "fr": "Bourrade",
-          "en": "Shove"
-        },
-        "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_shove.png",
-        "description": {
-          "fr": "Pousse Cho sur une courte distance.",
-          "en": "Nudge Cho a short distance"
         },
         "demoYoutubeId": ""
       }
@@ -27232,6 +27232,19 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
+        "key": "W",
+        "name": {
+          "fr": "Rapidité de la dryade",
+          "en": "Dryad's Swiftness"
+        },
+        "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_mount.png",
+        "description": {
+          "fr": "Lunara se déplace en bondissant, plus vite qu'à pied, et n'utilise jamais de monture.",
+          "en": "Lunara moves by leaping, faster than on foot, and never uses a Mount."
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "R1",
         "name": {
           "fr": "Couronne d’épines",
@@ -27254,19 +27267,6 @@ const HEROES = [
         "description": {
           "fr": "Bondit par-dessus un ennemi, lui inflige des dégâts et le ralentit.",
           "en": "Leap over enemies, damaging and Slowing"
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "W",
-        "name": {
-          "fr": "Rapidité de la dryade",
-          "en": "Dryad's Swiftness"
-        },
-        "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_mount.png",
-        "description": {
-          "fr": "Lunara se déplace en bondissant, plus vite qu'à pied, et n'utilise jamais de monture.",
-          "en": "Lunara moves by leaping, faster than on foot, and never uses a Mount."
         },
         "demoYoutubeId": ""
       }
