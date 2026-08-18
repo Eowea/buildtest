@@ -10335,7 +10335,7 @@ const HEROES = [
         "key": "E",
         "name": {
           "fr": "Souffle de feu",
-          "en": "Stagger"
+          "en": "Breath of Fire"
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_stagger.png",
         "description": {
@@ -11722,7 +11722,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Domination",
+          "fr": "Correction",
           "en": "Overpower"
         },
         "icon": "assets/heroes/base_spells/diablo/images/spells/storm_ui_icon_diablo_overpower_var1.png",
