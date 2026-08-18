@@ -1136,6 +1136,19 @@ const HEROES = [
         "demoYoutubeId": "assets/heroes/base_spells/rehgar/videos/spells/rehgar_e.mp4"
       },
       {
+        "key": "W",
+        "name": {
+          "fr": "Loup fantôme",
+          "en": "Ghost Wolf"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_ghostwolf.png",
+        "description": {
+          "fr": "Augmente la vitesse de déplacement, la prochaine auto-attaque est plus forte.",
+          "en": "Increases movement speed; next basic attack deals bonus damage."
+        },
+        "demoYoutubeId": "assets/heroes/base_spells/rehgar/videos/spells/rehgar_mount.mp4"
+      },
+      {
         "key": "R1",
         "name": {
           "fr": "Guérison ancestrale",
@@ -1160,19 +1173,6 @@ const HEROES = [
           "en": "Increases movement & attack speed, basic attacks heal."
         },
         "demoYoutubeId": "assets/heroes/base_spells/rehgar/videos/spells/rehgar_bloodlust.mp4"
-      },
-      {
-        "key": "W",
-        "name": {
-          "fr": "Loup fantôme",
-          "en": "Ghost Wolf"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_ghostwolf.png",
-        "description": {
-          "fr": "Augmente la vitesse de déplacement, la prochaine auto-attaque est plus forte.",
-          "en": "Increases movement speed; next basic attack deals bonus damage."
-        },
-        "demoYoutubeId": "assets/heroes/base_spells/rehgar/videos/spells/rehgar_mount.mp4"
       }
     ],
     "tips": [
@@ -1558,6 +1558,19 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "key": "W",
+        "name": {
+          "fr": "Déphasage",
+          "en": "Phase Shift"
+        },
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_hypershift.png",
+        "description": {
+          "fr": "Se téléporte sur un allié et le soigne en %pv.",
+          "en": "Teleports to an ally and heals them based on % max health."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "key": "R1",
         "name": {
           "fr": "Papillonnage",
@@ -1580,19 +1593,6 @@ const HEROES = [
         "description": {
           "fr": "Créer une vague qui repousse et inflige des dégâts aux ennemis.",
           "en": "Creates an expanding wave that damages and pushes enemies away."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "key": "W",
-        "name": {
-          "fr": "Déphasage",
-          "en": "Phase Shift"
-        },
-        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_hypershift.png",
-        "description": {
-          "fr": "Se téléporte sur un allié et le soigne en %pv.",
-          "en": "Teleports to an ally and heals them based on % max health."
         },
         "demoYoutubeId": null
       }
@@ -7229,19 +7229,6 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
-        "key": "&",
-        "name": {
-          "fr": "Mansuétude",
-          "en": "Clemency"
-        },
-        "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_clemency.png",
-        "description": {
-          "fr": "Canalise un laser de soin sur un allié. Retire du Désespoir.",
-          "en": "Channels damage and slows an enemy."
-        },
-        "demoYoutubeId": ""
-      },
-      {
         "key": "A",
         "name": {
           "fr": "Supplique",
@@ -7277,6 +7264,19 @@ const HEROES = [
         "description": {
           "fr": "Frappe en ligne, déclenche un second coup si un héros est touché. Quête : Chaque fois que Flagellation touche, augmente les points de vie et mana.",
           "en": "Strikes in a line, strikes again if a hero is hit. Quest: Each time Searing Lash hits, it increases health and mana."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "&",
+        "name": {
+          "fr": "Mansuétude",
+          "en": "Clemency"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_clemency.png",
+        "description": {
+          "fr": "Canalise un laser de soin sur un allié. Retire du Désespoir.",
+          "en": "Channels damage and slows an enemy."
         },
         "demoYoutubeId": ""
       },
@@ -8121,62 +8121,6 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
-        "key": "Z",
-        "form": "normal",
-        "name": {
-          "fr": "Nid toxique",
-          "en": "Toxic Nest"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_toxicnest.png",
-        "description": {
-          "fr": "Pose un nid qui s'arme après un court délai, puis explose sur un ennemi proche en le révélant. Possède plusieurs charges.",
-          "en": "Places a nest that arms after a short delay, then detonates on a nearby enemy and reveals them. Has multiple charges."
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "R1",
-        "form": "normal",
-        "name": {
-          "fr": "Évolution de monstruosité",
-          "en": "Evolve Monstrosity"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_evolvemonstrosity.png",
-        "description": {
-          "fr": "Change un serviteur ou un nuisible en monstruosité.",
-          "en": "Minion or Locust becomes a powerful Monstrosity"
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "R2",
-        "form": "normal",
-        "name": {
-          "fr": "Évolution ultime",
-          "en": "Ultimate Evolution"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_ultimateevolution.png",
-        "description": {
-          "fr": "Clone un héros allié ciblé et en prend le contrôle.",
-          "en": "Clone target allied Hero and control it"
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "W",
-        "form": "normal",
-        "name": {
-          "fr": "Tunnel",
-          "en": "Deep Tunnel"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_mount.png",
-        "description": {
-          "fr": "Transfère à un endroit ciblé.",
-          "en": "Tunnel to a location."
-        },
-        "demoYoutubeId": ""
-      },
-      {
         "key": "A",
         "form": "symbiote",
         "name": {
@@ -8187,6 +8131,20 @@ const HEROES = [
         "description": {
           "fr": "Projette un aiguillon qui inflige des dégâts au premier ennemi qu’il touche.",
           "en": "Shoots a spike that deals damage to the first enemy it contacts."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "Z",
+        "form": "normal",
+        "name": {
+          "fr": "Nid toxique",
+          "en": "Toxic Nest"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_toxicnest.png",
+        "description": {
+          "fr": "Pose un nid qui s'arme après un court délai, puis explose sur un ennemi proche en le révélant. Possède plusieurs charges.",
+          "en": "Places a nest that arms after a short delay, then detonates on a nearby enemy and reveals them. Has multiple charges."
         },
         "demoYoutubeId": ""
       },
@@ -8215,6 +8173,48 @@ const HEROES = [
         "description": {
           "fr": "Confère un bouclier temporaire à l'allié porteur du symbiote.",
           "en": "Grants the Symbiote host a temporary Shield."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "W",
+        "form": "normal",
+        "name": {
+          "fr": "Tunnel",
+          "en": "Deep Tunnel"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_mount.png",
+        "description": {
+          "fr": "Transfère à un endroit ciblé.",
+          "en": "Tunnel to a location."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "R1",
+        "form": "normal",
+        "name": {
+          "fr": "Évolution de monstruosité",
+          "en": "Evolve Monstrosity"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_evolvemonstrosity.png",
+        "description": {
+          "fr": "Change un serviteur ou un nuisible en monstruosité.",
+          "en": "Minion or Locust becomes a powerful Monstrosity"
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "R2",
+        "form": "normal",
+        "name": {
+          "fr": "Évolution ultime",
+          "en": "Ultimate Evolution"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_ultimateevolution.png",
+        "description": {
+          "fr": "Clone un héros allié ciblé et en prend le contrôle.",
+          "en": "Clone target allied Hero and control it"
         },
         "demoYoutubeId": ""
       }
@@ -9580,7 +9580,7 @@ const HEROES = [
   },
   {
     "id": "artanis",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Artanis",
       "en": "Artanis"
@@ -9599,13 +9599,13 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Surcharge de boucliers",
+          "fr": "Surcharge de bouclier",
           "en": "Shield Overload"
         },
         "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_shieldoverload.png",
         "description": {
-          "fr": "Gagne automatiquement un bouclier quand ta vie descend.",
-          "en": "Automatically gain a shield when your Health drops."
+          "fr": "Sous un certain seuil de points de vie, subir des dégâts confère un bouclier à Artanis. Ses attaques de base en rapprochent le prochain déclenchement.",
+          "en": "Below a Health threshold, taking damage grants Artanis a Shield. His Basic Attacks bring the next trigger closer."
         },
         "demoYoutubeId": ""
       },
@@ -9617,8 +9617,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_powerstrikes.png",
         "description": {
-          "fr": "Charge en avant puis reviens à ta position de départ.",
-          "en": "Dashes forward, then returns to your starting position."
+          "fr": "Fonce vers l'avant puis revient sur ses pas en blessant les ennemis aux deux passages. Chaque ennemi touché rapproche la prochaine Surcharge de bouclier.",
+          "en": "Dashes forward then back, damaging enemies on both passes. Each enemy hit brings the next Shield Overload closer."
         },
         "demoYoutubeId": ""
       },
@@ -9630,8 +9630,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_doubleslash_on.png",
         "description": {
-          "fr": "Ta prochaine attaque frappe deux fois et te fait avancer.",
-          "en": "Your next Basic Attack strikes twice and moves you forward."
+          "fr": "La prochaine attaque de base propulse Artanis sur une courte distance et frappe sa cible deux fois.",
+          "en": "The next Basic Attack launches Artanis a short distance and strikes his target twice."
         },
         "demoYoutubeId": ""
       },
@@ -9643,8 +9643,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_repositionmatrix.png",
         "description": {
-          "fr": "Échange ta position avec le héros ennemi touché.",
-          "en": "Swaps your position with the enemy Hero hit."
+          "fr": "Projette un prisme qui blesse le premier héros touché et échange sa position avec la sienne, rendant Artanis insensible aux effets de contrôle. Utilisable pendant Célérité tranchante.",
+          "en": "Fires a prism that damages the first Hero hit and swaps positions with them, making Artanis Unstoppable. Usable during Blade Dash."
         },
         "demoYoutubeId": ""
       },
@@ -9656,8 +9656,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_purifierbeam.png",
         "description": {
-          "fr": "Un rayon suit un ennemi et brûle tout sur son passage.",
-          "en": "A beam follows an enemy, burning everything in its path."
+          "fr": "Un rayon orbital pourchasse un héros adverse où qu'il aille sur le champ de bataille et le brûle sans relâche.",
+          "en": "An orbital beam chases an enemy Hero anywhere on the battlefield, burning them relentlessly."
         },
         "demoYoutubeId": ""
       },
@@ -9669,8 +9669,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_disruptionweb.png",
         "description": {
-          "fr": "Aveugle tous les ennemis d'une très grande zone.",
-          "en": "Blinds all enemies in a very large area."
+          "fr": "Frappe et aveugle les ennemis d'une très large zone, n'importe où sur le champ de bataille.",
+          "en": "Damages and Blinds enemies in a very large area, anywhere on the battlefield."
         },
         "demoYoutubeId": ""
       }
@@ -9705,46 +9705,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Artanis]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "18 Août 2026",
+          "en": "August 18, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6johc28c",
+            "primaryId": "tmu77uh7t0122y",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jo4g7a8",
+            "primaryId": "tmu77uh7t04jq9",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jo3zjo4",
+            "primaryId": "tmu77uh7t07jio",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jojk3mh",
+            "primaryId": "tmu77uh7t10msx",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6josn69m",
+            "primaryId": "tmu77uh7t12yev",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jo8yxd8",
+            "primaryId": "tmu77uh7t16eh4",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jox1wwx",
+            "primaryId": "tmu77uh7t195sr",
             "alternativeIds": []
           }
         ]
@@ -9753,100 +9753,310 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6johc28c",
+        "id": "tmu77uh7t0122y",
         "level": 1,
         "name": {
-          "fr": "Reactive Parry",
+          "fr": "Parade réactive",
           "en": "Reactive Parry"
         },
-        "icon": "assets/heroes/base_spells/artanis/images/talents/storm_ui_icon_artanis_doubleslash_on.png",
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_doubleslash_on.png",
         "description": {
-          "fr": "Damaging enemy Heroes with Twin Blades or Blade Dash grants Artanis 50 Physical Armor against the next enemy Hero Basic Attack, reducing its damage by 50%.  Stores up to 2 charges.",
-          "en": "Damaging enemy Heroes with Twin Blades or Blade Dash grants Artanis 50 Physical Armor against the next enemy Hero Basic Attack, reducing its damage by 50%.  Stores up to 2 charges."
+          "fr": "Lames jumelles et Célérité tranchante confèrent de l’armure physique.",
+          "en": "Twin Blades, Blade Dash gives Physical Armor"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo4g7a8",
+        "id": "tmu77uh7t02u22",
+        "level": 1,
+        "name": {
+          "fr": "Adversaire amateur",
+          "en": "Amateur Opponent"
+        },
+        "icon": "assets/heroes/base_spells/artanis/images/talents/storm_ui_icon_artanis_doubleslash_var1.png",
+        "description": {
+          "fr": "Augmente les dégâts de Lames jumelles infligés aux cibles non héroïques.",
+          "en": "Increases Twin Blades damage to non-Heroes"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmu77uh7t034cp",
+        "level": 1,
+        "name": {
+          "fr": "Protecteur d’Aïur",
+          "en": "Protector Of Aiur"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
+        "description": {
+          "fr": "Quête : les attaques portées aux héros augmentent les dégâts.",
+          "en": "Quest: Attacks against Heroes increase damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmu77uh7t04jq9",
         "level": 4,
         "name": {
-          "fr": "Psionic Synergy",
+          "fr": "Synergie psionique",
           "en": "Psionic Synergy"
         },
-        "icon": "assets/heroes/base_spells/artanis/images/talents/storm_ui_icon_artanis_repositionmatrix.png",
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_repositionmatrix.png",
         "description": {
-          "fr": "Hitting an enemy Hero with Phase Prism grants 30 Armor for 5 seconds.",
-          "en": "Hitting an enemy Hero with Phase Prism grants 30 Armor for 5 seconds."
+          "fr": "Prisme de phase confère de l’armure.",
+          "en": "Phase Prism grants Armor"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo3zjo4",
+        "id": "tmu77uh7t05081",
+        "level": 4,
+        "name": {
+          "fr": "Batterie de boucliers",
+          "en": "Shield Battery"
+        },
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_shieldoverload.png",
+        "description": {
+          "fr": "Surcharge de bouclier se recharge plus vite quand elle est active.",
+          "en": "Shield Overload recharges faster while active"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmu77uh7t06skq",
+        "level": 4,
+        "name": {
+          "fr": "Levée de bouclier",
+          "en": "Shield Surge"
+        },
+        "icon": "assets/heroes/base_spells/artanis/images/talents/storm_ui_icon_artanis_shieldoverload_a.png",
+        "description": {
+          "fr": "Augmente le bouclier de Surcharge de bouclier quand les points de vie sont bas.",
+          "en": "Increase Shield Overload shield at low Health"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmu77uh7t07jio",
         "level": 7,
         "name": {
-          "fr": "Solarite Reaper",
+          "fr": "Faucheur en solarite",
           "en": "Solarite Reaper"
         },
-        "icon": "assets/heroes/base_spells/artanis/images/talents/storm_ui_icon_artanis_powerstrikes.png",
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_powerstrikes.png",
         "description": {
-          "fr": "Increases the damage of the first dash of Blade Dash by 175%.",
-          "en": "Increases the damage of the first dash of Blade Dash by 175%."
+          "fr": "Augmente les dégâts du premier passage de Célérité tranchante.",
+          "en": "Increases the damage of Blade Dash's first pass."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jojk3mh",
+        "id": "tmu77uh7t088rp",
+        "level": 7,
+        "name": {
+          "fr": "Impulsion temporelle",
+          "en": "Chrono Surge"
+        },
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_repositionmatrix.png",
+        "description": {
+          "fr": "Toucher un héros avec Prisme de phase augmente la vitesse d'attaque d'Artanis et ralentit la cible.",
+          "en": "Hitting a Hero with Phase Prism grants Artanis Attack Speed and Slows the target."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmu77uh7t09s3e",
+        "level": 7,
+        "name": {
+          "fr": "Contrecoup",
+          "en": "Final Cut"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
+        "description": {
+          "fr": "Après une capacité, la prochaine attaque de base frappe plus fort, bien davantage quand Artanis a peu de points de vie.",
+          "en": "After an Ability, the next Basic Attack hits harder, far more so when Artanis is at low Health."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmu77uh7t10msx",
         "level": 10,
         "name": {
-          "fr": "Suppression Pulse",
+          "fr": "Impulsion de suppression",
           "en": "Suppression Pulse"
         },
-        "icon": "assets/heroes/base_spells/artanis/images/talents/storm_ui_icon_artanis_disruptionweb.png",
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_disruptionweb.png",
         "description": {
-          "fr": "Fire a large area pulse from the Spear of Adun, dealing 114 (+4% per level) damage and Blinding enemies for 4 seconds. Unlimited range.",
-          "en": "Fire a large area pulse from the Spear of Adun, dealing 114 (+4% per level) damage and Blinding enemies for 4 seconds. Unlimited range."
+          "fr": "Frappe et aveugle les ennemis d'une très large zone, n'importe où sur le champ de bataille.",
+          "en": "Damages and Blinds enemies in a very large area, anywhere on the battlefield."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6josn69m",
+        "id": "tmu77uh7t11e13",
+        "level": 10,
+        "name": {
+          "fr": "Rayon purificateur",
+          "en": "Purifier Beam"
+        },
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_purifierbeam.png",
+        "description": {
+          "fr": "Un rayon orbital pourchasse un héros adverse où qu'il aille sur le champ de bataille et le brûle sans relâche.",
+          "en": "An orbital beam chases an enemy Hero anywhere on the battlefield, burning them relentlessly."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmu77uh7t12yev",
         "level": 13,
         "name": {
-          "fr": "Templar's Zeal",
+          "fr": "Zèle de templier",
           "en": "Templar's Zeal"
         },
-        "icon": "assets/heroes/base_spells/artanis/images/talents/storm_ui_icon_artanis_powerstrikes.png",
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_powerstrikes.png",
         "description": {
-          "fr": "Reduce the Mana cost of Blade Dash from 50 to 25. Each time that Shield Overload activates, reduce the cooldown of Blade Dash by 6 seconds.",
-          "en": "Reduce the Mana cost of Blade Dash from 50 to 25. Each time that Shield Overload activates, reduce the cooldown of Blade Dash by 6 seconds."
+          "fr": "Réduit le coût en mana de Célérité tranchante, dont le temps de recharge diminue à chaque déclenchement de Surcharge de bouclier.",
+          "en": "Reduces Blade Dash's Mana cost, and its cooldown drops each time Shield Overload triggers."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo8yxd8",
+        "id": "tmu77uh7t13g97",
+        "level": 13,
+        "name": {
+          "fr": "Frappe triple",
+          "en": "Triple Strike"
+        },
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_doubleslash_on.png",
+        "description": {
+          "fr": "Lames jumelles porte une attaque de plus, mais son temps de recharge s'allonge.",
+          "en": "Twin Blades strikes one more time, but its cooldown gets longer."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmu77uh7t14uc6",
+        "level": 13,
+        "name": {
+          "fr": "Vortex à gravitons",
+          "en": "Graviton Vortex"
+        },
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_repositionmatrix.png",
+        "description": {
+          "fr": "Les attaques réduisent le temps de recharge de Prisme de phase.",
+          "en": "Attacks reduce Phase Prism cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmu77uh7t150u1",
+        "level": 13,
+        "name": {
+          "fr": "Rempart de phase",
+          "en": "Phase Bulwark"
+        },
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_shieldoverload.png",
+        "description": {
+          "fr": "Surcharge de bouclier confère de l’armure anti-sort.",
+          "en": "Shield Overload grants Spell Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmu77uh7t16eh4",
         "level": 16,
         "name": {
-          "fr": "Titan Killer",
+          "fr": "Tueur de titans",
           "en": "Titan Killer"
         },
-        "icon": "assets/heroes/base_spells/artanis/images/talents/storm_ui_icon_artanis_doubleslash_on.png",
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_doubleslash_on.png",
         "description": {
-          "fr": "Basic Attacks against Heroes deal bonus damage equal to 0.5% of the target's maximum Health in damage, increased to 1.5% when empowered by Twin Blades.",
-          "en": "Basic Attacks against Heroes deal bonus damage equal to 0.5% of the target's maximum Health in damage, increased to 1.5% when empowered by Twin Blades."
+          "fr": "Les attaques de base portées aux héros infligent un bonus proportionnel au maximum de points de vie de la cible, encore accru pendant Lames jumelles.",
+          "en": "Basic Attacks against Heroes deal bonus damage based on the target's maximum Health, increased further during Twin Blades."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jox1wwx",
+        "id": "tmu77uh7t17s0y",
+        "level": 16,
+        "name": {
+          "fr": "Force de volonté",
+          "en": "Force of Will"
+        },
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_shieldoverload.png",
+        "description": {
+          "fr": "Les capacités réduisent le temps de recharge de Surcharge de bouclier.",
+          "en": "Abilities reduce Shield Overload cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmu77uh7t18ilq",
+        "level": 16,
+        "name": {
+          "fr": "Lames de Templier",
+          "en": "Blades of a Templar"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_slow.png",
+        "description": {
+          "fr": "Augmente la vitesse d’attaque et ralentit les ennemis.",
+          "en": "Gain Attack Speed, Slow enemies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmu77uh7t195sr",
         "level": 20,
         "name": {
-          "fr": "Orbital Bombardment",
+          "fr": "Bombardement orbital",
           "en": "Orbital Bombardment"
         },
-        "icon": "assets/heroes/base_spells/artanis/images/talents/storm_ui_icon_artanis_disruptionweb.png",
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_disruptionweb.png",
         "description": {
-          "fr": "Suppression Pulse gains an additional charge.  There is a 10 second cooldown between uses.",
-          "en": "Suppression Pulse gains an additional charge.  There is a 10 second cooldown between uses."
+          "fr": "Impulsion de suppression gagne une charge supplémentaire.",
+          "en": "Suppression Pulse gains an additional charge"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmu77uh7t20oww",
+        "level": 20,
+        "name": {
+          "fr": "Cible purifiée",
+          "en": "Target Purified"
+        },
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_purifierbeam.png",
+        "description": {
+          "fr": "Augmente la vitesse de Rayon purificateur. Le relance si la cible meurt.",
+          "en": "Purifier Beam is faster, recasts if target dies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmu77uh7t21aei",
+        "level": 20,
+        "name": {
+          "fr": "Charge de zélote",
+          "en": "Zealot Charge"
+        },
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_doubleslash_on.png",
+        "description": {
+          "fr": "Augmente la portée de charge de Lames jumelles.",
+          "en": "Increase Twin Blades charge distance"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmu77uh7t22j1n",
+        "level": 20,
+        "name": {
+          "fr": "Brûlure plasmique",
+          "en": "Plasma Burn"
+        },
+        "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_shieldoverload.png",
+        "description": {
+          "fr": "Surcharge de bouclier brûle les ennemis proches.",
+          "en": "Shield Overload burns nearby enemies"
         },
         "demoYoutubeId": null
       }
@@ -11347,7 +11557,7 @@ const HEROES = [
   },
   {
     "id": "chen",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Chen",
       "en": "Chen"
@@ -11371,8 +11581,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_fortifyingbrew.png",
         "description": {
-          "fr": "Reporte une partie des dégâts subis, puis bois pour les annuler.",
-          "en": "Staggers part of the damage taken, then drink to remove it."
+          "fr": "Chen boit à son tonneau : il regagne du breuvage et accumule un bouclier tant qu'il boit, qui persiste un moment après.",
+          "en": "Chen drinks from his keg: he regains Brew and builds a Shield while drinking, which lingers a moment after."
         },
         "demoYoutubeId": ""
       },
@@ -11384,8 +11594,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_flyingkick.png",
         "description": {
-          "fr": "Bondit vers un ennemi ou une unité.",
-          "en": "Leaps toward an enemy or unit."
+          "fr": "Donne un coup de pied qui traverse l'ennemi ciblé en le blessant.",
+          "en": "Delivers a kick that passes through the target enemy, damaging them."
         },
         "demoYoutubeId": ""
       },
@@ -11397,21 +11607,21 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_kegsmash.png",
         "description": {
-          "fr": "Asperge les ennemis de bière et les ralentit.",
-          "en": "Douses enemies in Brew and slows them."
+          "fr": "Trempe de breuvage les ennemis d'une zone et les ralentit de plus en plus. La capacité se change ensuite en Souffle de feu, qui embrase les ennemis trempés.",
+          "en": "Drenches enemies in an area with Brew and Slows them more and more. The Ability then becomes Breath of Fire, which ignites the drenched enemies."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "E",
         "name": {
-          "fr": "Souffle de feu",
-          "en": "Breath of Fire"
+          "fr": "Report",
+          "en": "Stagger"
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_stagger.png",
         "description": {
-          "fr": "Cône de flammes, dégâts accrus sur les cibles imbibées.",
-          "en": "Cone of flame, extra damage on Brew-soaked targets."
+          "fr": "Absorbe les dégâts subis pendant quelques secondes, puis les inflige à Chen étalés dans le temps, sans possibilité de les réduire.",
+          "en": "Absorbs damage taken for a few seconds, then deals it to Chen spread over time, with no way to reduce it."
         },
         "demoYoutubeId": ""
       },
@@ -11423,8 +11633,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_stormearthfire.png",
         "description": {
-          "fr": "Invoque trois esprits qui combattent séparément.",
-          "en": "Summons three spirits that fight independently."
+          "fr": "Chen se scinde en trois esprits élémentaires dotés chacun d'une capacité propre. Si les trois meurent, Chen meurt avec eux.",
+          "en": "Chen splits into three elemental spirits, each with its own Ability. If all three die, Chen dies with them."
         },
         "demoYoutubeId": ""
       },
@@ -11434,10 +11644,10 @@ const HEROES = [
           "fr": "Tonneau fou",
           "en": "Wandering Keg"
         },
-        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_wanderingkeg.png",
+        "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_wanderingkeg.png",
         "description": {
-          "fr": "Deviens un tonneau roulant qui bouscule les ennemis.",
-          "en": "Become a rolling keg that knocks enemies around."
+          "fr": "Chen saute dans un tonneau, insensible aux effets de contrôle et blindé, qui bouscule et blesse les ennemis sur son passage.",
+          "en": "Chen hops into a barrel, Unstoppable and armored, bowling over and damaging enemies in its path."
         },
         "demoYoutubeId": ""
       }
@@ -11472,46 +11682,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Chen]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "18 Août 2026",
+          "en": "August 18, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jowd5ie",
+            "primaryId": "tmdpbfh1o01hke",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jolpl0e",
+            "primaryId": "tmdpbfh1o048ln",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jol1tf7",
+            "primaryId": "tmdpbfh1o079no",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jok4sfc",
+            "primaryId": "tmdpbfh1o10ctv",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jom20jr",
+            "primaryId": "tmdpbfh1o12tmx",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6joptvz5",
+            "primaryId": "tmdpbfh1o16fpk",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jo562d6",
+            "primaryId": "tmdpbfh1o19kph",
             "alternativeIds": []
           }
         ]
@@ -11520,100 +11730,310 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jowd5ie",
+        "id": "tmdpbfh1o01hke",
         "level": 1,
         "name": {
-          "fr": "Eye of the Tiger",
-          "en": "Eye of the Tiger"
+          "fr": "Flamme grandissante",
+          "en": "Accumulating Flame"
         },
-        "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_kegsmash.png",
+        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_breathoffire.png",
         "description": {
-          "fr": "Basic Attacks against Brew-soaked enemy Heroes deal 40% more damage and heal Chen for 40% of the damage done.",
-          "en": "Basic Attacks against Brew-soaked enemy Heroes deal 40% more damage and heal Chen for 40% of the damage done."
+          "fr": "Quête : brûler des héros adverses pour augmenter ses dégâts et sa portée.",
+          "en": "Quest: Burn enemy Heroes to gain damage, range"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jolpl0e",
+        "id": "tmdpbfh1o02mco",
+        "level": 1,
+        "name": {
+          "fr": "Meilleurs ingrédients",
+          "en": "Freshest Ingredients"
+        },
+        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_fortifyingbrew.png",
+        "description": {
+          "fr": "Quête : les globes de régénération rendent davantage de points de vie.",
+          "en": "Quest: Regen Globes heal more"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdpbfh1o03ejn",
+        "level": 1,
+        "name": {
+          "fr": "Recette secrète des Brune d’Orage",
+          "en": "Stormstout Secret Recipe"
+        },
+        "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_stormstoutsecretrecipe.png",
+        "description": {
+          "fr": "Les capacités de base rendent des points de vie à Chen.",
+          "en": "Basic Abilities heal Chen"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdpbfh1o048ln",
         "level": 4,
         "name": {
-          "fr": "Deadly Strike",
+          "fr": "Frappe létale",
           "en": "Deadly Strike"
         },
-        "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_flyingkick.png",
+        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_flyingkick.png",
         "description": {
-          "fr": "Flying Kick no longer costs Brew. Additionally, its damage is increased by 125% while Chen has Shields from Fortifying Brew.",
-          "en": "Flying Kick no longer costs Brew. Additionally, its damage is increased by 125% while Chen has Shields from Fortifying Brew."
+          "fr": "Augmente les dégâts de Coup de pied volant et annule le coût en points de breuvage.",
+          "en": "Increase Flying Kick damage and remove Brew cost"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jol1tf7",
+        "id": "tmdpbfh1o0524q",
+        "level": 4,
+        "name": {
+          "fr": "Œil du tigre",
+          "en": "Eye of the Tiger"
+        },
+        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_kegsmash.png",
+        "description": {
+          "fr": "Les attaques de base infligent des dégâts supplémentaires et rendent des points de vie.",
+          "en": "Basic Attacks deal bonus damage, heal"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdpbfh1o06sba",
+        "level": 4,
+        "name": {
+          "fr": "Flammes flétrissantes",
+          "en": "Withering Flames"
+        },
+        "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_breathoffire_a.png",
+        "description": {
+          "fr": "Embraser les héros réduit leur puissance de capacité.",
+          "en": "Igniting Heroes reduces their Spell Power"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdpbfh1o079no",
         "level": 7,
         "name": {
-          "fr": "Gift of the Ox",
+          "fr": "Don du buffle",
           "en": "Gift of the Ox"
         },
-        "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_stagger.png",
+        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_stagger.png",
         "description": {
-          "fr": "Increase the duration of Stagger's damage prevention by 1.5 seconds, and reduce the amount of damage taken over time to 50% of damage taken.",
-          "en": "Increase the duration of Stagger's damage prevention by 1.5 seconds, and reduce the amount of damage taken over time to 50% of damage taken."
+          "fr": "Augmente la durée de Report et réduit les dégâts subis.",
+          "en": "Increase Stagger's duration, reduce damage taken"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jok4sfc",
+        "id": "tmdpbfh1o086aj",
+        "level": 7,
+        "name": {
+          "fr": "Équilibre du brasseur",
+          "en": "Brewmaster's Balance"
+        },
+        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_fortifyingbrew.png",
+        "description": {
+          "fr": "Vitesse de déplacement accrue quand la jauge de breuvage est basse, récupération de points de vie accrue quand elle est haute.",
+          "en": "Movement Speed while the Brew gauge is low, Health regeneration while it is high."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdpbfh1o096u1",
+        "level": 7,
+        "name": {
+          "fr": "Combattant insaisissable",
+          "en": "Elusive Brawler"
+        },
+        "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_elusivebrew.png",
+        "description": {
+          "fr": "Accélère Chen et lui permet d'éviter toutes les attaques de base ; ses propres attaques en réduisent le temps de recharge.",
+          "en": "Speeds Chen up and lets him Evade all Basic Attacks; his own attacks reduce its cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdpbfh1o10ctv",
         "level": 10,
         "name": {
-          "fr": "Wandering Keg",
+          "fr": "Tonneau fou",
           "en": "Wandering Keg"
         },
         "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_wanderingkeg.png",
         "description": {
-          "fr": "Roll around inside an Unstoppable barrel with 70% increased Movement Speed and 25 Armor, dealing 59 (+4% per level) damage to enemies in the way and knocking them back. Lasts for 5 seconds.",
-          "en": "Roll around inside an Unstoppable barrel with 70% increased Movement Speed and 25 Armor, dealing 59 (+4% per level) damage to enemies in the way and knocking them back. Lasts for 5 seconds."
+          "fr": "Chen saute dans un tonneau, insensible aux effets de contrôle et blindé, qui bouscule et blesse les ennemis sur son passage.",
+          "en": "Chen hops into a barrel, Unstoppable and armored, bowling over and damaging enemies in its path."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jom20jr",
+        "id": "tmdpbfh1o11rs2",
+        "level": 10,
+        "name": {
+          "fr": "Tempête, Terre et Feu",
+          "en": "Storm, Earth, Fire"
+        },
+        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_stormearthfire.png",
+        "description": {
+          "fr": "Chen se scinde en trois esprits élémentaires dotés chacun d'une capacité propre. Si les trois meurent, Chen meurt avec eux.",
+          "en": "Chen splits into three elemental spirits, each with its own Ability. If all three die, Chen dies with them."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdpbfh1o12tmx",
         "level": 13,
         "name": {
-          "fr": "Pressure Point",
+          "fr": "Point de pression",
           "en": "Pressure Point"
         },
-        "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_flyingkick.png",
+        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_flyingkick.png",
         "description": {
-          "fr": "Flying Kick Slows the target enemy by 40% for 1 second, or by 80% if Chen has Shields from Fortifying Brew.",
-          "en": "Flying Kick Slows the target enemy by 40% for 1 second, or by 80% if Chen has Shields from Fortifying Brew."
+          "fr": "Coup de pied volant ralentit les ennemis.",
+          "en": "Flying Kick Slows enemies"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joptvz5",
+        "id": "tmdpbfh1o13zec",
+        "level": 13,
+        "name": {
+          "fr": "Une pointe de miel",
+          "en": "A Touch of Honey"
+        },
+        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_kegsmash.png",
+        "description": {
+          "fr": "Augmente la durée et le ralentissement de Fracasse-tonneau.",
+          "en": "Increase Keg Smash Slow amount, duration"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdpbfh1o1403u",
+        "level": 13,
+        "name": {
+          "fr": "Anneau de feu",
+          "en": "Ring of Fire"
+        },
+        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_breathoffire.png",
+        "description": {
+          "fr": "Inflige des dégâts aux ennemis proches après les avoir embrasés.",
+          "en": "Damage nearby enemies after Igniting them"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdpbfh1o152jx",
+        "level": 13,
+        "name": {
+          "fr": "La tournée du patron",
+          "en": "Enough to Share"
+        },
+        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_fortifyingbrew.png",
+        "description": {
+          "fr": "Boisson fortifiante protège les héros alliés.",
+          "en": "Fortifying Brew Shields allied Heroes"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdpbfh1o16fpk",
         "level": 16,
         "name": {
-          "fr": "Flying Leap",
+          "fr": "Vol plané",
           "en": "Flying Leap"
         },
-        "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_flyingkick.png",
+        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_flyingkick.png",
         "description": {
-          "fr": "Increase Flying Kick's range by 15% and reduce its cooldown by 0.5 seconds each time an enemy Hero takes damage from being Ignited.",
-          "en": "Increase Flying Kick's range by 15% and reduce its cooldown by 0.5 seconds each time an enemy Hero takes damage from being Ignited."
+          "fr": "Allonge la portée de Coup de pied volant, dont le temps de recharge diminue chaque fois qu'un héros brûle.",
+          "en": "Extends Flying Kick's range, and its cooldown drops each time a Hero takes burn damage."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo562d6",
+        "id": "tmdpbfh1o17zcr",
+        "level": 16,
+        "name": {
+          "fr": "Vélocité",
+          "en": "Celerity"
+        },
+        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_stagger.png",
+        "description": {
+          "fr": "Les attaques de base réduisent les temps de recharge de Report et confèrent de l’armure.",
+          "en": "Basic Attacks reduce Stagger cooldown, grant Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdpbfh1o18kam",
+        "level": 16,
+        "name": {
+          "fr": "Frappes combo",
+          "en": "Combo Strikes"
+        },
+        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_fortifyingbrew.png",
+        "description": {
+          "fr": "Augmente la vitesse d’attaque et les dégâts.",
+          "en": "Gain Attack Speed, damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdpbfh1o19kph",
         "level": 20,
         "name": {
-          "fr": "Untapped Potential",
+          "fr": "Potentiel insoupçonné",
           "en": "Untapped Potential"
         },
         "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_wanderingkeg.png",
         "description": {
-          "fr": "Increase Wandering Keg's Movement Speed bonus from 70% to 125%, and its Armor bonus to 75 for its duration and 3 seconds afterwards.",
-          "en": "Increase Wandering Keg's Movement Speed bonus from 70% to 125%, and its Armor bonus to 75 for its duration and 3 seconds afterwards."
+          "fr": "Augmente la vitesse de Tonneau fou et confère de l’armure.",
+          "en": "Increases Wandering Keg Speed, Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdpbfh1o20hrk",
+        "level": 20,
+        "name": {
+          "fr": "Conduction élémentaire",
+          "en": "Elemental Conduit"
+        },
+        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_stormearthfire.png",
+        "description": {
+          "fr": "Renforce les capacités des trois esprits.",
+          "en": "All Storm, Earth, Fire Abilities are empowered"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdpbfh1o21jw2",
+        "level": 20,
+        "name": {
+          "fr": "Infusion purificatrice",
+          "en": "Purifying Brew"
+        },
+        "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_fortifyingbrew.png",
+        "description": {
+          "fr": "Boisson fortifiante rend insensible.",
+          "en": "Fortifying Brew grants Unstoppable"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmdpbfh1o22wj4",
+        "level": 20,
+        "name": {
+          "fr": "Infusion énergisante",
+          "en": "Energizing Brew"
+        },
+        "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_fortifyingbrew_b.png",
+        "description": {
+          "fr": "Boire jusqu'au bout confère à Chen des points de vie supplémentaires et augmente ses dégâts pendant un moment.",
+          "en": "Drinking to the end grants Chen bonus Health and increases his damage for a while."
         },
         "demoYoutubeId": null
       }
@@ -12368,7 +12788,7 @@ const HEROES = [
   },
   {
     "id": "deathwing",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Aile de Mort",
       "en": "Deathwing"
@@ -12380,33 +12800,51 @@ const HEROES = [
       "en": "Unstoppable colossus who dominates teamfights."
     },
     "gameplay": {
-      "fr": "Aile de la Mort est en permanence imblocable mais ne peut recevoir aucun soin allié. Il change de forme pour choisir entre dégâts ciblés et dégâts de zone.",
+      "fr": "Aile de Mort est en permanence insensible aux effets de contrôle mais ne peut recevoir aucun soin allié. Il choisit sa forme à l'atterrissage, entre corps à corps et contrôle de zone.",
       "en": "Deathwing is permanently Unstoppable but cannot receive any ally healing. He switches forms to choose between focused and area damage."
     },
     "spells": [
       {
         "key": "Trait",
         "name": {
-          "fr": "Aspect de la mort",
+          "fr": "Aspect de la Mort",
           "en": "Aspect of Death"
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_aspect_of_death.png",
         "description": {
-          "fr": "Imblocable en permanence, mais insensible aux soins alliés.",
-          "en": "Permanently Unstoppable, but immune to allied healing."
+          "fr": "Aile de Mort porte des plaques d'armure qu'il perd en encaissant et ne regagne qu'en vol. Il est en permanence insensible aux effets de contrôle et frappe plus fort les héros, mais aucun effet allié ne l'atteint.",
+          "en": "Deathwing wears Armor Plates he sheds as he takes damage and only regains while flying. He is permanently Unstoppable and hits Heroes harder, but no allied effect can reach him."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "Flamme en fusion",
+          "fr": "Flamme de la fournaise",
           "en": "Molten Flame"
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_molten_flame.png",
         "description": {
-          "fr": "Souffle continu de flammes devant toi.",
-          "en": "Continuous stream of flame in front of you."
+          "fr": "Projette un souffle de flammes continu qui fait fondre les ennemis devant lui, en consommant son énergie.",
+          "en": "Breathes a continuous stream of flame that melts the enemies in front of him, draining his Energy."
+        },
+        "demoYoutubeId": "",
+        "form": [
+          "destructeur",
+          "brisemonde"
+        ]
+      },
+      {
+        "key": "A",
+        "form": "vol",
+        "name": {
+          "fr": "Destructeur",
+          "en": "Destroyer"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_destroyer.png",
+        "description": {
+          "fr": "Atterrit en Destructeur dans un fracas qui blesse les ennemis de la zone. Sous cette forme, Aile de Mort dispose d'Incinération et d'Offensive, taillées pour le corps à corps.",
+          "en": "Lands as the Destroyer with a crash that damages enemies in the area. In this form, Deathwing wields Incinerate and Onslaught, built for close quarters."
         },
         "demoYoutubeId": ""
       },
@@ -12418,34 +12856,65 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_incinerate.png",
         "description": {
-          "fr": "Dégâts de zone autour de toi (mare de lave en forme Briseur de monde).",
-          "en": "AoE damage around you (lava pool in World Breaker form)."
+          "fr": "Bat des ailes et blesse tous les ennemis proches.",
+          "en": "Beats his wings, damaging every nearby enemy."
+        },
+        "demoYoutubeId": "",
+        "form": "destructeur"
+      },
+      {
+        "key": "Z",
+        "form": "brisemonde",
+        "name": {
+          "fr": "Explosion de lave",
+          "en": "Lava Burst"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_lava_burst.png",
+        "description": {
+          "fr": "Après un délai, blesse les ennemis dans la zone et y laisse une flaque de lave qui continue de brûler et de ralentir.",
+          "en": "After a delay, damages enemies in the area and leaves a lava pool that keeps burning and Slowing them."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "Z",
+        "form": "vol",
+        "name": {
+          "fr": "Brise-monde",
+          "en": "World Breaker"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_world_breaker.png",
+        "description": {
+          "fr": "Atterrit en Brise-monde dans un fracas qui blesse les ennemis de la zone. Sous cette forme, Aile de Mort dispose d'Explosion de lave et de Brise-terre, taillées pour le contrôle de zone.",
+          "en": "Lands as the World Breaker with a crash that damages enemies in the area. In this form, Deathwing wields Lava Burst and Earth Shatter, built for zone control."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "E",
         "name": {
-          "fr": "Assaut",
+          "fr": "Offensive",
           "en": "Onslaught"
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_onslaught.png",
         "description": {
-          "fr": "Bondit en avant en mordant les ennemis.",
-          "en": "Lunges forward, biting enemies."
+          "fr": "Plonge dans une direction en blessant et ralentissant les ennemis, puis les mord à l'arrivée.",
+          "en": "Lunges in a direction, damaging and Slowing enemies, then bites them at the end."
         },
-        "demoYoutubeId": ""
+        "demoYoutubeId": "",
+        "form": "destructeur"
       },
       {
-        "key": "R1",
+        "key": "E",
+        "form": "brisemonde",
         "name": {
-          "fr": "Cataclysme",
-          "en": "Cataclysm"
+          "fr": "Brise-terre",
+          "en": "Earth Shatter"
         },
-        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_cataclysm.png",
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_earth_shatter.png",
         "description": {
-          "fr": "Survole une ligne et laisse un sol brûlant.",
-          "en": "Flies across a line, leaving scorched ground."
+          "fr": "Ouvre une fissure qui blesse et étourdit les ennemis touchés.",
+          "en": "Opens a fissure that damages and Stuns the enemies it hits."
         },
         "demoYoutubeId": ""
       },
@@ -12457,10 +12926,31 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_mount.png",
         "description": {
-          "fr": "S'envole pour se régénérer et se déplacer sur la carte.",
-          "en": "Fly into the sky to regenerate and reposition across the map."
+          "fr": "S'envole, immunisé à tous les effets, en regagnant des points de vie et ses plaques d'armure. Aile de Mort choisit ensuite d'atterrir en Destructeur ou en Brise-monde.",
+          "en": "Takes to the sky, immune to all effects, regaining Health and Armor Plates. Deathwing then chooses to land as the Destroyer or the World Breaker."
         },
-        "demoYoutubeId": ""
+        "demoYoutubeId": "",
+        "form": [
+          "destructeur",
+          "brisemonde"
+        ]
+      },
+      {
+        "key": "R1",
+        "name": {
+          "fr": "Cataclysme",
+          "en": "Cataclysm"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_cataclysm.png",
+        "description": {
+          "fr": "Aile de mort vole au-dessus d’une zone, semant la dévastation dans son sillage.",
+          "en": "Deathwing flies over an area, causing devastation in his wake."
+        },
+        "demoYoutubeId": "",
+        "form": [
+          "destructeur",
+          "brisemonde"
+        ]
       }
     ],
     "tips": [
@@ -12469,12 +12959,12 @@ const HEROES = [
         "en": "You cannot be healed: use Dragonflight to regenerate."
       },
       {
-        "fr": "Forme Destructeur pour le combat rapproché, Briseur de monde pour le zonage.",
+        "fr": "Forme Destructeur pour le combat rapproché, Brise-monde pour le zonage.",
         "en": "Destroyer form for close combat, World Breaker for zoning."
       },
       {
-        "fr": "Tes plaques d'armure se rechargent en atterrissant : reviens à pleine vie.",
-        "en": "Your armor plates refresh when landing: return at high Health."
+        "fr": "Tes plaques d'armure ne se rechargent qu'en vol : décolle pour te refaire.",
+        "en": "Your Armor Plates only recharge while flying: take off to restore them."
       }
     ],
     "builds": [
@@ -12493,46 +12983,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Deathwing]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "18 Août 2026",
+          "en": "August 18, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jon5uul",
+            "primaryId": "tm9hcq5er01keq",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6joaj5gz",
+            "primaryId": "tm9hcq5er046gy",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jox1emg",
+            "primaryId": "tm9hcq5er0776a",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jotz521",
+            "primaryId": "tm9hcq5er10je1",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jo6ley3",
+            "primaryId": "tm9hcq5er12ad9",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6joa9gj8",
+            "primaryId": "tm9hcq5er15omn",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6joqsuyq",
+            "primaryId": "tm9hcq5er182ke",
             "alternativeIds": []
           }
         ]
@@ -12541,109 +13031,313 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jon5uul",
+        "id": "tm9hcq5er01keq",
         "level": 1,
         "name": {
-          "fr": "Dragon Soul",
+          "fr": "Âme de dragon",
           "en": "Dragon Soul"
         },
         "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_heat_wave.png",
         "description": {
-          "fr": "Destroyer: Incinerate heals Deathwing for 75% of the damage dealt to enemy Heroes.  World Breaker: Lava Burst's explosion damage heals Deathwing for 150% of the damage dealt to enemy Heroes.",
-          "en": "Destroyer: Incinerate heals Deathwing for 75% of the damage dealt to enemy Heroes.  World Breaker: Lava Burst's explosion damage heals Deathwing for 150% of the damage dealt to enemy Heroes."
+          "fr": "Les déflagrations d’Incinération et d’Explosion de lave soignent Aile de mort.",
+          "en": "Incinerate, Lava Burst explosion heal Deathwing"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joaj5gz",
+        "id": "tm9hcq5er02phi",
+        "level": 1,
+        "name": {
+          "fr": "Sang de la fournaise",
+          "en": "Molten Blood"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_aspect_of_death.png",
+        "description": {
+          "fr": "Les plaques d’armure augmentent la récupération.",
+          "en": "Armor Plates increase Regen"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm9hcq5er03xvd",
+        "level": 1,
+        "name": {
+          "fr": "Puissance draconique",
+          "en": "Draconic Might"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_aspect_of_death_alt1.png",
+        "description": {
+          "fr": "Protégé contre la perte de plaques d’armure et les attaques de base rendent de la vie.",
+          "en": "Protected from Armor Plate loss, Basic Attacks heal"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm9hcq5er046gy",
         "level": 4,
         "name": {
           "fr": "Infernus",
           "en": "Infernus"
         },
-        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_molten_flame.png",
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_molten_flame.png",
         "description": {
-          "fr": "Increase the damage of Molten Flame against enemy Heroes by 25%.  Increase this damage bonus to 75% when Molten Flame is cast at 75 Energy or higher.",
-          "en": "Increase the damage of Molten Flame against enemy Heroes by 25%.  Increase this damage bonus to 75% when Molten Flame is cast at 75 Energy or higher."
+          "fr": "Augmente les dégâts de Flamme de la fournaise lorsque l’énergie est élevée.",
+          "en": "Increase Molten Flame damage at high Energy"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jox1emg",
+        "id": "tm9hcq5er05vmm",
+        "level": 4,
+        "name": {
+          "fr": "Vague de chaleur",
+          "en": "Heat Wave"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_heat_wave.png",
+        "description": {
+          "fr": "Augmente les dégâts d’Incinération et d’Explosion de lave.",
+          "en": "Increase Incinerate and Lava Burst damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm9hcq5er063qk",
+        "level": 4,
+        "name": {
+          "fr": "Ire du dragon",
+          "en": "Dragon's Ire"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_aspect_of_death.png",
+        "description": {
+          "fr": "Aile de mort inflige plus de dégâts lorsqu’il lui manque des plaques d’armure.",
+          "en": "Deathwing gains damage while missing Armor Plates"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm9hcq5er0776a",
         "level": 7,
         "name": {
-          "fr": "Firestorm",
+          "fr": "Tempête de flammes",
           "en": "Firestorm"
         },
         "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_firestorm.png",
         "description": {
-          "fr": "Reduce the cooldown of Deathwing's landing Abilities by 2 seconds.  When Deathwing lands, he drops 7 meteors near the landing area, dealing 70 (+4% per level) damage to enemies hit. Heroes hit by the meteors reduce Dragonflight's cooldown by 25 seconds.  Meteors prioritize landing on Heroes, otherwise they fall randomly in the area.",
-          "en": "Reduce the cooldown of Deathwing's landing Abilities by 2 seconds.  When Deathwing lands, he drops 7 meteors near the landing area, dealing 70 (+4% per level) damage to enemies hit. Heroes hit by the meteors reduce Dragonflight's cooldown by 25 seconds.  Meteors prioritize landing on Heroes, otherwise they fall randomly in the area."
+          "fr": "Fait tomber des météores après l’atterrissage, délai d’atterrissage réduit.",
+          "en": "Meteors upon landing, reduced landing delay."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jotz521",
+        "id": "tm9hcq5er083rn",
+        "level": 7,
+        "name": {
+          "fr": "Plongeon mortel",
+          "en": "Death Drop"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_deathdrop.png",
+        "description": {
+          "fr": "Atterrir sur des héros réduit leur armure anti-sort.",
+          "en": "Landing on Heroes reduces Spell Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm9hcq5er09gs2",
+        "level": 7,
+        "name": {
+          "fr": "Déluge",
+          "en": "Skyfall"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_skyfall.png",
+        "description": {
+          "fr": "Aile de mort peut faire pleuvoir des météores pour se soigner.",
+          "en": "Deathwing can drop meteors to heal himself"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm9hcq5er10je1",
         "level": 10,
         "name": {
-          "fr": "Burn Beneath My Shadow",
+          "fr": "Venez brûler sous mon aile",
           "en": "Burn Beneath My Shadow"
         },
-        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_cataclysm.png",
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_cataclysm.png",
         "description": {
-          "fr": "When an enemy Fort or Keep is destroyed the cooldown of Cataclysm is reset. Cataclysm's periodic damage is increased by 80%.",
-          "en": "When an enemy Fort or Keep is destroyed the cooldown of Cataclysm is reset. Cataclysm's periodic damage is increased by 80%."
+          "fr": "Détruire des forts ou des bastions réinitialise Cataclysme.",
+          "en": "Destroying Forts or Keeps refreshes Cataclysm"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo6ley3",
+        "id": "tm9hcq5er11vjz",
+        "level": 10,
+        "name": {
+          "fr": "Rugissement puissant",
+          "en": "Bellowing Roar"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_bellowing_roar.png",
+        "description": {
+          "fr": "Rugissement puissant apeure les héros proches.",
+          "en": "Roar Fears nearby Heroes"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm9hcq5er12ad9",
         "level": 13,
         "name": {
-          "fr": "Wicked Inferno",
+          "fr": "Inferno funeste",
           "en": "Wicked Inferno"
         },
-        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_molten_flame.png",
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_molten_flame.png",
         "description": {
-          "fr": "Molten Flame's Energy cost per second is reduced by 10.  After using Molten Flame, Deathwing gains 15 Energy over 3 seconds.",
-          "en": "Molten Flame's Energy cost per second is reduced by 10.  After using Molten Flame, Deathwing gains 15 Energy over 3 seconds."
+          "fr": "Réduit le coût en énergie de Flamme de la fournaise",
+          "en": "Reduce Molten Flame's Energy cost"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joa9gj8",
+        "id": "tm9hcq5er13977",
+        "level": 13,
+        "name": {
+          "fr": "Anéantissement",
+          "en": "Ruination"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_ruination.png",
+        "description": {
+          "fr": "La morsure d’Offensive ralentit les ennemis, et le coût de Brise-terre est réduit.",
+          "en": "Onslaught bite Slows, Earth Shatter cost reduced"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm9hcq5er14i04",
+        "level": 13,
+        "name": {
+          "fr": "Flammes et fureur",
+          "en": "Fire and Fury"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_fire_and_fury.png",
+        "description": {
+          "fr": "Renforce les attaques de base portées aux ennemis diminués.",
+          "en": "Empower Basic Attacks against disabled enemies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm9hcq5er15omn",
         "level": 16,
         "name": {
-          "fr": "Conflagration",
+          "fr": "Déflagration",
           "en": "Conflagration"
         },
-        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_molten_flame.png",
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_molten_flame.png",
         "description": {
-          "fr": "Dealing 320 (+4% per level) damage with Molten Flame to enemy Heroes within 4 seconds causes them to burn for an additional 100 (+4% per level) damage over 4 seconds. While burning, they explode every 1 second, dealing 80 (+4% per level) damage to all nearby enemies.",
-          "en": "Dealing 320 (+4% per level) damage with Molten Flame to enemy Heroes within 4 seconds causes them to burn for an additional 100 (+4% per level) damage over 4 seconds. While burning, they explode every 1 second, dealing 80 (+4% per level) damage to all nearby enemies."
+          "fr": "Flamme de la fournaise fait exploser les héros.",
+          "en": "Molten Flame causes Heroes to explode"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joqsuyq",
+        "id": "tm9hcq5er16aru",
+        "level": 16,
+        "name": {
+          "fr": "Contemplez la destruction",
+          "en": "Gaze Onto Destruction"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_deathdrop.png",
+        "description": {
+          "fr": "Atterrir sur des héros les ralentit et réduit leurs dégâts.",
+          "en": "Landing on Heroes Slows and reduces damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm9hcq5er17grf",
+        "level": 16,
+        "name": {
+          "fr": "Armure d’élémentium",
+          "en": "Elementium Plating"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_elemental_plating.png",
+        "description": {
+          "fr": "Confère un bouclier et rend des points de vie.",
+          "en": "Activate to gain a Shield, restore Health"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm9hcq5er182ke",
         "level": 20,
         "name": {
-          "fr": "Stood in the Fire",
+          "fr": "Dans les flammes",
           "en": "Stood in the Fire"
         },
-        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_cataclysm.png",
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_cataclysm.png",
         "description": {
-          "fr": "Enemy Heroes are Slowed by 40% while standing in scorched ground, and its duration is increased by 50%.",
-          "en": "Enemy Heroes are Slowed by 40% while standing in scorched ground, and its duration is increased by 50%."
+          "fr": "Cataclysme ralentit et sa durée est augmentée.",
+          "en": "Cataclysm Slows, duration increased"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm9hcq5er19b8l",
+        "level": 20,
+        "name": {
+          "fr": "Arrivée d’un Dieu",
+          "en": "Arrival of a God"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_deathdrop.png",
+        "description": {
+          "fr": "Dégâts d’atterrissage augmentés, gagne tous les talents de niveau 7.",
+          "en": "Landing damage increased, gain all level 7 talents"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm9hcq5er20hgd",
+        "level": 20,
+        "name": {
+          "fr": "Massacre du Destructeur",
+          "en": "Destroyer's Rampage"
+        },
+        "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_destroyer.png",
+        "description": {
+          "fr": "Atterrir sous sa forme de Destructeur renforce Aile de mort.",
+          "en": "Landing in Destroyer form empowers Deathwing"
         },
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [
+      {
+        "id": "vol",
+        "label": {
+          "fr": "Vol draconique",
+          "en": "Dragonflight"
+        }
+      },
+      {
+        "id": "destructeur",
+        "label": {
+          "fr": "Destructeur",
+          "en": "Destroyer"
+        }
+      },
+      {
+        "id": "brisemonde",
+        "label": {
+          "fr": "Brise-monde",
+          "en": "World Breaker"
+        }
+      }
+    ]
   },
   {
     "id": "dehaka",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Dehaka",
       "en": "Dehaka"
@@ -12655,20 +13349,20 @@ const HEROES = [
       "en": "Mobile bruiser who can show up anywhere on the map."
     },
     "gameplay": {
-      "fr": "Dehaka récolte l'essence pour se soigner et gagner en puissance, et utilise Traqueur des fourrés pour rejoindre n'importe quel buisson allié.",
-      "en": "Dehaka collects Essence to heal and grow stronger, and uses Brushstalker to travel to any allied bush."
+      "fr": "Dehaka récolte l'essence pour se soigner et gagner en puissance, et utilise Traqueur de la jungle pour rejoindre n'importe quel buisson du champ de bataille.",
+      "en": "Dehaka harvests Essence to heal and grow stronger, and uses Brushstalker to reach any bush on the battlefield."
     },
     "spells": [
       {
         "key": "Trait",
         "name": {
-          "fr": "Récolte d'essence",
+          "fr": "Collecte d’essence",
           "en": "Essence Collection"
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_essencecollection.png",
         "description": {
-          "fr": "Récupère l'essence des ennemis tués pour te soigner et évoluer.",
-          "en": "Collect Essence from slain enemies to heal and evolve."
+          "fr": "Les victimes laissent de l'essence que Dehaka accumule, puis consume pour se soigner dans la durée. Utilisable pendant Traction et Enfouissement.",
+          "en": "Takedowns leave Essence that Dehaka stockpiles, then consumes to heal over time. Usable during Drag and Burrow."
         },
         "demoYoutubeId": ""
       },
@@ -12680,47 +13374,60 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_drag.png",
         "description": {
-          "fr": "Attrape un ennemi et le tire vers toi.",
-          "en": "Grabs an enemy and drags them to you."
+          "fr": "Donne un coup de langue qui attrape le premier ennemi touché, l'étourdit et le traîne derrière lui. Être étourdi ou réduit au silence interrompt la traction.",
+          "en": "Lashes out with his tongue, grabbing the first enemy hit, Stunning them and dragging them along. Being Stunned or Silenced interrupts the drag."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "Z",
         "name": {
-          "fr": "Nuée noire",
+          "fr": "Essaim noir",
           "en": "Dark Swarm"
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_trample.png",
         "description": {
-          "fr": "Attaques de zone qui esquivent les attaques ennemies.",
-          "en": "Area attacks that also dodge enemy Basic Attacks."
+          "fr": "Blesse continuellement les ennemis proches et permet à Dehaka de traverser les unités. Utilisable pendant Traction et Enfouissement.",
+          "en": "Continuously damages nearby enemies and lets Dehaka pass through units. Usable during Drag and Burrow."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "E",
         "name": {
-          "fr": "Terrer",
+          "fr": "Enfouissement",
           "en": "Burrow"
         },
-        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_burrow.png",
+        "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_burrow.png",
         "description": {
-          "fr": "S'enfouit, deviens intouchable et regagne de la vie.",
-          "en": "Burrow, becoming untargetable and regenerating Health."
+          "fr": "S'enfouit sous terre : Dehaka entre en stase et devient invulnérable, tout en continuant de se déplacer lentement.",
+          "en": "Burrows underground: Dehaka enters Stasis and becomes Invulnerable while still moving slowly."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "W",
+        "name": {
+          "fr": "Traqueur de la jungle",
+          "en": "Brushstalker"
+        },
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_mount.png",
+        "description": {
+          "fr": "S’enfouit pour réapparaître dissimulé dans un buisson du champ de bataille.",
+          "en": "Burrow to a bush on the Battleground."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
         "name": {
-          "fr": "Isolement",
+          "fr": "Aliénation",
           "en": "Isolation"
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_isolation.png",
         "description": {
-          "fr": "Rend un ennemi vulnérable et le coupe de son équipe.",
-          "en": "Makes an enemy vulnerable and cuts them off from their team."
+          "fr": "Réduit au silence, ralentit et supprime la vision d’un ennemi.",
+          "en": "Silence, Slow, and reduce vision of an enemy"
         },
         "demoYoutubeId": ""
       },
@@ -12732,21 +13439,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_adaptation.png",
         "description": {
-          "fr": "Se régénère massivement après quelques secondes.",
-          "en": "Massively regenerates Health after a few seconds."
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "W",
-        "name": {
-          "fr": "Traqueur des fourrés",
-          "en": "Brushstalker"
-        },
-        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_mount.png",
-        "description": {
-          "fr": "Se téléporte vers un buisson allié n'importe où sur la carte.",
-          "en": "Teleports to an allied bush anywhere on the map."
+          "fr": "Rend un montant de points de vie équivalent aux dégâts subis.",
+          "en": "Heal back damage taken"
         },
         "demoYoutubeId": ""
       }
@@ -12757,11 +13451,11 @@ const HEROES = [
         "en": "Pick up Essence from minions: it's your main source of healing."
       },
       {
-        "fr": "Traqueur des fourrés te rend présent partout : soutiens tes lanes.",
+        "fr": "Traqueur de la jungle te rend présent partout : soutiens tes lanes.",
         "en": "Brushstalker lets you be everywhere: support every lane."
       },
       {
-        "fr": "Terrer te soigne et échappe aux contrôles ennemis.",
+        "fr": "Enfouissement te soigne et te met à l'abri des contrôles ennemis.",
         "en": "Burrow heals you and dodges enemy crowd control."
       }
     ],
@@ -12781,46 +13475,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Dehaka]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "18 Août 2026",
+          "en": "August 18, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jom8roz",
+            "primaryId": "tmpz9nmdo01klt",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jo5e25i",
+            "primaryId": "tmpz9nmdo04ce4",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6joc7c6c",
+            "primaryId": "tmpz9nmdo07cic",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jogslw3",
+            "primaryId": "tmpz9nmdo10c88",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jo15rg9",
+            "primaryId": "tmpz9nmdo12bs2",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jo0nbts",
+            "primaryId": "tmpz9nmdo15ry5",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jo1pblg",
+            "primaryId": "tmpz9nmdo18bxd",
             "alternativeIds": []
           }
         ]
@@ -12829,100 +13523,296 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jom8roz",
+        "id": "tmpz9nmdo01klt",
         "level": 1,
         "name": {
-          "fr": "Enduring Swarm",
+          "fr": "Essaim tenace",
           "en": "Enduring Swarm"
         },
-        "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_trample.png",
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_trample.png",
         "description": {
-          "fr": "Dark Swarm's duration is increased by 0.5 seconds and grants 50 Spell Armor while active.",
-          "en": "Dark Swarm's duration is increased by 0.5 seconds and grants 50 Spell Armor while active."
+          "fr": "Augmente la durée d’Essaim noir et confère un bouclier anti-sort.",
+          "en": "Increases Dark Swarm duration, grants Spell Armor"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo5e25i",
+        "id": "tmpz9nmdo02iy2",
+        "level": 1,
+        "name": {
+          "fr": "Régénération des tissus",
+          "en": "Tissue Regeneration"
+        },
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_essencecollection.png",
+        "description": {
+          "fr": "Quête : l’essence augmente la récupération des points de vie et le maximum d’essence.",
+          "en": "Quest: Essence increases Health Regen, max Essence"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmpz9nmdo03z7r",
+        "level": 1,
+        "name": {
+          "fr": "Agilité amplifiée",
+          "en": "Enhanced Agility"
+        },
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_brushstalker.png",
+        "description": {
+          "fr": "Quête : l’essence augmente le bonus à la vitesse de déplacement conféré par Traqueur de la jungle.",
+          "en": "Quest: Essence increases Brushstalker Move Speed"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmpz9nmdo04ce4",
         "level": 4,
         "name": {
-          "fr": "Lurker Strain",
+          "fr": "Souche rôdeur",
           "en": "Lurker Strain"
         },
         "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_burrow.png",
         "description": {
-          "fr": "Emerging from Burrow grants Dehaka Stealth for 3 seconds and knocks nearby enemies back, dealing 125 (+4% per level) damage and Slowing them by 30% for 3 seconds.  Passive: Reduce the cooldown of Burrow by 3 seconds.",
-          "en": "Emerging from Burrow grants Dehaka Stealth for 3 seconds and knocks nearby enemies back, dealing 125 (+4% per level) damage and Slowing them by 30% for 3 seconds.  Passive: Reduce the cooldown of Burrow by 3 seconds."
+          "fr": "Enfouissement camoufle, et repousse les ennemis.",
+          "en": "Burrow Stealths, knocks enemies away"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joc7c6c",
+        "id": "tmpz9nmdo05plf",
+        "level": 4,
+        "name": {
+          "fr": "Celui-qui-récolte",
+          "en": "One-Who-Collects"
+        },
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_essencecollection.png",
+        "description": {
+          "fr": "Augmente l’essence des serviteurs et les dégâts qu’Essaim noir inflige aux mercenaires.",
+          "en": "Increases Essence from Minions, Dark Swarm damage to Mercenaries"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmpz9nmdo06e7n",
+        "level": 4,
+        "name": {
+          "fr": "Traqueur de héros",
+          "en": "Hero Stalker"
+        },
+        "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_essencecollection_var1.png",
+        "description": {
+          "fr": "Tuer des héros confère davantage d’essence.",
+          "en": "Takedowns grant more Essence"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmpz9nmdo07cic",
         "level": 7,
         "name": {
-          "fr": "Feeding Frenzy",
+          "fr": "Appétit dévorant",
           "en": "Feeding Frenzy"
         },
-        "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_drag.png",
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_drag.png",
         "description": {
-          "fr": "Basic Attacks reduce Drag's cooldown by 1.5 seconds.  Passive: Increase Drag's duration by 0.5 seconds.",
-          "en": "Basic Attacks reduce Drag's cooldown by 1.5 seconds.  Passive: Increase Drag's duration by 0.5 seconds."
+          "fr": "Tactique : les attaques de base réduisent le temps de recharge de Traction",
+          "en": "Gambit: Basic Attacks reduce Drag cooldown"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jogslw3",
+        "id": "tmpz9nmdo08gqo",
+        "level": 7,
+        "name": {
+          "fr": "Enzymes paralysantes",
+          "en": "Paralyzing Enzymes"
+        },
+        "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_drag_var1.png",
+        "description": {
+          "fr": "Traction ralentit les ennemis et réduit les soins",
+          "en": "Drag Slows, reduces Healing"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmpz9nmdo09rtq",
+        "level": 7,
+        "name": {
+          "fr": "Symbiose",
+          "en": "Symbiosis"
+        },
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_trample.png",
+        "description": {
+          "fr": "Réduit le temps de recharge d’Essaim noir pour chaque héros touché.",
+          "en": "Reduces Dark Swarm cooldown against Heroes"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmpz9nmdo10c88",
         "level": 10,
         "name": {
-          "fr": "Isolation",
+          "fr": "Aliénation",
           "en": "Isolation"
         },
-        "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_isolation.png",
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_isolation.png",
         "description": {
-          "fr": "Launch biomass that hits the first enemy Hero dealing 200 (+4% per level) damage, revealing, Silencing, and Slowing them 30% for 3 seconds. Additionally, their vision radius is greatly reduced for 6 seconds.",
-          "en": "Launch biomass that hits the first enemy Hero dealing 200 (+4% per level) damage, revealing, Silencing, and Slowing them 30% for 3 seconds. Additionally, their vision radius is greatly reduced for 6 seconds."
+          "fr": "Réduit au silence, ralentit et supprime la vision d’un ennemi.",
+          "en": "Silence, Slow, and reduce vision of an enemy"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo15rg9",
+        "id": "tmpz9nmdo110yu",
+        "level": 10,
+        "name": {
+          "fr": "Adaptation",
+          "en": "Adaptation"
+        },
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_adaptation.png",
+        "description": {
+          "fr": "Rend un montant de points de vie équivalent aux dégâts subis.",
+          "en": "Heal back damage taken"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmpz9nmdo12bs2",
         "level": 13,
         "name": {
-          "fr": "Ferocious Stalker",
+          "fr": "Traqueur féroce",
           "en": "Ferocious Stalker"
         },
-        "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_trample.png",
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_trample.png",
         "description": {
-          "fr": "Dark Swarm Slows enemy Heroes by 15% for 0.75 seconds and deals 60% more damage while Brushstalker's Movement Speed bonus is active.",
-          "en": "Dark Swarm Slows enemy Heroes by 15% for 0.75 seconds and deals 60% more damage while Brushstalker's Movement Speed bonus is active."
+          "fr": "Traqueur de la jungle ralentit les héros adverses et augmente la puissance d’Essaim noir.",
+          "en": "Brushstalker Slows, increases Dark Swarm damage"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo0nbts",
+        "id": "tmpz9nmdo13d2k",
+        "level": 13,
+        "name": {
+          "fr": "Essaim primordial",
+          "en": "Primal Swarm"
+        },
+        "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_trample_a.png",
+        "description": {
+          "fr": "Essaim noir réduit l’armure des ennemis.",
+          "en": "Dark Swarm lowers enemies' Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmpz9nmdo14dft",
+        "level": 13,
+        "name": {
+          "fr": "Rage primordiale",
+          "en": "Primal Rage"
+        },
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_essencecollection.png",
+        "description": {
+          "fr": "L’essence augmente les dégâts d’attaque.",
+          "en": "Essence increases Attack Damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmpz9nmdo15ry5",
         "level": 16,
         "name": {
-          "fr": "Elongated Tongue",
+          "fr": "Macroglossie",
           "en": "Elongated Tongue"
         },
-        "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_drag.png",
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_drag.png",
         "description": {
-          "fr": "Increase Drag range by 20%.",
-          "en": "Increase Drag range by 20%."
+          "fr": "Augmente la portée de Traction.",
+          "en": "Increases Drag range"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo1pblg",
+        "id": "tmpz9nmdo16b26",
+        "level": 16,
+        "name": {
+          "fr": "Griffes fouisseuses",
+          "en": "Tunneling Claws"
+        },
+        "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_burrow.png",
+        "description": {
+          "fr": "Augmente la vitesse de déplacement lors de l’enfouissement.",
+          "en": "Increase Burrow movement speed"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmpz9nmdo17z0m",
+        "level": 16,
+        "name": {
+          "fr": "Chef de meute",
+          "en": "Pack Leader"
+        },
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_brushstalker.png",
+        "description": {
+          "fr": "Confère de l’armure et augmente la vitesse d’attaque près des buissons.",
+          "en": "Gain Armor, Attack Speed near bushes"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmpz9nmdo18bxd",
         "level": 20,
         "name": {
           "fr": "Contagion",
           "en": "Contagion"
         },
-        "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_isolation.png",
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_isolation.png",
         "description": {
-          "fr": "Isolation hits all Heroes near the first target.",
-          "en": "Isolation hits all Heroes near the first target."
+          "fr": "Aliénation affecte les héros proches.",
+          "en": "Isolation splashes to nearby Heroes"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmpz9nmdo19sdh",
+        "level": 20,
+        "name": {
+          "fr": "Changer, c’est survivre",
+          "en": "Change Is Survival"
+        },
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_adaptation.png",
+        "description": {
+          "fr": "Augmente les soins et diminue le temps de recharge d’Adaptation.",
+          "en": "Enhanced Adaptation healing, cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmpz9nmdo201uo",
+        "level": 20,
+        "name": {
+          "fr": "Griffes drainantes",
+          "en": "Essence Claws"
+        },
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_essencecollection.png",
+        "description": {
+          "fr": "Les attaques de base ralentissent la cible et confèrent de l’essence.",
+          "en": "Basic Attacks slow, grant Essence"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmpz9nmdo21msw",
+        "level": 20,
+        "name": {
+          "fr": "Prédateur de l’apex",
+          "en": "Apex Predator"
+        },
+        "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_brushstalker.png",
+        "description": {
+          "fr": "Réduit les temps de recharge et d’incantation de Traqueur de la jungle.",
+          "en": "Reduced Brushstalker cooldown, cast time"
         },
         "demoYoutubeId": null
       }
@@ -13402,7 +14292,7 @@ const HEROES = [
   },
   {
     "id": "dva",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "D.Va",
       "en": "D.Va"
@@ -13426,21 +14316,51 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_mechmode.png",
         "description": {
-          "fr": "Quand le méca est détruit, tu continues à jouer en pilote.",
-          "en": "When the mech is destroyed, you keep playing as the pilot."
+          "fr": "Quand son méca est détruit, D.Va s'en éjecte et continue à pied ; le détruire ne rapporte qu'une expérience réduite. Ses attaques de base frappent en zone.",
+          "en": "When her mech is destroyed, D.Va ejects and fights on foot; destroying it grants only reduced experience. Her Basic Attacks splash."
+        },
+        "demoYoutubeId": "",
+        "form": "meca"
+      },
+      {
+        "key": "Trait",
+        "form": "pilote",
+        "name": {
+          "fr": "Mode pilote",
+          "en": "Pilot Mode"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_pilotmode.png",
+        "description": {
+          "fr": "Éjectée de son méca, D.Va continue de combattre à pied. Ses attaques de base rapprochent le retour du méca, et la tuer sous cette forme ne rapporte qu'une expérience réduite.",
+          "en": "Ejected from her mech, D.Va keeps fighting on foot. Her Basic Attacks bring the mech back sooner, and killing her in this form grants only reduced experience."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "Propulseurs",
+          "fr": "Turboréacteurs",
           "en": "Boosters"
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_boosters.png",
         "description": {
-          "fr": "Fonce en avant et bouscule les ennemis.",
-          "en": "Boost forward, knocking enemies aside."
+          "fr": "Fonce en avant en repoussant les ennemis touchés. D.Va ne peut pas être ralentie tant que la poussée dure.",
+          "en": "Charges forward, knocking back the enemies hit. D.Va cannot be Slowed while boosting."
+        },
+        "demoYoutubeId": "",
+        "form": "meca"
+      },
+      {
+        "key": "A",
+        "form": "pilote",
+        "name": {
+          "fr": "Tir de PGM",
+          "en": "Big Shot"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/talents/storm_ui_icon_dva_bigshot.png",
+        "description": {
+          "fr": "Inflige des dégâts aux ennemis sur une ligne et ralentit les héros touchés, chacun d'eux rapprochant le retour du méca.",
+          "en": "Damages enemies in a line and Slows the Heroes hit, each of them bringing the mech back sooner."
         },
         "demoYoutubeId": ""
       },
@@ -13452,8 +14372,23 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_defensematrix.png",
         "description": {
-          "fr": "Réduit fortement les dégâts subis par les ennemis ciblés.",
-          "en": "Heavily reduces damage dealt by targeted enemies."
+          "fr": "Projette un champ qui réduit fortement les dégâts des héros adverses pris dedans. L'angle peut être réorienté, et les dégâts qu'ils infligent chargent Autodestruction.",
+          "en": "Projects a field that heavily reduces the damage of enemy Heroes caught inside. The angle can be redirected, and the damage they deal charges Self-Destruct."
+        },
+        "demoYoutubeId": "",
+        "form": "meca"
+      },
+      {
+        "key": "Z",
+        "form": "pilote",
+        "name": {
+          "fr": "Appel du méca",
+          "en": "Call Mech"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_callmech.png",
+        "description": {
+          "fr": "Fait tomber un nouveau méca et rend son pilotage à D.Va.",
+          "en": "Calls down a new mech and puts D.Va back in the pilot seat."
         },
         "demoYoutubeId": ""
       },
@@ -13465,36 +14400,11 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_selfdestruct.png",
         "description": {
-          "fr": "Fait exploser le méca après quelques secondes.",
-          "en": "Detonates the mech after a few seconds."
+          "fr": "D.Va s'éjecte et son méca explose après un court délai, d'autant plus fort que la cible en est proche. La charge se remplit en attaquant et en encaissant.",
+          "en": "D.Va ejects and her mech detonates after a short delay, hitting harder the closer the target. The charge builds by attacking and by taking damage."
         },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "R1",
-        "name": {
-          "fr": "Saut de lapin",
-          "en": "Bunny Hop"
-        },
-        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_bunnyhop.png",
-        "description": {
-          "fr": "Bondit plusieurs fois en étourdissant les ennemis.",
-          "en": "Hops several times, stunning enemies."
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "R2",
-        "name": {
-          "fr": "Micro-missiles",
-          "en": "Micro Missiles"
-        },
-        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_micromissiles.png",
-        "description": {
-          "fr": "Salve de missiles en zone devant toi.",
-          "en": "Volley of missiles in an area in front of you."
-        },
-        "demoYoutubeId": ""
+        "demoYoutubeId": "",
+        "form": "meca"
       },
       {
         "key": "W",
@@ -13504,10 +14414,39 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_mount.png",
         "description": {
-          "fr": "Monture mécanisée.",
-          "en": "Mechanized mount."
+          "fr": "Dans son méca, D.Va peut tirer tout en se déplaçant, mais sa vitesse de déplacement est réduite.",
+          "en": "While in her Mech, D.Va can shoot while moving, but her Movement Speed is reduced."
         },
-        "demoYoutubeId": ""
+        "demoYoutubeId": "",
+        "form": "meca"
+      },
+      {
+        "key": "R1",
+        "name": {
+          "fr": "Saut de lapin",
+          "en": "Bunny Hop"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_bunnyhop.png",
+        "description": {
+          "fr": "En mode méca, devient insensible aux effets de contrôle et étourdit les héros proches.",
+          "en": "Become Unstoppable and Stun nearby Heroes"
+        },
+        "demoYoutubeId": "",
+        "form": "meca"
+      },
+      {
+        "key": "R2",
+        "name": {
+          "fr": "Micro-missiles",
+          "en": "Micro Missiles"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_micromissiles.png",
+        "description": {
+          "fr": "Tire une salve de missiles qui inflige des dégâts et ralentit les ennemis.",
+          "en": "Fire a stream of missiles that damage and Slow"
+        },
+        "demoYoutubeId": "",
+        "form": "meca"
       }
     ],
     "tips": [
@@ -13540,46 +14479,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,DVa]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "18 Août 2026",
+          "en": "August 18, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jo2v11i",
+            "primaryId": "tmp39iuvv01ede",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6joz6jvp",
+            "primaryId": "tmp39iuvv0462o",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jogics2",
+            "primaryId": "tmp39iuvv079ne",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jod4gam",
+            "primaryId": "tmp39iuvv109pb",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jofsdx4",
+            "primaryId": "tmp39iuvv12481",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jou2nq0",
+            "primaryId": "tmp39iuvv15bss",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jokyu1g",
+            "primaryId": "tmp39iuvv182pi",
             "alternativeIds": []
           }
         ]
@@ -13588,105 +14527,316 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jo2v11i",
+        "id": "tmp39iuvv01ede",
         "level": 1,
         "name": {
-          "fr": "Full Metal",
+          "fr": "Balles chemisées",
           "en": "Full Metal"
         },
-        "icon": "assets/heroes/base_spells/dva/images/talents/storm_ui_icon_dva_mechmode.png",
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_mechmode.png",
         "description": {
-          "fr": "D.Va's Mech gains 10% increased Health and its Fusion Cannons heal for 16% of the damage dealt to enemies in its bonus area.",
-          "en": "D.Va's Mech gains 10% increased Health and its Fusion Cannons heal for 16% of the damage dealt to enemies in its bonus area."
+          "fr": "Augmente les points de vie du méca, les Fusio-canons rendent des points de vie.",
+          "en": "Increase Mech Health, Fusion Cannons heal"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joz6jvp",
+        "id": "tmp39iuvv02za6",
+        "level": 1,
+        "name": {
+          "fr": "Astuces de pro",
+          "en": "Pro Moves"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/talents/storm_ui_icon_dva_mechmode_a.png",
+        "description": {
+          "fr": "Subir des dégâts augmente la vitesse de déplacement et l’armure.",
+          "en": "Taking damage increases Move Speed, Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp39iuvv03mnf",
+        "level": 1,
+        "name": {
+          "fr": "Refroidissement liquide",
+          "en": "Liquid Cooling"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/talents/storm_ui_icon_dva_mechmode_b.png",
+        "description": {
+          "fr": "Renforce les fontaines de soins en mode méca.",
+          "en": "Empower Healing Fountain in Mech Mode"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp39iuvv0462o",
         "level": 4,
         "name": {
-          "fr": "Rush-down",
+          "fr": "Fonceuse",
           "en": "Rush-down"
         },
-        "icon": "assets/heroes/base_spells/dva/images/talents/storm_ui_icon_dva_boosters.png",
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_boosters.png",
         "description": {
-          "fr": "Boosters deals an additional 2% of maximum Health as damage to Heroes and heals D.Va's Mech for the damage dealt. Boosters deals 50% increased damage to non-Heroic enemies.",
-          "en": "Boosters deals an additional 2% of maximum Health as damage to Heroes and heals D.Va's Mech for the damage dealt. Boosters deals 50% increased damage to non-Heroic enemies."
+          "fr": "Turboréacteurs vole des points de vie et augmente les dégâts aux ennemis non héroïques.",
+          "en": "Boosters steals Health, increase non-hero damage"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jogics2",
+        "id": "tmp39iuvv0539g",
+        "level": 4,
+        "name": {
+          "fr": "Matrice offensive",
+          "en": "Aggression Matrix"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_defensematrix.png",
+        "description": {
+          "fr": "Matrice défensive réduit les soins, temps de recharge réduit.",
+          "en": "Defense Matrix reduces healing, lower cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp39iuvv060ui",
+        "level": 4,
+        "name": {
+          "fr": "Explosion nucléaire",
+          "en": "Nuclear Option"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_selfdestruct.png",
+        "description": {
+          "fr": "Renforce les Fusio-canons et Autodestruction.",
+          "en": "Empower Fusion Cannons and Self-Destruct"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp39iuvv079ne",
         "level": 7,
         "name": {
-          "fr": "Get On The Point!",
+          "fr": "Attaquez l’objectif !",
           "en": "Get On The Point!"
         },
-        "icon": "assets/heroes/base_spells/dva/images/talents/storm_ui_icon_dva_boosters.png",
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_boosters.png",
         "description": {
-          "fr": "Casting Boosters grants nearby allies 20% Movement Speed for 2 seconds.  Passive: If D.Va has not taken damage in the last 3 seconds, Boosters' cooldown refreshes 100% faster.",
-          "en": "Casting Boosters grants nearby allies 20% Movement Speed for 2 seconds.  Passive: If D.Va has not taken damage in the last 3 seconds, Boosters' cooldown refreshes 100% faster."
+          "fr": "Réduit le temps de recharge de Turboréacteurs et augmente la vitesse de déplacement des alliés.",
+          "en": "Reduce Boosters cooldown, grants allies move speed"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jod4gam",
+        "id": "tmp39iuvv082s1",
+        "level": 7,
+        "name": {
+          "fr": "Nitro",
+          "en": "Hit the Nitrous"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/talents/storm_ui_icon_dva_boosters_a.png",
+        "description": {
+          "fr": "Les turboréacteurs octroient un bonus à la vitesse immédiat et étourdissent les ennemis.",
+          "en": "Boosters give extra immediate speed, stuns"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp39iuvv09ioa",
+        "level": 7,
+        "name": {
+          "fr": "Générateur à fusion",
+          "en": "Fusion Generator"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_defensematrix.png",
+        "description": {
+          "fr": "Matrice défensive contribue à charger Autodestruction.",
+          "en": "Defense Matrix adds Self-Destruct Charge"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp39iuvv109pb",
         "level": 10,
         "name": {
-          "fr": "Bunny Hop",
+          "fr": "Saut de lapin",
           "en": "Bunny Hop"
         },
-        "icon": "assets/heroes/base_spells/dva/images/talents/storm_ui_icon_dva_bunnyhop.png",
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_bunnyhop.png",
         "description": {
-          "fr": "D.Va's Mech becomes Unstoppable and stomps every 0.5 seconds, dealing 70 (+4% per level) damage in a large area. Every 4th consecutive hit on a Hero deals 100% more damage and Stuns them for 0.5 seconds.  Lasts for 4 seconds.  Requires Mech Mode.",
-          "en": "D.Va's Mech becomes Unstoppable and stomps every 0.5 seconds, dealing 70 (+4% per level) damage in a large area. Every 4th consecutive hit on a Hero deals 100% more damage and Stuns them for 0.5 seconds.  Lasts for 4 seconds.  Requires Mech Mode."
+          "fr": "En mode méca, devient insensible aux effets de contrôle et étourdit les héros proches.",
+          "en": "Become Unstoppable and Stun nearby Heroes"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jofsdx4",
+        "id": "tmp39iuvv11y2x",
+        "level": 10,
+        "name": {
+          "fr": "Micro-missiles",
+          "en": "Micro Missiles"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_micromissiles.png",
+        "description": {
+          "fr": "Tire une salve de missiles qui inflige des dégâts et ralentit les ennemis.",
+          "en": "Fire a stream of missiles that damage and Slow"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp39iuvv12481",
         "level": 13,
         "name": {
-          "fr": "Target Locked",
+          "fr": "Cible verrouillée",
           "en": "Target Locked"
         },
-        "icon": "assets/heroes/base_spells/dva/images/talents/storm_ui_icon_dva_defensematrix.png",
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_defensematrix.png",
         "description": {
-          "fr": "Enemy Heroes that remain in your Defense Matrix for 1 seconds have their Armor reduced by 15 and their Movement Speed reduced by 25% for 3 seconds.",
-          "en": "Enemy Heroes that remain in your Defense Matrix for 1 seconds have their Armor reduced by 15 and their Movement Speed reduced by 25% for 3 seconds."
+          "fr": "Matrice défensive réduit l’armure et ralentit les ennemis.",
+          "en": "Defense Matrix lowers Armor, Slows"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jou2nq0",
+        "id": "tmp39iuvv13kpy",
+        "level": 13,
+        "name": {
+          "fr": "Prête à partir",
+          "en": "Good To Go"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_pilotmode.png",
+        "description": {
+          "fr": "Déverrouille des capacités supplémentaires en mode pilote.",
+          "en": "Unlock extra Pilot Mode abilities"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp39iuvv14qv9",
+        "level": 13,
+        "name": {
+          "fr": "One shot en 3 pious !",
+          "en": "Pew! Pew! Pew!"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/talents/storm_ui_icon_dva_bigshot.png",
+        "description": {
+          "fr": "Tir de PGM fait feu à plusieurs reprises.",
+          "en": "Big Shot fires multiple pulses"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp39iuvv15bss",
         "level": 16,
         "name": {
-          "fr": "In For The Kill",
+          "fr": "Offensive létale",
           "en": "In For The Kill"
         },
-        "icon": "assets/heroes/base_spells/dva/images/talents/storm_ui_icon_dva_boosters.png",
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_boosters.png",
         "description": {
-          "fr": "Casting Boosters grants a Shield equal to 10% of maximum life for 2.5 seconds. Each Enemy Hero hit by Boosters increases D.Va's Mech's Basic Attack damage by 10% for 5 seconds, stacking up to 5 times.",
-          "en": "Casting Boosters grants a Shield equal to 10% of maximum life for 2.5 seconds. Each Enemy Hero hit by Boosters increases D.Va's Mech's Basic Attack damage by 10% for 5 seconds, stacking up to 5 times."
+          "fr": "Turboréacteurs confère un bouclier et augmente les dégâts d’attaque.",
+          "en": "Boosters grants a Shield, increases attack damage"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jokyu1g",
+        "id": "tmp39iuvv16yqn",
+        "level": 16,
+        "name": {
+          "fr": "Dérivation de puissance",
+          "en": "Diverting Power"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_defensematrix.png",
+        "description": {
+          "fr": "Augmente la taille de Matrice défensive et rend des points de vie.",
+          "en": "Increase Defense Matrix area, adds healing"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp39iuvv17uht",
+        "level": 16,
+        "name": {
+          "fr": "Bouclier de secours",
+          "en": "Emergency Shielding"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_mechmode.png",
+        "description": {
+          "fr": "Confère un bouclier au méca en cas de dégâts fatals.",
+          "en": "Mech gains a Shield instead of dying"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp39iuvv182pi",
         "level": 20,
         "name": {
-          "fr": "Stop and Pop",
+          "fr": "Rien ne sert de bouger",
           "en": "Stop and Pop"
         },
-        "icon": "assets/heroes/base_spells/dva/images/talents/storm_ui_icon_dva_bunnyhop.png",
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_bunnyhop.png",
         "description": {
-          "fr": "Increase Bunny Hop's duration by 4 seconds, and it does not decay while D.Va's Mech is stationary.",
-          "en": "Increase Bunny Hop's duration by 4 seconds, and it does not decay while D.Va's Mech is stationary."
+          "fr": "La durée de Saut de lapin est augmentée, et mise en pause lorsque le méca ne se déplace pas",
+          "en": "Bunny Hop lasts longer, paused if stationary"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp39iuvv19tlr",
+        "level": 20,
+        "name": {
+          "fr": "Attaque précise",
+          "en": "Timing Attack"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_micromissiles.png",
+        "description": {
+          "fr": "Obtient une charge, les héros touchés réduisent le temps de recharge.",
+          "en": "Gain a charge, Hero hits reduce cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp39iuvv20clc",
+        "level": 20,
+        "name": {
+          "fr": "Dans ta face !",
+          "en": "Headshot!"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/talents/storm_ui_icon_dva_bigshot.png",
+        "description": {
+          "fr": "Augmente les dégâts de Tir de PGM et réduit son temps de recharge.",
+          "en": "Increase Big Shot damage, reduce cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmp39iuvv21zxe",
+        "level": 20,
+        "name": {
+          "fr": "Blindage impénétrable",
+          "en": "Ablative Armor"
+        },
+        "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_mechmode.png",
+        "description": {
+          "fr": "Soigne une partie des dégâts de capacité subis.",
+          "en": "Heal for portion of Spell damage taken"
         },
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [
+      {
+        "id": "meca",
+        "label": {
+          "fr": "Mode méca",
+          "en": "Mech Mode"
+        }
+      },
+      {
+        "id": "pilote",
+        "label": {
+          "fr": "Mode pilote",
+          "en": "Pilot Mode"
+        }
+      }
+    ]
   },
   {
     "id": "etc",
@@ -14244,6 +15394,19 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
+        "key": "W",
+        "name": {
+          "fr": "Vol",
+          "en": "Flight"
+        },
+        "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_mount.png",
+        "description": {
+          "fr": "S'envole et traverse la carte.",
+          "en": "Take flight and cross the map."
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "R1",
         "name": {
           "fr": "Bourrasque violente",
@@ -14266,19 +15429,6 @@ const HEROES = [
         "description": {
           "fr": "Rayon global qui inflige de très gros dégâts.",
           "en": "Global beam dealing very heavy damage."
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "W",
-        "name": {
-          "fr": "Vol",
-          "en": "Flight"
-        },
-        "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_mount.png",
-        "description": {
-          "fr": "S'envole et traverse la carte.",
-          "en": "Take flight and cross the map."
         },
         "demoYoutubeId": ""
       }
@@ -14807,6 +15957,19 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
+        "key": "W",
+        "name": {
+          "fr": "Bousculade",
+          "en": "Shove"
+        },
+        "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_shove.png",
+        "description": {
+          "fr": "Repousse les ennemis proches.",
+          "en": "Shoves nearby enemies."
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "R1",
         "name": {
           "fr": "Néant distordu",
@@ -14829,19 +15992,6 @@ const HEROES = [
         "description": {
           "fr": "Salve de projectiles qui blesse toute une zone.",
           "en": "Volley of bolts damaging an entire area."
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "W",
-        "name": {
-          "fr": "Bousculade",
-          "en": "Shove"
-        },
-        "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_shove.png",
-        "description": {
-          "fr": "Repousse les ennemis proches.",
-          "en": "Shoves nearby enemies."
         },
         "demoYoutubeId": ""
       }
@@ -15510,7 +16660,7 @@ const HEROES = [
   },
   {
     "id": "gazlowe",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Gazleu",
       "en": "Gazlowe"
@@ -15522,20 +16672,20 @@ const HEROES = [
       "en": "Structure specialist who wrecks forts and drops turrets."
     },
     "gameplay": {
-      "fr": "Gazlowe installe des tourelles pour tenir une zone, ramasse les débris pour réduire ses temps de recharge et démolit rapidement les bâtiments.",
-      "en": "Gazlowe sets up turrets to hold an area, picks up scrap to reduce his cooldowns, and quickly demolishes structures."
+      "fr": "Gazleu installe des tourelles pour tenir une zone, ramasse les débris qui alimentent ses capacités et démolit rapidement les bâtiments.",
+      "en": "Gazlowe sets up turrets to hold an area, picks up the Scrap that fuels his Abilities, and tears down Structures fast."
     },
     "spells": [
       {
         "key": "Trait",
         "name": {
-          "fr": "Réduire, réutiliser, recycler",
+          "fr": "Rationaliser, réutiliser, recycler",
           "en": "Reduce, Reuse, Recycle"
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_salvager.png",
         "description": {
-          "fr": "Ramasse des débris pour réduire tes temps de recharge.",
-          "en": "Collect scrap to reduce your cooldowns."
+          "fr": "Gazleu accumule des débris avec le temps, et les tourelles détruites en laissent un à ramasser. À l'activation, il démonte lui-même une tourelle.",
+          "en": "Gazlowe accumulates Scrap over time, and destroyed turrets leave a piece to pick up. On activation, he salvages a turret himself."
         },
         "demoYoutubeId": ""
       },
@@ -15547,8 +16697,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_rockitturret.png",
         "description": {
-          "fr": "Déploie une tourelle qui tire sur les ennemis proches.",
-          "en": "Deploys a turret that shoots nearby enemies."
+          "fr": "Pose une tourelle qui vise en priorité le héros adverse le plus proche et dépérit avec le temps.",
+          "en": "Deploys a turret that prioritizes the nearest enemy Hero and decays over time."
         },
         "demoYoutubeId": ""
       },
@@ -15560,8 +16710,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_dethlazor.png",
         "description": {
-          "fr": "Rayon perçant qui inflige de gros dégâts en ligne.",
-          "en": "Piercing laser dealing heavy damage in a line."
+          "fr": "Après un temps de charge, inflige des dégâts aux ennemis sur une ligne et rend des points de vie à Gazleu, bien davantage contre les héros.",
+          "en": "After a wind-up, damages enemies in a line and heals Gazlowe, far more against Heroes."
         },
         "demoYoutubeId": ""
       },
@@ -15573,21 +16723,34 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_explodiumcharge.png",
         "description": {
-          "fr": "Pose une bombe qui explose après un délai.",
-          "en": "Plants a bomb that explodes after a delay."
+          "fr": "Lance une bombe à retardement qui frappe et étourdit les ennemis dans une zone.",
+          "en": "Throw a timed bomb which stuns and damages enemies in an area"
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "&",
+        "name": {
+          "fr": "Directeur de tir",
+          "en": "Focus Turrets"
+        },
+        "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_rockitturret_var1.png",
+        "description": {
+          "fr": "Ordonne à toutes les tourelles proches de concentrer leurs tirs sur la cible désignée.",
+          "en": "Orders every nearby turret to focus its fire on the designated target."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
         "name": {
-          "fr": "Robo-gobelin",
+          "fr": "Robot-gobelin",
           "en": "Robo-Goblin"
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_robogoblin.png",
         "description": {
-          "fr": "Renforce tes attaques et te rend plus résistant.",
-          "en": "Empowers your attacks and makes you tougher."
+          "fr": "Rend insensible aux effets de contrôle et augmente les dégâts des attaques de base.",
+          "en": "Gain Unstoppable, increase Basic Attack damage"
         },
         "demoYoutubeId": ""
       },
@@ -15599,23 +16762,23 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_gravobomb.png",
         "description": {
-          "fr": "Attire les ennemis d'une zone puis les fait exploser.",
-          "en": "Pulls enemies in an area together, then detonates."
+          "fr": "Attire les ennemis, les étourdit et leur inflige des dégâts.",
+          "en": "Pulls, Stuns, and damages enemies"
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Ramasse toujours les débris : ils réduisent tes temps de recharge.",
-        "en": "Always pick up scrap: it reduces your cooldowns."
+        "fr": "Ramasse toujours les débris : ils alimentent tes capacités.",
+        "en": "Always pick up Scrap: it fuels your Abilities."
       },
       {
         "fr": "Pose tes tourelles derrière un mur pour qu'elles soient difficiles à détruire.",
         "en": "Place turrets behind walls so they are hard to destroy."
       },
       {
-        "fr": "Grav-o-bombe 3000 combinée à un contrôle allié fait des ravages.",
+        "fr": "Gravitobombe 3000 combinée à un contrôle allié fait des ravages.",
         "en": "Grav-O-Bomb 3000 combined with allied CC is devastating."
       }
     ],
@@ -15635,46 +16798,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Tinker]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "18 Août 2026",
+          "en": "August 18, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6joio3eo",
+            "primaryId": "tmozdoi9u0172x",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jowrr0t",
+            "primaryId": "tmozdoi9u04wk5",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6joduxxi",
+            "primaryId": "tmozdoi9u07i6a",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jowqe6s",
+            "primaryId": "tmozdoi9u10d7t",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jotjjgr",
+            "primaryId": "tmozdoi9u1267d",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jom98uc",
+            "primaryId": "tmozdoi9u159qr",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jowvcvd",
+            "primaryId": "tmozdoi9u18bvz",
             "alternativeIds": []
           }
         ]
@@ -15683,100 +16846,296 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6joio3eo",
+        "id": "tmozdoi9u0172x",
         "level": 1,
         "name": {
-          "fr": "Rocket Boots",
+          "fr": "Bottes-fusées",
           "en": "Rocket Boots"
         },
-        "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_explodiumcharge.png",
+        "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_explodiumcharge.png",
         "description": {
-          "fr": "Increase the cast range of Xplodium Charge by 30% and its damage by 35%. Hitting an enemy Hero increases Movement Speed by 20% for 3 seconds.",
-          "en": "Increase the cast range of Xplodium Charge by 30% and its damage by 35%. Hitting an enemy Hero increases Movement Speed by 20% for 3 seconds."
+          "fr": "Augmente la portée et les dégâts de Charge d’X-plosium.",
+          "en": "Increase Xplodium Charge cast range, damage"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jowrr0t",
+        "id": "tmozdoi9u02svd",
+        "level": 1,
+        "name": {
+          "fr": "Chasseur de gros gibier",
+          "en": "Big Game Hunter"
+        },
+        "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_salvager.png",
+        "description": {
+          "fr": "Toucher des héros, des mercenaires et des monstres augmente les débris.",
+          "en": "Hitting Heroes, Mercs, Monsters increase Scrap"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmozdoi9u03hrd",
+        "level": 1,
+        "name": {
+          "fr": "Démolisseur",
+          "en": "One Man Wrecking Crew"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
+        "description": {
+          "fr": "Les capacités de base renforcent les attaques de base.",
+          "en": "Basic Abilities empower Basic Attacks"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmozdoi9u04wk5",
         "level": 4,
         "name": {
-          "fr": "Rock It Sock It",
+          "fr": "Protection Sulfatt",
           "en": "Rock It Sock It"
         },
-        "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_rockitturret.png",
+        "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_rockitturret.png",
         "description": {
-          "fr": "Casting Rock-It! Turret grants Gazlowe a Shield that absorbs up to 200 (+4% per level) damage for 2.5 seconds.",
-          "en": "Casting Rock-It! Turret grants Gazlowe a Shield that absorbs up to 200 (+4% per level) damage for 2.5 seconds."
+          "fr": "L’utilisation de Tourelle Sulfatt confère un bouclier.",
+          "en": "Casting Rock-It! Turret grants a Shield"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joduxxi",
+        "id": "tmozdoi9u05i9y",
+        "level": 4,
+        "name": {
+          "fr": "Bobines hypertroniques",
+          "en": "Hyperfocus Coils"
+        },
+        "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_combo_w_e.png",
+        "description": {
+          "fr": "Trucidolaser et Charge d’X-plosium infligent des dégâts supplémentaires et rendent des points de vie.",
+          "en": "Deth Lazor and Xplodium Charge deal bonus damage, heal"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmozdoi9u06rbl",
+        "level": 4,
+        "name": {
+          "fr": "Trancheuse dimensionnelle TKC",
+          "en": "EZ-PZ Dimensional Ripper"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_imposingpresence.png",
+        "description": {
+          "fr": "Confère de l’armure et réduit les dégâts infligés par les ennemis.",
+          "en": "Activate to gain Armor, reduce enemy damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmozdoi9u07i6a",
         "level": 7,
         "name": {
-          "fr": "Goblin Fusion",
+          "fr": "Fusion gobeline",
           "en": "Goblin Fusion"
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_combo_q_w.png",
         "description": {
-          "fr": "Generate 3 Scrap for each Hero hit by Deth Lazor.",
-          "en": "Generate 3 Scrap for each Hero hit by Deth Lazor."
+          "fr": "Trucidolaser peut générer des débris.",
+          "en": "Deth Lazor can generate Scrap"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jowqe6s",
+        "id": "tmozdoi9u08t5l",
+        "level": 7,
+        "name": {
+          "fr": "Surcharge",
+          "en": "Overload"
+        },
+        "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_dethlazor_a.png",
+        "description": {
+          "fr": "Confère une charge supplémentaire de Trucidolaser.",
+          "en": "Gain an additional Deth Lazor charge"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmozdoi9u09ohv",
+        "level": 7,
+        "name": {
+          "fr": "Maître des explosions",
+          "en": "Master Blaster"
+        },
+        "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_combo_w_e.png",
+        "description": {
+          "fr": "Trucidolaser et Charge d’X-plosium ralentissent les ennemis.",
+          "en": "Deth Lazor and Xplodium Charge Slow"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmozdoi9u10d7t",
         "level": 10,
         "name": {
-          "fr": "Robo-Goblin",
+          "fr": "Robot-gobelin",
           "en": "Robo-Goblin"
         },
-        "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_robogoblin.png",
+        "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_robogoblin.png",
         "description": {
-          "fr": "Activate to become Unstoppable for 1.5 seconds.  Passive: Basic Attacks deal 90 (+4% per level) bonus damage over 5 seconds, stacking up to 3 times.",
-          "en": "Activate to become Unstoppable for 1.5 seconds.  Passive: Basic Attacks deal 90 (+4% per level) bonus damage over 5 seconds, stacking up to 3 times."
+          "fr": "Rend insensible aux effets de contrôle et augmente les dégâts des attaques de base.",
+          "en": "Gain Unstoppable, increase Basic Attack damage"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jotjjgr",
+        "id": "tmozdoi9u11n6l",
+        "level": 10,
+        "name": {
+          "fr": "Gravitobombe 3000",
+          "en": "Grav-O-Bomb 3000"
+        },
+        "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_gravobomb.png",
+        "description": {
+          "fr": "Attire les ennemis, les étourdit et leur inflige des dégâts.",
+          "en": "Pulls, Stuns, and damages enemies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmozdoi9u1267d",
         "level": 13,
         "name": {
-          "fr": "Positive Reinforcement",
+          "fr": "Renforts positifs",
           "en": "Positive Reinforcement"
         },
-        "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_rockitturret.png",
+        "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_rockitturret.png",
         "description": {
-          "fr": "Primary Rock-It! Turret attacks against Heroes increase Gazlowe's Attack Speed by 40% for 3 seconds.",
-          "en": "Primary Rock-It! Turret attacks against Heroes increase Gazlowe's Attack Speed by 40% for 3 seconds."
+          "fr": "Les attaques des tourelles augmentent la vitesse d’attaque de Gazleu.",
+          "en": "Rock-It! Turret attacks increase Attack Speed"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jom98uc",
+        "id": "tmozdoi9u13iui",
+        "level": 13,
+        "name": {
+          "fr": "Plans améliorés",
+          "en": "Superior Schematics"
+        },
+        "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_rockitturret_var1.png",
+        "description": {
+          "fr": "Les tourelles Sulfatt attaquent plusieurs ennemis.",
+          "en": "Rock-It! Turrets attack multiple enemies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmozdoi9u14ivw",
+        "level": 13,
+        "name": {
+          "fr": "Condensateurs surchargés",
+          "en": "Overcharged Capacitors"
+        },
+        "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_rockitturret_var2.png",
+        "description": {
+          "fr": "Augmente la puissance de capacité et la durée des Tourelles Sulfatt.",
+          "en": "Rock-It! Turrets increase Spell Power, duration"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmozdoi9u159qr",
         "level": 16,
         "name": {
-          "fr": "Firin' Mah Lazorz",
+          "fr": "Trucido-tourelles",
           "en": "Firin' Mah Lazorz"
         },
-        "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_dethlazor.png",
+        "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_dethlazor.png",
         "description": {
-          "fr": "Firing Deth Lazor causes all of Gazlowe's Rock-It! Turrets to fire a Deth Lazor of their own that deals 125 (+4% per level) damage.",
-          "en": "Firing Deth Lazor causes all of Gazlowe's Rock-It! Turrets to fire a Deth Lazor of their own that deals 125 (+4% per level) damage."
+          "fr": "Les tourelles Sulfatt utilisent un Trucidolaser.",
+          "en": "Rock It! Turrets fire Deth Lazorz"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jowvcvd",
+        "id": "tmozdoi9u16o3c",
+        "level": 16,
+        "name": {
+          "fr": "Réacteur ARK",
+          "en": "Ark Reaktor"
+        },
+        "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_explodiumcharge.png",
+        "description": {
+          "fr": "Réduit le temps de recharge de Charge d’X-plosium et crée des tourelles.",
+          "en": "Xplodium Charge creates Turrets, reduce cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmozdoi9u17o4e",
+        "level": 16,
+        "name": {
+          "fr": "Surkadence",
+          "en": "Overklock"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_searing.png",
+        "description": {
+          "fr": "Attaquer des héros augmente la vitesse et inflige des dégâts bonus.",
+          "en": "Attacks grant Move Speed, deal bonus damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmozdoi9u18bvz",
         "level": 20,
         "name": {
-          "fr": "Mecha-Lord",
+          "fr": "Mécador",
           "en": "Mecha-Lord"
         },
-        "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_robogoblin.png",
+        "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_robogoblin.png",
         "description": {
-          "fr": "Basic Attacks increase Gazlowe's Armor by 10 for 10 seconds, up to a maximum of 30, and deal 50% bonus damage to Stunned or Slowed enemies.",
-          "en": "Basic Attacks increase Gazlowe's Armor by 10 for 10 seconds, up to a maximum of 30, and deal 50% bonus damage to Stunned or Slowed enemies."
+          "fr": "Les attaques de base confèrent de l’armure et peuvent infliger des dégâts supplémentaires.",
+          "en": "Basic Attacks grant Armor, can deal bonus damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmozdoi9u198tg",
+        "level": 20,
+        "name": {
+          "fr": "Trou noir miniature",
+          "en": "Miniature Black Hole"
+        },
+        "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_gravobomb.png",
+        "description": {
+          "fr": "Augmente le rayon et les dégâts, réduit le temps de recharge.",
+          "en": "Increase radius and damage, reduce cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmozdoi9u206r4",
+        "level": 20,
+        "name": {
+          "fr": "Pluie de débris",
+          "en": "It's Raining Scrap"
+        },
+        "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_rockitturret.png",
+        "description": {
+          "fr": "Les tourelles Sulfatt coûtent moins de débris, et chaque débris ramassé en rapporte davantage.",
+          "en": "Rock-It! Turrets cost less Scrap, and each piece picked up yields more."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmozdoi9u21s2v",
+        "level": 20,
+        "name": {
+          "fr": "Lancer de bombe",
+          "en": "Bomb Toss"
+        },
+        "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_explodiumcharge.png",
+        "description": {
+          "fr": "Charge d’X-plosium libère plus de charges.",
+          "en": "Xplodium Charge releases more bombs"
         },
         "demoYoutubeId": null
       }
@@ -16885,7 +18244,7 @@ const HEROES = [
   },
   {
     "id": "hogger",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Lardeur",
       "en": "Hogger"
@@ -16897,92 +18256,92 @@ const HEROES = [
       "en": "Melee bruiser who slams enemies into walls."
     },
     "gameplay": {
-      "fr": "Hogger génère de la Rage avec ses attaques, gagne de la vie grâce à son butin et enchaîne les ennemis contre le décor pour les étourdir.",
+      "fr": "Lardeur génère de la rage avec ses attaques, gagne de la vie grâce à son butin et projette les ennemis contre le décor pour les étourdir.",
       "en": "Hogger builds Rage with his attacks, gains Health from his loot hoard, and slams enemies into terrain to stun them."
     },
     "spells": [
       {
         "key": "Trait",
         "name": {
-          "fr": "Magot",
+          "fr": "Chope butin",
           "en": "Loot Hoard"
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_trait.png",
         "description": {
-          "fr": "Lâche un butin qui te soigne et te donne un bouclier.",
-          "en": "Drops loot that heals you and grants a shield."
+          "fr": "Jette un tas de fourbi qui repousse les ennemis et sert d'obstacle. À sa destruction, il laisse un morceau de viande qui soigne Lardeur.",
+          "en": "Hurls a hoard that knocks enemies back and acts as terrain. When it breaks, it drops a piece of meat that heals Hogger."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "Coup renversant",
+          "fr": "Coup ahurissant",
           "en": "Staggering Blow"
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_q.png",
         "description": {
-          "fr": "Repousse les ennemis ; les étourdit contre un mur.",
-          "en": "Knocks enemies back; stuns them against walls."
+          "fr": "Frappe dans un large arc de cercle et repousse les ennemis ; celui qui percute un obstacle est étourdi et rapporte de la rage.",
+          "en": "Swings in a wide arc, knocking enemies back; one that hits terrain is Stunned and grants Rage."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "Z",
         "name": {
-          "fr": "Dynamite bricolée",
+          "fr": "Dynamite Ev-Lan",
           "en": "Ez-Thro Dynamite"
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_w.png",
         "description": {
-          "fr": "Lance de la dynamite qui explose en zone.",
-          "en": "Throws dynamite that explodes in an area."
+          "fr": "Lance de la dynamite qui explose peu après en blessant et ralentissant. Posée sur un héros, elle explose aussitôt et rapporte de la rage.",
+          "en": "Throws dynamite that detonates shortly after, damaging and Slowing. Landed on a Hero, it explodes instantly and grants Rage."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "E",
         "name": {
-          "fr": "Ruée sauvage",
+          "fr": "Lardée sauvage",
           "en": "Hogg Wild"
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_e.png",
         "description": {
-          "fr": "Tournoie sur place puis fonce en infligeant des dégâts.",
-          "en": "Spins in place, then charges forward dealing damage."
+          "fr": "Lardeur devient insensible aux effets de contrôle et tournoie sans contrôle, rebondissant sur les obstacles — chaque rebond relance le tournoiement.",
+          "en": "Hogger becomes Unstoppable and spins wildly, bouncing off terrain — each bounce restarts the spin."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
         "name": {
-          "fr": "Catapulte à magot",
+          "fr": "Lance-butin",
           "en": "Hoardapult"
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_r1.png",
         "description": {
-          "fr": "Projette du butin sur une longue distance.",
-          "en": "Launches loot over a long distance."
+          "fr": "Catapulte Lardeur accroché à un Chope butin renforcé, blessant et ralentissant les ennemis au point de chute.",
+          "en": "Launches Hogger attached to an empowered Loot Hoard, damaging and Slowing enemies where it lands."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
         "name": {
-          "fr": "Onde de choc",
+          "fr": "Effet de choc",
           "en": "Shockwave"
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_r2.png",
         "description": {
-          "fr": "Onde en ligne qui repousse et blesse les ennemis.",
-          "en": "Shockwave in a line that knocks back and damages."
+          "fr": "Inflige des dégâts et étourdit sur une longue ligne.",
+          "en": "Damage and Stun in long line"
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Frappe les ennemis contre un mur avec ton Coup renversant pour les étourdir.",
+        "fr": "Projette les ennemis contre un mur avec Coup ahurissant pour les étourdir.",
         "en": "Knock enemies into walls with Staggering Blow to stun them."
       },
       {
@@ -16990,7 +18349,7 @@ const HEROES = [
         "en": "Pick up your loot after a fight to heal."
       },
       {
-        "fr": "Ruée sauvage sert autant à fuir qu'à poursuivre.",
+        "fr": "Lardée sauvage sert autant à fuir qu'à poursuivre.",
         "en": "Hogg Wild is as good for escaping as for chasing."
       }
     ],
@@ -17010,46 +18369,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Hogger]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "18 Août 2026",
+          "en": "August 18, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jozow6r",
+            "primaryId": "tmb5z86pc01rjr",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jo43a7b",
+            "primaryId": "tmb5z86pc04vgp",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jozwr08",
+            "primaryId": "tmb5z86pc070pq",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jo6i6du",
+            "primaryId": "tmb5z86pc10mju",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jo41mu9",
+            "primaryId": "tmb5z86pc12spd",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6joqz93u",
+            "primaryId": "tmb5z86pc15yb4",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6joy3fs0",
+            "primaryId": "tmb5z86pc18tiq",
             "alternativeIds": []
           }
         ]
@@ -17058,100 +18417,296 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jozow6r",
+        "id": "tmb5z86pc01rjr",
         "level": 1,
         "name": {
-          "fr": "Journeyman Cooking",
+          "fr": "Compagnon cuisinier",
           "en": "Journeyman Cooking"
         },
-        "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_w.png",
+        "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_w.png",
         "description": {
-          "fr": "Each Hero hit by Ez-Thro Dynamite heals you for 8% of maximum Health.  Quest: Hitting Heroes with Ez-Thro Dynamite permanently increases your maximum Health by 10, to a maximum of 750 bonus Health.",
-          "en": "Each Hero hit by Ez-Thro Dynamite heals you for 8% of maximum Health.  Quest: Hitting Heroes with Ez-Thro Dynamite permanently increases your maximum Health by 10, to a maximum of 750 bonus Health."
+          "fr": "Quête : Dynamite Ev-Lan soigne et augmente les points de vie.",
+          "en": "Quest: Ez-Thro Dynamite heals, increases Health"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo43a7b",
+        "id": "tmb5z86pc02brs",
+        "level": 1,
+        "name": {
+          "fr": "Os à ronger",
+          "en": "Bones to Gnaw"
+        },
+        "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_trait.png",
+        "description": {
+          "fr": "Chope butin génère davantage de viande et confère de l’armure.",
+          "en": "Loot Hoard creates more Meat, gain Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmb5z86pc03xop",
+        "level": 1,
+        "name": {
+          "fr": "En chasse",
+          "en": "On The Prowl"
+        },
+        "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_rage.png",
+        "description": {
+          "fr": "Rend périodiquement des points de vie et confère de la rage à l’activation.",
+          "en": "Periodically heal, activate to gain Rage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmb5z86pc04vgp",
         "level": 4,
         "name": {
-          "fr": "Brute Force",
+          "fr": "Force brute",
           "en": "Brute Force"
         },
         "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_combo_q_d.png",
         "description": {
-          "fr": "Increase the range of Loot Hoard by 20% and its damage by 50%.  Quest: Hitting Heroes with Staggering Blow permanently increases Basic Attack damage by 2, to a maximum of 150 bonus damage. Enemy Heroes that hit terrain grant an additional 8 damage.",
-          "en": "Increase the range of Loot Hoard by 20% and its damage by 50%.  Quest: Hitting Heroes with Staggering Blow permanently increases Basic Attack damage by 2, to a maximum of 150 bonus damage. Enemy Heroes that hit terrain grant an additional 8 damage."
+          "fr": "Augmente les dégâts d’attaque et la portée de Chope butin. Quête : toucher des héros avec Coup ahurissant.",
+          "en": "Increases Loot Hoard damage, range. Quest: Hit Heroes with Staggering Blow."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jozwr08",
+        "id": "tmb5z86pc05xrg",
+        "level": 4,
+        "name": {
+          "fr": "Agressivité exacerbée",
+          "en": "Aggro Range"
+        },
+        "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_e.png",
+        "description": {
+          "fr": "Augmente le rayon de Lardée sauvage et génère de la rage.",
+          "en": "Increase Hogg Wild radius, generates Rage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmb5z86pc06fhg",
+        "level": 4,
+        "name": {
+          "fr": "L’ardeur de Lardeur",
+          "en": "Hogger's Joggers"
+        },
+        "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_rage.png",
+        "description": {
+          "fr": "La rage augmente la vitesse de déplacement et les soins reçus.",
+          "en": "Rage increases Move Speed, healing received"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmb5z86pc070pq",
         "level": 7,
         "name": {
-          "fr": "Dense Blasting Powder",
+          "fr": "Poudre d’explosion dense",
           "en": "Dense Blasting Powder"
         },
-        "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_w.png",
+        "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_w.png",
         "description": {
-          "fr": "Instant detonations of Ez-Thro Dynamite creates an additional dynamite behind the Hero hit.  Hitting the bundle of Ez-Thro Dynamite with Staggering Blow breaks it into three sticks and launches them forward in an arc.",
-          "en": "Instant detonations of Ez-Thro Dynamite creates an additional dynamite behind the Hero hit.  Hitting the bundle of Ez-Thro Dynamite with Staggering Blow breaks it into three sticks and launches them forward in an arc."
+          "fr": "Génère davantage de dynamite Ev-Lan.",
+          "en": "Create more Ez-Thro Dynamite"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo6i6du",
+        "id": "tmb5z86pc087yw",
+        "level": 7,
+        "name": {
+          "fr": "Feu de poubelle",
+          "en": "Garbage Fire"
+        },
+        "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_trait.png",
+        "description": {
+          "fr": "Chope butin inflige des dégâts de zone et ralentit.",
+          "en": "Loot Hoard deals area damage, Slows"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmb5z86pc09gog",
+        "level": 7,
+        "name": {
+          "fr": "Ivre de rage",
+          "en": "Seeing Red"
+        },
+        "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_rage.png",
+        "description": {
+          "fr": "La rage renforce les capacités de base et les attaques de base.",
+          "en": "Rage empowers Basic Abilities, Basic Attacks"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmb5z86pc10mju",
         "level": 10,
         "name": {
-          "fr": "Hoardapult",
+          "fr": "Lance-butin",
           "en": "Hoardapult"
         },
-        "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_r1.png",
+        "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_r1.png",
         "description": {
-          "fr": "Launch an empowered Loot Hoard with Hogger attached, dealing 100 (+4% per level) damage and Slowing enemies by 50% for 2 seconds.  Hoardapult's Loot Hoard lasts for up to 20 seconds, decaying rapidly while not nearby. Every 10 seconds Hogger can take a chunk of Meat from the Loot Hoard.",
-          "en": "Launch an empowered Loot Hoard with Hogger attached, dealing 100 (+4% per level) damage and Slowing enemies by 50% for 2 seconds.  Hoardapult's Loot Hoard lasts for up to 20 seconds, decaying rapidly while not nearby. Every 10 seconds Hogger can take a chunk of Meat from the Loot Hoard."
+          "fr": "Catapulte Lardeur accroché à un Chope butin renforcé, blessant et ralentissant les ennemis au point de chute.",
+          "en": "Launches Hogger attached to an empowered Loot Hoard, damaging and Slowing enemies where it lands."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo41mu9",
+        "id": "tmb5z86pc11gqt",
+        "level": 10,
+        "name": {
+          "fr": "Effet de choc",
+          "en": "Shockwave"
+        },
+        "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_r2.png",
+        "description": {
+          "fr": "Inflige des dégâts et étourdit sur une longue ligne.",
+          "en": "Damage and Stun in long line"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmb5z86pc12spd",
         "level": 13,
         "name": {
-          "fr": "Dust Devil",
+          "fr": "Diable de poussière",
           "en": "Dust Devil"
         },
-        "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_e.png",
+        "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_e.png",
         "description": {
-          "fr": "Gain 20 Armor while Hogg Wild is active and for 3 seconds after. When at or above 50 Rage, increase this Armor to 40.",
-          "en": "Gain 20 Armor while Hogg Wild is active and for 3 seconds after. When at or above 50 Rage, increase this Armor to 40."
+          "fr": "Lardée sauvage confère de l’armure.",
+          "en": "Hogg Wild grants Armor"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joqz93u",
+        "id": "tmb5z86pc13cf4",
+        "level": 13,
+        "name": {
+          "fr": "Rossée",
+          "en": "Pummel"
+        },
+        "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_e_variant.png",
+        "description": {
+          "fr": "Lardée sauvage ralentit et réduit la puissance de capacité.",
+          "en": "Hogg Wild Slows, reduces Spell Power"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmb5z86pc14d9i",
+        "level": 13,
+        "name": {
+          "fr": "Assoiffé de sang",
+          "en": "Bloodthirst"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_heal.png",
+        "description": {
+          "fr": "Les attaques de base et certaines capacités rendent des points de vie.",
+          "en": "Basic Attacks and some Abilities heal"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmb5z86pc15yb4",
         "level": 16,
         "name": {
-          "fr": "Headbanger",
+          "fr": "Casseur de crânes",
           "en": "Headbanger"
         },
-        "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_q.png",
+        "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_q.png",
         "description": {
-          "fr": "Enemy Heroes Stunned by Staggering Blow take an additional 8% of their maximum Health as damage and are Stunned for an additional 0.5 seconds.",
-          "en": "Enemy Heroes Stunned by Staggering Blow take an additional 8% of their maximum Health as damage and are Stunned for an additional 0.5 seconds."
+          "fr": "Augmente les dégâts de Coup ahurissant et étourdit.",
+          "en": "Increase Staggering Blow damage, Stun"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joy3fs0",
+        "id": "tmb5z86pc16lem",
+        "level": 16,
+        "name": {
+          "fr": "Krak’boum !",
+          "en": "Kablooie!"
+        },
+        "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_w.png",
+        "description": {
+          "fr": "Renforce les explosions instantanées de Dynamite Ev-Lan.",
+          "en": "Empower Ez-Thro Dynamite instant detonations"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmb5z86pc173gs",
+        "level": 16,
+        "name": {
+          "fr": "Gnollserker",
+          "en": "Furzerker"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
+        "description": {
+          "fr": "Renforce les attaques de base et augmente la vitesse de déplacement.",
+          "en": "Empower Basic Attacks, increase Move Speed"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmb5z86pc18tiq",
         "level": 20,
         "name": {
-          "fr": "Secret Stash",
+          "fr": "Magot secret",
           "en": "Secret Stash"
         },
-        "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_r1.png",
+        "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_r1.png",
         "description": {
-          "fr": "Every 2 seconds, Hoardapults' Loot Hoard randomly launches Ez-Thro Dynamite, prioritizing nearby enemy Heroes.  Every 5 seconds, it also launches a chunk of Meat towards Hogger.",
-          "en": "Every 2 seconds, Hoardapults' Loot Hoard randomly launches Ez-Thro Dynamite, prioritizing nearby enemy Heroes.  Every 5 seconds, it also launches a chunk of Meat towards Hogger."
+          "fr": "Chope butin lance de la dynamite et de la viande.",
+          "en": "Loot Hoard launches Dynamite and Meat"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmb5z86pc19mpp",
+        "level": 20,
+        "name": {
+          "fr": "Pic de puissance",
+          "en": "Power Spike"
+        },
+        "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_r2.png",
+        "description": {
+          "fr": "Effet de choc réduit l’armure et son temps de recharge est réduit.",
+          "en": "Shockwave reduces Armor, reduced cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmb5z86pc20jmt",
+        "level": 20,
+        "name": {
+          "fr": "Hors de contrôle",
+          "en": "No Control"
+        },
+        "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_e_variant.png",
+        "description": {
+          "fr": "Pourchasse les ennemis avec Lardée sauvage.",
+          "en": "Chase enemies with Hogg Wild"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmb5z86pc21135",
+        "level": 20,
+        "name": {
+          "fr": "Maîtrise de la rage",
+          "en": "Anger Management"
+        },
+        "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_rage.png",
+        "description": {
+          "fr": "Augmente la rage maximum et le gain de rage.",
+          "en": "Increase max Rage, increase Rage gains"
         },
         "demoYoutubeId": null
       }
@@ -17643,7 +19198,7 @@ const HEROES = [
       "en": "Angelic bruiser who dives in and heals through contact."
     },
     "gameplay": {
-      "fr": "Imperius applique sa marque sur les ennemis puis la fait exploser pour se soigner. Il est extrêmement dangereux quand il combat plusieurs cibles.",
+      "fr": "Impérius applique sa marque sur les ennemis puis la fait exploser pour se soigner. Il est extrêmement dangereux quand il combat plusieurs cibles.",
       "en": "Imperius brands enemies, then detonates the brand to heal himself. He is extremely dangerous when fighting multiple targets."
     },
     "spells": [
@@ -18146,19 +19701,6 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
-        "key": "&",
-        "name": {
-          "fr": "Bloc de glace amélioré",
-          "en": "Improved Ice Block"
-        },
-        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_improvediceblock.png",
-        "description": {
-          "fr": "Capacité débloquée par la quête de Morsure de givre : rend Jaina temporairement invulnérable. La récompense mythique la fait devenir Glaciation, qui lui permet en plus de se déplacer et de lancer des sorts pendant l'effet.",
-          "en": "Ability unlocked by Frostbite's quest: makes Jaina temporarily Invulnerable. The mythic reward turns it into Ice Cold, which additionally lets her move and cast during it."
-        },
-        "demoYoutubeId": ""
-      },
-      {
         "key": "A",
         "name": {
           "fr": "Éclair de givre",
@@ -18194,6 +19736,19 @@ const HEROES = [
         "description": {
           "fr": "Inflige des dégâts dans un cône devant Jaina et glace les cibles touchées.",
           "en": "Deals damage in a cone in front of Jaina and Chills targets hit."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "&",
+        "name": {
+          "fr": "Bloc de glace amélioré",
+          "en": "Improved Ice Block"
+        },
+        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_improvediceblock.png",
+        "description": {
+          "fr": "Capacité débloquée par la quête de Morsure de givre : rend Jaina temporairement invulnérable. La récompense mythique la fait devenir Glaciation, qui lui permet en plus de se déplacer et de lancer des sorts pendant l'effet.",
+          "en": "Ability unlocked by Frostbite's quest: makes Jaina temporarily Invulnerable. The mythic reward turns it into Ice Cold, which additionally lets her move and cast during it."
         },
         "demoYoutubeId": ""
       },
@@ -20092,7 +21647,7 @@ const HEROES = [
   },
   {
     "id": "leoric",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Leoric",
       "en": "Leoric"
@@ -20104,46 +21659,46 @@ const HEROES = [
       "en": "Immortal bruiser who keeps being a nuisance even after death."
     },
     "gameplay": {
-      "fr": "Leoric revient plus vite en frappant les ennemis sous forme de fantôme, et draine la vie de sa cible avec Vol d'espoir.",
-      "en": "Leoric respawns faster by hitting enemies in ghost form and drains his target's Health with Drain Hope."
+      "fr": "Leoric revient plus vite en restant près des ennemis sous forme de spectre, et draine la vie de sa cible avec Drain d'espoir.",
+      "en": "Leoric returns sooner by staying near enemies while a ghost, and drains his target's Health with Drain Hope."
     },
     "spells": [
       {
         "key": "Trait",
         "name": {
-          "fr": "Immortel",
+          "fr": "Trompe-la-mort",
           "en": "Undying"
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_trait.png",
         "description": {
-          "fr": "À ta mort tu deviens un fantôme et peux hâter ta réapparition.",
-          "en": "On death you become a ghost and can speed up your respawn."
+          "fr": "À sa mort, Léoric erre en spectre et revient à la vie une fois ses points de vie remplis. Sous cette forme, il n'inflige aucun dégât.",
+          "en": "On death, Leoric roams as a ghost and returns to life once his Health refills. In that form he deals no damage."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "Balayage squelettique",
+          "fr": "Frappe du squelette",
           "en": "Skeletal Swing"
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_skeletalswing.png",
         "description": {
-          "fr": "Frappe en cône et te soigne selon les cibles touchées.",
-          "en": "Strikes in a cone, healing you per target hit."
+          "fr": "Coup de masse qui blesse et ralentit les ennemis ; toucher un héros en rembourse une bonne part du temps de recharge et du mana.",
+          "en": "A mace swing that damages and Slows enemies; hitting a Hero refunds much of its cooldown and Mana."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "Z",
         "name": {
-          "fr": "Vol d'espoir",
+          "fr": "Drain d’espoir",
           "en": "Drain Hope"
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_drainhope.png",
         "description": {
-          "fr": "Draine la vie d'un ennemi tant qu'il reste proche.",
-          "en": "Drains an enemy's Health while they stay close."
+          "fr": "Ponctionne les points de vie d'un héros adverse tant que Léoric reste près de lui, au prix de sa propre vitesse de déplacement.",
+          "en": "Drains an enemy Hero's Health as long as Leoric stays near them, at the cost of his own Movement Speed."
         },
         "demoYoutubeId": ""
       },
@@ -20155,8 +21710,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_wraithwalk.png",
         "description": {
-          "fr": "Deviens intangible et te déplace plus vite.",
-          "en": "Become intangible and move faster."
+          "fr": "Léoric quitte son corps : il devient insensible aux effets de contrôle et accélère, puis son corps le rejoint à la fin de l'effet.",
+          "en": "Leoric leaves his body: he becomes Unstoppable and speeds up, then his body joins him when it ends."
         },
         "demoYoutubeId": ""
       },
@@ -20168,21 +21723,21 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_entomb.png",
         "description": {
-          "fr": "Crée un mur d'os qui enferme les ennemis.",
-          "en": "Creates a wall of bone that traps enemies."
+          "fr": "Emmure une zone.",
+          "en": "Wall in an area"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
         "name": {
-          "fr": "Marche du Roi noir",
+          "fr": "Marche du roi noir",
           "en": "March of the Black King"
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_r2.png",
         "description": {
-          "fr": "Trois frappes de zone qui te soignent énormément.",
-          "en": "Three AoE slams that heal you heavily."
+          "fr": "Léoric devient insensible aux effets de contrôle et avance en assénant de violents coups de masse, se soignant sur chaque héros touché.",
+          "en": "Leoric becomes Unstoppable and marches forward with heavy mace blows, healing from each Hero hit."
         },
         "demoYoutubeId": ""
       }
@@ -20193,7 +21748,7 @@ const HEROES = [
         "en": "As a ghost, stay near enemies to shorten your respawn timer."
       },
       {
-        "fr": "Vol d'espoir doit durer : place-toi pour que la cible ne s'éloigne pas.",
+        "fr": "Drain d'espoir doit durer : place-toi pour que la cible ne s'éloigne pas.",
         "en": "Drain Hope needs time: position so the target can't run away."
       },
       {
@@ -20217,46 +21772,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Leoric]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "18 Août 2026",
+          "en": "August 18, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jod8ieo",
+            "primaryId": "tmeai9b6f01qxm",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jo1ntq8",
+            "primaryId": "tmeai9b6f04smw",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6joccc8q",
+            "primaryId": "tmeai9b6f071b4",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jo0vdfe",
+            "primaryId": "tmeai9b6f10za9",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6joj0rxt",
+            "primaryId": "tmeai9b6f12td6",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6josugbp",
+            "primaryId": "tmeai9b6f15je2",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jorw0ew",
+            "primaryId": "tmeai9b6f18kdu",
             "alternativeIds": []
           }
         ]
@@ -20265,100 +21820,296 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jod8ieo",
+        "id": "tmeai9b6f01qxm",
         "level": 1,
         "name": {
-          "fr": "Consume Vitality",
+          "fr": "Drain de vitalité",
           "en": "Consume Vitality"
         },
-        "icon": "assets/heroes/base_spells/leoric/images/talents/storm_ui_icon_leoric_skeletalswing.png",
+        "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_skeletalswing.png",
         "description": {
-          "fr": "Skeletal Swing's cooldown is reduced by 2 seconds. Enemy Heroes hit heal Leoric for 4% of his maximum Health.",
-          "en": "Skeletal Swing's cooldown is reduced by 2 seconds. Enemy Heroes hit heal Leoric for 4% of his maximum Health."
+          "fr": "Frappe du squelette rend des points de vie.",
+          "en": "Skeletal Swing heals"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo1ntq8",
+        "id": "tmeai9b6f021lz",
+        "level": 1,
+        "name": {
+          "fr": "Allégeance macabre",
+          "en": "Fealty Unto Death"
+        },
+        "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_trait.png",
+        "description": {
+          "fr": "À leur mort, les serviteurs octroient des points de vie et de mana.",
+          "en": "Gain Health and Mana when Minions die"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmeai9b6f03mxe",
+        "level": 1,
+        "name": {
+          "fr": "Régénération osseuse",
+          "en": "Ossein Renewal"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_amplifiedhealing.png",
+        "description": {
+          "fr": "Rend des points de vie à l’activation.",
+          "en": "Activate to heal"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmeai9b6f04smw",
         "level": 4,
         "name": {
-          "fr": "Ghastly Reach",
+          "fr": "Allonge funèbre",
           "en": "Ghastly Reach"
         },
-        "icon": "assets/heroes/base_spells/leoric/images/talents/storm_ui_icon_leoric_skeletalswing.png",
+        "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_skeletalswing.png",
         "description": {
-          "fr": "Increase the range of Skeletal Swing by 25%.",
-          "en": "Increase the range of Skeletal Swing by 25%."
+          "fr": "Augmente la portée de Frappe du squelette.",
+          "en": "Increase Skeletal Swing range"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joccc8q",
+        "id": "tmeai9b6f054k9",
+        "level": 4,
+        "name": {
+          "fr": "Rage paralysante",
+          "en": "Paralyzing Rage"
+        },
+        "icon": "assets/heroes/base_spells/leoric/images/talents/storm_ui_icon_leoric_skeletalswing_var1.png",
+        "description": {
+          "fr": "Augmente le ralentissement de Frappe du squelette.",
+          "en": "Increase Skeletal Swing Slow"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmeai9b6f06tqy",
+        "level": 4,
+        "name": {
+          "fr": "À genoux, pécores !",
+          "en": "Kneel, Peasants!"
+        },
+        "icon": "assets/heroes/base_spells/leoric/images/talents/storm_ui_icon_leoric_skeletalswing_var2.png",
+        "description": {
+          "fr": "Renforce Frappe du squelette contre les cibles non héroïques",
+          "en": "Empower Skeletal Swing against non-Heroes"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmeai9b6f071b4",
         "level": 7,
         "name": {
-          "fr": "Willing Vessel",
+          "fr": "Victime consentante",
           "en": "Willing Vessel"
         },
-        "icon": "assets/heroes/base_spells/leoric/images/talents/storm_ui_icon_leoric_drainhope.png",
+        "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_drainhope.png",
         "description": {
-          "fr": "Increase the healing from Drain Hope to 25% of Leoric's maximum Health. If Drain Hope lasts its full duration, Leoric instantly heals for an additional 5% of his maximum Health.",
-          "en": "Increase the healing from Drain Hope to 25% of Leoric's maximum Health. If Drain Hope lasts its full duration, Leoric instantly heals for an additional 5% of his maximum Health."
+          "fr": "Augmente les soins de Drain d’espoir.",
+          "en": "Increase Drain Hope healing"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo0vdfe",
+        "id": "tmeai9b6f08p13",
+        "level": 7,
+        "name": {
+          "fr": "Drain dynamique",
+          "en": "Drain Momentum"
+        },
+        "icon": "assets/heroes/base_spells/leoric/images/talents/storm_ui_icon_leoric_drainhope_var1.png",
+        "description": {
+          "fr": "Drain d’espoir augmente la vitesse de déplacement.",
+          "en": "Drain Hope grants Move Speed"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmeai9b6f090lj",
+        "level": 7,
+        "name": {
+          "fr": "Désespoir",
+          "en": "Hopelessness"
+        },
+        "icon": "assets/heroes/base_spells/leoric/images/talents/storm_ui_icon_leoric_drainhope_var2.png",
+        "description": {
+          "fr": "Augmente la portée de Drain d’espoir.",
+          "en": "Increase Drain Hope range"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmeai9b6f10za9",
         "level": 10,
         "name": {
-          "fr": "Entomb",
+          "fr": "Tombeau",
           "en": "Entomb"
         },
-        "icon": "assets/heroes/base_spells/leoric/images/talents/storm_ui_icon_leoric_entomb.png",
+        "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_entomb.png",
         "description": {
-          "fr": "Create an unpassable tomb for 4 seconds.",
-          "en": "Create an unpassable tomb for 4 seconds."
+          "fr": "Emmure une zone.",
+          "en": "Wall in an area"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joj0rxt",
+        "id": "tmeai9b6f11bd5",
+        "level": 10,
+        "name": {
+          "fr": "Marche du roi noir",
+          "en": "March of the Black King"
+        },
+        "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_r2.png",
+        "description": {
+          "fr": "Léoric devient insensible aux effets de contrôle et avance en assénant de violents coups de masse, se soignant sur chaque héros touché.",
+          "en": "Leoric becomes Unstoppable and marches forward with heavy mace blows, healing from each Hero hit."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmeai9b6f12td6",
         "level": 13,
         "name": {
-          "fr": "Unyielding Despair",
+          "fr": "Désespérance",
           "en": "Unyielding Despair"
         },
-        "icon": "assets/heroes/base_spells/leoric/images/talents/storm_ui_icon_leoric_drainhope.png",
+        "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_drainhope.png",
         "description": {
-          "fr": "Drain Hope's cooldown is reduced by 0.75 seconds for every 1 second it is active. If Drain Hope lasts its full duration, its cooldown is reduced by an additional 2 seconds.",
-          "en": "Drain Hope's cooldown is reduced by 0.75 seconds for every 1 second it is active. If Drain Hope lasts its full duration, its cooldown is reduced by an additional 2 seconds."
+          "fr": "Réduit le temps de recharge de Drain d’espoir.",
+          "en": "Reduce Drain Hope cooldown"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6josugbp",
+        "id": "tmeai9b6f1357g",
+        "level": 13,
+        "name": {
+          "fr": "Spectre implacable",
+          "en": "Ominous Wraith"
+        },
+        "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_wraithwalk.png",
+        "description": {
+          "fr": "Renforce Marche spectrale.",
+          "en": "Empower Wraith Walk"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmeai9b6f14g32",
+        "level": 13,
+        "name": {
+          "fr": "Drain spectral",
+          "en": "Spectral Leech"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_heal.png",
+        "description": {
+          "fr": "Les attaques de base infligent plus de dégâts et rendent des points de vie.",
+          "en": "Basic Attacks deal extra damage and heal"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmeai9b6f15je2",
         "level": 16,
         "name": {
-          "fr": "Crushing Hope",
+          "fr": "Espoir insoutenable",
           "en": "Crushing Hope"
         },
-        "icon": "assets/heroes/base_spells/leoric/images/talents/storm_ui_icon_leoric_drainhope.png",
+        "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_drainhope.png",
         "description": {
-          "fr": "If Drain Hope lasts its full duration, it instantly deals an additional 15% of the target's maximum Health as damage. This damage does not heal Leoric.",
-          "en": "If Drain Hope lasts its full duration, it instantly deals an additional 15% of the target's maximum Health as damage. This damage does not heal Leoric."
+          "fr": "Mener Drain d’espoir à son terme inflige des dégâts supplémentaires.",
+          "en": "Full duration Drain Hope deals bonus damage"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jorw0ew",
+        "id": "tmeai9b6f16tml",
+        "level": 16,
+        "name": {
+          "fr": "Roi de l’esquive",
+          "en": "Royal Focus"
+        },
+        "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_wraithwalk.png",
+        "description": {
+          "fr": "Renforce Frappe du squelette et Marche spectrale.",
+          "en": "Empower Skeletal Swing and Wraith Walk"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmeai9b6f172mk",
+        "level": 16,
+        "name": {
+          "fr": "Masse de mithril",
+          "en": "Mithril Mace"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_speed.png",
+        "description": {
+          "fr": "Quête : renforce Courroux du roi d’os.",
+          "en": "Quest: Empower Wrath Of The Bone King"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmeai9b6f18kdu",
         "level": 20,
         "name": {
-          "fr": "Buried Alive",
+          "fr": "Emmuré vivant",
           "en": "Buried Alive"
         },
-        "icon": "assets/heroes/base_spells/leoric/images/talents/storm_ui_icon_leoric_entomb.png",
+        "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_entomb.png",
         "description": {
-          "fr": "The duration of Entomb is lowered by 1 second, but enemies trapped inside are Silenced and take 50 (+4% per level) damage every 1 second.",
-          "en": "The duration of Entomb is lowered by 1 second, but enemies trapped inside are Silenced and take 50 (+4% per level) damage every 1 second."
+          "fr": "Tombeau inflige des dégâts aux ennemis et les réduit au silence.",
+          "en": "Entomb damages and Silences"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmeai9b6f19wrs",
+        "level": 20,
+        "name": {
+          "fr": "Marche de la mort",
+          "en": "Death March"
+        },
+        "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_r2.png",
+        "description": {
+          "fr": "Marche du roi noir applique Drain d’espoir.",
+          "en": "March of the Black King applies Drain Hope"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmeai9b6f209pp",
+        "level": 20,
+        "name": {
+          "fr": "Désespoir contagieux",
+          "en": "Burning Despair"
+        },
+        "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_drainhope.png",
+        "description": {
+          "fr": "Inflige des dégâts aux ennemis proches et confère de l’armure.",
+          "en": "Damage nearby enemies, gain Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmeai9b6f21giv",
+        "level": 20,
+        "name": {
+          "fr": "Linceul du roi défunt",
+          "en": "Shroud of the Dead King"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_hardenedshield.png",
+        "description": {
+          "fr": "Immunise contre tous les dégâts à l’activation.",
+          "en": "Activate to become Protected"
         },
         "demoYoutubeId": null
       }
@@ -20904,6 +22655,20 @@ const HEROES = [
         "form": "normal"
       },
       {
+        "key": "A",
+        "form": "drakkar",
+        "name": {
+          "fr": "Mortier",
+          "en": "Mortar"
+        },
+        "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_mortar.png",
+        "description": {
+          "fr": "Tire un obus de mortier sur l'endroit ciblé, infligeant des dégâts dans une large zone.",
+          "en": "Fires a mortar at the targeted location, dealing damage in a large area."
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "Z",
         "name": {
           "fr": "Saut groupé !",
@@ -20927,6 +22692,20 @@ const HEROES = [
         "description": {
           "fr": "Tuer des serviteurs et des mercenaires près des Vikings accumule des charges, à dépenser pour acheter un camp de mercenaires au lieu de le combattre.",
           "en": "Killing Minions and Mercenaries near the Vikings builds charges, spent to buy a Mercenary camp instead of fighting it."
+        },
+        "demoYoutubeId": "",
+        "form": "normal"
+      },
+      {
+        "key": "W",
+        "name": {
+          "fr": "Hop, hop, hop !",
+          "en": "Go Go Go!"
+        },
+        "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_mount.png",
+        "description": {
+          "fr": "Augmente la vitesse de déplacement des trois Vikings pendant quelques secondes.",
+          "en": "Increases the Movement Speed of all three Vikings for a few seconds."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -20958,34 +22737,6 @@ const HEROES = [
         },
         "demoYoutubeId": "",
         "form": "normal"
-      },
-      {
-        "key": "W",
-        "name": {
-          "fr": "Hop, hop, hop !",
-          "en": "Go Go Go!"
-        },
-        "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_mount.png",
-        "description": {
-          "fr": "Augmente la vitesse de déplacement des trois Vikings pendant quelques secondes.",
-          "en": "Increases the Movement Speed of all three Vikings for a few seconds."
-        },
-        "demoYoutubeId": "",
-        "form": "normal"
-      },
-      {
-        "key": "A",
-        "form": "drakkar",
-        "name": {
-          "fr": "Mortier",
-          "en": "Mortar"
-        },
-        "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_mortar.png",
-        "description": {
-          "fr": "Tire un obus de mortier sur l'endroit ciblé, infligeant des dégâts dans une large zone.",
-          "en": "Fires a mortar at the targeted location, dealing damage in a large area."
-        },
-        "demoYoutubeId": ""
       }
     ],
     "tips": [
@@ -21490,6 +23241,19 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
+        "key": "W",
+        "name": {
+          "fr": "Rapidité de la dryade",
+          "en": "Dryad's Swiftness"
+        },
+        "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_mount.png",
+        "description": {
+          "fr": "Tu te déplaces toujours plus vite, sans monture.",
+          "en": "You always move faster, without a mount."
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "R1",
         "name": {
           "fr": "Couronne d’épines",
@@ -21512,19 +23276,6 @@ const HEROES = [
         "description": {
           "fr": "Bondit vers une cible et applique un poison renforcé.",
           "en": "Leaps to a target and applies an empowered poison."
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "W",
-        "name": {
-          "fr": "Rapidité de la dryade",
-          "en": "Dryad's Swiftness"
-        },
-        "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_mount.png",
-        "description": {
-          "fr": "Tu te déplaces toujours plus vite, sans monture.",
-          "en": "You always move faster, without a mount."
         },
         "demoYoutubeId": ""
       }
@@ -22637,7 +24388,7 @@ const HEROES = [
   },
   {
     "id": "malthael",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Malthael",
       "en": "Malthael"
@@ -22656,78 +24407,78 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Marque du Faucheur",
+          "fr": "Marque du faucheur",
           "en": "Reaper's Mark"
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_reapersmark.png",
         "description": {
-          "fr": "Tes attaques marquent les ennemis et infligent des dégâts continus.",
-          "en": "Your attacks mark enemies and deal damage over time."
+          "fr": "Les attaques de base frappent en zone et marquent les ennemis touchés : les cibles marquées sont révélées et perdent régulièrement une part de leurs points de vie.",
+          "en": "Basic Attacks cleave and Mark the enemies hit: Marked targets are revealed and regularly lose a portion of their Health."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "Arrachage d'âme",
+          "fr": "Moisson d’âmes",
           "en": "Soul Rip"
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_soulrip.png",
         "description": {
-          "fr": "Récolte les âmes marquées : dégâts et soins.",
-          "en": "Reaps marked souls: damage and healing."
+          "fr": "Inflige des dégâts aux ennemis marqués et rend des points de vie à Malthaël.",
+          "en": "Damage Marked enemies and heal"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "Z",
         "name": {
-          "fr": "Frappe spectrale",
+          "fr": "Frappe éthérée",
           "en": "Wraith Strike"
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_wraithstrike.png",
         "description": {
-          "fr": "Se téléporte sur une cible marquée.",
-          "en": "Teleports to a marked target."
+          "fr": "Téléporte Malthaël derrière une cible marquée en la blessant, ce qui renouvelle la marque.",
+          "en": "Teleports Malthael behind a Marked target, damaging them and refreshing the Mark."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "E",
         "name": {
-          "fr": "Voile de mort",
+          "fr": "Voile du faucheur",
           "en": "Death Shroud"
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_deathshroud.png",
         "description": {
-          "fr": "Nuage qui marque les ennemis et traverse les murs.",
-          "en": "Cloud that marks enemies and passes through walls."
+          "fr": "Projette une vague qui applique Marque du faucheur.",
+          "en": "Unleash a wave that applies Reaper's Mark"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
         "name": {
-          "fr": "Âmes tourmentées",
+          "fr": "Tourment",
           "en": "Tormented Souls"
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_tormentedsoul.png",
         "description": {
-          "fr": "Marque en continu tous les ennemis proches.",
-          "en": "Continually marks all nearby enemies."
+          "fr": "Applique sans relâche la marque du faucheur aux ennemis proches, tout en rendant Frappe éthérée quasi gratuite et immédiatement disponible.",
+          "en": "Relentlessly applies Reaper's Mark to nearby enemies, while making Wraith Strike nearly free and immediately available."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
         "name": {
-          "fr": "Derniers sacrements",
+          "fr": "Extrême-onction",
           "en": "Last Rites"
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_lastrites.png",
         "description": {
-          "fr": "Condamne un héros à perdre une part énorme de sa vie.",
-          "en": "Condemns a Hero to lose a huge chunk of Health."
+          "fr": "Quête : inflige à un héros des dégâts fonction de ses points de vie manquants.",
+          "en": "Quest: Damage a Hero based on their missing Health"
         },
         "demoYoutubeId": ""
       }
@@ -22738,7 +24489,7 @@ const HEROES = [
         "en": "Your mark deals %-Health damage: focus tanks."
       },
       {
-        "fr": "Voile de mort permet de traverser les murs pour engager ou fuir.",
+        "fr": "Voile du faucheur permet de traverser les murs pour engager ou fuir.",
         "en": "Death Shroud lets you pass through walls to engage or escape."
       },
       {
@@ -22762,46 +24513,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Malthael]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "18 Août 2026",
+          "en": "August 18, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jofwp0t",
+            "primaryId": "tm43qtplb01byr",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jovnx32",
+            "primaryId": "tm43qtplb04wbe",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jolgf7h",
+            "primaryId": "tm43qtplb07lp7",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6joonwcu",
+            "primaryId": "tm43qtplb1066d",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jo8wdyn",
+            "primaryId": "tm43qtplb12ywt",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jo3wj93",
+            "primaryId": "tm43qtplb16sov",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jo51f7t",
+            "primaryId": "tm43qtplb19jbe",
             "alternativeIds": []
           }
         ]
@@ -22810,100 +24561,310 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jofwp0t",
+        "id": "tm43qtplb01byr",
         "level": 1,
         "name": {
-          "fr": "Death's Reach",
+          "fr": "Pas d’échappatoire",
           "en": "Death's Reach"
         },
-        "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_wraithstrike.png",
+        "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_wraithstrike.png",
         "description": {
-          "fr": "Increase Wraith Strike's range by 35%.",
-          "en": "Increase Wraith Strike's range by 35%."
+          "fr": "Augmente la portée de Frappe éthérée",
+          "en": "Increase Wraith Strike range"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jovnx32",
+        "id": "tm43qtplb02woc",
+        "level": 1,
+        "name": {
+          "fr": "Haridelle",
+          "en": "On a Pale Horse"
+        },
+        "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_onpalehorse.png",
+        "description": {
+          "fr": "Augmente la vitesse de déplacement sur monture.",
+          "en": "Increase mounted Movement Speed"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm43qtplb03eqo",
+        "level": 1,
+        "name": {
+          "fr": "À tombeau ouvert",
+          "en": "Fear the Reaper"
+        },
+        "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_fearthereaper.png",
+        "description": {
+          "fr": "Augmente la vitesse de déplacement.",
+          "en": "Activate to increase Movement Speed"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm43qtplb04wbe",
         "level": 4,
         "name": {
-          "fr": "Die Alone",
+          "fr": "Face à la mort",
           "en": "Die Alone"
         },
-        "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_soulrip.png",
+        "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_soulrip.png",
         "description": {
-          "fr": "Soul Rip deals 50% more damage to Heroes if it hits only one Hero.",
-          "en": "Soul Rip deals 50% more damage to Heroes if it hits only one Hero."
+          "fr": "Augmente les dégâts que Moisson d’âmes inflige à une cible unique.",
+          "en": "Increase Soul Rip single-target damage"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jolgf7h",
+        "id": "tm43qtplb0520g",
+        "level": 4,
+        "name": {
+          "fr": "Ombre projetée",
+          "en": "Throwing Shade"
+        },
+        "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_deathshroud.png",
+        "description": {
+          "fr": "Augmente la portée de Voile du faucheur et réduit son temps de recharge.",
+          "en": "Increase Death Shroud range, reduce cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm43qtplb06zz6",
+        "level": 4,
+        "name": {
+          "fr": "Jugement dernier",
+          "en": "Black Harvest"
+        },
+        "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_reapersmark.png",
+        "description": {
+          "fr": "Quête : augmente la durée de Marque du faucheur.",
+          "en": "Quest: Increase Reaper's Mark duration"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm43qtplb07lp7",
         "level": 7,
         "name": {
-          "fr": "Cold Hand",
+          "fr": "Rigidité",
           "en": "Cold Hand"
         },
-        "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_soulrip.png",
+        "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_soulrip.png",
         "description": {
-          "fr": "Soul Rip Slows enemies by 20% for 2.5 seconds.",
-          "en": "Soul Rip Slows enemies by 20% for 2.5 seconds."
+          "fr": "Moisson d’âmes ralentit.",
+          "en": "Soul Rip Slows"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joonwcu",
+        "id": "tm43qtplb08ap6",
+        "level": 7,
+        "name": {
+          "fr": "Hécatombe",
+          "en": "Massacre"
+        },
+        "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_wraithstrike.png",
+        "description": {
+          "fr": "Frappe éthérée inflige des dégâts de zone.",
+          "en": "Wraith Strike hits an area"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm43qtplb09yo7",
+        "level": 7,
+        "name": {
+          "fr": "Toucher de la mort",
+          "en": "Touch of Death"
+        },
+        "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_touchofdeath.png",
+        "description": {
+          "fr": "Réduit les soins reçus par l’adversaire à l’activation.",
+          "en": "Activate to reduce enemy healing"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm43qtplb1066d",
         "level": 10,
         "name": {
-          "fr": "Tormented Souls",
+          "fr": "Tourment",
           "en": "Tormented Souls"
         },
-        "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_tormentedsoul.png",
+        "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_tormentedsoul.png",
         "description": {
-          "fr": "Unleash a torrent of souls, continually applying Reaper's Mark to nearby enemies for 4 seconds.  When Tormented Souls is cast and when it expires, reset the cooldown of Wraith Strike.",
-          "en": "Unleash a torrent of souls, continually applying Reaper's Mark to nearby enemies for 4 seconds.  When Tormented Souls is cast and when it expires, reset the cooldown of Wraith Strike."
+          "fr": "Applique sans relâche la marque du faucheur aux ennemis proches, tout en rendant Frappe éthérée quasi gratuite et immédiatement disponible.",
+          "en": "Relentlessly applies Reaper's Mark to nearby enemies, while making Wraith Strike nearly free and immediately available."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo8wdyn",
+        "id": "tm43qtplb1138v",
+        "level": 10,
+        "name": {
+          "fr": "Extrême-onction",
+          "en": "Last Rites"
+        },
+        "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_lastrites.png",
+        "description": {
+          "fr": "Quête : inflige à un héros des dégâts fonction de ses points de vie manquants.",
+          "en": "Quest: Damage a Hero based on their missing Health"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm43qtplb12ywt",
         "level": 13,
         "name": {
-          "fr": "Soul Siphon",
+          "fr": "Absorption",
           "en": "Soul Siphon"
         },
-        "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_soulrip.png",
+        "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_soulrip.png",
         "description": {
-          "fr": "Increase Soul Rip's bonus healing from Heroes to 4.75% of the Hero's maximum Health.",
-          "en": "Increase Soul Rip's bonus healing from Heroes to 4.75% of the Hero's maximum Health."
+          "fr": "Augmente l’effet de soin de Moisson d’âmes.",
+          "en": "Increase Soul Rip healing"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo3wj93",
+        "id": "tm43qtplb13uyh",
+        "level": 13,
+        "name": {
+          "fr": "Évanescence",
+          "en": "Ethereal Existence"
+        },
+        "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_reapersmark.png",
+        "description": {
+          "fr": "Les cibles marquées confèrent de l’armure physique.",
+          "en": "Marked targets grant Physical Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm43qtplb14p1y",
+        "level": 13,
+        "name": {
+          "fr": "Fin inéluctable",
+          "en": "Inevitable End"
+        },
+        "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_inevitableend.png",
+        "description": {
+          "fr": "Rend insensible, mais dissipe les marques du faucheur.",
+          "en": "Activate to become Unstoppable, remove Marks"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm43qtplb157ey",
+        "level": 13,
+        "name": {
+          "fr": "Linceul de sagesse",
+          "en": "Shroud of Wisdom"
+        },
+        "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_shroudofwisdom.png",
+        "description": {
+          "fr": "Confère de l’armure anti-sort.",
+          "en": "Activate to gain Spell Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm43qtplb16sov",
         "level": 16,
         "name": {
-          "fr": "Soul Collector",
+          "fr": "Creuset",
           "en": "Soul Collector"
         },
-        "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_soulrip.png",
+        "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_soulrip.png",
         "description": {
-          "fr": "Reduce Soul Rip's cooldown by 0.5 seconds and increase its range by 25%.",
-          "en": "Reduce Soul Rip's cooldown by 0.5 seconds and increase its range by 25%."
+          "fr": "Augmente la portée de Moisson d’âmes et réduit son temps de recharge.",
+          "en": "Increase Soul Rip range, reduce cooldown"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo51f7t",
+        "id": "tm43qtplb17sdj",
+        "level": 16,
+        "name": {
+          "fr": "Mortalité",
+          "en": "Mortality"
+        },
+        "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_wraithstrike.png",
+        "description": {
+          "fr": "Frappe éthérée inflige un surplus de dégâts aux héros.",
+          "en": "Wraith Strike deals bonus damage to Heroes"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm43qtplb18can",
+        "level": 16,
+        "name": {
+          "fr": "Memento Mori",
+          "en": "Memento Mori"
+        },
+        "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_reapersmark.png",
+        "description": {
+          "fr": "Les dégâts de Marque du faucheur augmentent sur la durée.",
+          "en": "Reaper's Mark deals increased damage over time"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm43qtplb19jbe",
         "level": 20,
         "name": {
-          "fr": "Reaper of Souls",
+          "fr": "Faucheur d’âmes",
           "en": "Reaper of Souls"
         },
-        "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_tormentedsoul.png",
+        "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_tormentedsoul.png",
         "description": {
-          "fr": "Increase Tormented Souls' duration by 2 seconds.  While Tormented Souls is active, Hero Takedowns refresh the duration.",
-          "en": "Increase Tormented Souls' duration by 2 seconds.  While Tormented Souls is active, Hero Takedowns refresh the duration."
+          "fr": "Prolonge la durée de Tourment",
+          "en": "Extend Tormented Souls duration"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm43qtplb20898",
+        "level": 20,
+        "name": {
+          "fr": "Ange de la mort",
+          "en": "Angel of Death"
+        },
+        "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_lastrites.png",
+        "description": {
+          "fr": "Extrême-onction rend des points de vie.",
+          "en": "Last Rites heals"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm43qtplb21fsj",
+        "level": 20,
+        "name": {
+          "fr": "Drap mortuaire",
+          "en": "Final Curtain"
+        },
+        "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_deathshroud.png",
+        "description": {
+          "fr": "Voile du faucheur laisse un sillage persistant.",
+          "en": "Death Shroud leaves a trail"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm43qtplb222is",
+        "level": 20,
+        "name": {
+          "fr": "Nul ne peut arrêter la mort.",
+          "en": "No One Can Stop Death"
+        },
+        "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_noonecanstopdeath.png",
+        "description": {
+          "fr": "Ressuscite instantanément.",
+          "en": "Activate to respawn"
         },
         "demoYoutubeId": null
       }
@@ -26247,6 +28208,19 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
+        "key": "W",
+        "name": {
+          "fr": "Ruée de l'ouvrier",
+          "en": "Worker Rush"
+        },
+        "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_mount.png",
+        "description": {
+          "fr": "Se déplace plus vite hors combat.",
+          "en": "Move faster out of combat."
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "R1",
         "name": {
           "fr": "Surcharge de pylône",
@@ -26269,19 +28243,6 @@ const HEROES = [
         "description": {
           "fr": "Mur d'énergie qui ralentit fortement les ennemis.",
           "en": "Wall of energy that heavily slows enemies."
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "W",
-        "name": {
-          "fr": "Ruée de l'ouvrier",
-          "en": "Worker Rush"
-        },
-        "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_mount.png",
-        "description": {
-          "fr": "Se déplace plus vite hors combat.",
-          "en": "Move faster out of combat."
         },
         "demoYoutubeId": ""
       }
@@ -26949,13 +28910,12 @@ const HEROES = [
       "en": "Siege bruiser who can take control of a fort."
     },
     "gameplay": {
-      "fr": "Ragnaros tient sa lane seul grâce au soin de Renforcement de Sulfuras, et se transforme en fort pour verrouiller une voie entière.",
+      "fr": "Ragnaros tient sa lane seul grâce au soin de Renforcement de Sulfuras, et prend le contrôle d'un fort pour verrouiller une voie entière.",
       "en": "Ragnaros holds his lane alone thanks to Empower Sulfuras's healing, and turns into a Fort to lock down an entire lane."
     },
     "spells": [
       {
         "key": "Trait",
-        "form": "normal",
         "name": {
           "fr": "Cœur du Magma",
           "en": "Molten Core"
@@ -26983,7 +28943,7 @@ const HEROES = [
       },
       {
         "key": "A",
-        "form": "moltencore",
+        "form": "magma",
         "name": {
           "fr": "Frappe de magma",
           "en": "Molten Swing"
@@ -27011,7 +28971,7 @@ const HEROES = [
       },
       {
         "key": "Z",
-        "form": "moltencore",
+        "form": "magma",
         "name": {
           "fr": "Déluge de météores",
           "en": "Meteor Shower"
@@ -27039,7 +28999,7 @@ const HEROES = [
       },
       {
         "key": "E",
-        "form": "moltencore",
+        "form": "magma",
         "name": {
           "fr": "Rune explosive",
           "en": "Explosive Rune"
@@ -27053,7 +29013,6 @@ const HEROES = [
       },
       {
         "key": "R1",
-        "form": "normal",
         "name": {
           "fr": "Frappe de Sulfuras",
           "en": "Sulfuras Smash"
@@ -27067,7 +29026,6 @@ const HEROES = [
       },
       {
         "key": "R2",
-        "form": "normal",
         "name": {
           "fr": "Vague de lave",
           "en": "Lava Wave"
@@ -27461,7 +29419,7 @@ const HEROES = [
         }
       },
       {
-        "id": "moltencore",
+        "id": "magma",
         "label": {
           "fr": "Cœur du Magma",
           "en": "Molten Core"
@@ -27746,7 +29704,7 @@ const HEROES = [
   },
   {
     "id": "rexxar",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Rexxar",
       "en": "Rexxar"
@@ -27770,8 +29728,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_mishafixate.png",
         "description": {
-          "fr": "Ordonne à Misha d'attaquer une cible.",
-          "en": "Orders Misha to attack a target."
+          "fr": "Ordonne à Misha d'attaquer une cible, de rejoindre un point ou de revenir auprès de Rexxar. Effet passif : Misha se déplace plus vite.",
+          "en": "Commands Misha to attack a target, move to a point, or return to Rexxar. Passive: Misha moves faster."
         },
         "demoYoutubeId": ""
       },
@@ -27783,21 +29741,21 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_spiritswoop.png",
         "description": {
-          "fr": "Envoie un faucon qui blesse et ralentit en ligne.",
-          "en": "Sends a hawk that damages and slows in a line."
+          "fr": "Lance un faucon qui inflige des dégâts aux ennemis et les ralentit.",
+          "en": "Launch a hawk to damage enemies and slow them"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "Z",
         "name": {
-          "fr": "Misha, charge !",
+          "fr": "Misha, charge !",
           "en": "Misha, Charge!"
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_mishacharge.png",
         "description": {
-          "fr": "Misha charge et étourdit les ennemis touchés.",
-          "en": "Misha charges, stunning enemies hit."
+          "fr": "Ordonne à Misha de charger. Inflige des dégâts aux ennemis et les étourdit.",
+          "en": "Order Misha to charge, damaging and stunning enemies"
         },
         "demoYoutubeId": ""
       },
@@ -27809,8 +29767,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_mendpet.png",
         "description": {
-          "fr": "Soigne Misha progressivement.",
-          "en": "Heals Misha over time."
+          "fr": "Rend des points de vie à Misha sur la durée.",
+          "en": "Heal Misha over time"
         },
         "demoYoutubeId": ""
       },
@@ -27822,8 +29780,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_unleashtheboars.png",
         "description": {
-          "fr": "Des sangliers poursuivent et ralentissent les héros ennemis.",
-          "en": "Boars chase and slow enemy Heroes."
+          "fr": "Lâche une harde de sangliers qui traquent les ennemis.",
+          "en": "Send a pack of boars to hunt enemy Heroes"
         },
         "demoYoutubeId": ""
       },
@@ -27835,8 +29793,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_bestialwrath.png",
         "description": {
-          "fr": "Renforce fortement les dégâts de Misha et de Rexxar.",
-          "en": "Greatly empowers Misha's and Rexxar's damage."
+          "fr": "Augmente les dégâts des attaques de base de Misha.",
+          "en": "Increases Misha's Basic Attacks"
         },
         "demoYoutubeId": ""
       }
@@ -27847,7 +29805,7 @@ const HEROES = [
         "en": "Misha can body-block a corridor or intercept a diver."
       },
       {
-        "fr": "Soin de familier ne s'interrompt pas si tu bouges bien : reste à portée.",
+        "fr": "Guérison du familier ne s'interrompt pas si tu bouges bien : reste à portée.",
         "en": "Mend Pet keeps ticking if you stay in range."
       },
       {
@@ -27871,46 +29829,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Rexxar]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "18 Août 2026",
+          "en": "August 18, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6joce63n",
+            "primaryId": "tmzo33kmh0151f",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jox3rqz",
+            "primaryId": "tmzo33kmh04vsi",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jo6juro",
+            "primaryId": "tmzo33kmh081s4",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jo1qi38",
+            "primaryId": "tmzo33kmh11cro",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jo46v72",
+            "primaryId": "tmzo33kmh13vii",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jozdaak",
+            "primaryId": "tmzo33kmh16ofp",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jojtq4j",
+            "primaryId": "tmzo33kmh194pf",
             "alternativeIds": []
           }
         ]
@@ -27919,100 +29877,310 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6joce63n",
+        "id": "tmzo33kmh0151f",
         "level": 1,
         "name": {
-          "fr": "Bird of Prey",
+          "fr": "Oiseau de proie",
           "en": "Bird of Prey"
         },
-        "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_spiritswoop.png",
+        "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_spiritswoop.png",
         "description": {
-          "fr": "Increases Spirit Swoop's damage by 150% to Minions.",
-          "en": "Increases Spirit Swoop's damage by 150% to Minions."
+          "fr": "Augmente les dégâts de Piqué infligés aux serviteurs.",
+          "en": "Increases Spirit Swoop damage to Minions"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jox3rqz",
+        "id": "tmzo33kmh02dtf",
+        "level": 1,
+        "name": {
+          "fr": "Proie facile",
+          "en": "Easy Prey"
+        },
+        "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_heremishaactive.png",
+        "description": {
+          "fr": "Améliore l’efficacité de Misha contre les serviteurs et les mercenaires.",
+          "en": "Misha is more effective against Minions and Mercs"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmzo33kmh036jx",
+        "level": 1,
+        "name": {
+          "fr": "Fusée éclairante",
+          "en": "Flare"
+        },
+        "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_flare.png",
+        "description": {
+          "fr": "Dévoile une zone.",
+          "en": "Gain vision of an area"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmzo33kmh04vsi",
         "level": 4,
         "name": {
-          "fr": "Hungry Bear",
+          "fr": "Ourse affamée",
           "en": "Hungry Bear"
         },
         "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_heremishaactive.png",
         "description": {
-          "fr": "Misha's Basic Attacks heal her for 4.5% of her maximum Health.",
-          "en": "Misha's Basic Attacks heal her for 4.5% of her maximum Health."
+          "fr": "Les attaques de base de Misha lui rendent des points de vie.",
+          "en": "Misha's Basic Attacks heal her"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo6juro",
+        "id": "tmzo33kmh05bd6",
+        "level": 4,
+        "name": {
+          "fr": "Chasseur-cueilleur",
+          "en": "Hunter-Gatherer"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_regenerationmaster.png",
+        "description": {
+          "fr": "Quête : les globes de régénération augmentent la récupération des points de vie.",
+          "en": "Quest: Regen Globes grant Health Regen"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmzo33kmh06pqo",
+        "level": 4,
+        "name": {
+          "fr": "Robustesse sauvage",
+          "en": "Grizzled Fortitude"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_block.png",
+        "description": {
+          "fr": "Confère régulièrement de l’armure physique.",
+          "en": "Periodically gain Physical Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmzo33kmh07wzv",
+        "level": 4,
+        "name": {
+          "fr": "Dressage animal",
+          "en": "Animal Husbandry"
+        },
+        "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_stayinalive.png",
+        "description": {
+          "fr": "Le maximum de points de vie augmente sur la durée.",
+          "en": "Max Health increase over time"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmzo33kmh081s4",
         "level": 7,
         "name": {
-          "fr": "Crippling Talons",
+          "fr": "Serres affaiblissantes",
           "en": "Crippling Talons"
         },
-        "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_spiritswoop.png",
+        "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_spiritswoop.png",
         "description": {
-          "fr": "Increases Spirit Swoop's slow amount to 50% and its duration to 3.5 seconds.",
-          "en": "Increases Spirit Swoop's slow amount to 50% and its duration to 3.5 seconds."
+          "fr": "Augmente la durée et l'intensité du ralentissement infligé par Piqué.",
+          "en": "Increases Spirit Swoop slow amount and duration"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo1qi38",
+        "id": "tmzo33kmh094j3",
+        "level": 7,
+        "name": {
+          "fr": "Envol",
+          "en": "Taking Flight"
+        },
+        "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_spiritswoop_var1.png",
+        "description": {
+          "fr": "Augmente la portée de Piqué et rend du mana.",
+          "en": "Increases Spirit Swoop range, returns Mana"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmzo33kmh10dqr",
+        "level": 7,
+        "name": {
+          "fr": "Aspect de la bête",
+          "en": "Aspect of the Beast"
+        },
+        "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_mishacharge.png",
+        "description": {
+          "fr": "Les attaques de base de Misha réduisent le temps de recharge de Misha, charge !",
+          "en": "Misha's Basic Attacks lower Misha, Charge! cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmzo33kmh11cro",
         "level": 10,
         "name": {
-          "fr": "Bestial Wrath",
+          "fr": "Courroux bestial",
           "en": "Bestial Wrath"
         },
-        "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_bestialwrath.png",
+        "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_bestialwrath.png",
         "description": {
-          "fr": "Increases Misha's Basic Attack damage by 200% for 12 seconds.",
-          "en": "Increases Misha's Basic Attack damage by 200% for 12 seconds."
+          "fr": "Augmente les dégâts des attaques de base de Misha.",
+          "en": "Increases Misha's Basic Attacks"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo46v72",
+        "id": "tmzo33kmh12knh",
+        "level": 10,
+        "name": {
+          "fr": "Lâchez les sangliers",
+          "en": "Unleash the Boars"
+        },
+        "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_unleashtheboars.png",
+        "description": {
+          "fr": "Lâche une harde de sangliers qui traquent les ennemis.",
+          "en": "Send a pack of boars to hunt enemy Heroes"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmzo33kmh13vii",
         "level": 13,
         "name": {
-          "fr": "Aspect of the Hawk",
+          "fr": "Aspect du faucon",
           "en": "Aspect of the Hawk"
         },
-        "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_spiritswoop.png",
+        "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_spiritswoop.png",
         "description": {
-          "fr": "When Spirit Swoop hits an enemy Hero, Rexxar gains 125% Attack Speed for 4 seconds. Misha's Basic Attacks increase the duration of this buff by 0.75 seconds.",
-          "en": "When Spirit Swoop hits an enemy Hero, Rexxar gains 125% Attack Speed for 4 seconds. Misha's Basic Attacks increase the duration of this buff by 0.75 seconds."
+          "fr": "Piqué augmente la vitesse d'attaque.",
+          "en": "Spirit Swoop increases Attack Speed"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jozdaak",
+        "id": "tmzo33kmh1477c",
+        "level": 13,
+        "name": {
+          "fr": "Bête féroce",
+          "en": "Dire Beast"
+        },
+        "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_mishacharge.png",
+        "description": {
+          "fr": "Les attaques de base augmentent les dégâts de Misha, charge !",
+          "en": "Basic Attacks increase damage of Misha, Charge!"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmzo33kmh15jt4",
+        "level": 13,
+        "name": {
+          "fr": "Ourse bipolaire",
+          "en": "Wildfire Bear"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_burningrage.png",
+        "description": {
+          "fr": "Misha inflige des dégâts aux ennemis proches.",
+          "en": "Misha deals damage to nearby enemies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmzo33kmh16ofp",
         "level": 16,
         "name": {
-          "fr": "Thrill of the Hunt",
+          "fr": "Frisson de la chasse",
           "en": "Thrill of the Hunt"
         },
         "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_heremishaactive.png",
         "description": {
-          "fr": "Rexxar's Basic Attacks increase both his and Misha's Movement Speed by 25% for 2 seconds.",
-          "en": "Rexxar's Basic Attacks increase both his and Misha's Movement Speed by 25% for 2 seconds."
+          "fr": "Les attaques de base augmentent la vitesse de déplacement.",
+          "en": "Basic Attacks increase Move Speed"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jojtq4j",
+        "id": "tmzo33kmh176m7",
+        "level": 16,
+        "name": {
+          "fr": "Instinct de survie",
+          "en": "Primal Intimidation"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_imposingpresence.png",
+        "description": {
+          "fr": "Réduit les vitesses d’attaque et de déplacement des ennemis.",
+          "en": "Activate to slow enemy Attack and Move speed"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmzo33kmh1873z",
+        "level": 16,
+        "name": {
+          "fr": "Feindre la mort",
+          "en": "Feign Death"
+        },
+        "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_feigndeath.png",
+        "description": {
+          "fr": "Rend invulnérable et incontrôlable.",
+          "en": "Become Invulnerable and control Misha"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmzo33kmh194pf",
         "level": 20,
         "name": {
-          "fr": "Spirit Bond",
+          "fr": "Engagement spirituel",
           "en": "Spirit Bond"
         },
-        "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_bestialwrath.png",
+        "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_bestialwrath.png",
         "description": {
-          "fr": "Increases the duration of Bestial Wrath by 50% and Misha's Basic Attacks heal Rexxar for 50% of her damage dealt during Bestial Wrath.",
-          "en": "Increases the duration of Bestial Wrath by 50% and Misha's Basic Attacks heal Rexxar for 50% of her damage dealt during Bestial Wrath."
+          "fr": "Les attaques de base de Misha rendent des points de vie à Rexxar.",
+          "en": "Misha's Basic Attacks heal Rexxar"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmzo33kmh205ni",
+        "level": 20,
+        "name": {
+          "fr": "Ordre de tuer",
+          "en": "Kill Command"
+        },
+        "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_unleashtheboars.png",
+        "description": {
+          "fr": "Lâchez les sangliers inflige davantage de dégâts et immobilise.",
+          "en": "Unleash the Boars deals more damage and roots"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmzo33kmh21y39",
+        "level": 20,
+        "name": {
+          "fr": "Frénésie de Kalimdor",
+          "en": "Frenzy of Kalimdor"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_slow.png",
+        "description": {
+          "fr": "Augmente les dégâts des attaques de base de Rexxar et ralentit les cibles de Misha.",
+          "en": "Rexxar's Basic Attacks deal more damage, Misha's attacks slow"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmzo33kmh225k3",
+        "level": 20,
+        "name": {
+          "fr": "Peau durcie",
+          "en": "Hardened Skin"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_hardenedshield.png",
+        "description": {
+          "fr": "Rexxar et Misha obtiennent une grande quantité d’armure.",
+          "en": "Rexxar and Misha gain massive Armor"
         },
         "demoYoutubeId": null
       }
@@ -28561,6 +30729,19 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
+        "key": "W",
+        "name": {
+          "fr": "Propulseurs",
+          "en": "Thrusters"
+        },
+        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_mount.png",
+        "description": {
+          "fr": "Se déplace plus vite hors mode siège.",
+          "en": "Move faster while out of Siege Mode."
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "R1",
         "name": {
           "fr": "Canon brutal",
@@ -28583,19 +30764,6 @@ const HEROES = [
         "description": {
           "fr": "Bombarde une zone qui reste enflammée, infligeant des dégâts à l'impact puis en continu.",
           "en": "Bombards an area that stays ablaze, dealing impact damage and then ongoing damage."
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "W",
-        "name": {
-          "fr": "Propulseurs",
-          "en": "Thrusters"
-        },
-        "icon": "assets/heroes/base_spells/sgthammer/images/spells/storm_ui_icon_sgthammer_mount.png",
-        "description": {
-          "fr": "Se déplace plus vite hors mode siège.",
-          "en": "Move faster while out of Siege Mode."
         },
         "demoYoutubeId": ""
       }
@@ -28984,7 +31152,7 @@ const HEROES = [
   },
   {
     "id": "sonya",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Sonya",
       "en": "Sonya"
@@ -28996,7 +31164,7 @@ const HEROES = [
       "en": "Self-sufficient bruiser who needs neither mana nor a healer."
     },
     "gameplay": {
-      "fr": "Sonya génère de la Furie pour se soigner avec Tourbillon. Elle excelle en solo lane grâce à son autonomie totale.",
+      "fr": "Sonya génère de la fureur pour se soigner avec Trombe. Elle excelle en solo lane grâce à son autonomie totale.",
       "en": "Sonya builds Fury to heal herself with Whirlwind. She's one of the best solo laners in the game thanks to her total self-sufficiency."
     },
     "spells": [
@@ -29008,8 +31176,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_fury.png",
         "description": {
-          "fr": "Génère de la Furie qui alimente tes capacités.",
-          "en": "Builds Fury that powers your abilities."
+          "fr": "La fureur remplace le mana : elle s'accumule en infligeant et en encaissant des coups. Utiliser une capacité accélère aussi Sonya.",
+          "en": "Fury replaces Mana: it builds by dealing and taking Basic Attack damage. Using an Ability also speeds Sonya up."
         },
         "demoYoutubeId": ""
       },
@@ -29021,8 +31189,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_ancientspear.png",
         "description": {
-          "fr": "Harponne un ennemi et te tire vers lui.",
-          "en": "Harpoons an enemy and pulls you to them."
+          "fr": "Projette une lance qui attire Sonya vers le premier ennemi touché, l’étourdit et lui inflige des dégâts.",
+          "en": "Throw a spear and pull self to the first enemy hit, stunning and dealing damage"
         },
         "demoYoutubeId": ""
       },
@@ -29034,8 +31202,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_seismicslam.png",
         "description": {
-          "fr": "Frappe puissante en cône devant toi.",
-          "en": "Powerful strike in a cone in front of you."
+          "fr": "Inflige des dégâts à un ennemi et des dégâts de zone derrière lui.",
+          "en": "Damage an enemy and splash damage behind them"
         },
         "demoYoutubeId": ""
       },
@@ -29047,8 +31215,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_whirlwind.png",
         "description": {
-          "fr": "Tournoie en infligeant des dégâts et en te soignant.",
-          "en": "Spins, dealing damage and healing you."
+          "fr": "Tournoie en blessant les ennemis proches et se soigne d'une part des dégâts infligés, bien davantage contre les héros.",
+          "en": "Spins, damaging nearby enemies and healing for part of the damage dealt, far more against Heroes."
         },
         "demoYoutubeId": ""
       },
@@ -29060,8 +31228,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_leap.png",
         "description": {
-          "fr": "Bondit vers une zone et étourdit à l'atterrissage.",
-          "en": "Leaps to an area, stunning on landing."
+          "fr": "Bondit vers l’endroit ciblé, frappe les ennemis et les étourdit.",
+          "en": "Jump to a location, deal damage, and stun enemies"
         },
         "demoYoutubeId": ""
       },
@@ -29073,19 +31241,19 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_wrathoftheberserker.png",
         "description": {
-          "fr": "Augmente fortement tes dégâts et ta résistance.",
-          "en": "Greatly increases your damage and toughness."
+          "fr": "Augmente fortement les dégâts de Sonya et écourte les contrôles qu'elle subit ; accumuler de la fureur prolonge l'effet.",
+          "en": "Greatly increases Sonya's damage and shortens the crowd control she suffers; building Fury extends it."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Lance de l'ancien te permet de rejoindre une cible ou de fuir.",
+        "fr": "Lance des anciens te permet de rejoindre une cible ou de fuir.",
         "en": "Ancient Spear lets you close on a target or escape."
       },
       {
-        "fr": "Tourbillon te soigne : utilise-le sur un groupe de sbires pour rester en lane.",
+        "fr": "Trombe te soigne : utilise-la sur un groupe de sbires pour rester en lane.",
         "en": "Whirlwind heals you: use it on minions to stay in lane."
       },
       {
@@ -29109,46 +31277,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Barbarian]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "18 Août 2026",
+          "en": "August 18, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jo43t7j",
+            "primaryId": "tmrct8f3501tgz",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jo4tx6q",
+            "primaryId": "tmrct8f3504hjb",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jo96wy2",
+            "primaryId": "tmrct8f3507yno",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jo0vw85",
+            "primaryId": "tmrct8f3510591",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6joakqh1",
+            "primaryId": "tmrct8f3512kfu",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jo8bdt8",
+            "primaryId": "tmrct8f3515xid",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jofcbo9",
+            "primaryId": "tmrct8f3518mo9",
             "alternativeIds": []
           }
         ]
@@ -29157,100 +31325,296 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jo43t7j",
+        "id": "tmrct8f3501tgz",
         "level": 1,
         "name": {
-          "fr": "Furious Blow",
+          "fr": "Coup furieux",
           "en": "Furious Blow"
         },
-        "icon": "assets/heroes/base_spells/sonya/images/talents/storm_ui_icon_sonya_seismicslam.png",
+        "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_seismicslam.png",
         "description": {
-          "fr": "Every 4th cast of Seismic Slam deals 40% more damage to the primary target and costs no Fury.",
-          "en": "Every 4th cast of Seismic Slam deals 40% more damage to the primary target and costs no Fury."
+          "fr": "Renforce Secousse sismique",
+          "en": "Empower Seismic Slam"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo4tx6q",
+        "id": "tmrct8f3502log",
+        "level": 1,
+        "name": {
+          "fr": "Peintures de guerre",
+          "en": "War Paint"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_heal.png",
+        "description": {
+          "fr": "Les attaques de base rendent des points de vie.",
+          "en": "Basic Attacks heal"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrct8f3503dm4",
+        "level": 1,
+        "name": {
+          "fr": "Dure à cuire",
+          "en": "Tough As Nails"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_block.png",
+        "description": {
+          "fr": "Confère régulièrement de l’armure physique.",
+          "en": "Periodically gain Physical Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrct8f3504hjb",
         "level": 4,
         "name": {
-          "fr": "Shattered Ground",
+          "fr": "Terre brisée",
           "en": "Shattered Ground"
         },
-        "icon": "assets/heroes/base_spells/sonya/images/talents/storm_ui_icon_sonya_seismicslam.png",
+        "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_seismicslam.png",
         "description": {
-          "fr": "Increase Seismic Slam's splash damage by 250%. Targeting a Hero with Seismic Slam further increases its splash damage by 250%, while targeting other enemies increases the length of its splash by 66%.",
-          "en": "Increase Seismic Slam's splash damage by 250%. Targeting a Hero with Seismic Slam further increases its splash damage by 250%, while targeting other enemies increases the length of its splash by 66%."
+          "fr": "Augmente les dégâts de zone de Secousse sismique.",
+          "en": "Increase Seismic Slam splash damage"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo96wy2",
+        "id": "tmrct8f35058d3",
+        "level": 4,
+        "name": {
+          "fr": "Ouragan",
+          "en": "Hurricane"
+        },
+        "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_whirlwind.png",
+        "description": {
+          "fr": "Trombe supprime ralentissements et immobilisations.",
+          "en": "Whirlwind removes Slows and Roots"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrct8f3506srf",
+        "level": 4,
+        "name": {
+          "fr": "Coup de sang",
+          "en": "Shot Of Fury"
+        },
+        "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_fury.png",
+        "description": {
+          "fr": "Confère de la fureur à l’activation.",
+          "en": "Activate to gain Fury"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrct8f3507yno",
         "level": 7,
         "name": {
-          "fr": "Poisoned Spear",
+          "fr": "Lance empoisonnée",
           "en": "Poisoned Spear"
         },
-        "icon": "assets/heroes/base_spells/sonya/images/talents/storm_ui_icon_sonya_ancientspear.png",
+        "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_ancientspear.png",
         "description": {
-          "fr": "Ancient Spear deals an additional 100% damage over 6 seconds.",
-          "en": "Ancient Spear deals an additional 100% damage over 6 seconds."
+          "fr": "Lance des anciens inflige des dégâts sur la durée.",
+          "en": "Ancient Spear deals damage over time"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo0vw85",
+        "id": "tmrct8f3508mvi",
+        "level": 7,
+        "name": {
+          "fr": "Bouffée de vie",
+          "en": "Life Funnel"
+        },
+        "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_whirlwind.png",
+        "description": {
+          "fr": "Augmente les soins de Trombe.",
+          "en": "Increases Whirlwind healing"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrct8f35091np",
+        "level": 7,
+        "name": {
+          "fr": "Fureur guerrière",
+          "en": "Battle Rage"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_mercenarylord.png",
+        "description": {
+          "fr": "Soigne à l’activation et augmente les dégâts infligés aux mercenaires.",
+          "en": "Increase damage to Mercenaries, activate to heal"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrct8f3510591",
         "level": 10,
         "name": {
-          "fr": "Leap",
+          "fr": "Bond",
           "en": "Leap"
         },
-        "icon": "assets/heroes/base_spells/sonya/images/talents/storm_ui_icon_sonya_leap.png",
+        "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_leap.png",
         "description": {
-          "fr": "Leap into the air, dealing 135 (+4% per level) damage to nearby enemies, and stunning them for 1.25 seconds.",
-          "en": "Leap into the air, dealing 135 (+4% per level) damage to nearby enemies, and stunning them for 1.25 seconds."
+          "fr": "Bondit vers l’endroit ciblé, frappe les ennemis et les étourdit.",
+          "en": "Jump to a location, deal damage, and stun enemies"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joakqh1",
+        "id": "tmrct8f3511ywn",
+        "level": 10,
+        "name": {
+          "fr": "Courroux du berserker",
+          "en": "Wrath of the Berserker"
+        },
+        "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_wrathoftheberserker.png",
+        "description": {
+          "fr": "Augmente fortement les dégâts de Sonya et écourte les contrôles qu'elle subit ; accumuler de la fureur prolonge l'effet.",
+          "en": "Greatly increases Sonya's damage and shortens the crowd control she suffers; building Fury extends it."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrct8f3512kfu",
         "level": 13,
         "name": {
-          "fr": "Mystical Spear",
+          "fr": "Lance mystique",
           "en": "Mystical Spear"
         },
-        "icon": "assets/heroes/base_spells/sonya/images/talents/storm_ui_icon_sonya_ancientspear.png",
+        "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_ancientspear.png",
         "description": {
-          "fr": "Ancient Spear always pulls Sonya to the target location even if it doesn't hit an enemy. When used this way, Ancient Spear's cooldown is reduced by 5 seconds.",
-          "en": "Ancient Spear always pulls Sonya to the target location even if it doesn't hit an enemy. When used this way, Ancient Spear's cooldown is reduced by 5 seconds."
+          "fr": "Réduit le temps de recharge de Lance des anciens et attire même sans toucher de cible.",
+          "en": "Ancient Spear always pulls, cooldown reduced"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo8bdt8",
+        "id": "tmrct8f35134rg",
+        "level": 13,
+        "name": {
+          "fr": "Impitoyable",
+          "en": "Ruthless"
+        },
+        "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_whirlwind.png",
+        "description": {
+          "fr": "Augmente les dégâts que Trombe inflige aux cibles dont les points de vie sont bas.",
+          "en": "Increase Whirlwind damage to low Health targets"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrct8f35147jl",
+        "level": 13,
+        "name": {
+          "fr": "Sans issue",
+          "en": "No Escape"
+        },
+        "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_fury.png",
+        "description": {
+          "fr": "Augmente le bonus de vitesse de déplacement des capacités.",
+          "en": "Abilities give more Movement Speed"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrct8f3515xid",
         "level": 16,
         "name": {
-          "fr": "Giant Slammer",
+          "fr": "Choc tectonique",
           "en": "Giant Slammer"
         },
-        "icon": "assets/heroes/base_spells/sonya/images/talents/storm_ui_icon_sonya_seismicslam.png",
+        "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_seismicslam.png",
         "description": {
-          "fr": "Basic Attacks and Seismic Slam deal an additional 1.5% of Heroes' maximum Health as damage and heal Sonya for 60% of the damage dealt.",
-          "en": "Basic Attacks and Seismic Slam deal an additional 1.5% of Heroes' maximum Health as damage and heal Sonya for 60% of the damage dealt."
+          "fr": "Les attaques de base et Secousse sismique infligent des dégâts supplémentaires.",
+          "en": "Basic Attacks and Seismic Slam deal bonus damage"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jofcbo9",
+        "id": "tmrct8f3516p74",
+        "level": 16,
+        "name": {
+          "fr": "Boucherie",
+          "en": "Rampage"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_cooldown.png",
+        "description": {
+          "fr": "Les attaques de base réduisent le temps de recharge de Lance des anciens.",
+          "en": "Basic Attacks reduce Ancient Spear cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrct8f3517z9m",
+        "level": 16,
+        "name": {
+          "fr": "Nerfs d’acier",
+          "en": "Nerves of Steel"
+        },
+        "icon": "assets/heroes/base_spells/sonya/images/talents/storm_ui_icon_sonya_nervesofsteel.png",
+        "description": {
+          "fr": "Confère un bouclier.",
+          "en": "Activate to gain a Shield"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrct8f3518mo9",
         "level": 20,
         "name": {
-          "fr": "Arreat Crater",
+          "fr": "Cratère d’Arreat",
           "en": "Arreat Crater"
         },
-        "icon": "assets/heroes/base_spells/sonya/images/talents/storm_ui_icon_sonya_leap.png",
+        "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_leap.png",
         "description": {
-          "fr": "Leap leaves behind an impassable crater for 5 seconds.  Reduces Leap's cooldown by 20 seconds.",
-          "en": "Leap leaves behind an impassable crater for 5 seconds.  Reduces Leap's cooldown by 20 seconds."
+          "fr": "Bond génère un cratère et bénéficie d’un temps de recharge réduit.",
+          "en": "Leap creates a crater and has reduced cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrct8f3519mjw",
+        "level": 20,
+        "name": {
+          "fr": "Jeu de jambes",
+          "en": "Striding Giant"
+        },
+        "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_wrathoftheberserker.png",
+        "description": {
+          "fr": "Courroux du berserker peut rendre insensible aux effets de contrôle.",
+          "en": "Wrath of the Berserker can grant Unstoppable"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrct8f3520rpa",
+        "level": 20,
+        "name": {
+          "fr": "Lance composite",
+          "en": "Composite Spear"
+        },
+        "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_ancientspear.png",
+        "description": {
+          "fr": "Augmente la portée de Lance des anciens et confère de l’armure.",
+          "en": "Increase Ancient Spear range, grants Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrct8f3521vxp",
+        "level": 20,
+        "name": {
+          "fr": "Dure au mal",
+          "en": "Ignore Pain"
+        },
+        "icon": "assets/heroes/base_spells/sonya/images/talents/storm_ui_icon_sonya_ignorepain.png",
+        "description": {
+          "fr": "Confère une grande quantité d’armure.",
+          "en": "Activate to gain massive Armor"
         },
         "demoYoutubeId": null
       }
@@ -30764,7 +33128,7 @@ const HEROES = [
   },
   {
     "id": "thrall",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Thrall",
       "en": "Thrall"
@@ -30783,13 +33147,13 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Résilience Loup-de-Givre",
+          "fr": "Résilience loup-de-givre",
           "en": "Frostwolf Resilience"
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_frostwolfresilience.png",
         "description": {
-          "fr": "Se soigne automatiquement quand ta vie est basse.",
-          "en": "Automatically heals you when your Health is low."
+          "fr": "Utiliser des capacités sur les ennemis permet de récupérer des points de vie.",
+          "en": "Casting Abilities on enemies grants charges that restore health"
         },
         "demoYoutubeId": ""
       },
@@ -30801,8 +33165,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_chainlightning.png",
         "description": {
-          "fr": "Éclair qui rebondit entre les ennemis et te soigne.",
-          "en": "Lightning that bounces between enemies and heals you."
+          "fr": "Une chaîne d’éclairs foudroie les ennemis.",
+          "en": "Shock enemies with bouncing lightning"
         },
         "demoYoutubeId": ""
       },
@@ -30814,8 +33178,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_feralspirit.png",
         "description": {
-          "fr": "Envoie des loups qui ralentissent les ennemis touchés.",
-          "en": "Sends wolves that slow enemies hit."
+          "fr": "Déchaîne un esprit de loup qui brûle les ennemis sur son chemin ; chaque héros immobilisé au passage le porte plus loin.",
+          "en": "Unleashes a wolf spirit that burns enemies in its path; each Hero it Roots carries it farther."
         },
         "demoYoutubeId": ""
       },
@@ -30827,8 +33191,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_windfury.png",
         "description": {
-          "fr": "Gagne de la vitesse de déplacement et d'attaque.",
-          "en": "Gain Movement and Attack Speed."
+          "fr": "Accélère Thrall et rend ses prochaines attaques de base bien plus rapides, chacune alimentant son trait.",
+          "en": "Speeds Thrall up and makes his next Basic Attacks much faster, each one feeding his trait."
         },
         "demoYoutubeId": ""
       },
@@ -30840,8 +33204,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_sundering.png",
         "description": {
-          "fr": "Fissure le sol en ligne, repoussant et étourdissant.",
-          "en": "Splits the ground in a line, knocking back and stunning."
+          "fr": "Inflige des dégâts aux ennemis le long d’une ligne, en plus de les repousser et de les étourdir.",
+          "en": "Damages, pushes, and Stuns enemies in a line"
         },
         "demoYoutubeId": ""
       },
@@ -30853,8 +33217,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_earthquake.png",
         "description": {
-          "fr": "Ralentit fortement tous les ennemis de la zone à répétition.",
-          "en": "Repeatedly and heavily slows all enemies in the area."
+          "fr": "Ralentit les ennemis dans une large zone.",
+          "en": "Slows enemies in a massive area"
         },
         "demoYoutubeId": ""
       }
@@ -30889,46 +33253,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Thrall]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "18 Août 2026",
+          "en": "August 18, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jpqyten",
+            "primaryId": "tmw21n1bn01urg",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jpyt8av",
+            "primaryId": "tmw21n1bn04dnn",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jpiz3ng",
+            "primaryId": "tmw21n1bn07svx",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jpkmi8c",
+            "primaryId": "tmw21n1bn104tn",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jpwa7d3",
+            "primaryId": "tmw21n1bn12jjn",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jpbnice",
+            "primaryId": "tmw21n1bn1531y",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jpoo4sg",
+            "primaryId": "tmw21n1bn18cka",
             "alternativeIds": []
           }
         ]
@@ -30937,100 +33301,310 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jpqyten",
+        "id": "tmw21n1bn01urg",
         "level": 1,
         "name": {
-          "fr": "Echo of the Elements",
+          "fr": "Écho des éléments",
           "en": "Echo of the Elements"
         },
-        "icon": "assets/heroes/base_spells/thrall/images/talents/storm_ui_icon_thrall_chainlightning.png",
+        "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_chainlightning.png",
         "description": {
-          "fr": "Quest: Kill Minions or Heroes within 1.5 seconds of hitting them with Chain Lightning.  Reward: After killing 10 enemies, reduce the Mana cost of Chain Lightning from 40 to 20.  Reward: After killing 20 enemies, gain a second charge of Chain Lightning.",
-          "en": "Quest: Kill Minions or Heroes within 1.5 seconds of hitting them with Chain Lightning.  Reward: After killing 10 enemies, reduce the Mana cost of Chain Lightning from 40 to 20.  Reward: After killing 20 enemies, gain a second charge of Chain Lightning."
+          "fr": "Quête : tuer des adversaires confère une charge de rebond de Chaîne d’éclairs.",
+          "en": "Quest: Killing enemies grant chain lightning charges, forks"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpyt8av",
-        "level": 4,
+        "id": "tmw21n1bn02yz6",
+        "level": 1,
         "name": {
-          "fr": "Feral Resilience",
-          "en": "Feral Resilience"
+          "fr": "Impact foudroyant",
+          "en": "Crash Lightning"
         },
-        "icon": "assets/heroes/base_spells/thrall/images/talents/storm_ui_icon_thrall_feralspirit.png",
+        "icon": "assets/heroes/base_spells/thrall/images/talents/storm_ui_icon_thrall_chainlightning_var1.png",
         "description": {
-          "fr": "Heroes damaged by Feral Spirit grant 4 stacks of Frostwolf Resilience and 2 stacks of Feral Resilience, granting 75 Physical Armor against the next incoming Hero Basic Attack.  Stacks are consumed on the next cast of Feral Spirit.",
-          "en": "Heroes damaged by Feral Spirit grant 4 stacks of Frostwolf Resilience and 2 stacks of Feral Resilience, granting 75 Physical Armor against the next incoming Hero Basic Attack.  Stacks are consumed on the next cast of Feral Spirit."
+          "fr": "Quête : toucher de multiples héros renforce Chaîne d’éclairs.",
+          "en": "Quest: Multiple Hero hits empower Chain Lightning"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpiz3ng",
-        "level": 7,
+        "id": "tmw21n1bn03pkz",
+        "level": 1,
         "name": {
-          "fr": "Maelstrom Weapon",
+          "fr": "Arme du Maelström",
           "en": "Maelstrom Weapon"
         },
-        "icon": "assets/heroes/base_spells/thrall/images/talents/storm_ui_icon_thrall_windfury.png",
+        "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_windfury.png",
         "description": {
-          "fr": "Repeatable Quest: Basic Attacks against Heroes while Windfury's Movement Speed bonus is active increase Attack Damage by 1.  Reward: After gaining 20 Attack Damage, increase the Movement Speed bonus of Windfury to 40%.  Reward: After gaining 40 Attack Damage, Thrall permanently gains 15% increased Movement Speed.",
-          "en": "Repeatable Quest: Basic Attacks against Heroes while Windfury's Movement Speed bonus is active increase Attack Damage by 1.  Reward: After gaining 20 Attack Damage, increase the Movement Speed bonus of Windfury to 40%.  Reward: After gaining 40 Attack Damage, Thrall permanently gains 15% increased Movement Speed."
+          "fr": "Quête : les attaques avec Furie-des-vents augmentent la vitesse de déplacement.",
+          "en": "Quest: Windfury attacks increase Move Speed"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpkmi8c",
+        "id": "tmw21n1bn04dnn",
+        "level": 4,
+        "name": {
+          "fr": "Résilience farouche",
+          "en": "Feral Resilience"
+        },
+        "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_feralspirit.png",
+        "description": {
+          "fr": "Esprit farouche confère de l’armure physique et de la résilience loup-de-givre.",
+          "en": "Feral Spirit grants Physical Armor, Frostwolf Resilience"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw21n1bn05huo",
+        "level": 4,
+        "name": {
+          "fr": "Meute de Loups-de-givre",
+          "en": "Frostwolf Pack"
+        },
+        "icon": "assets/heroes/base_spells/thrall/images/talents/storm_ui_icon_thrall_feralspirit_var1.png",
+        "description": {
+          "fr": "Quête : réduit le temps de recharge et le coût en mana d’Esprit farouche.",
+          "en": "Quest: Reduce Feral Spirit cooldown, cost"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw21n1bn06ysw",
+        "level": 4,
+        "name": {
+          "fr": "Vague de mana",
+          "en": "Mana Tide"
+        },
+        "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_frostwolfresilience.png",
+        "description": {
+          "fr": "Résilience loup-de-givre rend du mana et réduit les temps de recharge.",
+          "en": "Frostwolf Resilience restores Mana, lowers cooldowns"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw21n1bn07svx",
+        "level": 7,
+        "name": {
+          "fr": "Tonnerre grondant",
+          "en": "Rolling Thunder"
+        },
+        "icon": "assets/heroes/base_spells/thrall/images/talents/storm_ui_icon_thrall_chainlightning_var2.png",
+        "description": {
+          "fr": "Chaîne d’éclairs renforce les attaques de base, rebond supplémentaire.",
+          "en": "Chain Lightning empowers Basic Attacks, extra bounce"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw21n1bn08ini",
+        "level": 7,
+        "name": {
+          "fr": "Rage ancestrale",
+          "en": "Ancestral Wrath"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_bloodforblood.png",
+        "description": {
+          "fr": "Inflige des dégâts à un héros et rend des points de vie.",
+          "en": "Activate to damage and steal Health from a Hero"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw21n1bn096gd",
+        "level": 7,
+        "name": {
+          "fr": "Assaut élémentaire",
+          "en": "Elemental Assault"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
+        "description": {
+          "fr": "Les capacités augmentent les dégâts des attaques de base.",
+          "en": "Abilities increase Basic Attack damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw21n1bn104tn",
         "level": 10,
         "name": {
-          "fr": "Sundering",
+          "fr": "Fracture",
           "en": "Sundering"
         },
-        "icon": "assets/heroes/base_spells/thrall/images/talents/storm_ui_icon_thrall_sundering.png",
+        "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_sundering.png",
         "description": {
-          "fr": "After 0.5 seconds, sunder the earth in a long line, dealing 290 (+4% per level) damage and shoving enemies to the side, Stunning them for 1 second.",
-          "en": "After 0.5 seconds, sunder the earth in a long line, dealing 290 (+4% per level) damage and shoving enemies to the side, Stunning them for 1 second."
+          "fr": "Inflige des dégâts aux ennemis le long d’une ligne, en plus de les repousser et de les étourdir.",
+          "en": "Damages, pushes, and Stuns enemies in a line"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpwa7d3",
+        "id": "tmw21n1bn11y0i",
+        "level": 10,
+        "name": {
+          "fr": "Séisme",
+          "en": "Earthquake"
+        },
+        "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_earthquake.png",
+        "description": {
+          "fr": "Ralentit les ennemis dans une large zone.",
+          "en": "Slows enemies in a massive area"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw21n1bn12jjn",
         "level": 13,
         "name": {
-          "fr": "Grace Of Air",
+          "fr": "Grâce aérienne",
           "en": "Grace Of Air"
         },
-        "icon": "assets/heroes/base_spells/thrall/images/talents/storm_ui_icon_thrall_windfury.png",
+        "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_windfury.png",
         "description": {
-          "fr": "Windfury attacks grant twice as many stacks of Frostwolf Resilience.",
-          "en": "Windfury attacks grant twice as many stacks of Frostwolf Resilience."
+          "fr": "Furie-des-vents alimente bien plus vite Résilience loup-de-givre.",
+          "en": "Windfury feeds Frostwolf Resilience far faster."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpbnice",
+        "id": "tmw21n1bn13upz",
+        "level": 13,
+        "name": {
+          "fr": "Grâce des Loups-de-Givre",
+          "en": "Frostwolf's Grace"
+        },
+        "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_frostwolfresilience.png",
+        "description": {
+          "fr": "Déclenche Résilience loup-de-givre pour récupérer des points de vie.",
+          "en": "Activate Frostwolf Resilience to instantly heal"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw21n1bn14a16",
+        "level": 13,
+        "name": {
+          "fr": "Bouclier spirituel",
+          "en": "Spirit Shield"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_spellshield.png",
+        "description": {
+          "fr": "Confère régulièrement de l’armure anti-sort.",
+          "en": "Periodically gain temporary Spell Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw21n1bn1531y",
         "level": 16,
         "name": {
-          "fr": "Tempest Fury",
+          "fr": "Furie-des-tempêtes",
           "en": "Tempest Fury"
         },
-        "icon": "assets/heroes/base_spells/thrall/images/talents/storm_ui_icon_thrall_windfury.png",
+        "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_windfury.png",
         "description": {
-          "fr": "The final strike of Windfury hits 3 times for 75% normal damage.",
-          "en": "The final strike of Windfury hits 3 times for 75% normal damage."
+          "fr": "La frappe finale de Furie-des-vents frappe à plusieurs reprises.",
+          "en": "Windfury's final strike lands several times."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpoo4sg",
+        "id": "tmw21n1bn16vbl",
+        "level": 16,
+        "name": {
+          "fr": "Orage",
+          "en": "Thunderstorm"
+        },
+        "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_chainlightning.png",
+        "description": {
+          "fr": "Quête : toucher des héros confère un effet de ralentissement à Chaîne d’éclairs.",
+          "en": "Quest: Hit Heroes to make Chain Lightning Slow"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw21n1bn17edz",
+        "level": 16,
+        "name": {
+          "fr": "Loup alpha",
+          "en": "Alpha Wolf"
+        },
+        "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_feralspirit.png",
+        "description": {
+          "fr": "Augmente la durée d’immobilisation d’Esprit farouche et les dégâts des attaques.",
+          "en": "Feral Spirit has longer Root, empowers Attacks"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw21n1bn18cka",
         "level": 20,
         "name": {
-          "fr": "Worldbreaker",
+          "fr": "Brise-monde",
           "en": "Worldbreaker"
         },
-        "icon": "assets/heroes/base_spells/thrall/images/talents/storm_ui_icon_thrall_sundering.png",
+        "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_sundering.png",
         "description": {
-          "fr": "Lower the cooldown of Sundering by 40 seconds. After Sundering impacts, it leaves behind an impassable rift, blocking unit movement for 3 seconds.",
-          "en": "Lower the cooldown of Sundering by 40 seconds. After Sundering impacts, it leaves behind an impassable rift, blocking unit movement for 3 seconds."
+          "fr": "Fracture crée une faille infranchissable.",
+          "en": "Sundering creates impassable terrain"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw21n1bn19jn5",
+        "level": 20,
+        "name": {
+          "fr": "Boucliers terrestres",
+          "en": "Earthen Shields"
+        },
+        "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_earthquake.png",
+        "description": {
+          "fr": "Confère un bouclier aux alliés dans la zone.",
+          "en": "Grants allies Shields in area"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw21n1bn20df0",
+        "level": 20,
+        "name": {
+          "fr": "Élan élémentaire",
+          "en": "Elemental Momentum"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_cooldown.png",
+        "description": {
+          "fr": "Les attaques de base réduisent le temps de recharge des capacités.",
+          "en": "Basic Attacks reduce Ability cooldowns"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw21n1bn215ei",
+        "level": 20,
+        "name": {
+          "fr": "Lames du Nexus",
+          "en": "Nexus Blades"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_slow.png",
+        "description": {
+          "fr": "Les attaques de base infligent plus de dégâts et ralentissent",
+          "en": "Basic Attacks deal more damage and Slow"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmw21n1bn22yl9",
+        "level": 20,
+        "name": {
+          "fr": "Bouffée de vent",
+          "en": "Wind Rush"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_boltofthestorm.png",
+        "description": {
+          "fr": "Téléporte et confère Furie-des-vents.",
+          "en": "Activate to teleport and gain Windfury"
         },
         "demoYoutubeId": null
       }
@@ -32374,6 +34948,20 @@ const HEROES = [
         "form": "normal"
       },
       {
+        "key": "A",
+        "form": "camoufle",
+        "name": {
+          "fr": "Embuscade",
+          "en": "Ambush"
+        },
+        "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_ambush.png",
+        "description": {
+          "fr": "Inflige d'importants dégâts à l'ennemi et réduit son armure.",
+          "en": "Deals heavy damage to an enemy and reduces their Armor."
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "Z",
         "name": {
           "fr": "Éruption de lames",
@@ -32388,6 +34976,20 @@ const HEROES = [
         "form": "normal"
       },
       {
+        "key": "Z",
+        "form": "camoufle",
+        "name": {
+          "fr": "Coup bas",
+          "en": "Cheap Shot"
+        },
+        "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_cheapshot.png",
+        "description": {
+          "fr": "Étourdit un ennemi, l'aveugle et lui inflige des dégâts.",
+          "en": "Stuns and Blinds an enemy, dealing damage."
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "E",
         "name": {
           "fr": "Éviscération",
@@ -32400,6 +35002,20 @@ const HEROES = [
         },
         "demoYoutubeId": "",
         "form": "normal"
+      },
+      {
+        "key": "E",
+        "form": "camoufle",
+        "name": {
+          "fr": "Garrot",
+          "en": "Garrote"
+        },
+        "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_garrote.png",
+        "description": {
+          "fr": "Inflige d'importants dégâts dans la durée à un ennemi et le réduit au silence.",
+          "en": "Deals heavy damage over time to an enemy and Silences them."
+        },
+        "demoYoutubeId": ""
       },
       {
         "key": "R1",
@@ -32428,48 +35044,6 @@ const HEROES = [
         },
         "demoYoutubeId": "",
         "form": "normal"
-      },
-      {
-        "key": "A",
-        "form": "camoufle",
-        "name": {
-          "fr": "Embuscade",
-          "en": "Ambush"
-        },
-        "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_ambush.png",
-        "description": {
-          "fr": "Inflige d'importants dégâts à l'ennemi et réduit son armure.",
-          "en": "Deals heavy damage to an enemy and reduces their Armor."
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "Z",
-        "form": "camoufle",
-        "name": {
-          "fr": "Coup bas",
-          "en": "Cheap Shot"
-        },
-        "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_cheapshot.png",
-        "description": {
-          "fr": "Étourdit un ennemi, l'aveugle et lui inflige des dégâts.",
-          "en": "Stuns and Blinds an enemy, dealing damage."
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "E",
-        "form": "camoufle",
-        "name": {
-          "fr": "Garrot",
-          "en": "Garrote"
-        },
-        "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_garrote.png",
-        "description": {
-          "fr": "Inflige d'importants dégâts dans la durée à un ennemi et le réduit au silence.",
-          "en": "Deals heavy damage over time to an enemy and Silences them."
-        },
-        "demoYoutubeId": ""
       }
     ],
     "tips": [
@@ -33166,7 +35740,7 @@ const HEROES = [
   },
   {
     "id": "varian",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Varian",
       "en": "Varian"
@@ -33178,7 +35752,7 @@ const HEROES = [
       "en": "Flexible bruiser: tank, damage, or taunt depending on your level 10."
     },
     "gameplay": {
-      "fr": "Varian choisit son rôle au niveau 10 : Provocation pour tanker, Lames jumelles de fureur pour les dégâts soutenus, ou Broyeur de colosse pour le burst.",
+      "fr": "Varian choisit son rôle au niveau 10 : Provocation pour tanker, Lames jumelles de fureur pour les dégâts soutenus, ou Frappe du colosse pour le burst.",
       "en": "Varian picks his role at level 10: Taunt to tank, Twin Blades of Fury for sustained damage, or Colossus Smash for burst."
     },
     "spells": [
@@ -33190,21 +35764,21 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_heroicstrike.png",
         "description": {
-          "fr": "Ta prochaine attaque inflige des dégâts bonus.",
-          "en": "Your next Basic Attack deals bonus damage."
+          "fr": "La prochaine attaque de base inflige des dégâts supplémentaires.",
+          "en": "Deal bonus damage on next Basic Attack"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "Croc du lion",
+          "fr": "Croc-de-Lion",
           "en": "Lion's Fang"
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_lionsfang.png",
         "description": {
-          "fr": "Projette une onde qui blesse et ralentit en ligne.",
-          "en": "Fires a wave that damages and slows in a line."
+          "fr": "Inflige des dégâts et ralentit les ennemis sur une ligne en plus de soigner Varian.",
+          "en": "Damage and Slow enemies in a line and heal Varian"
         },
         "demoYoutubeId": ""
       },
@@ -33216,8 +35790,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_parry.png",
         "description": {
-          "fr": "Réduit fortement les dégâts d'attaques reçus.",
-          "en": "Greatly reduces incoming Basic Attack damage."
+          "fr": "Pare toutes les attaques de base subies pendant un court instant. Possède plusieurs charges.",
+          "en": "Parries every Basic Attack taken for a brief moment. Has multiple charges."
         },
         "demoYoutubeId": ""
       },
@@ -33229,8 +35803,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_charge.png",
         "description": {
-          "fr": "Fonce sur un ennemi et le ralentit.",
-          "en": "Charges an enemy and slows them."
+          "fr": "Charge un ennemi et lui inflige des dégâts.",
+          "en": "Charge to an enemy and damage them"
         },
         "demoYoutubeId": ""
       },
@@ -33242,21 +35816,21 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_taunt.png",
         "description": {
-          "fr": "Force les ennemis proches à t'attaquer et gagne de l'armure.",
-          "en": "Forces nearby enemies to attack you and grants Armor."
+          "fr": "Réduit un héros adverse au silence et le contraint à n'attaquer que Varian. Effet passif : augmente durablement son maximum de points de vie et sa récupération.",
+          "en": "Silences an enemy Hero and forces them to attack only Varian. Passive: permanently increases his maximum Health and regeneration."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
         "name": {
-          "fr": "Broyeur de colosse",
+          "fr": "Frappe du colosse",
           "en": "Colossus Smash"
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_colossus_smash.png",
         "description": {
-          "fr": "Frappe massive qui rend la cible vulnérable.",
-          "en": "Massive strike that makes the target Vulnerable."
+          "fr": "Frappe un ennemi et réduit son armure, le rendant bien plus vulnérable. Effet passif : Varian frappe plus fort, mais dispose de moins de points de vie.",
+          "en": "Smashes an enemy and lowers their Armor, leaving them far more vulnerable. Passive: Varian hits harder but has less Health."
         },
         "demoYoutubeId": ""
       },
@@ -33268,8 +35842,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_twinbladesoffury.png",
         "description": {
-          "fr": "Combat à deux armes pour des dégâts soutenus.",
-          "en": "Dual-wield for sustained damage."
+          "fr": "Les attaques de base rechargent Frappe héroïque bien plus vite et accélèrent Varian. Effet passif : vitesse d'attaque accrue, mais dégâts par coup réduits.",
+          "en": "Basic Attacks recharge Heroic Strike much faster and speed Varian up. Passive: more Attack Speed, but less damage per hit."
         },
         "demoYoutubeId": ""
       }
@@ -33304,46 +35878,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Varian]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "18 Août 2026",
+          "en": "August 18, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jpwqevc",
+            "primaryId": "tm7wdaidi01bfp",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jph0nw0",
+            "primaryId": "tm7wdaidi049ek",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jpnx6p6",
+            "primaryId": "tm7wdaidi07s78",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jp4qclx",
+            "primaryId": "tm7wdaidi10gxi",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jpp97q6",
+            "primaryId": "tm7wdaidi12h5a",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jp6h5lj",
+            "primaryId": "tm7wdaidi15cck",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jp33536",
+            "primaryId": "tm7wdaidi18957",
             "alternativeIds": []
           }
         ]
@@ -33352,100 +35926,310 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jpwqevc",
+        "id": "tm7wdaidi01bfp",
         "level": 1,
         "name": {
-          "fr": "Lion's Maw",
+          "fr": "Gueule-de-Lion",
           "en": "Lion's Maw"
         },
-        "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_lionsfang.png",
+        "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_lionsfang.png",
         "description": {
-          "fr": "Quest: Every time Lion's Fang hits a Hero, increase its damage by 7, up to 175.  Reward: After hitting 25 Heroes, the Slow is increased to 50% and its duration is increased to 2 seconds.",
-          "en": "Quest: Every time Lion's Fang hits a Hero, increase its damage by 7, up to 175.  Reward: After hitting 25 Heroes, the Slow is increased to 50% and its duration is increased to 2 seconds."
+          "fr": "Quête : toucher des héros renforce Croc-de-Lion.",
+          "en": "Quest: Hit Heroes to empower Lion's Fang"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jph0nw0",
+        "id": "tm7wdaidi02684",
+        "level": 1,
+        "name": {
+          "fr": "Fulgurance",
+          "en": "Overpower"
+        },
+        "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_parry.png",
+        "description": {
+          "fr": "Parer l’attaque d’un héros réinitialise Frappe héroïque.",
+          "en": "Parrying a Hero's attack will refresh Heroic Strike"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm7wdaidi03xfw",
+        "level": 1,
+        "name": {
+          "fr": "Quête du haut roi",
+          "en": "High King's Quest"
+        },
+        "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_highkingsquest.png",
+        "description": {
+          "fr": "Quête : accomplir des quêtes augmente les dégâts d’attaque",
+          "en": "Quest: Complete Quests to gain Attack Damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm7wdaidi049ek",
         "level": 4,
         "name": {
-          "fr": "Taunt",
+          "fr": "Provocation",
           "en": "Taunt"
         },
-        "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_taunt.png",
+        "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_taunt.png",
         "description": {
-          "fr": "Silence a target Hero and force them to attack Varian for 1.25 seconds.  Passive: Maximum Health and Health Regeneration increased by 40%.",
-          "en": "Silence a target Hero and force them to attack Varian for 1.25 seconds.  Passive: Maximum Health and Health Regeneration increased by 40%."
+          "fr": "Réduit un héros adverse au silence et le contraint à n'attaquer que Varian. Effet passif : augmente durablement son maximum de points de vie et sa récupération.",
+          "en": "Silences an enemy Hero and forces them to attack only Varian. Passive: permanently increases his maximum Health and regeneration."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpnx6p6",
+        "id": "tm7wdaidi0560k",
+        "level": 4,
+        "name": {
+          "fr": "Frappe du colosse",
+          "en": "Colossus Smash"
+        },
+        "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_colossus_smash.png",
+        "description": {
+          "fr": "Frappe un ennemi et réduit son armure, le rendant bien plus vulnérable. Effet passif : Varian frappe plus fort, mais dispose de moins de points de vie.",
+          "en": "Smashes an enemy and lowers their Armor, leaving them far more vulnerable. Passive: Varian hits harder but has less Health."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm7wdaidi06dki",
+        "level": 4,
+        "name": {
+          "fr": "Lames jumelles de fureur",
+          "en": "Twin Blades of Fury"
+        },
+        "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_twinbladesoffury.png",
+        "description": {
+          "fr": "Les attaques de base rechargent Frappe héroïque bien plus vite et accélèrent Varian. Effet passif : vitesse d'attaque accrue, mais dégâts par coup réduits.",
+          "en": "Basic Attacks recharge Heroic Strike much faster and speed Varian up. Passive: more Attack Speed, but less damage per hit."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm7wdaidi07s78",
         "level": 7,
         "name": {
-          "fr": "Lionheart",
+          "fr": "Cœur-de-lion",
           "en": "Lionheart"
         },
-        "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_lionsfang.png",
+        "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_lionsfang.png",
         "description": {
-          "fr": "Increase Lion's Fang's healing from Heroes by 75%.",
-          "en": "Increase Lion's Fang's healing from Heroes by 75%."
+          "fr": "Augmente les points de vie rendus par Croc-de-Lion.",
+          "en": "Increase Lion's Fang healing"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jp4qclx",
+        "id": "tm7wdaidi08hnq",
+        "level": 7,
+        "name": {
+          "fr": "Second souffle",
+          "en": "Second Wind"
+        },
+        "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_secondwind.png",
+        "description": {
+          "fr": "Les attaques de base rendent des points de vie, plus encore quand ceux-ci sont bas.",
+          "en": "Basic Attacks heal, more when low Health"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm7wdaidi094pj",
+        "level": 7,
+        "name": {
+          "fr": "Ivresse de la victoire",
+          "en": "Victory Rush"
+        },
+        "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_victoryrush.png",
+        "description": {
+          "fr": "Les attaques de base rendent périodiquement une grande quantité de points de vie.",
+          "en": "Basic Attacks periodically grant a large heal"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm7wdaidi10gxi",
         "level": 10,
         "name": {
-          "fr": "Shield Wall",
+          "fr": "Mur protecteur",
           "en": "Shield Wall"
         },
-        "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_parry.png",
+        "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_parry.png",
         "description": {
-          "fr": "Parry grants Protected, preventing all incoming damage while active. Additionally, Parry's cooldown is reduced by 5 seconds, but it loses 1 charge.",
-          "en": "Parry grants Protected, preventing all incoming damage while active. Additionally, Parry's cooldown is reduced by 5 seconds, but it loses 1 charge."
+          "fr": "Parade immunise contre les dégâts.",
+          "en": "Parry grants Protected"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpp97q6",
+        "id": "tm7wdaidi11vdr",
+        "level": 10,
+        "name": {
+          "fr": "Porteguerre",
+          "en": "Warbringer"
+        },
+        "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_charge.png",
+        "description": {
+          "fr": "Réduit le temps de recharge de Charge et permet de l’utiliser sur les alliés.",
+          "en": "Reduce Charge cooldown, can be used on allies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm7wdaidi12h5a",
         "level": 13,
         "name": {
-          "fr": "Juggernaut",
+          "fr": "Mastodonte",
           "en": "Juggernaut"
         },
-        "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_charge.png",
+        "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_charge.png",
         "description": {
-          "fr": "Charge deals bonus damage to Heroes equal to 4% of their maximum Health.",
-          "en": "Charge deals bonus damage to Heroes equal to 4% of their maximum Health."
+          "fr": "Augmente les dégâts de Charge.",
+          "en": "Increase Charge damage"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jp6h5lj",
+        "id": "tm7wdaidi1375n",
+        "level": 13,
+        "name": {
+          "fr": "Frappe mortelle",
+          "en": "Mortal Strike"
+        },
+        "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_mortalstrike.png",
+        "description": {
+          "fr": "Frappe héroïque réduit les soins reçus par l’ennemi.",
+          "en": "Heroic Strike reduces enemy healing"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm7wdaidi14p9q",
+        "level": 13,
+        "name": {
+          "fr": "Lancer fracassant",
+          "en": "Shattering Throw"
+        },
+        "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_shatteringthrow.png",
+        "description": {
+          "fr": "Inflige des dégâts importants aux boucliers ennemis.",
+          "en": "Deal massive damage to enemy Shields"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm7wdaidi15cck",
         "level": 16,
         "name": {
-          "fr": "Banner of Stormwind",
+          "fr": "Bannière de Hurlevent",
           "en": "Banner of Stormwind"
         },
         "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_bannerofstormwind.png",
         "description": {
-          "fr": "Activate to place a Banner that grants 25% increased Movement Speed to nearby allied Heroes. Lasts 12 seconds.",
-          "en": "Activate to place a Banner that grants 25% increased Movement Speed to nearby allied Heroes. Lasts 12 seconds."
+          "fr": "Bannière qui augmente la vitesse de déplacement.",
+          "en": "Banner that grants Movement Speed"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jp33536",
+        "id": "tm7wdaidi16bju",
+        "level": 16,
+        "name": {
+          "fr": "Bannière de Forgefer",
+          "en": "Banner of Ironforge"
+        },
+        "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_bannerofironforge.png",
+        "description": {
+          "fr": "Bannière qui confère de l’armure.",
+          "en": "Banner that grants Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm7wdaidi17xkx",
+        "level": 16,
+        "name": {
+          "fr": "Bannière de Dalaran",
+          "en": "Banner of Dalaran"
+        },
+        "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_bannerofdalaran.png",
+        "description": {
+          "fr": "Bannière qui augmente la puissance de capacité.",
+          "en": "Banner that grants Spell Power"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm7wdaidi18957",
         "level": 20,
         "name": {
           "fr": "Vigilance",
           "en": "Vigilance"
         },
-        "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_taunt.png",
+        "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_taunt.png",
         "description": {
-          "fr": "Being hit by a Hero Basic Attack reduces the cooldown of Taunt by 1 second.",
-          "en": "Being hit by a Hero Basic Attack reduces the cooldown of Taunt by 1 second."
+          "fr": "Les attaques subies réduisent le temps de recharge de Provocation.",
+          "en": "Incoming attacks reduce Taunt cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm7wdaidi19r6o",
+        "level": 20,
+        "name": {
+          "fr": "Maître d’armes",
+          "en": "Master at Arms"
+        },
+        "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_colossus_smash.png",
+        "description": {
+          "fr": "Frappe du colosse touche les ennemis proches de la cible.",
+          "en": "Colossus Smash hits enemies near the target"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm7wdaidi20sot",
+        "level": 20,
+        "name": {
+          "fr": "Frénésie",
+          "en": "Frenzy"
+        },
+        "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_twinbladesoffury.png",
+        "description": {
+          "fr": "Augmente les bonus conférés par Lames jumelles de fureur.",
+          "en": "Increase Twin Blades of Fury bonuses"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm7wdaidi21iqc",
+        "level": 20,
+        "name": {
+          "fr": "Gloire à l’Alliance",
+          "en": "Glory to the Alliance"
+        },
+        "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_glorytothealliance.png",
+        "description": {
+          "fr": "La bannière amplifie également les effets des soins.",
+          "en": "Banner also increases healing effects"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm7wdaidi22p1w",
+        "level": 20,
+        "name": {
+          "fr": "Cri démoralisant",
+          "en": "Demoralizing Shout"
+        },
+        "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_demoralizingshout.png",
+        "description": {
+          "fr": "Réduit les dégâts infligés par les ennemis proches.",
+          "en": "Reduce damage of nearby Heroes"
         },
         "demoYoutubeId": null
       }
@@ -33454,7 +36238,7 @@ const HEROES = [
   },
   {
     "id": "xul",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Xul",
       "en": "Xul"
@@ -33478,8 +36262,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_raiseskeleton.png",
         "description": {
-          "fr": "Les sbires tués à proximité se relèvent en squelettes.",
-          "en": "Nearby dying minions rise as skeletons."
+          "fr": "Les serviteurs adverses qui meurent près de Xul se relèvent en guerriers squelettes, qui explosent à leur mort.",
+          "en": "Enemy Minions dying near Xul rise as Skeletal Warriors, which explode when they die."
         },
         "demoYoutubeId": ""
       },
@@ -33491,8 +36275,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_reap.png",
         "description": {
-          "fr": "Projette une faux qui traverse les ennemis.",
-          "en": "Throws a scythe that pierces enemies."
+          "fr": "Lance une faux qui blesse les ennemis en revenant vers Xul et relève un guerrier squelette pour chaque héros touché.",
+          "en": "Throws a scythe that damages enemies as it returns to Xul and raises a Skeletal Warrior for each Hero hit."
         },
         "demoYoutubeId": ""
       },
@@ -33504,21 +36288,21 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_cursedstrikes_off.png",
         "description": {
-          "fr": "Tes attaques touchent en zone et aveuglent.",
-          "en": "Your attacks hit in an area and blind."
+          "fr": "Les attaques de base infligent des dégâts de zone et réduisent la vitesse d’attaque.",
+          "en": "Basic Attacks deal damage in an area and reduce Attack Speed"
         },
         "demoYoutubeId": ""
       },
       {
         "key": "E",
         "name": {
-          "fr": "Prison d'os",
+          "fr": "Prison d’os",
           "en": "Bone Prison"
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_boneprison.png",
         "description": {
-          "fr": "Immobilise un ennemi après un court délai.",
-          "en": "Roots an enemy after a short delay."
+          "fr": "Après un court délai, blesse et immobilise un héros adverse ; tous les guerriers squelettes proches se ruent alors sur lui.",
+          "en": "After a short delay, damages and Roots an enemy Hero; every nearby Skeletal Warrior then focuses them."
         },
         "demoYoutubeId": ""
       },
@@ -33530,8 +36314,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_skeletalmages.png",
         "description": {
-          "fr": "Invoque des mages qui ralentissent fortement.",
-          "en": "Summons mages that heavily slow."
+          "fr": "Invoque des mages de givre qui infligent des dégâts aux ennemis et les ralentissent.",
+          "en": "Summon Frost Mages to damage and Slow enemies"
         },
         "demoYoutubeId": ""
       },
@@ -33543,8 +36327,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_poisonnova.png",
         "description": {
-          "fr": "Vague de poison en zone autour de toi.",
-          "en": "Wave of poison around you."
+          "fr": "Empoisonne les ennemis dans une large zone.",
+          "en": "Poison enemies in a large area"
         },
         "demoYoutubeId": ""
       }
@@ -33579,46 +36363,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Necromancer]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "18 Août 2026",
+          "en": "August 18, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jpamssj",
+            "primaryId": "tmxwxxlzy01y8p",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jpsat44",
+            "primaryId": "tmxwxxlzy04ttd",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jp7wzxx",
+            "primaryId": "tmxwxxlzy07vvh",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jpk18l2",
+            "primaryId": "tmxwxxlzy1020a",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jpbu5g4",
+            "primaryId": "tmxwxxlzy123ml",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jp2id04",
+            "primaryId": "tmxwxxlzy15jjw",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jpxap3s",
+            "primaryId": "tmxwxxlzy18awv",
             "alternativeIds": []
           }
         ]
@@ -33627,100 +36411,296 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jpamssj",
+        "id": "tmxwxxlzy01y8p",
         "level": 1,
         "name": {
-          "fr": "Backlash",
+          "fr": "Répercussion",
           "en": "Backlash"
         },
         "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_bonearmor_b.png",
         "description": {
-          "fr": "When Bone Armor expires, nearby enemy Heroes take damage equal to 12% of their maximum Health.",
-          "en": "When Bone Armor expires, nearby enemy Heroes take damage equal to 12% of their maximum Health."
+          "fr": "Explose et inflige des dégâts.",
+          "en": "Bone Armor explodes for damage"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpsat44",
+        "id": "tmxwxxlzy02crw",
+        "level": 1,
+        "name": {
+          "fr": "Entraves",
+          "en": "Shackler"
+        },
+        "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_bonearmor_c.png",
+        "description": {
+          "fr": "Armure d’os ralentit et peut voir son temps de recharge réduit.",
+          "en": "Bone Armor Slows, can reduce cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxwxxlzy03506",
+        "level": 1,
+        "name": {
+          "fr": "Ombre",
+          "en": "Shade"
+        },
+        "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_bonearmor.png",
+        "description": {
+          "fr": "Armure d’os permet d’esquiver les attaques de base.",
+          "en": "Bone Armor evades Basic Attacks"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxwxxlzy04ttd",
         "level": 4,
         "name": {
-          "fr": "Reaper's Toll",
+          "fr": "Glas de la Faucheuse",
           "en": "Reaper's Toll"
         },
-        "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_reap.png",
+        "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_reap.png",
         "description": {
-          "fr": "Reduce the cooldown of Spectral Scythe by 2 seconds and its Mana cost by 15.",
-          "en": "Reduce the cooldown of Spectral Scythe by 2 seconds and its Mana cost by 15."
+          "fr": "Réduit le temps de recharge de Faux spectrale et son coût en mana.",
+          "en": "Lower Spectral Scythe cooldown, Mana cost"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jp7wzxx",
+        "id": "tmxwxxlzy05fqk",
+        "level": 4,
+        "name": {
+          "fr": "Faux funeste",
+          "en": "Grim Scythe"
+        },
+        "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_cursedstrikes_off.png",
+        "description": {
+          "fr": "Réduit le temps de recharge de Frappes maudites.",
+          "en": "Reduce Cursed Strikes cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxwxxlzy06njl",
+        "level": 4,
+        "name": {
+          "fr": "Geôliers",
+          "en": "Jailors"
+        },
+        "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_raiseskeleton.png",
+        "description": {
+          "fr": "Quête : Prison d’os génère des guerriers squelettes.",
+          "en": "Quest: Bone Prison spawns Skeletal Warriors"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxwxxlzy07vvh",
         "level": 7,
         "name": {
-          "fr": "Harvest Vitality",
+          "fr": "Moisson de vie",
           "en": "Harvest Vitality"
         },
-        "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_cursedstrikes_off.png",
+        "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_cursedstrikes_off.png",
         "description": {
-          "fr": "Cursed Strikes heals for 70% of the damage dealt to Heroes.",
-          "en": "Cursed Strikes heals for 70% of the damage dealt to Heroes."
+          "fr": "Rend des points de vie pour chaque héros adverse touché par Frappes maudites.",
+          "en": "Cursed Strikes against Heroes heals"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpk18l2",
+        "id": "tmxwxxlzy081zq",
+        "level": 7,
+        "name": {
+          "fr": "Essence de Trag’Oul",
+          "en": "Trag'Oul's Essence"
+        },
+        "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_raiseskeleton.png",
+        "description": {
+          "fr": "Les attaques des guerriers squelettes rendent des points de vie et de mana.",
+          "en": "Skeletal Warrior attacks restore Health, Mana"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxwxxlzy09rch",
+        "level": 7,
+        "name": {
+          "fr": "Mur d’ossements",
+          "en": "Wall Of Bones"
+        },
+        "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_bonearmor.png",
+        "description": {
+          "fr": "Quantité de dégâts pouvant être absorbés par Armure d’os augmentée.",
+          "en": "Increase Bone Armor Shield Amount"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxwxxlzy1020a",
         "level": 10,
         "name": {
-          "fr": "Poison Nova",
+          "fr": "Nova de poison",
           "en": "Poison Nova"
         },
-        "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_poisonnova.png",
+        "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_poisonnova.png",
         "description": {
-          "fr": "After 0.5 seconds, release poisonous missiles that deal 630 (+4% per level) damage to all enemies hit over 10 seconds.",
-          "en": "After 0.5 seconds, release poisonous missiles that deal 630 (+4% per level) damage to all enemies hit over 10 seconds."
+          "fr": "Empoisonne les ennemis proches.",
+          "en": "Poison nearby enemies"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpbu5g4",
+        "id": "tmxwxxlzy1102b",
+        "level": 10,
+        "name": {
+          "fr": "Mages squelettes",
+          "en": "Skeletal Mages"
+        },
+        "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_skeletalmages.png",
+        "description": {
+          "fr": "Invoque des mages de givre qui infligent des dégâts aux ennemis et les ralentissent.",
+          "en": "Summon Frost Mages to damage and Slow enemies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxwxxlzy123ml",
         "level": 13,
         "name": {
-          "fr": "Echoes of Death",
+          "fr": "Échos de la mort",
           "en": "Echoes of Death"
         },
-        "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_reap.png",
+        "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_reap.png",
         "description": {
-          "fr": "Spectral Scythe spawns 2 additional scythes next to the first after 1.5 seconds, dealing 40% damage.",
-          "en": "Spectral Scythe spawns 2 additional scythes next to the first after 1.5 seconds, dealing 40% damage."
+          "fr": "Faux spectrale invoque des faux supplémentaires.",
+          "en": "Spectral Scythe spawns additional scythes"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jp2id04",
+        "id": "tmxwxxlzy13fx1",
+        "level": 13,
+        "name": {
+          "fr": "Injection multipoints",
+          "en": "Rapid Harvest"
+        },
+        "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_cursedstrikes_off.png",
+        "description": {
+          "fr": "Frappes maudites augmente la vitesse d’attaque.",
+          "en": "Cursed Strikes increases Attack Speed"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxwxxlzy14y7e",
+        "level": 13,
+        "name": {
+          "fr": "Amplification des dégâts",
+          "en": "Amplify Damage"
+        },
+        "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_boneprison.png",
+        "description": {
+          "fr": "Prison d’os réduit l’armure.",
+          "en": "Bone Prison lowers Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxwxxlzy15jjw",
         "level": 16,
         "name": {
-          "fr": "Decrepify",
+          "fr": "Mutilation",
           "en": "Decrepify"
         },
-        "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_reap.png",
+        "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_reap.png",
         "description": {
-          "fr": "Enemy Heroes that are damaged by Spectral Scythe or Skeletal Warriors are Slowed by 30% for 2.5 seconds.",
-          "en": "Enemy Heroes that are damaged by Spectral Scythe or Skeletal Warriors are Slowed by 30% for 2.5 seconds."
+          "fr": "Faux spectrale et les guerriers squelettes ralentissent les ennemis.",
+          "en": "Spectral Scythe, Skeletal Warriors Slow"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpxap3s",
+        "id": "tmxwxxlzy16tka",
+        "level": 16,
+        "name": {
+          "fr": "Affaiblir",
+          "en": "Weaken"
+        },
+        "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_cursedstrikes_off.png",
+        "description": {
+          "fr": "Frappes maudites et les guerriers squelettes réduisent les dégâts infligés.",
+          "en": "Cursed Strikes, Skeletal Warriors reduce damage dealt"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxwxxlzy17e78",
+        "level": 16,
+        "name": {
+          "fr": "Lance d’os",
+          "en": "Bone Spear"
+        },
+        "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_bonespear.png",
+        "description": {
+          "fr": "Inflige des dégâts aux ennemis sur une ligne.",
+          "en": "Damage enemies in a line"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxwxxlzy18awv",
         "level": 20,
         "name": {
-          "fr": "Andariel's Visage",
+          "fr": "Visage d’Andarielle",
           "en": "Andariel's Visage"
         },
-        "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_poisonnova.png",
+        "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_poisonnova.png",
         "description": {
-          "fr": "Poison Nova heals for 50% of the damage dealt and its duration is increased by 50%.",
-          "en": "Poison Nova heals for 50% of the damage dealt and its duration is increased by 50%."
+          "fr": "Nova de poison rend des points de vie et sa durée est augmentée.",
+          "en": "Increase Poison Nova duration, now heals"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxwxxlzy19vny",
+        "level": 20,
+        "name": {
+          "fr": "Froide étreinte de la mort",
+          "en": "Cold Hand of Death"
+        },
+        "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_skeletalmages.png",
+        "description": {
+          "fr": "Faux spectrale invoque des mages squelettes.",
+          "en": "Spectral Scythe spawns Skeletal Mages"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxwxxlzy20q0d",
+        "level": 20,
+        "name": {
+          "fr": "Blessure mortelle",
+          "en": "Mortal Wound"
+        },
+        "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_reap.png",
+        "description": {
+          "fr": "Faux spectrale réduit les soins reçus.",
+          "en": "Spectral Scythe reduces healing taken"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmxwxxlzy21nhk",
+        "level": 20,
+        "name": {
+          "fr": "Écrits de Kalan",
+          "en": "Kalan's Edict"
+        },
+        "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_raiseskeleton.png",
+        "description": {
+          "fr": "Les guerriers squelettes réduisent le temps de recharge de la capacité héroïque.",
+          "en": "Skeletal Warriors reduce Heroic cooldown"
         },
         "demoYoutubeId": null
       }
@@ -33729,7 +36709,7 @@ const HEROES = [
   },
   {
     "id": "yrel",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Yrel",
       "en": "Yrel"
@@ -33741,7 +36721,7 @@ const HEROES = [
       "en": "Area bruiser whose abilities grow stronger when charged."
     },
     "gameplay": {
-      "fr": "Yrel charge ses capacités pour maximiser leur effet, encaisse énormément avec Défenseur zélé et impose son terrain avec Sol sacré.",
+      "fr": "Yrel charge ses capacités pour maximiser leur effet, encaisse énormément avec Ardent défenseur et impose son terrain avec Terre sacrée.",
       "en": "Yrel charges her abilities to maximize their effect, tanks huge damage with Ardent Defender, and claims ground with Sacred Ground."
     },
     "spells": [
@@ -33753,21 +36733,21 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_divine_purpose.png",
         "description": {
-          "fr": "Tes capacités réduisent le temps de recharge de tes autres sorts.",
-          "en": "Your abilities reduce your other cooldowns."
+          "fr": "À l'activation, la prochaine capacité de base part instantanément et sans coût. Effet passif : ses capacités se chargent avant de partir, ce qui les renforce mais la ralentit pendant ce temps.",
+          "en": "On activation, the next Basic Ability fires instantly and for free. Passive: her Abilities charge up before firing, which strengthens them but slows her while charging."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "A",
         "name": {
-          "fr": "Revendication",
+          "fr": "Rémission",
           "en": "Vindication"
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_vindication.png",
         "description": {
-          "fr": "Explosion de zone qui étourdit une fois chargée.",
-          "en": "AoE blast that stuns when fully charged."
+          "fr": "Libère une onde sacrée qui blesse les ennemis proches et soigne Yrel, d'autant plus que la capacité a été chargée longtemps.",
+          "en": "Releases holy energy that damages nearby enemies and heals Yrel, more so the longer it was charged."
         },
         "demoYoutubeId": ""
       },
@@ -33779,58 +36759,58 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_righteous_hammer.png",
         "description": {
-          "fr": "Frappe en zone et te soigne.",
-          "en": "Area strike that heals you."
+          "fr": "Repousse les ennemis devant elle ; à pleine charge, le coup porte plus loin, frappe plus fort et les étourdit.",
+          "en": "Knocks back the enemies in front of her; at full charge the blow reaches farther, hits harder and Stuns them."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "E",
         "name": {
-          "fr": "Colère vengeresse",
+          "fr": "Courroux vengeur",
           "en": "Avenging Wrath"
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_avenging_wrath.png",
         "description": {
-          "fr": "Bondit vers une zone et ralentit à l'atterrissage.",
-          "en": "Leaps to an area, slowing on landing."
+          "fr": "Bondit à l'endroit ciblé en blessant et ralentissant les ennemis ; charger la capacité en augmente la portée.",
+          "en": "Leaps to the target location, damaging and Slowing enemies; charging it increases the range."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R1",
         "name": {
-          "fr": "Défenseur zélé",
+          "fr": "Ardent défenseur",
           "en": "Ardent Defender"
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_ardent_defender.png",
         "description": {
-          "fr": "Deviens presque invulnérable puis te soigne.",
-          "en": "Become nearly invulnerable, then heal."
+          "fr": "Une barrière absorbe tous les dégâts subis pendant un court instant et les reconvertit en points de vie.",
+          "en": "A barrier absorbs all damage taken for a brief moment and converts it back into Health."
         },
         "demoYoutubeId": ""
       },
       {
         "key": "R2",
         "name": {
-          "fr": "Sol sacré",
+          "fr": "Terre sacrée",
           "en": "Sacred Ground"
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_sacred_ground.png",
         "description": {
-          "fr": "Crée une zone où tu gagnes une grande quantité d'armure.",
-          "en": "Creates a zone where you gain a large amount of Armor."
+          "fr": "Yrel consacre le sol autour d'elle : elle gagne une armure considérable tant qu'elle reste dans la zone.",
+          "en": "Yrel consecrates the ground around her: she gains considerable Armor while she stays inside."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Charger tes sorts au maximum double presque leur effet.",
-        "en": "Fully charging your abilities nearly doubles their effect."
+        "fr": "Charger tes sorts au maximum en augmente nettement l'effet.",
+        "en": "Fully charging your abilities makes them markedly stronger."
       },
       {
-        "fr": "Défenseur zélé annule un burst complet : garde-le pour le bon moment.",
+        "fr": "Ardent défenseur annule un burst complet : garde-le pour le bon moment.",
         "en": "Ardent Defender negates an entire burst: save it."
       },
       {
@@ -33854,46 +36834,46 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Yrel]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "18 Août 2026",
+          "en": "August 18, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jpqex8k",
+            "primaryId": "tm1z1xjms01406",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jpr6w52",
+            "primaryId": "tm1z1xjms04q7b",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jpxgsp6",
+            "primaryId": "tm1z1xjms07hdb",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jp3ewtt",
+            "primaryId": "tm1z1xjms10ibf",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jpm2qku",
+            "primaryId": "tm1z1xjms12yuo",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jpgpqv1",
+            "primaryId": "tm1z1xjms155iv",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jpgny13",
+            "primaryId": "tm1z1xjms187m7",
             "alternativeIds": []
           }
         ]
@@ -33902,100 +36882,296 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmrryr6jpqex8k",
+        "id": "tm1z1xjms01406",
         "level": 1,
         "name": {
-          "fr": "Light of Karabor",
+          "fr": "Lumière de Karabor",
           "en": "Light of Karabor"
         },
-        "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_vindication.png",
+        "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_vindication.png",
         "description": {
-          "fr": "Increase Vindication's radius by 15%. Hitting an enemy Hero increases Vindication's healing by 45%. If more than one Hero is hit, the bonus is increased to 90%.",
-          "en": "Increase Vindication's radius by 15%. Hitting an enemy Hero increases Vindication's healing by 45%. If more than one Hero is hit, the bonus is increased to 90%."
+          "fr": "Augmente le rayon de Rémission et les points de vie qu’elle rend.",
+          "en": "Increase Vindication radius, healing"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpr6w52",
+        "id": "tm1z1xjms023wn",
+        "level": 1,
+        "name": {
+          "fr": "Intrépidité",
+          "en": "Dauntless"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_abilitytalent_armor.png",
+        "description": {
+          "fr": "Les capacités de base confèrent de l’armure physique.",
+          "en": "Basic Abilities grant Physical Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm1z1xjms03rg1",
+        "level": 1,
+        "name": {
+          "fr": "Leçon de Maraad",
+          "en": "Maraad's Insight"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_heal.png",
+        "description": {
+          "fr": "L’attaque qui suit l’utilisation d’une capacité de base rend des points de vie à Yrel.",
+          "en": "Attacking after Basic Abilities heals"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm1z1xjms04q7b",
         "level": 4,
         "name": {
-          "fr": "Aegis of Light",
+          "fr": "Égide de Lumière",
           "en": "Aegis of Light"
         },
-        "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_avenging_wrath.png",
+        "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_avenging_wrath.png",
         "description": {
-          "fr": "Upon landing, Avenging Wrath grants other nearby allied Heroes 30 Armor for 4 seconds.",
-          "en": "Upon landing, Avenging Wrath grants other nearby allied Heroes 30 Armor for 4 seconds."
+          "fr": "Courroux vengeur confère de l’armure aux alliés.",
+          "en": "Avenging Wrath grants allies Armor"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpxgsp6",
+        "id": "tm1z1xjms050zv",
+        "level": 4,
+        "name": {
+          "fr": "Don des naaru",
+          "en": "Gift of the Naaru"
+        },
+        "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_divine_purpose.png",
+        "description": {
+          "fr": "Dessein divin rend des points de vie à un allié.",
+          "en": "Divine Purpose heals an ally"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm1z1xjms06ebj",
+        "level": 4,
+        "name": {
+          "fr": "Main de liberté",
+          "en": "Hand of Freedom"
+        },
+        "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_hand_of_freedom.png",
+        "description": {
+          "fr": "Augmente la vitesse de déplacement et dissipe les ralentissements et immobilisations.",
+          "en": "Grants Move Speed, removes Slows, Roots"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm1z1xjms07hdb",
         "level": 7,
         "name": {
-          "fr": "Righteous Momentum",
+          "fr": "Élan vertueux",
           "en": "Righteous Momentum"
         },
-        "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_righteous_hammer.png",
+        "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_righteous_hammer.png",
         "description": {
-          "fr": "Gain 5% Movement Speed. Yrel is no longer Slowed while Channeling Righteous Hammer, and instead this bonus is quadrupled.",
-          "en": "Gain 5% Movement Speed. Yrel is no longer Slowed while Channeling Righteous Hammer, and instead this bonus is quadrupled."
+          "fr": "Marteau vertueux augmente la vitesse de déplacement.",
+          "en": "Righteous Hammer increases Movement Speed"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jp3ewtt",
+        "id": "tm1z1xjms08lom",
+        "level": 7,
+        "name": {
+          "fr": "Vengeur sacré",
+          "en": "Holy Avenger"
+        },
+        "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_avenging_wrath.png",
+        "description": {
+          "fr": "Temps de recharge réduit à pleine charge.",
+          "en": "Avenging Wrath cooldown reduced at max charge"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm1z1xjms09opc",
+        "level": 7,
+        "name": {
+          "fr": "Palefroi divin",
+          "en": "Divine Steed"
+        },
+        "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_divine_steed.png",
+        "description": {
+          "fr": "L’invocation de la monture est instantanée.",
+          "en": "Mounting is instant"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm1z1xjms10ibf",
         "level": 10,
         "name": {
-          "fr": "Ardent Defender",
+          "fr": "Ardent défenseur",
           "en": "Ardent Defender"
         },
-        "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_ardent_defender.png",
+        "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_ardent_defender.png",
         "description": {
-          "fr": "Surround Yrel in a barrier for 3 seconds, absorbing all damage taken and healing her for 50% of the damage received.",
-          "en": "Surround Yrel in a barrier for 3 seconds, absorbing all damage taken and healing her for 50% of the damage received."
+          "fr": "Une barrière absorbe tous les dégâts subis pendant un court instant et les reconvertit en points de vie.",
+          "en": "A barrier absorbs all damage taken for a brief moment and converts it back into Health."
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpm2qku",
+        "id": "tm1z1xjms11jjp",
+        "level": 10,
+        "name": {
+          "fr": "Terre sacrée",
+          "en": "Sacred Ground"
+        },
+        "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_sacred_ground.png",
+        "description": {
+          "fr": "Yrel consacre le sol autour d'elle : elle gagne une armure considérable tant qu'elle reste dans la zone.",
+          "en": "Yrel consecrates the ground around her: she gains considerable Armor while she stays inside."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm1z1xjms12yuo",
         "level": 13,
         "name": {
-          "fr": "Aldor Peacekeeper",
+          "fr": "Garde-paix de l’Aldor",
           "en": "Aldor Peacekeeper"
         },
-        "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_vindication.png",
+        "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_vindication.png",
         "description": {
-          "fr": "Enemy Heroes hit by Vindication at maximum charge deal 40% less damage for 3 seconds.",
-          "en": "Enemy Heroes hit by Vindication at maximum charge deal 40% less damage for 3 seconds."
+          "fr": "Rémission peut réduire les dégâts ennemis.",
+          "en": "Vindication can reduce enemy damage"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpgpqv1",
+        "id": "tm1z1xjms13ya5",
+        "level": 13,
+        "name": {
+          "fr": "Repentance",
+          "en": "Repentance"
+        },
+        "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_avenging_wrath.png",
+        "description": {
+          "fr": "Augmente l’intensité et la durée du ralentissement de Courroux vengeur.",
+          "en": "Increase Avenging Wrath Slow, duration"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm1z1xjms14pk5",
+        "level": 13,
+        "name": {
+          "fr": "Élue de Velen",
+          "en": "Velen's Chosen"
+        },
+        "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_velens_chosen.png",
+        "description": {
+          "fr": "Les capacités de base peuvent conférer de la puissance de capacité.",
+          "en": "Basic Abilities can grant Spell Power"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm1z1xjms155iv",
         "level": 16,
         "name": {
-          "fr": "Templar's Verdict",
+          "fr": "Verdict du templier",
           "en": "Templar's Verdict"
         },
-        "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_righteous_hammer.png",
+        "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_righteous_hammer.png",
         "description": {
-          "fr": "Righteous Hammer reduces the Armor of enemy Heroes hit by 20 for 4 seconds and deals bonus damage equal to 7% of their maximum Health.",
-          "en": "Righteous Hammer reduces the Armor of enemy Heroes hit by 20 for 4 seconds and deals bonus damage equal to 7% of their maximum Health."
+          "fr": "Marteau vertueux réduit l’armure des cibles et leur inflige un pourcentage de dégâts.",
+          "en": "Righteous Hammer reduces Armor, deals percent damage"
         },
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jpgny13",
+        "id": "tm1z1xjms16t9o",
+        "level": 16,
+        "name": {
+          "fr": "Faveur divine",
+          "en": "Divine Favor"
+        },
+        "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_divine_purpose.png",
+        "description": {
+          "fr": "Les capacités de base réduisent le temps de recharge de Dessein divin.",
+          "en": "Basic Abilities reduce Divine Purpose cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm1z1xjms175u2",
+        "level": 16,
+        "name": {
+          "fr": "Colère divine",
+          "en": "Holy Wrath"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_aoe.png",
+        "description": {
+          "fr": "L’attaque de base qui suit l’utilisation d’une capacité de base inflige des dégâts de zone.",
+          "en": "Attacks splash after casting Basic Abilities"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm1z1xjms187m7",
         "level": 20,
         "name": {
-          "fr": "Word of Glory",
+          "fr": "Mot de gloire",
           "en": "Word of Glory"
         },
-        "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_ardent_defender.png",
+        "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_ardent_defender.png",
         "description": {
-          "fr": "Increase the amount that Yrel heals from damage received from 50% to 75%. Ardent Defender heals nearby allied Heroes for 100% of the healing received by Yrel.",
-          "en": "Increase the amount that Yrel heals from damage received from 50% to 75%. Ardent Defender heals nearby allied Heroes for 100% of the healing received by Yrel."
+          "fr": "Conversion d’Ardent défenseur augmentée, rend des points de vie aux alliés dans une zone.",
+          "en": "Ardent Defender conversion increased, heals allies in an area"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm1z1xjms19649",
+        "level": 20,
+        "name": {
+          "fr": "Terre bénie",
+          "en": "Hallowed Ground"
+        },
+        "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_sacred_ground.png",
+        "description": {
+          "fr": "Courroux vengeur permet de déplacer Terre sacrée.",
+          "en": "Avenging Wrath moves Sacred Ground"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm1z1xjms20q6t",
+        "level": 20,
+        "name": {
+          "fr": "Bubulle-TP",
+          "en": "Bubble Hearth"
+        },
+        "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_bubble_hearth.png",
+        "description": {
+          "fr": "Rend invulnérable Yrel qui se téléporte au hall des Tempêtes.",
+          "en": "Activate to become Invulnerable and Hearth"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tm1z1xjms21b4i",
+        "level": 20,
+        "name": {
+          "fr": "Séraphin",
+          "en": "Seraphim"
+        },
+        "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_seraphim.png",
+        "description": {
+          "fr": "Rend insensible aux effets de contrôle.",
+          "en": "Activate to become Unstoppable"
         },
         "demoYoutubeId": null
       }
