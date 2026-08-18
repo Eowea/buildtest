@@ -9624,12 +9624,12 @@ const HEROES = [
     "role": "Support",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_abathur.png",
     "headline": {
-      "fr": "Il gagne la partie sans jamais quitter sa base.",
-      "en": "He wins the game without ever leaving his base."
+      "fr": "Il pèse sur toute le champ de bataille sans jamais aller au combat.",
+      "en": "He shapes the whole Battleground without ever joining a fight."
     },
     "gameplay": {
-      "fr": "Abathur ne se bat jamais lui-même : il colle un Symbiote sur un allié ou un serviteur et joue à travers lui, tout en minant la carte de Nids toxiques.",
-      "en": "Abathur never fights himself: he attaches a Symbiote to an ally or Minion and plays through them, while seeding the map with Toxic Nests."
+      "fr": "Abathur ne se bat jamais lui-même : ses sauterelles poussent les lignes pendant qu'il colle un Symbiote sur un allié et joue à travers lui.",
+      "en": "Abathur never fights himself: his Locusts push lanes while he attaches a Symbiote to an ally and plays through them."
     },
     "spells": [
       {
@@ -10279,12 +10279,12 @@ const HEROES = [
         "en": "Telekinesis moves you too: use it to get in, then to get out."
       },
       {
-        "fr": "Ton Sadisme est perdu à la mort : ne prends jamais un combat perdu d'avance.",
-        "en": "Your Sadism is lost on death: never take a fight you cannot win."
+        "fr": "Le sadisme gagné sur tes victimes est perdu à ta mort : ne prends aucun risque inutile.",
+        "en": "The Sadism you gain from Takedowns is lost on death: take no needless risks."
       },
       {
-        "fr": "Représailles te rend intouchable : lance-la dans l'engagement, pas après.",
-        "en": "Counter-Strike makes you untouchable: cast it into the engage, not after."
+        "fr": "Représailles te protège de tous les dégâts : lance-la dans l'engagement, pas après.",
+        "en": "Counter-Strike protects you from all damage: cast it into the engage, not after."
       }
     ],
     "builds": [
@@ -10754,8 +10754,8 @@ const HEROES = [
         "en": "Use your Abilities before the engage to build up Beetles."
       },
       {
-        "fr": "Cocon retire un tank adverse du combat pendant un objectif entier.",
-        "en": "Cocoon removes an enemy tank from the fight for an entire objective."
+        "fr": "Cocon met un héros hors du combat quelques secondes, sauf si ses alliés brisent le cocon.",
+        "en": "Cocoon removes a Hero for a few seconds, unless their allies break the cocoon."
       }
     ],
     "builds": [
@@ -11128,12 +11128,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_artanis.png",
     "headline": {
-      "fr": "Il échange sa place avec sa cible et la garde captive.",
-      "en": "He swaps places with his target and keeps them trapped."
+      "fr": "Il échange sa place avec sa cible et lui colle aux basques.",
+      "en": "He swaps places with his target and sticks to them."
     },
     "gameplay": {
-      "fr": "Artanis attrape un héros avec Prisme de phase pour l'échanger de place, puis le retient au corps à corps pendant que son bouclier se recharge sans arrêt.",
-      "en": "Artanis grabs a Hero with Phase Prism to swap positions, then keeps them in melee while his Shield keeps recharging."
+      "fr": "Artanis attire un héros avec Prisme de phase en échangeant leurs positions, puis le harcèle au corps à corps pendant que son bouclier se recharge.",
+      "en": "Artanis yanks a Hero in with Phase Prism by swapping positions, then harries them in melee while his Shield keeps recharging."
     },
     "spells": [
       {
@@ -11225,8 +11225,8 @@ const HEROES = [
         "en": "Each enemy hit by Blade Dash brings your next Shield closer."
       },
       {
-        "fr": "Rayon purificateur suit sa cible partout : lance-le sur qui ne peut pas fuir.",
-        "en": "Purifier Beam follows its target anywhere: cast it on whoever cannot escape."
+        "fr": "Rayon purificateur suit sa cible partout : elle devra fuir son équipe pour s'en défaire.",
+        "en": "Purifier Beam follows its target anywhere: they must flee their team to shake it."
       }
     ],
     "builds": [
@@ -12173,7 +12173,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Lance ton Globe sur les vagues de sbires : chaque victime le renforce à vie.",
+        "fr": "Lance ton Globe sur les vagues de serviteurs : chaque victime le renforce à vie.",
         "en": "Throw your Globe at Minion waves: every kill strengthens it for good."
       },
       {
@@ -12648,8 +12648,8 @@ const HEROES = [
         "en": "Ignite the pool with Flame Stream: enemies on it burn, and you heal in it."
       },
       {
-        "fr": "Le Bunker peut sauver un allié en danger : il devient intouchable à l'intérieur.",
-        "en": "The Bunker can save an endangered ally: they become untargetable inside."
+        "fr": "Le Bunker abrite tes alliés et les renforce à la sortie, mais l'ennemi peut le détruire.",
+        "en": "The Bunker shelters your allies and empowers them on exit, but the enemy can destroy it."
       },
       {
         "fr": "Charge à réaction sert autant à engager qu'à décoller après un combat.",
@@ -13026,8 +13026,8 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_amazon.png",
     "headline": {
-      "fr": "Immobile, elle est fragile ; en mouvement, intouchable.",
-      "en": "Standing still she is fragile; on the move, untouchable."
+      "fr": "Immobile elle est fragile, en mouvement elle encaisse tout.",
+      "en": "Standing still she is fragile, on the move she soaks everything."
     },
     "gameplay": {
       "fr": "Cassia gagne de l'armure tant qu'elle bouge et la perd dès qu'elle s'arrête. Elle aveugle les assassins d'attaques de base et les punit ensuite.",
@@ -13123,7 +13123,7 @@ const HEROES = [
         "en": "Blind first, then strike: you hit Blinded targets far harder."
       },
       {
-        "fr": "Javelot foudroyant se scinde à l'impact : vise le sbire devant le héros.",
+        "fr": "Javelot foudroyant se scinde à l'impact : vise le serviteur devant le héros.",
         "en": "Lightning Fury splits on impact: aim at the Minion in front of the Hero."
       }
     ],
@@ -14453,8 +14453,8 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_chromie.png",
     "headline": {
-      "fr": "Elle a deux niveaux d'avance sur tout le monde.",
-      "en": "She is two levels ahead of everyone else."
+      "fr": "Elle a toujours un talent d'avance sur tout le monde.",
+      "en": "She is always a talent ahead of everyone else."
     },
     "gameplay": {
       "fr": "Chromie obtient ses talents avant tout le monde et frappe de très loin. Extrêmement fragile, elle ne survit qu'en restant hors de portée.",
@@ -14542,8 +14542,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Souffle de sable est ton unique source de dégâts : ne le rate pas.",
-        "en": "Sand Blast is your only damage source: do not miss it."
+        "fr": "Souffle de sable est ton coup le plus fort : rate-le et tu ne fais plus rien.",
+        "en": "Sand Blast is your hardest hit: miss it and you do almost nothing."
       },
       {
         "fr": "Pose tes pièges temporels avant l'objectif, puis déclenche-les avec ton trait.",
@@ -15473,8 +15473,8 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_dehaka.png",
     "headline": {
-      "fr": "Il surgit de n'importe quel buisson de la carte.",
-      "en": "He erupts from any bush on the map."
+      "fr": "Il surgit de n'importe quel buisson du champ de bataille.",
+      "en": "He erupts from any bush on the Battleground."
     },
     "gameplay": {
       "fr": "Dehaka récolte l'essence des victimes pour se soigner et grandir, et rejoint n'importe quel buisson du champ de bataille avec Traqueur de la jungle.",
@@ -15583,8 +15583,8 @@ const HEROES = [
         "en": "Drag pulls a target back to your team, but any crowd control stops it."
       },
       {
-        "fr": "Enfouissement te met en stase : c'est une échappatoire, pas un déplacement.",
-        "en": "Burrow puts you in Stasis: it is an escape, not a travel tool."
+        "fr": "Enfouissement te met à l'abri et te laisse continuer d'avancer sous terre.",
+        "en": "Burrow shelters you and still lets you keep moving underground."
       }
     ],
     "builds": [
@@ -16050,8 +16050,8 @@ const HEROES = [
         "en": "Shadow Charge only Stuns if the target hits terrain: aim for the wall."
       },
       {
-        "fr": "Enchaîne Charge d'ombre puis Correction pour ramener une cible dans ton équipe.",
-        "en": "Chain Shadow Charge into Overpower to drag a target into your team."
+        "fr": "Correction jette la cible derrière toi : place-toi entre elle et sa fuite.",
+        "en": "Overpower slams the target behind you: stand between them and their escape."
       },
       {
         "fr": "Collecte les âmes en continu : ton retour à la vie en dépend directement.",
@@ -16587,8 +16587,8 @@ const HEROES = [
         "en": "In Pilot Mode, keep attacking: every hit brings your new mech closer."
       },
       {
-        "fr": "Matrice défensive réduit énormément les dégâts : couvre ton porteur de dégâts.",
-        "en": "Defense Matrix heavily cuts damage: cover your carry with it."
+        "fr": "Matrice défensive réduit énormément les dégâts : couvre ton assassin avec.",
+        "en": "Defense Matrix heavily cuts damage: use it to cover your assassin."
       }
     ],
     "builds": [
@@ -17461,8 +17461,8 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_falstad.png",
     "headline": {
-      "fr": "Il traverse la carte quand ses alliés marchent encore.",
-      "en": "He crosses the map while his allies are still walking."
+      "fr": "Il traverse le champ de bataille quand ses alliés marchent encore.",
+      "en": "He crosses the Battleground while his allies are still walking."
     },
     "gameplay": {
       "fr": "Falstad survole le terrain avec Vol pour arriver là où personne ne l'attend, et harcèle de loin avec Marteau-boomerang.",
@@ -17563,8 +17563,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Vol traverse toute la carte : sers-t'en pour tourner un objectif, pas pour fuir.",
-        "en": "Flight crosses the whole map: use it to flank an objective, not to escape."
+        "fr": "Vol traverse toute le champ de bataille : sers-t'en pour tourner un objectif, pas pour fuir.",
+        "en": "Flight crosses the whole Battleground: use it to flank an objective, not to escape."
       },
       {
         "fr": "Marteau-boomerang blesse à l'aller comme au retour : place-toi pour les deux passages.",
@@ -18035,7 +18035,7 @@ const HEROES = [
     "tips": [
       {
         "fr": "Ton bouclier se recharge hors combat : recule quelques secondes plutôt que rentrer.",
-        "en": "Your Shield regenerates out of combat: back off a few seconds instead of going home."
+        "en": "Your Shield regenerates out of combat: back off a few seconds instead of recalling to the Hall of Storms."
       },
       {
         "fr": "Découpeur à plasma décrit deux cercles : place-le pour toucher deux fois.",
@@ -21357,8 +21357,8 @@ const HEROES = [
       "en": "He fires from somewhere nobody is watching."
     },
     "gameplay": {
-      "fr": "Hanzo franchit les obstacles pour tirer depuis un angle inattendu, révèle des zones entières avec Flèche sonique, et frappe d'un bout à l'autre de la carte.",
-      "en": "Hanzo jumps terrain to fire from an unexpected angle, reveals whole areas with Sonic Arrow, and strikes from one end of the map to the other."
+      "fr": "Hanzo franchit les obstacles pour tirer depuis un angle inattendu, révèle des zones entières avec Flèche sonique, et frappe d'un bout à l'autre du champ de bataille.",
+      "en": "Hanzo jumps terrain to fire from an unexpected angle, reveals whole areas with Sonic Arrow, and strikes from one end of the Battleground to the other."
     },
     "spells": [
       {
@@ -21450,8 +21450,8 @@ const HEROES = [
         "en": "Sonic Arrow on an objective gives your team permanent vision."
       },
       {
-        "fr": "Flèche du dragon frappe plus fort de loin : tire du fond de la carte.",
-        "en": "Dragon's Arrow hits harder from afar: fire from across the map."
+        "fr": "Flèche du dragon frappe plus fort de loin : tire du fond du champ de bataille.",
+        "en": "Dragon's Arrow hits harder from afar: fire from across the Battleground."
       }
     ],
     "builds": [
@@ -21918,7 +21918,7 @@ const HEROES = [
       },
       {
         "fr": "Ramasse ton butin après un combat pour te soigner sans rentrer.",
-        "en": "Pick up your loot after a fight to heal without going home."
+        "en": "Pick up your loot after a fight to heal without recalling to the Hall of Storms."
       },
       {
         "fr": "Lardée sauvage rebondit sur les obstacles : sert autant à fuir qu'à poursuivre.",
@@ -22299,7 +22299,7 @@ const HEROES = [
       "en": "He never stops moving and heals with every hit."
     },
     "gameplay": {
-      "fr": "Illidan enchaîne Plongeon et Voie des lames pour rester collé à sa cible, en se soignant sur chaque attaque. Les contrôles sont sa seule vraie faiblesse.",
+      "fr": "Illidan enchaîne Plongeon et Voie des lames pour rester collé à sa cible, en se soignant sur chaque attaque. Les effets de contrôle sont sa seule vraie faiblesse.",
       "en": "Illidan chains Dive and Sweeping Strike to stay glued to his target, healing on every attack. Crowd control is his only real weakness."
     },
     "spells": [
@@ -22384,7 +22384,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ne plonge jamais en premier : attends que le tank ait absorbé les contrôles.",
+        "fr": "Ne plonge jamais en premier : attends que le tank ait absorbé les effets de contrôle.",
         "en": "Never dive first: wait until your tank has soaked the crowd control."
       },
       {
@@ -24801,8 +24801,8 @@ const HEROES = [
         "en": "Root with Frost Nova's center so your Chains can follow up."
       },
       {
-        "fr": "Fissure d'ombre frappe n'importe où sur la carte : achève de loin.",
-        "en": "Shadow Fissure strikes anywhere on the map: finish from afar."
+        "fr": "Fissure d'ombre frappe n'importe où sur le champ de bataille : achève de loin.",
+        "en": "Shadow Fissure strikes anywhere on the Battleground: finish from afar."
       }
     ],
     "builds": [
@@ -25268,7 +25268,7 @@ const HEROES = [
         "en": "Pull then impale: the combo is nearly impossible to dodge."
       },
       {
-        "fr": "Sans contrôle allié, tu meurs avant ton combo : attends l'engagement.",
+        "fr": "Sans effet de contrôle allié, tu meurs avant ton combo : attends l'engagement.",
         "en": "Without allied crowd control you die before your combo: wait for the engage."
       },
       {
@@ -27281,8 +27281,8 @@ const HEROES = [
         "en": "You never mount: always ready to fight, but always slower."
       },
       {
-        "fr": "Spores affaiblissantes ralentit tout ce qui saigne déjà : c'est ton contrôle.",
-        "en": "Crippling Spores Slows everything already bleeding: that is your crowd control."
+        "fr": "Spores affaiblissantes ralentit tout ce qui est déjà empoisonné : c'est ton contrôle.",
+        "en": "Crippling Spores Slows everything already poisoned: that is your crowd control."
       }
     ],
     "builds": [
@@ -27786,15 +27786,15 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Entraves d'ombre immobilise la cible : attaque-la juste après.",
-        "en": "Umbral Bind Roots the target: attack them right after."
+        "fr": "Entraves d'ombre lie la cible : elle est ramenée à toi si elle tente de fuir.",
+        "en": "Umbral Bind tethers the target: they get yanked back if they try to leave."
       },
       {
-        "fr": "Esprit vengeur sert d'engagement et de repli : garde toujours l'ombre derrière toi.",
-        "en": "Spirit of Vengeance is both engage and escape: always keep the shadow behind you."
+        "fr": "Esprit vengeur revient vers son point de départ : tu peux te téléporter dessus.",
+        "en": "Spirit of Vengeance returns to where it started: you can Blink to it."
       },
       {
-        "fr": "Salto des Gardiennes te rend immunisé un instant : saute dans le contrôle, pas avant.",
+        "fr": "Salto des Gardiennes t'immunise un instant : saute dans l'effet de contrôle, pas avant.",
         "en": "Vault of the Wardens makes you immune for a moment: jump into the crowd control, not before."
       }
     ],
@@ -28718,8 +28718,8 @@ const HEROES = [
         "en": "Your Mark eats a percentage of Health: focus tanks, not squishies."
       },
       {
-        "fr": "Voile du faucheur traverse les murs pour engager comme pour fuir.",
-        "en": "Death Shroud goes through walls to engage and to escape."
+        "fr": "Frappe éthérée te téléporte sur une cible marquée, même de l'autre côté d'un mur.",
+        "en": "Wraith Strike teleports you to a Marked target, even through a wall."
       },
       {
         "fr": "Ne récolte les âmes qu'après avoir marqué plusieurs ennemis.",
@@ -29114,8 +29114,8 @@ const HEROES = [
       "en": "He heals no one, he relocates his whole team."
     },
     "gameplay": {
-      "fr": "Medivh vole au-dessus de la carte en Forme de corbeau, ouvre des Portails pour engager ou fuir, et absorbe les gros sorts avec Force de volonté.",
-      "en": "Medivh flies over the map in Raven Form, opens Portals to engage or escape, and soaks big spells with Force of Will."
+      "fr": "Medivh vole au-dessus du champ de bataille en Forme de corbeau, ouvre des Portails pour engager ou fuir, et absorbe les gros sorts avec Force de volonté.",
+      "en": "Medivh flies over the Battleground in Raven Form, opens Portals to engage or escape, and soaks big spells with Force of Will."
     },
     "spells": [
       {
@@ -29207,8 +29207,8 @@ const HEROES = [
         "en": "Force of Will negates an entire burst: save it for the spell that kills."
       },
       {
-        "fr": "En Forme de corbeau tu es intouchable : c'est ta seule vraie défense.",
-        "en": "In Raven Form you are untouchable: it is your only real defense."
+        "fr": "En Forme de corbeau tu ne peux pas être ciblé : c'est ta seule vraie défense.",
+        "en": "In Raven Form you cannot be targeted: that is your only real defense."
       }
     ],
     "builds": [
@@ -31101,8 +31101,8 @@ const HEROES = [
         "en": "Always hide your Egg somewhere unpredictable, never twice in the same spot."
       },
       {
-        "fr": "Poisson-globe fait très mal s'il explose : couvre-le avec Bulle de sûreté.",
-        "en": "Pufferfish hits hard if it detonates: cover it with Safety Bubble."
+        "fr": "Embourbe d'abord, lance le Poisson-globe ensuite : Bourbe amplifie tout le reste.",
+        "en": "Slime first, then throw the Pufferfish: Slime amplifies everything else."
       },
       {
         "fr": "Ta mort ne donne presque pas d'expérience : joue bien plus agressivement que les autres.",
@@ -32111,7 +32111,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ne dévoile jamais ta position pour un sbire : tu perds tes cumuls et ta surprise.",
+        "fr": "Ne dévoile jamais ta position pour un serviteur : tu perds tes cumuls et ta surprise.",
         "en": "Never reveal yourself for a Minion: you lose your stacks and your surprise."
       },
       {
@@ -32497,8 +32497,8 @@ const HEROES = [
       "en": "She heals by hitting, with no healer at all."
     },
     "gameplay": {
-      "fr": "Orphéa accumule du chaos avec ses capacités, puis le consomme d'une attaque de base qui frappe très fort et la soigne intégralement.",
-      "en": "Orphea builds Chaos with her Abilities, then spends it on a Basic Attack that hits very hard and fully heals her."
+      "fr": "Orphéa accumule du chaos avec ses capacités, puis le consomme d'une attaque de base qui frappe très fort et lui rend l'équivalent des dégâts infligés.",
+      "en": "Orphea builds Chaos with her Abilities, then spends it on a Basic Attack that hits very hard and heals her for the damage dealt."
     },
     "spells": [
       {
@@ -33452,8 +33452,8 @@ const HEROES = [
       "en": "She makes everyone bleed and runs down anyone."
     },
     "gameplay": {
-      "fr": "Qhira empile des saignements avec ses attaques, se déplace avec son Grappin et isole une cible avec Orbite meurtrière, où elle devient intouchable.",
-      "en": "Qhira stacks bleeds with her attacks, travels with her Grappling Hook, and isolates a target with Revolving Sweep, where she becomes untouchable."
+      "fr": "Qhira empile des saignements avec ses attaques, se déplace avec son Grappin et isole une cible avec Orbite meurtrière, où plus aucun effet ne l'atteint.",
+      "en": "Qhira stacks bleeds with her attacks, travels with her Grappling Hook, and isolates a target with Revolving Sweep, where no effect can reach her."
     },
     "spells": [
       {
@@ -33537,8 +33537,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Orbite meurtrière ramène une cible vers ton équipe : vise l'arrière-garde.",
-        "en": "Revolving Sweep drags a target back to your team: aim for the back line."
+        "fr": "Orbite meurtrière t'amène sur ta cible ; la relancer la projette au loin.",
+        "en": "Revolving Sweep brings you to your target; reactivating it launches them away."
       },
       {
         "fr": "Pendant la rotation tu ignores tous les contrôles : c'est ta fenêtre pour engager.",
@@ -34543,12 +34543,12 @@ const HEROES = [
         "en": "Penetrating Round knocks back: use it to escape, not for the damage."
       },
       {
-        "fr": "Inspiration relance ton attaque et accélère aussi tes sbires en ligne.",
+        "fr": "Inspiration relance ton attaque et accélère aussi tes serviteurs en ligne.",
         "en": "Inspire resets your attack and speeds up your Minions in lane too."
       },
       {
-        "fr": "Poussée d'adrénaline te soigne : garde-la, tu n'as pas d'autre échappatoire.",
-        "en": "Adrenaline Rush heals you: save it, you have no other escape."
+        "fr": "Poussée d'adrénaline te soigne d'un coup : attaquer en réduit fortement le temps de recharge.",
+        "en": "Adrenaline Rush heals you in one burst: attacking sharply cuts its cooldown."
       }
     ],
     "builds": [
@@ -35517,8 +35517,8 @@ const HEROES = [
         "en": "Constantly swap between image and real body to scramble enemy targeting."
       },
       {
-        "fr": "Marche du vent te soigne : recule quelques secondes plutôt que de rentrer à la base.",
-        "en": "Wind Walk heals you: back off for a few seconds instead of going home."
+        "fr": "Marche du vent te soigne : recule quelques secondes plutôt que de rentrer au hall des Tempêtes.",
+        "en": "Wind Walk heals you: back off for a few seconds instead of recalling to the Hall of Storms."
       }
     ],
     "builds": [
@@ -36383,7 +36383,7 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_barbarian.png",
     "headline": {
-      "fr": "Ni mana, ni soigneur, ni raison de rentrer à la base.",
+      "fr": "Ni mana, ni soigneur, ni raison de rentrer au hall des Tempêtes.",
       "en": "No Mana, no healer, no reason to go home."
     },
     "gameplay": {
@@ -36476,7 +36476,7 @@ const HEROES = [
         "en": "Ancient Spear lets you reach a target or escape a bad fight."
       },
       {
-        "fr": "Trombe te soigne : utilise-la sur un groupe de sbires pour rester en ligne.",
+        "fr": "Trombe te soigne : utilise-la sur un groupe de serviteurs pour rester en ligne.",
         "en": "Whirlwind heals you: use it on a Minion wave to stay in lane."
       },
       {
@@ -37342,7 +37342,7 @@ const HEROES = [
       "en": "She disables Structures and pushes on her own."
     },
     "gameplay": {
-      "fr": "Sylvanas neutralise les bâtiments et les sbires d'un simple passage, ce qui lui permet de prendre des lignes entières sans aide.",
+      "fr": "Sylvanas neutralise les bâtiments et les serviteurs d'un simple passage, ce qui lui permet de prendre des lignes entières sans aide.",
       "en": "Sylvanas disables Structures and Minions just by passing through, letting her take entire lanes unaided."
     },
     "spells": [
@@ -37427,15 +37427,15 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tes attaques neutralisent les tours : entre dans la base sans crainte des canons.",
-        "en": "Your attacks disable towers: walk into the base without fearing the guns."
+        "fr": "Tes attaques neutralisent les bâtiments : entre dans la base ennemie sans craindre les tirs.",
+        "en": "Your attacks disable Structures: walk into the enemy base without fearing their fire."
       },
       {
         "fr": "Vague de hantise sert d'aller-retour : lance-la avant d'engager, pas après.",
         "en": "Haunting Wave is a round trip: cast it before engaging, not after."
       },
       {
-        "fr": "Dague de l'ombre se propage : lance-la sur un sbire au milieu d'un groupe.",
+        "fr": "Dague de l'ombre se propage : lance-la sur un serviteur au milieu d'un groupe.",
         "en": "Shadow Dagger spreads: cast it on a Minion in the middle of a pack."
       }
     ],
@@ -38751,12 +38751,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_thrall.png",
     "headline": {
-      "fr": "Il se soigne en frappant et coupe la carte en deux.",
-      "en": "He heals by hitting and cuts the map in half."
+      "fr": "Il se soigne en frappant et coupe le champ de bataille en deux.",
+      "en": "He heals by hitting and cuts the Battleground in half."
     },
     "gameplay": {
-      "fr": "Thrall se régénère à chaque capacité qui touche, tient une ligne tout seul, et Fracture peut couper une équipe entière en deux.",
-      "en": "Thrall regenerates from every Ability that connects, holds a lane alone, and Sundering can split an entire team in two."
+      "fr": "Thrall alimente son trait à chaque capacité qui touche, ce qui le soigne d'un coup une fois plein. Il tient une lane seul, et Fracture coupe une équipe en deux.",
+      "en": "Thrall feeds his trait with every Ability that connects, healing him in one burst once full. He holds a lane alone, and Sundering splits a team in two."
     },
     "spells": [
       {
@@ -38840,8 +38840,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Chaque capacité qui touche te soigne : ne recule pas trop tôt.",
-        "en": "Every Ability that connects heals you: do not back off too early."
+        "fr": "Chaque capacité qui touche alimente ton trait, qui te soigne d'un coup une fois plein.",
+        "en": "Every Ability that connects feeds your trait, which heals you in one burst once full."
       },
       {
         "fr": "Esprit farouche immobilise et va plus loin à chaque héros touché.",
@@ -39240,8 +39240,8 @@ const HEROES = [
       "en": "Impossible to catch, impossible to ignore."
     },
     "gameplay": {
-      "fr": "Tracer harcèle sans interruption, ne monte jamais et remonte le temps pour annuler les dégâts qu'elle vient de subir.",
-      "en": "Tracer harasses without pause, never mounts, and rewinds time to undo the damage she just took."
+      "fr": "Tracer harcèle sans interruption et ne monte jamais. Rappel la replace où elle était, recharge ses munitions et efface les effets négatifs.",
+      "en": "Tracer harasses without pause and never mounts. Recall returns her to where she was, refills her ammo and wipes off negative effects."
     },
     "spells": [
       {
@@ -39312,8 +39312,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Rappel te ramène en arrière et te soigne : garde-le pour survivre, pas pour fuir.",
-        "en": "Recall rewinds and heals you: save it to survive, not to travel."
+        "fr": "Rappel te replace et te purge, mais ne te soigne pas : c'est une esquive, pas un soin.",
+        "en": "Recall repositions and cleanses you, but does not heal: it is a dodge, not a heal."
       },
       {
         "fr": "Tu ne montes pas : tu es toujours prête à te battre, où que tu sois.",
@@ -41387,7 +41387,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Garde tes cumuls de haine actifs en attaquant régulièrement, même des sbires.",
+        "fr": "Garde tes cumuls de haine actifs en attaquant régulièrement, même des serviteurs.",
         "en": "Keep your Hatred stacks up by attacking regularly, even Minions."
       },
       {
@@ -42751,8 +42751,8 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_yrel.png",
     "headline": {
-      "fr": "Elle prend son temps, et ça fait deux fois plus mal.",
-      "en": "She takes her time, and it hurts twice as much."
+      "fr": "Elle prend son temps, et le coup n'en est que plus lourd.",
+      "en": "She takes her time, and the blow lands all the heavier."
     },
     "gameplay": {
       "fr": "Yrel charge ses capacités pour les renforcer, au prix de sa vitesse. Ardent défenseur transforme un burst entier en points de vie.",
@@ -44317,8 +44317,8 @@ const HEROES = [
         "en": "Singularity Spike detonates after a delay: lead your target's movement."
       },
       {
-        "fr": "Prison du Vide peut annuler tout un engagement ennemi : ose la lancer large.",
-        "en": "Void Prison can negate an entire enemy engage: dare to cast it wide."
+        "fr": "Prison du Vide fige aussi tes alliés : vise l'ennemi seul, pas la mêlée générale.",
+        "en": "Void Prison freezes your allies too: aim at the enemy alone, not the whole brawl."
       }
     ],
     "builds": [
