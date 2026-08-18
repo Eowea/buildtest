@@ -9624,12 +9624,12 @@ const HEROES = [
     "role": "Support",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_abathur.png",
     "headline": {
-      "fr": "Soutien global qui influence toute la carte sans jamais y être.",
-      "en": "Global support who influences the whole map without ever being there."
+      "fr": "Il gagne la partie sans jamais quitter sa base.",
+      "en": "He wins the game without ever leaving his base."
     },
     "gameplay": {
-      "fr": "Abathur reste à l'abri et se greffe sur ses alliés pour les protéger et amplifier leurs dégâts, tout en poussant les lanes avec ses sbires.",
-      "en": "Abathur stays safe and symbiotes onto allies to protect them and amplify their damage, while pushing lanes with his minions."
+      "fr": "Abathur ne se bat jamais lui-même : il colle un Symbiote sur un allié ou un serviteur et joue à travers lui, tout en minant la carte de Nids toxiques.",
+      "en": "Abathur never fights himself: he attaches a Symbiote to an ally or Minion and plays through them, while seeding the map with Toxic Nests."
     },
     "spells": [
       {
@@ -9761,16 +9761,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ne te fais jamais surprendre : ta position réelle doit rester secrète.",
-        "en": "Never get caught: your real position must stay hidden."
+        "fr": "Reste sur ta ligne arrière : Tunnel te déplace, ta présence physique ne sert à rien.",
+        "en": "Stay in your back line: Tunnel moves you around, your physical presence is worthless."
       },
       {
-        "fr": "Symbiote sur le tank pendant un engagement, sur un assassin pour les dégâts.",
-        "en": "Symbiote the tank during an engage, an assassin for damage."
+        "fr": "Symbiote sur un serviteur pousse une lane vide et te donne de la vision gratuite.",
+        "en": "Symbiote on a Minion pushes an empty lane and gives you free vision."
       },
       {
-        "fr": "Nids toxiques posés dans les buissons donnent de la vision et de la sécurité.",
-        "en": "Toxic Nests in bushes give vision and safety."
+        "fr": "Empile tes Nids toxiques sur les objectifs avant qu'ils ne s'ouvrent.",
+        "en": "Stack your Toxic Nests on objectives before they open."
       }
     ],
     "builds": [
@@ -10186,12 +10186,12 @@ const HEROES = [
     "role": "AssassinMelee",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_alarak.png",
     "headline": {
-      "fr": "Assassin de mêlée à burst énorme qui punit les erreurs de placement.",
-      "en": "High-burst melee assassin who punishes positioning mistakes."
+      "fr": "Chaque victime le rend définitivement plus dangereux.",
+      "en": "Every takedown makes him permanently more dangerous."
     },
     "gameplay": {
-      "fr": "Alarak repousse une cible avec Télékinésie puis enchaîne Frappe de discorde et Arc électrique. Chaque héros tué augmente définitivement ses dégâts.",
-      "en": "Alarak shoves a target with Telekinesis, then chains Discord Strike and Lightning Surge. Every Hero takedown permanently increases his damage."
+      "fr": "Alarak repousse une cible avec Télékinésie puis enchaîne Frappe de discorde et Arc électrique. Son Sadisme monte à chaque victime et ne redescend jamais.",
+      "en": "Alarak shoves a target with Telekinesis, then chains Discord Strike and Lightning Surge. His Sadism grows with every takedown and never drops."
     },
     "spells": [
       {
@@ -10275,16 +10275,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Télékinésie repousse aussi les alliés : sers-t'en pour sauver ou engager.",
-        "en": "Telekinesis also pushes allies: use it to save or engage."
+        "fr": "Télékinésie te déplace aussi : sers-t'en pour entrer, puis pour ressortir.",
+        "en": "Telekinesis moves you too: use it to get in, then to get out."
       },
       {
-        "fr": "Ton Sadisme augmente à chaque élimination : cherche les prises sûres.",
-        "en": "Your Sadism grows with every takedown: look for safe kills."
+        "fr": "Ton Sadisme est perdu à la mort : ne prends jamais un combat perdu d'avance.",
+        "en": "Your Sadism is lost on death: never take a fight you cannot win."
       },
       {
-        "fr": "Représailles bloque les dégâts et les renvoie : utilise-la en engage.",
-        "en": "Counter-Strike blocks and reflects damage: use it while engaging."
+        "fr": "Représailles te rend intouchable : lance-la dans l'engagement, pas après.",
+        "en": "Counter-Strike makes you untouchable: cast it into the engage, not after."
       }
     ],
     "builds": [
@@ -10657,12 +10657,12 @@ const HEROES = [
     "role": "Tank",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_anubarak.png",
     "headline": {
-      "fr": "Tank plongeur qui isole une cible et encaisse à la place de son équipe.",
-      "en": "Diving tank who isolates a target and soaks damage for his team."
+      "fr": "Il attrape la ligne arrière et la met sous terre.",
+      "en": "He grabs the back line and buries it."
     },
     "gameplay": {
-      "fr": "Anub'arak entre en combat avec Charge enfouie pour étourdir la backline, puis survit grâce à Carapace endurcie et à ses scarabées qui le soignent en permanence.",
-      "en": "Anub'arak engages with Burrow Charge to stun the back line, then survives thanks to Harden Carapace and his beetles, which heal him constantly."
+      "fr": "Anub'arak entre en combat avec Charge enfouie pour étourdir la ligne arrière, puis survit grâce à Carapace endurcie et à ses scarabées.",
+      "en": "Anub'arak engages with Burrow Charge to stun the back line, then survives thanks to Harden Carapace and his Beetles."
     },
     "spells": [
       {
@@ -10747,15 +10747,15 @@ const HEROES = [
     "tips": [
       {
         "fr": "Empale ne traverse pas les murs : utilise-le pour bloquer une fuite dans un couloir.",
-        "en": "Impale doesn't go through walls: use it to cut off an escape in a corridor."
+        "en": "Impale does not go through walls: use it to cut off an escape in a corridor."
       },
       {
-        "fr": "Utilise tes capacités avant un engagement pour accumuler des scarabées.",
-        "en": "Use your Abilities before an engage to build up Beetles."
+        "fr": "Utilise tes capacités avant l'engagement pour accumuler des scarabées.",
+        "en": "Use your Abilities before the engage to build up Beetles."
       },
       {
-        "fr": "Cocon est un excellent outil d'isolement sur un tank ennemi pendant un objectif.",
-        "en": "Cocoon is an excellent isolation tool on an enemy tank during an objective."
+        "fr": "Cocon retire un tank adverse du combat pendant un objectif entier.",
+        "en": "Cocoon removes an enemy tank from the fight for an entire objective."
       }
     ],
     "builds": [
@@ -11128,12 +11128,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_artanis.png",
     "headline": {
-      "fr": "Bruiser d'engagement qui échange sa position avec un ennemi.",
-      "en": "Engage bruiser who swaps position with an enemy."
+      "fr": "Il échange sa place avec sa cible et la garde captive.",
+      "en": "He swaps places with his target and keeps them trapped."
     },
     "gameplay": {
-      "fr": "Artanis attire un héros ennemi hors de position avec Prisme de phase, encaisse grâce à ses boucliers automatiques et pousse fort en lane.",
-      "en": "Artanis pulls an enemy Hero out of position with Phase Prism, tanks through his automatic shields, and pushes lanes hard."
+      "fr": "Artanis attrape un héros avec Prisme de phase pour l'échanger de place, puis le retient au corps à corps pendant que son bouclier se recharge sans arrêt.",
+      "en": "Artanis grabs a Hero with Phase Prism to swap positions, then keeps them in melee while his Shield keeps recharging."
     },
     "spells": [
       {
@@ -11217,16 +11217,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Prisme de phase peut ramener un tank ennemi loin de son équipe.",
-        "en": "Phase Prism can drag an enemy tank away from their team."
+        "fr": "Prisme de phase te rend insensible aux contrôles : c'est ton engagement.",
+        "en": "Phase Prism makes you Unstoppable: that is your engage."
       },
       {
-        "fr": "Lames jumelles s'active après une capacité : enchaîne toujours les attaques.",
-        "en": "Twin Blades procs after abilities: always weave in Basic Attacks."
+        "fr": "Chaque ennemi touché par Célérité tranchante rapproche ton prochain bouclier.",
+        "en": "Each enemy hit by Blade Dash brings your next Shield closer."
       },
       {
-        "fr": "Rayon purificateur force les ennemis à se disperser autour de leur porteur.",
-        "en": "Purifier Beam forces enemies to scatter away from its target."
+        "fr": "Rayon purificateur suit sa cible partout : lance-le sur qui ne peut pas fuir.",
+        "en": "Purifier Beam follows its target anywhere: cast it on whoever cannot escape."
       }
     ],
     "builds": [
@@ -11613,8 +11613,8 @@ const HEROES = [
     "role": "Tank",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_arthas.png",
     "headline": {
-      "fr": "Tank de zone qui ralentit et englue toute une équipe.",
-      "en": "Area tank who slows and locks down an entire team."
+      "fr": "Il colle à sa cible jusqu'à ce qu'elle cède.",
+      "en": "He sticks to his target until it breaks."
     },
     "gameplay": {
       "fr": "Arthas colle aux ennemis avec Tempête gelée et Rafale hurlante, empêche les fuites et se soigne avec Voile mortel.",
@@ -11706,12 +11706,12 @@ const HEROES = [
         "en": "Save Howling Blast to root an enemy trying to escape."
       },
       {
-        "fr": "Tempête gelée coûte du mana en continu : désactive-la hors combat.",
-        "en": "Frozen Tempest drains mana continuously: turn it off out of combat."
+        "fr": "Tempête gelée draine ton mana en continu : coupe-la hors combat.",
+        "en": "Frozen Tempest drains Mana continuously: turn it off out of combat."
       },
       {
-        "fr": "Armée des morts est excellente pour pousser une lane et bloquer les ennemis.",
-        "en": "Army of the Dead is great for pushing a lane and body-blocking."
+        "fr": "Armée des morts pousse une lane et bloque physiquement un couloir.",
+        "en": "Army of the Dead pushes a lane and physically body-blocks a corridor."
       }
     ],
     "builds": [
@@ -12084,12 +12084,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_azmodan.png",
     "headline": {
-      "fr": "Assassin de siège qui pousse les lanes et frappe de très loin.",
-      "en": "Siege assassin who pushes lanes and hits from very far away."
+      "fr": "Il pousse trois lignes sans jamais y mettre les pieds.",
+      "en": "He pushes three lanes without ever setting foot in them."
     },
     "gameplay": {
-      "fr": "Azmodan invoque des démons pour pousser en permanence et lance des Globes d'annihilation qui deviennent de plus en plus puissants.",
-      "en": "Azmodan summons demons to push constantly and throws Globes of Annihilation that grow stronger over the game."
+      "fr": "Asmodan bombarde de très loin avec Globe d'annihilation, dont les dégâts montent définitivement, et fait avancer des démons qui poussent les lignes à sa place.",
+      "en": "Azmodan bombards from extreme range with Globe of Annihilation, whose damage grows permanently, and sends demons to push lanes for him."
     },
     "spells": [
       {
@@ -12173,16 +12173,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Lance ton Globe sur les vagues de sbires pour cumuler les quêtes.",
-        "en": "Throw your Globe at minion waves to stack your quests."
+        "fr": "Lance ton Globe sur les vagues de sbires : chaque victime le renforce à vie.",
+        "en": "Throw your Globe at Minion waves: every kill strengthens it for good."
       },
       {
-        "fr": "Tes démons poussent une lane pendant que tu joues ailleurs.",
-        "en": "Your demons push a lane while you play elsewhere."
+        "fr": "Tout doit brûler te ralentit fortement : ne le canalise jamais sans protection.",
+        "en": "All Shall Burn heavily Slows you: never channel it unprotected."
       },
       {
-        "fr": "Tout doit brûler s'annule si tu bouges : reste à couvert.",
-        "en": "All Shall Burn breaks if you move: stay behind cover."
+        "fr": "Tes démons poussent seuls : envoie-les dans les lignes vides pendant les combats.",
+        "en": "Your demons push on their own: send them to empty lanes during fights."
       }
     ],
     "builds": [
@@ -12555,12 +12555,12 @@ const HEROES = [
     "role": "Tank",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_firebat.png",
     "headline": {
-      "fr": "Tank de zone qui enflamme le terrain et repositionne les ennemis.",
-      "en": "Area tank who sets the ground on fire and repositions enemies."
+      "fr": "Il transforme le terrain en zone interdite.",
+      "en": "He turns the ground into a no-go zone."
     },
     "gameplay": {
-      "fr": "Kramer pose des nappes d'huile qu'il enflamme pour créer des zones interdites, et son bunker offre un point de repli imprenable pendant les objectifs.",
-      "en": "Blaze lays oil spills that he ignites to create no-go zones, and his bunker offers a safe fallback point during objectives."
+      "fr": "Kramer pose des flaques d'huile qu'il enflamme pour interdire une zone, et son Bunker offre à son équipe un point de repli imprenable.",
+      "en": "Blaze lays oil pools he ignites to deny an area, and his Bunker gives his team an unassailable fallback point."
     },
     "spells": [
       {
@@ -12644,16 +12644,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Enflamme la nappe d'huile avec Flambée : les ennemis dessus brûlent, et tu te soignes tant que tu y restes.",
-        "en": "Ignite the oil spill with Flame Stream: enemies standing on it burn, and you heal while you stay in it."
+        "fr": "Enflamme la flaque avec Flambée : les ennemis dessus brûlent, et tu t'y soignes.",
+        "en": "Ignite the pool with Flame Stream: enemies on it burn, and you heal in it."
       },
       {
-        "fr": "Le bunker peut sauver un allié en danger : il devient intouchable à l'intérieur.",
-        "en": "The bunker can save an endangered ally: they become untargetable inside."
+        "fr": "Le Bunker peut sauver un allié en danger : il devient intouchable à l'intérieur.",
+        "en": "The Bunker can save an endangered ally: they become untargetable inside."
       },
       {
         "fr": "Charge à réaction sert autant à engager qu'à décoller après un combat.",
-        "en": "Jet Propulsion is as good for engaging as it is for disengaging."
+        "en": "Jet Propulsion is as good for engaging as for disengaging."
       }
     ],
     "builds": [
@@ -13026,12 +13026,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_amazon.png",
     "headline": {
-      "fr": "Assassin d'attaques de base qui punit les héros à distance.",
-      "en": "Auto-attack assassin who punishes ranged Heroes."
+      "fr": "Immobile, elle est fragile ; en mouvement, intouchable.",
+      "en": "Standing still she is fragile; on the move, untouchable."
     },
     "gameplay": {
-      "fr": "Cassia gagne de l'armure contre les attaques de base quand elle se déplace, et inflige des dégâts bonus aux ennemis aveuglés.",
-      "en": "Cassia gains Armor against Basic Attacks while moving and deals bonus damage to blinded enemies."
+      "fr": "Cassia gagne de l'armure tant qu'elle bouge et la perd dès qu'elle s'arrête. Elle aveugle les assassins d'attaques de base et les punit ensuite.",
+      "en": "Cassia gains Armor while moving and loses it the moment she stops. She Blinds auto-attackers and then punishes them."
     },
     "spells": [
       {
@@ -13115,16 +13115,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Reste en mouvement : ton armure disparaît si tu t'arrêtes.",
-        "en": "Keep moving: your Armor disappears when you stand still."
+        "fr": "Ne t'arrête jamais : ton armure disparaît presque aussitôt à l'arrêt.",
+        "en": "Never stand still: your Armor falls off almost immediately."
       },
       {
-        "fr": "Aveugle puis frappe : tes dégâts sont bien plus élevés sur cible aveuglée.",
-        "en": "Blind first, then hit: your damage is far higher on blinded targets."
+        "fr": "Aveugle d'abord, frappe ensuite : tu fais bien plus mal aux cibles aveuglées.",
+        "en": "Blind first, then strike: you hit Blinded targets far harder."
       },
       {
-        "fr": "Javelot foudroyant traverse les ennemis : cherche les alignements.",
-        "en": "Lightning Fury pierces enemies: look for line-ups."
+        "fr": "Javelot foudroyant se scinde à l'impact : vise le sbire devant le héros.",
+        "en": "Lightning Fury splits on impact: aim at the Minion in front of the Hero."
       }
     ],
     "builds": [
@@ -13497,12 +13497,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_chen.png",
     "headline": {
-      "fr": "Bruiser increvable qui absorbe les dégâts puis les efface.",
-      "en": "Unkillable bruiser who absorbs damage then wipes it away."
+      "fr": "Il encaisse d'abord et paie la note plus tard.",
+      "en": "He soaks the damage first and pays the bill later."
     },
     "gameplay": {
-      "fr": "Chen stocke les dégâts subis avec Report puis les annule en buvant. Il excelle à occuper plusieurs ennemis très longtemps.",
-      "en": "Chen stores incoming damage with Stagger, then drinks it away. He excels at tying up several enemies for a long time."
+      "fr": "Chen absorbe les dégâts avec Report, puis boit pour les effacer avant qu'ils ne le rattrapent. Fracasse-tonneau trempe les ennemis et Souffle de feu les embrase.",
+      "en": "Chen absorbs damage with Stagger, then drinks to erase it before it catches up. Keg Smash drenches enemies and Breath of Fire ignites them."
     },
     "spells": [
       {
@@ -13586,16 +13586,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Bois toujours après avoir accumulé un maximum de dégâts reportés.",
-        "en": "Always drink after stacking as much Staggered damage as possible."
+        "fr": "Bois toujours après avoir absorbé : Report te rend la facture sinon.",
+        "en": "Always drink after absorbing: otherwise Stagger hands you the bill."
       },
       {
-        "fr": "Coup de pied volant sur un sbire permet d'atteindre un ennemi plus loin.",
-        "en": "Flying Kick on a minion lets you reach an enemy further away.'"
+        "fr": "Fracasse-tonneau se change en Souffle de feu : enchaîne les deux systématiquement.",
+        "en": "Keg Smash becomes Breath of Fire: always chain the two."
       },
       {
-        "fr": "Souffle de feu inflige plus de dégâts aux cibles imbibées de bière.",
-        "en": "Breath of Fire deals bonus damage to Brew-soaked targets."
+        "fr": "Tonneau fou te rend insensible aux contrôles et bouscule toute une équipe.",
+        "en": "Wandering Keg makes you Unstoppable and bowls over a whole team."
       }
     ],
     "builds": [
@@ -13982,12 +13982,12 @@ const HEROES = [
     "role": "Tank",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_cho.png",
     "headline": {
-      "fr": "Moitié tank du duo à deux têtes : il conduit, Gall tire.",
-      "en": "The tank half of the two-headed duo: he drives, Gall shoots."
+      "fr": "Un seul corps, deux joueurs, aucun compromis.",
+      "en": "One body, two players, no compromise."
     },
     "gameplay": {
-      "fr": "Cho contrôle les déplacements du corps partagé avec Gall. Son rôle est d'engager, d'encaisser et de placer Gall dans la meilleure position pour infliger des dégâts.",
-      "en": "Cho controls the movement of the body he shares with Gall. His job is to engage, soak damage, and put Gall in the best position to deal damage."
+      "fr": "Cho conduit le corps partagé avec Gall. Son rôle est d'engager, d'encaisser et de placer Gall à portée de tir.",
+      "en": "Cho drives the body he shares with Gall. His job is to engage, soak damage, and put Gall within firing range."
     },
     "spells": [
       {
@@ -14072,15 +14072,15 @@ const HEROES = [
     "tips": [
       {
         "fr": "Communique en permanence avec ton Gall : vous partagez la même barre de vie.",
-        "en": "Communicate constantly with your Gall: you share the same health bar."
+        "en": "Communicate constantly with your Gall: you share the same Health bar."
       },
       {
         "fr": "Plus tu prépares Poing rageur longtemps, plus la charge porte loin.",
         "en": "The longer you wind up Surging Fist, the farther the charge carries."
       },
       {
-        "fr": "Ne plonge que si Gall a ses sorts disponibles.",
-        "en": "Only dive if Gall has his abilities up."
+        "fr": "Ne plonge que si Gall a ses sorts disponibles : seul, tu ne fais rien.",
+        "en": "Only dive if Gall has his Abilities up: alone, you do nothing."
       }
     ],
     "builds": [
@@ -14453,12 +14453,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_chromie.png",
     "headline": {
-      "fr": "Assassin à très longue portée qui punit les erreurs de placement.",
-      "en": "Extreme-range assassin who punishes positioning mistakes."
+      "fr": "Elle a deux niveaux d'avance sur tout le monde.",
+      "en": "She is two levels ahead of everyone else."
     },
     "gameplay": {
-      "fr": "Chromie inflige d'énormes dégâts avec Souffle de sable depuis une distance à laquelle personne ne peut la toucher, mais elle est extrêmement fragile.",
-      "en": "Chromie deals huge damage with Sand Blast from a range nobody can answer, but she is extremely fragile."
+      "fr": "Chromie obtient ses talents avant tout le monde et frappe de très loin. Extrêmement fragile, elle ne survit qu'en restant hors de portée.",
+      "en": "Chromie gains her Talents ahead of everyone and hits from extreme range. Extremely fragile, she survives only by staying out of reach."
     },
     "spells": [
       {
@@ -14542,16 +14542,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Reste au maximum de ta portée : tu meurs en une seconde si on t'atteint.",
-        "en": "Stay at max range: you die instantly if anyone reaches you."
+        "fr": "Souffle de sable est ton unique source de dégâts : ne le rate pas.",
+        "en": "Sand Blast is your only damage source: do not miss it."
       },
       {
-        "fr": "Piège temporel donne de la vision et bloque les approches.",
-        "en": "Time Trap gives vision and denies approaches."
+        "fr": "Pose tes pièges temporels avant l'objectif, puis déclenche-les avec ton trait.",
+        "en": "Place your Time Traps before the objective, then trigger them with your trait."
       },
       {
-        "fr": "Boucle temporelle renvoie une cible en arrière : parfait pour annuler une fuite.",
-        "en": "Temporal Loop rewinds a target: perfect to deny an escape."
+        "fr": "Tu meurs au moindre contact : joue toujours derrière un mur ou un allié.",
+        "en": "You die to any contact: always play behind a wall or an ally."
       }
     ],
     "builds": [
@@ -14924,12 +14924,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_deathwing.png",
     "headline": {
-      "fr": "Colosse imblocable qui domine les combats de zone.",
-      "en": "Unstoppable colossus who dominates teamfights."
+      "fr": "Aucun allié ne peut l'aider, aucun ennemi ne peut l'arrêter.",
+      "en": "No ally can help him, no enemy can stop him."
     },
     "gameplay": {
-      "fr": "Aile de Mort est en permanence insensible aux effets de contrôle mais ne peut recevoir aucun soin allié. Il choisit sa forme à l'atterrissage, entre corps à corps et contrôle de zone.",
-      "en": "Deathwing is permanently Unstoppable but cannot receive any ally healing. He switches forms to choose between focused and area damage."
+      "fr": "Aile de Mort est insensible aux contrôles en permanence mais ne reçoit aucun soin allié. Il choisit sa forme à l'atterrissage : corps à corps ou contrôle de zone.",
+      "en": "Deathwing is permanently Unstoppable but receives no allied healing. He picks his form on landing: melee brawling or zone control."
     },
     "spells": [
       {
@@ -15083,16 +15083,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tu ne peux pas être soigné : utilise Vol draconique pour te régénérer.",
-        "en": "You cannot be healed: use Dragonflight to regenerate."
-      },
-      {
-        "fr": "Forme Destructeur pour le combat rapproché, Brise-monde pour le zonage.",
-        "en": "Destroyer form for close combat, World Breaker for zoning."
-      },
-      {
         "fr": "Tes plaques d'armure ne se rechargent qu'en vol : décolle pour te refaire.",
         "en": "Your Armor Plates only recharge while flying: take off to restore them."
+      },
+      {
+        "fr": "Forme Destructeur pour le corps à corps, Brise-monde pour le zonage.",
+        "en": "Destroyer form for close quarters, World Breaker for zoning."
+      },
+      {
+        "fr": "Personne ne peut te soigner : chaque combat pris est un aller simple.",
+        "en": "Nobody can heal you: every fight you take is a one-way trip."
       }
     ],
     "builds": [
@@ -15473,12 +15473,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_dehaka.png",
     "headline": {
-      "fr": "Bruiser mobile qui peut apparaître n'importe où sur la carte.",
-      "en": "Mobile bruiser who can show up anywhere on the map."
+      "fr": "Il surgit de n'importe quel buisson de la carte.",
+      "en": "He erupts from any bush on the map."
     },
     "gameplay": {
-      "fr": "Dehaka récolte l'essence pour se soigner et gagner en puissance, et utilise Traqueur de la jungle pour rejoindre n'importe quel buisson du champ de bataille.",
-      "en": "Dehaka harvests Essence to heal and grow stronger, and uses Brushstalker to reach any bush on the battlefield."
+      "fr": "Dehaka récolte l'essence des victimes pour se soigner et grandir, et rejoint n'importe quel buisson du champ de bataille avec Traqueur de la jungle.",
+      "en": "Dehaka harvests Essence from takedowns to heal and grow, and reaches any bush on the battlefield with Brushstalker."
     },
     "spells": [
       {
@@ -15575,16 +15575,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Prends l'essence des sbires : c'est ta principale source de soins.",
-        "en": "Pick up Essence from minions: it's your main source of healing."
+        "fr": "Traqueur de la jungle te rend présent partout : soutiens deux lignes à la fois.",
+        "en": "Brushstalker puts you everywhere: support two lanes at once."
       },
       {
-        "fr": "Traqueur de la jungle te rend présent partout : soutiens tes lanes.",
-        "en": "Brushstalker lets you be everywhere: support every lane."
+        "fr": "Traction ramène une cible vers ton équipe, mais un contrôle t'interrompt.",
+        "en": "Drag pulls a target back to your team, but any crowd control stops it."
       },
       {
-        "fr": "Enfouissement te soigne et te met à l'abri des contrôles ennemis.",
-        "en": "Burrow heals you and dodges enemy crowd control."
+        "fr": "Enfouissement te met en stase : c'est une échappatoire, pas un déplacement.",
+        "en": "Burrow puts you in Stasis: it is an escape, not a travel tool."
       }
     ],
     "builds": [
@@ -15957,12 +15957,12 @@ const HEROES = [
     "role": "Tank",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_diablo.png",
     "headline": {
-      "fr": "Tank d'engagement qui projette les ennemis contre les murs.",
-      "en": "Engage tank who slams enemies into walls."
+      "fr": "Il isole une cible et la ramène chez lui.",
+      "en": "He isolates a target and drags it home."
     },
     "gameplay": {
-      "fr": "Diablo cherche à isoler une cible avec Charge d'ombre puis Correction pour la ramener vers son équipe. Son trait lui offre une seconde vie en fin de partie.",
-      "en": "Diablo looks to isolate a target with Shadow Charge, then Overpower to drag them back to his team. His trait grants him a second life late game."
+      "fr": "Diablo enchaîne Charge d'ombre et Correction pour ramener une cible dans son équipe. Ses âmes accumulées lui offrent une seconde vie en fin de partie.",
+      "en": "Diablo chains Shadow Charge and Overpower to drag a target into his team. His stacked Souls give him a second life late game."
     },
     "spells": [
       {
@@ -16046,16 +16046,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Charge d'ombre étourdit seulement si la cible percute un mur.",
-        "en": "Shadow Charge only stuns if the target hits a wall."
+        "fr": "Charge d'ombre n'étourdit que si la cible percute un obstacle : vise le mur.",
+        "en": "Shadow Charge only Stuns if the target hits terrain: aim for the wall."
       },
       {
         "fr": "Enchaîne Charge d'ombre puis Correction pour ramener une cible dans ton équipe.",
         "en": "Chain Shadow Charge into Overpower to drag a target into your team."
       },
       {
-        "fr": "Collecte les âmes en continu : ton retour à la vie en dépend.",
-        "en": "Collect souls constantly: your resurrection depends on it."
+        "fr": "Collecte les âmes en continu : ton retour à la vie en dépend directement.",
+        "en": "Collect Souls constantly: your resurrection depends directly on it."
       }
     ],
     "builds": [
@@ -16428,12 +16428,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_dva.png",
     "headline": {
-      "fr": "Bruiser à deux vies qui plonge et revient sans cesse.",
-      "en": "Two-life bruiser who dives in and keeps coming back."
+      "fr": "Détruire son méca ne suffit pas à s'en débarrasser.",
+      "en": "Destroying her mech is not enough to be rid of her."
     },
     "gameplay": {
-      "fr": "D.Va plonge avec son méca, absorbe les projectiles avec la Matrice défensive, puis continue à se battre en pilote avant de rappeler un nouveau méca.",
-      "en": "D.Va dives in her mech, eats projectiles with Defense Matrix, then keeps fighting as the pilot before calling down a fresh mech."
+      "fr": "D.Va plonge avec son méca pour perturber la ligne arrière. Quand il explose, elle continue le combat à pied et rappelle un nouveau méca en quelques secondes.",
+      "en": "D.Va dives with her mech to disrupt the back line. When it blows up she keeps fighting on foot and calls down a new mech within seconds."
     },
     "spells": [
       {
@@ -16579,16 +16579,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ne gaspille pas l'Autodestruction : combine-la avec un contrôle allié.",
-        "en": "Don't waste Self-Destruct: pair it with allied crowd control."
+        "fr": "Ne gaspille pas Autodestruction : force l'ennemi à quitter la zone.",
+        "en": "Do not waste Self-Destruct: use it to force the enemy off the point."
       },
       {
-        "fr": "En mode pilote, continue d'attaquer pour rappeler ton méca plus vite.",
-        "en": "In pilot mode, keep attacking to call your mech back faster."
+        "fr": "En mode pilote, attaque sans relâche : chaque coup rapproche ton nouveau méca.",
+        "en": "In Pilot Mode, keep attacking: every hit brings your new mech closer."
       },
       {
-        "fr": "Matrice défensive annule les gros sorts ennemis ciblés.",
-        "en": "Defense Matrix negates big targeted enemy abilities."
+        "fr": "Matrice défensive réduit énormément les dégâts : couvre ton porteur de dégâts.",
+        "en": "Defense Matrix heavily cuts damage: cover your carry with it."
       }
     ],
     "builds": [
@@ -16976,12 +16976,12 @@ const HEROES = [
     "role": "Tank",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_l90etc.png",
     "headline": {
-      "fr": "Tank de contrôle avec l'un des meilleurs engagements du jeu.",
-      "en": "Control tank with one of the best engages in the game."
+      "fr": "Il ouvre les combats et les referme sur l'ennemi.",
+      "en": "He opens fights and closes them on the enemy."
     },
     "gameplay": {
-      "fr": "E.T.C. glisse dans la mêlée pour étourdir plusieurs cibles, puis enchaîne avec Pogo ou repousse les plongeurs avec un riff bien placé.",
-      "en": "E.T.C. slides into the fray to stun multiple targets, then follows up with Mosh Pit or peels divers away with a well-placed riff."
+      "fr": "E.T.C. glisse dans la mêlée pour étourdir plusieurs cibles, puis enchaîne avec Pogo ou repousse les plongeurs loin de sa ligne arrière.",
+      "en": "E.T.C. slides into the fray to stun multiple targets, then follows up with Mosh Pit or peels divers away from his back line."
     },
     "spells": [
       {
@@ -17065,16 +17065,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Glissade peut aussi servir à repousser un plongeur loin de ton soigneur.",
-        "en": "Powerslide can also be used to knock a diver away from your healer."
+        "fr": "Glissade sert autant à engager qu'à repousser un plongeur loin de ton soigneur.",
+        "en": "Powerslide is as good for engaging as for knocking a diver off your healer."
       },
       {
-        "fr": "Pogo se lance souvent depuis un buisson ou juste après une Glissade.",
-        "en": "Mosh Pit is usually cast from a bush or right after a Powerslide."
+        "fr": "Pogo se lance depuis un buisson ou juste après une Glissade réussie.",
+        "en": "Mosh Pit is cast from a bush or right after a successful Powerslide."
       },
       {
-        "fr": "Solo te soigne : lance-le avant de perdre trop de vie.",
-        "en": "Guitar Solo heals you: start it before you get too low."
+        "fr": "Solo te soigne beaucoup : lance-le avant d'être au plus bas.",
+        "en": "Guitar Solo heals a lot: start it before you are critically low."
       }
     ],
     "builds": [
@@ -17461,12 +17461,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_falstad.png",
     "headline": {
-      "fr": "Assassin d'attaques à distance avec une mobilité globale.",
-      "en": "Ranged auto-attack assassin with global mobility."
+      "fr": "Il traverse la carte quand ses alliés marchent encore.",
+      "en": "He crosses the map while his allies are still walking."
     },
     "gameplay": {
-      "fr": "Falstad frappe de loin, harcèle avec son Marteau-boomerang, et peut traverser la carte entière avec Vol pour surprendre l'ennemi.",
-      "en": "Falstad hits from afar, harasses with Hammerang, and can cross the entire map with Flight to catch the enemy off guard."
+      "fr": "Falstad survole le terrain avec Vol pour arriver là où personne ne l'attend, et harcèle de loin avec Marteau-boomerang.",
+      "en": "Falstad flies over terrain with Flight to arrive where nobody expects him, and harasses from range with Hammerang."
     },
     "spells": [
       {
@@ -17563,16 +17563,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Vol permet de sauver une lane ou de fuir : garde-le pour les moments clés.",
-        "en": "Flight can save a lane or escape: keep it for key moments."
+        "fr": "Vol traverse toute la carte : sers-t'en pour tourner un objectif, pas pour fuir.",
+        "en": "Flight crosses the whole map: use it to flank an objective, not to escape."
       },
       {
-        "fr": "Marteau-boomerang blesse à l'aller et au retour.",
-        "en": "Hammerang damages on the way out and back."
+        "fr": "Marteau-boomerang blesse à l'aller comme au retour : place-toi pour les deux passages.",
+        "en": "Hammerang damages going out and coming back: position for both passes."
       },
       {
-        "fr": "Bourrasque violente repousse les plongeurs loin de ton équipe.",
-        "en": "Mighty Gust pushes divers far away from your team."
+        "fr": "Paratonnerre exige de rester près de la cible : engage-le seulement si tu peux suivre.",
+        "en": "Lightning Rod needs you close: only start it if you can keep up."
       }
     ],
     "builds": [
@@ -17945,12 +17945,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_fenix.png",
     "headline": {
-      "fr": "Assassin à distance robuste grâce à ses boucliers réguliers.",
-      "en": "Durable ranged assassin thanks to his recharging shields."
+      "fr": "Son bouclier se refait tout seul, encore et encore.",
+      "en": "His Shield rebuilds itself, over and over."
     },
     "gameplay": {
-      "fr": "Fenix alterne entre son canon à répétition pour les dégâts soutenus et son Découpeur à plasma pour toucher plusieurs cibles, tout en se repositionnant avec Transfert.",
-      "en": "Fenix alternates between Repeater Cannon for sustained damage and Plasma Cutter for multi-target hits, repositioning with Warp."
+      "fr": "Fénix alterne entre canon automatique pour les dégâts soutenus et bombe phasique pour toucher un groupe, tout en se repositionnant avec Transfert.",
+      "en": "Fenix alternates between Repeater Cannon for sustained damage and Phase Bomb to hit a group, repositioning with Warp."
     },
     "spells": [
       {
@@ -18034,16 +18034,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tes boucliers se rechargent hors combat : recule quelques secondes.",
-        "en": "Your shields recharge out of combat: step back for a few seconds."
+        "fr": "Ton bouclier se recharge hors combat : recule quelques secondes plutôt que rentrer.",
+        "en": "Your Shield regenerates out of combat: back off a few seconds instead of going home."
       },
       {
-        "fr": "Découpeur à plasma traverse les ennemis alignés.",
-        "en": "Plasma Cutter pierces enemies lined up."
+        "fr": "Découpeur à plasma décrit deux cercles : place-le pour toucher deux fois.",
+        "en": "Plasma Cutter sweeps two full circles: place it to hit twice."
       },
       {
-        "fr": "Vitrification est un rayon énorme : combine-le à un contrôle allié.",
-        "en": "Planet Cracker is a huge beam: combine it with allied crowd control."
+        "fr": "Vitrification traverse tout le champ de bataille : combine-la à un contrôle allié.",
+        "en": "Planet Cracker crosses the whole battlefield: pair it with allied crowd control."
       }
     ],
     "builds": [
@@ -18430,12 +18430,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_gall.png",
     "headline": {
-      "fr": "Moitié dégâts du duo à deux têtes : il ne se déplace pas seul.",
-      "en": "The damage half of the two-headed duo: he doesn't move on his own."
+      "fr": "Il tire en aveugle et ne contrôle jamais ses pieds.",
+      "en": "He fires blind and never controls his own feet."
     },
     "gameplay": {
-      "fr": "Gall inflige d'énormes dégâts de zone depuis le corps de Cho. Il ne contrôle pas ses déplacements et doit donc viser en permanence.",
-      "en": "Gall deals huge area damage from Cho's body. He doesn't control movement, so he must focus entirely on aiming."
+      "fr": "Gall ne dirige pas le corps qu'il partage avec Cho : il ne fait que tirer. Il est immunisé aux étourdissements et aux silences, mais dépend entièrement de son pilote.",
+      "en": "Gall does not steer the body he shares with Cho: he only shoots. He is immune to Stuns and Silences but depends entirely on his driver."
     },
     "spells": [
       {
@@ -18532,16 +18532,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tu ne vois pas très loin : suis les appels de ton Cho.",
-        "en": "Your vision is limited: follow your Cho's calls."
+        "fr": "Communique en permanence avec ton Cho : tu ne choisis pas où tu vas.",
+        "en": "Communicate constantly with your Cho: you do not choose where you go."
       },
       {
-        "fr": "Orbe funeste rebondit : anticipe les trajectoires.",
-        "en": "Dread Orb bounces: anticipate its path."
+        "fr": "Orbe funeste rebondit trois fois : anticipe les rebonds plutôt que la cible.",
+        "en": "Dread Orb bounces three times: aim for the bounces, not the target."
       },
       {
-        "fr": "Explosion runique déclenche la bombe de Cho : coordonnez-vous.",
-        "en": "Runic Blast detonates Cho's bomb: coordinate."
+        "fr": "Rage d'ogre te renforce mais fragilise Cho : ne l'active pas pendant un engagement.",
+        "en": "Ogre Rage empowers you but weakens Cho: do not use it during an engage."
       }
     ],
     "builds": [
@@ -18914,12 +18914,12 @@ const HEROES = [
     "role": "Tank",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_garrosh.png",
     "headline": {
-      "fr": "Tank qui déplace les ennemis et sauve ses alliés.",
-      "en": "Tank who throws enemies around and saves allies."
+      "fr": "Il jette les ennemis chez toi et tes alliés hors de danger.",
+      "en": "He throws enemies to you and allies out of danger."
     },
     "gameplay": {
-      "fr": "Garrosh utilise Boulet de démolition pour jeter un ennemi dans son équipe ou éjecter un allié en danger. Plus il perd de vie, plus il devient résistant.",
-      "en": "Garrosh uses Wrecking Ball to throw an enemy into his team or fling an endangered ally to safety. The lower his Health, the tougher he gets."
+      "fr": "Garrosh saisit un ennemi avec Boulet de démolition pour le jeter dans son équipe, ou éjecte un allié en danger avec Dans la mêlée. Plus il perd de vie, plus il encaisse.",
+      "en": "Garrosh grabs an enemy with Wrecking Ball to hurl them into his team, or flings an endangered ally out with Into the Fray. The lower his Health, the tougher he gets."
     },
     "spells": [
       {
@@ -19016,15 +19016,15 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Boulet de démolition peut lancer un allié : c'est un outil de sauvetage énorme.",
-        "en": "Wrecking Ball can throw an ally: it's a huge saving tool."
+        "fr": "Seul le bord extérieur de Brise-roc étourdit : recule d'un pas avant de frapper.",
+        "en": "Only Groundbreaker's outer edge Stuns: step back before you swing."
       },
       {
-        "fr": "Assoiffé de sang te soigne, garde-la pour te sortir d'un burst.",
-        "en": "Bloodthirst heals you, save it to survive burst damage."
+        "fr": "Dans la mêlée sauve un allié plongé : il est insensible aux contrôles en vol.",
+        "en": "Into the Fray saves a dived ally: they are Unstoppable while airborne."
       },
       {
-        "fr": "Défi du seigneur de guerre force un désengagement ennemi complet.",
+        "fr": "Défi du seigneur de guerre annule complètement un désengagement ennemi.",
         "en": "Warlord's Challenge completely denies an enemy disengage."
       }
     ],
@@ -19398,12 +19398,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_tinker.png",
     "headline": {
-      "fr": "Spécialiste des structures qui détruit les forts et pose des tourelles.",
-      "en": "Structure specialist who wrecks forts and drops turrets."
+      "fr": "Il installe le terrain et l'ennemi se débrouille avec.",
+      "en": "He sets up the terrain and the enemy has to deal with it."
     },
     "gameplay": {
-      "fr": "Gazleu installe des tourelles pour tenir une zone, ramasse les débris qui alimentent ses capacités et démolit rapidement les bâtiments.",
-      "en": "Gazlowe sets up turrets to hold an area, picks up the Scrap that fuels his Abilities, and tears down Structures fast."
+      "fr": "Gazleu installe des tourelles pour tenir une zone, ramasse les débris qui alimentent ses capacités et démolit les bâtiments plus vite que quiconque.",
+      "en": "Gazlowe sets up turrets to hold an area, picks up the Scrap that fuels his Abilities, and tears down Structures faster than anyone."
     },
     "spells": [
       {
@@ -19500,16 +19500,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ramasse toujours les débris : ils alimentent tes capacités.",
-        "en": "Always pick up Scrap: it fuels your Abilities."
+        "fr": "Ramasse toujours les débris : ils alimentent toutes tes capacités.",
+        "en": "Always pick up Scrap: it fuels every one of your Abilities."
       },
       {
         "fr": "Pose tes tourelles derrière un mur pour qu'elles soient difficiles à détruire.",
-        "en": "Place turrets behind walls so they are hard to destroy."
+        "en": "Place your turrets behind a wall so they are hard to destroy."
       },
       {
         "fr": "Gravitobombe 3000 combinée à un contrôle allié fait des ravages.",
-        "en": "Grav-O-Bomb 3000 combined with allied CC is devastating."
+        "en": "Grav-O-Bomb 3000 combined with allied crowd control is devastating."
       }
     ],
     "builds": [
@@ -19882,12 +19882,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_genji.png",
     "headline": {
-      "fr": "Assassin très mobile qui plonge, tue et ressort.",
-      "en": "Highly mobile assassin who dives in, kills, and gets out."
+      "fr": "Il renvoie tout ce qu'on lui envoie.",
+      "en": "He sends back everything thrown at him."
     },
     "gameplay": {
-      "fr": "Genji harcèle avec ses shurikens, renvoie les projectiles avec Riposte et enchaîne les Frappe du vent pour éliminer les cibles fragiles.",
-      "en": "Genji harasses with shuriken, reflects projectiles with Deflect, and chains Swift Strikes to finish squishy targets."
+      "fr": "Genji esquive tout avec Agilité cybernétique, renvoie les dégâts avec Riposte, et enchaîne les Frappes du vent sur les cibles qu'il achève.",
+      "en": "Genji dodges everything with Cyber Agility, reflects damage with Deflect, and chains Swift Strikes across the targets he finishes."
     },
     "spells": [
       {
@@ -19971,16 +19971,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Riposte renvoie les projectiles ennemis : utilise-la sur les gros sorts.",
-        "en": "Deflect reflects enemy projectiles: use it on big abilities."
+        "fr": "Riposte renvoie les projectiles : entre dedans plutôt que de reculer.",
+        "en": "Deflect returns projectiles: walk into them rather than backing off."
       },
       {
-        "fr": "Frappe du vent se recharge sur une élimination : enchaîne les cibles.",
-        "en": "Swift Strike resets on a takedown: chain into the next target."
+        "fr": "Frappe du vent se recharge si ta cible meurt juste après : achève, puis repars.",
+        "en": "Swift Strike refunds if your target dies right after: finish, then dash on."
       },
       {
-        "fr": "Ne plonge jamais sans une porte de sortie.",
-        "en": "Never dive without an exit."
+        "fr": "Agilité cybernétique franchit les murs : ton meilleur outil de fuite.",
+        "en": "Cyber Agility jumps over walls: your best escape tool."
       }
     ],
     "builds": [
@@ -20353,12 +20353,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_greymane.png",
     "headline": {
-      "fr": "Assassin à double forme : distance pour harceler, worgen pour tuer.",
-      "en": "Dual-form assassin: ranged to poke, worgen to kill."
+      "fr": "Il change de forme au milieu de son propre combo.",
+      "en": "He shifts form in the middle of his own combo."
     },
     "gameplay": {
-      "fr": "Grisetête harcèle à distance, puis se transforme en worgen pour plonger et achever sa cible avec des attaques rapides.",
-      "en": "Greymane pokes at range, then shifts into worgen form to dive and finish his target with fast attacks."
+      "fr": "Grisetête harcèle à distance en humain, puis bascule en worgen avec Sombre course pour achever au corps à corps, avant de se dégager d'une roulade.",
+      "en": "Greymane harasses at range as a human, then shifts to worgen with Darkflight to finish in melee, before rolling back out."
     },
     "spells": [
       {
@@ -20485,16 +20485,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ne reste pas en forme worgen si tu ne peux pas tuer : repasse à distance.",
-        "en": "Don't stay in worgen form if you can't secure the kill: shift back."
+        "fr": "Ne reste pas en worgen : rebascule en humain dès que la cible est morte.",
+        "en": "Do not linger in worgen form: shift back to human as soon as the target dies."
       },
       {
-        "fr": "Balle maudite inflige des dégâts en pourcentage : utilise-la sur les tanks.",
-        "en": "Cursed Bullet deals %-Health damage: use it on tanks."
+        "fr": "Balle maudite ampute un pourcentage de vie : vise le tank, pas le fragile.",
+        "en": "Cursed Bullet strips a percentage of Health: aim at the tank, not the squishy."
       },
       {
-        "fr": "Sombre course sert d'engagement, Désengagement de fuite.",
-        "en": "Darkflight engages, Disengage escapes."
+        "fr": "Bête intérieure se relance à chaque attaque : ne coupe jamais ta chaîne de coups.",
+        "en": "Inner Beast refreshes with every attack: never break your attack chain."
       }
     ],
     "builds": [
@@ -20882,12 +20882,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_guldan.png",
     "headline": {
-      "fr": "Mage de dégâts continus qui échange sa vie contre de la puissance.",
-      "en": "Damage-over-time mage who trades Health for power."
+      "fr": "Il paie chacun de ses sorts avec sa propre vie.",
+      "en": "He pays for every spell with his own life."
     },
     "gameplay": {
-      "fr": "Gul'dan n'utilise pas de mana mais sa propre vie. Il inflige des dégâts massifs en zone et se soigne avec Drain de vie.",
-      "en": "Gul'dan doesn't use mana, he spends Health. He deals massive area damage and heals with Drain Life."
+      "fr": "Gul'dan ne régénère aucun mana : il l'échange contre ses points de vie. En retour, il inflige des dégâts de zone énormes et continus.",
+      "en": "Gul'dan regenerates no Mana: he trades his Health for it. In return he deals enormous, relentless area damage."
     },
     "spells": [
       {
@@ -20971,16 +20971,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Surveille ta vie : c'est ta ressource, pas ton mana.",
-        "en": "Watch your Health: it's your resource, not mana."
+        "fr": "Surveille ta vie autant que ton mana : Connexion peut te tuer.",
+        "en": "Watch your Health as closely as your Mana: Life Tap can kill you."
       },
       {
-        "fr": "Corruption fait d'énormes dégâts sur les vagues de sbires.",
-        "en": "Corruption clears minion waves extremely well."
+        "fr": "Drain de vie te soigne beaucoup : engage-le dès que tu es au contact.",
+        "en": "Drain Life heals a lot: start it as soon as you are in range."
       },
       {
-        "fr": "Épouvante te débarrasse des plongeurs et sauve tes alliés.",
-        "en": "Horrify removes divers and saves your allies."
+        "fr": "Épouvante réduit au silence en plus d'apeurer : c'est ton vrai contrôle.",
+        "en": "Horrify Silences on top of Fearing: that is your real crowd control."
       }
     ],
     "builds": [
@@ -21353,12 +21353,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_hanzo.png",
     "headline": {
-      "fr": "Assassin de poke qui frappe fort de très loin.",
-      "en": "Poke assassin who hits hard from very far away."
+      "fr": "Il tire depuis un endroit que personne ne surveille.",
+      "en": "He fires from somewhere nobody is watching."
     },
     "gameplay": {
-      "fr": "Hanzo charge son arc pour des tirs puissants, donne de la vision avec sa Flèche sonique et peut sauter par-dessus les murs.",
-      "en": "Hanzo charges his bow for powerful shots, gives vision with Sonic Arrow, and can vault over walls."
+      "fr": "Hanzo franchit les obstacles pour tirer depuis un angle inattendu, révèle des zones entières avec Flèche sonique, et frappe d'un bout à l'autre de la carte.",
+      "en": "Hanzo jumps terrain to fire from an unexpected angle, reveals whole areas with Sonic Arrow, and strikes from one end of the map to the other."
     },
     "spells": [
       {
@@ -21442,16 +21442,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Flèche sonique donne une vision permanente : place-la sur les objectifs.",
-        "en": "Sonic Arrow gives lasting vision: place it on objectives."
+        "fr": "Mille-flèches rebondit sur les murs : tire dans les couloirs, pas en terrain ouvert.",
+        "en": "Scatter Arrow ricochets off walls: shoot in corridors, not open ground."
       },
       {
-        "fr": "Mille-flèches rebondit sur les murs : sers-t'en dans les couloirs.",
-        "en": "Scatter Arrow bounces off walls: use it in corridors."
+        "fr": "Flèche sonique posée sur un objectif donne une vision permanente à ton équipe.",
+        "en": "Sonic Arrow on an objective gives your team permanent vision."
       },
       {
-        "fr": "Ton trait te permet de franchir les murs : garde toujours une échappatoire.",
-        "en": "Your trait lets you vault walls: always keep an escape route."
+        "fr": "Flèche du dragon frappe plus fort de loin : tire du fond de la carte.",
+        "en": "Dragon's Arrow hits harder from afar: fire from across the map."
       }
     ],
     "builds": [
@@ -21824,12 +21824,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_hogger.png",
     "headline": {
-      "fr": "Bruiser de mêlée qui projette les ennemis contre les murs.",
-      "en": "Melee bruiser who slams enemies into walls."
+      "fr": "Il projette les ennemis contre les murs, encore et encore.",
+      "en": "He slams enemies into walls, again and again."
     },
     "gameplay": {
-      "fr": "Lardeur génère de la rage avec ses attaques, gagne de la vie grâce à son butin et projette les ennemis contre le décor pour les étourdir.",
-      "en": "Hogger builds Rage with his attacks, gains Health from his loot hoard, and slams enemies into terrain to stun them."
+      "fr": "Lardeur génère de la rage en frappant, se soigne sur son butin et projette les ennemis contre le décor pour les étourdir.",
+      "en": "Hogger builds Rage by hitting, heals off his loot, and slams enemies into terrain to Stun them."
     },
     "spells": [
       {
@@ -21914,15 +21914,15 @@ const HEROES = [
     "tips": [
       {
         "fr": "Projette les ennemis contre un mur avec Coup ahurissant pour les étourdir.",
-        "en": "Knock enemies into walls with Staggering Blow to stun them."
+        "en": "Slam enemies into a wall with Staggering Blow to Stun them."
       },
       {
-        "fr": "Ramasse ton butin après un combat pour te soigner.",
-        "en": "Pick up your loot after a fight to heal."
+        "fr": "Ramasse ton butin après un combat pour te soigner sans rentrer.",
+        "en": "Pick up your loot after a fight to heal without going home."
       },
       {
-        "fr": "Lardée sauvage sert autant à fuir qu'à poursuivre.",
-        "en": "Hogg Wild is as good for escaping as for chasing."
+        "fr": "Lardée sauvage rebondit sur les obstacles : sert autant à fuir qu'à poursuivre.",
+        "en": "Hogg Wild bounces off terrain: it is as good for fleeing as for chasing."
       }
     ],
     "builds": [
@@ -22295,12 +22295,12 @@ const HEROES = [
     "role": "AssassinMelee",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_illidan.png",
     "headline": {
-      "fr": "Assassin de mêlée ultra mobile qui esquive les attaques.",
-      "en": "Ultra-mobile melee assassin who dodges Basic Attacks."
+      "fr": "Il ne s'arrête jamais et se soigne à chaque coup.",
+      "en": "He never stops moving and heals with every hit."
     },
     "gameplay": {
-      "fr": "Illidan enchaîne les plongeons et se soigne à chaque coup. Il excelle contre les héros immobiles mais souffre face aux contrôles.",
-      "en": "Illidan chains dives and heals with every hit. He excels against immobile Heroes but suffers against crowd control."
+      "fr": "Illidan enchaîne Plongeon et Voie des lames pour rester collé à sa cible, en se soignant sur chaque attaque. Les contrôles sont sa seule vraie faiblesse.",
+      "en": "Illidan chains Dive and Sweeping Strike to stay glued to his target, healing on every attack. Crowd control is his only real weakness."
     },
     "spells": [
       {
@@ -22384,8 +22384,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ne plonge jamais en premier : attends que le tank ait engagé.",
-        "en": "Never dive first: wait until your tank has engaged."
+        "fr": "Ne plonge jamais en premier : attends que le tank ait absorbé les contrôles.",
+        "en": "Never dive first: wait until your tank has soaked the crowd control."
       },
       {
         "fr": "Dérobade te rend immunisé aux attaques de base : garde-la pour l'ennemi qui te vise.",
@@ -23735,12 +23735,12 @@ const HEROES = [
     "role": "Tank",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_crusader.png",
     "headline": {
-      "fr": "Tank increvable, référence contre les compositions à contrôles.",
-      "en": "Unkillable tank, the go-to answer against crowd-control comps."
+      "fr": "Rien ne l'arrête, et elle protège tout le monde.",
+      "en": "Nothing stops her, and she shields everyone."
     },
     "gameplay": {
-      "fr": "Johanna encaisse énormément grâce à Galvanisation, qui la rend insensible aux effets de contrôle tant que son bouclier tient. Elle excelle à protéger sa backline avec Éblouissement.",
-      "en": "Johanna soaks enormous damage with Iron Skin, which makes her Unstoppable while the Shield holds. She excels at protecting her back line with Shield Glare."
+      "fr": "Johanna encaisse énormément grâce à Galvanisation, qui la rend insensible aux effets de contrôle, et protège sa ligne arrière en aveuglant les assassins.",
+      "en": "Johanna soaks enormous damage with Iron Skin, which makes her Unstoppable, and protects her back line by Blinding assassins."
     },
     "spells": [
       {
@@ -23829,11 +23829,11 @@ const HEROES = [
       },
       {
         "fr": "Éblouissement aveugle : parfait contre les assassins d'attaques de base.",
-        "en": "Shield Glare blinds: perfect against auto-attack assassins."
+        "en": "Shield Glare Blinds: perfect against auto-attack assassins."
       },
       {
-        "fr": "Couperet permet de rejoindre un allié en difficulté à l'autre bout du combat.",
-        "en": "Falling Sword lets you reach a struggling ally across the fight."
+        "fr": "Couperet rejoint un allié en difficulté à l'autre bout du combat.",
+        "en": "Falling Sword reaches a struggling ally across the fight."
       }
     ],
     "builds": [
@@ -24206,12 +24206,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_junkrat.png",
     "headline": {
-      "fr": "Assassin de zone qui rend toute approche impossible.",
-      "en": "Area assassin who makes any approach impossible."
+      "fr": "Même mort, il continue de faire des dégâts.",
+      "en": "Even dead, he keeps dealing damage."
     },
     "gameplay": {
-      "fr": "Chacal couvre le terrain de grenades, de mines et de pièges, et devient extrêmement dangereux dans les couloirs étroits.",
-      "en": "Junkrat covers the ground with grenades, mines, and traps, and becomes extremely dangerous in narrow corridors."
+      "fr": "Chacal mine le terrain de pièges et de mines, harcèle avec des grenades rebondissantes, et lâche encore des explosifs au moment de mourir.",
+      "en": "Junkrat mines the ground with traps and bombs, harasses with bouncing grenades, and still drops explosives as he dies."
     },
     "spells": [
       {
@@ -24295,16 +24295,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tes grenades rebondissent : sers-t'en pour tirer par-dessus les murs.",
-        "en": "Your grenades bounce: use them to shoot over walls."
+        "fr": "Tire tes grenades contre les murs : elles rebondissent là où l'ennemi se cache.",
+        "en": "Bounce your grenades off walls: they reach where the enemy hides."
       },
       {
-        "fr": "Mine incapacitante sert autant à te déplacer qu'à repousser un ennemi.",
-        "en": "Concussion Mine repositions you as well as knocking enemies back."
+        "fr": "Mine incapacitante te propulse aussi : c'est ton unique moyen de fuite.",
+        "en": "Concussion Mine launches you too: it is your only escape."
       },
       {
-        "fr": "À ta mort, tu lâches des bombes : elles tuent souvent le poursuivant.",
-        "en": "On death you drop bombs: they often kill your chaser."
+        "fr": "Piège d'acier posé dans un buisson bloque un ennemi le temps d'un combat.",
+        "en": "A Steel Trap in a bush locks an enemy down for a whole fight."
       }
     ],
     "builds": [
@@ -24691,12 +24691,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_kelthuzad.png",
     "headline": {
-      "fr": "Mage de contrôle qui enchaîne ses cibles contre les murs.",
-      "en": "Control mage who chains targets into walls."
+      "fr": "Il enchaîne ses cibles les unes aux autres.",
+      "en": "He chains his targets to one another."
     },
     "gameplay": {
-      "fr": "Kel'Thuzad attire ses cibles avec ses Chaînes et enchaîne un combo dévastateur. Il devient de plus en plus puissant en accumulant sa quête.",
-      "en": "Kel'Thuzad pulls targets with his Chains and follows with a devastating combo. He grows stronger as he stacks his quest."
+      "fr": "Kel'Thuzad immobilise avec Nova de givre puis relie deux héros avec ses Chaînes pour les étourdir ensemble. Chaque contrôle réussi le renforce durablement.",
+      "en": "Kel'Thuzad Roots with Frost Nova then links two Heroes with his Chains to Stun them together. Every successful lockdown lastingly strengthens him."
     },
     "spells": [
       {
@@ -24793,16 +24793,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Chaînes contre un mur = étourdissement : cherche toujours cet angle.",
-        "en": "Chains into a wall equals a stun: always look for that angle."
+        "fr": "Chaînes se relance sur une seconde cible : c'est un combo, pas un sort simple.",
+        "en": "Chains reactivates onto a second target: it is a combo, not a single cast."
       },
       {
-        "fr": "Accumule ta quête tôt : tes dégâts en fin de partie en dépendent.",
-        "en": "Stack your quest early: your late-game damage depends on it."
+        "fr": "Immobilise avec le centre de Nova de givre pour enchaîner tes Chaînes.",
+        "en": "Root with Frost Nova's center so your Chains can follow up."
       },
       {
-        "fr": "Mort et décrépitude est ton principal outil de nettoyage de vague.",
-        "en": "Death and Decay is your main wave clear."
+        "fr": "Fissure d'ombre frappe n'importe où sur la carte : achève de loin.",
+        "en": "Shadow Fissure strikes anywhere on the map: finish from afar."
       }
     ],
     "builds": [
@@ -25175,12 +25175,12 @@ const HEROES = [
     "role": "AssassinMelee",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_kerrigan.png",
     "headline": {
-      "fr": "Assassin d'élimination qui attrape une cible et la supprime.",
-      "en": "Burst assassin who grabs a target and deletes it."
+      "fr": "Elle attrape une cible isolée et ne lui laisse rien.",
+      "en": "She grabs an isolated target and leaves them nothing."
     },
     "gameplay": {
-      "fr": "Kerrigan enchaîne Poigne primordiale, Lames perforantes et Ravage pour éliminer une cible isolée, en gagnant des boucliers à chaque victime.",
-      "en": "Kerrigan chains Primal Grasp, Impaling Blades, and Ravage to delete an isolated target, gaining shields from every kill."
+      "fr": "Kerrigan enchaîne Poigne primordiale, Lames perforantes et Ravage pour supprimer une cible seule, en accumulant des boucliers à chaque dégât infligé.",
+      "en": "Kerrigan chains Primal Grasp, Impaling Blades and Ravage to delete a lone target, stacking Shields from every point of damage she deals."
     },
     "spells": [
       {
@@ -25268,12 +25268,12 @@ const HEROES = [
         "en": "Pull then impale: the combo is nearly impossible to dodge."
       },
       {
-        "fr": "Attends toujours qu'un contrôle allié soit posé avant de plonger.",
-        "en": "Always wait for allied crowd control before diving."
+        "fr": "Sans contrôle allié, tu meurs avant ton combo : attends l'engagement.",
+        "en": "Without allied crowd control you die before your combo: wait for the engage."
       },
       {
-        "fr": "Tes boucliers d'assimilation te permettent de rester en combat.",
-        "en": "Your Assimilation shields let you stay in the fight."
+        "fr": "Tes boucliers montent en frappant : reste au contact plutôt que de reculer.",
+        "en": "Your Shields build by hitting: stay in contact rather than backing off."
       }
     ],
     "builds": [
@@ -25646,12 +25646,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_leoric.png",
     "headline": {
-      "fr": "Bruiser immortel qui continue de gêner même après sa mort.",
-      "en": "Immortal bruiser who keeps being a nuisance even after death."
+      "fr": "Le tuer ne fait que retarder le problème.",
+      "en": "Killing him only postpones the problem."
     },
     "gameplay": {
-      "fr": "Leoric revient plus vite en restant près des ennemis sous forme de spectre, et draine la vie de sa cible avec Drain d'espoir.",
-      "en": "Leoric returns sooner by staying near enemies while a ghost, and drains his target's Health with Drain Hope."
+      "fr": "Leoric revient plus vite en restant près des ennemis sous forme de spectre, et draine la vie de sa cible tant qu'elle ne le sème pas.",
+      "en": "Leoric returns sooner by staying near enemies while a ghost, and drains his target's Health as long as they cannot shake him."
     },
     "spells": [
       {
@@ -25735,12 +25735,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "En fantôme, reste au contact des ennemis pour réduire ton temps de réapparition.",
-        "en": "As a ghost, stay near enemies to shorten your respawn timer."
+        "fr": "En spectre, reste au contact des ennemis pour réduire ton temps de réapparition.",
+        "en": "As a ghost, stay near enemies to cut your respawn timer."
       },
       {
         "fr": "Drain d'espoir doit durer : place-toi pour que la cible ne s'éloigne pas.",
-        "en": "Drain Hope needs time: position so the target can't run away."
+        "en": "Drain Hope needs time: position so the target cannot get away."
       },
       {
         "fr": "Tombeau isole une cible ou coupe complètement une retraite.",
@@ -26609,12 +26609,12 @@ const HEROES = [
     "role": "Support",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_lostvikings.png",
     "headline": {
-      "fr": "Trois héros pour le prix d'un : la meilleure présence de carte du jeu.",
-      "en": "Three Heroes for the price of one: the best map presence in the game."
+      "fr": "Trois corps, trois lanes, une pression permanente.",
+      "en": "Three bodies, three lanes, permanent pressure."
     },
     "gameplay": {
-      "fr": "Les Vikings occupent trois lanes en même temps. Le défi est de les garder en vie tout en gagnant beaucoup plus d'expérience que l'adversaire.",
-      "en": "The Vikings soak three lanes at once. The challenge is keeping them alive while gaining far more experience than the enemy."
+      "fr": "Les Vikings poussent trois lignes à la fois. Leur force n'est pas le combat mais l'expérience accumulée pendant que l'adversaire cherche à les rattraper.",
+      "en": "The Vikings push three lanes at once. Their strength is not fighting but the experience they bank while the enemy scrambles to catch them."
     },
     "spells": [
       {
@@ -26732,16 +26732,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Sépare les Vikings sur trois lanes pour prendre l'avantage en niveaux.",
-        "en": "Split the Vikings across three lanes to build an XP lead."
+        "fr": "Sépare-les pour farmer, regroupe-les avant chaque objectif.",
+        "en": "Split them to soak, regroup them before every objective."
       },
       {
-        "fr": "Regroupe-les avant tout objectif important.",
-        "en": "Regroup them before any major objective."
+        "fr": "Tous au drakkar ! transforme le trio en une seule cible bien plus solide.",
+        "en": "Longboat! turns the trio into a single, far sturdier target."
       },
       {
-        "fr": "Un Viking perdu, c'est de l'expérience offerte : joue prudemment.",
-        "en": "A lost Viking is free XP for the enemy: play carefully."
+        "fr": "Perdre un Viking coûte peu : ne rends jamais les trois en même temps.",
+        "en": "Losing one Viking costs little: never hand over all three at once."
       }
     ],
     "builds": [
@@ -27171,12 +27171,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_dryad.png",
     "headline": {
-      "fr": "Assassin de poison qui empoisonne toute une équipe.",
-      "en": "Poison assassin who stacks damage over time on a whole team."
+      "fr": "Son poison ne s'arrête jamais de courir.",
+      "en": "Her poison never stops running."
     },
     "gameplay": {
-      "fr": "Lunara ne monte pas : elle est toujours plus rapide. Ses attaques appliquent un poison qui s'accumule et devient très dangereux.",
-      "en": "Lunara never mounts: she's always faster. Her attacks apply a stacking poison that becomes very dangerous."
+      "fr": "Lunara empoisonne tout ce qu'elle touche, et chaque nouvelle application allonge la durée. Elle ne monte jamais et se déplace en bondissant.",
+      "en": "Lunara poisons everything she touches, and each new application extends the duration. She never mounts and travels by leaping."
     },
     "spells": [
       {
@@ -27273,16 +27273,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Empoisonne un maximum de cibles avant un combat.",
-        "en": "Poison as many targets as possible before a fight."
+        "fr": "Empoisonne un maximum de cibles : le poison dure tant que tu le renouvelles.",
+        "en": "Poison as many targets as you can: it lasts as long as you keep applying it."
       },
       {
-        "fr": "Tu ne montes jamais : profite de ta vitesse permanente pour tourner.",
-        "en": "You never mount: use your permanent speed to rotate."
+        "fr": "Tu ne montes jamais : tu es toujours prête à te battre, mais toujours plus lente.",
+        "en": "You never mount: always ready to fight, but always slower."
       },
       {
-        "fr": "Spores affaiblissantes est un excellent outil de désengagement.",
-        "en": "Crippling Spores is an excellent disengage tool."
+        "fr": "Spores affaiblissantes ralentit tout ce qui saigne déjà : c'est ton contrôle.",
+        "en": "Crippling Spores Slows everything already bleeding: that is your crowd control."
       }
     ],
     "builds": [
@@ -27697,12 +27697,12 @@ const HEROES = [
     "role": "AssassinMelee",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_maiev.png",
     "headline": {
-      "fr": "Assassin de mêlée qui immobilise et enferme ses cibles.",
-      "en": "Melee assassin who roots and cages her targets."
+      "fr": "Personne ne quitte le combat qu'elle a choisi.",
+      "en": "Nobody leaves the fight she picked."
     },
     "gameplay": {
-      "fr": "Maiev enchaîne Éventail de dagues et Entraves d’ombre pour empêcher toute fuite, et son Disque de confinement neutralise un héros clé.",
-      "en": "Maiev chains Fan of Knives and Umbral Bind to deny any escape, and her Containment Disc neutralizes a key Hero."
+      "fr": "Maiev enchaîne Éventail de dagues et Entraves d'ombre pour empêcher toute fuite, et son Disque de confinement retire un héros clé du combat.",
+      "en": "Maiev chains Fan of Knives and Umbral Bind to deny every escape, and her Containment Disc removes a key Hero from the fight."
     },
     "spells": [
       {
@@ -27786,16 +27786,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Entraves d’ombre immobilise la cible : attaque-la juste après.",
-        "en": "Umbral Bind roots the target: attack right after."
+        "fr": "Entraves d'ombre immobilise la cible : attaque-la juste après.",
+        "en": "Umbral Bind Roots the target: attack them right after."
       },
       {
-        "fr": "Esprit vengeur sert d'engagement et de repli.",
-        "en": "Spirit of Vengeance works as both engage and escape."
+        "fr": "Esprit vengeur sert d'engagement et de repli : garde toujours l'ombre derrière toi.",
+        "en": "Spirit of Vengeance is both engage and escape: always keep the shadow behind you."
       },
       {
-        "fr": "Disque de confinement peut aussi protéger un allié en le rendant intouchable.",
-        "en": "Containment Disc can also protect an ally by making them untargetable."
+        "fr": "Salto des Gardiennes te rend immunisé un instant : saute dans le contrôle, pas avant.",
+        "en": "Vault of the Wardens makes you immune for a moment: jump into the crowd control, not before."
       }
     ],
     "builds": [
@@ -28154,12 +28154,12 @@ const HEROES = [
     "role": "Tank",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_malganis.png",
     "headline": {
-      "fr": "Tank vampirique très difficile à tuer, excellent en plongeon.",
-      "en": "Vampiric tank who is very hard to kill and excels at diving."
+      "fr": "Il endort une équipe entière et se soigne dessus.",
+      "en": "He puts a whole team to sleep and heals off them."
     },
     "gameplay": {
-      "fr": "Mal'Ganis se soigne à chaque coup grâce au Toucher vampirique et peut se dissoudre en essaim invulnérable pour survivre à n'importe quel burst.",
-      "en": "Mal'Ganis heals with every hit thanks to Vampiric Touch and can become untargetable to survive any burst."
+      "fr": "Mal'Ganis se soigne à chaque coup grâce au Toucher vampirique, endort les héros qu'il traverse et se dissout en essaim invulnérable pour survivre.",
+      "en": "Mal'Ganis heals with every hit through Vampiric Touch, puts to Sleep the Heroes he passes through, and disperses into an Invulnerable swarm to survive."
     },
     "spells": [
       {
@@ -28247,12 +28247,12 @@ const HEROES = [
         "en": "Use Night Rush to pass through enemy Heroes and put them to Sleep."
       },
       {
-        "fr": "Sombre conversion échange tes points de vie avec ceux d'un héros adverse : lance-la quand tu es au plus bas.",
-        "en": "Dark Conversion swaps your Health with an enemy Hero's: cast it when you are at your lowest."
+        "fr": "Sombre conversion échange tes points de vie avec un ennemi : lance-la au plus bas.",
+        "en": "Dark Conversion swaps your Health with an enemy's: cast it at your lowest."
       },
       {
         "fr": "Reste au contact de plusieurs ennemis pour maximiser tes soins.",
-        "en": "Stay in contact with multiple enemies to maximize your healing."
+        "en": "Stay in contact with several enemies to maximize your healing."
       }
     ],
     "builds": [
@@ -28625,12 +28625,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_malthael.png",
     "headline": {
-      "fr": "Bruiser anti-tank qui inflige des dégâts en pourcentage de vie.",
-      "en": "Anti-tank bruiser who deals percentage-of-Health damage."
+      "fr": "Plus la cible a de vie, plus il la fait fondre vite.",
+      "en": "The more Health the target has, the faster he melts it."
     },
     "gameplay": {
-      "fr": "Malthael marque ses cibles puis récolte leurs âmes pour se soigner. Plus les ennemis ont de vie, plus il fait mal.",
-      "en": "Malthael marks his targets, then reaps their souls to heal. The more Health enemies have, the harder he hits."
+      "fr": "Malthaël marque ses cibles puis récolte leurs âmes pour se soigner. Ses dégâts dépendent des points de vie de l'adversaire, pas des siens.",
+      "en": "Malthael Marks his targets then reaps their souls to heal. His damage scales with the enemy's Health, not his own."
     },
     "spells": [
       {
@@ -28714,16 +28714,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ta marque inflige des dégâts en % de vie : concentre les tanks.",
-        "en": "Your mark deals %-Health damage: focus tanks."
+        "fr": "Ta marque ronge un pourcentage de vie : concentre les tanks, pas les fragiles.",
+        "en": "Your Mark eats a percentage of Health: focus tanks, not squishies."
       },
       {
-        "fr": "Voile du faucheur permet de traverser les murs pour engager ou fuir.",
-        "en": "Death Shroud lets you pass through walls to engage or escape."
+        "fr": "Voile du faucheur traverse les murs pour engager comme pour fuir.",
+        "en": "Death Shroud goes through walls to engage and to escape."
       },
       {
         "fr": "Ne récolte les âmes qu'après avoir marqué plusieurs ennemis.",
-        "en": "Only reap souls after marking several enemies."
+        "en": "Only reap souls after Marking several enemies."
       }
     ],
     "builds": [
@@ -29110,12 +29110,12 @@ const HEROES = [
     "role": "Support",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_medivh.png",
     "headline": {
-      "fr": "Soutien de mobilité qui téléporte son équipe et bloque les dégâts.",
-      "en": "Mobility support who teleports his team and blocks damage."
+      "fr": "Il ne soigne personne, il déplace toute son équipe.",
+      "en": "He heals no one, he relocates his whole team."
     },
     "gameplay": {
-      "fr": "Medivh ouvre des portails pour créer des engagements impossibles, protège ses alliés avec Force de volonté et échappe à tout sous forme de corbeau.",
-      "en": "Medivh opens portals to create impossible engages, protects allies with Force of Will, and escapes anything in Raven Form."
+      "fr": "Medivh vole au-dessus de la carte en Forme de corbeau, ouvre des Portails pour engager ou fuir, et absorbe les gros sorts avec Force de volonté.",
+      "en": "Medivh flies over the map in Raven Form, opens Portals to engage or escape, and soaks big spells with Force of Will."
     },
     "spells": [
       {
@@ -29199,16 +29199,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Un portail bien placé permet une rotation ou une fuite impossible autrement.",
-        "en": "A well-placed portal enables a rotation or escape nothing else can."
+        "fr": "Pose ton Portail avant le combat, pas pendant : il faut du temps pour le traverser.",
+        "en": "Place your Portal before the fight, not during: it takes time to walk through."
       },
       {
-        "fr": "Force de volonté annule un gros sort ennemi : anticipe le lancement.",
-        "en": "Force of Will negates a big enemy ability: anticipate the cast."
+        "fr": "Force de volonté annule un burst entier : garde-la pour le sort qui tue.",
+        "en": "Force of Will negates an entire burst: save it for the spell that kills."
       },
       {
-        "fr": "Forme de corbeau te rend intouchable : c'est ta sécurité permanente.",
-        "en": "Raven Form makes you untargetable: it's your permanent safety."
+        "fr": "En Forme de corbeau tu es intouchable : c'est ta seule vraie défense.",
+        "en": "In Raven Form you are untouchable: it is your only real defense."
       }
     ],
     "builds": [
@@ -29595,12 +29595,12 @@ const HEROES = [
     "role": "Tank",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_meiow.png",
     "headline": {
-      "fr": "Tank de zonage capable de couper une équipe en deux.",
-      "en": "Zoning tank able to split a team in half."
+      "fr": "Elle rend chaque combat injouable pour l'adversaire.",
+      "en": "She makes every fight unplayable for the enemy."
     },
     "gameplay": {
-      "fr": "Mei ralentit, aveugle et gèle les ennemis pour rendre chaque combat impossible à gagner pour eux. Cryostase la rend insensible aux effets de contrôle au bon moment.",
-      "en": "Mei slows, blinds and freezes enemies to make every fight unwinnable for them. Cryo-Freeze makes her Unstoppable at the right moment."
+      "fr": "Mei ralentit, aveugle et gèle sans relâche. Cryostase la rend insensible aux contrôles au moment où elle devrait mourir.",
+      "en": "Mei Slows, Blinds and freezes relentlessly. Cryo-Freeze makes her Unstoppable at the moment she should die."
     },
     "spells": [
       {
@@ -29684,16 +29684,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Cryostase te soigne et te rend insensible aux effets de contrôle : utilise-la sur les gros dégâts.",
-        "en": "Cryo-Freeze heals you and makes you Unstoppable: use it on big damage."
+        "fr": "Cryostase te soigne et te rend insensible aux contrôles : garde-la pour le burst.",
+        "en": "Cryo-Freeze heals you and makes you Unstoppable: save it for the burst."
       },
       {
-        "fr": "Mur de glace peut isoler un ennemi ou bloquer une fuite complète.",
-        "en": "Ice Wall can isolate one enemy or completely block an escape."
+        "fr": "Mur de glace isole un ennemi ou coupe complètement une retraite.",
+        "en": "Ice Wall isolates one enemy or completely blocks a retreat."
       },
       {
-        "fr": "Givrage sert autant à engager qu'à repositionner un ennemi.",
-        "en": "Icing is as good for engaging as for repositioning an enemy."
+        "fr": "Blizzard étourdit à son expiration : place-le là où l'ennemi devra rester.",
+        "en": "Blizzard Stuns when it ends: place it where the enemy has to stand."
       }
     ],
     "builds": [
@@ -30066,12 +30066,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_mephisto.png",
     "headline": {
-      "fr": "Mage de zone qui se recharge en touchant plusieurs héros.",
-      "en": "Area mage who refreshes cooldowns by hitting multiple Heroes."
+      "fr": "Chaque sort qui touche rapproche le suivant.",
+      "en": "Every spell that connects brings the next one closer."
     },
     "gameplay": {
-      "fr": "Méphisto fait des dégâts de zone continus et réduit ses temps de recharge à chaque héros touché. Son Ombre lui permet d'entrer et de sortir sans risque.",
-      "en": "Mephisto deals continuous area damage and reduces his cooldowns with every Hero hit. His Shade lets him get in and out safely."
+      "fr": "Méphisto enchaîne ses sorts sans interruption : chaque héros touché réduit ses temps de recharge. Ombre de Méphisto lui permet d'entrer et de ressortir aussitôt.",
+      "en": "Mephisto chains spells without pause: every Hero hit cuts his cooldowns. Shade of Mephisto lets him go in and come straight back out."
     },
     "spells": [
       {
@@ -30155,16 +30155,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Touche plusieurs héros pour recharger tes sorts en permanence.",
-        "en": "Hit multiple Heroes to keep your cooldowns rolling."
+        "fr": "Touche plusieurs héros à la fois : c'est ce qui relance toutes tes capacités.",
+        "en": "Hit several Heroes at once: that is what refreshes all your Abilities."
       },
       {
-        "fr": "Ombre de Méphisto : entre, lance tes sorts, reviens en sécurité.",
-        "en": "Shade of Mephisto: go in, cast, then return to safety."
+        "fr": "Ombre de Méphisto te ramène automatiquement : entre sans crainte, tu reviendras.",
+        "en": "Shade of Mephisto returns you automatically: go in, you will come back."
       },
       {
-        "fr": "Orgie d'âmes est global : sers-t'en pour aider une autre lane.",
-        "en": "Consume Souls is global: use it to help another lane."
+        "fr": "Orgie d'âmes révèle toute l'équipe adverse : lance-la avant l'engagement.",
+        "en": "Consume Souls reveals the whole enemy team: cast it before the engage."
       }
     ],
     "builds": [
@@ -30537,12 +30537,12 @@ const HEROES = [
     "role": "Tank",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_muradin.png",
     "headline": {
-      "fr": "Tank robuste et polyvalent, parfait pour débuter.",
-      "en": "Sturdy, versatile tank, perfect for beginners."
+      "fr": "On ne le tue pas, on finit par l'ignorer.",
+      "en": "You do not kill him, you end up ignoring him."
     },
     "gameplay": {
-      "fr": "Muradin enchaîne Éclair de tempête et Coup de tonnerre pour contrôler la zone, et se soigne en continu grâce à Second souffle.",
-      "en": "Muradin chains Storm Bolt and Thunder Clap to control the area, healing continuously with Second Wind."
+      "fr": "Muradin enchaîne Éclair de tempête et Coup de tonnerre pour contrôler la zone, et se régénère en continu dès qu'il sort du feu.",
+      "en": "Muradin chains Storm Bolt and Thunder Clap to control the area, and regenerates continuously the moment he steps out of danger."
     },
     "spells": [
       {
@@ -30631,11 +30631,11 @@ const HEROES = [
       },
       {
         "fr": "Uppercut magistral projette un ennemi vers ton équipe : vise bien la direction.",
-        "en": "Haymaker knocks an enemy toward your team: aim the direction carefully."
+        "en": "Haymaker launches an enemy toward your team: aim the direction carefully."
       },
       {
-        "fr": "Lancer de nain sert aussi à fuir un mauvais engagement.",
-        "en": "Dwarf Toss is also a great escape from a bad engage."
+        "fr": "Lancer de nain sert aussi à fuir un engagement raté.",
+        "en": "Dwarf Toss is also a great escape from a failed engage."
       }
     ],
     "builds": [
@@ -31008,12 +31008,12 @@ const HEROES = [
     "role": "AssassinMelee",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_murky.png",
     "headline": {
-      "fr": "Nuisance permanente qui revient sans arrêt grâce à son œuf.",
-      "en": "Endless nuisance who keeps coming back thanks to his egg."
+      "fr": "Il meurt tout le temps, et ça ne coûte presque rien.",
+      "en": "He dies constantly, and it costs almost nothing."
     },
     "gameplay": {
-      "fr": "Bourbie pousse les lanes et harcèle l'ennemi. Sa mort ne coûte pas d'expérience à son équipe tant que son œuf est bien caché.",
-      "en": "Murky pushes lanes and harasses the enemy. His death costs his team no experience as long as his egg is well hidden."
+      "fr": "Bourbie pousse les lanes et harcèle sans relâche. Tant que son Œuf est bien caché, sa mort ne rapporte presque rien à l'adversaire.",
+      "en": "Murky pushes lanes and harasses relentlessly. As long as his Egg is well hidden, his death gives the enemy almost nothing."
     },
     "spells": [
       {
@@ -31097,16 +31097,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Cache toujours ton œuf dans un endroit imprévisible.",
-        "en": "Always hide your egg somewhere unpredictable."
+        "fr": "Cache toujours ton Œuf dans un endroit imprévisible, jamais deux fois le même.",
+        "en": "Always hide your Egg somewhere unpredictable, never twice in the same spot."
       },
       {
         "fr": "Poisson-globe fait très mal s'il explose : couvre-le avec Bulle de sûreté.",
         "en": "Pufferfish hits hard if it detonates: cover it with Safety Bubble."
       },
       {
-        "fr": "Ta mort ne donne pas d'expérience : joue agressivement.",
-        "en": "Your death gives no experience: play aggressively."
+        "fr": "Ta mort ne donne presque pas d'expérience : joue bien plus agressivement que les autres.",
+        "en": "Your death gives almost no experience: play far more aggressively than anyone else."
       }
     ],
     "builds": [
@@ -32022,12 +32022,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_nova.png",
     "headline": {
-      "fr": "Sniper furtive qui supprime une cible isolée.",
-      "en": "Stealth sniper who deletes an isolated target."
+      "fr": "Personne ne la voit venir, et elle ne revient pas.",
+      "en": "Nobody sees her coming, and she does not come back."
     },
     "gameplay": {
-      "fr": "Nova reste invisible et cherche l'ennemi hors de position pour l'éliminer d'un burst. Elle offre aussi une excellente vision de carte.",
-      "en": "Nova stays cloaked and hunts out-of-position enemies to burst them down. She also provides excellent map vision."
+      "fr": "Nova se déplace en camouflage permanent et cherche l'occasion de supprimer une cible isolée d'un seul Tir de précision.",
+      "en": "Nova roams permanently cloaked and looks for the chance to delete an isolated target with a single Snipe."
     },
     "spells": [
       {
@@ -32111,16 +32111,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ne révèle jamais ta position pour un peu de dégâts.",
-        "en": "Never reveal your position for a little chip damage."
+        "fr": "Ne dévoile jamais ta position pour un sbire : tu perds tes cumuls et ta surprise.",
+        "en": "Never reveal yourself for a Minion: you lose your stacks and your surprise."
       },
       {
-        "fr": "Ton leurre trompe l'ennemi et te fait gagner du temps.",
-        "en": "Your decoy fools the enemy and buys you time."
+        "fr": "Un Tir de précision manqué remet tes cumuls à zéro : ne tire qu'à coup sûr.",
+        "en": "A missed Snipe resets your stacks: only fire when you cannot miss."
       },
       {
-        "fr": "Frappe chirurgicale est excellente pour sécuriser une prise à distance.",
-        "en": "Precision Strike is excellent to secure a kill from afar."
+        "fr": "Hologramme n'interrompt pas ton camouflage : sers-t'en pour tester un buisson.",
+        "en": "Holo Decoy does not break Stealth: use it to scout a bush."
       }
     ],
     "builds": [
@@ -32493,12 +32493,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_orphea.png",
     "headline": {
-      "fr": "Mage de combo qui se soigne en touchant ses cibles.",
-      "en": "Combo mage who heals herself by hitting targets."
+      "fr": "Elle se soigne en frappant, sans aucun soigneur.",
+      "en": "She heals by hitting, with no healer at all."
     },
     "gameplay": {
-      "fr": "Orphea enchaîne Valse d'ombre pour se repositionner, puis convertit ses charges de chaos en dégâts renforcés et en soins.",
-      "en": "Orphea uses Shadow Waltz to reposition, then converts her chaos stacks into empowered damage and healing."
+      "fr": "Orphéa accumule du chaos avec ses capacités, puis le consomme d'une attaque de base qui frappe très fort et la soigne intégralement.",
+      "en": "Orphea builds Chaos with her Abilities, then spends it on a Basic Attack that hits very hard and fully heals her."
     },
     "spells": [
       {
@@ -32582,16 +32582,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Toucher avec Valse d'ombre te donne un déplacement supplémentaire.",
-        "en": "Hitting with Shadow Waltz grants you an extra dash."
+        "fr": "Toucher avec Valse d'ombre te permet de te projeter : c'est ta mobilité.",
+        "en": "Hitting with Shadow Waltz lets you dash: that is your mobility."
       },
       {
-        "fr": "Consomme tes charges de chaos avec Croc : c'est ton soin principal.",
-        "en": "Spend your chaos stacks with Chomp: it's your main self-heal."
+        "fr": "Consomme tes points de chaos avec une attaque de base, jamais en les gardant.",
+        "en": "Spend your Chaos on a Basic Attack, never by hoarding it."
       },
       {
-        "fr": "Mort sûre est un contrôle majeur pour ton équipe.",
-        "en": "Crushing Jaws is a major setup tool for your team."
+        "fr": "Effroi jaillit une seconde fois en fin de course : place-le sur la fuite.",
+        "en": "Dread erupts a second time at the end: place it on the escape path."
       }
     ],
     "builds": [
@@ -32964,12 +32964,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_probius.png",
     "headline": {
-      "fr": "Spécialiste de zonage qui rend un couloir infranchissable.",
-      "en": "Zoning specialist who makes a corridor impassable."
+      "fr": "Il ne fait rien sans ses pylônes.",
+      "en": "He does nothing without his Pylons."
     },
     "gameplay": {
-      "fr": "Probius pose pylônes et canons photoniques pour tenir une zone, et empile ses Failles instables pour punir toute approche.",
-      "en": "Probius sets up pylons and photon cannons to hold an area and stacks Warp Rifts to punish any approach."
+      "fr": "EDN-OS installe des pylônes qui l'alimentent en mana et renforcent ses canons, puis mine le terrain de failles instables qu'il fait détoner.",
+      "en": "Probius sets up Pylons that fuel his Mana and empower his cannons, then mines the ground with Warp Rifts he detonates."
     },
     "spells": [
       {
@@ -33066,16 +33066,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tes structures ont besoin d'un pylône : place-le d'abord.",
-        "en": "Your structures need a pylon: place it first."
+        "fr": "Tu ne récupères du mana que dans un champ de pylône : pose-en un avant tout.",
+        "en": "You only regain Mana inside a power field: place a Pylon first."
       },
       {
-        "fr": "Faille instable étourdit une fois déclenchée : combine-la.",
-        "en": "Warp Rift stuns when triggered: combine it with your team."
+        "fr": "Une faille instable ne fait rien seule : fais-la détoner avec Impulsion disruptive.",
+        "en": "A Warp Rift does nothing alone: detonate it with Disruption Pulse."
       },
       {
-        "fr": "Barrière ionique coupe totalement un couloir.",
-        "en": "Null Gate completely seals a corridor."
+        "fr": "Barrière ionique coupe totalement un couloir : bloque la retraite adverse.",
+        "en": "Null Gate completely seals a corridor: block the enemy retreat."
       }
     ],
     "builds": [
@@ -33448,12 +33448,12 @@ const HEROES = [
     "role": "AssassinMelee",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_nexushunter.png",
     "headline": {
-      "fr": "Assassin de mêlée qui inflige des saignements et rattrape tout le monde.",
-      "en": "Melee assassin who stacks bleeds and catches anyone."
+      "fr": "Elle fait saigner tout le monde et rattrape n'importe qui.",
+      "en": "She makes everyone bleed and runs down anyone."
     },
     "gameplay": {
-      "fr": "Qhira applique des saignements avec ses attaques, se déplace avec son grappin et isole une cible avec Orbite meurtrière.",
-      "en": "Qhira applies bleeds with her attacks, moves with her grappling hook, and isolates targets with Revolving Sweep."
+      "fr": "Qhira empile des saignements avec ses attaques, se déplace avec son Grappin et isole une cible avec Orbite meurtrière, où elle devient intouchable.",
+      "en": "Qhira stacks bleeds with her attacks, travels with her Grappling Hook, and isolates a target with Revolving Sweep, where she becomes untouchable."
     },
     "spells": [
       {
@@ -33537,16 +33537,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Le grappin permet de traverser les murs : repère les bons angles.",
-        "en": "The hook lets you cross walls: learn the good angles."
+        "fr": "Orbite meurtrière ramène une cible vers ton équipe : vise l'arrière-garde.",
+        "en": "Revolving Sweep drags a target back to your team: aim for the back line."
       },
       {
-        "fr": "Orbite meurtrière ramène une cible vers ton équipe.",
-        "en": "Revolving Sweep drags a target back to your team."
+        "fr": "Pendant la rotation tu ignores tous les contrôles : c'est ta fenêtre pour engager.",
+        "en": "During the rotation you ignore all crowd control: that is your engage window."
       },
       {
-        "fr": "Tes saignements se cumulent : reste au contact.",
-        "en": "Your bleeds stack: stay in contact."
+        "fr": "Soif de sang te soigne selon le nombre de saignements : frappe large avant de l'utiliser.",
+        "en": "Blood Rage heals based on the bleeds out there: spread them before using it."
       }
     ],
     "builds": [
@@ -34450,12 +34450,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_raynor.png",
     "headline": {
-      "fr": "Assassin d'attaques de base simple, solide et polyvalent.",
-      "en": "Simple, solid, versatile auto-attack assassin."
+      "fr": "Simple, solide, il ne rate jamais une partie.",
+      "en": "Simple, solid, he never has a bad game."
     },
     "gameplay": {
-      "fr": "Raynor inflige des dégâts constants à distance et repousse les plongeurs avec Balle perforante, tout en soutenant son équipe avec Inspiration.",
-      "en": "Raynor deals steady ranged damage, pushes divers away with Penetrating Round, and supports his team with Inspire."
+      "fr": "Raynor tire de loin, repousse les plongeurs avec Balle perforante et se soigne seul. Le plus fiable des tireurs, sans aucune fioriture.",
+      "en": "Raynor shoots from range, pushes divers away with Penetrating Round, and heals himself. The most reliable marksman, with no frills."
     },
     "spells": [
       {
@@ -34539,16 +34539,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Balle perforante repousse : c'est ton meilleur outil défensif.",
-        "en": "Penetrating Round knocks back: it's your best defensive tool."
+        "fr": "Balle perforante repousse : sers-t'en pour te dégager, pas pour les dégâts.",
+        "en": "Penetrating Round knocks back: use it to escape, not for the damage."
       },
       {
-        "fr": "Inspiration accélère aussi tes alliés : lance-la avant un combat.",
-        "en": "Inspire also speeds up allies: cast it before a fight."
+        "fr": "Inspiration relance ton attaque et accélère aussi tes sbires en ligne.",
+        "en": "Inspire resets your attack and speeds up your Minions in lane too."
       },
       {
-        "fr": "Hypérion est excellent pour tenir un objectif ou pousser un fort.",
-        "en": "Hyperion is excellent for holding an objective or pushing a fort."
+        "fr": "Poussée d'adrénaline te soigne : garde-la, tu n'as pas d'autre échappatoire.",
+        "en": "Adrenaline Rush heals you: save it, you have no other escape."
       }
     ],
     "builds": [
@@ -34935,12 +34935,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_rexxar.png",
     "headline": {
-      "fr": "Duo bruiser : Rexxar reste en retrait, Misha encaisse.",
-      "en": "Bruiser duo: Rexxar stays back while Misha tanks."
+      "fr": "Deux corps à gérer, deux fois plus dur à sortir d'une ligne.",
+      "en": "Two bodies to handle, twice as hard to push off a lane."
     },
     "gameplay": {
-      "fr": "Rexxar dirige Misha, son ours, qui charge et encaisse pour lui. Il peut soigner Misha en permanence, ce qui le rend très difficile à évincer d'une lane.",
-      "en": "Rexxar commands Misha, his bear, who charges and tanks for him. He can heal Misha constantly, making him very hard to push out of a lane."
+      "fr": "Rexxar dirige Misha, qui charge et encaisse à sa place. Il peut la soigner en permanence, ce qui les rend très difficiles à évincer d'une ligne.",
+      "en": "Rexxar commands Misha, who charges and soaks in his place. He can heal her constantly, making the pair very hard to push off a lane."
     },
     "spells": [
       {
@@ -35024,16 +35024,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Misha peut bloquer un couloir ou intercepter un plongeur.",
-        "en": "Misha can body-block a corridor or intercept a diver."
+        "fr": "Misha peut bloquer un couloir ou intercepter un plongeur à ta place.",
+        "en": "Misha can body-block a corridor or intercept a diver for you."
       },
       {
-        "fr": "Guérison du familier ne s'interrompt pas si tu bouges bien : reste à portée.",
-        "en": "Mend Pet keeps ticking if you stay in range."
+        "fr": "Guérison du familier se canalise : reste à portée sans t'exposer.",
+        "en": "Mend Pet is channeled: stay in range without exposing yourself."
       },
       {
-        "fr": "Ne laisse jamais Misha mourir sans raison : c'est ton bouclier.",
-        "en": "Never let Misha die for nothing: she's your shield."
+        "fr": "Ne laisse jamais Misha mourir sans raison : c'est tout ton bouclier.",
+        "en": "Never let Misha die for nothing: she is your entire Shield."
       }
     ],
     "builds": [
@@ -35420,12 +35420,12 @@ const HEROES = [
     "role": "AssassinMelee",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_samuro.png",
     "headline": {
-      "fr": "Assassin furtif qui sème la confusion avec ses images miroir.",
-      "en": "Stealth assassin who sows confusion with mirror images."
+      "fr": "L'ennemi ne sait jamais lequel est le vrai.",
+      "en": "The enemy never knows which one is real."
     },
     "gameplay": {
-      "fr": "Samuro crée des clones indiscernables pour tromper l'ennemi, pousser plusieurs lanes et frapper depuis l'invisibilité.",
-      "en": "Samuro creates indistinguishable clones to deceive the enemy, push multiple lanes, and strike from stealth."
+      "fr": "Samuro sème des images miroir, échange sa place avec elles pour se soigner des effets négatifs, et frappe en camouflage quand personne ne l'attend.",
+      "en": "Samuro scatters Mirror Images, swaps places with them to cleanse himself, and strikes from Stealth when nobody expects it."
     },
     "spells": [
       {
@@ -35509,16 +35509,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Utilise tes images pour pousser une lane pendant que tu es ailleurs.",
-        "en": "Use your images to push a lane while you are elsewhere."
+        "fr": "Transfert d'image dissipe la plupart des effets négatifs : c'est ta purge.",
+        "en": "Image Transmission cleanses most negative effects: that is your cleanse."
       },
       {
-        "fr": "Marche du vent te soigne et permet de disparaître d'un combat perdu.",
-        "en": "Wind Walk heals you and lets you vanish from a lost fight."
+        "fr": "Alterne image et corps réel en permanence pour brouiller le ciblage adverse.",
+        "en": "Constantly swap between image and real body to scramble enemy targeting."
       },
       {
-        "fr": "Alterne image et corps réel pour rendre le focus ennemi impossible.",
-        "en": "Swap between images and your real body to make enemy focus impossible."
+        "fr": "Marche du vent te soigne : recule quelques secondes plutôt que de rentrer à la base.",
+        "en": "Wind Walk heals you: back off for a few seconds instead of going home."
       }
     ],
     "builds": [
@@ -36383,12 +36383,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_barbarian.png",
     "headline": {
-      "fr": "Bruiser autonome qui n'a besoin ni de mana ni de soigneur.",
-      "en": "Self-sufficient bruiser who needs neither mana nor a healer."
+      "fr": "Ni mana, ni soigneur, ni raison de rentrer à la base.",
+      "en": "No Mana, no healer, no reason to go home."
     },
     "gameplay": {
-      "fr": "Sonya génère de la fureur pour se soigner avec Trombe. Elle excelle en solo lane grâce à son autonomie totale.",
-      "en": "Sonya builds Fury to heal herself with Whirlwind. She's one of the best solo laners in the game thanks to her total self-sufficiency."
+      "fr": "Sonya génère de la fureur en frappant et se soigne avec Trombe. Son autonomie totale en fait la reine de la ligne solitaire.",
+      "en": "Sonya builds Fury by hitting and heals with Whirlwind. Her complete self-sufficiency makes her the queen of the solo lane."
     },
     "spells": [
       {
@@ -36472,16 +36472,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Lance des anciens te permet de rejoindre une cible ou de fuir.",
-        "en": "Ancient Spear lets you close on a target or escape."
+        "fr": "Lance des anciens te permet de rejoindre une cible ou de fuir un mauvais combat.",
+        "en": "Ancient Spear lets you reach a target or escape a bad fight."
       },
       {
-        "fr": "Trombe te soigne : utilise-la sur un groupe de sbires pour rester en lane.",
-        "en": "Whirlwind heals you: use it on minions to stay in lane."
+        "fr": "Trombe te soigne : utilise-la sur un groupe de sbires pour rester en ligne.",
+        "en": "Whirlwind heals you: use it on a Minion wave to stay in lane."
       },
       {
-        "fr": "Bond réduit son temps de recharge : c'est ton principal outil d'engagement.",
-        "en": "Leap has a short cooldown: it's your main engage tool."
+        "fr": "Ta fureur monte en encaissant : ne recule pas dès le premier échange.",
+        "en": "Your Fury builds by taking hits: do not back off after the first trade."
       }
     ],
     "builds": [
@@ -36854,8 +36854,8 @@ const HEROES = [
     "role": "Tank",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_stitches.png",
     "headline": {
-      "fr": "Tank d'attrape : un crochet réussi et le combat est plié.",
-      "en": "Hook tank: one good grab and the fight is over."
+      "fr": "Un crochet réussi, et le combat est déjà gagné.",
+      "en": "One good Hook, and the fight is already won."
     },
     "gameplay": {
       "fr": "Balafré cherche à isoler une cible avec Crochet depuis un buisson, puis à la garder au contact avec Choc et Gavage.",
@@ -36957,15 +36957,15 @@ const HEROES = [
     "tips": [
       {
         "fr": "Crochet depuis un buisson : c'est là que tu es le plus dangereux.",
-        "en": "Hook from a bush: that's where you're most dangerous."
+        "en": "Hook from a bush: that is where you are most dangerous."
       },
       {
-        "fr": "Mâchouille sur les serviteurs te rend des points de vie : sers-t'en pour tenir en lane.",
-        "en": "Devour minions to restore Health: it keeps you healthy in lane."
+        "fr": "Main secourable rattrape un allié en fuite et recharge ton Crochet.",
+        "en": "Helping Hand catches a fleeing ally and refreshes your Hook."
       },
       {
-        "fr": "Gavage peut simplement retirer un tank du combat pendant plusieurs secondes.",
-        "en": "Gorge can simply remove a tank from the fight for several seconds."
+        "fr": "Gavage retire un tank du combat pendant plusieurs secondes, sans qu'on puisse l'aider.",
+        "en": "Gorge removes a tank from the fight for several seconds, beyond any help."
       }
     ],
     "builds": [
@@ -37338,12 +37338,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_sylvanas.png",
     "headline": {
-      "fr": "Assassin de poussée qui désactive toutes les structures.",
-      "en": "Push assassin who disables every structure."
+      "fr": "Elle désactive les bâtiments et pousse toute seule.",
+      "en": "She disables Structures and pushes on her own."
     },
     "gameplay": {
-      "fr": "Sylvanas paralyse les tourelles et les forts avec ses sorts, ce qui en fait la meilleure héroïne de poussée du jeu.",
-      "en": "Sylvanas stuns towers and forts with her abilities, making her the best pushing Hero in the game."
+      "fr": "Sylvanas neutralise les bâtiments et les sbires d'un simple passage, ce qui lui permet de prendre des lignes entières sans aide.",
+      "en": "Sylvanas disables Structures and Minions just by passing through, letting her take entire lanes unaided."
     },
     "spells": [
       {
@@ -37427,16 +37427,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tes sorts désactivent les structures : entre dans le fort sans risque.",
-        "en": "Your abilities disable structures: walk into forts safely."
+        "fr": "Tes attaques neutralisent les tours : entre dans la base sans crainte des canons.",
+        "en": "Your attacks disable towers: walk into the base without fearing the guns."
       },
       {
-        "fr": "Vague de hantise sert d'aller-retour : engage puis reviens.",
-        "en": "Haunting Wave is a there-and-back: engage, then return."
+        "fr": "Vague de hantise sert d'aller-retour : lance-la avant d'engager, pas après.",
+        "en": "Haunting Wave is a round trip: cast it before engaging, not after."
       },
       {
-        "fr": "Contrôle mental peut arracher un ennemi à toute son équipe.",
-        "en": "Mind Control can rip an enemy away from their whole team."
+        "fr": "Dague de l'ombre se propage : lance-la sur un sbire au milieu d'un groupe.",
+        "en": "Shadow Dagger spreads: cast it on a Minion in the middle of a pack."
       }
     ],
     "builds": [
@@ -37809,12 +37809,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_tassadar.png",
     "headline": {
-      "fr": "Mage de zone qui punit les regroupements avec ses rayons.",
-      "en": "Area mage who punishes grouped enemies with his beams."
+      "fr": "Il coupe le terrain en deux avec un mur.",
+      "en": "He splits the ground in two with a wall."
     },
     "gameplay": {
-      "fr": "Tassadar accumule des charges de résonance sur ses cibles pour amplifier ses dégâts, et bloque le terrain avec son Mur de force.",
-      "en": "Tassadar stacks resonance on his targets to amplify his damage and blocks terrain with Force Wall."
+      "fr": "Tassadar canalise son rayon pour monter en puissance, puis coupe le combat en deux avec Mur de force au moment décisif.",
+      "en": "Tassadar channels his beam to ramp up, then splits the fight in two with Force Wall at the decisive moment."
     },
     "spells": [
       {
@@ -37898,16 +37898,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Mur de force peut couper une équipe en deux : place-le avec soin.",
-        "en": "Force Wall can split a team in half: place it carefully."
+        "fr": "Empile ton rayon avant l'engagement : tes dégâts montent avec la canalisation.",
+        "en": "Ramp your beam before the engage: your damage grows with the channel."
       },
       {
-        "fr": "Empile la résonance avant de lancer ton burst.",
-        "en": "Stack resonance before committing to your burst."
+        "fr": "Mur de force isole une cible ou coupe une fuite : c'est ton vrai impact.",
+        "en": "Force Wall isolates a target or cuts an escape: that is your real impact."
       },
       {
-        "fr": "Archon augmente énormément tes dégâts pendant un combat.",
-        "en": "Archon massively increases your damage during a fight."
+        "fr": "Tempête psionique frappe de plus en plus fort : place-la où l'ennemi doit rester.",
+        "en": "Psionic Storm hits harder each pulse: place it where the enemy must stand."
       }
     ],
     "builds": [
@@ -38280,8 +38280,8 @@ const HEROES = [
     "role": "AssassinMelee",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_butcher.png",
     "headline": {
-      "fr": "Assassin qui devient terrifiant s'il accumule sa viande.",
-      "en": "Assassin who becomes terrifying once he stacks his meat."
+      "fr": "Sa viande fait toute sa puissance, et elle se perd.",
+      "en": "His meat is his entire power, and it can be lost."
     },
     "gameplay": {
       "fr": "Le Boucher collecte de la viande fraîche pour augmenter définitivement ses dégâts, puis fonce sur une cible unique et la déchiquette.",
@@ -38369,12 +38369,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Farme ta viande en début de partie : c'est toute ta puissance.",
-        "en": "Farm your meat early: it's your entire power curve."
+        "fr": "Farme ta viande en début de partie : c'est toute ta courbe de puissance.",
+        "en": "Farm your meat early: it is your entire power curve."
       },
       {
-        "fr": "Charge impitoyable étourdit : c'est ton engagement principal.",
-        "en": "Ruthless Onslaught stuns: it's your main engage."
+        "fr": "Charge impitoyable te rend insensible aux contrôles : c'est ton engagement principal.",
+        "en": "Ruthless Onslaught makes you Unstoppable: it is your main engage."
       },
       {
         "fr": "Gibier de potence isole totalement un héros pendant plusieurs secondes.",
@@ -38751,12 +38751,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_thrall.png",
     "headline": {
-      "fr": "Bruiser de dégâts soutenus avec un excellent contrôle de zone.",
-      "en": "Sustained damage bruiser with excellent zone control."
+      "fr": "Il se soigne en frappant et coupe la carte en deux.",
+      "en": "He heals by hitting and cuts the map in half."
     },
     "gameplay": {
-      "fr": "Thrall enchaîne Éclair en chaîne et attaques renforcées par Furie-des-vents, et sépare l'équipe ennemie avec Fracture.",
-      "en": "Thrall weaves Chain Lightning with Windfury-empowered attacks and splits the enemy team with Sundering."
+      "fr": "Thrall se régénère à chaque capacité qui touche, tient une ligne tout seul, et Fracture peut couper une équipe entière en deux.",
+      "en": "Thrall regenerates from every Ability that connects, holds a lane alone, and Sundering can split an entire team in two."
     },
     "spells": [
       {
@@ -38840,16 +38840,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Utilise Éclair en chaîne pour rester en lane : il te soigne.",
-        "en": "Use Chain Lightning to stay in lane: it heals you."
+        "fr": "Chaque capacité qui touche te soigne : ne recule pas trop tôt.",
+        "en": "Every Ability that connects heals you: do not back off too early."
       },
       {
-        "fr": "Fracture coupe l'équipe ennemie en deux : vise plusieurs cibles.",
-        "en": "Sundering splits the enemy team in half: aim for multiple targets."
+        "fr": "Esprit farouche immobilise et va plus loin à chaque héros touché.",
+        "en": "Feral Spirit Roots and travels farther with each Hero it catches."
       },
       {
-        "fr": "Furie-des-vents sert aussi bien à poursuivre qu'à fuir.",
-        "en": "Windfury is as good for chasing as for escaping."
+        "fr": "Fracture coupe une équipe en deux : vise le milieu, pas la première cible.",
+        "en": "Sundering splits a team in two: aim for the middle, not the first target."
       }
     ],
     "builds": [
@@ -39236,12 +39236,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_tracer.png",
     "headline": {
-      "fr": "Assassin ultra mobile impossible à attraper.",
-      "en": "Ultra-mobile assassin who is impossible to catch."
+      "fr": "Impossible à attraper, impossible à ignorer.",
+      "en": "Impossible to catch, impossible to ignore."
     },
     "gameplay": {
-      "fr": "Tracer harcèle en permanence, ne monte jamais et peut remonter le temps pour annuler les dégâts subis. Elle est parfaite pour le harcèlement de carte.",
-      "en": "Tracer harasses nonstop, never mounts, and can rewind time to undo damage taken. She's perfect for map harassment."
+      "fr": "Tracer harcèle sans interruption, ne monte jamais et remonte le temps pour annuler les dégâts qu'elle vient de subir.",
+      "en": "Tracer harasses without pause, never mounts, and rewinds time to undo the damage she just took."
     },
     "spells": [
       {
@@ -39312,16 +39312,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Rappel te ramène en arrière et te soigne : garde-le pour survivre.",
-        "en": "Recall rewinds and heals you: save it to survive."
+        "fr": "Rappel te ramène en arrière et te soigne : garde-le pour survivre, pas pour fuir.",
+        "en": "Recall rewinds and heals you: save it to survive, not to travel."
       },
       {
-        "fr": "Tu ne montes pas : tu es toujours prête à te battre.",
-        "en": "You don't mount: you're always ready to fight."
+        "fr": "Tu ne montes pas : tu es toujours prête à te battre, où que tu sois.",
+        "en": "You never mount: you are always ready to fight, wherever you are."
       },
       {
-        "fr": "Bombe à impulsion sur un tank est souvent du gâchis : vise les cibles fragiles.",
-        "en": "Pulse Bomb on a tank is usually wasted: aim for squishies."
+        "fr": "Bombe à impulsion sur un tank est du gâchis : vise les cibles fragiles.",
+        "en": "Pulse Bomb on a tank is a waste: aim at the squishy targets."
       }
     ],
     "builds": [
@@ -40251,12 +40251,12 @@ const HEROES = [
     "role": "Tank",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_tyrael.png",
     "headline": {
-      "fr": "Tank de soutien qui bouclie toute son équipe.",
-      "en": "Supportive tank who shields his whole team."
+      "fr": "Même sa mort tourne à l'avantage de son équipe.",
+      "en": "Even his death turns in his team's favor."
     },
     "gameplay": {
-      "fr": "Tyraël plante El'druin puis se téléporte à l'épée pour se replacer, tout en donnant des boucliers de zone avec Vertu.",
-      "en": "Tyrael plants El'druin then teleports to the sword to reposition, all while granting AoE shields with Righteousness."
+      "fr": "Tyraël plante El'druin puis se téléporte à l'épée pour se replacer, tout en distribuant des boucliers de zone avec Vertu.",
+      "en": "Tyrael plants El'druin then teleports to the sword to reposition, all while handing out area Shields with Righteousness."
     },
     "spells": [
       {
@@ -40345,11 +40345,11 @@ const HEROES = [
       },
       {
         "fr": "Vertu protège aussi tes alliés proches : place-toi entre eux et l'ennemi.",
-        "en": "Righteousness also shields nearby allies: stand between them and the enemy."
+        "en": "Righteousness also Shields nearby allies: stand between them and the enemy."
       },
       {
-        "fr": "Ta mort déclenche une explosion : elle peut retourner un combat.",
-        "en": "Your death triggers an explosion: it can turn a fight around."
+        "fr": "Ta mort déclenche une explosion : elle peut retourner un combat perdu.",
+        "en": "Your death triggers an explosion: it can turn a lost fight around."
       }
     ],
     "builds": [
@@ -40736,12 +40736,12 @@ const HEROES = [
     "role": "AssassinMelee",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_valeera.png",
     "headline": {
-      "fr": "Assassin furtif qui supprime une cible isolée en quelques secondes.",
-      "en": "Stealth assassin who deletes an isolated target in seconds."
+      "fr": "Elle choisit sa cible et la supprime avant qu'elle réagisse.",
+      "en": "She picks her target and deletes them before they react."
     },
     "gameplay": {
-      "fr": "Valeera reste invisible, ouvre le combat par une ouverture depuis la furtivité et dépense ses points de combo pour éliminer sa cible.",
-      "en": "Valeera stays hidden, opens from stealth, and spends combo points to finish her target."
+      "fr": "Valeera ouvre depuis le camouflage, où ses trois capacités sont remplacées, puis enchaîne ses points de combo pour finir sur une Éviscération.",
+      "en": "Valeera opens from Stealth, where her three Abilities are replaced, then chains Combo Points to finish with an Eviscerate."
     },
     "spells": [
       {
@@ -40873,16 +40873,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ouvre toujours depuis la furtivité : tes sorts sont renforcés.",
-        "en": "Always open from stealth: your abilities are empowered."
+        "fr": "Ouvre toujours depuis la furtivité : hors camouflage tu es extrêmement fragile.",
+        "en": "Always open from Stealth: out of it you are extremely fragile."
       },
       {
-        "fr": "Disparition remet à zéro le focus ennemi : sers-t'en pour survivre.",
-        "en": "Vanish resets enemy focus: use it to survive."
+        "fr": "Attends quelques secondes camouflée : tes capacités te téléportent alors sur la cible.",
+        "en": "Wait a few seconds in Stealth: your Abilities then teleport you onto the target."
       },
       {
-        "fr": "Bombe fumigène protège aussi tes alliés d'un burst.",
-        "en": "Smoke Bomb also protects allies from burst damage."
+        "fr": "Cape d'ombre dissipe tous les dégâts sur la durée sans te dévoiler.",
+        "en": "Cloak of Shadows cleanses all damage over time without revealing you."
       }
     ],
     "builds": [
@@ -41298,12 +41298,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_demonhunter.png",
     "headline": {
-      "fr": "Assassin d'attaques de base qui monte en puissance dans le combat.",
-      "en": "Auto-attack assassin who ramps up during a fight."
+      "fr": "Elle monte en puissance tant qu'elle continue de tirer.",
+      "en": "She ramps up as long as she keeps firing."
     },
     "gameplay": {
-      "fr": "Valla accumule la Haine en attaquant pour augmenter ses dégâts et sa vitesse, et se repositionne sans arrêt avec Acrobatie.",
-      "en": "Valla builds Hatred by attacking to raise her damage and speed, and constantly repositions with Vault."
+      "fr": "Valla accumule de la haine en attaquant, ce qui augmente ses dégâts et sa vitesse, et se repositionne sans arrêt avec Acrobatie.",
+      "en": "Valla stacks Hatred by attacking, which boosts her damage and speed, and repositions constantly with Vault."
     },
     "spells": [
       {
@@ -41387,16 +41387,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Garde tes charges de Haine actives en attaquant régulièrement.",
-        "en": "Keep your Hatred stacks up by attacking regularly."
+        "fr": "Garde tes cumuls de haine actifs en attaquant régulièrement, même des sbires.",
+        "en": "Keep your Hatred stacks up by attacking regularly, even Minions."
       },
       {
         "fr": "Acrobatie sert à esquiver un contrôle, pas seulement à fuir.",
-        "en": "Vault dodges crowd control, not just escapes."
+        "en": "Vault is for dodging crowd control, not just for running."
       },
       {
-        "fr": "Rafale frappe seule les ennemis proches : Acrobatie reste utilisable pour te replacer.",
-        "en": "Strafe fires on nearby enemies by itself: Vault stays usable to reposition."
+        "fr": "Rafale frappe seule les ennemis proches : Acrobatie reste utilisable pendant.",
+        "en": "Strafe fires on nearby enemies by itself: Vault stays usable throughout."
       }
     ],
     "builds": [
@@ -41769,8 +41769,8 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_varian.png",
     "headline": {
-      "fr": "Bruiser modulable : tank, dégâts ou provocation selon ton niveau 10.",
-      "en": "Flexible bruiser: tank, damage, or taunt depending on your level 10."
+      "fr": "Il choisit son rôle au niveau 10, pas avant.",
+      "en": "He picks his role at level 10, not before."
     },
     "gameplay": {
       "fr": "Varian choisit son rôle au niveau 10 : Provocation pour tanker, Lames jumelles de fureur pour les dégâts soutenus, ou Frappe du colosse pour le burst.",
@@ -41871,16 +41871,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Décide de ton niveau 10 en fonction de la composition de ton équipe.",
-        "en": "Choose your level 10 based on your team composition."
+        "fr": "Décide de ton niveau 10 selon la composition de ton équipe, pas selon l'ennemi.",
+        "en": "Choose your level 10 based on your own team's composition, not the enemy's."
       },
       {
         "fr": "Charge sert à engager mais aussi à rattraper une cible qui fuit.",
-        "en": "Charge engages but also catches a fleeing target."
+        "en": "Charge is an engage but also a way to run down a fleeing target."
       },
       {
-        "fr": "Parade réduit les dégâts d'attaque : utilise-la contre les assassins.",
-        "en": "Parry reduces Basic Attack damage: use it against auto-attackers."
+        "fr": "Parade bloque toutes les attaques de base : utilise-la contre les assassins.",
+        "en": "Parry blocks every Basic Attack: use it against auto-attackers."
       }
     ],
     "builds": [
@@ -42267,12 +42267,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_necromancer.png",
     "headline": {
-      "fr": "Spécialiste de poussée qui transforme chaque sbire en squelette.",
-      "en": "Push specialist who turns every minion into a skeleton."
+      "fr": "Chaque serviteur mort devient un soldat de plus.",
+      "en": "Every dead Minion becomes one more soldier."
     },
     "gameplay": {
-      "fr": "Xul crée une armée de squelettes à partir des sbires tués, bloque les ennemis avec Prison d'os et affaiblit les attaques adverses.",
-      "en": "Xul raises an army of skeletons from slain minions, locks enemies down with Bone Prison, and cripples enemy attacks."
+      "fr": "Xul relève les serviteurs tombés en guerriers squelettes, ce qui lui donne une pression de ligne permanente et un mur de corps en combat.",
+      "en": "Xul raises fallen Minions as Skeletal Warriors, giving him permanent lane pressure and a wall of bodies in a fight."
     },
     "spells": [
       {
@@ -42369,16 +42369,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tue les sbires proches des ennemis pour lever un maximum de squelettes.",
-        "en": "Kill minions near enemies to raise as many skeletons as possible."
+        "fr": "Tue les serviteurs près des ennemis : chaque cadavre devient un squelette.",
+        "en": "Kill Minions near enemies: every corpse becomes a Skeleton."
       },
       {
-        "fr": "Frappes maudites aveugle : c'est un contre puissant aux assassins d'attaque.",
-        "en": "Cursed Strikes blinds: a strong counter to auto-attack assassins."
+        "fr": "Prison d'os immobilise et envoie tous tes squelettes sur la cible.",
+        "en": "Bone Prison Roots and sends every Skeleton onto the target."
       },
       {
-        "fr": "Prison d'os immobilise après un délai : anticipe le déplacement.",
-        "en": "Bone Prison roots after a delay: anticipate the movement."
+        "fr": "Frappes maudites ruine les héros qui vivent de leurs attaques de base.",
+        "en": "Cursed Strikes wrecks Heroes who live off their Basic Attacks."
       }
     ],
     "builds": [
@@ -42751,12 +42751,12 @@ const HEROES = [
     "role": "Bruiser",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_yrel.png",
     "headline": {
-      "fr": "Bruiser de zone dont les sorts se renforcent en les chargeant.",
-      "en": "Area bruiser whose abilities grow stronger when charged."
+      "fr": "Elle prend son temps, et ça fait deux fois plus mal.",
+      "en": "She takes her time, and it hurts twice as much."
     },
     "gameplay": {
-      "fr": "Yrel charge ses capacités pour maximiser leur effet, encaisse énormément avec Ardent défenseur et impose son terrain avec Terre sacrée.",
-      "en": "Yrel charges her abilities to maximize their effect, tanks huge damage with Ardent Defender, and claims ground with Sacred Ground."
+      "fr": "Yrel charge ses capacités pour les renforcer, au prix de sa vitesse. Ardent défenseur transforme un burst entier en points de vie.",
+      "en": "Yrel charges her Abilities to strengthen them, at the cost of her speed. Ardent Defender turns an entire burst into Health."
     },
     "spells": [
       {
@@ -42841,15 +42841,15 @@ const HEROES = [
     "tips": [
       {
         "fr": "Charger tes sorts au maximum en augmente nettement l'effet.",
-        "en": "Fully charging your abilities makes them markedly stronger."
+        "en": "Fully charging your Abilities makes them markedly stronger."
       },
       {
         "fr": "Ardent défenseur annule un burst complet : garde-le pour le bon moment.",
-        "en": "Ardent Defender negates an entire burst: save it."
+        "en": "Ardent Defender negates a full burst: save it for the right moment."
       },
       {
-        "fr": "Marteau vertueux te rend de la vie : reste au contact.",
-        "en": "Righteous Hammer restores Health: stay in melee range."
+        "fr": "Dessein divin lance la capacité suivante instantanément : garde-le pour un contrôle.",
+        "en": "Divine Purpose fires the next Ability instantly: save it for a Stun."
       }
     ],
     "builds": [
@@ -43694,12 +43694,12 @@ const HEROES = [
     "role": "Support",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_zarya.png",
     "headline": {
-      "fr": "Soutien qui bouclie ses alliés et devient de plus en plus destructrice.",
-      "en": "Support who shields allies and becomes increasingly destructive."
+      "fr": "Plus on la frappe, plus elle fait mal.",
+      "en": "The more she is hit, the harder she hits."
     },
     "gameplay": {
-      "fr": "Zarya gagne de l'énergie quand ses boucliers absorbent des dégâts. Bien jouée, elle finit par infliger des dégâts d'assassin tout en protégeant son équipe.",
-      "en": "Zarya gains Energy when her shields absorb damage. Played well, she ends up dealing assassin-level damage while protecting her team."
+      "fr": "Chaque bouclier de Zarya absorbé se convertit en Énergie, qui gonfle durablement ses dégâts. Elle protège un allié plongé et le fait payer très cher.",
+      "en": "Every Shield Zarya has absorbed converts into Energy, which lastingly inflates her damage. She protects a dived ally and makes it very costly."
     },
     "spells": [
       {
@@ -43783,16 +43783,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Bouclie juste avant l'impact d'un gros sort pour gagner un maximum d'énergie.",
-        "en": "Shield right before a big ability lands to gain maximum Energy."
+        "fr": "Bouclie juste avant les dégâts, pas après : un bouclier gaspillé, c'est de l'Énergie perdue.",
+        "en": "Shield just before the damage, not after: a wasted Shield is lost Energy."
       },
       {
-        "fr": "Ton énergie décroît : entretiens-la en boucliant régulièrement.",
-        "en": "Your Energy decays: keep it up by shielding regularly."
+        "fr": "Ton Énergie monte en encaissant : cherche les échanges, ne les fuis pas.",
+        "en": "Your Energy builds by absorbing: seek trades, don't avoid them."
       },
       {
-        "fr": "Onde de gravité combinée à un sort de zone allié est dévastatrice.",
-        "en": "Graviton Surge combined with an allied AoE is devastating."
+        "fr": "Orbe à gravitons regroupe une équipe entière pour tes alliés à dégâts de zone.",
+        "en": "Graviton Surge bunches a whole team up for your area damage allies."
       }
     ],
     "builds": [
@@ -44207,12 +44207,12 @@ const HEROES = [
     "role": "AssassinMelee",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_zeratul.png",
     "headline": {
-      "fr": "Assassin furtif qui frappe fort et disparaît aussitôt.",
-      "en": "Stealth assassin who bursts hard and vanishes instantly."
+      "fr": "Invisible jusqu'à la seconde où il tue.",
+      "en": "Invisible until the second he kills."
     },
     "gameplay": {
-      "fr": "Zeratul se déplace en invisibilité permanente, place sa Pointe de singularité pour ralentir sa cible, puis s'échappe avec Transfert.",
-      "en": "Zeratul roams permanently cloaked, lands Singularity Spike to slow his target, then escapes with Blink."
+      "fr": "Zeratul se déplace en camouflage permanent, place sa Pointe de singularité pour ralentir sa cible, frappe, puis s'échappe avec Transfert.",
+      "en": "Zeratul roams permanently cloaked, lands Singularity Spike to slow his target, strikes, then escapes with Blink."
     },
     "spells": [
       {
@@ -44309,16 +44309,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Garde toujours une charge de Transfert pour t'échapper.",
-        "en": "Always keep a Blink charge to escape."
+        "fr": "Garde toujours une charge de Transfert pour t'échapper, jamais pour engager.",
+        "en": "Always keep a Blink charge to escape, never to engage."
       },
       {
-        "fr": "Pointe de singularité explose après un délai et ralentit : anticipe le déplacement.",
-        "en": "Singularity Spike detonates after a delay and Slows: anticipate movement."
+        "fr": "Pointe de singularité explose après un délai : anticipe le déplacement de la cible.",
+        "en": "Singularity Spike detonates after a delay: lead your target's movement."
       },
       {
-        "fr": "Prison du Vide peut annuler tout un engagement ennemi.",
-        "en": "Void Prison can completely negate an enemy engage."
+        "fr": "Prison du Vide peut annuler tout un engagement ennemi : ose la lancer large.",
+        "en": "Void Prison can negate an entire enemy engage: dare to cast it wide."
       }
     ],
     "builds": [
@@ -44691,12 +44691,12 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_zuljin.png",
     "headline": {
-      "fr": "Assassin d'attaques de base qui devient dangereux à faible vie.",
-      "en": "Auto-attack assassin who gets scarier the lower his Health."
+      "fr": "Plus il est près de mourir, plus il est dangereux.",
+      "en": "The closer he is to death, the more dangerous he gets."
     },
     "gameplay": {
-      "fr": "Zul'jin gagne en vitesse d'attaque à mesure qu'il perd de la vie, et se soigne massivement avec Régénération. Sa Guillotine punit les cibles blessées.",
-      "en": "Zul'jin gains Attack Speed as he loses Health and heals massively with Regeneration. His Guillotine punishes wounded targets."
+      "fr": "Zul'jin attaque d'autant plus vite qu'il lui manque des points de vie, et peut échanger sa propre vie contre des dégâts bruts.",
+      "en": "Zul'jin attacks faster the more Health he is missing, and can trade his own life for raw damage."
     },
     "spells": [
       {
@@ -44780,16 +44780,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tu es plus fort à faible vie : n'aie pas peur de rester en combat.",
-        "en": "You're stronger at low Health: don't be afraid to stay in the fight."
+        "fr": "Tu es plus fort à bas points de vie : n'aie pas peur de rester au front.",
+        "en": "You are stronger at low Health: do not be afraid to hold the line."
       },
       {
-        "fr": "Régénération t'immobilise mais te rend énormément de vie.",
-        "en": "Regeneration roots you in place but restores a lot of Health."
+        "fr": "Régénération s'interrompt au moindre déplacement ou dégât : canalise à couvert.",
+        "en": "Regeneration breaks on any movement or damage: channel under cover."
       },
       {
-        "fr": "Taz'dingo t'empêche de mourir : c'est ton meilleur outil d'agression.",
-        "en": "Taz'dingo prevents your death: it's your best aggression tool."
+        "fr": "Taz'dingo ! te rend impossible à tuer : lance-le avant le burst, pas après.",
+        "en": "Taz'dingo! makes you unkillable: use it before the burst, not after."
       }
     ],
     "builds": [
