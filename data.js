@@ -358,90 +358,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joaeole",
-        "level": 4,
-        "name": {
-          "fr": "Vent du Néant",
-          "en": "Nether Wind"
-        },
-        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_gravitylapse.png",
-        "description": {
-          "fr": "Augmente la portée de Rupture de gravité et rend du mana.",
-          "en": "Increases Gravity Lapse range and refunds mana."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jorbvgs",
-        "level": 7,
-        "name": {
-          "fr": "Chair brûlée",
-          "en": "Burned Flesh"
-        },
-        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_flamestrike.png",
-        "description": {
-          "fr": "Choc de flammes inflige des dégâts supplémentaires si elle touche plusieurs héros.",
-          "en": "Flamestrike deals bonus damage if it hits several Heroes."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6joc5n98",
-        "level": 10,
-        "name": {
-          "fr": "Phénix",
-          "en": "Phoenix"
-        },
-        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_phoenix.png",
-        "description": {
-          "fr": "Idéal pour le contrôle de zone et les objectifs.",
-          "en": "Ideal for zone control and objectives."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jod13x2",
-        "level": 13,
-        "name": {
-          "fr": "Pyromane",
-          "en": "Pyromaniac"
-        },
-        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_livingbomb.png",
-        "description": {
-          "fr": "Chaque fois que Bombe vivante inflige des dégâts, réduit le temps de recharge des capacités de base.",
-          "en": "Each time Living Bomb deals periodic damage, reduce basic abilities cooldowns."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jouhnqn",
-        "level": 16,
-        "name": {
-          "fr": "Enflammer",
-          "en": "Ignite"
-        },
-        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_livingbomb.png",
-        "description": {
-          "fr": "Choc de flammes applique aussi Bombe vivante au héros le plus au centre.",
-          "en": "Flamestrike also applies Living Bomb to heroes hit."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jobfvo1",
-        "level": 20,
-        "name": {
-          "fr": "Lance-flamme",
-          "en": "Flamethrower"
-        },
-        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_flamestrike.png",
-        "description": {
-          "fr": "Allonge la portée de Choc de flammes, dont le temps de recharge est réduit si elle touche plusieurs héros.",
-          "en": "Extends Flamestrike's range, and its cooldown is reduced if it hits several Heroes."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmrryr6jo4c48q",
         "level": 1,
         "name": {
@@ -452,6 +368,34 @@ const HEROES = [
         "description": {
           "fr": "Augmente la puissance de sort et soigne lors de l'utilisation du Trait.",
           "en": "Increases spell power and heals when using Trait."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcxx1zr7514168",
+        "level": 1,
+        "name": {
+          "fr": "Convection",
+          "en": "Convection"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_flamestrike.png",
+        "description": {
+          "fr": "Quête : toucher avec Choc de flammes augmente les dégâts.",
+          "en": "Quest: Flamestrike hits increase damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6joaeole",
+        "level": 4,
+        "name": {
+          "fr": "Vent du Néant",
+          "en": "Nether Wind"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_gravitylapse.png",
+        "description": {
+          "fr": "Augmente la portée de Rupture de gravité et rend du mana.",
+          "en": "Increases Gravity Lapse range and refunds mana."
         },
         "demoYoutubeId": null
       },
@@ -470,6 +414,48 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tcxx1zr7515llj",
+        "level": 4,
+        "name": {
+          "fr": "Remous énergétique",
+          "en": "Energy Roil"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_gravitylapse_a.png",
+        "description": {
+          "fr": "Réduit le temps de recharge de Rupture de gravité quand un héros est touché.",
+          "en": "Reduce Gravity Lapse cooldown on Heroes"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcxx1zr7516str",
+        "level": 4,
+        "name": {
+          "fr": "Ponction de mana",
+          "en": "Mana Tap"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_verdantspheres.png",
+        "description": {
+          "fr": "Sphères verdoyantes rend du mana.",
+          "en": "Verdant Spheres restores Mana"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jorbvgs",
+        "level": 7,
+        "name": {
+          "fr": "Chair brûlée",
+          "en": "Burned Flesh"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_flamestrike.png",
+        "description": {
+          "fr": "Choc de flammes inflige des dégâts supplémentaires si elle touche plusieurs héros.",
+          "en": "Flamestrike deals bonus damage if it hits several Heroes."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jo6zsl2",
         "level": 7,
         "name": {
@@ -480,6 +466,20 @@ const HEROES = [
         "description": {
           "fr": "Activer le trait renforce les prochaines attaques de base de Kael'thas.",
           "en": "Activating the trait empowers Kael'thas's next Basic Attacks."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6joc5n98",
+        "level": 10,
+        "name": {
+          "fr": "Phénix",
+          "en": "Phoenix"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_phoenix.png",
+        "description": {
+          "fr": "Idéal pour le contrôle de zone et les objectifs.",
+          "en": "Ideal for zone control and objectives."
         },
         "demoYoutubeId": null
       },
@@ -498,6 +498,62 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6jod13x2",
+        "level": 13,
+        "name": {
+          "fr": "Pyromane",
+          "en": "Pyromaniac"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_livingbomb.png",
+        "description": {
+          "fr": "Chaque fois que Bombe vivante inflige des dégâts, réduit le temps de recharge des capacités de base.",
+          "en": "Each time Living Bomb deals periodic damage, reduce basic abilities cooldowns."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcxx1zr7517ojf",
+        "level": 13,
+        "name": {
+          "fr": "Explosion de fumées",
+          "en": "Backdraft"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_livingbomb_var1.png",
+        "description": {
+          "fr": "L’explosion de Bombe vivante ralentit les ennemis.",
+          "en": "Living Bomb explosion slows enemies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcxx1zr7518v0u",
+        "level": 13,
+        "name": {
+          "fr": "Bombe A",
+          "en": "Fission Bomb"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_livingbomb_b.png",
+        "description": {
+          "fr": "Augmente le rayon d’explosion de Bombe vivante.",
+          "en": "Increases Living Bomb explosion radius"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jouhnqn",
+        "level": 16,
+        "name": {
+          "fr": "Enflammer",
+          "en": "Ignite"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_livingbomb.png",
+        "description": {
+          "fr": "Choc de flammes applique aussi Bombe vivante au héros le plus au centre.",
+          "en": "Flamestrike also applies Living Bomb to heroes hit."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jo3iuli",
         "level": 16,
         "name": {
@@ -512,6 +568,48 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tcxx1zr7519xak",
+        "level": 16,
+        "name": {
+          "fr": "Le réveil du Puits de soleil",
+          "en": "Fury of the Sunwell"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_flamestrike.png",
+        "description": {
+          "fr": "Choc de flammes explose deux fois.",
+          "en": "Flamestrike explodes twice"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcxx1zr7520mkg",
+        "level": 16,
+        "name": {
+          "fr": "Sphères jumelles",
+          "en": "Twin Spheres"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_verdantspheres.png",
+        "description": {
+          "fr": "Obtient les effets des talents du niveau 7 et une charge de Sphères verdoyantes.",
+          "en": "Gain level 7 talents, Verdant Spheres charge"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jobfvo1",
+        "level": 20,
+        "name": {
+          "fr": "Lance-flamme",
+          "en": "Flamethrower"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_flamestrike.png",
+        "description": {
+          "fr": "Allonge la portée de Choc de flammes, dont le temps de recharge est réduit si elle touche plusieurs héros.",
+          "en": "Extends Flamestrike's range, and its cooldown is reduced if it hits several Heroes."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jowrwxu",
         "level": 20,
         "name": {
@@ -522,6 +620,34 @@ const HEROES = [
         "description": {
           "fr": "Réduit le temps de recharge de l'Explosion pyrotechnique.",
           "en": "Reduces Pyroblast cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcxx1zr7521w4z",
+        "level": 20,
+        "name": {
+          "fr": "Renaissance",
+          "en": "Rebirth"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_phoenix.png",
+        "description": {
+          "fr": "Augmente la durée du Phénix et permet de modifier sa destination.",
+          "en": "Increases Phoenix duration and may retarget"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcxx1zr75222g4",
+        "level": 20,
+        "name": {
+          "fr": "Maître des flammes",
+          "en": "Master of Flames"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_livingbomb.png",
+        "description": {
+          "fr": "Les explosions secondaires de Bombe vivante la propagent à leur tour.",
+          "en": "Living Bomb's secondary explosions spread it further in turn."
         },
         "demoYoutubeId": null
       }
@@ -1345,6 +1471,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6jo32lfc",
+        "level": 1,
+        "name": {
+          "fr": "Cœur farouche",
+          "en": "Feral Heart"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_ghostwolf.png",
+        "description": {
+          "fr": "Augmente la vitesse de déplacement de Loup fantôme et confère de l'armure.",
+          "en": "Increases Ghost Wolf movement speed and grants armor."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcnz52zaw12ykh",
+        "level": 1,
+        "name": {
+          "fr": "Mande-foudre",
+          "en": "Stormcaller"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_lightningshield.png",
+        "description": {
+          "fr": "Quête : Bouclier de foudre augmente les points de vie et le mana.",
+          "en": "Quest: Lightning Shield increases Health, Mana"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jogpczq",
         "level": 4,
         "name": {
@@ -1355,6 +1509,34 @@ const HEROES = [
         "description": {
           "fr": "Renforce Salve de guerison pour les héros dont les points de vie sont bas.",
           "en": "Empowers Chain Heal for heroes at low health."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcnz52zaw13uuu",
+        "level": 4,
+        "name": {
+          "fr": "Charge électrique",
+          "en": "Electric Charge"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_lightningshield.png",
+        "description": {
+          "fr": "Bouclier de foudre soigne et augmente la vitesse de déplacement.",
+          "en": "Lightning Shield heals, increases Movement Speed"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcnz52zaw143np",
+        "level": 4,
+        "name": {
+          "fr": "Totem de soins",
+          "en": "Healing Totem"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_healingward.png",
+        "description": {
+          "fr": "Pose un totem qui prodigue un soin de zone.",
+          "en": "Activate to place a ward which heals in an area"
         },
         "demoYoutubeId": null
       },
@@ -1373,6 +1555,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6jow9pm2",
+        "level": 7,
+        "name": {
+          "fr": "Sang et tonnerre",
+          "en": "Blood and Thunder"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_ghostwolf.png",
+        "description": {
+          "fr": "Les attaques faites en Loup fantôme réduisent les temps de recharge des capacités de base et rend du mana.",
+          "en": "Attacks in Ghost Wolf form reduce basic ability cooldowns and restore mana."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcnz52zaw155hp",
+        "level": 7,
+        "name": {
+          "fr": "Purification",
+          "en": "Purification"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_purge.png",
+        "description": {
+          "fr": "Renforce Purge",
+          "en": "Empower Purge"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6joh25bq",
         "level": 10,
         "name": {
@@ -1387,6 +1597,20 @@ const HEROES = [
         "demoYoutubeId": "assets/heroes/base_spells/rehgar/videos/spells/rehgar_ancestral.mp4"
       },
       {
+        "id": "tcnz52zaw16dsy",
+        "level": 10,
+        "name": {
+          "fr": "Furie sanguinaire",
+          "en": "Bloodlust"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_bloodlust.png",
+        "description": {
+          "fr": "Accélère le déplacement et l’attaque des héros alliés, et leur confère du vol de vie.",
+          "en": "Give allied Heroes Movement Speed, Attack Speed, and Life Steal"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jo4kb21",
         "level": 13,
         "name": {
@@ -1397,62 +1621,6 @@ const HEROES = [
         "description": {
           "fr": "Réduit le temps de recharge de Salve de guérison et son coût en mana.",
           "en": "Reduces Chain Heal cooldown and mana cost."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jofazqq",
-        "level": 16,
-        "name": {
-          "fr": "Totem d’emprise de la terre",
-          "en": "Earthgrasp Totem"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_earthbindtotem.png",
-        "description": {
-          "fr": "Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.",
-          "en": "When first spawned, the totem deals AoE damage and heavily slows."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6joboe03",
-        "level": 20,
-        "name": {
-          "fr": "Bénédiction du long-voyant",
-          "en": "Farseer's Blessing"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_ancestralhealing.png",
-        "description": {
-          "fr": "Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.",
-          "en": "A second Ancestral Healing triggers and heals in an AoE."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jo32lfc",
-        "level": 1,
-        "name": {
-          "fr": "Cœur farouche",
-          "en": "Feral Heart"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_ghostwolf.png",
-        "description": {
-          "fr": "Augmente la vitesse de déplacement de Loup fantôme et confère de l'armure.",
-          "en": "Increases Ghost Wolf movement speed and grants armor."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jow9pm2",
-        "level": 7,
-        "name": {
-          "fr": "Sang et tonnerre",
-          "en": "Blood and Thunder"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_ghostwolf.png",
-        "description": {
-          "fr": "Les attaques faites en Loup fantôme réduisent les temps de recharge des capacités de base et rend du mana.",
-          "en": "Attacks in Ghost Wolf form reduce basic ability cooldowns and restore mana."
         },
         "demoYoutubeId": null
       },
@@ -1471,6 +1639,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tcnz52zaw17jdt",
+        "level": 13,
+        "name": {
+          "fr": "Afflux",
+          "en": "Wellspring"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_earthbindtotem.png",
+        "description": {
+          "fr": "Totem de lien terrestre lance Salve de guérison.",
+          "en": "Earthbind Totem casts Chain Heal"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jofazqq",
+        "level": 16,
+        "name": {
+          "fr": "Totem d’emprise de la terre",
+          "en": "Earthgrasp Totem"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_earthbindtotem.png",
+        "description": {
+          "fr": "Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.",
+          "en": "When first spawned, the totem deals AoE damage and heavily slows."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jo349qt",
         "level": 16,
         "name": {
@@ -1481,6 +1677,76 @@ const HEROES = [
         "description": {
           "fr": "Les attaques sous forme de Loup fantôme infligent des dégâts en %pv et rendent des points de vie",
           "en": "Attacks in Ghost Wolf form deal % health damage and restore health."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcnz52zaw18dfr",
+        "level": 16,
+        "name": {
+          "fr": "Tempête croissante",
+          "en": "Rising Storm"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_lightningshield.png",
+        "description": {
+          "fr": "Augmente les dégâts et la durée de Bouclier de foudre.",
+          "en": "Increase Lightning Shield damage, duration"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6joboe03",
+        "level": 20,
+        "name": {
+          "fr": "Bénédiction du long-voyant",
+          "en": "Farseer's Blessing"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_ancestralhealing.png",
+        "description": {
+          "fr": "Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.",
+          "en": "A second Ancestral Healing triggers and heals in an AoE."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcnz52zaw1937r",
+        "level": 20,
+        "name": {
+          "fr": "Cri de guerre du gladiateur",
+          "en": "Gladiator's War Shout"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_bloodlust.png",
+        "description": {
+          "fr": "Augmente la durée et la portée de Furie sanguinaire.",
+          "en": "Increases Bloodlust Duration, Range"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcnz52zaw20snu",
+        "level": 20,
+        "name": {
+          "fr": "Conduction élémentaire",
+          "en": "Elemental Conduit"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_stormshield.png",
+        "description": {
+          "fr": "Confère Bouclier de foudre, et confère un bouclier aux alliés proches.",
+          "en": "Gain Lightning Shield, Shield nearby allies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcnz52zaw217wm",
+        "level": 20,
+        "name": {
+          "fr": "Combattant de la fosse",
+          "en": "Pit Fighter"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_abilitytalent_armor.png",
+        "description": {
+          "fr": "Augmente les dégâts d’attaque et la puissance de capacité à proximité des alliés.",
+          "en": "Gain Attack Damage, Spellpower near Allies"
         },
         "demoYoutubeId": null
       }
@@ -1710,16 +1976,72 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tcauok1ow09ygc",
+        "level": 1,
+        "name": {
+          "fr": "Métamorphose supérieure",
+          "en": "Greater Polymorph"
+        },
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_polymorph.png",
+        "description": {
+          "fr": "Augmente la portée de Métamorphose et réduit son temps de recharge.",
+          "en": "Increase Polymorph range, reduce cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcauok1ow10fbq",
+        "level": 1,
+        "name": {
+          "fr": "Charme féerique",
+          "en": "Pixie Charm"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_bribe.png",
+        "description": {
+          "fr": "Permet de conquérir instantanément un camp de mercenaires à l’activation.",
+          "en": "Activate to instantly defeat a Mercenary"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jor0547",
         "level": 4,
         "name": {
           "fr": "Crachat magique",
           "en": "Magic Spit"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_talent_autoattack_cooldown.jpg",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_cooldown.png",
         "description": {
           "fr": "Augmente la portée d'auto-attaque et ses auto-attaques réduisent le temps de recharge de Brume Apaisante.",
           "en": "Increases basic attack range and basic attacks reduce Soothing Mist cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcauok1ow117tk",
+        "level": 4,
+        "name": {
+          "fr": "Tir onirique",
+          "en": "Dream Shot"
+        },
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_arcaneflare.png",
+        "description": {
+          "fr": "Les héros touchés par le centre de l’Embrasement réduisent le temps de recharge.",
+          "en": "Arcane Flare center hits reduce cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcauok1ow12oqj",
+        "level": 4,
+        "name": {
+          "fr": "Anomalie instable",
+          "en": "Unstable Anomaly"
+        },
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_polymorph.png",
+        "description": {
+          "fr": "Métamorphose ralentit davantage ses cibles et les fait exploser.",
+          "en": "Polymorph Slows more, target explodes"
         },
         "demoYoutubeId": null
       },
@@ -1744,10 +2066,24 @@ const HEROES = [
           "fr": "Je te vois !",
           "en": "Peekaboo!"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_brightwing_hypershift.jpg",
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_hypershift.png",
         "description": {
           "fr": "Déphasage confère un bouclier à Luisaile et sa cible, puis révèle la zone autour.",
           "en": "Phase Shift grants a shield to Brightwing and her target, then reveals the surrounding area."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcauok1ow1385v",
+        "level": 7,
+        "name": {
+          "fr": "Fusée éclairante poisseuse",
+          "en": "Sticky Flare"
+        },
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_arcaneflare.png",
+        "description": {
+          "fr": "Embrasement des Arcanes ralentit les ennemis.",
+          "en": "Arcane Flare Slows enemies"
         },
         "demoYoutubeId": null
       },
@@ -1766,6 +2102,20 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tcauok1ow14328",
+        "level": 10,
+        "name": {
+          "fr": "Vent d’émeraude",
+          "en": "Emerald Wind"
+        },
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_emeraldwind.png",
+        "description": {
+          "fr": "Inflige des dégâts aux ennemis dans une zone et les repousse.",
+          "en": "Damages and pushes enemies in area"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6joepa11",
         "level": 13,
         "name": {
@@ -1776,6 +2126,34 @@ const HEROES = [
         "description": {
           "fr": "Réduit le temps de recharge de Poudre de perlimpinpin et augmente l'armure anti-sort.",
           "en": "Reduces Pixie Dust cooldown and increases spell armor."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcauok1ow1503i",
+        "level": 13,
+        "name": {
+          "fr": "Poudre d’oribus",
+          "en": "Pixie Boost"
+        },
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_pixiedust.png",
+        "description": {
+          "fr": "Poudre de Perlimpinpin confère une meilleure augmentation de vitesse de déplacement.",
+          "en": "Pixie Dust grants an additional burst of speed"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcauok1ow16b7j",
+        "level": 13,
+        "name": {
+          "fr": "Poudre tenace",
+          "en": "Safety Dust"
+        },
+        "icon": "assets/heroes/base_spells/brightwing/images/talents/storm_ui_icon_brightwing_pixiedust_a.png",
+        "description": {
+          "fr": "Poudre de perlimpinpin augmente les soins prodigués.",
+          "en": "Pixie Dust increases healing"
         },
         "demoYoutubeId": null
       },
@@ -1794,6 +2172,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tcauok1ow17ode",
+        "level": 16,
+        "name": {
+          "fr": "Chut !",
+          "en": "Hush!"
+        },
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_arcaneflare.png",
+        "description": {
+          "fr": "Le centre d’Embrasement des Arcanes réduit au silence et réduit les dégâts.",
+          "en": "Arcane Flare center Silences, reduces damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcauok1ow1803x",
+        "level": 16,
+        "name": {
+          "fr": "Insubstance",
+          "en": "Phase Out"
+        },
+        "icon": "assets/heroes/base_spells/brightwing/images/talents/storm_ui_icon_brightwing_stasis.png",
+        "description": {
+          "fr": "Permet d’entrer en stase à l'activation.",
+          "en": "Activate to gain Stasis"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6joubnhr",
         "level": 20,
         "name": {
@@ -1804,6 +2210,48 @@ const HEROES = [
         "description": {
           "fr": "Déphasage se canalise plus rapidement et augmente passivement la vitesse de déplacement.",
           "en": "Phase Shift channels faster and passively increases movement speed."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcauok1ow19opm",
+        "level": 20,
+        "name": {
+          "fr": "Amis imaginaires",
+          "en": "Invisible Friends"
+        },
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_blinkheal.png",
+        "description": {
+          "fr": "Papillonnage confère camouflage.",
+          "en": "Blink Heal grants Stealth"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcauok1ow2096a",
+        "level": 20,
+        "name": {
+          "fr": "Vent constant",
+          "en": "Intensive Winds"
+        },
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_emeraldwind.png",
+        "description": {
+          "fr": "Réduit grandement le temps de recharge de Vent d’émeraude.",
+          "en": "Massively reduce Emerald Wind's cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcauok1ow21ll5",
+        "level": 20,
+        "name": {
+          "fr": "Protection féerique",
+          "en": "Faerie Protector"
+        },
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_pixiedust.png",
+        "description": {
+          "fr": "Confère Poudre de perlimpinpin aux alliés proches.",
+          "en": "Grant nearby allies Pixie Dust"
         },
         "demoYoutubeId": null
       }
@@ -2077,90 +2525,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jodjpjn",
-        "level": 4,
-        "name": {
-          "fr": "Potion de bouclier",
-          "en": "Shielding Potion"
-        },
-        "icon": "assets/heroes/base_spells/deckard/images/spells/storm_ui_icon_deckard_healing_potion.png",
-        "description": {
-          "fr": "Les potions confèrent un bouclier.",
-          "en": "Potions grant a shield upon healing."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jozz1s4",
-        "level": 7,
-        "name": {
-          "fr": "Cube de Kanai",
-          "en": "Kanai's Cube"
-        },
-        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_kanais_cube.png",
-        "description": {
-          "fr": "Le Cube horadrique réduit les dégâts infligés par les ennemis.",
-          "en": "Horadric Cube reduces damage dealt by enemies."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6joo4yqd",
-        "level": 10,
-        "name": {
-          "fr": "Restez un instant et écoutez",
-          "en": "Stay Awhile and Listen"
-        },
-        "icon": "assets/heroes/base_spells/deckard/images/spells/storm_ui_icon_deckard_stay_awhile_and_listen.png",
-        "description": {
-          "fr": "Endort les ennemis en face.",
-          "en": "Channels to put enemies in front to sleep."
-        },
-        "demoYoutubeId": "assets/heroes/base_spells/deckard/videos/spells/deckard_r1.mp4"
-      },
-      {
-        "id": "tmrryr6joejko6",
-        "level": 13,
-        "name": {
-          "fr": "Bénédiction antique",
-          "en": "Ancient Blessings"
-        },
-        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_angelic_conduit.png",
-        "description": {
-          "fr": "Renforce les attaques de base de tous les alliés à proximité et les soigne.",
-          "en": "Empowers nearby allies' basic attacks and heals them."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jorbr2s",
-        "level": 16,
-        "name": {
-          "fr": "Bâton horadrique",
-          "en": "Horadric Staff"
-        },
-        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_horadric_staff.png",
-        "description": {
-          "fr": "Les attaques de base étourdissent.",
-          "en": "Basic attacks stun."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jodwv3i",
-        "level": 20,
-        "name": {
-          "fr": "Respectez vos aînés",
-          "en": "Respect the Elderly"
-        },
-        "icon": "assets/heroes/base_spells/deckard/images/spells/storm_ui_icon_deckard_stay_awhile_and_listen.png",
-        "description": {
-          "fr": "Restez un instant et écoutez rend les ennemis Silence et Aveugle au réveil.",
-          "en": "Stay Awhile and listen silences and blinds enemies upon waking up."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmrryr6jod429a",
         "level": 1,
         "name": {
@@ -2171,6 +2535,34 @@ const HEROES = [
         "description": {
           "fr": "Quête : augmente les dégâts de Parchemin de confinement et réduit l'armure une fois les paliers atteints.",
           "en": "Quest: increases Scroll of Sealing's damage and reduces Armor once the rewards are unlocked."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcfx02x7212doa",
+        "level": 1,
+        "name": {
+          "fr": "Empirisme",
+          "en": "Field Study"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_scroll_of_sealing_a.png",
+        "description": {
+          "fr": "Parchemin de Confinement peut conférer de la puissance de capacité.",
+          "en": "Scroll of Sealing can grant Spell Power"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jodjpjn",
+        "level": 4,
+        "name": {
+          "fr": "Potion de bouclier",
+          "en": "Shielding Potion"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/spells/storm_ui_icon_deckard_healing_potion.png",
+        "description": {
+          "fr": "Les potions confèrent un bouclier.",
+          "en": "Potions grant a shield upon healing."
         },
         "demoYoutubeId": null
       },
@@ -2189,6 +2581,160 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tcfx02x72133gg",
+        "level": 4,
+        "name": {
+          "fr": "Additif protecteur",
+          "en": "Potion of Shielding"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/spells/storm_ui_icon_deckard_healing_potion.png",
+        "description": {
+          "fr": "Les potions de soin confèrent un bouclier.",
+          "en": "Healing Potions grant a Shield"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcfx02x72144a1",
+        "level": 4,
+        "name": {
+          "fr": "Potion de jouvence",
+          "en": "Rejuvenation Potion"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_rejuvination_potion.png",
+        "description": {
+          "fr": "Les potions de soin rendent du mana et davantage de points de vie.",
+          "en": "Healing Potions restore Mana, heal more"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jozz1s4",
+        "level": 7,
+        "name": {
+          "fr": "Cube de Kanai",
+          "en": "Kanai's Cube"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_kanais_cube.png",
+        "description": {
+          "fr": "Le Cube horadrique réduit les dégâts infligés par les ennemis.",
+          "en": "Horadric Cube reduces damage dealt by enemies."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcfx02x7215lu5",
+        "level": 7,
+        "name": {
+          "fr": "Maîtrise du cube",
+          "en": "Cube Mastery"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/spells/storm_ui_icon_deckard_horadric_cube.png",
+        "description": {
+          "fr": "Cube horadrique réduit le temps de recharge de Parchemin de confinement.",
+          "en": "Horadric Cube reduces Scroll of Sealing cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcfx02x7216347",
+        "level": 7,
+        "name": {
+          "fr": "Émeraude",
+          "en": "Emerald"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_emerald.png",
+        "description": {
+          "fr": "Le prochain Cube horadrique réduit les soins reçus par les ennemis.",
+          "en": "Next Horadric Cube reduces enemy healing received"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6joo4yqd",
+        "level": 10,
+        "name": {
+          "fr": "Restez un instant et écoutez",
+          "en": "Stay Awhile and Listen"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/spells/storm_ui_icon_deckard_stay_awhile_and_listen.png",
+        "description": {
+          "fr": "Endort les ennemis en face.",
+          "en": "Channels to put enemies in front to sleep."
+        },
+        "demoYoutubeId": "assets/heroes/base_spells/deckard/videos/spells/deckard_r1.mp4"
+      },
+      {
+        "id": "tcfx02x7217vvw",
+        "level": 10,
+        "name": {
+          "fr": "Vous avez lu mon livre ?",
+          "en": "Lorenado"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/spells/storm_ui_icon_deckard_lorenado.png",
+        "description": {
+          "fr": "Invoque une tornade de grimoires qui repousse les ennemis.",
+          "en": "Conjure a lorenado that knocks enemies away"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6joejko6",
+        "level": 13,
+        "name": {
+          "fr": "Bénédiction antique",
+          "en": "Ancient Blessings"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_angelic_conduit.png",
+        "description": {
+          "fr": "Renforce les attaques de base de tous les alliés à proximité et les soigne.",
+          "en": "Empowers nearby allies' basic attacks and heals them."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcfx02x7218lo8",
+        "level": 13,
+        "name": {
+          "fr": "Super potion de soin",
+          "en": "Super Healing Potion"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_super_healing_potion.png",
+        "description": {
+          "fr": "Les potions de soin rendent davantage de points de vie après un délai.",
+          "en": "Healing Potions heal more after a duration"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcfx02x72195ra",
+        "level": 13,
+        "name": {
+          "fr": "Savant mélange",
+          "en": "Potion of Revival"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_unstable_healing_potion.png",
+        "description": {
+          "fr": "Les potions de soin rendent des points de vie en zone.",
+          "en": "Healing Potions heal in an area"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jorbr2s",
+        "level": 16,
+        "name": {
+          "fr": "Bâton horadrique",
+          "en": "Horadric Staff"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_horadric_staff.png",
+        "description": {
+          "fr": "Les attaques de base étourdissent.",
+          "en": "Basic attacks stun."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jowomnf",
         "level": 16,
         "name": {
@@ -2203,6 +2749,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tcfx02x7220ylp",
+        "level": 16,
+        "name": {
+          "fr": "Survie par le nombre",
+          "en": "Safety in Numbers"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_study_time.png",
+        "description": {
+          "fr": "Les alliés supplémentaires renforcent Fidèle auditoire.",
+          "en": "Additional allies empower Fortitude of the Faithful"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jodwv3i",
+        "level": 20,
+        "name": {
+          "fr": "Respectez vos aînés.",
+          "en": "Respect the Elderly"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/spells/storm_ui_icon_deckard_stay_awhile_and_listen.png",
+        "description": {
+          "fr": "Restez un instant et écoutez rend les ennemis Silence et Aveugle au réveil.",
+          "en": "Stay Awhile and listen silences and blinds enemies upon waking up."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jo35wyo",
         "level": 20,
         "name": {
@@ -2213,6 +2787,34 @@ const HEROES = [
         "description": {
           "fr": "Réduit le temps de recharge des gemmes et de Cube horadique.",
           "en": "Reduces the cooldown of Gems and Horadric Cube."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcfx02x72225sh",
+        "level": 20,
+        "name": {
+          "fr": "Cercle de lecture !",
+          "en": "Morenados!"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/spells/storm_ui_icon_deckard_lorenado.png",
+        "description": {
+          "fr": "Confère une charge de Vous avez lu mon livre ? et réduit le temps de recharge.",
+          "en": "Gain Lorenado charge, reduce cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcfx02x7223t8p",
+        "level": 20,
+        "name": {
+          "fr": "Fiole d’abondance",
+          "en": "Bottomless Flask"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/spells/storm_ui_icon_deckard_healing_potion.png",
+        "description": {
+          "fr": "Les Potions de soin se rechargent après utilisation.",
+          "en": "Healing Potions recharge after use"
         },
         "demoYoutubeId": null
       }
@@ -3637,90 +4239,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jorifo1",
-        "level": 4,
-        "name": {
-          "fr": "Sentence",
-          "en": "Repeated Offense"
-        },
-        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_restrainingblow_a.png",
-        "description": {
-          "fr": "Augmente le repoussement d'Entrave. Quête : étourdir des héros augmente les dégats.",
-          "en": "Increases Detainment Strike's knockback distance. Quest: Stunning Heroes increases its damage."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jodgthn",
-        "level": 7,
-        "name": {
-          "fr": "Corde sacrée",
-          "en": "Energized Cord"
-        },
-        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_bestowhope_a.png",
-        "description": {
-          "fr": "Augmente l'énergie conférée par les attaques de base d'Auriel aux héros et aux cibles non héroïques. Passif : augmente la portée des attaques de bases",
-          "en": "Increases the Energy gained from Auriel's Basic Attacks against Heroes and non-Heroic targets. Passive: increases Basic Attack range."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jowt03g",
-        "level": 10,
-        "name": {
-          "fr": "Égide de Cristal",
-          "en": "Crystal Aegis"
-        },
-        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_ribboncocoon.png",
-        "description": {
-          "fr": "Place un allié en Stase puis inflige des dégâts autour.",
-          "en": "Places an ally in Stasis, then deals damage around them."
-        },
-        "demoYoutubeId": "assets/heroes/base_spells/auriel/videos/spells/auriel_r1.mp4"
-      },
-      {
-        "id": "tmrryr6jocysqw",
-        "level": 13,
-        "name": {
-          "fr": "Fouet perforant",
-          "en": "Piercing Lash"
-        },
-        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_restrainingblow_a.png",
-        "description": {
-          "fr": "Entrave touche tous les héros adverses possibles, et son temps de recharge est réduit selon le nombre de héros touchés.",
-          "en": "Detainment Strike pierces enemy Heroes, and its cooldown is reduced based on the number of Heroes hit."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jopudm3",
-        "level": 16,
-        "name": {
-          "fr": "Courroux des Cieux",
-          "en": "Wrath of Heaven"
-        },
-        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_bestowhope_a.png",
-        "description": {
-          "fr": "Augmente la puissance de capacité de l'allié affecté par Don d'espoir. Réduit l'armure anti-sort des héros adverses touchés par le centre d'Arc vertueux et par l'étourdissement d'Entrave.",
-          "en": "Increases the Spell Power of the ally affected by Bestow Hope. Reduces Spell Armor on enemy Heroes hit by the center of Sacred Sweep and by Detainment Strike's Stun."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jocv1nn",
-        "level": 20,
-        "name": {
-          "fr": "Résolution d'airain",
-          "en": "Diamond Resolve"
-        },
-        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_ribboncocoon.png",
-        "description": {
-          "fr": "Égide de Cristal confère de l'armure à la sortie.",
-          "en": "Crystal Aegis grants Armor when it ends."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmrryr6jom09qo",
         "level": 1,
         "name": {
@@ -3731,6 +4249,34 @@ const HEROES = [
         "description": {
           "fr": "Quête : Augmente les dégâts de la zone centrale. Récompense : Augmente à nouveau les dégâts de la zone centrale.",
           "en": "More Energy."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcddk4qlq12w19",
+        "level": 1,
+        "name": {
+          "fr": "Assaut vertueux",
+          "en": "Righteous Assault"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_angelicsweep_b.png",
+        "description": {
+          "fr": "Chaque héros touché par la zone centrale d'Arc vertueux en réduit le temps de recharge.",
+          "en": "Each Hero hit by Sacred Sweep's center reduces its cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jorifo1",
+        "level": 4,
+        "name": {
+          "fr": "Sentence",
+          "en": "Repeated Offense"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_restrainingblow_a.png",
+        "description": {
+          "fr": "Augmente le repoussement d'Entrave. Quête : étourdir des héros augmente les dégats.",
+          "en": "Increases Detainment Strike's knockback distance. Quest: Stunning Heroes increases its damage."
         },
         "demoYoutubeId": null
       },
@@ -3749,6 +4295,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tcddk4qlq132cp",
+        "level": 4,
+        "name": {
+          "fr": "Lourd fardeau",
+          "en": "Heavy Burden"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_restrainingblow.png",
+        "description": {
+          "fr": "Entrave ralentit les héros touchés, deux fois plus longtemps et plus fort sur une cible déjà étourdie par la capacité.",
+          "en": "Detainment Strike Slows the Heroes hit, for longer and harder on a target already Stunned by it."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jodgthn",
+        "level": 7,
+        "name": {
+          "fr": "Corde sacrée",
+          "en": "Energized Cord"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_bestowhope_a.png",
+        "description": {
+          "fr": "Augmente l'énergie conférée par les attaques de base d'Auriel aux héros et aux cibles non héroïques. Passif : augmente la portée des attaques de bases",
+          "en": "Increases the Energy gained from Auriel's Basic Attacks against Heroes and non-Heroic targets. Passive: increases Basic Attack range."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jocweb8",
         "level": 7,
         "name": {
@@ -3763,6 +4337,62 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tcddk4qlq14mo3",
+        "level": 7,
+        "name": {
+          "fr": "Lien empathique",
+          "en": "Empathic Link"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_bestowhope.png",
+        "description": {
+          "fr": "Les dégâts subis par l'allié porteur de Don d'espoir rechargent aussi l'énergie d'Auriel.",
+          "en": "Damage taken by the ally carrying Bestow Hope also builds Auriel's Energy."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jowt03g",
+        "level": 10,
+        "name": {
+          "fr": "Égide de Cristal",
+          "en": "Crystal Aegis"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_ribboncocoon.png",
+        "description": {
+          "fr": "Place un allié en Stase puis inflige des dégâts autour.",
+          "en": "Places an ally in Stasis, then deals damage around them."
+        },
+        "demoYoutubeId": "assets/heroes/base_spells/auriel/videos/spells/auriel_r1.mp4"
+      },
+      {
+        "id": "tcddk4qlq156rs",
+        "level": 10,
+        "name": {
+          "fr": "Résurrection",
+          "en": "Resurrect"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_resurrect.png",
+        "description": {
+          "fr": "Canalise sur l'esprit d'un allié mort pour le ramener à la vie, à pleine santé, là où il est tombé.",
+          "en": "Channels on a dead ally's spirit to bring them back to life at full Health, where they fell."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jocysqw",
+        "level": 13,
+        "name": {
+          "fr": "Fouet perforant",
+          "en": "Piercing Lash"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_restrainingblow_a.png",
+        "description": {
+          "fr": "Entrave touche tous les héros adverses possibles, et son temps de recharge est réduit selon le nombre de héros touchés.",
+          "en": "Detainment Strike pierces enemy Heroes, and its cooldown is reduced based on the number of Heroes hit."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jo4uzyq",
         "level": 13,
         "name": {
@@ -3773,6 +4403,118 @@ const HEROES = [
         "description": {
           "fr": "Les ennemis sont repoussés au centre.",
           "en": "More Energy."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcddk4qlq16bo1",
+        "level": 13,
+        "name": {
+          "fr": "Éclair aveuglant",
+          "en": "Blinding Flash"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_angelicsweep.png",
+        "description": {
+          "fr": "Les ennemis pris dans la zone centrale d'Arc vertueux sont aveuglés.",
+          "en": "Enemies caught in Sacred Sweep's center are Blinded."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jopudm3",
+        "level": 16,
+        "name": {
+          "fr": "Courroux des Cieux",
+          "en": "Wrath of Heaven"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_bestowhope_a.png",
+        "description": {
+          "fr": "Augmente la puissance de capacité de l'allié affecté par Don d'espoir. Réduit l'armure anti-sort des héros adverses touchés par le centre d'Arc vertueux et par l'étourdissement d'Entrave.",
+          "en": "Increases the Spell Power of the ally affected by Bestow Hope. Reduces Spell Armor on enemy Heroes hit by the center of Sacred Sweep and by Detainment Strike's Stun."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcddk4qlq172uk",
+        "level": 16,
+        "name": {
+          "fr": "Regain d’espoir",
+          "en": "Reservoir of Hope"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_rayofheaven.png",
+        "description": {
+          "fr": "Quête : lancer Rayon des Cieux à pleine énergie augmente définitivement la réserve maximale d'Auriel.",
+          "en": "Quest: casting Ray of Heaven at full Energy permanently increases Auriel's maximum reserve."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcddk4qlq18hf0",
+        "level": 16,
+        "name": {
+          "fr": "Volonté des Cieux",
+          "en": "Will of Heaven"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_bestowhope.png",
+        "description": {
+          "fr": "Don d'espoir accélère les attaques de son porteur. Effet passif : Auriel frappe elle-même plus fort.",
+          "en": "Bestow Hope grants its carrier Attack Speed. Passive: Auriel herself hits harder."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jocv1nn",
+        "level": 20,
+        "name": {
+          "fr": "Résolution d'airain",
+          "en": "Diamond Resolve"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_ribboncocoon.png",
+        "description": {
+          "fr": "Égide de Cristal confère de l'armure à la sortie.",
+          "en": "Crystal Aegis grants Armor when it ends."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcddk4qlq194v7",
+        "level": 20,
+        "name": {
+          "fr": "Vitesse de la lumière",
+          "en": "Light Speed"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_resurrect.png",
+        "description": {
+          "fr": "Les alliés ressuscités reviennent bien plus rapides, et le temps de recharge de Résurrection s'écoule plus vite tant que l'un d'eux est en vie.",
+          "en": "Resurrected allies return much faster, and Resurrect's cooldown recovers faster while one of them is alive."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcddk4qlq20yno",
+        "level": 20,
+        "name": {
+          "fr": "Vol de l’ange",
+          "en": "Angelic Flight"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_angelicflight.png",
+        "description": {
+          "fr": "Après un temps de préparation, Auriel s'envole vers l'endroit ciblé.",
+          "en": "After a wind-up, Auriel flies to the target location."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcddk4qlq214sn",
+        "level": 20,
+        "name": {
+          "fr": "Bouclier d’espoir",
+          "en": "Shield of Hope"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_shieldofhope.png",
+        "description": {
+          "fr": "Confère aux héros alliés proches un bouclier fugace, d'autant plus épais qu'il leur manque de points de vie.",
+          "en": "Grants nearby allied Heroes a brief Shield, thicker the more Health they are missing."
         },
         "demoYoutubeId": null
       }
@@ -5492,7 +6234,7 @@ const HEROES = [
           "fr": "Innervation",
           "en": "Innervate"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_innerrvate.jpg",
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_innerrvate.png",
         "description": {
           "fr": "Rend du mana à un allié et réduit ses temps de recharge.",
           "en": "Restores Mana to an ally and reduces their cooldowns."
@@ -5505,7 +6247,7 @@ const HEROES = [
           "fr": "Rétablissement",
           "en": "Regrowth"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_regrowth.jpg",
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_regrowth.png",
         "description": {
           "fr": "Soin sur la durée.",
           "en": "Heal over time."
@@ -5518,7 +6260,7 @@ const HEROES = [
           "fr": "Éclat lunaire",
           "en": "Moonfire"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_moonfire.jpg",
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_moonfire.png",
         "description": {
           "fr": "Dégâts de zone rapides qui soignent tous les alliés sous A et révèle les ennemis.",
           "en": "Quick AoE damage that heals all allies with Q active and reveals enemies."
@@ -5531,7 +6273,7 @@ const HEROES = [
           "fr": "Sarments",
           "en": "Entangling Roots"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_entanglingroots.jpg",
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_entanglingroots.png",
         "description": {
           "fr": "Immobilise les ennemis dans une zone et inflige des dégâts.",
           "en": "Roots enemies in an area and deals damage."
@@ -5544,7 +6286,7 @@ const HEROES = [
           "fr": "Tranquillité",
           "en": "Tranquility"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_tranquility.jpg",
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_tranquility.png",
         "description": {
           "fr": "Rend continuellement des points de vie aux héros alliés et proches, et donne de l'armure lorsque les alliés sont sous Rétablissement.",
           "en": "Continually restores health to nearby allied Heroes, and grants Armor to allies affected by Regrowth."
@@ -5557,7 +6299,7 @@ const HEROES = [
           "fr": "Rêve du crépuscule",
           "en": "Twilight Dream"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_twilightdream.jpg",
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_twilightdream.png",
         "description": {
           "fr": "Silence tous les ennemis autour et inflige de gros dégâts.",
           "en": "Silences all nearby enemies and deals heavy damage."
@@ -5728,96 +6470,12 @@ const HEROES = [
           "fr": "Rêves d'émeraude",
           "en": "Emerald Dreams"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_entanglingroots_a.jpg",
+        "icon": "assets/heroes/base_spells/malfurion/images/talents/storm_ui_icon_malfurion_entanglingroots_a.png",
         "description": {
           "fr": "À la fin de Sarments, les cibles immobilisées sont endormis.",
           "en": "When Entangling Roots expires, rooted targets are put to Sleep."
         },
         "demoYoutubeId": "assets/heroes/base_spells/malfurion/videos/talents/malfurion_lvl1_e.mp4"
-      },
-      {
-        "id": "tmrryr6jore7pp",
-        "level": 4,
-        "name": {
-          "fr": "Récupération",
-          "en": "Rejuvenation"
-        },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_regrowth.jpg",
-        "description": {
-          "fr": "Rétablissement s'applique aussi désormais à Malfurion.",
-          "en": "Regrowth now also applies to Malfurion."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6joavs7q",
-        "level": 7,
-        "name": {
-          "fr": "Soins naturels",
-          "en": "Nature's Cure"
-        },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_regrowth.jpg",
-        "description": {
-          "fr": "Supprime les effets incapacitants affectant les alliés à l'activation.",
-          "en": "Removes disabling effects from allies upon activation."
-        },
-        "demoYoutubeId": "assets/heroes/base_spells/malfurion/videos/talents/malfurion_lvl7_purge.mp4"
-      },
-      {
-        "id": "tmrryr6jok08jz",
-        "level": 10,
-        "name": {
-          "fr": "Tranquillité",
-          "en": "Tranquility"
-        },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_tranquility.jpg",
-        "description": {
-          "fr": "Rend continuellement des points de vie aux héros alliés et proches, et donne de l'armure lorsque les alliés sont sous Rétablissement.",
-          "en": "Continually restores health to nearby allied Heroes, and grants Armor to allies affected by Regrowth."
-        },
-        "demoYoutubeId": "assets/heroes/base_spells/malfurion/videos/spells/malfurion_r1.mp4"
-      },
-      {
-        "id": "tmrryr6jom7lz6",
-        "level": 13,
-        "name": {
-          "fr": "Rapidité de la nature",
-          "en": "Nature's Swiftness"
-        },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_regrowth.jpg",
-        "description": {
-          "fr": "Les Rétablissements augmentent la vitesse de déplacement de Malfurion.",
-          "en": "Active Regrowths increase Malfurion's Movement Speed."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jogsl5g",
-        "level": 16,
-        "name": {
-          "fr": "Harmonie lunaire",
-          "en": "Moonlit Harmony"
-        },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_wildgrowth_a.jpg",
-        "description": {
-          "fr": "Éclat lunaire procure plus de soins, et ce montant augmente selon le nombre de Rétablissements actifs.",
-          "en": "Moonfire provides more healing, and this amount increases based on the number of active Regrowths."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jolpvlj",
-        "level": 20,
-        "name": {
-          "fr": "Sérénité",
-          "en": "Serenity"
-        },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_malfurion_tranquility.jpg",
-        "description": {
-          "fr": "Éclat lunaire réduit le temps de recharge de Tranquilité. Augmente les soins de Tranquilité de base, et ce montant augmente selon le nombre de Rétablissements actifs.",
-          "en": "Moonfire reduces the cooldown of Tranquility. Increases Tranquility's baseline healing, and this amount increases based on the number of active Regrowths."
-        },
-        "demoYoutubeId": null
       },
       {
         "id": "tmrryr6joly4w2",
@@ -5834,18 +6492,102 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tc5kvu3ov15kes",
+        "level": 1,
+        "name": {
+          "fr": "Racines profondes",
+          "en": "Deep Roots"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_entanglingroots.png",
+        "description": {
+          "fr": "Quête : Sarments confère du mana de manière permanente.",
+          "en": "Quest: Entangling Roots grants permanent Mana"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc5kvu3ov1660l",
+        "level": 1,
+        "name": {
+          "fr": "Sarments vengeurs",
+          "en": "Vengeful Roots"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/talents/storm_ui_icon_malfurion_entanglingroots_b.png",
+        "description": {
+          "fr": "Quête : Sarments donne naissance à un tréant.",
+          "en": "Quest: Entangling Roots spawns a Treant"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jore7pp",
+        "level": 4,
+        "name": {
+          "fr": "Récupération",
+          "en": "Rejuvenation"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_regrowth.png",
+        "description": {
+          "fr": "Rétablissement s'applique aussi désormais à Malfurion.",
+          "en": "Regrowth now also applies to Malfurion."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6johb0pd",
         "level": 4,
         "name": {
           "fr": "Viveterre",
           "en": "Earthliving Enchant"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg",
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_chainheal.png",
         "description": {
           "fr": "Renforce Salve de guerison pour les héros dont les points de vie sont bas.",
           "en": "Empowers Chain Heal for heroes at low health."
         },
         "demoYoutubeId": null
+      },
+      {
+        "id": "tc5kvu3ov177lg",
+        "level": 4,
+        "name": {
+          "fr": "Alignement céleste",
+          "en": "Celestial Alignment"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_moonfire.png",
+        "description": {
+          "fr": "Prolonge la révélation d’Éclat lunaire et renforce les attaques de base.",
+          "en": "Moonfire reveals longer, empowers Attacks"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc5kvu3ov18kz4",
+        "level": 4,
+        "name": {
+          "fr": "Clarté du shan’do",
+          "en": "Shan'do's Clarity"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_innerrvate.png",
+        "description": {
+          "fr": "Innervation dispose d’une seconde charge.",
+          "en": "Gain a second charge of Innervate"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6joavs7q",
+        "level": 7,
+        "name": {
+          "fr": "Soins naturels",
+          "en": "Nature's Cure"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_regrowth.png",
+        "description": {
+          "fr": "Supprime les effets incapacitants affectant les alliés à l'activation.",
+          "en": "Removes disabling effects from allies upon activation."
+        },
+        "demoYoutubeId": "assets/heroes/base_spells/malfurion/videos/talents/malfurion_lvl7_purge.mp4"
       },
       {
         "id": "tmrryr6joxw1hy",
@@ -5854,12 +6596,54 @@ const HEROES = [
           "fr": "Totem lié à la terre",
           "en": "Grounded Totem"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg",
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_earthbindtotem.png",
         "description": {
           "fr": "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.",
           "en": "Reduces attack and spell power of enemies in range."
         },
         "demoYoutubeId": null
+      },
+      {
+        "id": "tc5kvu3ov19xdt",
+        "level": 7,
+        "name": {
+          "fr": "Croissance sauvage",
+          "en": "Wild Growth"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/talents/storm_ui_icon_malfurion_wildgrowth.png",
+        "description": {
+          "fr": "Éclat lunaire prolonge la durée de Rétablissement.",
+          "en": "Moonfire extends Regrowth duration"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc5kvu3ov20dls",
+        "level": 7,
+        "name": {
+          "fr": "Sarments tenaces",
+          "en": "Tenacious Roots"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_entanglingroots.png",
+        "description": {
+          "fr": "Prolonge la durée de Sarment et met fin au temps de recharge en cas d’étourdissement.",
+          "en": "Extend Entangling Roots, Stuns reset cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jok08jz",
+        "level": 10,
+        "name": {
+          "fr": "Tranquillité",
+          "en": "Tranquility"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_tranquility.png",
+        "description": {
+          "fr": "Rend continuellement des points de vie aux héros alliés et proches, et donne de l'armure lorsque les alliés sont sous Rétablissement.",
+          "en": "Continually restores health to nearby allied Heroes, and grants Armor to allies affected by Regrowth."
+        },
+        "demoYoutubeId": "assets/heroes/base_spells/malfurion/videos/spells/malfurion_r1.mp4"
       },
       {
         "id": "tmrryr6jou7rf3",
@@ -5876,16 +6660,86 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tc5kvu3ov21jlf",
+        "level": 10,
+        "name": {
+          "fr": "Rêve du Crépuscule",
+          "en": "Twilight Dream"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_twilightdream.png",
+        "description": {
+          "fr": "Inflige des dégâts aux ennemis proches et les réduit au silence.",
+          "en": "Silence and damage nearby enemies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jom7lz6",
+        "level": 13,
+        "name": {
+          "fr": "Rapidité de la nature",
+          "en": "Nature's Swiftness"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_regrowth.png",
+        "description": {
+          "fr": "Les Rétablissements augmentent la vitesse de déplacement de Malfurion.",
+          "en": "Active Regrowths increase Malfurion's Movement Speed."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jobvr7p",
         "level": 13,
         "name": {
           "fr": "Raz-de-marée",
           "en": "Tidal Waves"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_chainheal.jpg",
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_chainheal.png",
         "description": {
           "fr": "Réduit le temps de recharge de Salve de guérison et son coût en mana.",
           "en": "Reduces Chain Heal cooldown and mana cost."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc5kvu3ov22nsk",
+        "level": 13,
+        "name": {
+          "fr": "Éclat lunaire incapacitant",
+          "en": "Hindering Moonfire"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_moonfire.png",
+        "description": {
+          "fr": "Éclat lunaire ralentit les héros.",
+          "en": "Moonfire Slows"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc5kvu3ov23093",
+        "level": 13,
+        "name": {
+          "fr": "Revitalisation",
+          "en": "Revitalize"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_innerrvate.png",
+        "description": {
+          "fr": "Innervation profite également à Malfurion.",
+          "en": "Innervate also benefits Malfurion"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jogsl5g",
+        "level": 16,
+        "name": {
+          "fr": "Harmonie lunaire",
+          "en": "Moonlit Harmony"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/talents/storm_ui_icon_malfurion_wildgrowth_a.png",
+        "description": {
+          "fr": "Éclat lunaire procure plus de soins, et ce montant augmente selon le nombre de Rétablissements actifs.",
+          "en": "Moonfire provides more healing, and this amount increases based on the number of active Regrowths."
         },
         "demoYoutubeId": null
       },
@@ -5896,10 +6750,52 @@ const HEROES = [
           "fr": "Totem d’emprise de la terre",
           "en": "Earthgrasp Totem"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_earthbindtotem.jpg",
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_earthbindtotem.png",
         "description": {
           "fr": "Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.",
           "en": "When first spawned, the totem deals AoE damage and heavily slows."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc5kvu3ov246f3",
+        "level": 16,
+        "name": {
+          "fr": "Don d’Ysera",
+          "en": "Ysera's Gift"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_regrowth.png",
+        "description": {
+          "fr": "Augmente l’efficacité de Rétablissement quand les points de vie sont élevés.",
+          "en": "Increase Regrowth heal at high Health"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc5kvu3ov25r8e",
+        "level": 16,
+        "name": {
+          "fr": "Équilibre naturel",
+          "en": "Nature's Balance"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/talents/storm_ui_icon_malfurion_wildgrowth.png",
+        "description": {
+          "fr": "Augmente la zone d’Éclat lunaire et la durée de Rétablissement.",
+          "en": "Increase Moonfire area, Regrowth duration"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jolpvlj",
+        "level": 20,
+        "name": {
+          "fr": "Sérénité",
+          "en": "Serenity"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_tranquility.png",
+        "description": {
+          "fr": "Éclat lunaire réduit le temps de recharge de Tranquilité. Augmente les soins de Tranquilité de base, et ce montant augmente selon le nombre de Rétablissements actifs.",
+          "en": "Moonfire reduces the cooldown of Tranquility. Increases Tranquility's baseline healing, and this amount increases based on the number of active Regrowths."
         },
         "demoYoutubeId": null
       },
@@ -5910,10 +6806,52 @@ const HEROES = [
           "fr": "Bénédiction du long-voyant",
           "en": "Farseer's Blessing"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_rehgar_ancestralhealing.jpg",
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_ancestralhealing.png",
         "description": {
           "fr": "Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.",
           "en": "A second Ancestral Healing triggers and heals in an AoE."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc5kvu3ov26xzc",
+        "level": 20,
+        "name": {
+          "fr": "Communion astrale",
+          "en": "Astral Communion"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_twilightdream.png",
+        "description": {
+          "fr": "Téléporte et lance Rêve du Crépuscule.",
+          "en": "Activate to teleport and cast Twilight Dream"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc5kvu3ov27ezq",
+        "level": 20,
+        "name": {
+          "fr": "Fleur de vie",
+          "en": "Lifebloom"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_regrowth.png",
+        "description": {
+          "fr": "Rétablissement rend instantanément une fraction des points de vie manquants.",
+          "en": "Regrowth instantly heals for missing Health"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc5kvu3ov28nnj",
+        "level": 20,
+        "name": {
+          "fr": "Déluge lunaire",
+          "en": "Lunar Shower"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_moonfire.png",
+        "description": {
+          "fr": "Les Éclats lunaires successifs sont de plus en plus puissants.",
+          "en": "Successive Moonfires are more powerful"
         },
         "demoYoutubeId": null
       }
@@ -6157,6 +7095,48 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6jotcxbw",
+        "level": 1,
+        "name": {
+          "fr": "Éclatement",
+          "en": "Fetid Touch"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_abilitytalent_damage.png",
+        "description": {
+          "fr": "Améliore W.",
+          "en": "Improves W."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc8msjba5116fc",
+        "level": 1,
+        "name": {
+          "fr": "Toucher purulent",
+          "en": "Fetid Touch"
+        },
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_weightedpustule.png",
+        "description": {
+          "fr": "Quête : réduit le temps de recharge et le coût en mana d’Agent infectieux.",
+          "en": "Quest: Reduce Weighted Pustule cooldown, cost"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc8msjba512l1f",
+        "level": 1,
+        "name": {
+          "fr": "Surinfection",
+          "en": "Low Blow"
+        },
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_lurkingarm.png",
+        "description": {
+          "fr": "Augmente les dégâts que Menace larvée inflige aux cibles dont les points de vie sont bas.",
+          "en": "Increase Lurking Arm damage to low Health targets"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6joxl4ad",
         "level": 4,
         "name": {
@@ -6171,6 +7151,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tc8msjba513ile",
+        "level": 4,
+        "name": {
+          "fr": "Épidémie",
+          "en": "One Good Spread..."
+        },
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_healingpathogen.png",
+        "description": {
+          "fr": "Propager Virus régénérateur réduit son temps de recharge.",
+          "en": "Reduce Healing Pathogen cooldown after spreading"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc8msjba5143zl",
+        "level": 4,
+        "name": {
+          "fr": "Armure biotique",
+          "en": "Biotic Armor"
+        },
+        "icon": "assets/heroes/base_spells/stukov/images/talents/storm_ui_icon_stukov_healingpathogen_a.png",
+        "description": {
+          "fr": "Virus régénérateur confère de l’armure physique.",
+          "en": "Healing Pathogen grants Physical Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jo7l2de",
         "level": 7,
         "name": {
@@ -6181,6 +7189,34 @@ const HEROES = [
         "description": {
           "fr": "Augmente la zone d'effet de Menace larvée sur la durée, mais sa durée devient limité.",
           "en": "Increases the area of effect of Lurking Arm over time, but its duration becomes limited."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc8msjba515yyx",
+        "level": 7,
+        "name": {
+          "fr": "Foyer infectieux",
+          "en": "The Long Pitch"
+        },
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_weightedpustule.png",
+        "description": {
+          "fr": "Augmente la portée d’Agent infectieux.",
+          "en": "Increase Weighted Pustule range, reduce cooldowns"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc8msjba516m1u",
+        "level": 7,
+        "name": {
+          "fr": "Ablation chirurgicale",
+          "en": "Targeted Excision"
+        },
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_bio-killswitch.png",
+        "description": {
+          "fr": "Faire exploser un seul agent infectieux réduit les temps de recharge.",
+          "en": "Detonate single Weighted Pustule to reduce cooldowns"
         },
         "demoYoutubeId": null
       },
@@ -6202,10 +7238,10 @@ const HEROES = [
         "id": "tmrryr6jo6tk4z",
         "level": 10,
         "name": {
-          "fr": "Frappe chaotique",
+          "fr": "Frappes chaotiques",
           "en": "Flailing Swipe"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_flailingswipe.jpg",
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_flailingswipe.png",
         "description": {
           "fr": "Balaye les ennemis en face de lui plusieurs fois.",
           "en": "Swipes enemies in front of him multiple times."
@@ -6227,6 +7263,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tc8msjba518snb",
+        "level": 13,
+        "name": {
+          "fr": "Phagocytose",
+          "en": "It Hungers"
+        },
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_lurkingarm.png",
+        "description": {
+          "fr": "Le coût en mana de Menace larvée peut être récupéré.",
+          "en": "Lurking Arm cost can be refunded"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc8msjba519lbw",
+        "level": 13,
+        "name": {
+          "fr": "Infection galopante",
+          "en": "Poppin' Pustules"
+        },
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_bio-killswitch.png",
+        "description": {
+          "fr": "Agent infectieux peut exploser dans une zone.",
+          "en": "Weighted Pustule can detonate in an area"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jou2537",
         "level": 16,
         "name": {
@@ -6237,6 +7301,34 @@ const HEROES = [
         "description": {
           "fr": "Virus régénérateur rend des points de vie supplémentaires en cas d'étourdissement ou d'immobilisation",
           "en": "Healing Pathogen heals for an additional amount when the target is Stunned or Rooted."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc8msjba5204po",
+        "level": 16,
+        "name": {
+          "fr": "Porteur universel",
+          "en": "Universal Carrier"
+        },
+        "icon": "assets/heroes/base_spells/stukov/images/talents/storm_ui_icon_stukov_healingpathogen_a.png",
+        "description": {
+          "fr": "Virus régénérateur peut se propager en continu.",
+          "en": "Healing Pathogen can spread continually"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc8msjba521p7c",
+        "level": 16,
+        "name": {
+          "fr": "Panacée",
+          "en": "Pox Populi"
+        },
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_bio-killswitch.png",
+        "description": {
+          "fr": "Éruption virale ne retire plus Virus régénérateur.",
+          "en": "Bio-Kill Switch no longer removes Healing Pathogen"
         },
         "demoYoutubeId": null
       },
@@ -6261,7 +7353,7 @@ const HEROES = [
           "fr": "Chaos maîtrisé",
           "en": "Controlled Chaos"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_stukov_flailingswipe.jpg",
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_flailingswipe.png",
         "description": {
           "fr": "Frappes chaotiques touche une seule fois mais possède plusieurs charges.",
           "en": "Flailing Swipe hits only once but has multiple charges."
@@ -6269,16 +7361,44 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jotcxbw",
-        "level": 1,
+        "id": "tc8msjba522irf",
+        "level": 20,
         "name": {
-          "fr": "Éclatement",
-          "en": "Fetid Touch"
+          "fr": "Chaos contrôlé",
+          "en": "Controlled Chaos"
         },
-        "icon": "",
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_flailingswipe.png",
         "description": {
-          "fr": "Améliore W.",
-          "en": "Improves W."
+          "fr": "Frappes chaotiques touche une seule fois mais dispose de plusieurs charges.",
+          "en": "Flailing Swipe only hits once, gains multiple charges"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc8msjba523b1l",
+        "level": 20,
+        "name": {
+          "fr": "Hypermétabolisme",
+          "en": "Top Off"
+        },
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_healingpathogen.png",
+        "description": {
+          "fr": "Renforce Virus régénérateur sur les cibles à points de vie élevés.",
+          "en": "Healing Pathogen stronger at high Health"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc8msjba5240av",
+        "level": 20,
+        "name": {
+          "fr": "Éclatement cellulaire",
+          "en": "Bio-Explosion Switch"
+        },
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_bio-killswitch.png",
+        "description": {
+          "fr": "Éruption virale fait exploser Menace larvée.",
+          "en": "Bio Kill-Switch detonates Lurking Arm"
         },
         "demoYoutubeId": null
       }
@@ -6522,16 +7642,72 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6joux1d1",
+        "level": 1,
+        "name": {
+          "fr": "Éclaireuse",
+          "en": "Ranger"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_abilitytalent_damage.png",
+        "description": {
+          "fr": "Améliore W.",
+          "en": "Improves Sentinel."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc901a3oc09k6e",
+        "level": 1,
+        "name": {
+          "fr": "Aura de précision",
+          "en": "Trueshot Aura"
+        },
+        "icon": "assets/heroes/base_spells/tyrande/images/talents/storm_ui_icon_tyrande_trueshotaura.png",
+        "description": {
+          "fr": "Augmente les dégâts des attaques et réinitialise Marque du chasseur.",
+          "en": "Gain Attack Damage, reset Hunter's Mark"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6joa0l8n",
         "level": 4,
         "name": {
           "fr": "Élue d'Élune",
           "en": "Elune's Chosen"
         },
-        "icon": "https://static.icy-veins.com/images/heroes/icons/large/storm_ui_icon_talent_autoattack_heal.jpg",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_heal.png",
         "description": {
-          "fr": "Applique une marque sur un allié, les attaques de base de Tyrande le soigne.",
-          "en": "Activate to make Tyrande's Basic Attacks heal the targeted allied Hero for 175% of the damage dealt."
+          "fr": "Marque un héros allié : les attaques de base de Tyrande le soignent d'une part des dégâts qu'elles infligent.",
+          "en": "Marks an allied Hero: Tyrande's Basic Attacks heal them for a share of the damage they deal."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc901a3oc10cny",
+        "level": 4,
+        "name": {
+          "fr": "Lumière éternelle",
+          "en": "Everlasting Light"
+        },
+        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_lightofelune.png",
+        "description": {
+          "fr": "Augmente l’effet de soin de Lumière d’Élune quand elle affecte plusieurs cibles.",
+          "en": "Increase Light of Elune healing on multiple targets"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc901a3oc113kv",
+        "level": 4,
+        "name": {
+          "fr": "Marque de guérison",
+          "en": "Mark of Mending"
+        },
+        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_huntersmark.png",
+        "description": {
+          "fr": "Les ennemis marqués rendent des points de vie aux alliés proches.",
+          "en": "Marked enemies heal nearby Allies"
         },
         "demoYoutubeId": null
       },
@@ -6550,6 +7726,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tc901a3oc12m9l",
+        "level": 7,
+        "name": {
+          "fr": "Don d’Élune",
+          "en": "Elune's Gift"
+        },
+        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_lunarflare.png",
+        "description": {
+          "fr": "Les frappes d’Éclat de lune confèrent de la puissance de capacité.",
+          "en": "Lunar Flare hits grant Spell Power"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc901a3oc13fmn",
+        "level": 7,
+        "name": {
+          "fr": "Résistance kaldorei",
+          "en": "Kaldorei Resistance"
+        },
+        "icon": "assets/heroes/base_spells/tyrande/images/talents/storm_ui_icon_tyrande_lightofelune_a.png",
+        "description": {
+          "fr": "Lumière d’Élune confère de l’armure anti-sort.",
+          "en": "Light of Elune grants Spell Armor"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jo11r25",
         "level": 10,
         "name": {
@@ -6560,6 +7764,20 @@ const HEROES = [
         "description": {
           "fr": "Zone de dégâts qui ralentit.",
           "en": "Creates a damaging area that Slows enemies."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc901a3oc14np0",
+        "level": 10,
+        "name": {
+          "fr": "Éclipse d’Élune",
+          "en": "Shadowstalk"
+        },
+        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_shadowstalk.png",
+        "description": {
+          "fr": "Soigne et camoufle tous les alliés.",
+          "en": "Heal and Stealth all allies"
         },
         "demoYoutubeId": null
       },
@@ -6578,6 +7796,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tc901a3oc159xn",
+        "level": 13,
+        "name": {
+          "fr": "Bénédiction de célérité",
+          "en": "Quickening Blessing"
+        },
+        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_lightofelune.png",
+        "description": {
+          "fr": "Lumière d’Élune augmente la vitesse de déplacement.",
+          "en": "Light of Elune increases Movement Speed"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc901a3oc16rlt",
+        "level": 13,
+        "name": {
+          "fr": "Lumière lunaire cinglante",
+          "en": "Harsh Moonlight"
+        },
+        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_sentinel.png",
+        "description": {
+          "fr": "Sentinelle ralentit sa cible et réduit les dégâts qu’elle inflige.",
+          "en": "Sentinel Slows and reduces damage dealt"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jo38r1p",
         "level": 16,
         "name": {
@@ -6588,6 +7834,34 @@ const HEROES = [
         "description": {
           "fr": "Lumière d'Élune supprime les étourdissements, les silences et les ralentissements.",
           "en": "Light of Elune removes Stuns, Silences, and Slows from its target."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc901a3oc17g4a",
+        "level": 16,
+        "name": {
+          "fr": "Renforcement",
+          "en": "Empower"
+        },
+        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_sentinel.png",
+        "description": {
+          "fr": "Sentinelle inflige des dégâts supplémentaires. Son temps de recharge est réduit.",
+          "en": "Sentinel cooldown reduced, deals percent damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc901a3oc18bfm",
+        "level": 16,
+        "name": {
+          "fr": "Archerie darnassienne",
+          "en": "Darnassian Archery"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
+        "description": {
+          "fr": "Les attaques de base consécutives infligent plus de dégâts.",
+          "en": "Consecutive Basic Attacks deal more damage"
         },
         "demoYoutubeId": null
       },
@@ -6606,16 +7880,44 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joux1d1",
-        "level": 1,
+        "id": "tc901a3oc196p4",
+        "level": 20,
         "name": {
-          "fr": "Éclaireuse",
-          "en": "Ranger"
+          "fr": "Vision de la chasseresse",
+          "en": "Eyes of the Huntress"
         },
-        "icon": "",
+        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_shadowstalk.png",
         "description": {
-          "fr": "Améliore W.",
-          "en": "Improves Sentinel."
+          "fr": "Éclipse d’Élune révèle tous les ennemis et ses soins sont renforcés.",
+          "en": "Shadowstalk reveals enemies, heals more"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc901a3oc20nav",
+        "level": 20,
+        "name": {
+          "fr": "Commandante des sentinelles",
+          "en": "Commander of Sentinels"
+        },
+        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_sentinel.png",
+        "description": {
+          "fr": "Sentinelle obtient une charge supplémentaire.",
+          "en": "Sentinel gains a charge"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tc901a3oc21avv",
+        "level": 20,
+        "name": {
+          "fr": "Flèches glacelame",
+          "en": "Iceblade Arrows"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_slow.png",
+        "description": {
+          "fr": "Augmente le vitesse d’attaque, réduit les dégâts subis.",
+          "en": "Gain Attack Speed, reduce enemy damage dealt"
         },
         "demoYoutubeId": null
       }
@@ -7447,6 +8749,48 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6jo7l6vs",
+        "level": 1,
+        "name": {
+          "fr": "Martyre",
+          "en": "Martyrdom"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_abilitytalent_damage.png",
+        "description": {
+          "fr": "Améliore Q.",
+          "en": "Improves Q."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcom8pm1h098rw",
+        "level": 1,
+        "name": {
+          "fr": "Stigmatisation",
+          "en": "Righteous Flame"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_lash.png",
+        "description": {
+          "fr": "Augmente les dégâts de Flagellation.",
+          "en": "Increase Searing Lash damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcom8pm1h10929",
+        "level": 1,
+        "name": {
+          "fr": "Prière de l’inquisitrice",
+          "en": "Inquisitor's Prayer"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/talents/storm_ui_icon_whitemane_lash_alt_1.png",
+        "description": {
+          "fr": "Flagellation rend du mana et augmente la durée de Zèle.",
+          "en": "Quest: Hit Heroes to increase Health and Mana"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jo3sgqb",
         "level": 4,
         "name": {
@@ -7457,6 +8801,34 @@ const HEROES = [
         "description": {
           "fr": "Les soins de Supplique sont augmentés. Chaque Zèle augmente davantage le soin de Supplique.",
           "en": "Desperate Plea heals for more. Each active Zeal increases its healing."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcom8pm1h110pg",
+        "level": 4,
+        "name": {
+          "fr": "Foi inébranlable",
+          "en": "Unwavering Faith"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_desperation.png",
+        "description": {
+          "fr": "Augmente la portée et les dégâts des attaques de base.",
+          "en": "Increase Basic Attack range and damage"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcom8pm1h12ygu",
+        "level": 4,
+        "name": {
+          "fr": "Obole",
+          "en": "Indulgence"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_zeal.png",
+        "description": {
+          "fr": "Zèle augmente la vitesse de déplacement.",
+          "en": "Zeal grants Movement Speed"
         },
         "demoYoutubeId": null
       },
@@ -7475,6 +8847,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tcom8pm1h13irv",
+        "level": 7,
+        "name": {
+          "fr": "Excès de zèle",
+          "en": "Zealous Spirit"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_desperation.png",
+        "description": {
+          "fr": "Désespoir confère Zèle à Blanchetête.",
+          "en": "Desperation grants Whitemane Zeal"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcom8pm1h143vh",
+        "level": 7,
+        "name": {
+          "fr": "Grand bâton sanctifié",
+          "en": "Saintly Greatstaff"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_lash.png",
+        "description": {
+          "fr": "Flagellation renforce les attaques de base.",
+          "en": "Searing Lash empowers Basic Attacks"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jojnohm",
         "level": 10,
         "name": {
@@ -7489,6 +8889,20 @@ const HEROES = [
         "demoYoutubeId": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_aegis.png"
       },
       {
+        "id": "tcom8pm1h152as",
+        "level": 10,
+        "name": {
+          "fr": "Sainte colère",
+          "en": "Divine Reckoning"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_reckoning.png",
+        "description": {
+          "fr": "Consacre une zone.",
+          "en": "Consecrate an area"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6joqdu17",
         "level": 13,
         "name": {
@@ -7499,6 +8913,34 @@ const HEROES = [
         "description": {
           "fr": "Inquisition réduit les dégâts de l'adversaire.",
           "en": "Inquisition reduces the damage dealt by enemies."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcom8pm1h160ys",
+        "level": 13,
+        "name": {
+          "fr": "Mortification",
+          "en": "Lashing Out"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_lash.png",
+        "description": {
+          "fr": "Réduit le temps de recharge de Flagellation.",
+          "en": "Reduce Searing Lash cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcom8pm1h17sua",
+        "level": 13,
+        "name": {
+          "fr": "Courroux écarlate",
+          "en": "Scarlet Wrath"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_zeal.png",
+        "description": {
+          "fr": "Les attaques de base augmentent la durée de Zèle.",
+          "en": "Basic Attacks increase Zeal duration"
         },
         "demoYoutubeId": null
       },
@@ -7517,6 +8959,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tcom8pm1h186tc",
+        "level": 16,
+        "name": {
+          "fr": "Sacerdoce",
+          "en": "Radiance"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_desperation.png",
+        "description": {
+          "fr": "Désespoir rend des points de vie aux alliés affectés par Zèle.",
+          "en": "Desperation heals allies with Zeal"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcom8pm1h19utx",
+        "level": 16,
+        "name": {
+          "fr": "Pilori",
+          "en": "Harsh Discipline"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_lash.png",
+        "description": {
+          "fr": "Flagellation immobilise la cible d’Inquisition.",
+          "en": "Searing Lash Roots Inquisition target"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jo7szcd",
         "level": 20,
         "name": {
@@ -7531,16 +9001,44 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo7l6vs",
-        "level": 1,
+        "id": "tcom8pm1h20p9q",
+        "level": 20,
         "name": {
-          "fr": "Martyre",
-          "en": "Martyrdom"
+          "fr": "Jugement dernier",
+          "en": "Judgment Day"
         },
-        "icon": "",
+        "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_reckoning.png",
         "description": {
-          "fr": "Améliore Q.",
-          "en": "Improves Q."
+          "fr": "Sainte colère attire les ennemis.",
+          "en": "Divine Reckoning pulls in enemies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcom8pm1h21r03",
+        "level": 20,
+        "name": {
+          "fr": "Lumière directrice",
+          "en": "Guiding Light"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_zeal.png",
+        "description": {
+          "fr": "Activer pour lancer un Zèle gratuit.",
+          "en": "Activate to cast a free Zeal"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcom8pm1h22iu6",
+        "level": 20,
+        "name": {
+          "fr": "Exorcisme",
+          "en": "Purge the Wicked"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/talents/storm_ui_icon_whitemane_purge.png",
+        "description": {
+          "fr": "Inflige des dégâts et réduit l’armure.",
+          "en": "Activate to damage, reduce Armor"
         },
         "demoYoutubeId": null
       }
@@ -7765,27 +9263,27 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jolrbje",
+            "primaryId": null,
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jose80b",
+            "primaryId": null,
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6joo20az",
+            "primaryId": null,
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmrryr6jo7e4aa",
+            "primaryId": null,
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmrryr6jo3xmty",
+            "primaryId": null,
             "alternativeIds": []
           },
           {
@@ -7795,7 +9293,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jokvrk1",
+            "primaryId": null,
             "alternativeIds": []
           }
         ]
@@ -7834,6 +9332,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tcy5uwyu6134w0",
+        "level": 1,
+        "name": {
+          "fr": "Festival",
+          "en": "Party Mix"
+        },
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_crossfade_all.png",
+        "description": {
+          "fr": "Quête : augmenter le rayon de Crossfade et le maximum de mana.",
+          "en": "Quest: Increase Crossfade radius, max Mana"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcy5uwyu6142wr",
+        "level": 1,
+        "name": {
+          "fr": "Beauté du geste",
+          "en": "Smooth Moves"
+        },
+        "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_wallride_a.png",
+        "description": {
+          "fr": "Les attaques de base portées tant que Wall Ride est actif rendent des points de vie.",
+          "en": "Wall Ride Basic Attacks heal"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jow6vxf",
         "level": 4,
         "name": {
@@ -7858,6 +9384,20 @@ const HEROES = [
         "description": {
           "fr": "Toucher un ennemi avec Onde Sonore pendant l'effet de Wall Ride, réduit le temps de recharge et rend du mana. ",
           "en": "Hitting an enemy with Soundwave while the Wall Ride effect is active reduces the cooldown and restores mana."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcy5uwyu615pc0",
+        "level": 4,
+        "name": {
+          "fr": "Subwoofer",
+          "en": "Subwoofer"
+        },
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundwave.png",
+        "description": {
+          "fr": "Quête : renforce Onde sonore.",
+          "en": "Quest: Empower Soundwave"
         },
         "demoYoutubeId": null
       },
@@ -7890,10 +9430,24 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tcy5uwyu616hz1",
+        "level": 7,
+        "name": {
+          "fr": "Ondes positives",
+          "en": "Good Vibrations"
+        },
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundwave.png",
+        "description": {
+          "fr": "Onde sonore confère un bouclier.",
+          "en": "Soundwave grants Shield"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jokntzy",
         "level": 10,
         "name": {
-          "fr": "Top là",
+          "fr": "Tope là",
           "en": "High Five"
         },
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_highfive.png",
@@ -7907,7 +9461,7 @@ const HEROES = [
         "id": "tmrryr6jox2br4",
         "level": 10,
         "name": {
-          "fr": "Mur du son",
+          "fr": "Mur de son",
           "en": "Sound Barrier"
         },
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundbarrier.png",
@@ -7932,6 +9486,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tcy5uwyu6196xg",
+        "level": 13,
+        "name": {
+          "fr": "Fan club",
+          "en": "All Together"
+        },
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_crossfade_all.png",
+        "description": {
+          "fr": "Les alliés proches augmentent la vitesse de déplacement de Lúcio.",
+          "en": "Gain Move Speed from nearby allies"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcy5uwyu620iay",
+        "level": 13,
+        "name": {
+          "fr": "Pro du Ride",
+          "en": "Slip"
+        },
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_wallride.png",
+        "description": {
+          "fr": "Wall Ride augmente l’armure et la vitesse de déplacement.",
+          "en": "Gain Armor, Move Speed during Wall Ride"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jofk3td",
         "level": 16,
         "name": {
@@ -7942,6 +9524,34 @@ const HEROES = [
         "description": {
           "fr": "Les attaques de base réduisent le temps de recharge de Volume Max. Passif : Augmente la portée des attaques de base.",
           "en": "Basic attacks reduce the cooldown of Volume Max. Passive: Increases auto-attack range."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jojw3or",
+        "level": 16,
+        "name": {
+          "fr": "Au-delà du max.",
+          "en": "Up To Eleven"
+        },
+        "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_ampitup_a.png",
+        "description": {
+          "fr": "Toucher des héros adverses avec Onde sonore et Saute-Muraille augmente la durée de Volume max. Passif : Augmente passivement la durée de Volume max.",
+          "en": "Hitting enemy heroes with Soundwave and Push Off increases the duration of Amp It Up. Passive: Passively increases the duration of Amp It Up."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "id": "tcy5uwyu621veh",
+        "level": 16,
+        "name": {
+          "fr": "Rejuvenescência",
+          "en": "Rejuvenescência"
+        },
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_ampitup.png",
+        "description": {
+          "fr": "Beat de soins rend un pourcentage de points de vie.",
+          "en": "Healing Boost heals percent Health"
         },
         "demoYoutubeId": null
       },
@@ -7974,102 +9584,32 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jolrbje",
-        "level": 1,
-        "name": {
-          "fr": "En construction.",
-          "en": "Under construction."
-        },
-        "icon": "",
-        "description": {
-          "fr": "En construction.",
-          "en": "Under construction."
-        },
-        "demoYoutubeId": "M7lc1UVf-VE"
-      },
-      {
-        "id": "tmrryr6jose80b",
-        "level": 4,
-        "name": {
-          "fr": "En construction.",
-          "en": "Under construction."
-        },
-        "icon": "",
-        "description": {
-          "fr": "En construction.",
-          "en": "Under construction."
-        },
-        "demoYoutubeId": "ysz5S6PUM-U"
-      },
-      {
-        "id": "tmrryr6joo20az",
-        "level": 7,
-        "name": {
-          "fr": "En construction.",
-          "en": "Under construction."
-        },
-        "icon": "",
-        "description": {
-          "fr": "En construction.",
-          "en": "Under construction."
-        },
-        "demoYoutubeId": "ScMzIvxBSi4"
-      },
-      {
-        "id": "tmrryr6jo7e4aa",
-        "level": 10,
-        "name": {
-          "fr": "En construction.",
-          "en": "Under construction."
-        },
-        "icon": "",
-        "description": {
-          "fr": "En construction.",
-          "en": "Under construction."
-        },
-        "demoYoutubeId": "aqz-KE-bpKQ"
-      },
-      {
-        "id": "tmrryr6jo3xmty",
-        "level": 13,
-        "name": {
-          "fr": "En construction.",
-          "en": "Under construction."
-        },
-        "icon": "",
-        "description": {
-          "fr": "En construction.",
-          "en": "Under construction."
-        },
-        "demoYoutubeId": "M7lc1UVf-VE"
-      },
-      {
-        "id": "tmrryr6jojw3or",
-        "level": 16,
-        "name": {
-          "fr": "Au-delà du max.",
-          "en": "Up To Eleven"
-        },
-        "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_ampitup_a.png",
-        "description": {
-          "fr": "Toucher des héros adverses avec Onde sonore et Saute-Muraille augmente la durée de Volume max. Passif : Augmente passivement la durée de Volume max.",
-          "en": "Hitting enemy heroes with Soundwave and Push Off increases the duration of Amp It Up. Passive: Passively increases the duration of Amp It Up."
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "id": "tmrryr6jokvrk1",
+        "id": "tcy5uwyu622w8r",
         "level": 20,
         "name": {
-          "fr": "En construction.",
-          "en": "Under construction."
+          "fr": "Bossa Nova",
+          "en": "Bossa Nova"
         },
-        "icon": "",
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundbarrier.png",
         "description": {
-          "fr": "En construction.",
-          "en": "Under construction."
+          "fr": "Réduit le temps de recharge de Mur de son, mais aussi sa durée.",
+          "en": "Reduce Sound Barrier's cooldown, duration"
         },
-        "demoYoutubeId": "ScMzIvxBSi4"
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcy5uwyu623ou8",
+        "level": 20,
+        "name": {
+          "fr": "Tube de l’été",
+          "en": "Summer Anthem"
+        },
+        "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_crossfade_a.png",
+        "description": {
+          "fr": "Activer Crossfade rend impossible à tuer.",
+          "en": "Activate for Crossfade to grant Unkillable"
+        },
+        "demoYoutubeId": null
       }
     ],
     "forms": []
