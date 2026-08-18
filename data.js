@@ -14940,8 +14940,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_aspect_of_death.png",
         "description": {
-          "fr": "Aile de Mort porte des plaques d'armure qu'il perd en encaissant et ne regagne qu'en vol. Il est en permanence insensible aux effets de contrôle et frappe plus fort les héros, mais aucun effet allié ne l'atteint.",
-          "en": "Deathwing wears Armor Plates he sheds as he takes damage and only regains while flying. He is permanently Unstoppable and hits Heroes harder, but no allied effect can reach him."
+          "fr": "Aile de Mort porte des plaques d'armure qui lui confèrent chacune de l'armure. Il en perd une à chaque tranche de points de vie entamée, et ne les regagne qu'en vol. Il est en permanence insensible aux effets de contrôle et frappe plus fort les héros, mais aucun effet allié ne l'atteint.",
+          "en": "Deathwing wears Armor Plates, each granting him Armor. He sheds one for every chunk of Health lost, and only regains them while flying. He is permanently Unstoppable and hits Heroes harder, but no allied effect can reach him."
         },
         "demoYoutubeId": ""
       },
@@ -14953,8 +14953,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_molten_flame.png",
         "description": {
-          "fr": "Projette un souffle de flammes continu qui fait fondre les ennemis devant lui, en consommant son énergie.",
-          "en": "Breathes a continuous stream of flame that melts the enemies in front of him, draining his Energy."
+          "fr": "Après un court délai, projette un souffle de flammes continu qui fait fondre les ennemis devant lui, en consommant son énergie.",
+          "en": "After a short delay, breathes a continuous stream of flame that melts the enemies in front of him, draining his Energy."
         },
         "demoYoutubeId": "",
         "form": [
@@ -14984,8 +14984,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_incinerate.png",
         "description": {
-          "fr": "Bat des ailes et blesse tous les ennemis proches.",
-          "en": "Beats his wings, damaging every nearby enemy."
+          "fr": "Après un court délai, bat des ailes et blesse tous les ennemis proches.",
+          "en": "After a short delay, beats his wings, damaging every nearby enemy."
         },
         "demoYoutubeId": "",
         "form": "destructeur"
@@ -15054,8 +15054,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_mount.png",
         "description": {
-          "fr": "S'envole, immunisé à tous les effets, en regagnant des points de vie et ses plaques d'armure. Aile de Mort choisit ensuite d'atterrir en Destructeur ou en Brise-monde.",
-          "en": "Takes to the sky, immune to all effects, regaining Health and Armor Plates. Deathwing then chooses to land as the Destroyer or the World Breaker."
+          "fr": "S'envole, immunisé à tous les effets, en regagnant des points de vie et ses plaques d'armure. Impossible à lancer juste après avoir attaqué, lancé une capacité ou subi des dégâts, et impossible à interrompre une fois partie.",
+          "en": "Takes to the sky, immune to all effects, regaining Health and Armor Plates. Cannot be cast right after attacking, casting or taking damage, and cannot be interrupted once started."
         },
         "demoYoutubeId": "",
         "form": [
@@ -15071,8 +15071,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_cataclysm.png",
         "description": {
-          "fr": "Aile de mort vole au-dessus d’une zone, semant la dévastation dans son sillage.",
-          "en": "Deathwing flies over an area, causing devastation in his wake."
+          "fr": "Aile de Mort s'envole dans la direction ciblée, blesse les ennemis sur son passage et laisse derrière lui une terre brûlée qui continue de les consumer.",
+          "en": "Deathwing flies off in the target direction, damaging enemies along the way and leaving behind scorched earth that keeps burning them."
         },
         "demoYoutubeId": "",
         "form": [
@@ -15181,8 +15181,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_aspect_of_death.png",
         "description": {
-          "fr": "Les plaques d’armure augmentent la récupération.",
-          "en": "Armor Plates increase Regen"
+          "fr": "Tant qu'il lui reste assez de plaques d'armure, Aile de Mort récupère des points de vie en continu.",
+          "en": "While he still has enough Armor Plates, Deathwing regenerates Health continuously."
         },
         "demoYoutubeId": null
       },
@@ -15195,8 +15195,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_aspect_of_death_alt1.png",
         "description": {
-          "fr": "Protégé contre la perte de plaques d’armure et les attaques de base rendent de la vie.",
-          "en": "Protected from Armor Plate loss, Basic Attacks heal"
+          "fr": "Les attaques de base portées aux héros le soignent, et perdre une plaque d'armure le rend brièvement insensible aux dégâts.",
+          "en": "Basic Attacks against Heroes heal him, and losing an Armor Plate briefly makes him immune to damage."
         },
         "demoYoutubeId": null
       },
@@ -15223,8 +15223,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_heat_wave.png",
         "description": {
-          "fr": "Augmente les dégâts d’Incinération et d’Explosion de lave.",
-          "en": "Increase Incinerate and Lava Burst damage"
+          "fr": "En Destructeur, toucher un héros avec Incinération l'entoure d'une aura brûlante, cumulable. En Brise-monde, la déflagration d'Explosion de lave frappe plus fort.",
+          "en": "As the Destroyer, hitting a Hero with Incinerate wraps him in a burning aura that stacks. As the World Breaker, Lava Burst's blast hits harder."
         },
         "demoYoutubeId": null
       },
@@ -15237,8 +15237,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_aspect_of_death.png",
         "description": {
-          "fr": "Aile de mort inflige plus de dégâts lorsqu’il lui manque des plaques d’armure.",
-          "en": "Deathwing gains damage while missing Armor Plates"
+          "fr": "Une fois descendu à peu de plaques d'armure, Aile de Mort inflige nettement plus de dégâts.",
+          "en": "Once down to few Armor Plates, Deathwing deals markedly more damage."
         },
         "demoYoutubeId": null
       },
@@ -15251,8 +15251,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_firestorm.png",
         "description": {
-          "fr": "Fait tomber des météores après l’atterrissage, délai d’atterrissage réduit.",
-          "en": "Meteors upon landing, reduced landing delay."
+          "fr": "Réduit le délai avant de pouvoir atterrir, et l'atterrissage fait pleuvoir des météores qui visent en priorité les héros présents.",
+          "en": "Shortens the wait before he can land, and landing rains meteors that prioritize any Heroes present."
         },
         "demoYoutubeId": null
       },
@@ -15265,8 +15265,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_deathdrop.png",
         "description": {
-          "fr": "Atterrir sur des héros réduit leur armure anti-sort.",
-          "en": "Landing on Heroes reduces Spell Armor"
+          "fr": "Écraser un héros à l'atterrissage réduit son armure anti-sort et rapproche les prochaines capacités de base d'Aile de Mort.",
+          "en": "Crushing a Hero on landing lowers their Spell Armor and brings Deathwing's next Basic Abilities closer."
         },
         "demoYoutubeId": null
       },
@@ -15279,8 +15279,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_skyfall.png",
         "description": {
-          "fr": "Aile de mort peut faire pleuvoir des météores pour se soigner.",
-          "en": "Deathwing can drop meteors to heal himself"
+          "fr": "Après Vol draconique, Aile de Mort peut faire pleuvoir des météores partout où il voit. Toucher un héros le soigne. Possède plusieurs charges.",
+          "en": "After Dragonflight, Deathwing can rain meteors anywhere he can see. Hitting a Hero heals him. Has multiple charges."
         },
         "demoYoutubeId": null
       },
@@ -15293,8 +15293,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_cataclysm.png",
         "description": {
-          "fr": "Détruire des forts ou des bastions réinitialise Cataclysme.",
-          "en": "Destroying Forts or Keeps refreshes Cataclysm"
+          "fr": "Détruire un fort ou un bastion adverse remet Cataclysme à disposition, et sa terre brûlée consume plus vite.",
+          "en": "Destroying an enemy Fort or Keep makes Cataclysm available again, and its scorched earth burns faster."
         },
         "demoYoutubeId": null
       },
@@ -15307,8 +15307,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_bellowing_roar.png",
         "description": {
-          "fr": "Rugissement puissant apeure les héros proches.",
-          "en": "Roar Fears nearby Heroes"
+          "fr": "Après un court délai, Aile de Mort pousse un rugissement qui blesse les héros proches et les force à fuir.",
+          "en": "After a short delay, Deathwing lets out a roar that damages nearby Heroes and forces them to flee."
         },
         "demoYoutubeId": null
       },
@@ -15321,8 +15321,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_molten_flame.png",
         "description": {
-          "fr": "Réduit le coût en énergie de Flamme de la fournaise",
-          "en": "Reduce Molten Flame's Energy cost"
+          "fr": "Flamme de la fournaise coûte moins d'énergie, et son utilisation en restitue une partie dans la foulée.",
+          "en": "Molten Flame costs less Energy, and using it gives some back right after."
         },
         "demoYoutubeId": null
       },
@@ -15335,8 +15335,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_ruination.png",
         "description": {
-          "fr": "La morsure d’Offensive ralentit les ennemis, et le coût de Brise-terre est réduit.",
-          "en": "Onslaught bite Slows, Earth Shatter cost reduced"
+          "fr": "En Destructeur, la morsure d'Offensive ralentit les ennemis. En Brise-monde, Brise-terre coûte moins cher et revient plus vite.",
+          "en": "As the Destroyer, Onslaught's bite Slows enemies. As the World Breaker, Earth Shatter costs less and returns sooner."
         },
         "demoYoutubeId": null
       },
@@ -15349,8 +15349,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_fire_and_fury.png",
         "description": {
-          "fr": "Renforce les attaques de base portées aux ennemis diminués.",
-          "en": "Empower Basic Attacks against disabled enemies"
+          "fr": "Les attaques de base portées à un héros ralenti, immobilisé ou étourdi frappent plus fort et rapprochent les capacités de base d'Aile de Mort.",
+          "en": "Basic Attacks against a Slowed, Rooted or Stunned Hero hit harder and bring Deathwing's Basic Abilities closer."
         },
         "demoYoutubeId": null
       },
@@ -15363,8 +15363,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_molten_flame.png",
         "description": {
-          "fr": "Flamme de la fournaise fait exploser les héros.",
-          "en": "Molten Flame causes Heroes to explode"
+          "fr": "Brûler suffisamment un héros avec Flamme de la fournaise prolonge l'incendie : il explose alors régulièrement et blesse tous les ennemis autour de lui.",
+          "en": "Burning a Hero enough with Molten Flame extends the fire: they then explode periodically, damaging every enemy around them."
         },
         "demoYoutubeId": null
       },
@@ -15377,8 +15377,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_deathdrop.png",
         "description": {
-          "fr": "Atterrir sur des héros les ralentit et réduit leurs dégâts.",
-          "en": "Landing on Heroes Slows and reduces damage"
+          "fr": "Écraser un héros à l'atterrissage le ralentit et réduit les dégâts qu'il inflige.",
+          "en": "Crushing a Hero on landing Slows them and reduces the damage they deal."
         },
         "demoYoutubeId": null
       },
@@ -15391,8 +15391,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_elemental_plating.png",
         "description": {
-          "fr": "Confère un bouclier et rend des points de vie.",
-          "en": "Activate to gain a Shield, restore Health"
+          "fr": "Confère un bouclier d'autant plus épais qu'il manque de points de vie à Aile de Mort, et le régénère tant qu'il tient. À sa fin, il rend des plaques d'armure. Vol draconique l'interrompt aussitôt.",
+          "en": "Grants a Shield that is thicker the more Health Deathwing is missing, and regenerates him while it holds. When it ends, it gives back Armor Plates. Dragonflight cancels it at once."
         },
         "demoYoutubeId": null
       },
@@ -15405,8 +15405,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_cataclysm.png",
         "description": {
-          "fr": "Cataclysme ralentit et sa durée est augmentée.",
-          "en": "Cataclysm Slows, duration increased"
+          "fr": "La terre brûlée de Cataclysme dure plus longtemps et ralentit les héros qui s'y trouvent.",
+          "en": "Cataclysm's scorched earth lasts longer and Slows the Heroes standing in it."
         },
         "demoYoutubeId": null
       },
@@ -15419,8 +15419,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_deathdrop.png",
         "description": {
-          "fr": "Dégâts d’atterrissage augmentés, gagne tous les talents de niveau 7.",
-          "en": "Landing damage increased, gain all level 7 talents"
+          "fr": "Renforce fortement les dégâts d'atterrissage et confère à Aile de Mort les trois talents de niveau 7 à la fois.",
+          "en": "Greatly strengthens his landing damage and grants Deathwing all three level 7 talents at once."
         },
         "demoYoutubeId": null
       },
@@ -15433,8 +15433,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_destroyer.png",
         "description": {
-          "fr": "Atterrir sous sa forme de Destructeur renforce Aile de mort.",
-          "en": "Landing in Destroyer form empowers Deathwing"
+          "fr": "Atterrir en Destructeur augmente les dégâts d'Aile de Mort et raccourcit ses capacités de base ; blesser des héros relance l'effet.",
+          "en": "Landing as the Destroyer boosts Deathwing's damage and shortens his Basic Abilities; damaging Heroes refreshes it."
         },
         "demoYoutubeId": null
       }
