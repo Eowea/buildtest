@@ -8101,8 +8101,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spawnlocust.png",
         "description": {
-          "fr": "Invoque des nuisibles qui partent au combat dans la voie la plus proche.",
-          "en": "Spawn locusts that attack down the nearest lane"
+          "fr": "Génère régulièrement des nuisibles qui partent attaquer dans la voie la plus proche. Ils se soignent d'une partie des dégâts qu'ils infligent.",
+          "en": "Periodically spawns Locusts that attack down the nearest lane. They heal themselves for part of the damage they deal."
         },
         "demoYoutubeId": ""
       },
@@ -8129,8 +8129,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_toxicnest.png",
         "description": {
-          "fr": "Pose une mine.",
-          "en": "Spawn a mine"
+          "fr": "Pose un nid qui s'arme après un court délai, puis explose sur un ennemi proche en le révélant. Possède plusieurs charges.",
+          "en": "Places a nest that arms after a short delay, then detonates on a nearby enemy and reveals them. Has multiple charges."
         },
         "demoYoutubeId": ""
       },
@@ -18742,8 +18742,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_bribe.png",
         "description": {
-          "fr": "Tuer des serviteurs permet de recruter des mercenaires.",
-          "en": "Kill Minions to bribe a Mercenary"
+          "fr": "Tuer des serviteurs et des mercenaires près des Vikings accumule des charges, à dépenser pour acheter un camp de mercenaires au lieu de le combattre.",
+          "en": "Killing Minions and Mercenaries near the Vikings builds charges, spent to buy a Mercenary camp instead of fighting it."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -18756,8 +18756,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_longboatraid.png",
         "description": {
-          "fr": "Fait monter dans un drakkar pour attaquer les ennemis.",
-          "en": "Load into a Longboat to attack enemies"
+          "fr": "Les Vikings montent à bord d’un drakkar increvable qui tire en continu sur les ennemis proches et dispose d’un mortier frappant en zone.",
+          "en": "The Vikings board an Unstoppable longboat that continuously fires on nearby enemies and carries a mortar hitting an area."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -18891,8 +18891,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_selectolaf.png",
         "description": {
-          "fr": "Olaf gagne des points de vie supplémentaires et de l’armure physique.",
-          "en": "Olaf gains Health, Physical Armor"
+          "fr": "Passif : Olaf gagne des points de vie maximum, et reçoit régulièrement de l'armure physique contre la prochaine attaque de base adverse. Possède plusieurs charges.",
+          "en": "Passive: Olaf gains maximum Health, and periodically gains Physical Armor against the next enemy Basic Attack. Has multiple charges."
         },
         "demoYoutubeId": null
       },
@@ -18933,8 +18933,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_bribe.png",
         "description": {
-          "fr": "Tuer des serviteurs permet de recruter des mercenaires.",
-          "en": "Kill Minions to bribe a Mercenary"
+          "fr": "Tuer des serviteurs et des mercenaires près des Vikings accumule des charges, à dépenser pour acheter un camp de mercenaires au lieu de le combattre.",
+          "en": "Killing Minions and Mercenaries near the Vikings builds charges, spent to buy a Mercenary camp instead of fighting it."
         },
         "demoYoutubeId": null
       },
@@ -19045,8 +19045,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_longboatraid.png",
         "description": {
-          "fr": "Fait monter dans un drakkar pour attaquer les ennemis.",
-          "en": "Load into a Longboat to attack enemies"
+          "fr": "Les Vikings montent à bord d’un drakkar increvable qui tire en continu sur les ennemis proches et dispose d’un mortier frappant en zone.",
+          "en": "The Vikings board an Unstoppable longboat that continuously fires on nearby enemies and carries a mortar hitting an area."
         },
         "demoYoutubeId": null
       },
@@ -19157,8 +19157,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
         "description": {
-          "fr": "Augmente les dégâts infligés aux héros diminués.",
-          "en": "Attacking disabled Heroes increases damage"
+          "fr": "Attaquer un héros ralenti, immobilisé ou étourdi augmente les dégâts des attaques de base.",
+          "en": "Attacking a Slowed, Rooted or Stunned Hero increases Basic Attack damage."
         },
         "demoYoutubeId": null
       },
@@ -20388,8 +20388,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_arcanemissile.png",
         "description": {
-          "fr": "Lance un éclair des Arcanes qui inflige des dégâts sur une ligne.",
-          "en": "Launch an arcane bolt that damages enemies in a line"
+          "fr": "Lance un éclair des Arcanes qui frappe les ennemis sur une ligne. Toucher un héros réduit son temps de recharge et rend du mana. Quête : toucher des héros sans mourir augmente durablement ses dégâts.",
+          "en": "Fires an arcane bolt that hits enemies in a line. Hitting a Hero reduces its cooldown and restores Mana. Quest: hitting Heroes without dying permanently increases its damage."
         },
         "demoYoutubeId": ""
       },
@@ -20401,8 +20401,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_forceofwill.png",
         "description": {
-          "fr": "Protège un héros allié contre les dégâts.",
-          "en": "Protect an allied Hero from damage"
+          "fr": "Protège un héros allié de tous les dégâts pendant un court instant, puis lui rend une partie des dégâts ainsi absorbés.",
+          "en": "Protects an allied Hero from all damage briefly, then heals them for part of the damage absorbed."
         },
         "demoYoutubeId": ""
       },
@@ -20427,8 +20427,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_polybomb.png",
         "description": {
-          "fr": "Métamorphose un héros et se propage aux autres héros proches.",
-          "en": "Polymorph a Hero that spreads to other Heroes"
+          "fr": "Métamorphose un héros adverse, ce qui le réduit au silence et l'empêche d'attaquer. À l'expiration, l'effet se propage aux héros adverses proches.",
+          "en": "Polymorphs an enemy Hero, Silencing them and preventing attacks. When it expires, it spreads to nearby enemy Heroes."
         },
         "demoYoutubeId": ""
       },
@@ -20658,8 +20658,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_polybomb.png",
         "description": {
-          "fr": "Métamorphose un héros et se propage aux autres héros proches.",
-          "en": "Polymorph a Hero that spreads to other Heroes"
+          "fr": "Métamorphose un héros adverse, ce qui le réduit au silence et l'empêche d'attaquer. À l'expiration, l'effet se propage aux héros adverses proches.",
+          "en": "Polymorphs an enemy Hero, Silencing them and preventing attacks. When it expires, it spreads to nearby enemy Heroes."
         },
         "demoYoutubeId": null
       },
@@ -30057,8 +30057,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_particlegrenade.png",
         "description": {
-          "fr": "Inflige des dégâts aux ennemis dans une zone restreinte.",
-          "en": "Deals damage to enemies in a small area"
+          "fr": "Projette une grenade qui inflige des dégâts dans une zone, réduits contre les bâtiments. Possède plusieurs charges.",
+          "en": "Throws a grenade dealing damage in an area, reduced against Structures. Has multiple charges."
         },
         "demoYoutubeId": ""
       },
