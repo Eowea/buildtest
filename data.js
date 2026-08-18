@@ -8675,8 +8675,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/spells/storm_ui_icon_alarak_discordstrike.png",
         "description": {
-          "fr": "Inflige des dégâts aux ennemis dans une zone et les réduit au silence.",
-          "en": "Damage and silence enemies in an area"
+          "fr": "Après un court délai, inflige des dégâts aux ennemis situés devant Alarak et les réduit au silence.",
+          "en": "After a short delay, damages enemies in front of Alarak and Silences them."
         },
         "demoYoutubeId": ""
       },
@@ -8688,8 +8688,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/spells/storm_ui_icon_alarak_telekinesis.png",
         "description": {
-          "fr": "Pousse les ennemis dans la direction choisie.",
-          "en": "Push enemies towards a location"
+          "fr": "Crée un champ de force qui pousse les ennemis touchés, ainsi qu'Alarak lui-même, dans la direction choisie en leur infligeant des dégâts.",
+          "en": "Creates a force field that pushes enemies hit — and Alarak himself — in the chosen direction, dealing damage."
         },
         "demoYoutubeId": ""
       },
@@ -8701,8 +8701,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/spells/storm_ui_icon_alarak_lightningsurge.png",
         "description": {
-          "fr": "Blesse les ennemis sur une ligne.",
-          "en": "Damage enemies in a line"
+          "fr": "Inflige des dégâts à un ennemi ciblé, davantage à ceux placés entre Alarak et sa cible, et lui rend des points de vie par héros touché.",
+          "en": "Damages a targeted enemy, more so to those between Alarak and the target, and restores Health for each Hero hit."
         },
         "demoYoutubeId": ""
       },
@@ -8714,8 +8714,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/spells/storm_ui_icon_alarak_recklesscharge.png",
         "description": {
-          "fr": "Charge sur une longue distance après canalisation.",
-          "en": "Channel to charge a long distance"
+          "fr": "Canalise pour charger droit devant en blessant tout sur son passage. Plus la canalisation dure, plus la charge est longue ; subir des dégâts l'interrompt.",
+          "en": "Channels to charge forward, damaging everything in its path. The longer the channel, the farther the charge; taking damage interrupts it."
         },
         "demoYoutubeId": ""
       },
@@ -8727,8 +8727,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/spells/storm_ui_icon_alarak_counterstrike.png",
         "description": {
-          "fr": "Neutralise les dégâts dans une large zone.",
-          "en": "Prevents damage to deal damage in a large area"
+          "fr": "Alarak canalise sur une large zone en devenant protégé et insensible aux effets de contrôle. À la fin, s'il a été blessé par un héros adverse, il libère une onde de choc dévastatrice.",
+          "en": "Alarak channels over a wide area, becoming Protected and Unstoppable. If an enemy Hero damaged him during it, he releases a devastating shockwave."
         },
         "demoYoutubeId": ""
       }
@@ -8819,8 +8819,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/spells/storm_ui_icon_alarak_discordstrike.png",
         "description": {
-          "fr": "Frappe de discorde augmente la vitesse d’attaque et confère vol de vie.",
-          "en": "Discord Strike grants Attack Speed, Lifesteal"
+          "fr": "Toucher un héros avec Frappe de discorde augmente la vitesse d'attaque d'Alarak et confère du vol de vie à ses attaques de base.",
+          "en": "Hitting a Hero with Discord Strike grants Alarak Attack Speed and Lifesteal on his Basic Attacks."
         },
         "demoYoutubeId": null
       },
@@ -8833,8 +8833,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/spells/storm_ui_icon_alarak_telekinesis.png",
         "description": {
-          "fr": "Réduit le temps de recharge quand les points de vie sont élevés.",
-          "en": "Reduce cooldown at high Health"
+          "fr": "Réduit le coût en mana de Télékinésie ; son temps de recharge s'écoule plus vite tant qu'Alarak a beaucoup de points de vie.",
+          "en": "Reduces Telekinesis's Mana cost; its cooldown recovers faster while Alarak is at high Health."
         },
         "demoYoutubeId": null
       },
@@ -8847,8 +8847,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/spells/storm_ui_icon_alarak_lightningsurge.png",
         "description": {
-          "fr": "Quête : réduit le sadisme mais renforce Arc électrique.",
-          "en": "Quest: Reduce Sadism, empower Lightning Surge"
+          "fr": "Réduit le sadisme. Quête : toucher des héros avec la zone centrale d'Arc électrique en allonge la portée, puis y ajoute un ralentissement, et finit par restituer le sadisme perdu.",
+          "en": "Reduces Sadism. Quest: hitting Heroes with Lightning Surge's center extends its range, then adds a Slow, and finally gives back the Sadism lost."
         },
         "demoYoutubeId": null
       },
@@ -8861,8 +8861,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/spells/storm_ui_icon_alarak_discordstrike.png",
         "description": {
-          "fr": "Quête : toucher des héros augmente les dégâts qu’inflige Frappe de discorde.",
-          "en": "Quest: Hit Heroes to increase Discord Strike damage"
+          "fr": "Quête : toucher des héros avec Frappe de discorde augmente ses dégâts ; en toucher plusieurs d'un seul coup débloque les récompenses plus vite.",
+          "en": "Quest: hitting Heroes with Discord Strike increases its damage; hitting several at once unlocks the rewards faster."
         },
         "demoYoutubeId": null
       },
@@ -8875,8 +8875,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/spells/storm_ui_icon_alarak_lightningsurge.png",
         "description": {
-          "fr": "Quête : augmente les dégâts qu’inflige la zone centrale d’Arc électrique.",
-          "en": "Quest: Increase Lightning Surge center damage"
+          "fr": "Renforce d'emblée les dégâts infligés aux ennemis placés entre Alarak et sa cible. Quête : chaque héros touché par la zone centrale d'Arc électrique les augmente encore, définitivement.",
+          "en": "Immediately increases the damage dealt to enemies between Alarak and his target. Quest: each Hero hit by Lightning Surge's center raises it further, permanently."
         },
         "demoYoutubeId": null
       },
@@ -8889,8 +8889,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/talents/storm_ui_icon_alarak_sadism.png",
         "description": {
-          "fr": "Enchaîner les capacités inflige davantage de dégâts et confère du sadisme.",
-          "en": "Ability combos deal bonus damage, grant Sadism"
+          "fr": "Toucher un héros avec plusieurs capacités en peu de temps lui inflige des dégâts supplémentaires et confère du sadisme cumulable, perdu en cas de mort.",
+          "en": "Hitting a Hero with several Abilities in quick succession deals bonus damage and grants stacking Sadism, lost on death."
         },
         "demoYoutubeId": null
       },
@@ -8945,8 +8945,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/spells/storm_ui_icon_alarak_recklesscharge.png",
         "description": {
-          "fr": "Charge sur une longue distance après canalisation.",
-          "en": "Channel to charge a long distance"
+          "fr": "Canalise pour charger droit devant en blessant tout sur son passage. Plus la canalisation dure, plus la charge est longue ; subir des dégâts l'interrompt.",
+          "en": "Channels to charge forward, damaging everything in its path. The longer the channel, the farther the charge; taking damage interrupts it."
         },
         "demoYoutubeId": null
       },
@@ -8959,8 +8959,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/spells/storm_ui_icon_alarak_counterstrike.png",
         "description": {
-          "fr": "Neutralise les dégâts dans une large zone.",
-          "en": "Prevents damage to deal damage in a large area"
+          "fr": "Alarak canalise sur une large zone en devenant protégé et insensible aux effets de contrôle. À la fin, s'il a été blessé par un héros adverse, il libère une onde de choc dévastatrice.",
+          "en": "Alarak channels over a wide area, becoming Protected and Unstoppable. If an enemy Hero damaged him during it, he releases a devastating shockwave."
         },
         "demoYoutubeId": null
       },
@@ -8973,8 +8973,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/talents/storm_ui_icon_alarak_sadism.png",
         "description": {
-          "fr": "Les attaques de base augmentent le sadisme.",
-          "en": "Basic Attacks increase Sadism"
+          "fr": "Les attaques de base portées à des héros augmentent le sadisme jusqu'à un plafond ; ce gain est perdu en cas de mort.",
+          "en": "Basic Attacks against Heroes increase Sadism up to a cap; that gain is lost on death."
         },
         "demoYoutubeId": null
       },
@@ -8987,8 +8987,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/talents/storm_ui_icon_alarak_sadism_a.png",
         "description": {
-          "fr": "Les victimes alliées augmentent le sadisme.",
-          "en": "Allied deaths increase Sadism"
+          "fr": "Chaque mort d'un héros allié augmente le sadisme jusqu'à un plafond ; ce gain est perdu en cas de mort.",
+          "en": "Each allied Hero death increases Sadism up to a cap; that gain is lost on death."
         },
         "demoYoutubeId": null
       },
@@ -9001,8 +9001,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/talents/storm_ui_icon_alarak_sadism_b.png",
         "description": {
-          "fr": "Marque un héros. Lui infliger des dégâts augmente le sadisme.",
-          "en": "Mark and damage Hero to increase Sadism"
+          "fr": "Marque un héros adverse : le toucher avec Frappe de discorde augmente le sadisme, et le tuer en confère bien davantage tout en rendant le talent presque immédiatement disponible.",
+          "en": "Marks an enemy Hero: hitting them with Discord Strike increases Sadism, and killing them grants much more while making the talent almost immediately available again."
         },
         "demoYoutubeId": null
       },
@@ -9015,8 +9015,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/spells/storm_ui_icon_alarak_discordstrike.png",
         "description": {
-          "fr": "Frappe de discorde confère aux attaques de base une partie du bonus aux dégâts de Sadisme.",
-          "en": "Discord Strike grants Sadism bonus to Basic Attacks"
+          "fr": "Toucher un héros avec Frappe de discorde fait profiter les attaques de base d'une partie du bonus de dégâts du sadisme ; attaquer des héros prolonge l'effet.",
+          "en": "Hitting a Hero with Discord Strike lets Basic Attacks benefit from part of Sadism's damage bonus; attacking Heroes refreshes it."
         },
         "demoYoutubeId": null
       },
@@ -9029,8 +9029,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/spells/storm_ui_icon_alarak_lightningsurge.png",
         "description": {
-          "fr": "Un coup central réussi permet à Arc électrique d’être lancé une nouvelle fois.",
-          "en": "Center hits grant free Lightning Surge cast"
+          "fr": "Toucher un héros avec la zone centrale d'Arc électrique permet de le relancer aussitôt, sur une autre cible principale.",
+          "en": "Hitting a Hero with Lightning Surge's center allows an immediate second cast, on a different main target."
         },
         "demoYoutubeId": null
       },
@@ -9043,8 +9043,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_cooldown.png",
         "description": {
-          "fr": "Attaquer des héros affectés par des effets de contrôle réduit les temps de recharge.",
-          "en": "Reduce cooldowns against disabled Heroes"
+          "fr": "Les attaques de base portées à des héros réduisent le temps de recharge des capacités de base d'Alarak, deux fois plus contre une cible étourdie, réduite au silence, ralentie ou immobilisée.",
+          "en": "Basic Attacks against Heroes reduce the cooldown of Alarak's Basic Abilities, twice as much against a Stunned, Silenced, Slowed or Rooted target."
         },
         "demoYoutubeId": null
       },
@@ -9071,8 +9071,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/talents/storm_ui_icon_alarak_sadism_a.png",
         "description": {
-          "fr": "Confère les deux capacités héroïques.",
-          "en": "Gain both Heroic Abilities"
+          "fr": "Confère les deux capacités héroïques : celle qui n'occupe pas l'emplacement héroïque se place sur celui du trait.",
+          "en": "Grants both Heroic Abilities: the one not in the Heroic slot takes the Trait slot."
         },
         "demoYoutubeId": null
       },
@@ -9085,8 +9085,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/talents/storm_ui_icon_alarak_lasttrick.png",
         "description": {
-          "fr": "Purifie et téléporte au détriment des points de vie.",
-          "en": "Cleanse and teleport, but reduce Health"
+          "fr": "Téléporte à l'endroit ciblé et dissipe immobilisations, ralentissements et dégâts sur la durée. Mais si Alarak ne touche pas assez de héros avec ses capacités de base juste après, ses points de vie tombent à 1.",
+          "en": "Teleports to the target location and cleanses Roots, Slows and damage over time. But if Alarak fails to hit enough Heroes with his Basic Abilities right after, his Health drops to 1."
         },
         "demoYoutubeId": null
       },
@@ -9099,8 +9099,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/talents/storm_ui_icon_alarak_hastybargain.png",
         "description": {
-          "fr": "Réduit le bonus de sadisme et réinitialise le temps de recharge des capacités de base.",
-          "en": "Activate to reduce Sadism bonus and reset Basic Ability cooldowns"
+          "fr": "À l'activation, réduit définitivement le sadisme et met fin au temps de recharge des capacités de base.",
+          "en": "On activation, permanently reduces Sadism and resets Basic Ability cooldowns."
         },
         "demoYoutubeId": null
       }
@@ -15798,8 +15798,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_dive.png",
         "description": {
-          "fr": "Plonge par-dessus un ennemi.",
-          "en": "Dive and flip over an enemy"
+          "fr": "Plonge sur un ennemi, lui inflige des dégâts en passant par-dessus lui et se rétablit de l'autre côté.",
+          "en": "Dives at an enemy, damaging them while flipping over them and landing on the other side."
         },
         "demoYoutubeId": ""
       },
@@ -15811,8 +15811,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_sweepingstrike.png",
         "description": {
-          "fr": "Fonce en frappant les ennemis et confère un bonus de dégâts aux attaques de base.",
-          "en": "Dash and damage enemies while gaining Basic Attack damage"
+          "fr": "Fonce vers l'endroit ciblé en blessant les ennemis sur son chemin ; toucher un ennemi augmente les dégâts de ses attaques de base pendant quelques secondes.",
+          "en": "Dashes to the target location, damaging enemies along the way; hitting an enemy increases his Basic Attack damage for a few seconds."
         },
         "demoYoutubeId": ""
       },
@@ -15850,8 +15850,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_metamorphosis.png",
         "description": {
-          "fr": "Vie max. augmentée et dégâts de zone.",
-          "en": "Damage area and increase max Health"
+          "fr": "Se transforme en démon à l'endroit ciblé en infligeant des dégâts dans la zone. Son maximum de points de vie augmente temporairement pour chaque héros touché à l'impact.",
+          "en": "Transforms into a demon at the target location, damaging the area. His maximum Health increases temporarily for each Hero hit on impact."
         },
         "demoYoutubeId": ""
       }
@@ -15862,11 +15862,11 @@ const HEROES = [
         "en": "Never dive first: wait until your tank has engaged."
       },
       {
-        "fr": "Esquive te rend immunisé aux attaques de base : garde-la pour l'ennemi qui te vise.",
+        "fr": "Dérobade te rend immunisé aux attaques de base : garde-la pour l'ennemi qui te vise.",
         "en": "Evasion makes you immune to Basic Attacks: save it for whoever focuses you."
       },
       {
-        "fr": "Balayage sert autant à poursuivre qu'à traverser un groupe.",
+        "fr": "Voie des lames sert autant à poursuivre qu'à traverser un groupe.",
         "en": "Sweeping Strike is as good for chasing as for slipping through a group."
       }
     ],
@@ -15942,8 +15942,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_sweepingstrike.png",
         "description": {
-          "fr": "Ajoute des dégâts de zone à Voie des lames.",
-          "en": "Sweeping Strike deals area damage"
+          "fr": "Après Voie des lames, Illidan brûle les ennemis proches pendant quelques secondes.",
+          "en": "After Sweeping Strike, Illidan burns nearby enemies for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -15956,8 +15956,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/talents/storm_ui_icon_illidan_sweepingstrike_a.png",
         "description": {
-          "fr": "Augmente le bonus aux dégâts conféré par Voie des lames.",
-          "en": "Increases Sweeping Strike damage bonus"
+          "fr": "Allonge le bonus aux dégâts conféré par Voie des lames ; toucher au moins deux héros le renforce encore.",
+          "en": "Extends Sweeping Strike's damage bonus; hitting at least two Heroes strengthens it further."
         },
         "demoYoutubeId": null
       },
@@ -15984,8 +15984,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_dive.png",
         "description": {
-          "fr": "Plongeon confère de l’armure physique.",
-          "en": "Dive grants Physical Armor"
+          "fr": "Plongeon confère de l'armure physique contre les prochaines attaques de base portées par des héros.",
+          "en": "Dive grants Physical Armor against the next Basic Attacks from Heroes."
         },
         "demoYoutubeId": null
       },
@@ -15998,8 +15998,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_betrayersthirst.png",
         "description": {
-          "fr": "Voie des lames confère plus de vol de vie.",
-          "en": "Sweeping Strike grants more Lifesteal"
+          "fr": "Tant que le bonus de Voie des lames est actif, les attaques de base d'Illidan lui rendent davantage de points de vie.",
+          "en": "While Sweeping Strike's bonus is active, Illidan's Basic Attacks heal him for more."
         },
         "demoYoutubeId": null
       },
@@ -16012,8 +16012,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/talents/storm_ui_icon_illidan_betrayersthirst_a.png",
         "description": {
-          "fr": "Les dégâts infligés par les capacités de base rendent des points de vie.",
-          "en": "Damage from Basic Abilities heals"
+          "fr": "Les capacités de base rendent des points de vie proportionnels aux dégâts infligés, deux fois plus contre les héros.",
+          "en": "Basic Abilities heal for a portion of the damage they deal, twice as much against Heroes."
         },
         "demoYoutubeId": null
       },
@@ -16026,8 +16026,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_dive.png",
         "description": {
-          "fr": "Plongeon augmente la vitesse de déplacement et réduit le temps de recharge.",
-          "en": "Dive increases Move Speed, reduces cooldown"
+          "fr": "Plongeon augmente la vitesse de déplacement ; utilisé sur un héros adverse, il voit aussi son temps de recharge réduit.",
+          "en": "Dive grants Movement Speed; used on an enemy Hero, its cooldown is also reduced."
         },
         "demoYoutubeId": null
       },
@@ -16068,8 +16068,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_metamorphosis.png",
         "description": {
-          "fr": "Vie max. augmentée et dégâts de zone.",
-          "en": "Damage area and increase max Health"
+          "fr": "Se transforme en démon à l'endroit ciblé en infligeant des dégâts dans la zone. Son maximum de points de vie augmente temporairement pour chaque héros touché à l'impact.",
+          "en": "Transforms into a demon at the target location, damaging the area. His maximum Health increases temporarily for each Hero hit on impact."
         },
         "demoYoutubeId": null
       },
@@ -16096,8 +16096,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_sweepingstrike.png",
         "description": {
-          "fr": "Voie des lames confère de l’armure.",
-          "en": "Sweeping Strike grants Armor"
+          "fr": "Toucher un héros adverse avec Voie des lames confère de l'armure à Illidan pendant quelques secondes.",
+          "en": "Hitting an enemy Hero with Sweeping Strike grants Illidan Armor for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -16110,8 +16110,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_evasion.png",
         "description": {
-          "fr": "Voie des lames réduit le temps de recharge de Dérobade.",
-          "en": "Sweeping Strike reduces Evasion Cooldown"
+          "fr": "Voie des lames réduit le temps de recharge de Dérobade pour chaque héros adverse touché.",
+          "en": "Sweeping Strike reduces Evasion's cooldown for each enemy Hero hit."
         },
         "demoYoutubeId": null
       },
@@ -16124,8 +16124,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/talents/storm_ui_icon_illidan_evasion_a.png",
         "description": {
-          "fr": "Dérobade confère de l’armure anti-sort.",
-          "en": "Evasion grants Spell Armor"
+          "fr": "Pendant Dérobade, Illidan gagne de l'armure anti-sort contre les prochaines sources de dégâts de capacité.",
+          "en": "During Evasion, Illidan gains Spell Armor against the next sources of Ability damage."
         },
         "demoYoutubeId": null
       },
@@ -16138,8 +16138,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_dive.png",
         "description": {
-          "fr": "Enchaîner Plongeon inflige des dégâts supplémentaires.",
-          "en": "Repeated Dives deal extra damage"
+          "fr": "Plongeon inflige des dégâts supplémentaires s'il retouche la même cible peu après.",
+          "en": "Dive deals bonus damage if it hits the same target again shortly after."
         },
         "demoYoutubeId": null
       },
@@ -16152,8 +16152,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_searing.png",
         "description": {
-          "fr": "Renforce les attaques de base consécutives portées aux héros.",
-          "en": "Consecutive Basic Attacks to Heroes are empowered"
+          "fr": "Toutes les quelques attaques portées à un même héros, inflige des dégâts supplémentaires proportionnels au maximum de points de vie de la cible.",
+          "en": "Every few attacks against the same Hero deals bonus damage based on that target's maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -16166,8 +16166,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/talents/storm_ui_icon_illidan_sweepingstrike_c.png",
         "description": {
-          "fr": "Augmente les dégâts des attaques de base.",
-          "en": "Activate to increase Basic Attack damage"
+          "fr": "Après avoir touché cinq héros avec Voie des lames, peut être activé pour augmenter fortement les dégâts des attaques de base.",
+          "en": "After hitting five Heroes with Sweeping Strike, can be activated to greatly increase Basic Attack damage."
         },
         "demoYoutubeId": null
       },
@@ -16180,8 +16180,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_metamorphosis.png",
         "description": {
-          "fr": "La forme de démon devient permanente. Métamorphe augmente aussi la vitesse d'attaque et réduit de moitié la durée des ralentissements, immobilisations et étourdissements subis.",
-          "en": "Demon form becomes permanent. Metamorphosis also increases Attack Speed and halves the duration of incoming Slows, Roots and Stuns."
+          "fr": "La forme de démon devient permanente. Métamorphe augmente aussi la vitesse d'attaque et réduit de moitié la durée des ralentissements, immobilisations et étourdissements subis. Reste compatible avec la monture.",
+          "en": "Demon form becomes permanent. Metamorphosis also increases Attack Speed and halves the duration of incoming Slows, Roots and Stuns. Still allows mounting."
         },
         "demoYoutubeId": null
       },
@@ -16194,8 +16194,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_thehunt.png",
         "description": {
-          "fr": "Augmente la portée de La Traque et révèle les héros aux points de vie bas.",
-          "en": "Increases The Hunt range and reveal low Health Heroes"
+          "fr": "Rend la portée de La Traque illimitée et révèle en permanence les héros adverses dont les points de vie sont bas, où qu'ils se trouvent.",
+          "en": "Makes The Hunt's range unlimited and permanently reveals enemy Heroes at low Health, anywhere on the map."
         },
         "demoYoutubeId": null
       },
@@ -16208,8 +16208,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_slow.png",
         "description": {
-          "fr": "Les attaques de base infligent plus de dégâts et ralentissent",
-          "en": "Basic Attacks deal more damage and Slow"
+          "fr": "Les attaques de base infligent plus de dégâts et ralentissent leur cible.",
+          "en": "Basic Attacks deal more damage and Slow their target."
         },
         "demoYoutubeId": null
       },
@@ -18038,7 +18038,7 @@ const HEROES = [
       "en": "Burst assassin who grabs a target and deletes it."
     },
     "gameplay": {
-      "fr": "Kerrigan enchaîne Étreinte primordiale, Lames empaleuses et Ravage pour éliminer une cible isolée, en gagnant des boucliers à chaque victime.",
+      "fr": "Kerrigan enchaîne Poigne primordiale, Lames perforantes et Ravage pour éliminer une cible isolée, en gagnant des boucliers à chaque victime.",
       "en": "Kerrigan chains Primal Grasp, Impaling Blades, and Ravage to delete an isolated target, gaining shields from every kill."
     },
     "spells": [
@@ -18050,8 +18050,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_assimilation.png",
         "description": {
-          "fr": "Donne un bouclier temporaire à l’attaque.",
-          "en": "Gain a temporary Shield by attacking enemies"
+          "fr": "Convertit une partie des dégâts qu'elle inflige en bouclier temporaire, deux fois plus contre les héros.",
+          "en": "Converts part of the damage she deals into a temporary Shield, twice as much against Heroes."
         },
         "demoYoutubeId": ""
       },
@@ -18063,8 +18063,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_ravage.png",
         "description": {
-          "fr": "Bondit vers un ennemi et le frappe.",
-          "en": "Leap to an enemy and deal damage"
+          "fr": "Bondit sur un ennemi et le frappe. Si la cible meurt juste après, Ravage restitue une charge et du mana. Quête : tuer des adversaires près de Kerrigan augmente ses dégâts.",
+          "en": "Leaps at an enemy and strikes them. If the target dies right after, Ravage refunds a charge and Mana. Quest: killing enemies near Kerrigan increases its damage."
         },
         "demoYoutubeId": ""
       },
@@ -18076,8 +18076,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_impalingblades.png",
         "description": {
-          "fr": "Étourdit et inflige des dégâts aux ennemis dans une zone.",
-          "en": "Stun and damage enemies in an area"
+          "fr": "Après un court délai, inflige des dégâts aux ennemis dans la zone ciblée et les étourdit.",
+          "en": "After a short delay, damages enemies in the target area and Stuns them."
         },
         "demoYoutubeId": ""
       },
@@ -18089,8 +18089,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_primalgrasp.png",
         "description": {
-          "fr": "Attire et frappe les ennemis dans une zone.",
-          "en": "Pull and damage enemies in an area"
+          "fr": "Attire les ennemis de la zone ciblée en leur infligeant des dégâts, puis déclenche une explosion autour de Kerrigan peu après.",
+          "en": "Pulls enemies in the target area, damaging them, then triggers an explosion around Kerrigan shortly after."
         },
         "demoYoutubeId": ""
       },
@@ -18102,8 +18102,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_ultralisk.png",
         "description": {
-          "fr": "Invoque un ultralisk qui charge dans la direction ciblée, étourdissant le premier héros touché. Ses attaques frappent en zone.",
-          "en": "Summons an ultralisk that charges in the target direction, Stunning the first Hero hit. Its attacks strike in an area."
+          "fr": "Invoque un ultralisk qui charge dans la direction ciblée, étourdissant le premier héros touché. Ses attaques frappent en zone et il peut être redirigé vers une nouvelle cible.",
+          "en": "Summons an ultralisk that charges in the target direction, Stunning the first Hero hit. Its attacks strike in an area and it can be redirected to a new target."
         },
         "demoYoutubeId": ""
       },
@@ -18207,8 +18207,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_ravage.png",
         "description": {
-          "fr": "Ravage confère un bouclier d’Assimilation.",
-          "en": "Ravage grants Assimilation Shields"
+          "fr": "Toucher un héros adverse avec Ravage confère un bouclier d'Assimilation.",
+          "en": "Hitting an enemy Hero with Ravage grants an Assimilation Shield."
         },
         "demoYoutubeId": null
       },
@@ -18221,8 +18221,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_assimilation.png",
         "description": {
-          "fr": "Les globes confèrent un bouclier et Assimilation augmente la régénération.",
-          "en": "Globes grant Shields, Assimilation increases regen"
+          "fr": "Tant qu'Assimilation est active, les globes de régénération confèrent du bouclier et les régénérations de vie et de mana sont augmentées.",
+          "en": "While Assimilation is active, Regeneration Globes grant Shields and Health and Mana regeneration are increased."
         },
         "demoYoutubeId": null
       },
@@ -18235,8 +18235,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_aoe.png",
         "description": {
-          "fr": "Ravage permet aux attaques de base d’infliger des dégâts de zone.",
-          "en": "Ravage causes Basic Attacks to splash"
+          "fr": "Après Ravage, la prochaine attaque de base de Kerrigan se propage autour de la cible.",
+          "en": "After Ravage, Kerrigan's next Basic Attack splashes around the target."
         },
         "demoYoutubeId": null
       },
@@ -18263,8 +18263,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_impalingblades.png",
         "description": {
-          "fr": "Les dégâts infligés augmentent ceux de Lames perforantes.",
-          "en": "Damage dealt increases Impaling Blades damage"
+          "fr": "Infliger des dégâts augmente ceux de la prochaine utilisation de Lames perforantes, jusqu'à un plafond.",
+          "en": "Dealing damage increases the damage of the next Impaling Blades, up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -18291,8 +18291,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_ravage.png",
         "description": {
-          "fr": "Ravage inflige des dégâts supplémentaires aux serviteurs et aux mercenaires.",
-          "en": "Ravage deals bonus damage to Minions, Mercs"
+          "fr": "Réduit le temps de recharge de Ravage et augmente ses dégâts contre les serviteurs et les mercenaires.",
+          "en": "Reduces Ravage's cooldown and increases its damage against Minions and Mercenaries."
         },
         "demoYoutubeId": null
       },
@@ -18305,8 +18305,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/talents/storm_ui_icon_kerrigan_ravage_b.png",
         "description": {
-          "fr": "Ravager peut conférer une charge de Ravage.",
-          "en": "Ravage can grant a charge of Ravage"
+          "fr": "Toucher un héros adverse avec Ravage rend une charge de Ravage, une fois toutes les quelques secondes par héros.",
+          "en": "Hitting an enemy Hero with Ravage refunds a charge of Ravage, once every few seconds per Hero."
         },
         "demoYoutubeId": null
       },
@@ -18347,8 +18347,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_ultralisk.png",
         "description": {
-          "fr": "Invoque un ultralisk qui charge dans la direction ciblée, étourdissant le premier héros touché. Ses attaques frappent en zone.",
-          "en": "Summons an ultralisk that charges in the target direction, Stunning the first Hero hit. Its attacks strike in an area."
+          "fr": "Invoque un ultralisk qui charge dans la direction ciblée, étourdissant le premier héros touché. Ses attaques frappent en zone et il peut être redirigé vers une nouvelle cible.",
+          "en": "Summons an ultralisk that charges in the target direction, Stunning the first Hero hit. Its attacks strike in an area and it can be redirected to a new target."
         },
         "demoYoutubeId": null
       },
@@ -18361,8 +18361,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_primalgrasp.png",
         "description": {
-          "fr": "Poigne primordiale confère de l’armure anti-sort et de la vitesse de déplacement.",
-          "en": "Primal Grasp grants Spell Armor, Move Speed"
+          "fr": "Chaque héros adverse touché par Poigne primordiale confère de l'armure anti-sort et de la vitesse de déplacement.",
+          "en": "Each enemy Hero hit by Primal Grasp grants Spell Armor and Movement Speed."
         },
         "demoYoutubeId": null
       },
@@ -18389,8 +18389,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/talents/storm_ui_icon_kerrigan_chrysalis.png",
         "description": {
-          "fr": "Place en stase et rend des points de vie à l’activation.",
-          "en": "Activate to enter Stasis and heal"
+          "fr": "Enferme Kerrigan dans une chrysalide qui la soigne rapidement, mais que les ennemis peuvent détruire pour interrompre l'effet.",
+          "en": "Encases Kerrigan in a chrysalis that heals her rapidly, but which enemies can destroy to end the effect."
         },
         "demoYoutubeId": null
       },
@@ -18403,8 +18403,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_ravage.png",
         "description": {
-          "fr": "Ravage confère de la puissance de capacité.",
-          "en": "Ravage grants Spell Power"
+          "fr": "Ravage augmente la puissance de capacité de Kerrigan, cumulable jusqu'à un plafond.",
+          "en": "Ravage increases Kerrigan's Spell Power, stacking up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -18417,8 +18417,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_impalingblades.png",
         "description": {
-          "fr": "Lames perforantes confère un bonus de dégâts.",
-          "en": "Impaling Blades grants bonus damage"
+          "fr": "Les ennemis touchés par Lames perforantes subissent des dégâts supplémentaires lors des prochaines attaques de Kerrigan.",
+          "en": "Enemies hit by Impaling Blades take bonus damage from Kerrigan's next attacks."
         },
         "demoYoutubeId": null
       },
@@ -18459,8 +18459,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_ultralisk.png",
         "description": {
-          "fr": "L’ultralisk ressuscite une fois après avoir été tué.",
-          "en": "Ultralisk spawns a new Ultralisk on death"
+          "fr": "Renforce l'ultralisk ; à sa mort il laisse un œuf dont un nouvel ultralisk sort, à moins que l'œuf ne soit détruit à temps.",
+          "en": "Strengthens the ultralisk; on death it leaves an egg from which a new ultralisk emerges, unless the egg is destroyed in time."
         },
         "demoYoutubeId": null
       },
@@ -18487,8 +18487,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_boltofthestorm.png",
         "description": {
-          "fr": "Téléporte sur une courte distance et inflige des dégâts.",
-          "en": "Activate to teleport a short distance, deal damage"
+          "fr": "Téléporte à un endroit proche en infligeant des dégâts autour, ce qui génère un bouclier d'Assimilation bien supérieur à la normale.",
+          "en": "Teleports to a nearby location, dealing damage around her and generating a much larger Assimilation Shield than usual."
         },
         "demoYoutubeId": null
       }
@@ -20138,8 +20138,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_trait.png",
         "description": {
-          "fr": "Maiev s’élance dans les airs et devient temporairement insensible.",
-          "en": "Leap into the air, becoming temporarily Immune"
+          "fr": "Maiev bondit dans les airs et devient immunisée à tous les effets hostiles pendant un court instant. Elle gagne une charge supplémentaire au niveau 20.",
+          "en": "Maiev leaps into the air, becoming immune to all hostile effects for a brief moment. She gains an extra charge at level 20."
         },
         "demoYoutubeId": ""
       },
@@ -20151,8 +20151,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_knives.png",
         "description": {
-          "fr": "Projette une salve de dagues.",
-          "en": "Throw a volley of knives"
+          "fr": "Projette une salve de dagues en croissant devant elle. Toucher plusieurs héros remet la capacité presque aussitôt à disposition et rembourse son coût en mana.",
+          "en": "Throws a crescent-shaped volley of knives. Hitting several Heroes makes the Ability almost immediately available again and refunds its Mana cost."
         },
         "demoYoutubeId": ""
       },
@@ -20164,8 +20164,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_umbra_1.png",
         "description": {
-          "fr": "Lie les héros adverses à Maiev et les attire à elle s’ils s’éloignent trop.",
-          "en": "Tether enemy Heroes to Maiev, pulling those that stray too far"
+          "fr": "La prochaine attaque de base frappe en arc de cercle et lie à Maiev les héros touchés. Un héros lié qui s'éloigne trop est attiré vers elle, ce qui rompt le lien.",
+          "en": "The next Basic Attack strikes in an arc and tethers the Heroes hit to Maiev. A tethered Hero who strays too far is pulled toward her, breaking the tether."
         },
         "demoYoutubeId": ""
       },
@@ -20177,8 +20177,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_rush_1.png",
         "description": {
-          "fr": "Maiev projette une ombre à l’emplacement de laquelle elle peut se téléporter.",
-          "en": "Project a shadow of Maiev that she can later Blink to"
+          "fr": "Projette une ombre qui blesse les ennemis sur toute sa trajectoire avant de revenir. Maiev peut ensuite se téléporter à son emplacement.",
+          "en": "Projects a shadow that damages enemies along its entire path before returning. Maiev can then Blink to its location."
         },
         "demoYoutubeId": ""
       },
@@ -20190,8 +20190,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_heroic_1_a.png",
         "description": {
-          "fr": "Plonge un héros adverse en stase et le prive de vision.",
-          "en": "Time Stop an enemy Hero and remove their vision"
+          "fr": "Projette un glaive : s'il touche un héros adverse, la capacité peut être réactivée pour le plonger en stase et le priver de vision. À sa sortie, le héros est réduit au silence.",
+          "en": "Throws a glaive: if it hits an enemy Hero, the Ability can be reactivated to place them in Stasis and remove their vision. On exiting, the Hero is Silenced."
         },
         "demoYoutubeId": ""
       },
@@ -20203,8 +20203,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_heroic_2.png",
         "description": {
-          "fr": "Les ennemis sont encerclés par des avatars vengeurs.",
-          "en": "Trap enemies in a cage of Avatars"
+          "fr": "Invoque une geôle d'avatars vengeurs autour de Maiev : tout héros adverse qui en touche un est projeté au centre, et l'avatar disparaît.",
+          "en": "Summons a cage of Avatars around Maiev: any enemy Hero touching one is thrown to the center, and that Avatar vanishes."
         },
         "demoYoutubeId": ""
       }
@@ -20309,8 +20309,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/talents/storm_ui_icon_maiev_pursuit_vengeance.png",
         "description": {
-          "fr": "Réduit le temps de recharge d’Entraves d’ombre et d’Esprit vengeur.",
-          "en": "Reduce Umbral Bind, Spirit of Vengeance cooldown"
+          "fr": "Chaque héros lié par Entraves d'ombre réduit le temps de recharge d'Esprit vengeur, et chaque héros touché par Esprit vengeur réduit celui d'Entraves d'ombre.",
+          "en": "Each Hero tethered by Umbral Bind reduces Spirit of Vengeance's cooldown, and each Hero hit by Spirit of Vengeance reduces Umbral Bind's."
         },
         "demoYoutubeId": null
       },
@@ -20323,8 +20323,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/talents/storm_ui_icon_maiev_memento.png",
         "description": {
-          "fr": "Les attaques de base rebondissent à l’activation.",
-          "en": "Activate to make Basic Attacks bounce"
+          "fr": "À l'activation, les attaques de base rebondissent sur les ennemis proches. Toucher plusieurs héros d'un seul Éventail de dagues le recharge.",
+          "en": "On activation, Basic Attacks bounce to nearby enemies. Hitting several Heroes with a single Fan of Knives recharges it."
         },
         "demoYoutubeId": null
       },
@@ -20365,8 +20365,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/talents/storm_ui_icon_maiev_rush_2.png",
         "description": {
-          "fr": "Transfert inflige des dégâts de zone.",
-          "en": "Blink deals area damage"
+          "fr": "Se téléporter sur l'ombre la fait exploser et inflige aux héros proches des dégâts proportionnels à leur maximum de points de vie.",
+          "en": "Blinking to the shadow makes it explode, dealing damage to nearby Heroes based on their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -20379,8 +20379,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_knives.png",
         "description": {
-          "fr": "Éventail de dagues inflige davantage de dégâts après avoir touché plusieurs héros.",
-          "en": "Fan of Knives deals more damage after hitting multiple Heroes"
+          "fr": "Après avoir touché au moins deux héros d'un seul Éventail de dagues, la prochaine utilisation projette une étoile qui inflige des dégâts supplémentaires à l'impact.",
+          "en": "After hitting at least two Heroes with a single Fan of Knives, the next cast launches a star dealing bonus damage on impact."
         },
         "demoYoutubeId": null
       },
@@ -20407,8 +20407,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_rush_1.png",
         "description": {
-          "fr": "Toucher des héros adverses augmente les dégâts de Maiev.",
-          "en": "Enemy Heroes hit increase Maiev's damage"
+          "fr": "Chaque héros adverse touché par Esprit vengeur augmente les dégâts que Maiev inflige, jusqu'à un plafond.",
+          "en": "Each enemy Hero hit by Spirit of Vengeance increases Maiev's damage, up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -20421,8 +20421,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_heroic_1_a.png",
         "description": {
-          "fr": "Plonge un héros adverse en stase et le prive de vision.",
-          "en": "Time Stop an enemy Hero and remove their vision"
+          "fr": "Projette un glaive : s'il touche un héros adverse, la capacité peut être réactivée pour le plonger en stase et le priver de vision. À sa sortie, le héros est réduit au silence.",
+          "en": "Throws a glaive: if it hits an enemy Hero, the Ability can be reactivated to place them in Stasis and remove their vision. On exiting, the Hero is Silenced."
         },
         "demoYoutubeId": null
       },
@@ -20435,8 +20435,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_heroic_2.png",
         "description": {
-          "fr": "Les ennemis sont encerclés par des avatars vengeurs.",
-          "en": "Trap enemies in a cage of Avatars"
+          "fr": "Invoque une geôle d'avatars vengeurs autour de Maiev : tout héros adverse qui en touche un est projeté au centre, et l'avatar disparaît.",
+          "en": "Summons a cage of Avatars around Maiev: any enemy Hero touching one is thrown to the center, and that Avatar vanishes."
         },
         "demoYoutubeId": null
       },
@@ -20449,8 +20449,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_knives.png",
         "description": {
-          "fr": "Éventail de dagues confère de l’armure.",
-          "en": "Fan of Knives grants Armor"
+          "fr": "Chaque héros adverse touché par Éventail de dagues confère de l'armure à Maiev.",
+          "en": "Each enemy Hero hit by Fan of Knives grants Maiev Armor."
         },
         "demoYoutubeId": null
       },
@@ -20477,8 +20477,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/talents/storm_ui_icon_maiev_rush_2.png",
         "description": {
-          "fr": "Transfert confère de l’armure.",
-          "en": "Blink grants Armor"
+          "fr": "Se téléporter confère de l'armure ; attaquer des héros adverses en prolonge la durée.",
+          "en": "Blinking grants Armor; attacking enemy Heroes refreshes its duration."
         },
         "demoYoutubeId": null
       },
@@ -20491,8 +20491,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_knives.png",
         "description": {
-          "fr": "Infliger des dégâts augmente les dégâts d’Éventail de dagues.",
-          "en": "Dealing damage increases Fan of Knives damage"
+          "fr": "Infliger des dégâts à des héros permet au prochain Éventail de dagues d'infliger un bonus proportionnel au maximum de points de vie des cibles.",
+          "en": "Dealing damage to Heroes lets the next Fan of Knives deal bonus damage based on the targets' maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -20505,8 +20505,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_umbra_1.png",
         "description": {
-          "fr": "Infliger des dégâts aux cibles liées avec Entraves d’ombre augmente ses dégâts d’attraction.",
-          "en": "Damage Umbral Bind targets to increase pull damage"
+          "fr": "Entraves d'ombre augmente la vitesse de déplacement de Maiev, et blesser les cibles liées augmente ses dégâts d'attraction.",
+          "en": "Umbral Bind grants Maiev Movement Speed, and damaging tethered targets increases its pull damage."
         },
         "demoYoutubeId": null
       },
@@ -20533,8 +20533,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/talents/storm_ui_icon_maiev_shadoworb_vengeance.png",
         "description": {
-          "fr": "Met fin au temps de recharge d’Esprit vengeur.",
-          "en": "Activate to reset Spirit of Vengeance cooldown"
+          "fr": "Met fin au temps de recharge d'Esprit vengeur. Toucher plusieurs fois des héros adverses avec Esprit vengeur recharge l'orbe.",
+          "en": "Resets Spirit of Vengeance's cooldown. Hitting enemy Heroes several times with Spirit of Vengeance recharges the orb."
         },
         "demoYoutubeId": null
       },
@@ -20547,8 +20547,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/talents/storm_ui_icon_maiev_shadoworb_relentless.png",
         "description": {
-          "fr": "Augmente les vitesses d’attaque et de déplacement à l’activation.",
-          "en": "Activate to gain Move Speed, Attack Speed"
+          "fr": "Augmente les vitesses de déplacement et d'attaque de Maiev. Infliger plusieurs fois des dégâts physiques à des héros recharge l'orbe.",
+          "en": "Increases Maiev's Movement and Attack Speed. Dealing Physical Damage to Heroes several times recharges the orb."
         },
         "demoYoutubeId": null
       },
@@ -20561,8 +20561,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/talents/storm_ui_icon_maiev_shadoworb_strike.png",
         "description": {
-          "fr": "Ralentit et réduit l’armure à l’activation.",
-          "en": "Activate to Slow, reduce Armor"
+          "fr": "Inflige des dégâts à un héros adverse, le ralentit et réduit son armure. Infliger plusieurs fois des dégâts de capacité à des héros recharge l'orbe.",
+          "en": "Damages an enemy Hero, Slows them and reduces their Armor. Dealing Ability damage to Heroes several times recharges the orb."
         },
         "demoYoutubeId": null
       }
@@ -22443,7 +22443,7 @@ const HEROES = [
       "en": "Endless nuisance who keeps coming back thanks to his egg."
     },
     "gameplay": {
-      "fr": "Murky pousse les lanes et harcèle l'ennemi. Sa mort ne coûte pas d'expérience à son équipe tant que son œuf est bien caché.",
+      "fr": "Bourbie pousse les lanes et harcèle l'ennemi. Sa mort ne coûte pas d'expérience à son équipe tant que son œuf est bien caché.",
       "en": "Murky pushes lanes and harasses the enemy. His death costs his team no experience as long as his egg is well hidden."
     },
     "spells": [
@@ -22455,8 +22455,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_trait_spawnegg.png",
         "description": {
-          "fr": "Place un œuf à partir duquel Bourbie renaîtra.",
-          "en": "Place an Egg, from which Murky will respawn"
+          "fr": "Place un œuf qui révèle les environs et depuis lequel Bourbie renaît rapidement en cas de mort. Le tuer ne rapporte qu'une fraction d'expérience ; si l'œuf est détruit, Bourbie est révélé aux ennemis.",
+          "en": "Places an Egg that reveals the surrounding area and from which Murky quickly respawns on death. Killing him grants only a fraction of the usual experience; if the Egg is destroyed, Murky is revealed to enemies."
         },
         "demoYoutubeId": ""
       },
@@ -22468,8 +22468,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_slime.png",
         "description": {
-          "fr": "Projette de la bourbe qui inflige des dégâts aux ennemis et les ralentit.",
-          "en": "Release Slime to damage and slow enemies"
+          "fr": "Projette de la bourbe qui inflige des dégâts aux ennemis proches et les ralentit, et qui frappe bien plus fort les cibles déjà embourbées.",
+          "en": "Releases Slime that damages and Slows nearby enemies, hitting already-Slimed targets much harder."
         },
         "demoYoutubeId": ""
       },
@@ -22481,8 +22481,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_pufferfish.png",
         "description": {
-          "fr": "Crache un poisson qui explose au bout d’un moment.",
-          "en": "Spit out a fish that explodes after a delay"
+          "fr": "Crache un poisson-globe qui explose après quelques secondes en infligeant de lourds dégâts. Les ennemis peuvent le détruire avant.",
+          "en": "Spits out a Pufferfish that explodes after a few seconds for heavy damage. Enemies can destroy it beforehand."
         },
         "demoYoutubeId": ""
       },
@@ -22507,8 +22507,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_marchofthemurlocs.png",
         "description": {
-          "fr": "Submerge l’ennemi de murlocs.",
-          "en": "Swarm enemies with Murlocs"
+          "fr": "Envoie une marée de murlocs dans la direction visée ; chacun bondit sur le premier héros ou bâtiment rencontré, lui inflige des dégâts et le ralentit.",
+          "en": "Sends a tide of murlocs in the target direction; each leaps at the first enemy Hero or Structure it meets, damaging and Slowing it."
         },
         "demoYoutubeId": ""
       },
@@ -22520,8 +22520,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_octograb.png",
         "description": {
-          "fr": "Étourdit et égratigne un héros adverse.",
-          "en": "Stun and poke an enemy Hero"
+          "fr": "Bourbie devient insensible aux effets de contrôle, étourdit longuement un héros adverse et le griffe.",
+          "en": "Murky becomes Unstoppable, Stunning an enemy Hero for a long time while clawing at them."
         },
         "demoYoutubeId": ""
       }
@@ -22532,8 +22532,8 @@ const HEROES = [
         "en": "Always hide your egg somewhere unpredictable."
       },
       {
-        "fr": "Poisson-globe étourdit : combine-le avec Bulle de sécurité.",
-        "en": "Pufferfish stuns: combine it with Safety Bubble."
+        "fr": "Poisson-globe fait très mal s'il explose : couvre-le avec Bulle de sûreté.",
+        "en": "Pufferfish hits hard if it detonates: cover it with Safety Bubble."
       },
       {
         "fr": "Ta mort ne donne pas d'expérience : joue agressivement.",
@@ -22626,8 +22626,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/talents/storm_ui_icon_murky_egghunt.png",
         "description": {
-          "fr": "Place deux œufs.",
-          "en": "Place two Eggs"
+          "fr": "Bourbie peut placer deux œufs et renaît de l'un d'eux au hasard, mais leur temps de recharge augmente.",
+          "en": "Murky can place two Eggs and respawns from one at random, but their cooldown increases."
         },
         "demoYoutubeId": null
       },
@@ -22668,8 +22668,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_pufferfish.png",
         "description": {
-          "fr": "Augmente les dégâts de Poisson-globe et lui confère de l’armure anti-sort.",
-          "en": "Pufferfish gains Spell Armor, damage"
+          "fr": "Poisson-globe gagne de l'armure anti-sort et inflige davantage de dégâts aux cibles embourbées.",
+          "en": "Pufferfish gains Spell Armor and deals more damage to Slimed targets."
         },
         "demoYoutubeId": null
       },
@@ -22682,8 +22682,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/talents/storm_ui_icon_murky_trait_spawnegg_var1.png",
         "description": {
-          "fr": "Quête : rester en vie augmente la puissance de capacité.",
-          "en": "Quest: Living increases Spell Power"
+          "fr": "Quête : tant que Bourbie reste en vie, sa puissance de capacité augmente régulièrement ; le cumul est perdu à sa mort.",
+          "en": "Quest: while Murky stays alive, his Spell Power steadily increases; the stacks are lost on death."
         },
         "demoYoutubeId": null
       },
@@ -22710,8 +22710,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_safetybubble.png",
         "description": {
-          "fr": "Augmente la vitesse de déplacement de Bulle de sûreté et réduit son temps de recharge.",
-          "en": "Move faster during Safety Bubble, reduce cooldown"
+          "fr": "Dans sa bulle, Bourbie se déplace plus vite et traverse les unités ; le temps de recharge de Bulle de sûreté est aussi réduit.",
+          "en": "Inside his bubble, Murky moves faster and passes through units; Safety Bubble's cooldown is also reduced."
         },
         "demoYoutubeId": null
       },
@@ -22724,8 +22724,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_slow.png",
         "description": {
-          "fr": "Les attaques de base ralentissent les ennemis.",
-          "en": "Basic Attacks slow enemies"
+          "fr": "Les attaques de base portées aux héros les ralentissent et leur infligent des dégâts dans la durée, effet cumulable.",
+          "en": "Basic Attacks against Heroes Slow them and deal damage over time, stacking several times."
         },
         "demoYoutubeId": null
       },
@@ -22738,8 +22738,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_marchofthemurlocs.png",
         "description": {
-          "fr": "Submerge l’ennemi de murlocs.",
-          "en": "Swarm enemies with Murlocs"
+          "fr": "Envoie une marée de murlocs dans la direction visée ; chacun bondit sur le premier héros ou bâtiment rencontré, lui inflige des dégâts et le ralentit.",
+          "en": "Sends a tide of murlocs in the target direction; each leaps at the first enemy Hero or Structure it meets, damaging and Slowing it."
         },
         "demoYoutubeId": null
       },
@@ -22752,8 +22752,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_octograb.png",
         "description": {
-          "fr": "Étourdit et égratigne un héros adverse.",
-          "en": "Stun and poke an enemy Hero"
+          "fr": "Bourbie devient insensible aux effets de contrôle, étourdit longuement un héros adverse et le griffe.",
+          "en": "Murky becomes Unstoppable, Stunning an enemy Hero for a long time while clawing at them."
         },
         "demoYoutubeId": null
       },
@@ -22808,8 +22808,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_slime.png",
         "description": {
-          "fr": "Les attaques de base successives infligent Bourbe.",
-          "en": "Successive Basic Attacks cast Slime"
+          "fr": "Toutes les trois attaques de base portées consécutivement à un même héros déclenchent Bourbe gratuitement.",
+          "en": "Every third consecutive Basic Attack against the same Hero casts Slime for free."
         },
         "demoYoutubeId": null
       },
@@ -22836,8 +22836,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/talents/storm_ui_icon_murky_pufferfish_b.png",
         "description": {
-          "fr": "Poisson-globe inflige davantage de dégâts aux héros.",
-          "en": "Increase Pufferfish damage on Heroes"
+          "fr": "Les héros touchés par Poisson-globe subissent des dégâts supplémentaires proportionnels à leur maximum de points de vie.",
+          "en": "Heroes hit by Pufferfish take bonus damage based on their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -24307,8 +24307,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_d.png",
         "description": {
-          "fr": "Qhira s’élance vers un obstacle ou un héros.",
-          "en": "Qhira launches herself towards terrain or Heroes"
+          "fr": "Projette un grappin qui attire Qhira vers l'obstacle touché. S'il atteint un héros adverse, elle se rue sur lui et lui assène un coup de pied. Utilisable pendant la rotation d'Orbite meurtrière.",
+          "en": "Throws a hook that pulls Qhira to the terrain it strikes. If it hits an enemy Hero, she rushes in and kicks them. Usable during Revolving Sweep's rotation."
         },
         "demoYoutubeId": ""
       },
@@ -24320,8 +24320,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_q.png",
         "description": {
-          "fr": "Déchaînez votre lame pour infliger des dégâts de zone devant vous.",
-          "en": "Unleash your blade to deal damage in an area in front of you"
+          "fr": "Déploie la lame dans la direction ciblée et inflige des dégâts de manière continue aux ennemis sur sa trajectoire.",
+          "en": "Extends the blade in the target direction, continuously damaging enemies in its path."
         },
         "demoYoutubeId": ""
       },
@@ -24333,8 +24333,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_w.png",
         "description": {
-          "fr": "Inflige des dégâts et rend des points de vie pour chaque héros affecté par le saignement, l'effet augmentant avec les charges accumulées.",
-          "en": "Deals damage and restores Health for each Hero affected by the bleed, scaling with accumulated charges."
+          "fr": "Effet passif : les attaques et capacités de base font saigner les ennemis, effet cumulable. À l'activation, inflige des dégâts et rend des points de vie pour chaque héros qui saigne, d'autant plus que les cumuls sont nombreux.",
+          "en": "Passive: Basic Attacks and Abilities make enemies bleed, stacking several times. On activation, deals damage and restores Health for each bleeding Hero, scaling with the stacks on them."
         },
         "demoYoutubeId": ""
       },
@@ -24346,8 +24346,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_e.png",
         "description": {
-          "fr": "S’arrime à un héros ennemi, lui tourne autour et l’étourdit.",
-          "en": "Attach to an enemy Hero to rotate around and Stun them"
+          "fr": "Arrime son épée au premier héros adverse touché et l'étourdit, puis tourne autour de lui en devenant insensible à tous les effets. Relancer projette la cible d'un coup de pied et l'étourdit de nouveau.",
+          "en": "Latches her sword onto the first enemy Hero hit and Stuns them, then rotates around them while becoming immune to all effects. Reactivating kicks the target away and Stuns them again."
         },
         "demoYoutubeId": ""
       },
@@ -24359,8 +24359,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_r1.png",
         "description": {
-          "fr": "Inflige des dégâts aux ennemis proches et les étourdit.",
-          "en": "Deal damage and Stun nearby enemies"
+          "fr": "Inflige des dégâts répétés autour de Qhira dans une zone qui s'élargit, puis étourdit les héros adverses proches à l'expiration.",
+          "en": "Repeatedly damages enemies around Qhira in a growing area, then Stuns nearby enemy Heroes when it expires."
         },
         "demoYoutubeId": ""
       },
@@ -24372,8 +24372,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_r2.png",
         "description": {
-          "fr": "Étend l’épée pour porter le coup final.",
-          "en": "Extend sword to deal finishing blow"
+          "fr": "Après un court délai, inflige des dégâts aux ennemis sur une ligne, bien davantage aux héros dont les points de vie sont bas.",
+          "en": "After a short delay, damages enemies in a line, far more against Heroes at low Health."
         },
         "demoYoutubeId": ""
       }
@@ -24464,8 +24464,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_q.png",
         "description": {
-          "fr": "Carnage inflige davantage de dégâts et ralentit.",
-          "en": "Carnage deals additional damage, Slows"
+          "fr": "Toucher plusieurs fois le même héros adverse avec Carnage lui inflige des dégâts supplémentaires et le ralentit.",
+          "en": "Hitting the same enemy Hero several times with Carnage deals bonus damage and Slows them."
         },
         "demoYoutubeId": null
       },
@@ -24492,8 +24492,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/talents/storm_ui_icon_nexushunter_passive.png",
         "description": {
-          "fr": "Renforce les attaques de base portées aux héros dont les points de vie sont bas.",
-          "en": "Empower Basic Attacks against weak Heroes"
+          "fr": "Augmente les dégâts des attaques de base, davantage encore contre les héros dont les points de vie sont bas, ce qui accélère alors sa vitesse d'attaque.",
+          "en": "Increases Basic Attack damage, even more against Heroes at low Health, which then also grants Attack Speed."
         },
         "demoYoutubeId": null
       },
@@ -24506,8 +24506,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_w.png",
         "description": {
-          "fr": "Soif de sang confère Évasion.",
-          "en": "Blood Rage grants Evasion"
+          "fr": "Toucher plusieurs héros avec Soif de sang permet à Qhira d'esquiver les prochaines attaques de base des héros.",
+          "en": "Hitting several Heroes with Blood Rage lets Qhira evade the next Basic Attacks from Heroes."
         },
         "demoYoutubeId": null
       },
@@ -24534,8 +24534,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/talents/storm_ui_icon_nexushunter_passive.png",
         "description": {
-          "fr": "Les attaques de base portées à des héros confèrent de l’armure.",
-          "en": "Basic Attacking Heroes grants Armor"
+          "fr": "Les attaques de base portées à des héros adverses confèrent de l'armure à Qhira, effet cumulable.",
+          "en": "Basic Attacks against enemy Heroes grant Qhira Armor, stacking several times."
         },
         "demoYoutubeId": null
       },
@@ -24576,8 +24576,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_e.png",
         "description": {
-          "fr": "Orbite meurtrière rend des points de vie sur la durée.",
-          "en": "Revolving Sweep heals over time"
+          "fr": "Chaque héros adverse touché par Orbite meurtrière rend des points de vie à Qhira dans la durée. De plus, ses attaques de base lui rendent des points de vie.",
+          "en": "Each enemy Hero hit by Revolving Sweep heals Qhira over time. Additionally, her Basic Attacks heal her."
         },
         "demoYoutubeId": null
       },
@@ -24590,8 +24590,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_r1.png",
         "description": {
-          "fr": "Inflige des dégâts aux ennemis proches et les étourdit.",
-          "en": "Deal damage and Stun nearby enemies"
+          "fr": "Inflige des dégâts répétés autour de Qhira dans une zone qui s'élargit, puis étourdit les héros adverses proches à l'expiration.",
+          "en": "Repeatedly damages enemies around Qhira in a growing area, then Stuns nearby enemy Heroes when it expires."
         },
         "demoYoutubeId": null
       },
@@ -24604,8 +24604,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_r2.png",
         "description": {
-          "fr": "Étend l’épée pour porter le coup final.",
-          "en": "Extend sword to deal finishing blow"
+          "fr": "Après un court délai, inflige des dégâts aux ennemis sur une ligne, bien davantage aux héros dont les points de vie sont bas.",
+          "en": "After a short delay, damages enemies in a line, far more against Heroes at low Health."
         },
         "demoYoutubeId": null
       },
@@ -24618,8 +24618,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_q.png",
         "description": {
-          "fr": "Soif de sang réduit le temps de recharge de Carnage.",
-          "en": "Blood Rage reduces Carnage cooldown"
+          "fr": "Le temps de recharge de Carnage s'écoule plus vite tant qu'un héros adverse porte le maximum de cumuls de saignement.",
+          "en": "Carnage's cooldown recovers faster while an enemy Hero carries the maximum bleed stacks."
         },
         "demoYoutubeId": null
       },
@@ -24646,8 +24646,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/talents/storm_ui_icon_nexushunter_passive.png",
         "description": {
-          "fr": "Les attaques de base consécutives infligent des dégâts supplémentaires.",
-          "en": "Consecutive Basic Attacks deal bonus damage"
+          "fr": "Attaquer un même héros augmente les dégâts des attaques suivantes portées contre lui ; changer de cible réinitialise le bonus.",
+          "en": "Attacking the same Hero increases the damage of subsequent attacks against them; switching targets resets the bonus."
         },
         "demoYoutubeId": null
       },
@@ -24674,8 +24674,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/talents/storm_ui_icon_nexushunter_e_alt_1.png",
         "description": {
-          "fr": "Réduit l’armure des héros adverses.",
-          "en": "Reduce enemy Hero Armor"
+          "fr": "Les héros adverses touchés par Orbite meurtrière ou par Grappin voient leur armure réduite.",
+          "en": "Enemy Heroes hit by Revolving Sweep or Grappling Hook have their Armor reduced."
         },
         "demoYoutubeId": null
       },
@@ -24688,8 +24688,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/talents/storm_ui_icon_nexushunter_e_alt_2.png",
         "description": {
-          "fr": "Orbite meurtrière se recharge plus vite.",
-          "en": "Revolving Sweep recharges faster"
+          "fr": "Orbite meurtrière se recharge plus vite pendant la rotation, et l'impact de sa réactivation confère de l'armure anti-sort.",
+          "en": "Revolving Sweep recharges faster during the rotation, and the impact of its reactivation grants Spell Armor."
         },
         "demoYoutubeId": null
       },
@@ -24702,8 +24702,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_r1.png",
         "description": {
-          "fr": "Spirale implacable réduit au silence.",
-          "en": "Unrelenting Strikes Silences"
+          "fr": "Toucher des héros adverses avec Spirale implacable les réduit au silence et réduit son temps de recharge.",
+          "en": "Hitting enemy Heroes with Unrelenting Strikes Silences them and reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -24716,8 +24716,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_r2.png",
         "description": {
-          "fr": "Coup de grâce annule les temps de recharge des capacités.",
-          "en": "Final Strike refunds Ability cooldowns"
+          "fr": "Renforce le bonus de Coup de grâce contre les héros aux points de vie bas. Si un héros meurt juste après avoir été touché, toutes les capacités de Qhira sont rechargées.",
+          "en": "Strengthens Final Strike's bonus against low Health Heroes. If a Hero dies right after being hit, all of Qhira's cooldowns are refunded."
         },
         "demoYoutubeId": null
       },
@@ -24730,8 +24730,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_d.png",
         "description": {
-          "fr": "Grappin se recharge plus vite.",
-          "en": "Grappling Hook recharges faster"
+          "fr": "Toucher un héros adverse avec l'impact initial d'Orbite meurtrière recharge instantanément Grappin, qui se recharge aussi plus vite si Qhira n'a pas subi de dégâts récemment.",
+          "en": "Hitting an enemy Hero with Revolving Sweep's initial impact instantly resets Grappling Hook, which also recharges faster if Qhira has not taken damage recently."
         },
         "demoYoutubeId": null
       },
@@ -24744,8 +24744,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/talents/storm_ui_icon_nexushunter_passive_alt_1.png",
         "description": {
-          "fr": "Traque les ennemis dont les points de vie sont bas.",
-          "en": "Hunt low Health enemies"
+          "fr": "Révèle les héros adverses proches dont les points de vie sont bas, augmente la vitesse de déplacement de Qhira tant qu'un ennemi est révélé, et lui fait infliger davantage de dégâts à ces cibles.",
+          "en": "Reveals nearby enemy Heroes at low Health, grants Qhira Movement Speed while an enemy is revealed, and makes her deal more damage to those targets."
         },
         "demoYoutubeId": null
       }
@@ -25862,8 +25862,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/talents/storm_ui_icon_samuro_flowingstrikes.png",
         "description": {
-          "fr": "Les attaques de base portées aux héros augmentent la vitesse de déplacement.",
-          "en": "Increase Movement Speed when attacking Heroes"
+          "fr": "Échange sa place avec l'image miroir ciblée et dissipe la plupart des effets négatifs qui l'affectent, lui et ses images. Effet passif — Discipline du maître-lame : attaquer des héros augmente sa vitesse de déplacement.",
+          "en": "Swaps places with the targeted Mirror Image and cleanses most negative effects from Samuro and his images. Passive — Advancing Strikes: attacking Heroes increases his Movement Speed."
         },
         "demoYoutubeId": ""
       },
@@ -25875,8 +25875,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_mirrorimage.png",
         "description": {
-          "fr": "Crée des images miroir qui désorientent et attaquent les ennemis.",
-          "en": "Create Mirror Images to confuse and attack enemies"
+          "fr": "Se téléporte sur une courte distance et crée deux images miroir dans la direction opposée. Elles ont autant de points de vie que Samuro mais subissent le double de dégâts, et l'utilisation dissipe la plupart des effets négatifs.",
+          "en": "Teleports a short distance and creates two Mirror Images in the opposite direction. They have as much Health as Samuro but take double damage, and casting cleanses most negative effects."
         },
         "demoYoutubeId": ""
       },
@@ -25888,8 +25888,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_criticalstrike.png",
         "description": {
-          "fr": "Inflige un coup critique qui augmente les dégâts.",
-          "en": "Critically Strike for increased damage."
+          "fr": "Rend critique la prochaine attaque de base de Samuro et de ses images, sans interrompre le camouflage. Effet passif : une attaque sur quatre est également critique.",
+          "en": "Makes the next Basic Attack from Samuro and his images a Critical Strike, without breaking Stealth. Passive: every fourth attack also crits."
         },
         "demoYoutubeId": ""
       },
@@ -25901,8 +25901,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_windwalk.png",
         "description": {
-          "fr": "Camoufle et augmente la vitesse de déplacement.",
-          "en": "Become Stealthed and gain Movement Speed"
+          "fr": "Camoufle Samuro : il récupère des points de vie, traverse les unités et se déplace plus vite. S'il reste immobile un moment, il devient totalement invisible.",
+          "en": "Stealths Samuro: he regenerates Health, passes through units and moves faster. If he stands still for a moment, he becomes fully invisible."
         },
         "demoYoutubeId": ""
       },
@@ -25914,8 +25914,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_bladestorm.png",
         "description": {
-          "fr": "Déclenche un tourbillon de lames destructeur.",
-          "en": "Cause a Bladestorm of destructive force"
+          "fr": "Tourbillonne sur place en infligeant des dégâts continus aux ennemis proches et en gagnant de l'armure.",
+          "en": "Spins in place, continuously damaging nearby enemies while gaining Armor."
         },
         "demoYoutubeId": ""
       },
@@ -25927,8 +25927,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_illusiondancer.png",
         "description": {
-          "fr": "Les images miroir de Samuro peuvent utiliser ses capacités et infligent des dégâts réduits.",
-          "en": "Samuro's Mirror Images can use his Abilities and deal reduced damage."
+          "fr": "Permet de contrôler les images miroir individuellement ou en groupe et augmente leurs dégâts. Effet passif : réduit fortement le temps de recharge de Transfert d'image.",
+          "en": "Allows controlling the Mirror Images individually or as a group and increases their damage. Passive: greatly reduces Image Transmission's cooldown."
         },
         "demoYoutubeId": ""
       }
@@ -26033,8 +26033,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_criticalstrike.png",
         "description": {
-          "fr": "Les coups critiques se déclenchent plus souvent.",
-          "en": "Critical Strike happens more often"
+          "fr": "Les coups critiques se déclenchent plus souvent et réduisent l'armure physique des héros touchés.",
+          "en": "Critical Strikes trigger more often and reduce the Physical Armor of the Heroes hit."
         },
         "demoYoutubeId": null
       },
@@ -26047,8 +26047,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_windwalk.png",
         "description": {
-          "fr": "Marche du vent augmente la vitesse de déplacement et rend de la vie.",
-          "en": "Wind Walk grants Move Speed, restores Health"
+          "fr": "Marche du vent soigne instantanément Samuro et augmente sa vitesse de déplacement, à l'activation comme à la fin de l'effet.",
+          "en": "Wind Walk instantly heals Samuro and grants Movement Speed, both on activation and when it ends."
         },
         "demoYoutubeId": null
       },
@@ -26075,8 +26075,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_windwalk.png",
         "description": {
-          "fr": "Confère de l’armure pendant Marche du vent.",
-          "en": "Gain Armor during Wind Walk"
+          "fr": "Pendant Marche du vent et quelques secondes après, Samuro et ses images miroir gagnent de l'armure.",
+          "en": "During Wind Walk and for a few seconds after, Samuro and his Mirror Images gain Armor."
         },
         "demoYoutubeId": null
       },
@@ -26117,8 +26117,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/talents/storm_ui_icon_samuro_criticalstrike_a.png",
         "description": {
-          "fr": "Les frappes critiques réduisent le temps de recharge de Transfert d’image.",
-          "en": "Critical Strikes reduce Image Transmission cooldown"
+          "fr": "Les coups critiques portés aux héros adverses réduisent le temps de recharge de Transfert d'image et infligent d'autant plus de dégâts que Samuro a d'images actives.",
+          "en": "Critical Strikes against enemy Heroes reduce Image Transmission's cooldown and deal more damage the more Mirror Images Samuro has active."
         },
         "demoYoutubeId": null
       },
@@ -26131,8 +26131,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/talents/storm_ui_icon_samuro_criticalstrike_b.png",
         "description": {
-          "fr": "Les frappes critiques augmentent les dégâts des attaques de base.",
-          "en": "Critical Strikes increase Basic Attack damage"
+          "fr": "Les attaques de base portées aux héros adverses réduisent le temps de recharge de Frappe critique, et les coups critiques augmentent les dégâts des attaques de base.",
+          "en": "Basic Attacks against enemy Heroes reduce Critical Strike's cooldown, and Critical Strikes increase Basic Attack damage."
         },
         "demoYoutubeId": null
       },
@@ -26145,8 +26145,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_bladestorm.png",
         "description": {
-          "fr": "Déclenche un tourbillon de lames destructeur.",
-          "en": "Cause a Bladestorm of destructive force"
+          "fr": "Tourbillonne sur place en infligeant des dégâts continus aux ennemis proches et en gagnant de l'armure.",
+          "en": "Spins in place, continuously damaging nearby enemies while gaining Armor."
         },
         "demoYoutubeId": null
       },
@@ -26159,8 +26159,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_illusiondancer.png",
         "description": {
-          "fr": "Permet de contrôler les images miroir.",
-          "en": "Mirror Images can be controlled"
+          "fr": "Permet de contrôler les images miroir individuellement ou en groupe et augmente leurs dégâts. Effet passif : réduit fortement le temps de recharge de Transfert d'image.",
+          "en": "Allows controlling the Mirror Images individually or as a group and increases their damage. Passive: greatly reduces Image Transmission's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -26187,8 +26187,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_windwalk.png",
         "description": {
-          "fr": "Marche du vent crée une image.",
-          "en": "Wind Walk creates an Image"
+          "fr": "Marche du vent laisse une image miroir à l'emplacement de Samuro, qui poursuit l'action en cours.",
+          "en": "Wind Walk leaves a Mirror Image at Samuro's location, which continues what he was doing."
         },
         "demoYoutubeId": null
       },
@@ -26271,8 +26271,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_illusiondancer.png",
         "description": {
-          "fr": "Augmente les points de vie et la durée des images.",
-          "en": "Images have increased Health and Duration"
+          "fr": "Les images miroir subissent deux fois moins de dégâts et durent nettement plus longtemps.",
+          "en": "Mirror Images take half as much damage and last considerably longer."
         },
         "demoYoutubeId": null
       },
@@ -27913,7 +27913,7 @@ const HEROES = [
       "en": "Assassin who becomes terrifying once he stacks his meat."
     },
     "gameplay": {
-      "fr": "Le Boucher collecte de la chair fraîche pour augmenter définitivement ses dégâts, puis fonce sur une cible unique et la déchiquette.",
+      "fr": "Le Boucher collecte de la viande fraîche pour augmenter définitivement ses dégâts, puis fonce sur une cible unique et la déchiquette.",
       "en": "The Butcher collects Fresh Meat to permanently increase his damage, then charges a single target and shreds it."
     },
     "spells": [
@@ -27925,8 +27925,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/spells/storm_ui_icon_butcher_freshmeat.png",
         "description": {
-          "fr": "Confère plus de force en collectant de la viande sur les victimes.",
-          "en": "Gather strength by killing enemies and collecting their meat"
+          "fr": "Les ennemis qui meurent à proximité laissent de la viande ; chaque unité ramassée augmente les dégâts d'attaque du Boucher. Une partie est perdue à sa mort, jusqu'à ce que la quête soit achevée.",
+          "en": "Enemies dying nearby drop meat; each piece collected increases The Butcher's Attack Damage. Part of it is lost on death, until the quest is completed."
         },
         "demoYoutubeId": ""
       },
@@ -27938,8 +27938,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/spells/storm_ui_icon_butcher_hamstring.png",
         "description": {
-          "fr": "Inflige des dégâts de zone et ralentit les ennemis.",
-          "en": "Deals damage in an area and slows enemies"
+          "fr": "Inflige des dégâts et ralentit les ennemis touchés, le ralentissement s'estompant peu à peu. La prochaine attaque de base est portée immédiatement.",
+          "en": "Damages and Slows enemies hit, with the Slow decaying over time. The next Basic Attack is delivered immediately."
         },
         "demoYoutubeId": ""
       },
@@ -27951,8 +27951,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/spells/storm_ui_icon_butcher_tenderize.png",
         "description": {
-          "fr": "Marque un ennemi, ce qui permet de lui voler de la vie.",
-          "en": "Brand an enemy, granting Life Steal against them"
+          "fr": "Marque un ennemi : les attaques de base du Boucher contre lui lui rendent des points de vie. Contre un héros marqué, les soins sont doublés et la marque est prolongée.",
+          "en": "Brands an enemy: The Butcher's Basic Attacks against them heal him. Against a branded Hero, the healing is doubled and the Brand is extended."
         },
         "demoYoutubeId": ""
       },
@@ -27977,8 +27977,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/spells/storm_ui_icon_butcher_furnaceblast.png",
         "description": {
-          "fr": "Inflige des dégâts autour du Boucher après un court instant.",
-          "en": "Deal damage around The Butcher after a delay"
+          "fr": "Après un court instant, des flammes explosent autour du Boucher. Peut être déclenché pendant Charge impitoyable.",
+          "en": "After a short delay, flames erupt around The Butcher. Can be cast during Ruthless Onslaught."
         },
         "demoYoutubeId": ""
       },
@@ -28002,7 +28002,7 @@ const HEROES = [
         "en": "Farm your meat early: it's your entire power curve."
       },
       {
-        "fr": "Ruée impitoyable étourdit : c'est ton engagement principal.",
+        "fr": "Charge impitoyable étourdit : c'est ton engagement principal.",
         "en": "Ruthless Onslaught stuns: it's your main engage."
       },
       {
@@ -28082,8 +28082,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/spells/storm_ui_icon_butcher_hamstring.png",
         "description": {
-          "fr": "Réduit le coût en mana et le temps de recharge de Ficelage.",
-          "en": "Reduces Hamstring Mana cost, cooldown"
+          "fr": "Si Ficelage touche un héros, il rembourse la moitié de son coût en mana et voit son temps de recharge réduit.",
+          "en": "If Hamstring hits a Hero, it refunds half its Mana cost and has its cooldown reduced."
         },
         "demoYoutubeId": null
       },
@@ -28096,8 +28096,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/talents/storm_ui_icon_butcher_hamstring_var1.png",
         "description": {
-          "fr": "Augmente les dégâts de ficelage infligés aux cibles non héroïques.",
-          "en": "Increases Hamstring damage to non-Heroes"
+          "fr": "Augmente les dégâts que Ficelage inflige aux serviteurs, mercenaires et monstres.",
+          "en": "Increases the damage Hamstring deals to Minions, Mercenaries and monsters."
         },
         "demoYoutubeId": null
       },
@@ -28166,8 +28166,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/spells/storm_ui_icon_butcher_tenderize.png",
         "description": {
-          "fr": "Augmente la vitesse de déplacement quand des ennemis sont marqués.",
-          "en": "Increases Move Speed while enemies are branded"
+          "fr": "Augmente la vitesse de déplacement du Boucher tant qu'il se dirige vers l'ennemi marqué.",
+          "en": "Increases The Butcher's Movement Speed while he is heading toward the branded enemy."
         },
         "demoYoutubeId": null
       },
@@ -28180,8 +28180,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/spells/storm_ui_icon_butcher_fullboar.png",
         "description": {
-          "fr": "Charge impitoyable confère de l’armure anti-sort.",
-          "en": "Ruthless Onslaught grants Spell Armor"
+          "fr": "Toucher un héros adverse avec Charge impitoyable confère de l'armure anti-sort au Boucher.",
+          "en": "Hitting an enemy Hero with Ruthless Onslaught grants The Butcher Spell Armor."
         },
         "demoYoutubeId": null
       },
@@ -28208,8 +28208,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/spells/storm_ui_icon_butcher_furnaceblast.png",
         "description": {
-          "fr": "Inflige des dégâts autour du Boucher après un court instant.",
-          "en": "Deal damage around The Butcher after a delay"
+          "fr": "Après un court instant, des flammes explosent autour du Boucher. Peut être déclenché pendant Charge impitoyable.",
+          "en": "After a short delay, flames erupt around The Butcher. Can be cast during Ruthless Onslaught."
         },
         "demoYoutubeId": null
       },
@@ -28236,8 +28236,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/spells/storm_ui_icon_butcher_hamstring.png",
         "description": {
-          "fr": "Ficelage renforce les attaques de base.",
-          "en": "Hamstring empowers Basic Attacks"
+          "fr": "Après Ficelage, les prochaines attaques de base du Boucher infligent des dégâts supplémentaires.",
+          "en": "After Hamstring, The Butcher's next Basic Attacks deal bonus damage."
         },
         "demoYoutubeId": null
       },
@@ -28250,8 +28250,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/spells/storm_ui_icon_butcher_fullboar.png",
         "description": {
-          "fr": "Charge impitoyable inflige des dégâts supplémentaires.",
-          "en": "Ruthless Onslaught deals extra damage"
+          "fr": "Charge impitoyable inflige aux héros des dégâts supplémentaires proportionnels à leur maximum de points de vie.",
+          "en": "Ruthless Onslaught deals Heroes bonus damage based on their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -28292,8 +28292,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/talents/storm_ui_icon_butcher_enraged.png",
         "description": {
-          "fr": "Augmente la vitesse d’attaque et l’armure quand les points de vie sont bas.",
-          "en": "Gain Attack Speed and Armor at low Health"
+          "fr": "Subir des dégâts alors qu'il lui reste moins de la moitié de ses points de vie rend le Boucher enragé : sa vitesse d'attaque augmente et il gagne de l'armure.",
+          "en": "Taking damage below half Health Enrages The Butcher: he gains Attack Speed and Armor."
         },
         "demoYoutubeId": null
       },
@@ -28348,8 +28348,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_slow.png",
         "description": {
-          "fr": "Les attaques de base infligent plus de dégâts et ralentissent",
-          "en": "Basic Attacks deal more damage and Slow"
+          "fr": "Les attaques de base infligent plus de dégâts et ralentissent leur cible.",
+          "en": "Basic Attacks deal more damage and Slow their target."
         },
         "demoYoutubeId": null
       },
@@ -29751,8 +29751,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_vanish.png",
         "description": {
-          "fr": "Passe en camouflage : ses trois capacités de base sont remplacées tant qu'elle reste dissimulée.",
-          "en": "Enters Stealth: her three Basic Abilities are replaced while she stays concealed."
+          "fr": "Passe en camouflage et gagne de la vitesse : ses trois capacités de base sont remplacées tant qu'elle reste dissimulée. Après quelques secondes, ces capacités gagnent en portée et la téléportent auprès de sa cible. Immobile, elle devient totalement invisible.",
+          "en": "Enters Stealth and gains Movement Speed: her three Basic Abilities are replaced while she stays concealed. After a few seconds, those Abilities gain range and teleport her to her target. Standing still, she becomes fully invisible."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -29765,8 +29765,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_sinisterstrike.png",
         "description": {
-          "fr": "Valeera se projette vers l’avant et inflige des dégâts aux ennemis sur une ligne.",
-          "en": "Dash forward, damaging enemies in a line"
+          "fr": "Se projette vers l'avant en blessant les ennemis sur son passage. Heurter un héros arrête net sa course et remet la capacité presque aussitôt à disposition. Confère un point de combo.",
+          "en": "Dashes forward, damaging enemies in her path. Hitting a Hero stops the dash and makes the Ability available again almost immediately. Grants a Combo Point."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -29779,8 +29779,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_bladeflurry.png",
         "description": {
-          "fr": "Inflige des dégâts aux ennemis proches.",
-          "en": "Damage nearby enemies"
+          "fr": "Inflige des dégâts aux ennemis autour de Valeera et confère un point de combo par héros adverse touché.",
+          "en": "Damages enemies around Valeera and grants a Combo Point for each enemy Hero hit."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -29793,8 +29793,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_eviscerate.png",
         "description": {
-          "fr": "Coup de grâce infligeant d’importants dégâts.",
-          "en": "High damage finishing move"
+          "fr": "Coup de grâce dont les dégâts augmentent fortement avec le nombre de points de combo accumulés.",
+          "en": "A finishing move whose damage scales sharply with the number of Combo Points accumulated."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -29807,8 +29807,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_cloakofshadows.png",
         "description": {
-          "fr": "Rend insensible aux effets de contrôle et confère de l’armure anti-sort.",
-          "en": "Become Unstoppable, gain Spell Armor"
+          "fr": "Dissipe tous les effets de dégâts sur la durée, rend brièvement insensible aux effets de contrôle et confère de l'armure anti-sort, sans interrompre le camouflage.",
+          "en": "Cleanses all damage over time effects, briefly grants Unstoppable and Spell Armor, without breaking Stealth."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -29821,8 +29821,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_smokebomb.png",
         "description": {
-          "fr": "Crée un nuage de fumée opaque.",
-          "en": "Create an obscuring cloud of smoke"
+          "fr": "Crée un nuage de fumée : à l'intérieur, Valeera ne peut pas être révélée, gagne de l'armure, traverse les unités et peut attaquer ou lancer ses capacités sans se dévoiler.",
+          "en": "Creates a cloud of smoke: inside it, Valeera cannot be revealed, gains Armor, passes through units and can attack or cast without revealing herself."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -29836,8 +29836,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_ambush.png",
         "description": {
-          "fr": "Inflige des dégâts à l'ennemi et réduit son armure.",
-          "en": "Damages an enemy and reduces their Armor."
+          "fr": "Inflige d'importants dégâts à l'ennemi et réduit son armure.",
+          "en": "Deals heavy damage to an enemy and reduces their Armor."
         },
         "demoYoutubeId": ""
       },
@@ -29970,8 +29970,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_vanish.png",
         "description": {
-          "fr": "Les capacités utilisées en mode camouflé améliorent la régénération d’énergie.",
-          "en": "Stealth Abilities increase Energy regeneration"
+          "fr": "Se téléporter avec Embuscade, Coup bas ou Garrot accélère fortement la régénération d'énergie de Valeera.",
+          "en": "Teleporting with Ambush, Cheap Shot or Garrote greatly increases Valeera's Energy regeneration."
         },
         "demoYoutubeId": null
       },
@@ -29998,8 +29998,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_cripplingpoison.png",
         "description": {
-          "fr": "Les dégâts de capacité ralentissent les ennemis.",
-          "en": "Spell Damage Slows enemies"
+          "fr": "À l'activation, les prochaines capacités offensives de Valeera ralentissent leurs cibles. N'interrompt pas le camouflage.",
+          "en": "On activation, Valeera's next offensive Abilities Slow their targets. Does not break Stealth."
         },
         "demoYoutubeId": null
       },
@@ -30054,8 +30054,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_woundpoison.png",
         "description": {
-          "fr": "Les dégâts de capacité réduisent les soins reçus par les ennemis.",
-          "en": "Spell Damage reduces enemy healing received"
+          "fr": "À l'activation, les prochaines capacités offensives de Valeera réduisent les soins dont bénéficient leurs cibles. N'interrompt pas le camouflage.",
+          "en": "On activation, Valeera's next offensive Abilities reduce the healing her targets receive. Does not break Stealth."
         },
         "demoYoutubeId": null
       },
@@ -30096,8 +30096,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_eviscerate.png",
         "description": {
-          "fr": "Éviscération augmente la vitesse d’attaque.",
-          "en": "Eviscerate grants Attack Speed"
+          "fr": "Éviscérer avec trois points de combo augmente la vitesse d'attaque de Valeera. Effet passif : ses attaques de base lui rendent de l'énergie.",
+          "en": "Eviscerating with three Combo Points grants Valeera Attack Speed. Passive: her Basic Attacks restore Energy."
         },
         "demoYoutubeId": null
       },
@@ -30110,8 +30110,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_smokebomb.png",
         "description": {
-          "fr": "Crée un nuage de fumée opaque.",
-          "en": "Create an obscuring cloud of smoke"
+          "fr": "Crée un nuage de fumée : à l'intérieur, Valeera ne peut pas être révélée, gagne de l'armure, traverse les unités et peut attaquer ou lancer ses capacités sans se dévoiler.",
+          "en": "Creates a cloud of smoke: inside it, Valeera cannot be revealed, gains Armor, passes through units and can attack or cast without revealing herself."
         },
         "demoYoutubeId": null
       },
@@ -30124,8 +30124,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_cloakofshadows.png",
         "description": {
-          "fr": "Rend insensible aux effets de contrôle et confère de l’armure anti-sort.",
-          "en": "Become Unstoppable, gain Spell Armor"
+          "fr": "Dissipe tous les effets de dégâts sur la durée, rend brièvement insensible aux effets de contrôle et confère de l'armure anti-sort, sans interrompre le camouflage.",
+          "en": "Cleanses all damage over time effects, briefly grants Unstoppable and Spell Armor, without breaking Stealth."
         },
         "demoYoutubeId": null
       },
@@ -30194,8 +30194,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_ambush.png",
         "description": {
-          "fr": "Embuscade inflige davantage de dégâts aux héros isolés.",
-          "en": "Ambush deals more damage to isolated Heroes"
+          "fr": "Embuscade inflige davantage de dégâts et réduit encore l'armure si aucun autre héros adverse ne se trouve près de la cible.",
+          "en": "Ambush deals more damage and further reduces Armor if no other enemy Hero is near the target."
         },
         "demoYoutubeId": null
       },
@@ -30250,8 +30250,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_garrote.png",
         "description": {
-          "fr": "Augmente les dégâts de Garrot sur la durée.",
-          "en": "Increase Garrote damage over time"
+          "fr": "Augmente les dégâts que Garrot inflige sur la durée ; les attaques de base en réinitialisent la durée.",
+          "en": "Increases Garrote's damage over time; Basic Attacks refresh its duration."
         },
         "demoYoutubeId": null
       },
@@ -32399,8 +32399,8 @@ const HEROES = [
       "en": "Stealth assassin who bursts hard and vanishes instantly."
     },
     "gameplay": {
-      "fr": "Zeratul se déplace en invisibilité permanente, place sa Pointe de singularité pour étourdir sa cible, puis s'échappe avec Clignotement.",
-      "en": "Zeratul roams permanently cloaked, lands Singularity Spike to stun his target, then escapes with Blink."
+      "fr": "Zeratul se déplace en invisibilité permanente, place sa Pointe de singularité pour ralentir sa cible, puis s'échappe avec Transfert.",
+      "en": "Zeratul roams permanently cloaked, lands Singularity Spike to slow his target, then escapes with Blink."
     },
     "spells": [
       {
@@ -32411,8 +32411,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_cloak.png",
         "description": {
-          "fr": "Camoufle quand aucune attaque n'est effectuée, aucun dégât subi et aucune capacité utilisée.",
-          "en": "Become Stealthed while not attacking, using Abilities, or taking damage"
+          "fr": "Camoufle Zeratul après quelques secondes hors du combat. Attaquer, utiliser une capacité ou subir des dégâts le dissipe. S'il reste immobile, il devient totalement invisible.",
+          "en": "Stealths Zeratul a few seconds after leaving combat. Attacking, using an Ability or taking damage breaks it. If he stands still, he becomes fully invisible."
         },
         "demoYoutubeId": ""
       },
@@ -32437,8 +32437,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_singularityspike.png",
         "description": {
-          "fr": "Ralentit le premier ennemi touché et lui inflige des dégâts.",
-          "en": "Slow and damage the first enemy hit"
+          "fr": "Tire une pointe qui se colle au premier ennemi touché, explose peu après et le ralentit.",
+          "en": "Fires a spike that attaches to the first enemy hit, detonating shortly after and Slowing them."
         },
         "demoYoutubeId": ""
       },
@@ -32456,6 +32456,19 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
+        "key": "&",
+        "name": {
+          "fr": "Lame vorpale",
+          "en": "Vorpal Blade"
+        },
+        "icon": "assets/heroes/base_spells/zeratul/images/talents/storm_ui_icon_zeratul_vorpalblade.png",
+        "description": {
+          "fr": "Peu après une attaque de base, permet à Zeratul de se téléporter auprès de sa cible et la révèle.",
+          "en": "Shortly after a Basic Attack, lets Zeratul teleport to his target and reveals them."
+        },
+        "demoYoutubeId": ""
+      },
+      {
         "key": "R1",
         "name": {
           "fr": "Puissance des Nérazims",
@@ -32463,8 +32476,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_mightofnerazim.png",
         "description": {
-          "fr": "Quête : renforce durablement Zeratul à mesure qu’il accumule des éliminations.",
-          "en": "Quest: permanently strengthens Zeratul as he accumulates Takedowns."
+          "fr": "Permet de relancer une version affaiblie de la dernière capacité de base utilisée. Effet passif : la première attaque de base portée juste après une capacité inflige des dégâts supplémentaires.",
+          "en": "Allows recasting a weakened version of the last Basic Ability used. Passive: the first Basic Attack right after casting an Ability deals bonus damage."
         },
         "demoYoutubeId": ""
       },
@@ -32476,20 +32489,20 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_voidprison.png",
         "description": {
-          "fr": "Plonge les cibles en stase dans une zone.",
-          "en": "Time Stop targets in an area"
+          "fr": "Fige le temps dans une zone, plongeant en stase alliés comme ennemis. Zeratul n'est pas affecté.",
+          "en": "Freezes time in an area, placing both allies and enemies in Stasis. Zeratul is unaffected."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Garde toujours une charge de Clignotement pour t'échapper.",
+        "fr": "Garde toujours une charge de Transfert pour t'échapper.",
         "en": "Always keep a Blink charge to escape."
       },
       {
-        "fr": "Pointe de singularité étourdit après un délai : anticipe le déplacement.",
-        "en": "Singularity Spike stuns after a delay: anticipate movement."
+        "fr": "Pointe de singularité explose après un délai et ralentit : anticipe le déplacement.",
+        "en": "Singularity Spike detonates after a delay and Slows: anticipate movement."
       },
       {
         "fr": "Prison du Vide peut annuler tout un engagement ennemi.",
@@ -32582,8 +32595,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_blink.png",
         "description": {
-          "fr": "Quête : collecter des globes de régénération renforce Transfert.",
-          "en": "Quest: Gather Regen Globes to empower Blink"
+          "fr": "Quête : récolter des globes de régénération réduit le coût en mana de Transfert. Récompense : les attaques de base de Zeratul en réduisent aussi le temps de recharge.",
+          "en": "Quest: gathering Regeneration Globes reduces Blink's Mana cost. Reward: Zeratul's Basic Attacks also reduce its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -32624,8 +32637,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_abilitytalent_damage.png",
         "description": {
-          "fr": "Augmente les dégâts des attaques de base de Zeratul.",
-          "en": "Increases Zeratul's Basic Attack damage."
+          "fr": "Infliger des dégâts à des héros adverses augmente tous les dégâts que Zeratul inflige, effet cumulable jusqu'à un plafond.",
+          "en": "Damaging enemy Heroes increases all damage Zeratul deals, stacking up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -32638,8 +32651,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/talents/storm_ui_icon_zeratul_shadowassault.png",
         "description": {
-          "fr": "Augmente la vitesse d’attaque.",
-          "en": "Activate to gain Attack Speed"
+          "fr": "Augmente en permanence la vitesse d'attaque de Zeratul, et peut être activé pour la renforcer nettement pendant quelques secondes.",
+          "en": "Permanently increases Zeratul's Attack Speed, and can be activated to raise it sharply for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -32666,8 +32679,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_singularityspike.png",
         "description": {
-          "fr": "Téléporte vers la cible de Pointe de singularité.",
-          "en": "Teleport to Singularity Spike target"
+          "fr": "Retarde l'explosion de Pointe de singularité, mais permet de réactiver la capacité pour se téléporter auprès de la cible et gagner de la vitesse de déplacement.",
+          "en": "Delays Singularity Spike's detonation, but allows reactivating the Ability to teleport to the target and gain Movement Speed."
         },
         "demoYoutubeId": null
       },
@@ -32680,8 +32693,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/talents/storm_ui_icon_zeratul_vorpalblade.png",
         "description": {
-          "fr": "Lame vorpale obtient une charge supplémentaire.",
-          "en": "Vorpal Blade gains a charge"
+          "fr": "Lame vorpale obtient une charge supplémentaire. Se téléporter auprès d'un ennemi avec Lame vorpale ou passer en camouflage renforce la prochaine attaque de base.",
+          "en": "Vorpal Blade gains an extra charge. Teleporting to an enemy with Vorpal Blade or entering Stealth empowers the next Basic Attack."
         },
         "demoYoutubeId": null
       },
@@ -32694,8 +32707,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_mightofnerazim.png",
         "description": {
-          "fr": "Quête : renforce durablement Zeratul à mesure qu’il accumule des éliminations.",
-          "en": "Quest: permanently strengthens Zeratul as he accumulates Takedowns."
+          "fr": "Permet de relancer une version affaiblie de la dernière capacité de base utilisée. Effet passif : la première attaque de base portée juste après une capacité inflige des dégâts supplémentaires.",
+          "en": "Allows recasting a weakened version of the last Basic Ability used. Passive: the first Basic Attack right after casting an Ability deals bonus damage."
         },
         "demoYoutubeId": null
       },
@@ -32708,8 +32721,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_voidprison.png",
         "description": {
-          "fr": "Plonge les cibles en stase dans une zone.",
-          "en": "Time Stop targets in an area"
+          "fr": "Fige le temps dans une zone, plongeant en stase alliés comme ennemis. Zeratul n'est pas affecté.",
+          "en": "Freezes time in an area, placing both allies and enemies in Stasis. Zeratul is unaffected."
         },
         "demoYoutubeId": null
       },
@@ -32722,8 +32735,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_cloak.png",
         "description": {
-          "fr": "Camouflage permanent confère un bouclier.",
-          "en": "Gain a shield while under Permanent Cloak"
+          "fr": "Tant que Camouflage permanent est actif, Zeratul accumule progressivement un bouclier.",
+          "en": "While Permanent Cloak is active, Zeratul gradually builds up a Shield."
         },
         "demoYoutubeId": null
       },
@@ -32750,8 +32763,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_spellshield.png",
         "description": {
-          "fr": "Confère régulièrement, mais pour une courte durée, de l’armure anti-sort.",
-          "en": "Periodically gain temporary Spell Armor"
+          "fr": "Confère régulièrement de l'armure anti-sort contre la prochaine capacité adverse et celles qui la suivent de près. Le déclenchement automatique peut être désactivé.",
+          "en": "Periodically grants Spell Armor against the next enemy Ability and those following closely after. The automatic trigger can be turned off."
         },
         "demoYoutubeId": null
       },
@@ -32778,8 +32791,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_cleave.png",
         "description": {
-          "fr": "Tailler est plus puissant quand plusieurs héros sont touchés.",
-          "en": "Cleave empowered against multiple Heroes"
+          "fr": "Toucher plus d'un héros adverse avec Tailler en augmente les dégâts et en réduit le temps de recharge.",
+          "en": "Hitting more than one enemy Hero with Cleave increases its damage and reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -32792,8 +32805,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_singularityspike.png",
         "description": {
-          "fr": "Inflige des dégâts supplémentaires aux cibles affectées par Pointe de singularité.",
-          "en": "Deal bonus damage to marked targets"
+          "fr": "Zeratul inflige davantage de dégâts aux ennemis marqués ou ralentis par Pointe de singularité.",
+          "en": "Zeratul deals more damage to enemies marked or Slowed by Singularity Spike."
         },
         "demoYoutubeId": null
       },
@@ -32806,8 +32819,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_mightofnerazim.png",
         "description": {
-          "fr": "Puissance des Nérazims annule les temps de recharge.",
-          "en": "Might of the Nerazim resets cooldowns"
+          "fr": "Puissance des Nérazims met fin au temps de recharge de toutes les capacités de base.",
+          "en": "Might of the Nerazim resets the cooldown of all Basic Abilities."
         },
         "demoYoutubeId": null
       },
@@ -32820,8 +32833,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_singularityspike.png",
         "description": {
-          "fr": "Les attaques de base réduisent le temps de recharge de Pointe de singularité.",
-          "en": "Basic Attacks reduce Singularity Spike cooldown"
+          "fr": "Pointe de singularité ne coûte plus de mana, et les attaques de base en réduisent le temps de recharge, deux fois plus contre les héros.",
+          "en": "Singularity Spike no longer costs Mana, and Basic Attacks reduce its cooldown, twice as much against Heroes."
         },
         "demoYoutubeId": null
       },
@@ -32834,8 +32847,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/talents/storm_ui_icon_zeratul_vorpalblade.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Lame vorpale et confère un bouclier.",
-          "en": "Reduce Vorpal Blade's cooldown, gain Shields"
+          "fr": "Réduit le temps de recharge de Lame vorpale, qui confère en outre un bouclier à Zeratul.",
+          "en": "Reduces Vorpal Blade's cooldown, which also grants Zeratul a Shield."
         },
         "demoYoutubeId": null
       },
