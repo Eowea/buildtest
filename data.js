@@ -1534,7 +1534,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Métamorphose",
+          "fr": "Métamorphe",
           "en": "Polymorph"
         },
         "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_polymorph.png",
@@ -8095,7 +8095,7 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Souche de criquets",
+          "fr": "Souche nuisible",
           "en": "Locust Strain"
         },
         "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spawnlocust.png",
@@ -8160,7 +8160,7 @@ const HEROES = [
       {
         "key": "W",
         "name": {
-          "fr": "Tunnel profond",
+          "fr": "Tunnel",
           "en": "Deep Tunnel"
         },
         "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_mount.png",
@@ -8671,7 +8671,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Carapace durcie",
+          "fr": "Carapace endurcie",
           "en": "Harden Carapace"
         },
         "icon": "assets/heroes/base_spells/anubarak/images/spells/storm_ui_icon_anubarak_hardencarapace_var1.png",
@@ -8684,7 +8684,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Charge fouisseuse",
+          "fr": "Charge enfouie",
           "en": "Burrow Charge"
         },
         "icon": "assets/heroes/base_spells/anubarak/images/spells/storm_ui_icon_anubarak_burrowcharge.png",
@@ -8933,7 +8933,7 @@ const HEROES = [
       {
         "key": "A",
         "name": {
-          "fr": "Charge de lame",
+          "fr": "Célérité tranchante",
           "en": "Blade Dash"
         },
         "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_powerstrikes.png",
@@ -9195,7 +9195,7 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Faim de Deuillegivre",
+          "fr": "Deuillegivre est affamée",
           "en": "Frostmourne Hungers"
         },
         "icon": "assets/heroes/base_spells/arthas/images/spells/storm_ui_icon_arthas_frostmournehungers_off.png",
@@ -9208,7 +9208,7 @@ const HEROES = [
       {
         "key": "A",
         "name": {
-          "fr": "Trait de mort",
+          "fr": "Voile mortel",
           "en": "Death Coil"
         },
         "icon": "assets/heroes/base_spells/arthas/images/spells/storm_ui_icon_arthas_deathcoil.png",
@@ -9221,7 +9221,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Explosion hurlante",
+          "fr": "Rafale hurlante",
           "en": "Howling Blast"
         },
         "icon": "assets/heroes/base_spells/arthas/images/spells/storm_ui_icon_arthas_howlingblast.png",
@@ -9234,7 +9234,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Tempête glaciale",
+          "fr": "Tempête gelée",
           "en": "Frozen Tempest"
         },
         "icon": "assets/heroes/base_spells/arthas/images/spells/storm_ui_icon_arthas_frosentempest.png",
@@ -9260,7 +9260,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "Invocation de Sindragosa",
+          "fr": "Appel de Sindragosa",
           "en": "Summon Sindragosa"
         },
         "icon": "assets/heroes/base_spells/arthas/images/spells/storm_ui_icon_arthas_summonsindragosa.png",
@@ -9496,7 +9496,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Invocation d'un guerrier démoniaque",
+          "fr": "Guerrier démoniaque",
           "en": "Summon Demon Warrior"
         },
         "icon": "assets/heroes/base_spells/azmodan/images/spells/storm_ui_icon_azmodan_summondemonwarrior.png",
@@ -10295,7 +10295,7 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Report / Breuvage fortifiant",
+          "fr": "Boisson fortifiante",
           "en": "Fortifying Brew"
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_fortifyingbrew.png",
@@ -10321,7 +10321,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Fracas de tonneau",
+          "fr": "Fracasse-tonneau",
           "en": "Keg Smash"
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_kegsmash.png",
@@ -10347,7 +10347,7 @@ const HEROES = [
       {
         "key": "R1",
         "name": {
-          "fr": "Tempête, Terre, Feu",
+          "fr": "Tempête, Terre et Feu",
           "en": "Storm, Earth, Fire"
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_stormearthfire.png",
@@ -10360,7 +10360,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "Tonneau vagabond",
+          "fr": "Tonneau fou",
           "en": "Wandering Keg"
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_wanderingkeg.png",
@@ -11683,7 +11683,7 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Pierre spirituelle noire",
+          "fr": "Pierre d’âme noire",
           "en": "Black Soulstone"
         },
         "icon": "assets/heroes/base_spells/diablo/images/spells/storm_ui_icon_diablo_blacksoulstone_var1.png",
@@ -11709,7 +11709,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Piétinement enflammé",
+          "fr": "Choc infernal",
           "en": "Fire Stomp"
         },
         "icon": "assets/heroes/base_spells/diablo/images/spells/storm_ui_icon_diablo_firestomp.png",
@@ -12246,7 +12246,7 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Rockstar",
+          "fr": "Star du rock",
           "en": "Rockstar"
         },
         "icon": "assets/heroes/base_spells/etc/images/spells/storm_ui_icon_etc_rockstar.png",
@@ -12272,7 +12272,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Riff dévastateur",
+          "fr": "Fondu",
           "en": "Face Melt"
         },
         "icon": "assets/heroes/base_spells/etc/images/spells/storm_ui_icon_etc_facemelt.png",
@@ -12285,7 +12285,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Solo de guitare",
+          "fr": "Solo",
           "en": "Guitar Solo"
         },
         "icon": "assets/heroes/base_spells/etc/images/spells/storm_ui_icon_etc_guitarsolo.png",
@@ -12298,7 +12298,7 @@ const HEROES = [
       {
         "key": "R1",
         "name": {
-          "fr": "Pogo endiablé",
+          "fr": "Pogo",
           "en": "Mosh Pit"
         },
         "icon": "assets/heroes/base_spells/etc/images/spells/storm_ui_icon_etc_moshpit.png",
@@ -12311,7 +12311,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "Plongeon de scène",
+          "fr": "Slam",
           "en": "Stage Dive"
         },
         "icon": "assets/heroes/base_spells/etc/images/spells/storm_ui_icon_etc_stagedive.png",
@@ -12534,7 +12534,7 @@ const HEROES = [
       {
         "key": "A",
         "name": {
-          "fr": "Marteaurang",
+          "fr": "Marteau-boomerang",
           "en": "Hammerang"
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_hammerang.png",
@@ -12573,7 +12573,7 @@ const HEROES = [
       {
         "key": "R1",
         "name": {
-          "fr": "Puissante bourrasque",
+          "fr": "Bourrasque violente",
           "en": "Mighty Gust"
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_mightygust.png",
@@ -13660,7 +13660,7 @@ const HEROES = [
       {
         "key": "A",
         "name": {
-          "fr": "Tourelle Boum-Boum",
+          "fr": "Tourelle Sulfatt",
           "en": "Rock-It! Turret"
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_rockitturret.png",
@@ -13673,7 +13673,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Rayon de la mort",
+          "fr": "Trucidolaser",
           "en": "Deth Lazor"
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_dethlazor.png",
@@ -13686,7 +13686,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Charge d'explodium",
+          "fr": "Charge d’X-plosium",
           "en": "Xplodium Charge"
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_explodiumcharge.png",
@@ -13712,7 +13712,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "Grav-o-bombe 3000",
+          "fr": "Gravitobombe 3000",
           "en": "Grav-O-Bomb 3000"
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_gravobomb.png",
@@ -14236,7 +14236,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Vol des ténèbres",
+          "fr": "Sombre course",
           "en": "Darkflight"
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_darkflight.png",
@@ -15323,7 +15323,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Balayage",
+          "fr": "Voie des lames",
           "en": "Sweeping Strike"
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_sweepingstrike.png",
@@ -15336,7 +15336,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Esquive",
+          "fr": "Dérobade",
           "en": "Evasion"
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_evasion.png",
@@ -15349,7 +15349,7 @@ const HEROES = [
       {
         "key": "R1",
         "name": {
-          "fr": "La Chasse",
+          "fr": "La Traque",
           "en": "The Hunt"
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_thehunt.png",
@@ -15362,7 +15362,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "Métamorphose",
+          "fr": "Métamorphe",
           "en": "Metamorphosis"
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_metamorphosis.png",
@@ -16541,7 +16541,7 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Peau de fer",
+          "fr": "Galvanisation",
           "en": "Iron Skin"
         },
         "icon": "assets/heroes/base_spells/johanna/images/spells/storm_ui_icon_johanna_iron_skin.png",
@@ -16554,7 +16554,7 @@ const HEROES = [
       {
         "key": "A",
         "name": {
-          "fr": "Punition",
+          "fr": "Correction",
           "en": "Punish"
         },
         "icon": "assets/heroes/base_spells/johanna/images/spells/storm_ui_icon_johanna_punish.png",
@@ -16567,7 +16567,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Condamnation",
+          "fr": "Blâme",
           "en": "Condemn"
         },
         "icon": "assets/heroes/base_spells/johanna/images/spells/storm_ui_icon_johanna_condemn.png",
@@ -16580,7 +16580,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Éclat du bouclier",
+          "fr": "Éblouissement",
           "en": "Shield Glare"
         },
         "icon": "assets/heroes/base_spells/johanna/images/spells/storm_ui_icon_johanna_shield_glare.png",
@@ -16593,7 +16593,7 @@ const HEROES = [
       {
         "key": "R1",
         "name": {
-          "fr": "Épée tombante",
+          "fr": "Couperet",
           "en": "Falling Sword"
         },
         "icon": "assets/heroes/base_spells/johanna/images/spells/storm_ui_icon_johanna_falling_sword.png",
@@ -16606,7 +16606,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "Bouclier béni",
+          "fr": "Bouclier divin",
           "en": "Blessed Shield"
         },
         "icon": "assets/heroes/base_spells/johanna/images/spells/storm_ui_icon_johanna_blessed_shield.png",
@@ -17392,7 +17392,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Lames empaleuses",
+          "fr": "Lames perforantes",
           "en": "Impaling Blades"
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_impalingblades.png",
@@ -17405,7 +17405,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Étreinte primordiale",
+          "fr": "Poigne primordiale",
           "en": "Primal Grasp"
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_primalgrasp.png",
@@ -17418,7 +17418,7 @@ const HEROES = [
       {
         "key": "R1",
         "name": {
-          "fr": "Invocation d'ultralisk",
+          "fr": "Ultralisk",
           "en": "Summon Ultralisk"
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_ultralisk.png",
@@ -18421,7 +18421,7 @@ const HEROES = [
       {
         "key": "A",
         "name": {
-          "fr": "Tourbillon !",
+          "fr": "Tourner, c’est gagné !",
           "en": "Spin To Win!"
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_spintowin.png",
@@ -18434,7 +18434,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Saut !",
+          "fr": "Saut groupé !",
           "en": "Jump!"
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_jump.png",
@@ -18447,7 +18447,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Corruption viking",
+          "fr": "Graissage de patte",
           "en": "Viking Bribery"
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_talent_bribe.png",
@@ -18460,7 +18460,7 @@ const HEROES = [
       {
         "key": "R1",
         "name": {
-          "fr": "Raid en drakkar !",
+          "fr": "Tous au drakkar !",
           "en": "Longboat Raid!"
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_longboatraid.png",
@@ -18473,7 +18473,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "On rejoue !",
+          "fr": "Jouer encore !",
           "en": "Play Again!"
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_playagain.png",
@@ -18486,7 +18486,7 @@ const HEROES = [
       {
         "key": "W",
         "name": {
-          "fr": "Allez, allez !",
+          "fr": "Hop, hop, hop !",
           "en": "Go Go Go!"
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_mount.png",
@@ -18709,7 +18709,7 @@ const HEROES = [
       {
         "key": "A",
         "name": {
-          "fr": "Fleur nocive",
+          "fr": "Fleurs nocives",
           "en": "Noxious Blossom"
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_pollencloud.png",
@@ -18722,7 +18722,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Spores paralysantes",
+          "fr": "Spores affaiblissantes",
           "en": "Crippling Spores"
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_fullbloom.png",
@@ -18748,7 +18748,7 @@ const HEROES = [
       {
         "key": "R1",
         "name": {
-          "fr": "Ronce d'épines",
+          "fr": "Couronne d’épines",
           "en": "Thornwood Vine"
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_wildspear.png",
@@ -18774,7 +18774,7 @@ const HEROES = [
       {
         "key": "W",
         "name": {
-          "fr": "Rapidité de dryade",
+          "fr": "Rapidité de la dryade",
           "en": "Dryad's Swiftness"
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_mount.png",
@@ -20712,7 +20712,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "Grand droit",
+          "fr": "Uppercut magistral",
           "en": "Haymaker"
         },
         "icon": "assets/heroes/base_spells/muradin/images/spells/storm_ui_icon_muradin_haymaker.png",
@@ -20922,7 +20922,7 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Pondre un œuf",
+          "fr": "Œuf",
           "en": "Spawn Egg"
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_trait_spawnegg.png",
@@ -20935,7 +20935,7 @@ const HEROES = [
       {
         "key": "A",
         "name": {
-          "fr": "Vase",
+          "fr": "Bourbe",
           "en": "Slime"
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_slime.png",
@@ -20961,7 +20961,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Bulle de sécurité",
+          "fr": "Bulle de sûreté",
           "en": "Safety Bubble"
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_safetybubble.png",
@@ -20987,7 +20987,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "Pieuvre-attaque",
+          "fr": "Prise du poulpe",
           "en": "Octo-Grab"
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_octograb.png",
@@ -21766,7 +21766,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Tir paralysant",
+          "fr": "Tir anesthésiant",
           "en": "Pinning Shot"
         },
         "icon": "assets/heroes/base_spells/nova/images/spells/storm_ui_icon_nova_pinningshot.png",
@@ -21779,7 +21779,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Leurre holographique",
+          "fr": "Hologramme",
           "en": "Holo Decoy"
         },
         "icon": "assets/heroes/base_spells/nova/images/spells/storm_ui_icon_nova_holodecoy.png",
@@ -21792,7 +21792,7 @@ const HEROES = [
       {
         "key": "R1",
         "name": {
-          "fr": "Triple tir",
+          "fr": "Salve",
           "en": "Triple Tap"
         },
         "icon": "assets/heroes/base_spells/nova/images/spells/storm_ui_icon_nova_tripletap.png",
@@ -21805,7 +21805,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "Frappe de précision",
+          "fr": "Frappe chirurgicale",
           "en": "Precision Strike"
         },
         "icon": "assets/heroes/base_spells/nova/images/spells/storm_ui_icon_nova_orbitalstrike.png",
@@ -23387,7 +23387,7 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Poivre !",
+          "fr": "On les assaisonne !",
           "en": "Give 'Em Some Pepper"
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_acquireweakspot.png",
@@ -23400,7 +23400,7 @@ const HEROES = [
       {
         "key": "A",
         "name": {
-          "fr": "Tir perforant",
+          "fr": "Balle perforante",
           "en": "Penetrating Round"
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_penetratinground.png",
@@ -23452,7 +23452,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "Raiders de Raynor",
+          "fr": "Rebelle de Raynor",
           "en": "Raynor's Raider"
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_raynorsraiders.png",
@@ -23662,7 +23662,7 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Misha, concentre-toi !",
+          "fr": "Misha, focalisation !",
           "en": "Misha, Focus!"
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_mishafixate.png",
@@ -23675,7 +23675,7 @@ const HEROES = [
       {
         "key": "A",
         "name": {
-          "fr": "Fonte de l'esprit",
+          "fr": "Piqué",
           "en": "Spirit Swoop"
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_spiritswoop.png",
@@ -23701,7 +23701,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Soin de familier",
+          "fr": "Guérison du familier",
           "en": "Mend Pet"
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_mendpet.png",
@@ -23727,7 +23727,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "Fureur bestiale",
+          "fr": "Courroux bestial",
           "en": "Bestial Wrath"
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_bestialwrath.png",
@@ -24691,7 +24691,7 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Furie",
+          "fr": "Fureur",
           "en": "Fury"
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_fury.png",
@@ -24704,7 +24704,7 @@ const HEROES = [
       {
         "key": "A",
         "name": {
-          "fr": "Lance de l'ancien",
+          "fr": "Lance des anciens",
           "en": "Ancient Spear"
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_ancientspear.png",
@@ -24717,7 +24717,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Frappe sismique",
+          "fr": "Secousse sismique",
           "en": "Seismic Slam"
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_seismicslam.png",
@@ -24730,7 +24730,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Tourbillon",
+          "fr": "Trombe",
           "en": "Whirlwind"
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_whirlwind.png",
@@ -24992,7 +24992,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Coup fracassant",
+          "fr": "Choc",
           "en": "Slam"
         },
         "icon": "assets/heroes/base_spells/stitches/images/spells/storm_ui_icon_stitches_slam.png",
@@ -25005,7 +25005,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Dévorer",
+          "fr": "Mâchouille",
           "en": "Devour"
         },
         "icon": "assets/heroes/base_spells/stitches/images/spells/storm_ui_icon_stitches_devour.png",
@@ -25031,7 +25031,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "Ingurgiter",
+          "fr": "Gavage",
           "en": "Gorge"
         },
         "icon": "assets/heroes/base_spells/stitches/images/spells/storm_ui_icon_stitches_cannibalize.png",
@@ -25254,7 +25254,7 @@ const HEROES = [
       {
         "key": "A",
         "name": {
-          "fr": "Tir flétrissant",
+          "fr": "Tir d’affliction",
           "en": "Withering Fire"
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_witheringfire.png",
@@ -25267,7 +25267,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Dague d'ombre",
+          "fr": "Dague de l'ombre",
           "en": "Shadow Dagger"
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_shadowdagger.png",
@@ -25280,7 +25280,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Vague spectrale",
+          "fr": "Vague de hantise",
           "en": "Haunting Wave"
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_hauntingwave.png",
@@ -25791,7 +25791,7 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Chair fraîche",
+          "fr": "Viande fraîche",
           "en": "Fresh Meat"
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/spells/storm_ui_icon_butcher_freshmeat.png",
@@ -25804,7 +25804,7 @@ const HEROES = [
       {
         "key": "A",
         "name": {
-          "fr": "Tendon coupé",
+          "fr": "Ficelage",
           "en": "Hamstring"
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/spells/storm_ui_icon_butcher_hamstring.png",
@@ -25830,7 +25830,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Ruée impitoyable",
+          "fr": "Charge impitoyable",
           "en": "Ruthless Onslaught"
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/spells/storm_ui_icon_butcher_fullboar.png",
@@ -25843,7 +25843,7 @@ const HEROES = [
       {
         "key": "R1",
         "name": {
-          "fr": "Souffle de fournaise",
+          "fr": "Rôtisserie",
           "en": "Furnace Blast"
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/spells/storm_ui_icon_butcher_furnaceblast.png",
@@ -26079,7 +26079,7 @@ const HEROES = [
       {
         "key": "A",
         "name": {
-          "fr": "Éclair en chaîne",
+          "fr": "Chaîne d'éclairs",
           "en": "Chain Lightning"
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_chainlightning.png",
@@ -26092,7 +26092,7 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Loups spectraux",
+          "fr": "Esprit farouche",
           "en": "Feral Spirit"
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_feralspirit.png",
@@ -26131,7 +26131,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "Tremblement de terre",
+          "fr": "Séisme",
           "en": "Earthquake"
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_earthquake.png",
@@ -27709,7 +27709,7 @@ const HEROES = [
       {
         "key": "A",
         "name": {
-          "fr": "Flèche affamée",
+          "fr": "Flèche vorace",
           "en": "Hungering Arrow"
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_hungeringarrow.png",
@@ -27735,7 +27735,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Saut",
+          "fr": "Acrobatie",
           "en": "Vault"
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_vault.png",
@@ -27748,7 +27748,7 @@ const HEROES = [
       {
         "key": "R1",
         "name": {
-          "fr": "Tir en rafale",
+          "fr": "Rafale",
           "en": "Strafe"
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_strafe.png",
@@ -28259,7 +28259,7 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Relever un squelette",
+          "fr": "Animation de squelette",
           "en": "Raise Skeleton"
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_raiseskeleton.png",
@@ -28324,7 +28324,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "Nova empoisonnée",
+          "fr": "Nova de poison",
           "en": "Poison Nova"
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_poisonnova.png",
@@ -29569,7 +29569,7 @@ const HEROES = [
       {
         "key": "A",
         "name": {
-          "fr": "Fendoir",
+          "fr": "Tailler",
           "en": "Cleave"
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_cleave.png",
@@ -29595,7 +29595,7 @@ const HEROES = [
       {
         "key": "E",
         "name": {
-          "fr": "Clignotement",
+          "fr": "Transfert",
           "en": "Blink"
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_blink.png",
