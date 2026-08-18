@@ -9628,7 +9628,7 @@ const HEROES = [
       "en": "He shapes the whole Battleground without ever joining a fight."
     },
     "gameplay": {
-      "fr": "Abathur ne se bat jamais lui-même : ses nuisibles poussent les lignes pendant qu'il colle un Symbiote sur un allié et joue à travers lui.",
+      "fr": "Abathur ne se bat jamais lui-même : ses nuisibles poussent les lanes pendant qu'il colle un Symbiote sur un allié et joue à travers lui.",
       "en": "Abathur never fights himself: his Locusts push lanes while he attaches a Symbiote to an ally and plays through them."
     },
     "spells": [
@@ -9761,7 +9761,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Reste sur ta ligne arrière : Tunnel te déplace, ta présence physique ne sert à rien.",
+        "fr": "Reste sur ta backline : Tunnel te déplace, ta présence physique ne sert à rien.",
         "en": "Stay in your back line: Tunnel moves you around, your physical presence is worthless."
       },
       {
@@ -10657,11 +10657,11 @@ const HEROES = [
     "role": "Tank",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_anubarak.png",
     "headline": {
-      "fr": "Il attrape la ligne arrière et la met sous terre.",
+      "fr": "Il attrape la backline et la met sous terre.",
       "en": "He grabs the back line and buries it."
     },
     "gameplay": {
-      "fr": "Anub'arak entre en combat avec Charge enfouie pour étourdir la ligne arrière, puis survit grâce à Carapace endurcie et à ses scarabées.",
+      "fr": "Anub'arak entre en combat avec Charge enfouie pour étourdir la backline, puis survit grâce à Carapace endurcie et à ses scarabées.",
       "en": "Anub'arak engages with Burrow Charge to stun the back line, then survives thanks to Harden Carapace and his Beetles."
     },
     "spells": [
@@ -12084,11 +12084,11 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_azmodan.png",
     "headline": {
-      "fr": "Il pousse trois lignes sans jamais y mettre les pieds.",
+      "fr": "Il pousse trois lanes sans jamais y mettre les pieds.",
       "en": "He pushes three lanes without ever setting foot in them."
     },
     "gameplay": {
-      "fr": "Asmodan bombarde de très loin avec Globe d'annihilation, dont les dégâts montent définitivement, et fait avancer des démons qui poussent les lignes à sa place.",
+      "fr": "Asmodan bombarde de très loin avec Globe d'annihilation, dont les dégâts montent définitivement, et fait avancer des démons qui poussent les lanes à sa place.",
       "en": "Azmodan bombards from extreme range with Globe of Annihilation, whose damage grows permanently, and sends demons to push lanes for him."
     },
     "spells": [
@@ -12181,7 +12181,7 @@ const HEROES = [
         "en": "All Shall Burn heavily Slows you: never channel it unprotected."
       },
       {
-        "fr": "Tes démons poussent seuls : envoie-les dans les lignes vides pendant les combats.",
+        "fr": "Tes démons poussent seuls : envoie-les dans les lanes vides pendant les combats.",
         "en": "Your demons push on their own: send them to empty lanes during fights."
       }
     ],
@@ -15575,7 +15575,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Traqueur de la jungle te rend présent partout : soutiens deux lignes à la fois.",
+        "fr": "Traqueur de la jungle te rend présent partout : soutiens deux lanes à la fois.",
         "en": "Brushstalker puts you everywhere: support two lanes at once."
       },
       {
@@ -16432,7 +16432,7 @@ const HEROES = [
       "en": "Destroying her mech is not enough to be rid of her."
     },
     "gameplay": {
-      "fr": "D.Va plonge avec son méca pour perturber la ligne arrière. Quand il explose, elle continue le combat à pied et rappelle un nouveau méca en quelques secondes.",
+      "fr": "D.Va plonge avec son méca pour perturber la backline. Quand il explose, elle continue le combat à pied et rappelle un nouveau méca en quelques secondes.",
       "en": "D.Va dives with her mech to disrupt the back line. When it blows up she keeps fighting on foot and calls down a new mech within seconds."
     },
     "spells": [
@@ -16980,7 +16980,7 @@ const HEROES = [
       "en": "He opens fights and closes them on the enemy."
     },
     "gameplay": {
-      "fr": "E.T.C. glisse dans la mêlée pour étourdir plusieurs cibles, puis enchaîne avec Pogo ou repousse les plongeurs loin de sa ligne arrière.",
+      "fr": "E.T.C. glisse dans la mêlée pour étourdir plusieurs cibles, puis enchaîne avec Pogo ou repousse les plongeurs loin de sa backline.",
       "en": "E.T.C. slides into the fray to stun multiple targets, then follows up with Mosh Pit or peels divers away from his back line."
     },
     "spells": [
@@ -23739,7 +23739,7 @@ const HEROES = [
       "en": "Nothing stops her, and she shields everyone."
     },
     "gameplay": {
-      "fr": "Johanna encaisse énormément grâce à Galvanisation, qui la rend insensible aux effets de contrôle, et protège sa ligne arrière en aveuglant les assassins.",
+      "fr": "Johanna encaisse énormément grâce à Galvanisation, qui la rend insensible aux effets de contrôle, et protège sa backline en aveuglant les assassins.",
       "en": "Johanna soaks enormous damage with Iron Skin, which makes her Unstoppable, and protects her back line by Blinding assassins."
     },
     "spells": [
@@ -26613,7 +26613,7 @@ const HEROES = [
       "en": "Three bodies, three lanes, permanent pressure."
     },
     "gameplay": {
-      "fr": "Les Vikings poussent trois lignes à la fois. Leur force n'est pas le combat mais l'expérience accumulée pendant que l'adversaire cherche à les rattraper.",
+      "fr": "Les Vikings poussent trois lanes à la fois. Leur force n'est pas le combat mais l'expérience accumulée pendant que l'adversaire cherche à les rattraper.",
       "en": "The Vikings push three lanes at once. Their strength is not fighting but the experience they bank while the enemy scrambles to catch them."
     },
     "spells": [
@@ -34543,7 +34543,7 @@ const HEROES = [
         "en": "Penetrating Round knocks back: use it to escape, not for the damage."
       },
       {
-        "fr": "Inspiration relance ton attaque et accélère aussi tes serviteurs en ligne.",
+        "fr": "Inspiration relance ton attaque et accélère aussi tes serviteurs en lane.",
         "en": "Inspire resets your attack and speeds up your Minions in lane too."
       },
       {
@@ -34939,7 +34939,7 @@ const HEROES = [
       "en": "Two bodies to shift instead of one."
     },
     "gameplay": {
-      "fr": "Rexxar dirige Misha, qui charge et encaisse à sa place. Il peut la soigner en permanence, ce qui les rend très difficiles à évincer d'une ligne.",
+      "fr": "Rexxar dirige Misha, qui charge et encaisse à sa place. Il peut la soigner en permanence, ce qui les rend très difficiles à évincer d'une lane.",
       "en": "Rexxar commands Misha, who charges and soaks in his place. He can heal her constantly, making the pair very hard to push off a lane."
     },
     "spells": [
@@ -36476,7 +36476,7 @@ const HEROES = [
         "en": "Ancient Spear lets you reach a target or escape a bad fight."
       },
       {
-        "fr": "Trombe te soigne : utilise-la sur un groupe de serviteurs pour rester en ligne.",
+        "fr": "Trombe te soigne : utilise-la sur un groupe de serviteurs pour rester en lane.",
         "en": "Whirlwind heals you: use it on a Minion wave to stay in lane."
       },
       {
@@ -37342,7 +37342,7 @@ const HEROES = [
       "en": "She disables Structures and pushes on her own."
     },
     "gameplay": {
-      "fr": "Sylvanas neutralise les bâtiments et les serviteurs d'un simple passage, ce qui lui permet de prendre des lignes entières sans aide.",
+      "fr": "Sylvanas neutralise les bâtiments et les serviteurs d'un simple passage, ce qui lui permet de prendre des lanes entières sans aide.",
       "en": "Sylvanas disables Structures and Minions just by passing through, letting her take entire lanes unaided."
     },
     "spells": [
@@ -42271,7 +42271,7 @@ const HEROES = [
       "en": "Every dead Minion becomes one more soldier."
     },
     "gameplay": {
-      "fr": "Xul relève les serviteurs tombés en guerriers squelettes, ce qui lui donne une pression de ligne permanente et un mur de corps en combat.",
+      "fr": "Xul relève les serviteurs tombés en guerriers squelettes, ce qui lui donne une pression de lane permanente et un mur de corps en combat.",
       "en": "Xul raises fallen Minions as Skeletal Warriors, giving him permanent lane pressure and a wall of bodies in a fight."
     },
     "spells": [
