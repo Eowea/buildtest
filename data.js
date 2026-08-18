@@ -94,8 +94,8 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "16 Août 2026",
-      "en": "August 16, 2026"
+      "fr": "19 Août 2026",
+      "en": "August 19, 2026"
     }
   }
 };
@@ -15111,7 +15111,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1232322,Deathwing]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -15125,32 +15125,39 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tm9hcq5er046gy",
+            "primaryId": "tm9hcq5er05vmm",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tm9hcq5er0776a",
-            "alternativeIds": []
+            "primaryId": "tm9hcq5er09gs2",
+            "alternativeIds": [
+              "tm9hcq5er083rn",
+              "tm9hcq5er0776a"
+            ]
           },
           {
             "level": 10,
-            "primaryId": "tm9hcq5er10je1",
+            "primaryId": "tm9hcq5er11vjz",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tm9hcq5er12ad9",
-            "alternativeIds": []
+            "primaryId": "tm9hcq5er14i04",
+            "alternativeIds": [
+              "tm9hcq5er13977"
+            ]
           },
           {
             "level": 16,
-            "primaryId": "tm9hcq5er15omn",
-            "alternativeIds": []
+            "primaryId": "tm9hcq5er16aru",
+            "alternativeIds": [
+              "tm9hcq5er17grf"
+            ]
           },
           {
             "level": 20,
-            "primaryId": "tm9hcq5er182ke",
+            "primaryId": "tm9hcq5er19b8l",
             "alternativeIds": []
           }
         ]
