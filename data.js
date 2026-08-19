@@ -344,16 +344,16 @@ const HEROES = [
     ],
     "talentPool": [
       {
-        "id": "tmrryr6josup2d",
+        "id": "tcxx1zr7514168",
         "level": 1,
         "name": {
-          "fr": "Accro au mana",
-          "en": "Mana Addict"
+          "fr": "Convection",
+          "en": "Convection"
         },
-        "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_manaaddict.png",
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_flamestrike.png",
         "description": {
-          "fr": "Quête : collecter des globes de régénération augmente le maximum de mana. Récompense : peut être activé pour obtenir un bouclier indexé sur le mana total.",
-          "en": "Quest: gathering Regeneration Globes increases maximum Mana. Reward: can be activated for a Shield based on total Mana."
+          "fr": "Quête : toucher avec Choc de flammes augmente les dégâts.",
+          "en": "Quest: Flamestrike hits increase damage"
         },
         "demoYoutubeId": null
       },
@@ -372,16 +372,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tcxx1zr7514168",
+        "id": "tmrryr6josup2d",
         "level": 1,
         "name": {
-          "fr": "Convection",
-          "en": "Convection"
+          "fr": "Accro au mana",
+          "en": "Mana Addict"
         },
-        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_flamestrike.png",
+        "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_manaaddict.png",
         "description": {
-          "fr": "Quête : toucher avec Choc de flammes augmente les dégâts.",
-          "en": "Quest: Flamestrike hits increase damage"
+          "fr": "Quête : collecter des globes de régénération augmente le maximum de mana. Récompense : peut être activé pour obtenir un bouclier indexé sur le mana total.",
+          "en": "Quest: gathering Regeneration Globes increases maximum Mana. Reward: can be activated for a Shield based on total Mana."
         },
         "demoYoutubeId": null
       },
@@ -396,20 +396,6 @@ const HEROES = [
         "description": {
           "fr": "Augmente la portée de Rupture de gravité et rend du mana.",
           "en": "Increases Gravity Lapse range and refunds mana."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jocmbtu",
-        "level": 4,
-        "name": {
-          "fr": "Accro à la mana",
-          "en": "Mana Addict"
-        },
-        "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_manaaddict.png",
-        "description": {
-          "fr": "Indispensable pour la survie tard dans la partie.",
-          "en": "Essential for late-game survival."
         },
         "demoYoutubeId": null
       },
@@ -438,6 +424,20 @@ const HEROES = [
         "description": {
           "fr": "Sphères verdoyantes rend du mana.",
           "en": "Verdant Spheres restores Mana"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jocmbtu",
+        "level": 4,
+        "name": {
+          "fr": "Accro à la mana",
+          "en": "Mana Addict"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_manaaddict.png",
+        "description": {
+          "fr": "Indispensable pour la survie tard dans la partie.",
+          "en": "Essential for late-game survival."
         },
         "demoYoutubeId": null
       },
@@ -540,34 +540,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jouhnqn",
-        "level": 16,
-        "name": {
-          "fr": "Enflammer",
-          "en": "Ignite"
-        },
-        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_livingbomb.png",
-        "description": {
-          "fr": "Choc de flammes applique aussi Bombe vivante au héros le plus au centre.",
-          "en": "Flamestrike also applies Living Bomb to heroes hit."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jo3iuli",
-        "level": 16,
-        "name": {
-          "fr": "Fureur du Roi-Soleil",
-          "en": "Sun King's Fury"
-        },
-        "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_livingbomb_b.png",
-        "description": {
-          "fr": "Augmente considérablement les dégâts de Bombe vivante sur les cibles principales.",
-          "en": "Greatly increases Living Bomb damage on primary targets."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tcxx1zr7519xak",
         "level": 16,
         "name": {
@@ -578,6 +550,20 @@ const HEROES = [
         "description": {
           "fr": "Choc de flammes explose deux fois.",
           "en": "Flamestrike explodes twice"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jouhnqn",
+        "level": 16,
+        "name": {
+          "fr": "Enflammer",
+          "en": "Ignite"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_livingbomb.png",
+        "description": {
+          "fr": "Choc de flammes applique aussi Bombe vivante au héros le plus au centre.",
+          "en": "Flamestrike also applies Living Bomb to heroes hit."
         },
         "demoYoutubeId": null
       },
@@ -596,30 +582,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jobfvo1",
-        "level": 20,
+        "id": "tmrryr6jo3iuli",
+        "level": 16,
         "name": {
-          "fr": "Lance-flamme",
-          "en": "Flamethrower"
+          "fr": "Fureur du Roi-Soleil",
+          "en": "Sun King's Fury"
         },
-        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_flamestrike.png",
+        "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_livingbomb_b.png",
         "description": {
-          "fr": "Allonge la portée de Choc de flammes, dont le temps de recharge est réduit si elle touche plusieurs héros.",
-          "en": "Extends Flamestrike's range, and its cooldown is reduced if it hits several Heroes."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jowrwxu",
-        "level": 20,
-        "name": {
-          "fr": "Présence spirituelle",
-          "en": "Presence of Mind"
-        },
-        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_pyroblast.png",
-        "description": {
-          "fr": "Réduit le temps de recharge de l'Explosion pyrotechnique.",
-          "en": "Reduces Pyroblast cooldown."
+          "fr": "Augmente considérablement les dégâts de Bombe vivante sur les cibles principales.",
+          "en": "Greatly increases Living Bomb damage on primary targets."
         },
         "demoYoutubeId": null
       },
@@ -638,6 +610,20 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6jowrwxu",
+        "level": 20,
+        "name": {
+          "fr": "Présence spirituelle",
+          "en": "Presence of Mind"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_pyroblast.png",
+        "description": {
+          "fr": "Réduit le temps de recharge de l'Explosion pyrotechnique.",
+          "en": "Reduces Pyroblast cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tcxx1zr75222g4",
         "level": 20,
         "name": {
@@ -650,9 +636,24 @@ const HEROES = [
           "en": "Living Bomb's secondary explosions spread it further in turn."
         },
         "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jobfvo1",
+        "level": 20,
+        "name": {
+          "fr": "Lance-flamme",
+          "en": "Flamethrower"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/spells/storm_ui_icon_kaelthas_flamestrike.png",
+        "description": {
+          "fr": "Allonge la portée de Choc de flammes, dont le temps de recharge est réduit si elle touche plusieurs héros.",
+          "en": "Extends Flamestrike's range, and its cooldown is reduced if it hits several Heroes."
+        },
+        "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Kaelthas"
   },
   {
     "id": "anduin",
@@ -1189,7 +1190,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Anduin"
   },
   {
     "id": "rehgar",
@@ -1457,6 +1459,20 @@ const HEROES = [
     ],
     "talentPool": [
       {
+        "id": "tcnz52zaw12ykh",
+        "level": 1,
+        "name": {
+          "fr": "Mande-foudre",
+          "en": "Stormcaller"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_lightningshield.png",
+        "description": {
+          "fr": "Quête : Bouclier de foudre augmente les points de vie et le mana.",
+          "en": "Quest: Lightning Shield increases Health, Mana"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jop5xhv",
         "level": 1,
         "name": {
@@ -1481,20 +1497,6 @@ const HEROES = [
         "description": {
           "fr": "Augmente la vitesse de déplacement de Loup fantôme et confère de l'armure.",
           "en": "Increases Ghost Wolf movement speed and grants armor."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tcnz52zaw12ykh",
-        "level": 1,
-        "name": {
-          "fr": "Mande-foudre",
-          "en": "Stormcaller"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_lightningshield.png",
-        "description": {
-          "fr": "Quête : Bouclier de foudre augmente les points de vie et le mana.",
-          "en": "Quest: Lightning Shield increases Health, Mana"
         },
         "demoYoutubeId": null
       },
@@ -1555,20 +1557,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jow9pm2",
-        "level": 7,
-        "name": {
-          "fr": "Sang et tonnerre",
-          "en": "Blood and Thunder"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_ghostwolf.png",
-        "description": {
-          "fr": "Les attaques faites en Loup fantôme réduisent les temps de recharge des capacités de base et rend du mana.",
-          "en": "Attacks in Ghost Wolf form reduce basic ability cooldowns and restore mana."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tcnz52zaw155hp",
         "level": 7,
         "name": {
@@ -1579,6 +1567,20 @@ const HEROES = [
         "description": {
           "fr": "Renforce Purge",
           "en": "Empower Purge"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jow9pm2",
+        "level": 7,
+        "name": {
+          "fr": "Sang et tonnerre",
+          "en": "Blood and Thunder"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_ghostwolf.png",
+        "description": {
+          "fr": "Les attaques faites en Loup fantôme réduisent les temps de recharge des capacités de base et rend du mana.",
+          "en": "Attacks in Ghost Wolf form reduce basic ability cooldowns and restore mana."
         },
         "demoYoutubeId": null
       },
@@ -1653,6 +1655,20 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tcnz52zaw18dfr",
+        "level": 16,
+        "name": {
+          "fr": "Tempête croissante",
+          "en": "Rising Storm"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_lightningshield.png",
+        "description": {
+          "fr": "Augmente les dégâts et la durée de Bouclier de foudre.",
+          "en": "Increase Lightning Shield damage, duration"
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jofazqq",
         "level": 16,
         "name": {
@@ -1677,20 +1693,6 @@ const HEROES = [
         "description": {
           "fr": "Les attaques sous forme de Loup fantôme infligent des dégâts en %pv et rendent des points de vie",
           "en": "Attacks in Ghost Wolf form deal % health damage and restore health."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tcnz52zaw18dfr",
-        "level": 16,
-        "name": {
-          "fr": "Tempête croissante",
-          "en": "Rising Storm"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_lightningshield.png",
-        "description": {
-          "fr": "Augmente les dégâts et la durée de Bouclier de foudre.",
-          "en": "Increase Lightning Shield damage, duration"
         },
         "demoYoutubeId": null
       },
@@ -1751,7 +1753,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Rehgar"
   },
   {
     "id": "luisaile",
@@ -1962,20 +1965,6 @@ const HEROES = [
     ],
     "talentPool": [
       {
-        "id": "tmrryr6jome9rw",
-        "level": 1,
-        "name": {
-          "fr": "Hyperphase",
-          "en": "Hyper Shift"
-        },
-        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_hypershift.png",
-        "description": {
-          "fr": "Augmente le montant de soins de Déphasage et son temps de recharge est réduit pour chaque serviteur tué.",
-          "en": "Increases Phase Shift healing amount and its cooldown is reduced for each minion killed."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tcauok1ow09ygc",
         "level": 1,
         "name": {
@@ -1990,6 +1979,20 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6jome9rw",
+        "level": 1,
+        "name": {
+          "fr": "Hyperphase",
+          "en": "Hyper Shift"
+        },
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_hypershift.png",
+        "description": {
+          "fr": "Augmente le montant de soins de Déphasage et son temps de recharge est réduit pour chaque serviteur tué.",
+          "en": "Increases Phase Shift healing amount and its cooldown is reduced for each minion killed."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tcauok1ow10fbq",
         "level": 1,
         "name": {
@@ -2000,20 +2003,6 @@ const HEROES = [
         "description": {
           "fr": "Permet de conquérir instantanément un camp de mercenaires à l’activation.",
           "en": "Activate to instantly defeat a Mercenary"
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jor0547",
-        "level": 4,
-        "name": {
-          "fr": "Crachat magique",
-          "en": "Magic Spit"
-        },
-        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_cooldown.png",
-        "description": {
-          "fr": "Augmente la portée d'auto-attaque et ses auto-attaques réduisent le temps de recharge de Brume Apaisante.",
-          "en": "Increases basic attack range and basic attacks reduce Soothing Mist cooldown."
         },
         "demoYoutubeId": null
       },
@@ -2046,16 +2035,30 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joakoqq",
+        "id": "tmrryr6jor0547",
+        "level": 4,
+        "name": {
+          "fr": "Crachat magique",
+          "en": "Magic Spit"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_cooldown.png",
+        "description": {
+          "fr": "Augmente la portée d'auto-attaque et ses auto-attaques réduisent le temps de recharge de Brume Apaisante.",
+          "en": "Increases basic attack range and basic attacks reduce Soothing Mist cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcauok1ow1385v",
         "level": 7,
         "name": {
-          "fr": "Brume opportune",
-          "en": "Critical Mist"
+          "fr": "Fusée éclairante poisseuse",
+          "en": "Sticky Flare"
         },
-        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_soothingmist.png",
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_arcaneflare.png",
         "description": {
-          "fr": "À l'activation de Brume apaisante, la purge est plus efficace.",
-          "en": "Activating Soothing Mist removes disabling effects more effectively."
+          "fr": "Embrasement des Arcanes ralentit les ennemis.",
+          "en": "Arcane Flare Slows enemies"
         },
         "demoYoutubeId": null
       },
@@ -2074,16 +2077,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tcauok1ow1385v",
+        "id": "tmrryr6joakoqq",
         "level": 7,
         "name": {
-          "fr": "Fusée éclairante poisseuse",
-          "en": "Sticky Flare"
+          "fr": "Brume opportune",
+          "en": "Critical Mist"
         },
-        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_arcaneflare.png",
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_soothingmist.png",
         "description": {
-          "fr": "Embrasement des Arcanes ralentit les ennemis.",
-          "en": "Arcane Flare Slows enemies"
+          "fr": "À l'activation de Brume apaisante, la purge est plus efficace.",
+          "en": "Activating Soothing Mist removes disabling effects more effectively."
         },
         "demoYoutubeId": null
       },
@@ -2116,20 +2119,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joepa11",
-        "level": 13,
-        "name": {
-          "fr": "Superlimpinpin",
-          "en": "Pixie Power"
-        },
-        "icon": "assets/heroes/base_spells/brightwing/images/talents/storm_ui_icon_brightwing_pixiedust_b.png",
-        "description": {
-          "fr": "Réduit le temps de recharge de Poudre de perlimpinpin et augmente l'armure anti-sort.",
-          "en": "Reduces Pixie Dust cooldown and increases spell armor."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tcauok1ow1503i",
         "level": 13,
         "name": {
@@ -2158,16 +2147,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joo1r0b",
-        "level": 16,
+        "id": "tmrryr6joepa11",
+        "level": 13,
         "name": {
-          "fr": "Bestiolifier",
-          "en": "Critterize"
+          "fr": "Superlimpinpin",
+          "en": "Pixie Power"
         },
-        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_polymorph.png",
+        "icon": "assets/heroes/base_spells/brightwing/images/talents/storm_ui_icon_brightwing_pixiedust_b.png",
         "description": {
-          "fr": "Métamorphose réduit l'armure.",
-          "en": "Polymorph reduces armor."
+          "fr": "Réduit le temps de recharge de Poudre de perlimpinpin et augmente l'armure anti-sort.",
+          "en": "Reduces Pixie Dust cooldown and increases spell armor."
         },
         "demoYoutubeId": null
       },
@@ -2186,6 +2175,20 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6joo1r0b",
+        "level": 16,
+        "name": {
+          "fr": "Bestiolifier",
+          "en": "Critterize"
+        },
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_polymorph.png",
+        "description": {
+          "fr": "Métamorphose réduit l'armure.",
+          "en": "Polymorph reduces armor."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tcauok1ow1803x",
         "level": 16,
         "name": {
@@ -2196,20 +2199,6 @@ const HEROES = [
         "description": {
           "fr": "Permet d’entrer en stase à l'activation.",
           "en": "Activate to gain Stasis"
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6joubnhr",
-        "level": 20,
-        "name": {
-          "fr": "Dragon express",
-          "en": "Speedy Dragon"
-        },
-        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_hypershift.png",
-        "description": {
-          "fr": "Déphasage se canalise plus rapidement et augmente passivement la vitesse de déplacement.",
-          "en": "Phase Shift channels faster and passively increases movement speed."
         },
         "demoYoutubeId": null
       },
@@ -2242,6 +2231,20 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6joubnhr",
+        "level": 20,
+        "name": {
+          "fr": "Dragon express",
+          "en": "Speedy Dragon"
+        },
+        "icon": "assets/heroes/base_spells/brightwing/images/spells/storm_ui_icon_brightwing_hypershift.png",
+        "description": {
+          "fr": "Déphasage se canalise plus rapidement et augmente passivement la vitesse de déplacement.",
+          "en": "Phase Shift channels faster and passively increases movement speed."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tcauok1ow21ll5",
         "level": 20,
         "name": {
@@ -2256,7 +2259,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Brightwing"
   },
   {
     "id": "deckard",
@@ -2511,20 +2515,6 @@ const HEROES = [
     ],
     "talentPool": [
       {
-        "id": "tmrryr6jo1dr6a",
-        "level": 1,
-        "name": {
-          "fr": "Saphir",
-          "en": "Sapphire"
-        },
-        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_sapphire.png",
-        "description": {
-          "fr": "Augmente le ralentissement du Cube horadrique.",
-          "en": "Increases Horadric Cube slow."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmrryr6jod429a",
         "level": 1,
         "name": {
@@ -2553,30 +2543,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jodjpjn",
-        "level": 4,
+        "id": "tmrryr6jo1dr6a",
+        "level": 1,
         "name": {
-          "fr": "Potion de bouclier",
-          "en": "Shielding Potion"
+          "fr": "Saphir",
+          "en": "Sapphire"
         },
-        "icon": "assets/heroes/base_spells/deckard/images/spells/storm_ui_icon_deckard_healing_potion.png",
+        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_sapphire.png",
         "description": {
-          "fr": "Les potions confèrent un bouclier.",
-          "en": "Potions grant a shield upon healing."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jop0u2u",
-        "level": 4,
-        "name": {
-          "fr": "Rubis",
-          "en": "Ruby"
-        },
-        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_ruby.png",
-        "description": {
-          "fr": "Le proche Cube horadrique génère des petites potions de soin.",
-          "en": "The next Horadric Cube spawns Lesser Healing Potions."
+          "fr": "Augmente le ralentissement du Cube horadrique.",
+          "en": "Increases Horadric Cube slow."
         },
         "demoYoutubeId": null
       },
@@ -2609,16 +2585,30 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jozz1s4",
-        "level": 7,
+        "id": "tmrryr6jop0u2u",
+        "level": 4,
         "name": {
-          "fr": "Cube de Kanai",
-          "en": "Kanai's Cube"
+          "fr": "Rubis",
+          "en": "Ruby"
         },
-        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_kanais_cube.png",
+        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_ruby.png",
         "description": {
-          "fr": "Le Cube horadrique réduit les dégâts infligés par les ennemis.",
-          "en": "Horadric Cube reduces damage dealt by enemies."
+          "fr": "Le proche Cube horadrique génère des petites potions de soin.",
+          "en": "The next Horadric Cube spawns Lesser Healing Potions."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jodjpjn",
+        "level": 4,
+        "name": {
+          "fr": "Potion de bouclier",
+          "en": "Shielding Potion"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/spells/storm_ui_icon_deckard_healing_potion.png",
+        "description": {
+          "fr": "Les potions confèrent un bouclier.",
+          "en": "Potions grant a shield upon healing."
         },
         "demoYoutubeId": null
       },
@@ -2633,6 +2623,20 @@ const HEROES = [
         "description": {
           "fr": "Cube horadrique réduit le temps de recharge de Parchemin de confinement.",
           "en": "Horadric Cube reduces Scroll of Sealing cooldown"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jozz1s4",
+        "level": 7,
+        "name": {
+          "fr": "Cube de Kanai",
+          "en": "Kanai's Cube"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_kanais_cube.png",
+        "description": {
+          "fr": "Le Cube horadrique réduit les dégâts infligés par les ennemis.",
+          "en": "Horadric Cube reduces damage dealt by enemies."
         },
         "demoYoutubeId": null
       },
@@ -2679,20 +2683,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joejko6",
-        "level": 13,
-        "name": {
-          "fr": "Bénédiction antique",
-          "en": "Ancient Blessings"
-        },
-        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_angelic_conduit.png",
-        "description": {
-          "fr": "Renforce les attaques de base de tous les alliés à proximité et les soigne.",
-          "en": "Empowers nearby allies' basic attacks and heals them."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tcfx02x7218lo8",
         "level": 13,
         "name": {
@@ -2721,16 +2711,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jorbr2s",
-        "level": 16,
+        "id": "tmrryr6joejko6",
+        "level": 13,
         "name": {
-          "fr": "Bâton horadrique",
-          "en": "Horadric Staff"
+          "fr": "Bénédiction antique",
+          "en": "Ancient Blessings"
         },
-        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_horadric_staff.png",
+        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_angelic_conduit.png",
         "description": {
-          "fr": "Les attaques de base étourdissent.",
-          "en": "Basic attacks stun."
+          "fr": "Renforce les attaques de base de tous les alliés à proximité et les soigne.",
+          "en": "Empowers nearby allies' basic attacks and heals them."
         },
         "demoYoutubeId": null
       },
@@ -2763,6 +2753,20 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6jorbr2s",
+        "level": 16,
+        "name": {
+          "fr": "Bâton horadrique",
+          "en": "Horadric Staff"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_horadric_staff.png",
+        "description": {
+          "fr": "Les attaques de base étourdissent.",
+          "en": "Basic attacks stun."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jodwv3i",
         "level": 20,
         "name": {
@@ -2773,20 +2777,6 @@ const HEROES = [
         "description": {
           "fr": "Restez un instant et écoutez rend les ennemis Silence et Aveugle au réveil.",
           "en": "Stay Awhile and listen silences and blinds enemies upon waking up."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jo35wyo",
-        "level": 20,
-        "name": {
-          "fr": "Gemmes sans défaut",
-          "en": "Perfect Gems"
-        },
-        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_perfect_gems.png",
-        "description": {
-          "fr": "Réduit le temps de recharge des gemmes et de Cube horadique.",
-          "en": "Reduces the cooldown of Gems and Horadric Cube."
         },
         "demoYoutubeId": null
       },
@@ -2817,9 +2807,24 @@ const HEROES = [
           "en": "Healing Potions recharge after use"
         },
         "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jo35wyo",
+        "level": 20,
+        "name": {
+          "fr": "Gemmes sans défaut",
+          "en": "Perfect Gems"
+        },
+        "icon": "assets/heroes/base_spells/deckard/images/talents/storm_ui_icon_deckard_perfect_gems.png",
+        "description": {
+          "fr": "Réduit le temps de recharge des gemmes et de Cube horadique.",
+          "en": "Reduces the cooldown of Gems and Horadric Cube."
+        },
+        "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Deckard"
   },
   {
     "id": "alexstrasza",
@@ -3421,7 +3426,8 @@ const HEROES = [
         },
         "demoYoutubeId": null
       }
-    ]
+    ],
+    "codeKey": "Alexstrasza"
   },
   {
     "id": "ana",
@@ -3968,7 +3974,8 @@ const HEROES = [
       }
     ],
     "isNew": true,
-    "forms": []
+    "forms": [],
+    "codeKey": "Ana"
   },
   {
     "id": "auriel",
@@ -4225,20 +4232,6 @@ const HEROES = [
     ],
     "talentPool": [
       {
-        "id": "tmrryr6jofg48b",
-        "level": 1,
-        "name": {
-          "fr": "Lumière ardente",
-          "en": "Searing Light"
-        },
-        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_rayofheaven.png",
-        "description": {
-          "fr": "Rayon des Cieux inflige des dégâts aux héros adverses présents dans la zone de soin.",
-          "en": "Ray of Heaven deals damage to enemy Heroes in the healing area."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmrryr6jom09qo",
         "level": 1,
         "name": {
@@ -4267,16 +4260,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jorifo1",
-        "level": 4,
+        "id": "tmrryr6jofg48b",
+        "level": 1,
         "name": {
-          "fr": "Sentence",
-          "en": "Repeated Offense"
+          "fr": "Lumière ardente",
+          "en": "Searing Light"
         },
-        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_restrainingblow_a.png",
+        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_rayofheaven.png",
         "description": {
-          "fr": "Augmente le repoussement d'Entrave. Quête : étourdir des héros augmente les dégats.",
-          "en": "Increases Detainment Strike's knockback distance. Quest: Stunning Heroes increases its damage."
+          "fr": "Rayon des Cieux inflige des dégâts aux héros adverses présents dans la zone de soin.",
+          "en": "Ray of Heaven deals damage to enemy Heroes in the healing area."
         },
         "demoYoutubeId": null
       },
@@ -4309,16 +4302,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jodgthn",
-        "level": 7,
+        "id": "tmrryr6jorifo1",
+        "level": 4,
         "name": {
-          "fr": "Corde sacrée",
-          "en": "Energized Cord"
+          "fr": "Sentence",
+          "en": "Repeated Offense"
         },
-        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_bestowhope_a.png",
+        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_restrainingblow_a.png",
         "description": {
-          "fr": "Augmente l'énergie conférée par les attaques de base d'Auriel aux héros et aux cibles non héroïques. Passif : augmente la portée des attaques de bases",
-          "en": "Increases the Energy gained from Auriel's Basic Attacks against Heroes and non-Heroic targets. Passive: increases Basic Attack range."
+          "fr": "Augmente le repoussement d'Entrave. Quête : étourdir des héros augmente les dégats.",
+          "en": "Increases Detainment Strike's knockback distance. Quest: Stunning Heroes increases its damage."
         },
         "demoYoutubeId": null
       },
@@ -4351,18 +4344,18 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jowt03g",
-        "level": 10,
+        "id": "tmrryr6jodgthn",
+        "level": 7,
         "name": {
-          "fr": "Égide de Cristal",
-          "en": "Crystal Aegis"
+          "fr": "Corde sacrée",
+          "en": "Energized Cord"
         },
-        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_ribboncocoon.png",
+        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_bestowhope_a.png",
         "description": {
-          "fr": "Place un allié en Stase puis inflige des dégâts autour.",
-          "en": "Places an ally in Stasis, then deals damage around them."
+          "fr": "Augmente l'énergie conférée par les attaques de base d'Auriel aux héros et aux cibles non héroïques. Passif : augmente la portée des attaques de bases",
+          "en": "Increases the Energy gained from Auriel's Basic Attacks against Heroes and non-Heroic targets. Passive: increases Basic Attack range."
         },
-        "demoYoutubeId": "assets/heroes/base_spells/auriel/videos/spells/auriel_r1.mp4"
+        "demoYoutubeId": null
       },
       {
         "id": "tcddk4qlq156rs",
@@ -4379,16 +4372,30 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jocysqw",
+        "id": "tmrryr6jowt03g",
+        "level": 10,
+        "name": {
+          "fr": "Égide de Cristal",
+          "en": "Crystal Aegis"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_ribboncocoon.png",
+        "description": {
+          "fr": "Place un allié en Stase puis inflige des dégâts autour.",
+          "en": "Places an ally in Stasis, then deals damage around them."
+        },
+        "demoYoutubeId": "assets/heroes/base_spells/auriel/videos/spells/auriel_r1.mp4"
+      },
+      {
+        "id": "tcddk4qlq16bo1",
         "level": 13,
         "name": {
-          "fr": "Fouet perforant",
-          "en": "Piercing Lash"
+          "fr": "Éclair aveuglant",
+          "en": "Blinding Flash"
         },
-        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_restrainingblow_a.png",
+        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_angelicsweep.png",
         "description": {
-          "fr": "Entrave touche tous les héros adverses possibles, et son temps de recharge est réduit selon le nombre de héros touchés.",
-          "en": "Detainment Strike pierces enemy Heroes, and its cooldown is reduced based on the number of Heroes hit."
+          "fr": "Les ennemis pris dans la zone centrale d'Arc vertueux sont aveuglés.",
+          "en": "Enemies caught in Sacred Sweep's center are Blinded."
         },
         "demoYoutubeId": null
       },
@@ -4407,30 +4414,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tcddk4qlq16bo1",
+        "id": "tmrryr6jocysqw",
         "level": 13,
         "name": {
-          "fr": "Éclair aveuglant",
-          "en": "Blinding Flash"
+          "fr": "Fouet perforant",
+          "en": "Piercing Lash"
         },
-        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_angelicsweep.png",
+        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_restrainingblow_a.png",
         "description": {
-          "fr": "Les ennemis pris dans la zone centrale d'Arc vertueux sont aveuglés.",
-          "en": "Enemies caught in Sacred Sweep's center are Blinded."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jopudm3",
-        "level": 16,
-        "name": {
-          "fr": "Courroux des Cieux",
-          "en": "Wrath of Heaven"
-        },
-        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_bestowhope_a.png",
-        "description": {
-          "fr": "Augmente la puissance de capacité de l'allié affecté par Don d'espoir. Réduit l'armure anti-sort des héros adverses touchés par le centre d'Arc vertueux et par l'étourdissement d'Entrave.",
-          "en": "Increases the Spell Power of the ally affected by Bestow Hope. Reduces Spell Armor on enemy Heroes hit by the center of Sacred Sweep and by Detainment Strike's Stun."
+          "fr": "Entrave touche tous les héros adverses possibles, et son temps de recharge est réduit selon le nombre de héros touchés.",
+          "en": "Detainment Strike pierces enemy Heroes, and its cooldown is reduced based on the number of Heroes hit."
         },
         "demoYoutubeId": null
       },
@@ -4463,16 +4456,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jocv1nn",
-        "level": 20,
+        "id": "tmrryr6jopudm3",
+        "level": 16,
         "name": {
-          "fr": "Résolution d'airain",
-          "en": "Diamond Resolve"
+          "fr": "Courroux des Cieux",
+          "en": "Wrath of Heaven"
         },
-        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_ribboncocoon.png",
+        "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_bestowhope_a.png",
         "description": {
-          "fr": "Égide de Cristal confère de l'armure à la sortie.",
-          "en": "Crystal Aegis grants Armor when it ends."
+          "fr": "Augmente la puissance de capacité de l'allié affecté par Don d'espoir. Réduit l'armure anti-sort des héros adverses touchés par le centre d'Arc vertueux et par l'étourdissement d'Entrave.",
+          "en": "Increases the Spell Power of the ally affected by Bestow Hope. Reduces Spell Armor on enemy Heroes hit by the center of Sacred Sweep and by Detainment Strike's Stun."
         },
         "demoYoutubeId": null
       },
@@ -4487,6 +4480,20 @@ const HEROES = [
         "description": {
           "fr": "Les alliés ressuscités reviennent bien plus rapides, et le temps de recharge de Résurrection s'écoule plus vite tant que l'un d'eux est en vie.",
           "en": "Resurrected allies return much faster, and Resurrect's cooldown recovers faster while one of them is alive."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jocv1nn",
+        "level": 20,
+        "name": {
+          "fr": "Résolution d'airain",
+          "en": "Diamond Resolve"
+        },
+        "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_ribboncocoon.png",
+        "description": {
+          "fr": "Égide de Cristal confère de l'armure à la sortie.",
+          "en": "Crystal Aegis grants Armor when it ends."
         },
         "demoYoutubeId": null
       },
@@ -4519,7 +4526,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Auriel"
   },
   {
     "id": "kharazim",
@@ -5073,7 +5081,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Kharazim"
   },
   {
     "id": "lili",
@@ -5670,7 +5679,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "LiLi"
   },
   {
     "id": "ltmorales",
@@ -6208,7 +6218,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "LtMorales"
   },
   {
     "id": "malfurion",
@@ -6464,34 +6475,6 @@ const HEROES = [
     ],
     "talentPool": [
       {
-        "id": "tmrryr6jo1ctvl",
-        "level": 1,
-        "name": {
-          "fr": "Rêves d'émeraude",
-          "en": "Emerald Dreams"
-        },
-        "icon": "assets/heroes/base_spells/malfurion/images/talents/storm_ui_icon_malfurion_entanglingroots_a.png",
-        "description": {
-          "fr": "À la fin de Sarments, les cibles immobilisées sont endormis.",
-          "en": "When Entangling Roots expires, rooted targets are put to Sleep."
-        },
-        "demoYoutubeId": "assets/heroes/base_spells/malfurion/videos/talents/malfurion_lvl1_e.mp4"
-      },
-      {
-        "id": "tmrryr6joly4w2",
-        "level": 1,
-        "name": {
-          "fr": "Totem Colossal",
-          "en": "Colossal Totem"
-        },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_earthbindtotem.png",
-        "description": {
-          "fr": "Augmente les points de vie, le rayon et la durée du totem. Permet de le repositionner une nouvelle fois.",
-          "en": "Increases health, radius, and duration of the totem. Can be repositioned once."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tc5kvu3ov15kes",
         "level": 1,
         "name": {
@@ -6520,6 +6503,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6jo1ctvl",
+        "level": 1,
+        "name": {
+          "fr": "Rêves d'émeraude",
+          "en": "Emerald Dreams"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/talents/storm_ui_icon_malfurion_entanglingroots_a.png",
+        "description": {
+          "fr": "À la fin de Sarments, les cibles immobilisées sont endormis.",
+          "en": "When Entangling Roots expires, rooted targets are put to Sleep."
+        },
+        "demoYoutubeId": "assets/heroes/base_spells/malfurion/videos/talents/malfurion_lvl1_e.mp4"
+      },
+      {
+        "id": "tmrryr6joly4w2",
+        "level": 1,
+        "name": {
+          "fr": "Totem Colossal",
+          "en": "Colossal Totem"
+        },
+        "icon": "https://psionic-storm.com/media/img/talents/rehgar_earthbindtotem.png",
+        "description": {
+          "fr": "Augmente les points de vie, le rayon et la durée du totem. Permet de le repositionner une nouvelle fois.",
+          "en": "Increases health, radius, and duration of the totem. Can be repositioned once."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jore7pp",
         "level": 4,
         "name": {
@@ -6530,20 +6541,6 @@ const HEROES = [
         "description": {
           "fr": "Rétablissement s'applique aussi désormais à Malfurion.",
           "en": "Regrowth now also applies to Malfurion."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6johb0pd",
-        "level": 4,
-        "name": {
-          "fr": "Viveterre",
-          "en": "Earthliving Enchant"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_chainheal.png",
-        "description": {
-          "fr": "Renforce Salve de guerison pour les héros dont les points de vie sont bas.",
-          "en": "Empowers Chain Heal for heroes at low health."
         },
         "demoYoutubeId": null
       },
@@ -6576,30 +6573,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joavs7q",
-        "level": 7,
+        "id": "tmrryr6johb0pd",
+        "level": 4,
         "name": {
-          "fr": "Soins naturels",
-          "en": "Nature's Cure"
+          "fr": "Viveterre",
+          "en": "Earthliving Enchant"
         },
-        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_regrowth.png",
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_chainheal.png",
         "description": {
-          "fr": "Supprime les effets incapacitants affectant les alliés à l'activation.",
-          "en": "Removes disabling effects from allies upon activation."
-        },
-        "demoYoutubeId": "assets/heroes/base_spells/malfurion/videos/talents/malfurion_lvl7_purge.mp4"
-      },
-      {
-        "id": "tmrryr6joxw1hy",
-        "level": 7,
-        "name": {
-          "fr": "Totem lié à la terre",
-          "en": "Grounded Totem"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_earthbindtotem.png",
-        "description": {
-          "fr": "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.",
-          "en": "Reduces attack and spell power of enemies in range."
+          "fr": "Renforce Salve de guerison pour les héros dont les points de vie sont bas.",
+          "en": "Empowers Chain Heal for heroes at low health."
         },
         "demoYoutubeId": null
       },
@@ -6632,6 +6615,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6joavs7q",
+        "level": 7,
+        "name": {
+          "fr": "Soins naturels",
+          "en": "Nature's Cure"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_regrowth.png",
+        "description": {
+          "fr": "Supprime les effets incapacitants affectant les alliés à l'activation.",
+          "en": "Removes disabling effects from allies upon activation."
+        },
+        "demoYoutubeId": "assets/heroes/base_spells/malfurion/videos/talents/malfurion_lvl7_purge.mp4"
+      },
+      {
+        "id": "tmrryr6joxw1hy",
+        "level": 7,
+        "name": {
+          "fr": "Totem lié à la terre",
+          "en": "Grounded Totem"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_earthbindtotem.png",
+        "description": {
+          "fr": "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.",
+          "en": "Reduces attack and spell power of enemies in range."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jok08jz",
         "level": 10,
         "name": {
@@ -6644,20 +6655,6 @@ const HEROES = [
           "en": "Continually restores health to nearby allied Heroes, and grants Armor to allies affected by Regrowth."
         },
         "demoYoutubeId": "assets/heroes/base_spells/malfurion/videos/spells/malfurion_r1.mp4"
-      },
-      {
-        "id": "tmrryr6jou7rf3",
-        "level": 10,
-        "name": {
-          "fr": "Guérison ancestrale",
-          "en": "Ancestral Healing"
-        },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_ancestralhealing.png",
-        "description": {
-          "fr": "Gros soin monocible, utilisable sur soi.",
-          "en": "Massive single-target heal, usable on self."
-        },
-        "demoYoutubeId": null
       },
       {
         "id": "tc5kvu3ov21jlf",
@@ -6674,6 +6671,20 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6jou7rf3",
+        "level": 10,
+        "name": {
+          "fr": "Guérison ancestrale",
+          "en": "Ancestral Healing"
+        },
+        "icon": "https://psionic-storm.com/media/img/talents/rehgar_ancestralhealing.png",
+        "description": {
+          "fr": "Gros soin monocible, utilisable sur soi.",
+          "en": "Massive single-target heal, usable on self."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jom7lz6",
         "level": 13,
         "name": {
@@ -6684,20 +6695,6 @@ const HEROES = [
         "description": {
           "fr": "Les Rétablissements augmentent la vitesse de déplacement de Malfurion.",
           "en": "Active Regrowths increase Malfurion's Movement Speed."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jobvr7p",
-        "level": 13,
-        "name": {
-          "fr": "Raz-de-marée",
-          "en": "Tidal Waves"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_chainheal.png",
-        "description": {
-          "fr": "Réduit le temps de recharge de Salve de guérison et son coût en mana.",
-          "en": "Reduces Chain Heal cooldown and mana cost."
         },
         "demoYoutubeId": null
       },
@@ -6730,30 +6727,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jogsl5g",
-        "level": 16,
+        "id": "tmrryr6jobvr7p",
+        "level": 13,
         "name": {
-          "fr": "Harmonie lunaire",
-          "en": "Moonlit Harmony"
+          "fr": "Raz-de-marée",
+          "en": "Tidal Waves"
         },
-        "icon": "assets/heroes/base_spells/malfurion/images/talents/storm_ui_icon_malfurion_wildgrowth_a.png",
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_chainheal.png",
         "description": {
-          "fr": "Éclat lunaire procure plus de soins, et ce montant augmente selon le nombre de Rétablissements actifs.",
-          "en": "Moonfire provides more healing, and this amount increases based on the number of active Regrowths."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jot3iju",
-        "level": 16,
-        "name": {
-          "fr": "Totem d’emprise de la terre",
-          "en": "Earthgrasp Totem"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_earthbindtotem.png",
-        "description": {
-          "fr": "Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.",
-          "en": "When first spawned, the totem deals AoE damage and heavily slows."
+          "fr": "Réduit le temps de recharge de Salve de guérison et son coût en mana.",
+          "en": "Reduces Chain Heal cooldown and mana cost."
         },
         "demoYoutubeId": null
       },
@@ -6786,6 +6769,34 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6jogsl5g",
+        "level": 16,
+        "name": {
+          "fr": "Harmonie lunaire",
+          "en": "Moonlit Harmony"
+        },
+        "icon": "assets/heroes/base_spells/malfurion/images/talents/storm_ui_icon_malfurion_wildgrowth_a.png",
+        "description": {
+          "fr": "Éclat lunaire procure plus de soins, et ce montant augmente selon le nombre de Rétablissements actifs.",
+          "en": "Moonfire provides more healing, and this amount increases based on the number of active Regrowths."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jot3iju",
+        "level": 16,
+        "name": {
+          "fr": "Totem d’emprise de la terre",
+          "en": "Earthgrasp Totem"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_earthbindtotem.png",
+        "description": {
+          "fr": "Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.",
+          "en": "When first spawned, the totem deals AoE damage and heavily slows."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jolpvlj",
         "level": 20,
         "name": {
@@ -6796,20 +6807,6 @@ const HEROES = [
         "description": {
           "fr": "Éclat lunaire réduit le temps de recharge de Tranquilité. Augmente les soins de Tranquilité de base, et ce montant augmente selon le nombre de Rétablissements actifs.",
           "en": "Moonfire reduces the cooldown of Tranquility. Increases Tranquility's baseline healing, and this amount increases based on the number of active Regrowths."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jof5cds",
-        "level": 20,
-        "name": {
-          "fr": "Bénédiction du long-voyant",
-          "en": "Farseer's Blessing"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_ancestralhealing.png",
-        "description": {
-          "fr": "Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.",
-          "en": "A second Ancestral Healing triggers and heals in an AoE."
         },
         "demoYoutubeId": null
       },
@@ -6854,9 +6851,24 @@ const HEROES = [
           "en": "Successive Moonfires are more powerful"
         },
         "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jof5cds",
+        "level": 20,
+        "name": {
+          "fr": "Bénédiction du long-voyant",
+          "en": "Farseer's Blessing"
+        },
+        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_ancestralhealing.png",
+        "description": {
+          "fr": "Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.",
+          "en": "A second Ancestral Healing triggers and heals in an AoE."
+        },
+        "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Malfurion"
   },
   {
     "id": "stukov",
@@ -7081,34 +7093,6 @@ const HEROES = [
     ],
     "talentPool": [
       {
-        "id": "tmrryr6jo198ci",
-        "level": 1,
-        "name": {
-          "fr": "Ballistospores réactives",
-          "en": "Reactive Ballistospores"
-        },
-        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_bio-killswitch.png",
-        "description": {
-          "fr": "Actif : Propage Agent infectieux autour de Stukov à ses ennemis et annule le temps de recharge d'Éruption éruptive. Passif : Quand les points de vie de Stukov sont bas, le temps de recharge d'Éruption éruptive est plus rapide.",
-          "en": "Active: Spreads Weighted Pustule to nearby enemies and resets Bio-Kill Switch's cooldown. Passive: When Stukov's Health is low, Bio-Kill Switch recharges faster."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jotcxbw",
-        "level": 1,
-        "name": {
-          "fr": "Éclatement",
-          "en": "Fetid Touch"
-        },
-        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_abilitytalent_damage.png",
-        "description": {
-          "fr": "Améliore W.",
-          "en": "Improves W."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tc8msjba5116fc",
         "level": 1,
         "name": {
@@ -7137,16 +7121,30 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joxl4ad",
-        "level": 4,
+        "id": "tmrryr6jo198ci",
+        "level": 1,
         "name": {
-          "fr": "Régénération virale",
-          "en": "Vigorous Reuptake"
+          "fr": "Ballistospores réactives",
+          "en": "Reactive Ballistospores"
         },
         "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_bio-killswitch.png",
         "description": {
-          "fr": "Augmente les points de vie rendus par Éruption virale si un certain nombre d'alliés sont sous Virus régénérateur.",
-          "en": "Increases the healing provided by Bio-Kill Switch if a certain number of allies are affected by Healing Pathogen."
+          "fr": "Actif : Propage Agent infectieux autour de Stukov à ses ennemis et annule le temps de recharge d'Éruption éruptive. Passif : Quand les points de vie de Stukov sont bas, le temps de recharge d'Éruption éruptive est plus rapide.",
+          "en": "Active: Spreads Weighted Pustule to nearby enemies and resets Bio-Kill Switch's cooldown. Passive: When Stukov's Health is low, Bio-Kill Switch recharges faster."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jotcxbw",
+        "level": 1,
+        "name": {
+          "fr": "Éclatement",
+          "en": "Fetid Touch"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_abilitytalent_damage.png",
+        "description": {
+          "fr": "Améliore W.",
+          "en": "Improves W."
         },
         "demoYoutubeId": null
       },
@@ -7179,16 +7177,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo7l2de",
-        "level": 7,
+        "id": "tmrryr6joxl4ad",
+        "level": 4,
         "name": {
-          "fr": "Contamination de masse",
-          "en": "Growing Infestation"
+          "fr": "Régénération virale",
+          "en": "Vigorous Reuptake"
         },
-        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_lurkingarm.png",
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_bio-killswitch.png",
         "description": {
-          "fr": "Augmente la zone d'effet de Menace larvée sur la durée, mais sa durée devient limité.",
-          "en": "Increases the area of effect of Lurking Arm over time, but its duration becomes limited."
+          "fr": "Augmente les points de vie rendus par Éruption virale si un certain nombre d'alliés sont sous Virus régénérateur.",
+          "en": "Increases the healing provided by Bio-Kill Switch if a certain number of allies are affected by Healing Pathogen."
         },
         "demoYoutubeId": null
       },
@@ -7207,6 +7205,20 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6jo7l2de",
+        "level": 7,
+        "name": {
+          "fr": "Contamination de masse",
+          "en": "Growing Infestation"
+        },
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_lurkingarm.png",
+        "description": {
+          "fr": "Augmente la zone d'effet de Menace larvée sur la durée, mais sa durée devient limité.",
+          "en": "Increases the area of effect of Lurking Arm over time, but its duration becomes limited."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tc8msjba516m1u",
         "level": 7,
         "name": {
@@ -7219,20 +7231,6 @@ const HEROES = [
           "en": "Detonate single Weighted Pustule to reduce cooldowns"
         },
         "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jo7i88o",
-        "level": 10,
-        "name": {
-          "fr": "Poussée éruptive",
-          "en": "Massive Shove"
-        },
-        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_massiveshove.png",
-        "description": {
-          "fr": "Allonge le bras de Stukov : le héros touché est repoussé jusqu'à percuter un obstacle, ce qui l'étourdit et lui inflige des dégâts.",
-          "en": "Extends Stukov's arm: the Hero hit is pushed back until they strike an obstacle, Stunning and damaging them."
-        },
-        "demoYoutubeId": "assets/heroes/base_spells/stukov/videos/spells/stukov_r1.mp4"
       },
       {
         "id": "tmrryr6jo6tk4z",
@@ -7249,18 +7247,18 @@ const HEROES = [
         "demoYoutubeId": "assets/heroes/base_spells/stukov/videos/spells/stukov_r2.mp4"
       },
       {
-        "id": "tmrryr6jo10dez",
-        "level": 13,
+        "id": "tmrryr6jo7i88o",
+        "level": 10,
         "name": {
-          "fr": "Réaction infectieuse",
-          "en": "Virulent Reaction"
+          "fr": "Poussée éruptive",
+          "en": "Massive Shove"
         },
-        "icon": "assets/heroes/base_spells/stukov/images/talents/storm_ui_icon_stukov_lurkingarm_a.png",
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_massiveshove.png",
         "description": {
-          "fr": "Exploser les Agents infectieux sur les ennemis dans Menace larvée les immobilise.",
-          "en": "Detonating Weighted Pustules on enemies inside Lurking Arm Roots them."
+          "fr": "Allonge le bras de Stukov : le héros touché est repoussé jusqu'à percuter un obstacle, ce qui l'étourdit et lui inflige des dégâts.",
+          "en": "Extends Stukov's arm: the Hero hit is pushed back until they strike an obstacle, Stunning and damaging them."
         },
-        "demoYoutubeId": null
+        "demoYoutubeId": "assets/heroes/base_spells/stukov/videos/spells/stukov_r1.mp4"
       },
       {
         "id": "tc8msjba518snb",
@@ -7273,6 +7271,20 @@ const HEROES = [
         "description": {
           "fr": "Le coût en mana de Menace larvée peut être récupéré.",
           "en": "Lurking Arm cost can be refunded"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jo10dez",
+        "level": 13,
+        "name": {
+          "fr": "Réaction infectieuse",
+          "en": "Virulent Reaction"
+        },
+        "icon": "assets/heroes/base_spells/stukov/images/talents/storm_ui_icon_stukov_lurkingarm_a.png",
+        "description": {
+          "fr": "Exploser les Agents infectieux sur les ennemis dans Menace larvée les immobilise.",
+          "en": "Detonating Weighted Pustules on enemies inside Lurking Arm Roots them."
         },
         "demoYoutubeId": null
       },
@@ -7333,34 +7345,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo02dpa",
-        "level": 20,
-        "name": {
-          "fr": "Force de propulsion",
-          "en": "Push Comes To Shove"
-        },
-        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_massiveshove.png",
-        "description": {
-          "fr": "Poussée éruptive ralentit lorsque la cible percute un obstacle et peut voir son temps de recharge réduit.",
-          "en": "Massive Shove slows the target when they hit terrain, and can have its cooldown reduced."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6joxwsxq",
-        "level": 20,
-        "name": {
-          "fr": "Chaos maîtrisé",
-          "en": "Controlled Chaos"
-        },
-        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_flailingswipe.png",
-        "description": {
-          "fr": "Frappes chaotiques touche une seule fois mais possède plusieurs charges.",
-          "en": "Flailing Swipe hits only once but has multiple charges."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tc8msjba522irf",
         "level": 20,
         "name": {
@@ -7371,6 +7355,20 @@ const HEROES = [
         "description": {
           "fr": "Frappes chaotiques touche une seule fois mais dispose de plusieurs charges.",
           "en": "Flailing Swipe only hits once, gains multiple charges"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jo02dpa",
+        "level": 20,
+        "name": {
+          "fr": "Force de propulsion",
+          "en": "Push Comes To Shove"
+        },
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_massiveshove.png",
+        "description": {
+          "fr": "Poussée éruptive ralentit lorsque la cible percute un obstacle et peut voir son temps de recharge réduit.",
+          "en": "Massive Shove slows the target when they hit terrain, and can have its cooldown reduced."
         },
         "demoYoutubeId": null
       },
@@ -7401,9 +7399,24 @@ const HEROES = [
           "en": "Bio Kill-Switch detonates Lurking Arm"
         },
         "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6joxwsxq",
+        "level": 20,
+        "name": {
+          "fr": "Chaos maîtrisé",
+          "en": "Controlled Chaos"
+        },
+        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_flailingswipe.png",
+        "description": {
+          "fr": "Frappes chaotiques touche une seule fois mais possède plusieurs charges.",
+          "en": "Flailing Swipe hits only once but has multiple charges."
+        },
+        "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Stukov"
   },
   {
     "id": "tyrande",
@@ -7628,20 +7641,6 @@ const HEROES = [
     ],
     "talentPool": [
       {
-        "id": "tmrryr6jo5wcgu",
-        "level": 1,
-        "name": {
-          "fr": "Flèches lunaires",
-          "en": "Moonlit Arrows"
-        },
-        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_elunesgrace.png",
-        "description": {
-          "fr": "Les attaques de base réduisent davantage le temps de recharge du Lumière d'Élune.",
-          "en": "Basic Attacks further reduce Light of Elune's cooldown."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmrryr6joux1d1",
         "level": 1,
         "name": {
@@ -7656,6 +7655,20 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6jo5wcgu",
+        "level": 1,
+        "name": {
+          "fr": "Flèches lunaires",
+          "en": "Moonlit Arrows"
+        },
+        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_elunesgrace.png",
+        "description": {
+          "fr": "Les attaques de base réduisent davantage le temps de recharge du Lumière d'Élune.",
+          "en": "Basic Attacks further reduce Light of Elune's cooldown."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tc901a3oc09k6e",
         "level": 1,
         "name": {
@@ -7666,20 +7679,6 @@ const HEROES = [
         "description": {
           "fr": "Augmente les dégâts des attaques et réinitialise Marque du chasseur.",
           "en": "Gain Attack Damage, reset Hunter's Mark"
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6joa0l8n",
-        "level": 4,
-        "name": {
-          "fr": "Élue d'Élune",
-          "en": "Elune's Chosen"
-        },
-        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_heal.png",
-        "description": {
-          "fr": "Marque un héros allié : les attaques de base de Tyrande le soignent d'une part des dégâts qu'elles infligent.",
-          "en": "Marks an allied Hero: Tyrande's Basic Attacks heal them for a share of the damage they deal."
         },
         "demoYoutubeId": null
       },
@@ -7712,16 +7711,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo0ea2i",
-        "level": 7,
+        "id": "tmrryr6joa0l8n",
+        "level": 4,
         "name": {
-          "fr": "Fureur de la chasseresse",
-          "en": "Huntress' Fury"
+          "fr": "Élue d'Élune",
+          "en": "Elune's Chosen"
         },
-        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_huntersmark.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_heal.png",
         "description": {
-          "fr": "Les attaques de base de Tyrande sur une cible sous Marque du chasseur rebondissent sur les héros adverses proches. Passif : Augmente la durée et la portée de Marque du chasseur.",
-          "en": "Tyrande's Basic Attacks against targets with Hunter's Mark bounce to nearby enemy Heroes. Passive: increases Hunter's Mark duration and cast range."
+          "fr": "Marque un héros allié : les attaques de base de Tyrande le soignent d'une part des dégâts qu'elles infligent.",
+          "en": "Marks an allied Hero: Tyrande's Basic Attacks heal them for a share of the damage they deal."
         },
         "demoYoutubeId": null
       },
@@ -7754,16 +7753,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo11r25",
-        "level": 10,
+        "id": "tmrryr6jo0ea2i",
+        "level": 7,
         "name": {
-          "fr": "Météores",
-          "en": "Starfall"
+          "fr": "Fureur de la chasseresse",
+          "en": "Huntress' Fury"
         },
-        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_starfall.png",
+        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_huntersmark.png",
         "description": {
-          "fr": "Zone de dégâts qui ralentit.",
-          "en": "Creates a damaging area that Slows enemies."
+          "fr": "Les attaques de base de Tyrande sur une cible sous Marque du chasseur rebondissent sur les héros adverses proches. Passif : Augmente la durée et la portée de Marque du chasseur.",
+          "en": "Tyrande's Basic Attacks against targets with Hunter's Mark bounce to nearby enemy Heroes. Passive: increases Hunter's Mark duration and cast range."
         },
         "demoYoutubeId": null
       },
@@ -7782,16 +7781,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jokobuh",
-        "level": 13,
+        "id": "tmrryr6jo11r25",
+        "level": 10,
         "name": {
-          "fr": "Marque du forestier",
-          "en": "Ranger's Mark"
+          "fr": "Météores",
+          "en": "Starfall"
         },
-        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_huntersmark.png",
+        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_starfall.png",
         "description": {
-          "fr": "Les attaques de base réduisent le temps de recharge de Marque du chasseur. Les attaques de base portées à une cible marquée réduisent le temps de recharge d'Éclat d'Élune.",
-          "en": "Basic Attacks reduce Hunter's Mark's cooldown. Basic Attacks against marked targets reduce Lunar Flare's cooldown."
+          "fr": "Zone de dégâts qui ralentit.",
+          "en": "Creates a damaging area that Slows enemies."
         },
         "demoYoutubeId": null
       },
@@ -7820,6 +7819,20 @@ const HEROES = [
         "description": {
           "fr": "Sentinelle ralentit sa cible et réduit les dégâts qu’elle inflige.",
           "en": "Sentinel Slows and reduces damage dealt"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jokobuh",
+        "level": 13,
+        "name": {
+          "fr": "Marque du forestier",
+          "en": "Ranger's Mark"
+        },
+        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_huntersmark.png",
+        "description": {
+          "fr": "Les attaques de base réduisent le temps de recharge de Marque du chasseur. Les attaques de base portées à une cible marquée réduisent le temps de recharge d'Éclat d'Élune.",
+          "en": "Basic Attacks reduce Hunter's Mark's cooldown. Basic Attacks against marked targets reduce Lunar Flare's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -7866,20 +7879,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6joj6pwf",
-        "level": 20,
-        "name": {
-          "fr": "Courroux céleste",
-          "en": "Celestial Wrath"
-        },
-        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_starfall.png",
-        "description": {
-          "fr": "Météores applique Marque du chasseur et ralentit davantage.",
-          "en": "Starfall applies Hunter's Mark and increases its Slow."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tc901a3oc196p4",
         "level": 20,
         "name": {
@@ -7890,6 +7889,20 @@ const HEROES = [
         "description": {
           "fr": "Éclipse d’Élune révèle tous les ennemis et ses soins sont renforcés.",
           "en": "Shadowstalk reveals enemies, heals more"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6joj6pwf",
+        "level": 20,
+        "name": {
+          "fr": "Courroux céleste",
+          "en": "Celestial Wrath"
+        },
+        "icon": "assets/heroes/base_spells/tyrande/images/spells/storm_ui_icon_tyrande_starfall.png",
+        "description": {
+          "fr": "Météores applique Marque du chasseur et ralentit davantage.",
+          "en": "Starfall applies Hunter's Mark and increases its Slow."
         },
         "demoYoutubeId": null
       },
@@ -7922,7 +7935,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Tyrande"
   },
   {
     "id": "uther",
@@ -8497,7 +8511,8 @@ const HEROES = [
           "en": "Ghost Form"
         }
       }
-    ]
+    ],
+    "codeKey": "Uther"
   },
   {
     "id": "whitemane",
@@ -8749,20 +8764,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo7l6vs",
-        "level": 1,
-        "name": {
-          "fr": "Martyre",
-          "en": "Martyrdom"
-        },
-        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_abilitytalent_damage.png",
-        "description": {
-          "fr": "Améliore Q.",
-          "en": "Improves Q."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tcom8pm1h098rw",
         "level": 1,
         "name": {
@@ -8791,16 +8792,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jo3sgqb",
-        "level": 4,
+        "id": "tmrryr6jo7l6vs",
+        "level": 1,
         "name": {
           "fr": "Martyre",
           "en": "Martyrdom"
         },
-        "icon": "assets/heroes/base_spells/whitemane/images/talents/storm_ui_icon_whitemane_desperation_alt_1.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_abilitytalent_damage.png",
         "description": {
-          "fr": "Les soins de Supplique sont augmentés. Chaque Zèle augmente davantage le soin de Supplique.",
-          "en": "Desperate Plea heals for more. Each active Zeal increases its healing."
+          "fr": "Améliore Q.",
+          "en": "Improves Q."
         },
         "demoYoutubeId": null
       },
@@ -8819,6 +8820,20 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6jo3sgqb",
+        "level": 4,
+        "name": {
+          "fr": "Martyre",
+          "en": "Martyrdom"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/talents/storm_ui_icon_whitemane_desperation_alt_1.png",
+        "description": {
+          "fr": "Les soins de Supplique sont augmentés. Chaque Zèle augmente davantage le soin de Supplique.",
+          "en": "Desperate Plea heals for more. Each active Zeal increases its healing."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tcom8pm1h12ygu",
         "level": 4,
         "name": {
@@ -8829,20 +8844,6 @@ const HEROES = [
         "description": {
           "fr": "Zèle augmente la vitesse de déplacement.",
           "en": "Zeal grants Movement Speed"
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6josvjkq",
-        "level": 7,
-        "name": {
-          "fr": "Intercession",
-          "en": "Intercession"
-        },
-        "icon": "assets/heroes/base_spells/whitemane/images/talents/storm_ui_icon_whitemane_intercession.png",
-        "description": {
-          "fr": "Rend un allié Insensible.",
-          "en": "Grant an ally Unstoppable."
         },
         "demoYoutubeId": null
       },
@@ -8871,6 +8872,20 @@ const HEROES = [
         "description": {
           "fr": "Flagellation renforce les attaques de base.",
           "en": "Searing Lash empowers Basic Attacks"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6josvjkq",
+        "level": 7,
+        "name": {
+          "fr": "Intercession",
+          "en": "Intercession"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/talents/storm_ui_icon_whitemane_intercession.png",
+        "description": {
+          "fr": "Rend un allié Insensible.",
+          "en": "Grant an ally Unstoppable."
         },
         "demoYoutubeId": null
       },
@@ -8945,20 +8960,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jonkn4s",
-        "level": 16,
-        "name": {
-          "fr": "Pénitence collective",
-          "en": "Shared Punishment"
-        },
-        "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_inquisition.png",
-        "description": {
-          "fr": "Inquisition se propage à un ennemi proche de la cible, puis réduit leurs armures.",
-          "en": "Inquisition spreads to a nearby enemy and reduces their Armor."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tcom8pm1h186tc",
         "level": 16,
         "name": {
@@ -8969,6 +8970,20 @@ const HEROES = [
         "description": {
           "fr": "Désespoir rend des points de vie aux alliés affectés par Zèle.",
           "en": "Desperation heals allies with Zeal"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jonkn4s",
+        "level": 16,
+        "name": {
+          "fr": "Pénitence collective",
+          "en": "Shared Punishment"
+        },
+        "icon": "assets/heroes/base_spells/whitemane/images/spells/storm_ui_icon_whitemane_inquisition.png",
+        "description": {
+          "fr": "Inquisition se propage à un ennemi proche de la cible, puis réduit leurs armures.",
+          "en": "Inquisition spreads to a nearby enemy and reduces their Armor."
         },
         "demoYoutubeId": null
       },
@@ -9043,7 +9058,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Whitemane"
   },
   {
     "id": "lucio",
@@ -9318,20 +9334,6 @@ const HEROES = [
     "isNew": false,
     "talentPool": [
       {
-        "id": "tmrryr6jofzn8j",
-        "level": 1,
-        "name": {
-          "fr": "Accelerando",
-          "en": "Accelerando"
-        },
-        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_wallride.png",
-        "description": {
-          "fr": "La vitesse de déplacement sous l'effet de Wall Ride augmente sur la durée.",
-          "en": "Movement speed while under the effect of Wall Ride increases over time."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tcy5uwyu6134w0",
         "level": 1,
         "name": {
@@ -9342,6 +9344,20 @@ const HEROES = [
         "description": {
           "fr": "Quête : augmenter le rayon de Crossfade et le maximum de mana.",
           "en": "Quest: Increase Crossfade radius, max Mana"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmrryr6jofzn8j",
+        "level": 1,
+        "name": {
+          "fr": "Accelerando",
+          "en": "Accelerando"
+        },
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_wallride.png",
+        "description": {
+          "fr": "La vitesse de déplacement sous l'effet de Wall Ride augmente sur la durée.",
+          "en": "Movement speed while under the effect of Wall Ride increases over time."
         },
         "demoYoutubeId": null
       },
@@ -9360,16 +9376,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jow6vxf",
+        "id": "tcy5uwyu615pc0",
         "level": 4,
         "name": {
-          "fr": "Double tempo",
-          "en": "Supersonic"
+          "fr": "Subwoofer",
+          "en": "Subwoofer"
         },
-        "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_accelerando.png",
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundwave.png",
         "description": {
-          "fr": "Tant que l'effet de Wall ride est actif, le temps de recharge de Saute-Muraille est réduit.",
-          "en": "As long as the Wall Ride effect is active, the cooldown for Push Off is reduced."
+          "fr": "Quête : renforce Onde sonore.",
+          "en": "Quest: Empower Soundwave"
         },
         "demoYoutubeId": null
       },
@@ -9388,16 +9404,30 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tcy5uwyu615pc0",
+        "id": "tmrryr6jow6vxf",
         "level": 4,
         "name": {
-          "fr": "Subwoofer",
-          "en": "Subwoofer"
+          "fr": "Double tempo",
+          "en": "Supersonic"
+        },
+        "icon": "assets/heroes/base_spells/lucio/images/talents/storm_ui_icon_lucio_accelerando.png",
+        "description": {
+          "fr": "Tant que l'effet de Wall ride est actif, le temps de recharge de Saute-Muraille est réduit.",
+          "en": "As long as the Wall Ride effect is active, the cooldown for Push Off is reduced."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcy5uwyu616hz1",
+        "level": 7,
+        "name": {
+          "fr": "Ondes positives",
+          "en": "Good Vibrations"
         },
         "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundwave.png",
         "description": {
-          "fr": "Quête : renforce Onde sonore.",
-          "en": "Quest: Empower Soundwave"
+          "fr": "Onde sonore confère un bouclier.",
+          "en": "Soundwave grants Shield"
         },
         "demoYoutubeId": null
       },
@@ -9430,16 +9460,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tcy5uwyu616hz1",
-        "level": 7,
+        "id": "tmrryr6jox2br4",
+        "level": 10,
         "name": {
-          "fr": "Ondes positives",
-          "en": "Good Vibrations"
+          "fr": "Mur de son",
+          "en": "Sound Barrier"
         },
-        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundwave.png",
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundbarrier.png",
         "description": {
-          "fr": "Onde sonore confère un bouclier.",
-          "en": "Soundwave grants Shield"
+          "fr": "Après une courte canalisation, applique un bouclier à Lúcio et ses alliés qui se réduit sur le temps.",
+          "en": "After a brief channeling period, grants Lúcio and his allies a shield that gradually diminishes over time."
         },
         "demoYoutubeId": null
       },
@@ -9458,16 +9488,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jox2br4",
-        "level": 10,
+        "id": "tcy5uwyu6196xg",
+        "level": 13,
         "name": {
-          "fr": "Mur de son",
-          "en": "Sound Barrier"
+          "fr": "Fan club",
+          "en": "All Together"
         },
-        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundbarrier.png",
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_crossfade_all.png",
         "description": {
-          "fr": "Après une courte canalisation, applique un bouclier à Lúcio et ses alliés qui se réduit sur le temps.",
-          "en": "After a brief channeling period, grants Lúcio and his allies a shield that gradually diminishes over time."
+          "fr": "Les alliés proches augmentent la vitesse de déplacement de Lúcio.",
+          "en": "Gain Move Speed from nearby allies"
         },
         "demoYoutubeId": null
       },
@@ -9486,20 +9516,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tcy5uwyu6196xg",
-        "level": 13,
-        "name": {
-          "fr": "Fan club",
-          "en": "All Together"
-        },
-        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_crossfade_all.png",
-        "description": {
-          "fr": "Les alliés proches augmentent la vitesse de déplacement de Lúcio.",
-          "en": "Gain Move Speed from nearby allies"
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tcy5uwyu620iay",
         "level": 13,
         "name": {
@@ -9510,6 +9526,20 @@ const HEROES = [
         "description": {
           "fr": "Wall Ride augmente l’armure et la vitesse de déplacement.",
           "en": "Gain Armor, Move Speed during Wall Ride"
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tcy5uwyu621veh",
+        "level": 16,
+        "name": {
+          "fr": "Rejuvenescência",
+          "en": "Rejuvenescência"
+        },
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_ampitup.png",
+        "description": {
+          "fr": "Beat de soins rend un pourcentage de points de vie.",
+          "en": "Healing Boost heals percent Health"
         },
         "demoYoutubeId": null
       },
@@ -9542,16 +9572,16 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
-        "id": "tcy5uwyu621veh",
-        "level": 16,
+        "id": "tcy5uwyu622w8r",
+        "level": 20,
         "name": {
-          "fr": "Rejuvenescência",
-          "en": "Rejuvenescência"
+          "fr": "Bossa Nova",
+          "en": "Bossa Nova"
         },
-        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_ampitup.png",
+        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundbarrier.png",
         "description": {
-          "fr": "Beat de soins rend un pourcentage de points de vie.",
-          "en": "Healing Boost heals percent Health"
+          "fr": "Réduit le temps de recharge de Mur de son, mais aussi sa durée.",
+          "en": "Reduce Sound Barrier's cooldown, duration"
         },
         "demoYoutubeId": null
       },
@@ -9584,20 +9614,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tcy5uwyu622w8r",
-        "level": 20,
-        "name": {
-          "fr": "Bossa Nova",
-          "en": "Bossa Nova"
-        },
-        "icon": "assets/heroes/base_spells/lucio/images/spells/storm_ui_icon_lucio_soundbarrier.png",
-        "description": {
-          "fr": "Réduit le temps de recharge de Mur de son, mais aussi sa durée.",
-          "en": "Reduce Sound Barrier's cooldown, duration"
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tcy5uwyu623ou8",
         "level": 20,
         "name": {
@@ -9612,7 +9628,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Lucio"
   },
   {
     "id": "abathur",
@@ -10174,7 +10191,8 @@ const HEROES = [
           "en": "Symbiote"
         }
       }
-    ]
+    ],
+    "codeKey": "Abathur"
   },
   {
     "id": "alarak",
@@ -10303,7 +10321,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Alarak]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -10645,7 +10663,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Alarak"
   },
   {
     "id": "anubarak",
@@ -10774,7 +10793,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Anubarak]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -11116,7 +11135,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Anubarak"
   },
   {
     "id": "artanis",
@@ -11245,7 +11265,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Artanis]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -11601,7 +11621,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Artanis"
   },
   {
     "id": "arthas",
@@ -11730,7 +11751,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Arthas]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -12072,7 +12093,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Arthas"
   },
   {
     "id": "azmodan",
@@ -12201,7 +12223,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Azmodan]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -12543,7 +12565,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Azmodan"
   },
   {
     "id": "blaze",
@@ -12672,7 +12695,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Blaze]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -13014,7 +13037,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Blaze"
   },
   {
     "id": "cassia",
@@ -13143,7 +13167,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Cassia]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -13485,7 +13509,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Cassia"
   },
   {
     "id": "chen",
@@ -13614,7 +13639,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Chen]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -13970,7 +13995,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Chen"
   },
   {
     "id": "chogall",
@@ -14099,7 +14125,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Chogall]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -14441,7 +14467,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Chogall"
   },
   {
     "id": "chromie",
@@ -14570,7 +14597,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Chromie]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -14912,7 +14939,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Chromie"
   },
   {
     "id": "deathwing",
@@ -15468,7 +15496,8 @@ const HEROES = [
           "en": "Dragonflight"
         }
       }
-    ]
+    ],
+    "codeKey": "Deathwing"
   },
   {
     "id": "dehaka",
@@ -15610,7 +15639,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Dehaka]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -15952,7 +15981,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Dehaka"
   },
   {
     "id": "diablo",
@@ -16081,7 +16111,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Diablo]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -16423,7 +16453,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Diablo"
   },
   {
     "id": "dva",
@@ -16614,7 +16645,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,DVa]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -16971,7 +17002,8 @@ const HEROES = [
           "en": "Pilot Mode"
         }
       }
-    ]
+    ],
+    "codeKey": "DVa"
   },
   {
     "id": "etc",
@@ -17100,7 +17132,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,ETC]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -17456,7 +17488,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "ETC"
   },
   {
     "id": "falstad",
@@ -17598,7 +17631,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Falstad]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -17940,7 +17973,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Falstad"
   },
   {
     "id": "fenix",
@@ -18069,7 +18103,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Fenix]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -18425,7 +18459,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Fenix"
   },
   {
     "id": "gall",
@@ -18567,7 +18602,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Gall]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -18909,7 +18944,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Gall"
   },
   {
     "id": "garrosh",
@@ -19051,7 +19087,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Garrosh]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -19393,7 +19429,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Garrosh"
   },
   {
     "id": "gazlowe",
@@ -19535,7 +19572,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Gazlowe]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -19877,7 +19914,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Gazlowe"
   },
   {
     "id": "genji",
@@ -20006,7 +20044,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Genji]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -20348,7 +20386,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Genji"
   },
   {
     "id": "greymane",
@@ -20520,7 +20559,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Greymane]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -20877,7 +20916,8 @@ const HEROES = [
           "en": "Worgen Form"
         }
       }
-    ]
+    ],
+    "codeKey": "Greymane"
   },
   {
     "id": "guldan",
@@ -21006,7 +21046,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Guldan]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -21348,7 +21388,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Guldan"
   },
   {
     "id": "hanzo",
@@ -21477,7 +21518,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Hanzo]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -21819,7 +21860,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Hanzo"
   },
   {
     "id": "hogger",
@@ -21948,7 +21990,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Hogger]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -22290,7 +22332,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Hogger"
   },
   {
     "id": "illidan",
@@ -22419,7 +22462,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Illidan]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -22761,7 +22804,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Illidan"
   },
   {
     "id": "imperius",
@@ -22890,7 +22934,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T3211221,Imperius]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -23246,7 +23290,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Imperius"
   },
   {
     "id": "jaina",
@@ -23388,7 +23433,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1211231,Jaina]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -23730,7 +23775,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Jaina"
   },
   {
     "id": "johanna",
@@ -23859,7 +23905,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Johanna]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -24201,7 +24247,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Johanna"
   },
   {
     "id": "junkrat",
@@ -24330,7 +24377,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Junkrat]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -24686,7 +24733,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Junkrat"
   },
   {
     "id": "kelthuzad",
@@ -24828,7 +24876,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,KelThuzad]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -25170,7 +25218,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "KelThuzad"
   },
   {
     "id": "kerrigan",
@@ -25299,7 +25348,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Kerrigan]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -25641,7 +25690,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Kerrigan"
   },
   {
     "id": "leoric",
@@ -25770,7 +25820,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Leoric]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -26112,7 +26162,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Leoric"
   },
   {
     "id": "liming",
@@ -26604,7 +26655,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "isNew": true
+    "isNew": true,
+    "codeKey": "LiMing"
   },
   {
     "id": "lostvikings",
@@ -26767,7 +26819,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,LostVikings]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -27166,7 +27218,8 @@ const HEROES = [
           "en": "Longboat"
         }
       }
-    ]
+    ],
+    "codeKey": "LostVikings"
   },
   {
     "id": "lunara",
@@ -27308,7 +27361,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Lunara]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -27692,7 +27745,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Lunara"
   },
   {
     "id": "maiev",
@@ -27821,7 +27875,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Maiev]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -28149,7 +28203,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Maiev"
   },
   {
     "id": "malganis",
@@ -28278,7 +28333,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,MalGanis]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -28620,7 +28675,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "MalGanis"
   },
   {
     "id": "malthael",
@@ -28749,7 +28805,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Malthael]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -29105,7 +29161,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Malthael"
   },
   {
     "id": "medivh",
@@ -29234,7 +29291,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Medivh]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -29590,7 +29647,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Medivh"
   },
   {
     "id": "mei",
@@ -29719,7 +29777,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Mei]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -30061,7 +30119,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Mei"
   },
   {
     "id": "mephisto",
@@ -30190,7 +30249,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Mephisto]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -30532,7 +30591,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Mephisto"
   },
   {
     "id": "muradin",
@@ -30661,7 +30721,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Muradin]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -31003,7 +31063,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Muradin"
   },
   {
     "id": "murky",
@@ -31132,7 +31193,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Murky]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -31474,7 +31535,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Murky"
   },
   {
     "id": "nazeebo",
@@ -32017,7 +32079,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "isNew": true
+    "isNew": true,
+    "codeKey": "Nazeebo"
   },
   {
     "id": "nova",
@@ -32146,7 +32209,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Nova]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -32488,7 +32551,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Nova"
   },
   {
     "id": "orphea",
@@ -32617,7 +32681,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Orphea]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -32959,7 +33023,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Orphea"
   },
   {
     "id": "probius",
@@ -33101,7 +33166,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Probius]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -33443,7 +33508,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Probius"
   },
   {
     "id": "qhira",
@@ -33572,7 +33638,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Qhira]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -33914,7 +33980,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Qhira"
   },
   {
     "id": "ragnaros",
@@ -34088,7 +34155,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T2232223,Ragnaros]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -34445,7 +34512,8 @@ const HEROES = [
           "en": "Molten Core"
         }
       }
-    ]
+    ],
+    "codeKey": "Ragnaros"
   },
   {
     "id": "raynor",
@@ -34574,7 +34642,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Raynor]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -34930,7 +34998,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Raynor"
   },
   {
     "id": "rexxar",
@@ -35059,7 +35128,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Rexxar]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -35415,7 +35484,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Rexxar"
   },
   {
     "id": "samuro",
@@ -35544,7 +35614,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Samuro]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -35886,7 +35956,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Samuro"
   },
   {
     "id": "sgthammer",
@@ -36378,7 +36449,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "isNew": true
+    "isNew": true,
+    "codeKey": "SgtHammer"
   },
   {
     "id": "sonya",
@@ -36507,7 +36579,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Sonya]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -36849,7 +36921,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Sonya"
   },
   {
     "id": "stitches",
@@ -36991,7 +37064,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Stitches]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -37333,7 +37406,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Stitches"
   },
   {
     "id": "sylvanas",
@@ -37462,7 +37536,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Sylvanas]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -37804,7 +37878,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Sylvanas"
   },
   {
     "id": "tassadar",
@@ -37933,7 +38008,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Tassadar]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -38275,7 +38350,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Tassadar"
   },
   {
     "id": "thebutcher",
@@ -38404,7 +38480,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,TheButcher]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -38746,7 +38822,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "TheButcher"
   },
   {
     "id": "thrall",
@@ -38875,7 +38952,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Thrall]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -39231,7 +39308,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Thrall"
   },
   {
     "id": "tracer",
@@ -39347,7 +39425,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Tracer]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -39703,7 +39781,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Tracer"
   },
   {
     "id": "tychus",
@@ -40246,7 +40325,8 @@ const HEROES = [
         }
       }
     ],
-    "isNew": true
+    "isNew": true,
+    "codeKey": "Tychus"
   },
   {
     "id": "tyrael",
@@ -40375,7 +40455,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Tyrael]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -40731,7 +40811,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Tyrael"
   },
   {
     "id": "valeera",
@@ -40908,7 +40989,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Valeera]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -41293,7 +41374,8 @@ const HEROES = [
           "en": "Stealth"
         }
       }
-    ]
+    ],
+    "codeKey": "Valeera"
   },
   {
     "id": "valla",
@@ -41422,7 +41504,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Valla]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -41764,7 +41846,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Valla"
   },
   {
     "id": "varian",
@@ -41906,7 +41989,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Varian]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -42262,7 +42345,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Varian"
   },
   {
     "id": "xul",
@@ -42404,7 +42488,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Xul]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -42746,7 +42830,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Xul"
   },
   {
     "id": "yrel",
@@ -42875,7 +42960,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Yrel]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -43217,7 +43302,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Yrel"
   },
   {
     "id": "zagara",
@@ -43689,7 +43775,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "isNew": true
+    "isNew": true,
+    "codeKey": "Zagara"
   },
   {
     "id": "zarya",
@@ -43818,7 +43905,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Zarya]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -44202,7 +44289,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Zarya"
   },
   {
     "id": "zeratul",
@@ -44344,7 +44432,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Zeratul]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -44686,7 +44774,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Zeratul"
   },
   {
     "id": "zuljin",
@@ -44815,7 +44904,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1111111,Zuljin]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -45157,7 +45246,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "forms": []
+    "forms": [],
+    "codeKey": "Zuljin"
   }
 ];
 

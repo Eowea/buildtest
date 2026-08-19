@@ -1702,7 +1702,13 @@ function renderOneBuild(hero, b, i, pos){
       <small class="help" style="margin-top:-8px;margin-bottom:12px;">Affiche un badge "Nouveau" sur l'onglet de ce build, et un badge "Mis à jour" à côté du héros dans la liste (tant que le visiteur ne l'a pas encore vu). Pense à le décocher une fois que la mise à jour n'est plus "fraîche".</small>
       <div class="row">
         <div class="field"><label>Ordre d'affichage</label><input type="number" value="${b.order ?? 0}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'order',parseInt(this.value||'0'))" /></div>
-        <div class="field"><label>Code du build (talents)</label><input value="${escapeHtml(b.buildCode)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'buildCode',this.value)" /></div>
+        <div class="field"><label>Code du build (talents)</label>
+          <div class="row" style="gap:6px;flex-wrap:nowrap;align-items:center;">
+            <input style="flex:1;" value="${escapeHtml(b.buildCode)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'buildCode',this.value)" />
+            <button type="button" class="btn" style="flex:0 0 auto;" onclick="regenerateBuildCode(${currentHeroIndex},${i})">Générer</button>
+          </div>
+          <small class="help">Se met à jour tout seul dès que tu choisis un talent principal. Le bouton le recalcule à partir des talents cochés.</small>
+        </div>
       </div>
       <div class="row">
         <div class="field"><label>Nom du build (FR)</label><input value="${escapeHtml(b.label?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'label.fr',this.value)" /></div>
@@ -1898,10 +1904,46 @@ function renderBuildTalentSelectionUI(hero, build, buildIdx){
     `;
   }).join('');
 }
+// Code de build : chaque chiffre est le rang du talent principal dans son palier,
+// dans l'ordre où le jeu les présente — c'est aussi celui du réservoir de talents.
+// Renvoie null tant qu'un palier n'a pas de talent principal.
+const BUILD_LEVELS = [1,4,7,10,13,16,20];
+function computeBuildCode(hero, build){
+  if (!hero || !hero.codeKey || !build) return null;
+  const byLevel = {};
+  (hero.talentPool||[]).forEach(t => { (byLevel[t.level] = byLevel[t.level] || []).push(t); });
+  const chosen = {};
+  (build.talentSelections||[]).forEach(s => { chosen[s.level] = s.primaryId; });
+  const digits = [];
+  for (const lvl of BUILD_LEVELS){
+    const id = chosen[lvl];
+    if (!id) return null;
+    const pos = (byLevel[lvl]||[]).findIndex(t => t.id === id);
+    if (pos < 0) return null;
+    digits.push(pos + 1);
+  }
+  return '[T' + digits.join('') + ',' + hero.codeKey + ']';
+}
+function refreshBuildCode(heroIdx, buildIdx){
+  const hero = HEROES[heroIdx];
+  const build = hero.builds[buildIdx];
+  const code = computeBuildCode(hero, build);
+  if (code) build.buildCode = code;
+  return code;
+}
+function regenerateBuildCode(heroIdx, buildIdx){
+  const code = refreshBuildCode(heroIdx, buildIdx);
+  if (!code){
+    alert("Il manque un talent principal sur au moins un palier : le code ne peut pas être calculé.");
+    return;
+  }
+  markDirty(); renderHeroPanel();
+}
 function setBuildTalentPrimary(heroIdx, buildIdx, selIdx, poolId){
   const sel = HEROES[heroIdx].builds[buildIdx].talentSelections[selIdx];
   sel.primaryId = poolId;
   sel.alternativeIds = (sel.alternativeIds||[]).filter(id => id !== poolId);
+  refreshBuildCode(heroIdx, buildIdx);
   markDirty(); renderHeroPanel();
 }
 function toggleBuildTalentAlternative(heroIdx, buildIdx, selIdx, poolId, checked){
