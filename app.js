@@ -51,6 +51,8 @@
       heroRotationTitle: { fr: "Rotation gratuite", en: "Free Rotation" },
       heroRotationError: { fr: "Rotation indisponible pour le moment.", en: "Rotation unavailable right now." },
       knownIssues: { fr: "Bugs connus", en: "Known issues" },
+      prevIssue: { fr: "Bug précédent", en: "Previous issue" },
+      nextIssue: { fr: "Bug suivant", en: "Next issue" },
     };
 
     /* =========================================================================
@@ -632,7 +634,7 @@ function findIssueTarget(hero, ref) {
 }
 
 function renderKnownIssues(hero) {
-  const rows = (hero.bugs || []).map(bug => {
+  const slides = (hero.bugs || []).map(bug => {
     const cible = findIssueTarget(hero, bug.talentId);
     if (!cible) return '';             // talent ou sort retiré du héros depuis
     const note = loc(bug.note);
@@ -647,15 +649,50 @@ function renderKnownIssues(hero) {
     // Un talent se repère par son palier, un sort par sa touche.
     const repere = cible.level != null ? `${t('level')} ${esc(String(cible.level))}` : esc(uiSpellKey(cible.key) || '');
     const repereHtml = repere ? `<span class="issue-level">${repere}</span>` : '';
-    return `<li class="issue-row">${trigger}<div class="issue-text"><div class="issue-name">${esc(loc(cible.name))}${repereHtml}</div><p class="issue-note">${esc(note)}</p></div></li>`;
-  }).filter(Boolean).join('');
+    return `<div class="issue-slide"><div class="issue-row">${trigger}<div class="issue-text"><div class="issue-name">${esc(loc(cible.name))}${repereHtml}</div><p class="issue-note">${esc(note)}</p></div></div></div>`;
+  }).filter(Boolean);
 
-  if (!rows) return '';
+  if (!slides.length) return '';
   // Date libre saisie dans l'admin (même convention que celle des builds) : elle dit
   // de quand date le relevé, et disparaît tant qu'elle n'est pas renseignée.
   const date = loc(hero.bugsUpdatedAt);
   const dateHtml = date ? `<span class="issues-date">${esc(date)}</span>` : '';
-  return `<section class="card issues-card"><div class="card-head">${t('knownIssues')}${dateHtml}</div><div class="card-body"><ul class="issue-list">${rows}</ul></div></section>`;
+  // Un seul bug : pas de barre de navigation, la carte se comporte comme avant.
+  const compteur = slides.length > 1 ? `<span class="issues-count">${slides.length}</span>` : '';
+  const nav = slides.length > 1 ? `<div class="issues-nav">
+      <button class="issues-arrow prev" type="button" aria-label="${esc(t('prevIssue'))}">&#10094;</button>
+      <div class="issues-dots">${slides.map((_, i) => `<span class="issues-dot${i===0?' is-active':''}" data-dot="${i}"></span>`).join('')}</div>
+      <button class="issues-arrow next" type="button" aria-label="${esc(t('nextIssue'))}">&#10095;</button>
+    </div>` : '';
+  const marques = slides.map((s, i) => s.replace('class="issue-slide"', `class="issue-slide${i===0?' is-active':''}" data-index="${i}"`)).join('');
+  return `<section class="card issues-card"><div class="card-head">${t('knownIssues')}${compteur}${dateHtml}</div><div class="card-body"><div class="issues-carousel">${marques}${nav}</div></div></section>`;
+}
+
+// Pilote dédié : le carrousel des vidéos embarque lecture automatique et préchargement
+// d'iframe, dont on n'a pas besoin ici — et ses écouteurs de survol entreraient en
+// conflit avec l'infobulle du talent.
+function bindIssuesCarousel(root = document) {
+  root.querySelectorAll('.issues-carousel').forEach(car => {
+    if (car.dataset.bound) return;
+    car.dataset.bound = '1';
+    const slides = [...car.querySelectorAll('.issue-slide')];
+    const dots = [...car.querySelectorAll('.issues-dot')];
+    if (slides.length < 2) return;
+    let actif = 0;
+    const allerA = i => {
+      const idx = (i + slides.length) % slides.length;
+      if (idx === actif) return;
+      hideFloatingTooltip(true);       // l'icône visible change : on referme l'infobulle
+      slides[actif].classList.remove('is-active');
+      dots[actif]?.classList.remove('is-active');
+      actif = idx;
+      slides[actif].classList.add('is-active');
+      dots[actif]?.classList.add('is-active');
+    };
+    car.querySelector('.issues-arrow.prev')?.addEventListener('click', () => allerA(actif - 1));
+    car.querySelector('.issues-arrow.next')?.addEventListener('click', () => allerA(actif + 1));
+    dots.forEach(d => d.addEventListener('click', () => allerA(Number(d.dataset.dot))));
+  });
 }
 
 function renderDetail() {
@@ -682,9 +719,13 @@ function renderDetail() {
   }
   const visibleSpells = forms.length ? (h.spells||[]).filter(s => !s.form || (Array.isArray(s.form) ? s.form.includes(activeFormId) : s.form === activeFormId)) : (h.spells||[]);
   const formSwitcherHtml = forms.length ? `<div class="form-switcher">${forms.map(f => `<button type="button" class="form-switch-btn${f.id===activeFormId?' active':''}" data-form-id="${esc(f.id)}">${esc(loc(f.label))}</button>`).join('')}</div>` : '';
-  els.detailView.innerHTML=`<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${formSwitcherHtml}${renderSpells(visibleSpells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||[]).map(tip=>`<li>${esc(loc(tip))}</li>`).join('')}</ul></div></article></section><div id="buildSection"></div>${renderKnownIssues(h)}`;
+  // La carte des bugs occupe la 3e colonne de l'en-tête ; sans bug, l'en-tête reprend
+  // sa grille à deux colonnes.
+  const issuesHtml = renderKnownIssues(h);
+  els.detailView.innerHTML=`<section class="hero-header${issuesHtml?' with-issues':''}"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div>${issuesHtml}</section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${formSwitcherHtml}${renderSpells(visibleSpells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||[]).map(tip=>`<li>${esc(loc(tip))}</li>`).join('')}</ul></div></article></section><div id="buildSection"></div>`;
   renderBuildSection(h);
   bindFloatingTriggers();
+  bindIssuesCarousel(els.detailView);
 }
     function renderAll() { updateStaticLang(); ensureSelection(); renderHeader(); renderFilters(); renderHeroList(); renderDetail(); updateHash(); }
     // Encodage minimal : on n'échappe que ce qui casserait vraiment le fragment d'URL

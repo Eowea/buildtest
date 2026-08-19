@@ -1707,6 +1707,25 @@
     border-color: var(--issue-red-dim);
 }
 
+/* La carte occupe une 3e colonne de l'en-tête, à droite du nom et de l'accroche.
+   Sans bug, .with-issues n'est pas posée et l'en-tête garde ses deux colonnes. */
+/* Le plancher de 300px sur la colonne du milieu tient le nom le plus long d'une seule
+   pièce ("Alexstrasza" en corps 48) : c'est la carte qui rétrécit d'abord, jusqu'à 260px. */
+.hero-header.with-issues {
+    grid-template-columns: 120px minmax(300px, 1fr) minmax(260px, 360px);
+    align-items: start;
+}
+
+.hero-header .issues-card {
+    margin-bottom: 0;
+}
+
+/* Trop à l'étroit pour trois colonnes : la carte repasse sous l'en-tête. */
+@media (max-width: 820px) {
+    .hero-header.with-issues { grid-template-columns: 120px minmax(0, 1fr); }
+    .hero-header.with-issues .issues-card { grid-column: 1 / -1; }
+}
+
 .issues-card .card-head {
     border-bottom-color: var(--issue-red-dim);
     background: linear-gradient(90deg, var(--issue-red-soft), transparent);
@@ -1730,13 +1749,34 @@
     white-space: nowrap;
 }
 
-.issue-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 14px;
+/* Compteur dans le titre : il dit combien de bugs le carrousel contient, sans quoi
+   rien ne signalerait qu'il y en a d'autres derrière celui qu'on lit. */
+.issues-count {
+    display: inline-grid;
+    place-items: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    margin-right: auto;
+    margin-left: -4px;
+    border-radius: 10px;
+    background: var(--issue-red-dim);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    text-shadow: none;
 }
+
+/* Une seule diapo affichée. Le min-height fige la hauteur de la carte : sans lui,
+   l'en-tête sauterait à chaque changement de bug selon la longueur de la note. */
+.issues-carousel {
+    display: flex;
+    flex-direction: column;
+    min-height: 128px;
+}
+
+.issue-slide { display: none; }
+.issue-slide.is-active { display: block; }
 
 .issue-row {
     display: flex;
@@ -1745,9 +1785,58 @@
     min-width: 0;
 }
 
-.issue-row + .issue-row {
-    padding-top: 14px;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+/* Pied du carrousel : flèches de part et d'autre des pastilles. Repoussé en bas par
+   le flex, il reste à la même place quelle que soit la longueur de la note. */
+.issues-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.issues-arrow {
+    width: 26px;
+    height: 26px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: rgba(8, 12, 20, 0.75);
+    border: 1px solid var(--issue-red-dim);
+    color: var(--issue-red);
+    font-size: 12px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: all var(--t);
+}
+
+.issues-arrow:hover, .issues-arrow:focus-visible {
+    background: var(--issue-red);
+    border-color: var(--issue-red);
+    color: #12060a;
+    outline: none;
+    box-shadow: 0 0 12px rgba(255, 107, 94, 0.4);
+}
+
+.issues-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.issues-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    cursor: pointer;
+    transition: all var(--t);
+}
+
+.issues-dot.is-active {
+    background: var(--issue-red);
+    box-shadow: 0 0 8px rgba(255, 107, 94, 0.5);
+    transform: scale(1.2);
 }
 
 /* L'icône ne doit ni s'étirer ni se comprimer quand la note est longue. */
@@ -1790,4 +1879,6 @@
 @media (max-width: 640px) {
     .issue-row { gap: 10px; }
     .issue-trigger { width: 46px; height: 46px; }
+    /* L'en-tête est centré en mobile : la carte, elle, reste pleine largeur et ferrée à gauche. */
+    .hero-header.with-issues .issues-card { justify-self: stretch; width: 100%; text-align: left; }
 }
