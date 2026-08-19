@@ -12039,7 +12039,7 @@ const HEROES = [
           "fr": "Carapace anti-magie",
           "en": "Anti-Magic Shell"
         },
-        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_spellshield.png",
+        "icon": "assets/heroes/base_spells/arthas/images/talents/storm_temp_war3_btnantimagicshell.png",
         "description": {
           "fr": "Immunise Arthas contre les dégâts de capacité pendant un court instant et lui rend une partie des dégâts ainsi bloqués.",
           "en": "Makes Arthas immune to Ability damage briefly and heals him for part of the damage blocked."
