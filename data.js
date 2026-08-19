@@ -11746,8 +11746,8 @@ const HEROES = [
         "en": "Frozen Tempest drains Mana continuously: turn it off out of combat."
       },
       {
-        "fr": "Armée des morts pousse une lane et bloque physiquement un couloir.",
-        "en": "Army of the Dead pushes a lane and physically body-blocks a corridor."
+        "fr": "Armée des morts peut tanker les sorts ennemis.",
+        "en": "Army of the Dead can absorb enemy spells."
       }
     ],
     "builds": [
