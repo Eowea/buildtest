@@ -12243,7 +12243,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Azmodan]",
+        "buildCode": "[T2112112,Azmodan]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -12252,28 +12252,35 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm5gyssra01ns2",
+            "primaryId": "tm5gyssra029qu",
             "alternativeIds": []
           },
           {
             "level": 4,
             "primaryId": "tm5gyssra04v90",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tm5gyssra05g8d",
+              "tm5gyssra06p8z"
+            ]
           },
           {
             "level": 7,
             "primaryId": "tm5gyssra077sy",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tm5gyssra09ro9"
+            ]
           },
           {
             "level": 10,
-            "primaryId": "tm5gyssra10uxe",
+            "primaryId": "tm5gyssra11nsg",
             "alternativeIds": []
           },
           {
             "level": 13,
             "primaryId": "tm5gyssra12pct",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tm5gyssra145fg"
+            ]
           },
           {
             "level": 16,
@@ -12282,8 +12289,10 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tm5gyssra182jn",
-            "alternativeIds": []
+            "primaryId": "tm5gyssra19hi8",
+            "alternativeIds": [
+              "tm5gyssra21kif"
+            ]
           }
         ]
       }
