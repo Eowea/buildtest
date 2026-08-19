@@ -9789,7 +9789,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "",
+        "buildCode": "[T1131213,Abathur]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -9808,7 +9808,7 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tmatgxdrn08bvh",
+            "primaryId": "tmatgxdrn10wc1",
             "alternativeIds": []
           },
           {
@@ -9818,7 +9818,7 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tmatgxdrn139l6",
+            "primaryId": "tmatgxdrn14tlp",
             "alternativeIds": []
           },
           {
@@ -9828,7 +9828,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmatgxdrn20bss",
+            "primaryId": "tmatgxdrn22bhc",
             "alternativeIds": []
           }
         ]
