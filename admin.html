@@ -1624,7 +1624,10 @@ function addSpell(idx){
   markDirty(); renderHeroPanel();
 }
 function removeSpell(idx, spIdx){
-  HEROES[idx].spells.splice(spIdx,1);
+  const hero = HEROES[idx];
+  const parti = hero.spells[spIdx];
+  hero.spells.splice(spIdx,1);
+  if (parti) hero.bugs = (hero.bugs||[]).filter(b => b.talentId !== spellBugId(hero, parti));
   markDirty(); renderHeroPanel();
 }
 
@@ -1656,14 +1659,23 @@ function removeTip(idx, tIdx){
 // Une case à cocher par talent du réservoir : cocher ouvre les deux champs de
 // description juste en dessous. hero.bugs est tenu dans l'ordre du réservoir, qui est
 // aussi celui du jeu, pour que la carte du site suive toujours l'ordre des paliers.
+// Les sorts n'ont pas d'id : on les désigne par "spell:<touche>", suffixé de la forme
+// quand deux sorts partagent la même touche (héros à transformation).
+function spellBugId(hero, s){
+  const partagee = (hero.spells||[]).filter(x => x.key === s.key).length > 1;
+  const forme = Array.isArray(s.form) ? s.form[0] : s.form;
+  return 'spell:' + s.key + (partagee && forme ? '|' + forme : '');
+}
 function renderBugsTab(hero){
   const pool = hero.talentPool || [];
-  if (!pool.length){
-    return `<p style="color:var(--text-dim);font-size:13px;">Aucun talent défini pour ce héros. Va dans l'onglet "Talents" pour en créer, ils apparaîtront ici ensuite.</p>`;
+  const sorts = hero.spells || [];
+  if (!pool.length && !sorts.length){
+    return `<p style="color:var(--text-dim);font-size:13px;">Ce héros n'a ni sort ni talent pour l'instant. Va dans les onglets "Sorts" et "Talents" pour en créer, ils apparaîtront ici ensuite.</p>`;
   }
   hero.bugs = hero.bugs || [];
   hero.bugsUpdatedAt = hero.bugsUpdatedAt || { fr:'', en:'' };
-  const coches = hero.bugs.filter(b => pool.some(p => p.id === b.talentId)).length;
+  const connus = new Set([...pool.map(p => p.id), ...sorts.map(s => spellBugId(hero, s))]);
+  const coches = hero.bugs.filter(b => connus.has(b.talentId)).length;
   const decrits = hero.bugs.filter(b => ((b.note?.fr||'').trim() || (b.note?.en||'').trim())).length;
 
   const dateBloc = `
@@ -1676,40 +1688,48 @@ function renderBugsTab(hero){
     </div>`;
 
   const entete = `<p style="color:var(--text-dim);font-size:13px;margin-top:0;">
-      Coche les talents touchés par un bug, puis décris-le. Sur le site, une carte
-      « Bugs connus » apparaît sous les builds du héros ; elle ne montre que les talents
+      Coche les sorts ou les talents touchés par un bug, puis décris-le. Sur le site, une carte
+      « Bugs connus » apparaît sous les builds du héros ; elle ne montre que les entrées
       dont la description est remplie, et l'icône garde son infobulle habituelle au survol.
       ${coches ? `<b style="color:var(--gold);">${coches} coché${coches>1?'s':''}, ${decrits} décrit${decrits>1?'s':''}.</b>` : ''}
     </p>`;
 
-  const levels = [...new Set(pool.map(p => p.level))].sort((a,b) => a - b);
-  const blocs = levels.map(level => {
-    const rows = pool.filter(p => p.level === level).map(p => {
-      const bug = hero.bugs.find(b => b.talentId === p.id);
-      const note = bug?.note || { fr:'', en:'' };
-      const champs = bug ? `
-          <div class="row" style="margin:8px 0 0 30px;">
-            <div class="field"><label>Bug (FR)</label><textarea oninput="setBugNote(${currentHeroIndex},'${p.id}','fr',this.value)">${escapeHtml(note.fr||'')}</textarea></div>
-            <div class="field"><label>Bug (EN)</label><textarea oninput="setBugNote(${currentHeroIndex},'${p.id}','en',this.value)">${escapeHtml(note.en||'')}</textarea></div>
-          </div>` : '';
-      return `
-        <div style="padding:6px 0;">
-          <div class="row" style="align-items:center;gap:10px;margin:0;flex-wrap:nowrap;">
-            <input type="checkbox" style="width:auto;flex:0 0 auto;" ${bug?'checked':''} onchange="toggleBug(${currentHeroIndex},'${p.id}',this.checked)" />
-            <img src="${assetRawUrl(p.icon)}" style="width:28px;height:28px;border-radius:4px;object-fit:cover;background:#000;flex:0 0 auto;" onerror="this.style.visibility='hidden'" />
-            <div style="flex:1;font-size:13px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${escapeHtml(p.name?.fr || 'Talent sans nom')}</div>
-          </div>
-          ${champs}
-        </div>`;
-    }).join('');
-    return `<div class="subitem"><div style="font-weight:700;color:var(--gold);margin-bottom:4px;">Palier ${escapeHtml(level)}</div>${rows}</div>`;
-  }).join('');
+  // Une ligne = une case à cocher, l'icône, le nom, et les deux champs si c'est coché.
+  const ligne = (id, icon, nom) => {
+    const bug = hero.bugs.find(b => b.talentId === id);
+    const note = bug?.note || { fr:'', en:'' };
+    const champs = bug ? `
+        <div class="row" style="margin:8px 0 0 30px;">
+          <div class="field"><label>Bug (FR)</label><textarea oninput="setBugNote(${currentHeroIndex},'${id}','fr',this.value)">${escapeHtml(note.fr||'')}</textarea></div>
+          <div class="field"><label>Bug (EN)</label><textarea oninput="setBugNote(${currentHeroIndex},'${id}','en',this.value)">${escapeHtml(note.en||'')}</textarea></div>
+        </div>` : '';
+    return `
+      <div style="padding:6px 0;">
+        <div class="row" style="align-items:center;gap:10px;margin:0;flex-wrap:nowrap;">
+          <input type="checkbox" style="width:auto;flex:0 0 auto;" ${bug?'checked':''} onchange="toggleBug(${currentHeroIndex},'${id}',this.checked)" />
+          <img src="${assetRawUrl(icon)}" style="width:28px;height:28px;border-radius:4px;object-fit:cover;background:#000;flex:0 0 auto;" onerror="this.style.visibility='hidden'" />
+          <div style="flex:1;font-size:13px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${escapeHtml(nom)}</div>
+        </div>
+        ${champs}
+      </div>`;
+  };
 
-  return entete + dateBloc + blocs;
+  const blocSorts = sorts.length ? `<div class="subitem"><div style="font-weight:700;color:var(--gold);margin-bottom:4px;">Sorts</div>${
+    sorts.map(s => ligne(spellBugId(hero, s), s.icon, (s.key ? '[' + s.key + '] ' : '') + (s.name?.fr || 'Sort sans nom'))).join('')
+  }</div>` : '';
+
+  const levels = [...new Set(pool.map(p => p.level))].sort((a,b) => a - b);
+  const blocs = levels.map(level => `<div class="subitem"><div style="font-weight:700;color:var(--gold);margin-bottom:4px;">Palier ${escapeHtml(level)}</div>${
+    pool.filter(p => p.level === level).map(p => ligne(p.id, p.icon, p.name?.fr || 'Talent sans nom')).join('')
+  }</div>`).join('');
+
+  return entete + dateBloc + blocSorts + blocs;
 }
+// Ordre d'affichage sur le site : les sorts d'abord, puis les talents par palier.
 function sortBugs(hero){
   const rang = {};
-  (hero.talentPool||[]).forEach((p,i) => { rang[p.id] = i; });
+  (hero.spells||[]).forEach((s,i) => { rang[spellBugId(hero, s)] = i; });
+  (hero.talentPool||[]).forEach((p,i) => { rang[p.id] = 1000 + i; });
   (hero.bugs||[]).sort((a,b) => (rang[a.talentId] ?? 1e9) - (rang[b.talentId] ?? 1e9));
 }
 function toggleBug(idx, talentId, checked){

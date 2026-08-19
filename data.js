@@ -6734,7 +6734,20 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Malfurion"
+    "codeKey": "Malfurion",
+    "bugs": [
+      {
+        "talentId": "tc5kvu3ov1660l",
+        "note": {
+          "fr": "Les héros touchés par les attaques de base du tréant ne peuvent plus être immobilisés par le même lancer de Sarments.",
+          "en": "Heroes hit by Treant's Basic Attacks cannot be Rooted by the same Entangling Roots cast."
+        }
+      }
+    ],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "stukov",
@@ -42732,7 +42745,20 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Xul"
+    "codeKey": "Xul",
+    "bugs": [
+      {
+        "talentId": "spell:Trait",
+        "note": {
+          "fr": "Les attaques de base des guerriers squelettes ne touchent pas les ennemis.",
+          "en": "Basic Attacks from Skeletal Warriors don't hit enemies."
+        }
+      }
+    ],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "yrel",

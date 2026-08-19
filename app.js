@@ -620,21 +620,34 @@ async function loadHeroRotation() {
 // accompagné d'une note écrite pour l'occasion. L'icône garde son infobulle habituelle
 // (survol / clic sur mobile), la note s'affiche à côté. La carte disparaît entièrement
 // quand le héros n'a aucun bug renseigné.
+// Un bug peut viser un talent (id du réservoir) ou un sort. Les sorts n'ayant pas d'id,
+// ils sont désignés par "spell:<touche>", suffixé de "|<forme>" quand la touche est
+// partagée entre deux formes (Valeera camouflée, D.Va à pied, etc.).
+function findIssueTarget(hero, ref) {
+  const id = String(ref || '');
+  if (!id.startsWith('spell:')) return (hero.talentPool || []).find(p => p.id === id) || null;
+  const [key, form] = id.slice(6).split('|');
+  return (hero.spells || []).find(s => s.key === key &&
+    (!form || (Array.isArray(s.form) ? s.form.includes(form) : s.form === form))) || null;
+}
+
 function renderKnownIssues(hero) {
-  const pool = hero.talentPool || [];
   const rows = (hero.bugs || []).map(bug => {
-    const talent = pool.find(p => p.id === bug.talentId);
-    if (!talent) return '';            // talent retiré du réservoir depuis
+    const cible = findIssueTarget(hero, bug.talentId);
+    if (!cible) return '';             // talent ou sort retiré du héros depuis
     const note = loc(bug.note);
     if (!note) return '';              // pas de description écrite : rien à montrer
     const trigger = ftHTML({
       cls: 'talent-trigger issue-trigger floating-trigger',
-      title: talent.name,
-      desc: talent.description,
-      demoId: talent.demoYoutubeId || talent.demoYoutubeUrl,
-      inner: `<div class="talent-icon" data-fallback="${esc(initials(loc(talent.name)))}"><img src="${talent.icon||svgBadge(loc(talent.name))}" alt="${esc(loc(talent.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`
+      title: cible.name,
+      desc: cible.description,
+      demoId: cible.demoYoutubeId || cible.demoYoutubeUrl,
+      inner: `<div class="talent-icon" data-fallback="${esc(initials(loc(cible.name)))}"><img src="${cible.icon||svgBadge(loc(cible.name))}" alt="${esc(loc(cible.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`
     });
-    return `<li class="issue-row">${trigger}<div class="issue-text"><div class="issue-name">${esc(loc(talent.name))}<span class="issue-level">${t('level')} ${esc(String(talent.level))}</span></div><p class="issue-note">${esc(note)}</p></div></li>`;
+    // Un talent se repère par son palier, un sort par sa touche.
+    const repere = cible.level != null ? `${t('level')} ${esc(String(cible.level))}` : esc(uiSpellKey(cible.key) || '');
+    const repereHtml = repere ? `<span class="issue-level">${repere}</span>` : '';
+    return `<li class="issue-row">${trigger}<div class="issue-text"><div class="issue-name">${esc(loc(cible.name))}${repereHtml}</div><p class="issue-note">${esc(note)}</p></div></li>`;
   }).filter(Boolean).join('');
 
   if (!rows) return '';
