@@ -6299,8 +6299,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_tranquility.png",
         "description": {
-          "fr": "Rend continuellement des points de vie aux héros alliés et proches, et donne de l'armure lorsque les alliés sont sous Rétablissement.",
-          "en": "Continually restores health to nearby allied Heroes, and grants Armor to allies affected by Regrowth."
+          "fr": "Rend continuellement des points de vie aux héros alliés proches, et confère de l'armure à ceux qui bénéficient de Rétablissement.",
+          "en": "Continuously restores Health to nearby allied Heroes, and grants Armor to those under Regrowth."
         },
         "demoYoutubeId": "assets/heroes/base_spells/malfurion/videos/spells/malfurion_r1.mp4"
       },
@@ -6408,49 +6408,13 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T3332333,Malfurion]",
+        "buildCode": "",
         "videos": [],
         "updatedAt": {
           "fr": "",
           "en": ""
         },
-        "talentSelections": [
-          {
-            "level": 1,
-            "primaryId": "tmrryr6joly4w2",
-            "alternativeIds": []
-          },
-          {
-            "level": 4,
-            "primaryId": "tmrryr6johb0pd",
-            "alternativeIds": []
-          },
-          {
-            "level": 7,
-            "primaryId": "tmrryr6joxw1hy",
-            "alternativeIds": []
-          },
-          {
-            "level": 10,
-            "primaryId": "tmrryr6jou7rf3",
-            "alternativeIds": []
-          },
-          {
-            "level": 13,
-            "primaryId": "tmrryr6jobvr7p",
-            "alternativeIds": []
-          },
-          {
-            "level": 16,
-            "primaryId": "tmrryr6jot3iju",
-            "alternativeIds": []
-          },
-          {
-            "level": 20,
-            "primaryId": "tmrryr6jof5cds",
-            "alternativeIds": []
-          }
-        ]
+        "talentSelections": []
       }
     ],
     "guideVideos": [
@@ -6497,8 +6461,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malfurion/images/talents/storm_ui_icon_malfurion_entanglingroots_b.png",
         "description": {
-          "fr": "Quête : Sarments donne naissance à un tréant.",
-          "en": "Quest: Entangling Roots spawns a Treant"
+          "fr": "Sarments donne naissance à un tréant qui frappe les ennemis proches avant de dépérir. Quête répétable : toucher des héros avec Sarments augmente définitivement les dégâts d'attaque du tréant.",
+          "en": "Entangling Roots spawns a Treant that strikes nearby enemies before withering away. Repeatable Quest: hitting Heroes with Entangling Roots permanently increases the Treant's Attack Damage."
         },
         "demoYoutubeId": null
       },
@@ -6511,24 +6475,10 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malfurion/images/talents/storm_ui_icon_malfurion_entanglingroots_a.png",
         "description": {
-          "fr": "À la fin de Sarments, les cibles immobilisées sont endormis.",
-          "en": "When Entangling Roots expires, rooted targets are put to Sleep."
+          "fr": "Les héros adverses libérés de Sarments s'endorment aussitôt après l'immobilisation.",
+          "en": "Enemy Heroes released from Entangling Roots fall asleep right after the Root."
         },
         "demoYoutubeId": "assets/heroes/base_spells/malfurion/videos/talents/malfurion_lvl1_e.mp4"
-      },
-      {
-        "id": "tmrryr6joly4w2",
-        "level": 1,
-        "name": {
-          "fr": "Totem Colossal",
-          "en": "Colossal Totem"
-        },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_earthbindtotem.png",
-        "description": {
-          "fr": "Augmente les points de vie, le rayon et la durée du totem. Permet de le repositionner une nouvelle fois.",
-          "en": "Increases health, radius, and duration of the totem. Can be repositioned once."
-        },
-        "demoYoutubeId": null
       },
       {
         "id": "tmrryr6jore7pp",
@@ -6553,8 +6503,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_moonfire.png",
         "description": {
-          "fr": "Prolonge la révélation d’Éclat lunaire et renforce les attaques de base.",
-          "en": "Moonfire reveals longer, empowers Attacks"
+          "fr": "Prolonge la révélation d'Éclat lunaire, et les attaques de base de Malfurion frappent plus fort les héros révélés.",
+          "en": "Extends Moonfire's reveal, and Malfurion's Basic Attacks hit revealed Heroes harder."
         },
         "demoYoutubeId": null
       },
@@ -6573,20 +6523,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6johb0pd",
-        "level": 4,
-        "name": {
-          "fr": "Viveterre",
-          "en": "Earthliving Enchant"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_chainheal.png",
-        "description": {
-          "fr": "Renforce Salve de guerison pour les héros dont les points de vie sont bas.",
-          "en": "Empowers Chain Heal for heroes at low health."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tc5kvu3ov19xdt",
         "level": 7,
         "name": {
@@ -6595,8 +6531,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malfurion/images/talents/storm_ui_icon_malfurion_wildgrowth.png",
         "description": {
-          "fr": "Éclat lunaire prolonge la durée de Rétablissement.",
-          "en": "Moonfire extends Regrowth duration"
+          "fr": "Chaque héros touché par Éclat lunaire prolonge la durée de tous les Rétablissements actifs.",
+          "en": "Each Hero hit by Moonfire extends the duration of every active Regrowth."
         },
         "demoYoutubeId": null
       },
@@ -6629,20 +6565,6 @@ const HEROES = [
         "demoYoutubeId": "assets/heroes/base_spells/malfurion/videos/talents/malfurion_lvl7_purge.mp4"
       },
       {
-        "id": "tmrryr6joxw1hy",
-        "level": 7,
-        "name": {
-          "fr": "Totem lié à la terre",
-          "en": "Grounded Totem"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_earthbindtotem.png",
-        "description": {
-          "fr": "Réduis la vitesse d'attaque et la puissance de capacité, augmente la portée du totem.",
-          "en": "Reduces attack and spell power of enemies in range."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmrryr6jok08jz",
         "level": 10,
         "name": {
@@ -6651,8 +6573,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_tranquility.png",
         "description": {
-          "fr": "Rend continuellement des points de vie aux héros alliés et proches, et donne de l'armure lorsque les alliés sont sous Rétablissement.",
-          "en": "Continually restores health to nearby allied Heroes, and grants Armor to allies affected by Regrowth."
+          "fr": "Rend continuellement des points de vie aux héros alliés proches, et confère de l'armure à ceux qui bénéficient de Rétablissement.",
+          "en": "Continuously restores Health to nearby allied Heroes, and grants Armor to those under Regrowth."
         },
         "demoYoutubeId": "assets/heroes/base_spells/malfurion/videos/spells/malfurion_r1.mp4"
       },
@@ -6671,20 +6593,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jou7rf3",
-        "level": 10,
-        "name": {
-          "fr": "Guérison ancestrale",
-          "en": "Ancestral Healing"
-        },
-        "icon": "https://psionic-storm.com/media/img/talents/rehgar_ancestralhealing.png",
-        "description": {
-          "fr": "Gros soin monocible, utilisable sur soi.",
-          "en": "Massive single-target heal, usable on self."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmrryr6jom7lz6",
         "level": 13,
         "name": {
@@ -6693,8 +6601,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_regrowth.png",
         "description": {
-          "fr": "Les Rétablissements augmentent la vitesse de déplacement de Malfurion.",
-          "en": "Active Regrowths increase Malfurion's Movement Speed."
+          "fr": "La vitesse de déplacement de Malfurion augmente pour chaque Rétablissement actif.",
+          "en": "Malfurion's Movement Speed increases for each active Regrowth."
         },
         "demoYoutubeId": null
       },
@@ -6727,20 +6635,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jobvr7p",
-        "level": 13,
-        "name": {
-          "fr": "Raz-de-marée",
-          "en": "Tidal Waves"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_chainheal.png",
-        "description": {
-          "fr": "Réduit le temps de recharge de Salve de guérison et son coût en mana.",
-          "en": "Reduces Chain Heal cooldown and mana cost."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tc5kvu3ov246f3",
         "level": 16,
         "name": {
@@ -6749,8 +6643,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_regrowth.png",
         "description": {
-          "fr": "Augmente l’efficacité de Rétablissement quand les points de vie sont élevés.",
-          "en": "Increase Regrowth heal at high Health"
+          "fr": "Tant que Malfurion garde des points de vie élevés, Rétablissement soigne davantage sur la durée.",
+          "en": "While Malfurion keeps his Health high, Regrowth heals for more over time."
         },
         "demoYoutubeId": null
       },
@@ -6783,20 +6677,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jot3iju",
-        "level": 16,
-        "name": {
-          "fr": "Totem d’emprise de la terre",
-          "en": "Earthgrasp Totem"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_earthbindtotem.png",
-        "description": {
-          "fr": "Quand le totem est posé pour la première fois, il inflige des dégâts en zone et ralentit fortement.",
-          "en": "When first spawned, the totem deals AoE damage and heavily slows."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmrryr6jolpvlj",
         "level": 20,
         "name": {
@@ -6805,8 +6685,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_tranquility.png",
         "description": {
-          "fr": "Éclat lunaire réduit le temps de recharge de Tranquilité. Augmente les soins de Tranquilité de base, et ce montant augmente selon le nombre de Rétablissements actifs.",
-          "en": "Moonfire reduces the cooldown of Tranquility. Increases Tranquility's baseline healing, and this amount increases based on the number of active Regrowths."
+          "fr": "Éclat lunaire rapproche Tranquillité, dont les soins augmentent avec le nombre de Rétablissements actifs.",
+          "en": "Moonfire brings Tranquility closer, and its healing grows with the number of active Regrowths."
         },
         "demoYoutubeId": null
       },
@@ -6849,20 +6729,6 @@ const HEROES = [
         "description": {
           "fr": "Toucher un héros avec Éclat lunaire en rapproche la prochaine utilisation et renforce le suivant, effet cumulable.",
           "en": "Hitting a Hero with Moonfire brings its next cast closer and empowers the following one, stacking."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jof5cds",
-        "level": 20,
-        "name": {
-          "fr": "Bénédiction du long-voyant",
-          "en": "Farseer's Blessing"
-        },
-        "icon": "assets/heroes/base_spells/rehgar/images/spells/storm_ui_icon_rehgar_ancestralhealing.png",
-        "description": {
-          "fr": "Une deuxième Guérison Ancestrale apparait, et soigne en zone autour de la cible.",
-          "en": "A second Ancestral Healing triggers and heals in an AoE."
         },
         "demoYoutubeId": null
       }

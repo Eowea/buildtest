@@ -50,6 +50,7 @@
       updatedBadge: { fr: "Mis à jour", en: "Updated" },
       heroRotationTitle: { fr: "Rotation gratuite", en: "Free Rotation" },
       heroRotationError: { fr: "Rotation indisponible pour le moment.", en: "Rotation unavailable right now." },
+      knownIssues: { fr: "Bugs connus", en: "Known issues" },
     };
 
     /* =========================================================================
@@ -615,9 +616,38 @@ async function loadHeroRotation() {
   }
 }
 
-function renderDetail() { 
-  hideFloatingTooltip(true); 
-  const h=currentHero(); 
+// Carte "Bugs connus" : une liste de talents choisis à la main dans l'admin, chacun
+// accompagné d'une note écrite pour l'occasion. L'icône garde son infobulle habituelle
+// (survol / clic sur mobile), la note s'affiche à côté. La carte disparaît entièrement
+// quand le héros n'a aucun bug renseigné.
+function renderKnownIssues(hero) {
+  const pool = hero.talentPool || [];
+  const rows = (hero.bugs || []).map(bug => {
+    const talent = pool.find(p => p.id === bug.talentId);
+    if (!talent) return '';            // talent retiré du réservoir depuis
+    const note = loc(bug.note);
+    if (!note) return '';              // pas de description écrite : rien à montrer
+    const trigger = ftHTML({
+      cls: 'talent-trigger issue-trigger floating-trigger',
+      title: talent.name,
+      desc: talent.description,
+      demoId: talent.demoYoutubeId || talent.demoYoutubeUrl,
+      inner: `<div class="talent-icon" data-fallback="${esc(initials(loc(talent.name)))}"><img src="${talent.icon||svgBadge(loc(talent.name))}" alt="${esc(loc(talent.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`
+    });
+    return `<li class="issue-row">${trigger}<div class="issue-text"><div class="issue-name">${esc(loc(talent.name))}<span class="issue-level">${t('level')} ${esc(String(talent.level))}</span></div><p class="issue-note">${esc(note)}</p></div></li>`;
+  }).filter(Boolean).join('');
+
+  if (!rows) return '';
+  // Date libre saisie dans l'admin (même convention que celle des builds) : elle dit
+  // de quand date le relevé, et disparaît tant qu'elle n'est pas renseignée.
+  const date = loc(hero.bugsUpdatedAt);
+  const dateHtml = date ? `<span class="issues-date">${esc(date)}</span>` : '';
+  return `<section class="card issues-card"><div class="card-head">${t('knownIssues')}${dateHtml}</div><div class="card-body"><ul class="issue-list">${rows}</ul></div></section>`;
+}
+
+function renderDetail() {
+  hideFloatingTooltip(true);
+  const h=currentHero();
   
   // Si aucun héros n'est sélectionné, on affiche les carrousels "Dernière vidéo" / "Analyse Patchs".
   if(!h){
@@ -639,7 +669,7 @@ function renderDetail() {
   }
   const visibleSpells = forms.length ? (h.spells||[]).filter(s => !s.form || (Array.isArray(s.form) ? s.form.includes(activeFormId) : s.form === activeFormId)) : (h.spells||[]);
   const formSwitcherHtml = forms.length ? `<div class="form-switcher">${forms.map(f => `<button type="button" class="form-switch-btn${f.id===activeFormId?' active':''}" data-form-id="${esc(f.id)}">${esc(loc(f.label))}</button>`).join('')}</div>` : '';
-  els.detailView.innerHTML=`<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${formSwitcherHtml}${renderSpells(visibleSpells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||[]).map(tip=>`<li>${esc(loc(tip))}</li>`).join('')}</ul></div></article></section><div id="buildSection"></div>`;
+  els.detailView.innerHTML=`<section class="hero-header"><div class="detail-portrait" data-fallback="${esc(initials(loc(h.name)))}"><img src="${h.portrait}" alt="${esc(loc(h.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div><div><h2 class="detail-title">${esc(loc(h.name))}</h2><div class="role-badge">${esc(locRole(h.role))}</div><p class="detail-headline">${esc(loc(h.headline))}</p></div></section><section class="meta-grid"><article class="card"><div class="card-head">${t('gameplay')}</div><div class="card-body"><p>${esc(loc(h.gameplay))}</p>${formSwitcherHtml}${renderSpells(visibleSpells)}</div></article><article class="card"><div class="card-head">${t('tips')}</div><div class="card-body"><ul class="bullet-list">${(h.tips||[]).map(tip=>`<li>${esc(loc(tip))}</li>`).join('')}</ul></div></article></section><div id="buildSection"></div>${renderKnownIssues(h)}`;
   renderBuildSection(h);
   bindFloatingTriggers();
 }

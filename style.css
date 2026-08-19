@@ -1694,3 +1694,100 @@
 .updated-badge {
     background-color: #0076a3; /* Un bleu sombre qui ressort bien */
 }
+
+/* ── Carte « Bugs connus » ─────────────────────────────────────────────────
+   Placée sous la section des builds. Elle n'existe dans le DOM que si le héros
+   a au moins un bug renseigné, d'où l'absence d'état vide ici. L'icône reprend
+   .talent-trigger pour garder exactement le même survol que dans les builds. */
+.issues-card {
+    --issue-red: #ff6b5e;
+    --issue-red-dim: rgba(255, 107, 94, 0.45);
+    --issue-red-soft: rgba(255, 107, 94, 0.08);
+    margin-bottom: 24px;
+    border-color: var(--issue-red-dim);
+}
+
+.issues-card .card-head {
+    border-bottom-color: var(--issue-red-dim);
+    background: linear-gradient(90deg, var(--issue-red-soft), transparent);
+    color: var(--issue-red);
+    text-shadow: 0 0 8px rgba(255, 107, 94, 0.3);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Date du relevé, discrète : elle date la carte sans concurrencer le titre. */
+.issues-date {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-shadow: none;
+    white-space: nowrap;
+}
+
+.issue-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 14px;
+}
+
+.issue-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    min-width: 0;
+}
+
+.issue-row + .issue-row {
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* L'icône ne doit ni s'étirer ni se comprimer quand la note est longue. */
+.issue-trigger {
+    flex: 0 0 auto;
+    margin-top: 2px;
+}
+
+.issue-text {
+    min-width: 0;
+    flex: 1;
+}
+
+.issue-name {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: var(--text-bright);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.issue-level {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.issue-note {
+    margin: 0;
+    color: var(--text-dim);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+    .issue-row { gap: 10px; }
+    .issue-trigger { width: 46px; height: 46px; }
+}
