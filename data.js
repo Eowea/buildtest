@@ -24397,7 +24397,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Junkrat]",
+        "buildCode": "[T2211231,Junkrat]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -24406,18 +24406,20 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm0q03buz01x0k",
+            "primaryId": "tm0q03buz02fwh",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tm0q03buz04al2",
+            "primaryId": "tm0q03buz05zwq",
             "alternativeIds": []
           },
           {
             "level": 7,
             "primaryId": "tm0q03buz07myd",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tm0q03buz09swx"
+            ]
           },
           {
             "level": 10,
@@ -24426,18 +24428,22 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tm0q03buz12cpq",
+            "primaryId": "tm0q03buz13jma",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tm0q03buz1635c",
-            "alternativeIds": []
+            "primaryId": "tm0q03buz185ty",
+            "alternativeIds": [
+              "tm0q03buz17lgv"
+            ]
           },
           {
             "level": 20,
             "primaryId": "tm0q03buz19jpr",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tm0q03buz2177j"
+            ]
           }
         ]
       }
