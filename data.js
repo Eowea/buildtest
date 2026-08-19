@@ -12223,8 +12223,8 @@ const HEROES = [
         "en": "All Shall Burn heavily Slows you: never channel it unprotected."
       },
       {
-        "fr": "Tes démons poussent seuls : envoie-les dans les lanes vides pendant les combats.",
-        "en": "Your demons push on their own: send them to empty lanes during fights."
+        "fr": "Tes démons peuvent tanker les sorts ennemis.",
+        "en": "Your demons can tank enemy spells."
       }
     ],
     "builds": [
@@ -12243,7 +12243,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Azmodan]",
+        "buildCode": "[T2112112,Azmodan]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -12252,28 +12252,35 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm5gyssra01ns2",
+            "primaryId": "tm5gyssra029qu",
             "alternativeIds": []
           },
           {
             "level": 4,
             "primaryId": "tm5gyssra04v90",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tm5gyssra05g8d",
+              "tm5gyssra06p8z"
+            ]
           },
           {
             "level": 7,
             "primaryId": "tm5gyssra077sy",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tm5gyssra09ro9"
+            ]
           },
           {
             "level": 10,
-            "primaryId": "tm5gyssra10uxe",
+            "primaryId": "tm5gyssra11nsg",
             "alternativeIds": []
           },
           {
             "level": 13,
             "primaryId": "tm5gyssra12pct",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tm5gyssra145fg"
+            ]
           },
           {
             "level": 16,
@@ -12282,8 +12289,10 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tm5gyssra182jn",
-            "alternativeIds": []
+            "primaryId": "tm5gyssra19hi8",
+            "alternativeIds": [
+              "tm5gyssra21kif"
+            ]
           }
         ]
       }
@@ -24397,7 +24406,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Junkrat]",
+        "buildCode": "[T2211231,Junkrat]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -24406,18 +24415,20 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm0q03buz01x0k",
+            "primaryId": "tm0q03buz02fwh",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tm0q03buz04al2",
+            "primaryId": "tm0q03buz05zwq",
             "alternativeIds": []
           },
           {
             "level": 7,
             "primaryId": "tm0q03buz07myd",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tm0q03buz09swx"
+            ]
           },
           {
             "level": 10,
@@ -24426,18 +24437,22 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tm0q03buz12cpq",
+            "primaryId": "tm0q03buz13jma",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tm0q03buz1635c",
-            "alternativeIds": []
+            "primaryId": "tm0q03buz185ty",
+            "alternativeIds": [
+              "tm0q03buz17lgv"
+            ]
           },
           {
             "level": 20,
             "primaryId": "tm0q03buz19jpr",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tm0q03buz2177j"
+            ]
           }
         ]
       }
