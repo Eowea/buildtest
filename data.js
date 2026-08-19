@@ -6745,8 +6745,8 @@ const HEROES = [
       }
     ],
     "bugsUpdatedAt": {
-      "fr": "",
-      "en": ""
+      "fr": "19 Août 2026",
+      "en": "August 19, 2026"
     }
   },
   {
@@ -12478,7 +12478,7 @@ const HEROES = [
   },
   {
     "id": "blaze",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Kramer",
       "en": "Blaze"
@@ -12950,7 +12950,7 @@ const HEROES = [
   },
   {
     "id": "cassia",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Cassia",
       "en": "Cassia"
@@ -13422,7 +13422,7 @@ const HEROES = [
   },
   {
     "id": "chen",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Chen",
       "en": "Chen"
@@ -13908,7 +13908,7 @@ const HEROES = [
   },
   {
     "id": "chogall",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Cho",
       "en": "Cho"
@@ -14380,7 +14380,7 @@ const HEROES = [
   },
   {
     "id": "chromie",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Chromie",
       "en": "Chromie"
@@ -15409,7 +15409,7 @@ const HEROES = [
   },
   {
     "id": "dehaka",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Dehaka",
       "en": "Dehaka"
@@ -15894,7 +15894,7 @@ const HEROES = [
   },
   {
     "id": "diablo",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Diablo",
       "en": "Diablo"
@@ -16366,7 +16366,7 @@ const HEROES = [
   },
   {
     "id": "dva",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "D.Va",
       "en": "D.Va"
@@ -16915,7 +16915,7 @@ const HEROES = [
   },
   {
     "id": "etc",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "E.T.C.",
       "en": "E.T.C."
@@ -17401,7 +17401,7 @@ const HEROES = [
   },
   {
     "id": "falstad",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Falstad",
       "en": "Falstad"
@@ -17886,7 +17886,7 @@ const HEROES = [
   },
   {
     "id": "fenix",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Fenix",
       "en": "Fenix"
@@ -18372,7 +18372,7 @@ const HEROES = [
   },
   {
     "id": "gall",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Gall",
       "en": "Gall"
@@ -18857,7 +18857,7 @@ const HEROES = [
   },
   {
     "id": "garrosh",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Garrosh",
       "en": "Garrosh"
@@ -19342,7 +19342,7 @@ const HEROES = [
   },
   {
     "id": "gazlowe",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Gazleu",
       "en": "Gazlowe"
@@ -19827,7 +19827,7 @@ const HEROES = [
   },
   {
     "id": "genji",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Genji",
       "en": "Genji"
@@ -20299,7 +20299,7 @@ const HEROES = [
   },
   {
     "id": "greymane",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Grisetête",
       "en": "Greymane"
@@ -20829,7 +20829,7 @@ const HEROES = [
   },
   {
     "id": "guldan",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Gul'dan",
       "en": "Gul'dan"
@@ -21301,7 +21301,7 @@ const HEROES = [
   },
   {
     "id": "hanzo",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Hanzo",
       "en": "Hanzo"
@@ -21773,7 +21773,7 @@ const HEROES = [
   },
   {
     "id": "hogger",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Lardeur",
       "en": "Hogger"
@@ -22245,7 +22245,7 @@ const HEROES = [
   },
   {
     "id": "illidan",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Illidan",
       "en": "Illidan"
@@ -23688,7 +23688,7 @@ const HEROES = [
   },
   {
     "id": "johanna",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Johanna",
       "en": "Johanna"
@@ -24652,7 +24652,7 @@ const HEROES = [
   },
   {
     "id": "kelthuzad",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Kel'Thuzad",
       "en": "Kel'Thuzad"
@@ -25137,7 +25137,7 @@ const HEROES = [
   },
   {
     "id": "kerrigan",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Kerrigan",
       "en": "Kerrigan"
@@ -25609,7 +25609,7 @@ const HEROES = [
   },
   {
     "id": "leoric",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Leoric",
       "en": "Leoric"
@@ -26574,7 +26574,7 @@ const HEROES = [
   },
   {
     "id": "lostvikings",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Les Vikings perdus",
       "en": "The Lost Vikings"
@@ -27137,7 +27137,7 @@ const HEROES = [
   },
   {
     "id": "lunara",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Lunara",
       "en": "Lunara"
@@ -27664,7 +27664,7 @@ const HEROES = [
   },
   {
     "id": "maiev",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Maiev",
       "en": "Maiev"
@@ -28122,7 +28122,7 @@ const HEROES = [
   },
   {
     "id": "malganis",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Mal'Ganis",
       "en": "Mal'Ganis"
@@ -28594,7 +28594,7 @@ const HEROES = [
   },
   {
     "id": "malthael",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Malthael",
       "en": "Malthael"
@@ -29080,7 +29080,7 @@ const HEROES = [
   },
   {
     "id": "medivh",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Medivh",
       "en": "Medivh"
@@ -29566,7 +29566,7 @@ const HEROES = [
   },
   {
     "id": "mei",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Mei",
       "en": "Mei"
@@ -30038,7 +30038,7 @@ const HEROES = [
   },
   {
     "id": "mephisto",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Méphisto",
       "en": "Mephisto"
@@ -30510,7 +30510,7 @@ const HEROES = [
   },
   {
     "id": "muradin",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Muradin",
       "en": "Muradin"
@@ -30982,7 +30982,7 @@ const HEROES = [
   },
   {
     "id": "murky",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Bourbie",
       "en": "Murky"
@@ -31998,7 +31998,7 @@ const HEROES = [
   },
   {
     "id": "nova",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Nova",
       "en": "Nova"
@@ -32470,7 +32470,7 @@ const HEROES = [
   },
   {
     "id": "orphea",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Orphea",
       "en": "Orphea"
@@ -32942,7 +32942,7 @@ const HEROES = [
   },
   {
     "id": "probius",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "EDN-OS",
       "en": "Probius"
@@ -33427,7 +33427,7 @@ const HEROES = [
   },
   {
     "id": "qhira",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Qhira",
       "en": "Qhira"
@@ -34431,7 +34431,7 @@ const HEROES = [
   },
   {
     "id": "raynor",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Raynor",
       "en": "Raynor"
@@ -34917,7 +34917,7 @@ const HEROES = [
   },
   {
     "id": "rexxar",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Rexxar",
       "en": "Rexxar"
@@ -35403,7 +35403,7 @@ const HEROES = [
   },
   {
     "id": "samuro",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Samuro",
       "en": "Samuro"
@@ -36368,7 +36368,7 @@ const HEROES = [
   },
   {
     "id": "sonya",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Sonya",
       "en": "Sonya"
@@ -36840,7 +36840,7 @@ const HEROES = [
   },
   {
     "id": "stitches",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Balafré",
       "en": "Stitches"
@@ -37325,7 +37325,7 @@ const HEROES = [
   },
   {
     "id": "sylvanas",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Sylvanas",
       "en": "Sylvanas"
@@ -37797,7 +37797,7 @@ const HEROES = [
   },
   {
     "id": "tassadar",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Tassadar",
       "en": "Tassadar"
@@ -38269,7 +38269,7 @@ const HEROES = [
   },
   {
     "id": "thebutcher",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Le Boucher",
       "en": "The Butcher"
@@ -38741,7 +38741,7 @@ const HEROES = [
   },
   {
     "id": "thrall",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Thrall",
       "en": "Thrall"
@@ -39227,7 +39227,7 @@ const HEROES = [
   },
   {
     "id": "tracer",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Tracer",
       "en": "Tracer"
@@ -40244,7 +40244,7 @@ const HEROES = [
   },
   {
     "id": "tyrael",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Tyrael",
       "en": "Tyrael"
@@ -40730,7 +40730,7 @@ const HEROES = [
   },
   {
     "id": "valeera",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Valeera",
       "en": "Valeera"
@@ -41293,7 +41293,7 @@ const HEROES = [
   },
   {
     "id": "valla",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Valla",
       "en": "Valla"
@@ -41765,7 +41765,7 @@ const HEROES = [
   },
   {
     "id": "varian",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Varian",
       "en": "Varian"
@@ -42264,7 +42264,7 @@ const HEROES = [
   },
   {
     "id": "xul",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Xul",
       "en": "Xul"
@@ -42756,13 +42756,13 @@ const HEROES = [
       }
     ],
     "bugsUpdatedAt": {
-      "fr": "",
-      "en": ""
+      "fr": "19 Août 2026",
+      "en": "August 19, 2026"
     }
   },
   {
     "id": "yrel",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Yrel",
       "en": "Yrel"
@@ -43707,7 +43707,7 @@ const HEROES = [
   },
   {
     "id": "zarya",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Zarya",
       "en": "Zarya"
@@ -44221,7 +44221,7 @@ const HEROES = [
   },
   {
     "id": "zeratul",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Zeratul",
       "en": "Zeratul"
@@ -44706,7 +44706,7 @@ const HEROES = [
   },
   {
     "id": "zuljin",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Zul'jin",
       "en": "Zul'jin"
