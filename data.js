@@ -10321,7 +10321,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Alarak]",
+        "buildCode": "[T1122312,Alarak]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -10340,28 +10340,38 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tmxq76prv076sk",
-            "alternativeIds": []
+            "primaryId": "tmxq76prv08ots",
+            "alternativeIds": [
+              "tmxq76prv09c17"
+            ]
           },
           {
             "level": 10,
-            "primaryId": "tmxq76prv10r8k",
+            "primaryId": "tmxq76prv114dn",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmxq76prv12bc3",
-            "alternativeIds": []
+            "primaryId": "tmxq76prv142a7",
+            "alternativeIds": [
+              "tmxq76prv13077"
+            ]
           },
           {
             "level": 16,
             "primaryId": "tmxq76prv15h4f",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmxq76prv17nda"
+            ]
           },
           {
             "level": 20,
-            "primaryId": "tmxq76prv189ff",
-            "alternativeIds": []
+            "primaryId": "tmxq76prv19a0l",
+            "alternativeIds": [
+              "tmxq76prv189ff",
+              "tmxq76prv20406",
+              "tmxq76prv21cn5"
+            ]
           }
         ]
       }
