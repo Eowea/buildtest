@@ -12223,8 +12223,8 @@ const HEROES = [
         "en": "All Shall Burn heavily Slows you: never channel it unprotected."
       },
       {
-        "fr": "Tes démons poussent seuls : envoie-les dans les lanes vides pendant les combats.",
-        "en": "Your demons push on their own: send them to empty lanes during fights."
+        "fr": "Tes démons peuvent tanker les sorts ennemis.",
+        "en": "Your demons can tank enemy spells."
       }
     ],
     "builds": [
