@@ -10803,7 +10803,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Anubarak]",
+        "buildCode": "[T1212114,Anubarak]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -10817,7 +10817,7 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tm2aikcka04vt9",
+            "primaryId": "tm2aikcka05gv9",
             "alternativeIds": []
           },
           {
@@ -10827,7 +10827,7 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tm2aikcka10ytv",
+            "primaryId": "tm2aikcka11x0r",
             "alternativeIds": []
           },
           {
@@ -10842,7 +10842,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tm2aikcka18scy",
+            "primaryId": "tm2aikcka21rx6",
             "alternativeIds": []
           }
         ]
@@ -11275,7 +11275,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Artanis]",
+        "buildCode": "[T2121331,Artanis]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -11284,8 +11284,10 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmu77uh7t0122y",
-            "alternativeIds": []
+            "primaryId": "tmu77uh7t02u22",
+            "alternativeIds": [
+              "tmu77uh7t034cp"
+            ]
           },
           {
             "level": 4,
@@ -11294,7 +11296,7 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tmu77uh7t07jio",
+            "primaryId": "tmu77uh7t088rp",
             "alternativeIds": []
           },
           {
@@ -11304,18 +11306,21 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tmu77uh7t12yev",
+            "primaryId": "tmu77uh7t14uc6",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmu77uh7t16eh4",
+            "primaryId": "tmu77uh7t18ilq",
             "alternativeIds": []
           },
           {
             "level": 20,
             "primaryId": "tmu77uh7t195sr",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmu77uh7t22j1n",
+              "tmu77uh7t21aei"
+            ]
           }
         ]
       }
@@ -11741,8 +11746,8 @@ const HEROES = [
         "en": "Frozen Tempest drains Mana continuously: turn it off out of combat."
       },
       {
-        "fr": "Armée des morts pousse une lane et bloque physiquement un couloir.",
-        "en": "Army of the Dead pushes a lane and physically body-blocks a corridor."
+        "fr": "Armée des morts peut tanker les sorts ennemis.",
+        "en": "Army of the Dead can absorb enemy spells."
       }
     ],
     "builds": [
@@ -11761,7 +11766,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Arthas]",
+        "buildCode": "[T1131233,Arthas]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -11780,28 +11785,33 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tmmuhvqmf07450",
+            "primaryId": "tmmuhvqmf09apv",
             "alternativeIds": []
           },
           {
             "level": 10,
             "primaryId": "tmmuhvqmf10hrq",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmmuhvqmf11ms3"
+            ]
           },
           {
             "level": 13,
-            "primaryId": "tmmuhvqmf12kj7",
+            "primaryId": "tmmuhvqmf13xzp",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmmuhvqmf15tiu",
+            "primaryId": "tmmuhvqmf17g2v",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmmuhvqmf18tu3",
-            "alternativeIds": []
+            "primaryId": "tmmuhvqmf2002u",
+            "alternativeIds": [
+              "tmmuhvqmf21jkf",
+              "tmmuhvqmf18tu3"
+            ]
           }
         ]
       }
