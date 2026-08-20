@@ -11131,16 +11131,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Prisme de phase (E) te rend insensible aux contrôles : c'est ton engagement.",
-        "en": "Phase Prism (E) makes you Unstoppable: that is your engage."
+        "fr": "Prisme de phase (E) est utilisable pendant Célérité tranchante (A).",
+        "en": "Phase Prism (E) can be used while Blade Dash (Q) is active."
       },
       {
-        "fr": "Chaque ennemi touché par Célérité tranchante (A) rapproche ton prochain bouclier.",
-        "en": "Each enemy hit by Blade Dash (Q) brings your next Shield closer."
+        "fr": "Évite de vouloir Prisme de phase (E) à tout prix, parfois ça peut sauver des ennemis.",
+        "en": "Avoid trying to get Phase Prism (E) at all costs; sometimes it can save enemies."
       },
       {
-        "fr": "Rayon purificateur (R) suit sa cible partout : elle devra fuir son équipe pour s'en défaire.",
-        "en": "Purifier Beam (R) follows its target anywhere: they must flee their team to shake it."
+        "fr": "Chaque ennemi touché par Célérité tranchante (A) ou attaques de base réduit le temps de recharge du Trait.",
+        "en": "Each enemy hit by Sharp Speed (Q) or basic attacks reduces the cooldown of the Trait."
       }
     ],
     "builds": [
@@ -11521,7 +11521,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Artanis"
+    "codeKey": "Artanis",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "arthas",
