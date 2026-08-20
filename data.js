@@ -40465,16 +40465,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Plante El'druin en retrait avant d'engager pour garder une sortie.",
-        "en": "Plant El'druin behind you before engaging to keep an exit."
+        "fr": "Puissance d’El’druin peut servir pour ralentir un ennemi tout comme fuir un combat. ",
+        "en": "El'druin's Power can be used to slow down an enemy or to flee from combat."
       },
       {
         "fr": "Vertu protège aussi tes alliés proches : place-toi entre eux et l'ennemi.",
         "en": "Righteousness also Shields nearby allies: stand between them and the enemy."
       },
       {
-        "fr": "Ta mort déclenche une explosion : elle peut retourner un combat perdu.",
-        "en": "Your death triggers an explosion: it can turn a lost fight around."
+        "fr": "Ta mort déclenche une explosion : elle inflige des dégâts, réduit les dégâts des ennemis et te faire réapparaitre plus vite.",
+        "en": "Your death triggers an explosion: it deals damage, reduces damage from enemies, and makes you respawn faster."
       }
     ],
     "builds": [
