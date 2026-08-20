@@ -17097,16 +17097,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Glissade sert autant à engager qu'à repousser un plongeur loin de ton soigneur.",
-        "en": "Powerslide is as good for engaging as for knocking a diver off your healer."
+        "fr": "Glissade (A) sert autant à engager qu'à protéger tes alliés.",
+        "en": "Powerslide (Q) is used both to engage enemies and to protect your allies."
       },
       {
-        "fr": "Pogo se lance depuis un buisson ou juste après une Glissade réussie.",
-        "en": "Mosh Pit is cast from a bush or right after a successful Powerslide."
+        "fr": "Ton Fondu (Z) ne sert qu'à protéger tes alliés, et peut aussi annuler des sorts.",
+        "en": "Your Face Melt (W) is used solely to protect your allies, and can also dispel spells."
       },
       {
-        "fr": "Solo te soigne beaucoup : lance-le avant d'être au plus bas.",
-        "en": "Guitar Solo heals a lot: start it before you are critically low."
+        "fr": "Solo (E) te soigne beaucoup : lance-le très souvent, il active aussi ton Trait.",
+        "en": "Guitar Solo (E) heals you a lot: use it often—it also activates your Trait."
       }
     ],
     "builds": [
@@ -17482,7 +17482,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "ETC"
+    "codeKey": "ETC",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "falstad",
