@@ -1305,16 +1305,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Utilise ton totem (E) pour protéger un allié ou attraper un ennemi",
+        "fr": "Utilise ton totem (E) pour protéger un allié ou attraper un ennemi.",
         "en": "Use your totem (E) to protect an ally or catch an enemy."
       },
       {
-        "fr": "Place ton Bouclier de foudre (Z) sur ton tank",
+        "fr": "Place ton Bouclier de foudre (Z) sur ton tank.",
         "en": "Place Lightning Shield (W) on your frontline tank."
       },
       {
-        "fr": "Ne pas avoir peur d'aller mettre des attaques de base",
-        "en": "Don't be afraid to auto-attacks."
+        "fr": "N'aie pas peur d'aller placer des attaques de base.",
+        "en": "Don't be afraid to go in and auto-attack."
       }
     ],
     "builds": [
@@ -1868,7 +1868,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Utilise ta Métamorphose (Z) pour casser les canalisations adverses ou protèger un allié",
+        "fr": "Utilise ta Métamorphose (Z) pour casser les canalisations adverses ou protéger un allié.",
         "en": "Use your Polymorph (W) to interrupt enemy channels or protect your allies."
       },
       {
@@ -1876,7 +1876,7 @@ const HEROES = [
         "en": "Keep an eye on the minimap to use your global effectively."
       },
       {
-        "fr": "Essaye d'utiliser Poudre de perlimpinpin (E) sur allié quand il va se faire burst",
+        "fr": "Essaye d'utiliser Poudre de perlimpinpin (E) sur allié quand il va se faire burst.",
         "en": "Try to use Pixie Dust (E) on an ally when they’re about to get bursted."
       }
     ],
@@ -2986,12 +2986,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "N'utilise pas ton D pour un petit combat, favorise les phases objectifs. ",
-        "en": "Don't use your D for a small skirmish; focus on objective-based gameplay instead."
+        "fr": "N'utilise pas Reine-dragon (D) pour un petit combat, favorise les phases objectifs. ",
+        "en": "Don't use Dragonqueen (D) for a small skirmish; focus on objective-based gameplay instead."
       },
       {
-        "fr": "Pose ton Z là où tes alliés vont.",
-        "en": "Place your W where your allies will go."
+        "fr": "Pose Luxuriance (Z) là où tes alliés vont.",
+        "en": "Place Abundance (W) where your allies will go."
       },
       {
         "fr": "Pendant la transformation en dragon (D) et un court instant, tu deviens inciblable. ",
@@ -3536,8 +3536,8 @@ const HEROES = [
         "en": "Position yourself very far back to heal."
       },
       {
-        "fr": "Lorsque tu touches un ennemi avec ton E, pendant 0,5secondes il ne peut pas être réveillé. ",
-        "en": "When you hit an enemy with your E, they cannot be woken up for 0.5 seconds."
+        "fr": "Lorsque tu touches un ennemi avec Fléchette hypodermique (E), pendant 0,5secondes il ne peut pas être réveillé. ",
+        "en": "When you hit an enemy with Sleep Dart (E), they cannot be woken up for 0.5 seconds."
       }
     ],
     "builds": [
@@ -4080,11 +4080,11 @@ const HEROES = [
         "en": "Switch your crown (D) to another target if your ally is not dealing damage or if they are dead."
       },
       {
-        "fr": "Cherche les étourdissements sur les murs avec ton E.",
+        "fr": "Cherche les étourdissements sur les murs avec Entrave (E).",
         "en": "Look for wall stuns with Detainment Strike (E)."
       },
       {
-        "fr": "Utiliser ton A sur des vagues de serviteurs te donne beaucoup d'énergie.",
+        "fr": "Utiliser Arc vertueux (A) sur des vagues de serviteurs te donne beaucoup d'énergie.",
         "en": "Using Sacred Sweep (Q) on minion waves gives you a lot of Energy."
       }
     ],
@@ -4632,8 +4632,8 @@ const HEROES = [
         "en": "Attack constantly to maximize your passive."
       },
       {
-        "fr": "Garde un A pour fuir.",
-        "en": "Keep a Q charge to escape."
+        "fr": "Garde une charge de Frappe éclair (A) pour fuir.",
+        "en": "Keep a Radiant Dash (Q) charge to escape."
       },
       {
         "fr": "Les Sept Frappes (R) inflige + de dégâts à une seule cible qu'à plusieurs. ",
@@ -5183,8 +5183,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tu peux maintenir ta touche A pour soigner.",
-        "en": "Hold down the Q key during combat."
+        "fr": "Tu peux maintenir Infusion requinquante (A) pour soigner.",
+        "en": "Hold down Healing Brew (Q) during combat."
       },
       {
         "fr": "Approche toi de la cible que tu veux soigner.",
@@ -5789,8 +5789,8 @@ const HEROES = [
         "en": "Your grenade (E) is your only self-defense tool."
       },
       {
-        "fr": "Pense à mettre ton A sur un allié ou un serviteur pour te soigner grâce à ton trait !",
-        "en": "Remember to target an ally or minion with your Q to heal yourself using your trait!"
+        "fr": "Pense à mettre Rayon de soins (A) sur un allié ou un serviteur pour te soigner grâce à ton trait !",
+        "en": "Remember to target an ally or minion with Healing Beam (Q) to heal yourself using your trait!"
       }
     ],
     "builds": [
@@ -6320,16 +6320,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Maintiens ton A sur autant d'alliés que possible.",
-        "en": "Keep your Q on as many allies as possible."
+        "fr": "Maintiens Rétablissement (A) sur autant d'alliés que possible.",
+        "en": "Keep Regrowth (Q) on as many allies as possible."
       },
       {
-        "fr": "Spam le Z sur les ennemis pour soigner.",
-        "en": "Spam W on enemies to heal."
+        "fr": "Spam Éclat lunaire (Z) sur les ennemis pour soigner.",
+        "en": "Spam Moonfire (W) on enemies to heal."
       },
       {
-        "fr": "Utilise ton E pour suivre des controles ou protèger tes alliés",
-        "en": "Use your E to follow up on crowd control or protect your allies."
+        "fr": "Utilise Sarments (E) pour suivre des contrôles ou protéger tes alliés.",
+        "en": "Use Entangling Roots (E) to follow up on crowd control or protect your allies."
       }
     ],
     "builds": [
@@ -6848,12 +6848,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Attends que le A se propage à tout le monde avant de faire péter le D.",
-        "en": "Wait for Q to spread to everyone before pressing D."
+        "fr": "Attends que Virus régénérateur (A) se propage à tout le monde avant de faire péter Éruption éruptive (D).",
+        "en": "Wait for Healing Pathogen (Q) to spread to everyone before pressing Bio-Kill Switch (D)."
       },
       {
-        "fr": "Place le E sur un CC allié.",
-        "en": "Place E on top of an allied CC."
+        "fr": "Place Menace larvée (E) sur un CC allié.",
+        "en": "Place Lurking Arm (E) on top of an allied CC."
       }
     ],
     "builds": [
@@ -7404,7 +7404,7 @@ const HEROES = [
         "en": "Mark the target your tank engages on."
       },
       {
-        "fr": "Les dégâts que fait Tyrande réduisent le temps de recharge son A, même les dégâts de sa capacité héroïque !",
+        "fr": "Les dégâts que fait Tyrande réduisent le temps de recharge de Lumière d'Élune (A), même les dégâts de sa capacité héroïque !",
         "en": "Any damage Tyrande deals reduces Light of Elune (Q)'s cooldown, even the damage from her Heroic Ability!"
       }
     ],
@@ -8505,15 +8505,15 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Gère ton mana, ne spamme pas le A.",
+        "fr": "Gère ton mana, ne spamme pas Supplique (A).",
         "en": "Manage your Mana, do not spam Desperate Plea (Q)."
       },
       {
-        "fr": "Égide écarlate (R) est parfait pour contrer les engages ennemis ou appliqué Zèle (D) en masse.",
+        "fr": "Égide écarlate (R) est parfait pour contrer les engages ennemis ou appliquer Zèle (D) en masse.",
         "en": "Scarlet Aegis (R) is perfect to counter enemy engages or to apply Zeal (D) to multiple allies."
       },
       {
-        "fr": "Utilise Mansuétude (&) entre deux A pour consommer le moins de mana possible.",
+        "fr": "Utilise Mansuétude (&) entre deux lancers de Supplique (A) pour consommer le moins de mana possible.",
         "en": "Use Clemency (1) between Desperate Plea (Q) casts to minimize Mana consumption."
       }
     ],
@@ -39977,8 +39977,8 @@ const HEROES = [
         "en": "Run and Gun (E) is as good for escaping as for repositioning."
       },
       {
-        "fr": "Tes attaques de base font plus de dégâts que ton A (sans talent), utilise le utiliser pour poursuivre un ennemi. ",
-        "en": "Your basic attacks deal more damage than your Q (without a talent), so use it to chase an enemy."
+        "fr": "Tes attaques de base font plus de dégâts que ton Exécution (A) sans talent, utilise-le pour poursuivre un ennemi. ",
+        "en": "Your basic attacks deal more damage than your Overkill (Q) without a talent, so use it to chase an enemy."
       }
     ],
     "builds": [
