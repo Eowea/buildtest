@@ -22953,7 +22953,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T3211221,Imperius]",
+        "buildCode": "[T2112114,Imperius]",
         "videos": [],
         "updatedAt": {
           "fr": "16 Août 2026",
@@ -22962,12 +22962,12 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmfp1zq8g03kem",
+            "primaryId": "tmfp1zq8g02r1d",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmfp1zq8g05wqu",
+            "primaryId": "tmfp1zq8g043u7",
             "alternativeIds": []
           },
           {
@@ -22977,23 +22977,29 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tmfp1zq8g108jg",
-            "alternativeIds": []
+            "primaryId": "tmfp1zq8g11xcm",
+            "alternativeIds": [
+              "tmfp1zq8g108jg"
+            ]
           },
           {
             "level": 13,
-            "primaryId": "tmfp1zq8g139xr",
+            "primaryId": "tmfp1zq8g12x7e",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmfp1zq8g163r7",
-            "alternativeIds": []
+            "primaryId": "tmfp1zq8g15nz1",
+            "alternativeIds": [
+              "tmfp1zq8g17x31"
+            ]
           },
           {
             "level": 20,
-            "primaryId": "tmfp1zq8g184ck",
-            "alternativeIds": []
+            "primaryId": "tmfp1zq8g21aki",
+            "alternativeIds": [
+              "tmfp1zq8g22yka"
+            ]
           }
         ]
       }
@@ -23105,7 +23111,7 @@ const HEROES = [
           "fr": "Rayon de gloire",
           "en": "Blaze of Glory"
         },
-        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_w_alt_01.png",
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_w.png",
         "description": {
           "fr": "Flamme de Solarion laisse une traînée de braises qui explose après un court délai, avec un bonus de dégâts sur les cibles marquées.",
           "en": "Solarion's Fire leaves a trail of embers that explodes after a short delay, dealing bonus damage to marked targets."
@@ -23203,7 +23209,7 @@ const HEROES = [
           "fr": "Élan céleste",
           "en": "Celestial Swiftness"
         },
-        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_item_02.png",
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_q.png",
         "description": {
           "fr": "Lancer Charge céleste accorde de la vitesse de déplacement, et chaque héros étourdi par elle accorde de la vitesse d'attaque.",
           "en": "Casting Celestial Charge grants Movement Speed, and each Hero Stunned by it grants Attack Speed."
@@ -23217,7 +23223,7 @@ const HEROES = [
           "fr": "Toucher fusionnel",
           "en": "Melting Touch"
         },
-        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_e_alt_01.png",
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_e.png",
         "description": {
           "fr": "Consommer une marque posée par Radiance réduit temporairement l'armure de la cible.",
           "en": "Consuming a mark from Radiance temporarily reduces the target's Armor."
@@ -23231,7 +23237,7 @@ const HEROES = [
           "fr": "Traque des impies",
           "en": "Valorous Pursuit"
         },
-        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_trait.png",
+        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_item_03.png",
         "description": {
           "fr": "Capacité active : se téléporte sur un ennemi marqué et confère temporairement de l'armure.",
           "en": "Active: teleports to a marked enemy and grants temporary Armor."
@@ -23245,7 +23251,7 @@ const HEROES = [
           "fr": "Armée des Cieux",
           "en": "Heavenly Host"
         },
-        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_r1_activate.png",
+        "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_r1.png",
         "description": {
           "fr": "Les boucliers d'Arsenal angélique n'expirent plus, et les alliés proches en reçoivent un à l'activation. Un bouclier allié qui tient assez longtemps décoche une épée sur un ennemi proche.",
           "en": "Angelic Armaments' Shields no longer expire, and nearby allies gain one on activation. An allied Shield that lasts long enough fires a sword at a nearby enemy."
@@ -23301,9 +23307,9 @@ const HEROES = [
           "fr": "Inexorable",
           "en": "Impervious"
         },
-        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_item_03.png",
+        "icon": "assets/heroes/base_spells/imperius/images/talents/storm_ui_icon_imperius_item_02.png",
         "description": {
-          "fr": "Capacité active : rend Impérius increvable et lui confère de l'armure anti-sort. Toucher des héros avec le centre de Flamme de Solarion réduit son temps de recharge.",
+          "fr": "Capacité active : rend Impérius Insensible et lui confère de l'armure anti-sort. Toucher des héros avec le centre de Flamme de Solarion réduit son temps de recharge.",
           "en": "Active: makes Imperius Unstoppable and grants Spell Armor. Hitting Heroes with the center of Solarion's Fire reduces its cooldown."
         },
         "demoYoutubeId": null
@@ -23311,7 +23317,12 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Imperius",
-    "isNew": true
+    "isNew": true,
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "jaina",
