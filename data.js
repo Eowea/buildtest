@@ -16079,8 +16079,8 @@ const HEROES = [
         "en": "Overpower slams the target behind you: stand between them and their escape."
       },
       {
-        "fr": "Collecte les âmes en continu : ton retour à la vie en dépend directement.",
-        "en": "Collect Souls constantly: your resurrection depends directly on it."
+        "fr": "Si tu as toutes tes âmes, n'est pas peur de mourir tu reviens juste après.",
+        "en": "If you have all your souls, don't be afraid to die—you'll just come back right away."
       }
     ],
     "builds": [
@@ -16442,7 +16442,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Diablo"
+    "codeKey": "Diablo",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "dva",
