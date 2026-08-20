@@ -89,7 +89,7 @@ const STREAMER_CONFIG = {
       "youtubeId": "https://youtu.be/m8kifCbSy-s"
     }
   ],
-  "showHeroRotation": false,
+  "showHeroRotation": true,
   "siteUpdate": {
     "enabled": true,
     "autoDate": true,

@@ -2384,7 +2384,7 @@ function showConfigPanel(){
     </div>
     <div class="card">
       <h3>Rotation gratuite (page d'accueil)</h3>
-      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Affiche la rotation de héros gratuits de la semaine sous les vidéos, via l'API de nexuscompendium.com.</small>
+      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Affiche la rotation de héros gratuits en cours sous les vidéos. Elle est calculée depuis la date du jour à partir du calendrier de <code>rotations.js</code> : aucun appel réseau, rien à mettre à jour chaque semaine.</small>
       <div class="checkbox-row">
         <input type="checkbox" ${STREAMER_CONFIG.showHeroRotation !== false ? 'checked' : ''} onchange="setNested(STREAMER_CONFIG,'showHeroRotation',this.checked)" />
         <label style="margin:0;text-transform:none;">Afficher la rotation gratuite</label>
