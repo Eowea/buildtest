@@ -590,7 +590,10 @@ function currentRotationWindow(today = new Date()) {
   const next = idx === ROTATION_DAYS.length - 1
     ? new Date(today.getFullYear(), month, 1)                       // le 1er du mois suivant
     : new Date(today.getFullYear(), month - 1, ROTATION_DAYS[idx + 1]);
-  const end = new Date(next.getTime() - 86400000);
+  // Veille de la borne suivante, calculée en jours et non en millisecondes : retirer
+  // 24 h tomberait à côté les jours de changement d'heure (le jour 0 d'un mois renvoie
+  // au dernier jour du mois précédent, ce qui couvre aussi le passage de mois).
+  const end = new Date(next.getFullYear(), next.getMonth(), next.getDate() - 1);
   return { start, end, heroIds: entry[2] };
 }
 
