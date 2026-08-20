@@ -94,8 +94,8 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "19 Août 2026",
-      "en": "August 19, 2026"
+      "fr": "20 Août 2026",
+      "en": "August 20, 2026"
     }
   }
 };
@@ -14063,17 +14063,23 @@ const HEROES = [
           {
             "level": 13,
             "primaryId": "tmgns5b2c14cc2",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmgns5b2c13lea"
+            ]
           },
           {
             "level": 16,
             "primaryId": "tmgns5b2c15oks",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmgns5b2c17jzd"
+            ]
           },
           {
             "level": 20,
             "primaryId": "tmgns5b2c21mgk",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmgns5b2c20wan"
+            ]
           }
         ]
       }
@@ -14376,7 +14382,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Chogall"
+    "codeKey": "Chogall",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "chromie",
@@ -36978,7 +36989,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Stitches]",
+        "buildCode": "[T1112112,Stitches]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -36998,11 +37009,13 @@ const HEROES = [
           {
             "level": 7,
             "primaryId": "tmhvf372007spa",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmhvf372009x9j"
+            ]
           },
           {
             "level": 10,
-            "primaryId": "tmhvf372010vfi",
+            "primaryId": "tmhvf37201141u",
             "alternativeIds": []
           },
           {
@@ -37017,8 +37030,10 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmhvf372018vp4",
-            "alternativeIds": []
+            "primaryId": "tmhvf372019vxg",
+            "alternativeIds": [
+              "tmhvf372020zva"
+            ]
           }
         ]
       }
