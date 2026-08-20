@@ -12606,8 +12606,8 @@ const HEROES = [
         "buildCode": "[T1321331,Blaze]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "19 Août 2026",
+          "en": "August 19, 2026"
         },
         "talentSelections": [
           {
@@ -12665,8 +12665,8 @@ const HEROES = [
         "buildCode": "[T2221331,Blaze]",
         "videos": [],
         "updatedAt": {
-          "fr": "",
-          "en": ""
+          "fr": "19 Août 2026",
+          "en": "August 19, 2026"
         },
         "talentSelections": [
           {
@@ -14095,8 +14095,8 @@ const HEROES = [
         "buildCode": "[T2331314,Chogall]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "19 Août 2026",
+          "en": "August 19, 2026"
         },
         "talentSelections": [
           {
@@ -16092,8 +16092,8 @@ const HEROES = [
         "buildCode": "[T3212224,Diablo]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "19 Août 2026",
+          "en": "August 19, 2026"
         },
         "talentSelections": [
           {
@@ -17113,8 +17113,8 @@ const HEROES = [
         "buildCode": "[T3221135,ETC]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "19 Août 2026",
+          "en": "August 19, 2026"
         },
         "talentSelections": [
           {
@@ -19068,8 +19068,8 @@ const HEROES = [
         "buildCode": "[T1321133,Garrosh]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "19 Août 2026",
+          "en": "August 19, 2026"
         },
         "talentSelections": [
           {
@@ -23886,8 +23886,8 @@ const HEROES = [
         "buildCode": "[T1322222,Johanna]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "19 Août 2026",
+          "en": "August 19, 2026"
         },
         "talentSelections": [
           {
@@ -28320,8 +28320,8 @@ const HEROES = [
         "buildCode": "[T1121131,MalGanis]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "19 Août 2026",
+          "en": "August 19, 2026"
         },
         "talentSelections": [
           {
@@ -29764,8 +29764,8 @@ const HEROES = [
         "buildCode": "[T2221321,Mei]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "19 Août 2026",
+          "en": "August 19, 2026"
         },
         "talentSelections": [
           {
@@ -30708,8 +30708,8 @@ const HEROES = [
         "buildCode": "[T2331223,Muradin]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "19 Août 2026",
+          "en": "August 19, 2026"
         },
         "talentSelections": [
           {
@@ -37051,8 +37051,8 @@ const HEROES = [
         "buildCode": "[T1112112,Stitches]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "19 Août 2026",
+          "en": "August 19, 2026"
         },
         "talentSelections": [
           {
@@ -40446,8 +40446,8 @@ const HEROES = [
         "buildCode": "[T2221311,Tyrael]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "19 Août 2026",
+          "en": "August 19, 2026"
         },
         "talentSelections": [
           {
