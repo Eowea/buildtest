@@ -10654,16 +10654,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Empale ne traverse pas les murs : utilise-le pour bloquer une fuite dans un couloir.",
-        "en": "Impale does not go through walls: use it to cut off an escape in a corridor."
+        "fr": "Tes scarabées peuvent servir pour tanker les sorts et aussi assiéger les bâtiments.",
+        "en": "Your beetles can be used to absorb spells and also to lay siege to buildings."
       },
       {
-        "fr": "Utilise tes capacités avant l'engagement pour accumuler des scarabées.",
-        "en": "Use your Abilities before the engage to build up Beetles."
+        "fr": "Utilise ton Empale (A) en premier pour sécuriser ta Charge enfouie (E) et ne pas la louper.",
+        "en": "Use your Impale (Q) first to set up your Burrow Charge (E) so you don't miss it."
       },
       {
-        "fr": "Cocon met un héros hors du combat quelques secondes, à moins que ses alliés ne le libèrent.",
-        "en": "Cocoon takes a Hero out of the fight for a few seconds, unless their allies free them."
+        "fr": "Vaut mieux parfois attendre dans un buisson que de se montrer sur la carte !",
+        "en": "Sometimes it's better to wait in a bush than to show up on the map! "
       }
     ],
     "builds": [
@@ -11025,7 +11025,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Anubarak"
+    "codeKey": "Anubarak",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "artanis",
