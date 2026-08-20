@@ -3973,7 +3973,7 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "isNew": true,
+    "isNew": false,
     "forms": [],
     "codeKey": "Ana"
   },
@@ -10071,7 +10071,8 @@ const HEROES = [
         }
       }
     ],
-    "codeKey": "Abathur"
+    "codeKey": "Abathur",
+    "isNew": true
   },
   {
     "id": "alarak",
@@ -11030,7 +11031,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": true
   },
   {
     "id": "artanis",
@@ -11526,7 +11528,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": true
   },
   {
     "id": "arthas",
@@ -12008,7 +12011,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": true
   },
   {
     "id": "azmodan",
@@ -12489,7 +12493,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Azmodan"
+    "codeKey": "Azmodan",
+    "isNew": true
   },
   {
     "id": "blaze",
@@ -13025,7 +13030,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": true
   },
   {
     "id": "cassia",
@@ -14466,7 +14472,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": true
   },
   {
     "id": "chromie",
@@ -15495,7 +15502,8 @@ const HEROES = [
         }
       }
     ],
-    "codeKey": "Deathwing"
+    "codeKey": "Deathwing",
+    "isNew": true
   },
   {
     "id": "dehaka",
@@ -16457,7 +16465,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": true
   },
   {
     "id": "dva",
@@ -17497,7 +17506,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": true
   },
   {
     "id": "falstad",
@@ -19438,7 +19448,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Garrosh"
+    "codeKey": "Garrosh",
+    "isNew": true
   },
   {
     "id": "gazlowe",
@@ -23299,7 +23310,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Imperius"
+    "codeKey": "Imperius",
+    "isNew": true
   },
   {
     "id": "jaina",
@@ -24261,7 +24273,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": true
   },
   {
     "id": "junkrat",
@@ -26674,7 +26687,7 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "isNew": true,
+    "isNew": false,
     "codeKey": "LiMing"
   },
   {
@@ -28700,7 +28713,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": true
   },
   {
     "id": "malthael",
@@ -30149,7 +30163,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": true
   },
   {
     "id": "mephisto",
@@ -31098,7 +31113,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": true
   },
   {
     "id": "murky",
@@ -32113,7 +32129,7 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "isNew": true,
+    "isNew": false,
     "codeKey": "Nazeebo"
   },
   {
@@ -34552,7 +34568,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": true
   },
   {
     "id": "raynor",
@@ -36488,7 +36505,7 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "isNew": true,
+    "isNew": false,
     "codeKey": "SgtHammer"
   },
   {
@@ -37455,7 +37472,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": true
   },
   {
     "id": "sylvanas",
@@ -40373,7 +40391,7 @@ const HEROES = [
         }
       }
     ],
-    "isNew": true,
+    "isNew": false,
     "codeKey": "Tychus"
   },
   {
@@ -40860,7 +40878,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Tyrael"
+    "codeKey": "Tyrael",
+    "isNew": true
   },
   {
     "id": "valeera",
@@ -43836,7 +43855,7 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "isNew": true,
+    "isNew": false,
     "codeKey": "Zagara"
   },
   {
