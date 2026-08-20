@@ -12585,15 +12585,15 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Enflamme la flaque avec Flambée : les ennemis dessus brûlent, et tu t'y soignes.",
-        "en": "Ignite the pool with Flame Stream: enemies on it burn, and you heal in it."
+        "fr": "Tu n'es pas obligé d'allumer Flaque d'Huile : elle ralentit. Si tu l'allumes avec Flambée, alors elle ne ralentit plus mais inflige des dégâts et te soigne. ",
+        "en": "You don't have to activate Oil Slick—it slows enemies. If you activate it with Blaze, it no longer slows enemies but deals damage and heals you."
       },
       {
         "fr": "Le Bunker abrite tes alliés et les renforce à la sortie, mais l'ennemi peut le détruire.",
         "en": "The Bunker shelters your allies and empowers them on exit, but the enemy can destroy it."
       },
       {
-        "fr": "Charge à réaction sert autant à engager qu'à décoller après un combat.",
+        "fr": "Charge à réaction sert autant à engager qu'à fuir un combat.",
         "en": "Jet Propulsion is as good for engaging as for disengaging."
       }
     ],
@@ -13015,7 +13015,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Blaze"
+    "codeKey": "Blaze",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "cassia",
