@@ -37030,16 +37030,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Crochet depuis un buisson : c'est là que tu es le plus dangereux.",
-        "en": "Hook from a bush: that is where you are most dangerous."
+        "fr": "Tant que les ennemis ne te voient pas, ils ont peur de se faire attraper.",
+        "en": "As long as the enemies don't see you, they're afraid of getting caught."
       },
       {
-        "fr": "Main secourable rattrape un allié en fuite et recharge ton Crochet.",
-        "en": "Helping Hand catches a fleeing ally and refreshes your Hook."
+        "fr": "Main secourable peut sauver un allié et le rend Insensible pendant la trajectoire.",
+        "en": "Helping Hand can save an ally and make them Unstoppable while in flight."
       },
       {
-        "fr": "Gavage retire un tank du combat pendant plusieurs secondes, sans qu'on puisse l'aider.",
-        "en": "Gorge removes a tank from the fight for several seconds, beyond any help."
+        "fr": "Balafré est un tank, donc il n'est pas absolument pas nécessaire de rester toujours derrière à ne rien faire.",
+        "en": "Stitches is a tank, so there's absolutely no need to just stay in the back doing nothing."
       }
     ],
     "builds": [
@@ -37405,7 +37405,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Stitches"
+    "codeKey": "Stitches",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "sylvanas",
