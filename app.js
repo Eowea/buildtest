@@ -272,8 +272,10 @@ function markEverythingAsSeen(hero) {
       const date = u.enabled === false ? '' : loc(u.date);
       if (!date) { els.siteUpdate.innerHTML = ''; els.siteUpdate.hidden = true; return; }
       els.siteUpdate.hidden = false;
-      // La bulle n'apparaît que s'il y a effectivement des changements à lire.
-      const bulle = changelogEntries().length ? `<button class="site-update-bubble" type="button" id="changelogBtn" aria-label="${escapeHtml(t('changelogOpen'))}" title="${escapeHtml(t('changelogOpen'))}">`
+      // La bulle n'apparaît que s'il y a effectivement des changements à lire, et
+      // clignote tant que ce visiteur ne les a pas ouverts.
+      const neuf = !hasSeenChangelog() ? ' is-unread' : '';
+      const bulle = changelogEntries().length ? `<button class="site-update-bubble${neuf}" type="button" id="changelogBtn" aria-label="${escapeHtml(t('changelogOpen'))}" title="${escapeHtml(t('changelogOpen'))}">`
         + `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.9 3 3 6.4 3 10.6c0 2.4 1.3 4.6 3.4 6l-.7 3.2c-.1.5.4.9.9.7l3.7-1.9c.6.1 1.2.2 1.7.2 5.1 0 9-3.4 9-7.6S17.1 3 12 3Z"/></svg>`
         + `</button>` : '';
       els.siteUpdate.innerHTML = `<span class="site-update-label">${t('siteUpdateLabel')}</span>`
@@ -293,6 +295,27 @@ function markEverythingAsSeen(hero) {
       return brut
         .map(e => ({ date: loc(e.date), items: (e.items || []).map(loc).filter(x => x && x.trim()) }))
         .filter(e => e.items.length);
+    }
+
+    // Signature de l'entrée la plus récente : sa date FR et son nombre de lignes. Ajouter
+    // une entrée ou une ligne fait donc réapparaître le clignotement, alors qu'une simple
+    // correction de faute ne relance pas l'alerte chez tout le monde.
+    function changelogSignature() {
+      const brut = (STREAMER_CONFIG.siteUpdate || {}).changelog;
+      const premiere = Array.isArray(brut) ? brut.find(e => (e.items || []).some(i => loc(i).trim())) : null;
+      if (!premiere) return '';
+      const nb = (premiere.items || []).filter(i => loc(i).trim()).length;
+      return `${(premiere.date && premiere.date.fr) || ''}_${nb}`;
+    }
+
+    function hasSeenChangelog() {
+      const sig = changelogSignature();
+      if (!sig) return true;
+      try { return localStorage.getItem('seenChangelog') === sig; } catch (e) { return false; }
+    }
+
+    function markChangelogSeen() {
+      try { localStorage.setItem('seenChangelog', changelogSignature()); } catch (e) { /* navigation privée */ }
     }
 
     function renderChangelog() {
@@ -315,6 +338,9 @@ function markEverythingAsSeen(hero) {
       renderChangelog();
       o.classList.add('active');
       o.setAttribute('aria-hidden', 'false');
+      // Lu : le clignotement s'arrête sans attendre un nouveau rendu de l'en-tête.
+      markChangelogSeen();
+      document.getElementById('changelogBtn')?.classList.remove('is-unread');
       document.getElementById('closeChangelogBtn')?.focus();
     }
 
