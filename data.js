@@ -12478,7 +12478,7 @@ const HEROES = [
   },
   {
     "id": "blaze",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Kramer",
       "en": "Blaze"
@@ -12592,8 +12592,8 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build recommandé",
-          "en": "Recommended build"
+          "fr": "Build solo lane",
+          "en": "Solo Lane Build"
         },
         "summary": {
           "fr": "Build qui passe partout, peu importe le mode de jeu.",
@@ -12603,7 +12603,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Blaze]",
+        "buildCode": "[T1321331,Blaze]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -12617,12 +12617,12 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmv97jimq05ic4",
+            "primaryId": "tmv97jimq07gyf",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmv97jimq08r89",
+            "primaryId": "tmv97jimq09a0b",
             "alternativeIds": []
           },
           {
@@ -12632,12 +12632,71 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tmv97jimq13279",
+            "primaryId": "tmv97jimq15s1k",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmv97jimq16488",
+            "primaryId": "tmv97jimq18r52",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmv97jimq19w25",
+            "alternativeIds": []
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build tank",
+          "en": "Tank Build"
+        },
+        "summary": {
+          "fr": "",
+          "en": ""
+        },
+        "buildCodeTitle": {
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
+        },
+        "buildCode": "[T2221331,Blaze]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "",
+          "en": ""
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmv97jimq02nma",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmv97jimq06jnn",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmv97jimq09a0b",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmv97jimq119gh",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmv97jimq15s1k",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmv97jimq18r52",
             "alternativeIds": []
           },
           {
@@ -28122,7 +28181,7 @@ const HEROES = [
   },
   {
     "id": "malganis",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Mal'Ganis",
       "en": "Mal'Ganis"
@@ -28247,7 +28306,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,MalGanis]",
+        "buildCode": "[T1121131,MalGanis]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -28266,7 +28325,7 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tmfz40dna07skt",
+            "primaryId": "tmfz40dna08y46",
             "alternativeIds": []
           },
           {
@@ -28281,7 +28340,7 @@ const HEROES = [
           },
           {
             "level": 16,
-            "primaryId": "tmfz40dna15uwo",
+            "primaryId": "tmfz40dna17ub3",
             "alternativeIds": []
           },
           {
@@ -29566,7 +29625,7 @@ const HEROES = [
   },
   {
     "id": "mei",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Mei",
       "en": "Mei"
@@ -29691,7 +29750,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Mei]",
+        "buildCode": "[T2221321,Mei]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -29700,17 +29759,17 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm9stkg6b01580",
+            "primaryId": "tm9stkg6b027x1",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tm9stkg6b04hn2",
+            "primaryId": "tm9stkg6b05qxu",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tm9stkg6b07vpl",
+            "primaryId": "tm9stkg6b08f3c",
             "alternativeIds": []
           },
           {
@@ -29720,12 +29779,12 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tm9stkg6b12z0t",
+            "primaryId": "tm9stkg6b14qwz",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tm9stkg6b157d7",
+            "primaryId": "tm9stkg6b16qjm",
             "alternativeIds": []
           },
           {
@@ -30510,7 +30569,7 @@ const HEROES = [
   },
   {
     "id": "muradin",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Muradin",
       "en": "Muradin"
@@ -30635,7 +30694,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Muradin]",
+        "buildCode": "[T2331223,Muradin]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -30644,17 +30703,17 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmx3fbf1k01c8g",
+            "primaryId": "tmx3fbf1k022zf",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmx3fbf1k04utk",
+            "primaryId": "tmx3fbf1k063yt",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmx3fbf1k072hj",
+            "primaryId": "tmx3fbf1k09lda",
             "alternativeIds": []
           },
           {
@@ -30664,17 +30723,17 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tmx3fbf1k12u44",
+            "primaryId": "tmx3fbf1k13dft",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmx3fbf1k15dk4",
+            "primaryId": "tmx3fbf1k16fyx",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmx3fbf1k18h0m",
+            "primaryId": "tmx3fbf1k20nfn",
             "alternativeIds": []
           }
         ]
@@ -40244,7 +40303,7 @@ const HEROES = [
   },
   {
     "id": "tyrael",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Tyrael",
       "en": "Tyrael"
@@ -40369,7 +40428,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Tyrael]",
+        "buildCode": "[T2221311,Tyrael]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -40378,17 +40437,17 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm9rrdqrv01fah",
+            "primaryId": "tm9rrdqrv02kp4",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tm9rrdqrv04omd",
+            "primaryId": "tm9rrdqrv05nem",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tm9rrdqrv079uh",
+            "primaryId": "tm9rrdqrv084zq",
             "alternativeIds": []
           },
           {
@@ -40398,7 +40457,7 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tm9rrdqrv12uld",
+            "primaryId": "tm9rrdqrv1480s",
             "alternativeIds": []
           },
           {
