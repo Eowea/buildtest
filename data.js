@@ -11622,8 +11622,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Garde Rafale hurlante pour immobiliser un ennemi qui tente de fuir.",
-        "en": "Save Howling Blast to root an enemy trying to escape."
+        "fr": "Rafale hurlante te sert autant à engage qu'à attraper un ennemi en fuite.",
+        "en": "Howling Blast is just as useful for engaging an enemy as it is for catching one on the run."
       },
       {
         "fr": "Tempête gelée draine ton mana en continu : coupe-la hors combat.",
@@ -11998,7 +11998,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Arthas"
+    "codeKey": "Arthas",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "azmodan",
