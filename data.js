@@ -30721,12 +30721,12 @@ const HEROES = [
         "en": "Step out of damage for a moment to let Second Wind kick in."
       },
       {
-        "fr": "Uppercut magistral projette un ennemi vers ton équipe : vise bien la direction.",
-        "en": "Haymaker launches an enemy toward your team: aim the direction carefully."
-      },
-      {
         "fr": "Lancer de nain sert aussi à fuir un engagement raté.",
         "en": "Dwarf Toss is also a great escape from a failed engage."
+      },
+      {
+        "fr": "Sers toi du ralentissement de Coup de tonnerre (Z) pour sécuriser ton Éclair de tempête (A).",
+        "en": "Use the slow effect from Thunderclap (Z) to set up your Storm Bolt (Q)."
       }
     ],
     "builds": [
@@ -31088,7 +31088,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Muradin"
+    "codeKey": "Muradin",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "murky",
