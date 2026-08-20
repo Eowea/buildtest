@@ -28319,12 +28319,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Utilise Ailes de la nuit pour traverser les héros adverses et les endormir.",
-        "en": "Use Night Rush to pass through enemy Heroes and put them to Sleep."
+        "fr": "Ailes de la nuit peut punir les ennemis tout comme protéger tes alliés.",
+        "en": "Night Rush can both punish enemies and protect your allies."
       },
       {
-        "fr": "Sombre conversion échange tes points de vie avec un ennemi : lance-la au plus bas.",
-        "en": "Dark Conversion swaps your Health with an enemy's: cast it at your lowest."
+        "fr": "Sers toi de Ailes de la nuit pour toucher un maximum de personnes avec Griffes gangrenées. ",
+        "en": "Use Night Rush to reach as many people as possible with Fel Claws."
       },
       {
         "fr": "Reste au contact de plusieurs ennemis pour maximiser tes soins.",
@@ -28690,7 +28690,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "MalGanis"
+    "codeKey": "MalGanis",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "malthael",
@@ -29767,12 +29772,12 @@ const HEROES = [
         "en": "Cryo-Freeze heals you and makes you Unstoppable: save it for the burst."
       },
       {
-        "fr": "Mur de glace isole un ennemi ou coupe complètement une retraite.",
-        "en": "Ice Wall isolates one enemy or completely blocks a retreat."
-      },
-      {
         "fr": "Blizzard étourdit à son expiration : place-le là où l'ennemi devra rester.",
         "en": "Blizzard Stuns when it ends: place it where the enemy has to stand."
+      },
+      {
+        "fr": "Utilise Givrage (E) pour repousser les ennemis dans ton Blizzard (Z).",
+        "en": "Use Frostbite (E) to push enemies into your Blizzard (W)."
       }
     ],
     "builds": [
@@ -30134,7 +30139,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Mei"
+    "codeKey": "Mei",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "mephisto",
