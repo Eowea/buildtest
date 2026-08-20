@@ -205,7 +205,7 @@ const HEROES = [
         "en": "Use your Trait (D) before Living Bomb (W) to consume no mana."
       },
       {
-        "fr": "L'augmentation du Choc de flammes grâce à ton trait n'augmente que sa zone d'effet, pas ses dégâts.",
+        "fr": "L'augmentation du Choc de flammes (A) grâce à ton trait n'augmente que sa zone d'effet, pas ses dégâts.",
         "en": "The Flamestrike (Q) empowerment from your Trait only increases its area of effect, not its damage."
       },
       {
@@ -754,16 +754,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "N'attends pas que ton allié soit sur le point de mourir, utilise ton pull avant ! ",
-        "en": "Don't wait until your ally is about to die, use your pull sooner!"
+        "fr": "N'attends pas que ton allié soit sur le point de mourir, utilise ton pull (D) avant ! ",
+        "en": "Don't wait until your ally is about to die, use your pull (D) sooner!"
       },
       {
-        "fr": "Utilise ton Châtiment en suivi ou pour protéger tes alliés.",
-        "en": "Use your Chastise as a follow-up or to protect your allies."
+        "fr": "Utilise ton Châtiment (E) en suivi ou pour protéger tes alliés.",
+        "en": "Use your Chastise (E) as a follow-up or to protect your allies."
       },
       {
-        "fr": "Bombe de lumière est à utiliser quand l'un des tes alliés engage, pas à la fin du fight !",
-        "en": "Use Lightbomb when one of your allies engages the enemy, not at the end of the fight!"
+        "fr": "Bombe de lumière (R) est à utiliser quand l'un des tes alliés engage, pas à la fin du fight !",
+        "en": "Use Lightbomb (R) when one of your allies engages the enemy, not at the end of the fight!"
       }
     ],
     "builds": [
@@ -1305,12 +1305,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Utilise ton totem pour protéger un allié ou attraper un ennemi",
-        "en": "Use your totem to protect an ally or catch an enemy."
+        "fr": "Utilise ton totem (E) pour protéger un allié ou attraper un ennemi",
+        "en": "Use your totem (E) to protect an ally or catch an enemy."
       },
       {
-        "fr": "Place ton Bouclier de foudre sur ton tank",
-        "en": "Place Lightning Shield on your frontline tank."
+        "fr": "Place ton Bouclier de foudre (Z) sur ton tank",
+        "en": "Place Lightning Shield (W) on your frontline tank."
       },
       {
         "fr": "Ne pas avoir peur d'aller mettre des attaques de base",
@@ -1868,16 +1868,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Utilise ta Métamorphose pour casser les canalisations adverses ou protèger un allié",
-        "en": "Use your Polymorph to interrupt enemy channels or protect your allies."
+        "fr": "Utilise ta Métamorphose (Z) pour casser les canalisations adverses ou protèger un allié",
+        "en": "Use your Polymorph (W) to interrupt enemy channels or protect your allies."
       },
       {
         "fr": "Garde un oeil sur la mini-carte pour ton global.",
         "en": "Keep an eye on the minimap to use your global effectively."
       },
       {
-        "fr": "Essaye d'utiliser Poudre de perlimpinpin sur allié quand il va se faire burst",
-        "en": "Try to use Pixie Dust on an ally when they’re about to get bursted."
+        "fr": "Essaye d'utiliser Poudre de perlimpinpin (E) sur allié quand il va se faire burst",
+        "en": "Try to use Pixie Dust (E) on an ally when they’re about to get bursted."
       }
     ],
     "builds": [
@@ -2361,16 +2361,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Prépare toujours des potions avant l'objectif.",
-        "en": "Always setup potions before the objective starts."
+        "fr": "Prépare toujours des potions (A) avant l'objectif.",
+        "en": "Always setup potions (Q) before the objective starts."
       },
       {
         "fr": "Combine le Cube (Z) avec le Parchemin (E) pour garantir l'immobilisation.",
         "en": "Combine your Cube (W) with your Scroll (E) to guarantee the root."
       },
       {
-        "fr": "Vise les potions directement sur tes alliés, personne ne veut courir après un soin !",
-        "en": "Aim your potions directly on your allies—no one wants to have to walk to get healed!"
+        "fr": "Vise les potions (A) directement sur tes alliés, personne ne veut courir après un soin !",
+        "en": "Aim your potions (Q) directly on your allies—no one wants to have to walk to get healed!"
       }
     ],
     "builds": [
@@ -2994,8 +2994,8 @@ const HEROES = [
         "en": "Place your W where your allies will go."
       },
       {
-        "fr": "Pendant la transformation en dragon et un court instant, tu deviens inciblable. ",
-        "en": "While you're transforming into a dragon, you become untargetable for a brief moment."
+        "fr": "Pendant la transformation en dragon (D) et un court instant, tu deviens inciblable. ",
+        "en": "While you're transforming into a dragon (D), you become untargetable for a brief moment."
       }
     ],
     "builds": [
@@ -3528,8 +3528,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Garde la grenade pour empêcher un sauvetage ennemi.",
-        "en": "Save the grenade to prevent an enemy rescue."
+        "fr": "Garde la grenade (Z) pour empêcher un sauvetage ennemi.",
+        "en": "Save the grenade (W) to prevent an enemy rescue."
       },
       {
         "fr": "Place-toi très en arrière pour soigner.",
@@ -4076,16 +4076,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Change la couronne de cible si ton allié ne fait pas de dégâts ou lorsqu'il est mort.",
-        "en": "Switch your crown to another target if your ally is not dealing damage or if they are dead."
+        "fr": "Change la couronne (D) de cible si ton allié ne fait pas de dégâts ou lorsqu'il est mort.",
+        "en": "Switch your crown (D) to another target if your ally is not dealing damage or if they are dead."
       },
       {
         "fr": "Cherche les étourdissements sur les murs avec ton E.",
-        "en": "Look for wall stuns with Detainment Strike."
+        "en": "Look for wall stuns with Detainment Strike (E)."
       },
       {
         "fr": "Utiliser ton A sur des vagues de serviteurs te donne beaucoup d'énergie.",
-        "en": "Using Sacred Sweep on minion waves gives you a lot of Energy."
+        "en": "Using Sacred Sweep (Q) on minion waves gives you a lot of Energy."
       }
     ],
     "builds": [
@@ -4636,8 +4636,8 @@ const HEROES = [
         "en": "Keep a Q charge to escape."
       },
       {
-        "fr": "Les Sept Frappes inflige + de dégâts à une seule cible qu'à plusieurs. ",
-        "en": "Seven Strikes deals more damage to a single target than to multiple targets."
+        "fr": "Les Sept Frappes (R) inflige + de dégâts à une seule cible qu'à plusieurs. ",
+        "en": "Seven Strikes (R) deals more damage to a single target than to multiple targets."
       }
     ],
     "builds": [
@@ -5191,8 +5191,8 @@ const HEROES = [
         "en": "Move closer to the target you want to heal."
       },
       {
-        "fr": "De temps en temps, prends des dégâts pour bénéficier de ton trait.",
-        "en": "Sometimes, take some damage to activate your trait."
+        "fr": "De temps en temps, prends des dégâts pour bénéficier de ton trait (D).",
+        "en": "Sometimes, take some damage to activate your trait (D)."
       }
     ],
     "builds": [
@@ -5785,8 +5785,8 @@ const HEROES = [
         "en": "You can heal the minions."
       },
       {
-        "fr": "Ta grenade est ton seul moyen de te défendre.",
-        "en": "Your grenade is your only self-defense tool."
+        "fr": "Ta grenade (E) est ton seul moyen de te défendre.",
+        "en": "Your grenade (E) is your only self-defense tool."
       },
       {
         "fr": "Pense à mettre ton A sur un allié ou un serviteur pour te soigner grâce à ton trait !",
@@ -7396,8 +7396,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Lance ta chouette pour scouter les boss.",
-        "en": "Use your Owl to scout Bosses."
+        "fr": "Lance ta chouette (Z) pour scouter les boss.",
+        "en": "Use your Owl (W) to scout Bosses."
       },
       {
         "fr": "Marque la cible que ton tank engage.",
@@ -7405,7 +7405,7 @@ const HEROES = [
       },
       {
         "fr": "Les dégâts que fait Tyrande réduisent le temps de recharge son A, même les dégâts de sa capacité héroïque !",
-        "en": "Any damage Tyrande deals reduces Light of Elune's cooldown, even the damage from her Heroic Ability!"
+        "en": "Any damage Tyrande deals reduces Light of Elune (Q)'s cooldown, even the damage from her Heroic Ability!"
       }
     ],
     "builds": [
@@ -7943,8 +7943,8 @@ const HEROES = [
         "en": "Do not hesitate to die to save your team as a ghost."
       },
       {
-        "fr": "Utilise ton Bouclier Divin quand ton allié saute dedans ou qu'il va prendre d'énormes dégâts ou contrôles, et pas quand il est sur le point de mourir.",
-        "en": "Use your Divine Shield when your ally jumps into it or is about to take massive damage or be subjected to crowd control, not when he is about to die."
+        "fr": "Utilise ton Bouclier Divin (R) quand ton allié saute dedans ou qu'il va prendre d'énormes dégâts ou contrôles, et pas quand il est sur le point de mourir.",
+        "en": "Use your Divine Shield (R) when your ally jumps into it or is about to take massive damage or be subjected to crowd control, not when he is about to die."
       }
     ],
     "builds": [
@@ -8506,15 +8506,15 @@ const HEROES = [
     "tips": [
       {
         "fr": "Gère ton mana, ne spamme pas le A.",
-        "en": "Manage your Mana, do not spam Desperate Plea."
+        "en": "Manage your Mana, do not spam Desperate Plea (Q)."
       },
       {
-        "fr": "Égide écarlate est parfait pour contrer les engages ennemis ou appliqué Zèle en masse.",
-        "en": "Scarlet Aegis is perfect to counter enemy engages or to apply Zeal to multiple allies."
+        "fr": "Égide écarlate (R) est parfait pour contrer les engages ennemis ou appliqué Zèle (D) en masse.",
+        "en": "Scarlet Aegis (R) is perfect to counter enemy engages or to apply Zeal (D) to multiple allies."
       },
       {
-        "fr": "Utilise Mansuétude entre deux A pour consommer le moins de mana possible.",
-        "en": "Use Clemency between Desperate Plea casts to minimize Mana consumption."
+        "fr": "Utilise Mansuétude (&) entre deux A pour consommer le moins de mana possible.",
+        "en": "Use Clemency (1) between Desperate Plea (Q) casts to minimize Mana consumption."
       }
     ],
     "builds": [
@@ -9657,16 +9657,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Reste sur ta backline : Tunnel te déplace, ta présence physique ne sert à rien.",
-        "en": "Stay in your back line: Tunnel moves you around, your physical presence is worthless."
+        "fr": "Reste sur ta backline : Tunnel (W) te déplace, ta présence physique ne sert à rien.",
+        "en": "Stay in your back line: Tunnel (Z) moves you around, your physical presence is worthless."
       },
       {
-        "fr": "Symbiote sur un serviteur pousse une lane vide et te donne de la vision gratuite.",
-        "en": "Symbiote on a Minion pushes an empty lane and gives you free vision."
+        "fr": "Symbiote (A) sur un serviteur pousse une lane vide et te donne de la vision gratuite.",
+        "en": "Symbiote (Q) on a Minion pushes an empty lane and gives you free vision."
       },
       {
-        "fr": "Empile tes Nids toxiques sur les objectifs avant qu'ils ne s'ouvrent.",
-        "en": "Stack your Toxic Nests on objectives before they open."
+        "fr": "Empile tes Nids toxiques (Z) sur les objectifs avant qu'ils ne s'ouvrent.",
+        "en": "Stack your Toxic Nests (W) on objectives before they open."
       }
     ],
     "builds": [
@@ -10075,7 +10075,7 @@ const HEROES = [
   },
   {
     "id": "alarak",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Alarak",
       "en": "Alarak"
@@ -11131,16 +11131,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Prisme de phase te rend insensible aux contrôles : c'est ton engagement.",
-        "en": "Phase Prism makes you Unstoppable: that is your engage."
+        "fr": "Prisme de phase (E) te rend insensible aux contrôles : c'est ton engagement.",
+        "en": "Phase Prism (E) makes you Unstoppable: that is your engage."
       },
       {
-        "fr": "Chaque ennemi touché par Célérité tranchante rapproche ton prochain bouclier.",
-        "en": "Each enemy hit by Blade Dash brings your next Shield closer."
+        "fr": "Chaque ennemi touché par Célérité tranchante (A) rapproche ton prochain bouclier.",
+        "en": "Each enemy hit by Blade Dash (Q) brings your next Shield closer."
       },
       {
-        "fr": "Rayon purificateur suit sa cible partout : elle devra fuir son équipe pour s'en défaire.",
-        "en": "Purifier Beam follows its target anywhere: they must flee their team to shake it."
+        "fr": "Rayon purificateur (R) suit sa cible partout : elle devra fuir son équipe pour s'en défaire.",
+        "en": "Purifier Beam (R) follows its target anywhere: they must flee their team to shake it."
       }
     ],
     "builds": [
@@ -12104,12 +12104,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Lance ton Globe sur les vagues de serviteurs : chaque victime le renforce à vie.",
-        "en": "Throw your Globe at Minion waves: every kill strengthens it for good."
+        "fr": "Lance ton Globe (A) sur les vagues de serviteurs : chaque victime le renforce à vie.",
+        "en": "Throw your Globe (Q) at Minion waves: every kill strengthens it for good."
       },
       {
-        "fr": "Tout doit brûler te ralentit fortement : ne le canalise jamais sans protection.",
-        "en": "All Shall Burn heavily Slows you: never channel it unprotected."
+        "fr": "Tout doit brûler (E) te ralentit fortement : ne le canalise jamais sans protection.",
+        "en": "All Shall Burn (E) heavily Slows you: never channel it unprotected."
       },
       {
         "fr": "Tes démons peuvent tanker les sorts ennemis.",
@@ -12586,7 +12586,7 @@ const HEROES = [
     "tips": [
       {
         "fr": "Tu n'es pas obligé d'allumer Flaque d'Huile (Z) : elle ralentit. Si tu l'allumes avec Flambée (A), alors elle ne ralentit plus mais inflige des dégâts et te soigne. ",
-        "en": "You don't have to activate Oil Slick (W)—it slows enemies. If you activate it with Blaze (Q), it no longer slows enemies but deals damage and heals you."
+        "en": "You don't have to activate Oil Spill (W)—it slows enemies. If you activate it with Flame Stream (Q), it no longer slows enemies but deals damage and heals you."
       },
       {
         "fr": "Le Bunker (R) abrite tes alliés et les renforce à la sortie, mais l'ennemi peut le détruire.",
@@ -15108,8 +15108,8 @@ const HEROES = [
         "en": "Your Armor Plates only recharge while flying: take off to get them back."
       },
       {
-        "fr": "Forme Destructeur pour le corps à corps, Brise-monde pour le contrôle de zone.",
-        "en": "Destroyer form for close quarters, World Breaker for zone control."
+        "fr": "Forme Destructeur (A) pour le corps à corps, Brise-monde (Z) pour le contrôle de zone.",
+        "en": "Destroyer form (Q) for close quarters, World Breaker (W) for zone control."
       },
       {
         "fr": "Personne ne peut te soigner : chaque combat pris est un aller simple.",
@@ -22909,16 +22909,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Applique ta marque sur un maximum de cibles avant de la déclencher.",
-        "en": "Apply your brand to as many targets as possible before triggering it."
+        "fr": "Applique ta marque (D) sur un maximum de cibles avant de la déclencher.",
+        "en": "Apply your brand (D) to as many targets as possible before triggering it."
       },
       {
-        "fr": "Arsenal angélique te donne un bouclier : engage avec.",
-        "en": "Angelic Armaments gives you a shield: engage with it."
+        "fr": "Arsenal angélique (R) te donne un bouclier : engage avec.",
+        "en": "Angelic Armaments (R) gives you a shield: engage with it."
       },
       {
-        "fr": "Fureur des Angiris est un excellent outil pour isoler un soigneur.",
-        "en": "Wrath of the Angiris is a great tool to isolate a healer."
+        "fr": "Fureur des Angiris (R) est un excellent outil pour isoler un soigneur.",
+        "en": "Wrath of the Angiris (R) is a great tool to isolate a healer."
       }
     ],
     "builds": [
@@ -23298,7 +23298,7 @@ const HEROES = [
   },
   {
     "id": "jaina",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Jaina",
       "en": "Jaina"
@@ -23888,8 +23888,8 @@ const HEROES = [
         "en": "Shield Glare (E) Blinds: perfect against Heroes who live off their Basic Attacks."
       },
       {
-        "fr": "Bouclier Divin (R) est à utiliser pour démarrer un combat ou protéger ses alliés, pas à la fin.",
-        "en": "Divine Shield (R) should be used to start a battle or protect your allies, not at the end."
+        "fr": "Bouclier divin (R) est à utiliser pour démarrer un combat ou protéger ses alliés, pas à la fin.",
+        "en": "Blessed Shield (R) should be used to start a battle or protect your allies, not at the end."
       }
     ],
     "builds": [
@@ -24260,7 +24260,7 @@ const HEROES = [
   },
   {
     "id": "junkrat",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Chacal",
       "en": "Junkrat"
@@ -26286,8 +26286,8 @@ const HEROES = [
         "en": "Remember to poke the structures from time to time."
       },
       {
-        "fr": "Téléportation peut annuler des attaques de base des héros ou structures.",
-        "en": "Teleportation can cancel basic attacks by heroes or structures."
+        "fr": "Téléportation (E) peut annuler des attaques de base des héros ou structures.",
+        "en": "Teleportation (E) can cancel basic attacks by heroes or structures."
       }
     ],
     "builds": [
@@ -30726,7 +30726,7 @@ const HEROES = [
       },
       {
         "fr": "Sers toi du ralentissement de Coup de tonnerre (Z) pour sécuriser ton Éclair de tempête (A).",
-        "en": "Use the slow effect from Thunderclap (Z) to set up your Storm Bolt (Q)."
+        "en": "Use the slow effect from Thunder Clap (W) to set up your Storm Bolt (Q)."
       }
     ],
     "builds": [
@@ -31670,12 +31670,12 @@ const HEROES = [
         "en": "You don't need to have your stacks for Talent 20 by the end of the game!"
       },
       {
-        "fr": "Mur de zombies bloque les gens à l'intérieur, pense à le désactiver si c'est un allié.",
-        "en": "Zombies wall is trapping people inside; remember to deactivate it if it's an ally."
+        "fr": "Mur de zombies (Z) bloque les gens à l'intérieur, pense à le désactiver si c'est un allié.",
+        "en": "Zombies wall (W) is trapping people inside; remember to deactivate it if it's an ally."
       },
       {
-        "fr": "Essaye de viser un seul serviteur avec tes araignées pour optimiser ton waveclear.",
-        "en": "Try to target a single minion with your spiders to optimize your waveclear."
+        "fr": "Essaye de viser un seul serviteur avec tes araignées (A) pour optimiser ton waveclear.",
+        "en": "Try to target a single minion with your spiders (Q) to optimize your waveclear."
       }
     ],
     "builds": [
@@ -34156,16 +34156,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Cœur du Magma sauve un fort menacé, ou verrouille la voie sur ses ruines.",
-        "en": "Molten Core saves a threatened Fort, or locks the lane on its ruins."
+        "fr": "Cœur du Magma (D) sauve un fort menacé, ou verrouille la voie sur ses ruines.",
+        "en": "Molten Core (D) saves a threatened Fort, or locks the lane on its ruins."
       },
       {
-        "fr": "Météore vivant se vise en deux temps : le point de chute, puis la direction.",
-        "en": "Living Meteor is aimed in two steps: the landing point, then the direction."
+        "fr": "Météore vivant (Z) se vise en deux temps : le point de chute, puis la direction.",
+        "en": "Living Meteor (W) is aimed in two steps: the landing point, then the direction."
       },
       {
-        "fr": "Garde Renforcement de Sulfuras pour les héros : il t'y soigne bien plus.",
-        "en": "Save Empower Sulfuras for Heroes: it heals you far more off them."
+        "fr": "Garde Renforcement de Sulfuras (A) pour les héros : il t'y soigne bien plus.",
+        "en": "Save Empower Sulfuras (Q) for Heroes: it heals you far more off them."
       }
     ],
     "builds": [
@@ -36100,16 +36100,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tu peux activer tes Propulseurs en mode Siège pour fuir.",
-        "en": "Only deploy if your team can protect you."
+        "fr": "Tu peux activer tes Propulseurs (W) en mode Siège (D) pour fuir.",
+        "en": "You can activate your Thrusters (Z) in Siege Mode (D) to escape."
       },
       {
-        "fr": "Décharge percutante peut cancel des sorts, mais surtout te sauver !",
-        "en": "Concussive Blast can cancel spells—but more importantly, it can save your life!"
+        "fr": "Décharge percutante (Z) peut cancel des sorts, mais surtout te sauver !",
+        "en": "Concussive Blast (W) can cancel spells—but more importantly, it can save your life!"
       },
       {
-        "fr": "Tes mines donnent de la vision et peuvent ralentir un gank.",
-        "en": "Your mines provide vision and can slow down a gank."
+        "fr": "Tes mines (A) donnent de la vision et peuvent ralentir un gank.",
+        "en": "Your mines (Q) provide vision and can slow down a gank."
       }
     ],
     "builds": [
@@ -39969,16 +39969,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Minigun inflige des dégâts proportionnels à la vie : garde-le pour les tanks.",
-        "en": "Minigun deals damage based on max Health: save it for tanks."
+        "fr": "Minigun (D) inflige des dégâts proportionnels à la vie : garde-le pour les tanks.",
+        "en": "Minigun (D) deals damage based on max Health: save it for tanks."
       },
       {
-        "fr": "Fonce et défonce sert autant à fuir qu'à se replacer.",
-        "en": "Run and Gun is as good for escaping as for repositioning."
+        "fr": "Fonce et défonce (E) sert autant à fuir qu'à se replacer.",
+        "en": "Run and Gun (E) is as good for escaping as for repositioning."
       },
       {
         "fr": "Tes attaques de base font plus de dégâts que ton A (sans talent), utilise le utiliser pour poursuivre un ennemi. ",
-        "en": "Your basic attacks deal more damage than your A (without a talent), so use it to chase an enemy."
+        "en": "Your basic attacks deal more damage than your Q (without a talent), so use it to chase an enemy."
       }
     ],
     "builds": [
@@ -40466,7 +40466,7 @@ const HEROES = [
     "tips": [
       {
         "fr": "Puissance d’El’druin (A) peut servir pour ralentir un ennemi tout comme fuir un combat. ",
-        "en": "El'druin's Power (Q) can be used to slow down an enemy or to flee from combat."
+        "en": "El'druin's Might (Q) can be used to slow down an enemy or to flee from combat."
       },
       {
         "fr": "Vertu (Z) protège aussi tes alliés proches : place-toi entre eux et l'ennemi.",
@@ -43455,12 +43455,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ton mucus donne de la vision : couvre les objectifs et les buissons.",
-        "en": "Your creep grants vision: cover the objectives and the bushes."
+        "fr": "Ton mucus (D) donne de la vision : couvre les objectifs et les buissons.",
+        "en": "Your creep (D) grants vision: cover the objectives and the bushes."
       },
       {
-        "fr": "Chasseur-tueur est une excellente source de dégâts à distance.",
-        "en": "Hunter Killer is an excellent ranged damage source."
+        "fr": "Chasseur-tueur (Z) est une excellente source de dégâts à distance.",
+        "en": "Hunter Killer (W) is an excellent ranged damage source."
       },
       {
         "fr": "Tes invocations peuvent tanker les sorts ennemis.",
