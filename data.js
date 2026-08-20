@@ -23057,8 +23057,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_e.png",
         "description": {
-          "fr": "Radiance confère de l'armure, dont la durée s'allonge chaque fois qu'elle touche un héros adverse.",
-          "en": "Radiance grants Armor, whose duration extends each time it strikes an enemy Hero."
+          "fr": "Radiance couvre Impérius d'armure pendant un court instant, et chaque héros adverse touché par les flammes en prolonge la durée.",
+          "en": "Molten Armor grants Imperius Armor for a brief moment, and each enemy Hero the flames strike extends its duration."
         },
         "demoYoutubeId": null
       },
