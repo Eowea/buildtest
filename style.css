@@ -1713,8 +1713,12 @@
    pièce ("Alexstrasza" en corps 48) : c'est la carte qui rétrécit d'abord, jusqu'à 260px.
    Le plafond est large à dessein — plus la carte est large, moins la note descend, et
    plus la hauteur de l'en-tête reste proche de celle d'un héros sans carte. */
+/* La 3e colonne reprend la largeur de la 2e colonne de .meta-grid (1.1fr .9fr, gouttière
+   de 16px) : la carte des bugs tombe alors pile sur le bord gauche de la carte Conseils,
+   juste en dessous. Quand la place manque, elle rétrécit jusqu'à 260px plutôt que de
+   pousser le nom du héros hors de sa colonne — l'alignement cède avant la lisibilité. */
 .hero-header.with-issues {
-    grid-template-columns: 120px minmax(300px, 1fr) minmax(260px, 440px);
+    grid-template-columns: 120px minmax(300px, 1fr) minmax(260px, calc((100% - 16px) * 0.45));
     align-items: start;
     /* La colonne de texte étant plus étroite, l'accroche passe souvent sur deux lignes :
        on récupère ces quelques pixels sur le bas de l'en-tête plutôt que sur le corps. */
@@ -1725,8 +1729,11 @@
     margin-bottom: 0;
 }
 
-/* Trop à l'étroit pour trois colonnes : la carte repasse sous l'en-tête. */
-@media (max-width: 820px) {
+/* Trop à l'étroit pour trois colonnes : la carte repasse sous l'en-tête, pleine largeur.
+   Les deux bornes correspondent aux largeurs où le panneau de détail descend sous ~840px
+   et où la carte ne pourrait donc plus tomber sur le bord de la carte Conseils : en
+   dessous de 930px, et dans la bande où la liste des héros reprend sa colonne latérale. */
+@media (max-width: 929px), (min-width: 1181px) and (max-width: 1269px) {
     .hero-header.with-issues { grid-template-columns: 120px minmax(0, 1fr); }
     .hero-header.with-issues .issues-card { grid-column: 1 / -1; }
 }
