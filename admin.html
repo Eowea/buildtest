@@ -2409,8 +2409,56 @@ function showConfigPanel(){
         <div class="field"><label>Date (FR)</label><input ${STREAMER_CONFIG.siteUpdate?.autoDate !== false ? 'disabled' : ''} value="${escapeHtml(STREAMER_CONFIG.siteUpdate?.date?.fr)}" oninput="setNested(STREAMER_CONFIG,'siteUpdate.date.fr',this.value)" placeholder="Ex: 15 Août 2026" /></div>
         <div class="field"><label>Date (EN)</label><input ${STREAMER_CONFIG.siteUpdate?.autoDate !== false ? 'disabled' : ''} value="${escapeHtml(STREAMER_CONFIG.siteUpdate?.date?.en)}" oninput="setNested(STREAMER_CONFIG,'siteUpdate.date.en',this.value)" placeholder="Ex: August 15, 2026" /></div>
       </div>
+
+      <h3 style="margin-top:20px;">Ce qui a changé</h3>
+      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Une bulle apparaît à côté de la date : cliquée, elle ouvre une fenêtre avec ces lignes. La bulle reste invisible tant qu'aucune ligne n'est remplie. Range les entrées de la plus récente à la plus ancienne.</small>
+      ${renderChangelogEditor()}
     </div>
   `;
+}
+
+/* ---------- Journal des changements ---------- */
+function renderChangelogEditor(){
+  STREAMER_CONFIG.siteUpdate = STREAMER_CONFIG.siteUpdate || {};
+  const journal = STREAMER_CONFIG.siteUpdate.changelog = STREAMER_CONFIG.siteUpdate.changelog || [];
+  const html = journal.map((e, i) => `
+    <div class="subitem">
+      <button class="ghost remove-btn" onclick="removeChangelogEntry(${i})">✕</button>
+      <div class="row">
+        <div class="field"><label>Date de l'entrée (FR)</label><input value="${escapeHtml(e.date?.fr || '')}" oninput="setNested(STREAMER_CONFIG.siteUpdate.changelog[${i}],'date.fr',this.value)" placeholder="Ex: 20 Août 2026" /></div>
+        <div class="field"><label>Date de l'entrée (EN)</label><input value="${escapeHtml(e.date?.en || '')}" oninput="setNested(STREAMER_CONFIG.siteUpdate.changelog[${i}],'date.en',this.value)" placeholder="Ex: August 20, 2026" /></div>
+      </div>
+      ${(e.items || []).map((it, j) => `
+        <div class="row" style="align-items:flex-end;">
+          <div class="field"><label>Changement ${j + 1} (FR)</label><textarea oninput="setNested(STREAMER_CONFIG.siteUpdate.changelog[${i}].items[${j}],'fr',this.value)">${escapeHtml(it.fr || '')}</textarea></div>
+          <div class="field"><label>Changement ${j + 1} (EN)</label><textarea oninput="setNested(STREAMER_CONFIG.siteUpdate.changelog[${i}].items[${j}],'en',this.value)">${escapeHtml(it.en || '')}</textarea></div>
+          <button class="ghost" style="flex:0 0 auto;margin-bottom:10px;" onclick="removeChangelogItem(${i},${j})">✕</button>
+        </div>`).join('')}
+      <button class="list-add-btn" onclick="addChangelogItem(${i})">+ Ajouter une ligne</button>
+    </div>
+  `).join('');
+  return html + `<button class="list-add-btn" onclick="addChangelogEntry()">+ Ajouter une entrée</button>`;
+}
+function addChangelogEntry(){
+  const j = STREAMER_CONFIG.siteUpdate.changelog;
+  // La plus récente en tête : c'est l'ordre d'affichage sur le site.
+  j.unshift({ date: { fr: '', en: '' }, items: [{ fr: '', en: '' }] });
+  markDirty(); showConfigPanel();
+}
+function removeChangelogEntry(i){
+  if (!confirm("Supprimer cette entrée du journal ?")) return;
+  STREAMER_CONFIG.siteUpdate.changelog.splice(i, 1);
+  markDirty(); showConfigPanel();
+}
+function addChangelogItem(i){
+  const e = STREAMER_CONFIG.siteUpdate.changelog[i];
+  e.items = e.items || [];
+  e.items.push({ fr: '', en: '' });
+  markDirty(); showConfigPanel();
+}
+function removeChangelogItem(i, j){
+  STREAMER_CONFIG.siteUpdate.changelog[i].items.splice(j, 1);
+  markDirty(); showConfigPanel();
 }
 
 /* =========================================================================

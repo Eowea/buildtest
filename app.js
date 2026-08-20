@@ -51,6 +51,9 @@
       heroRotationTitle: { fr: "Rotation gratuite", en: "Free Rotation" },
       heroRotationError: { fr: "Rotation indisponible pour le moment.", en: "Rotation unavailable right now." },
       knownIssues: { fr: "Bugs connus", en: "Known issues" },
+      changelogTitle: { fr: "Ce qui a changé", en: "What's new" },
+      changelogOpen: { fr: "Voir les changements", en: "See what changed" },
+      changelogEmpty: { fr: "Rien de noté pour cette mise à jour.", en: "Nothing noted for this update." },
       prevIssue: { fr: "Bug précédent", en: "Previous issue" },
       nextIssue: { fr: "Bug suivant", en: "Next issue" },
     };
@@ -269,8 +272,58 @@ function markEverythingAsSeen(hero) {
       const date = u.enabled === false ? '' : loc(u.date);
       if (!date) { els.siteUpdate.innerHTML = ''; els.siteUpdate.hidden = true; return; }
       els.siteUpdate.hidden = false;
+      // La bulle n'apparaît que s'il y a effectivement des changements à lire.
+      const bulle = changelogEntries().length ? `<button class="site-update-bubble" type="button" id="changelogBtn" aria-label="${escapeHtml(t('changelogOpen'))}" title="${escapeHtml(t('changelogOpen'))}">`
+        + `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.9 3 3 6.4 3 10.6c0 2.4 1.3 4.6 3.4 6l-.7 3.2c-.1.5.4.9.9.7l3.7-1.9c.6.1 1.2.2 1.7.2 5.1 0 9-3.4 9-7.6S17.1 3 12 3Z"/></svg>`
+        + `</button>` : '';
       els.siteUpdate.innerHTML = `<span class="site-update-label">${t('siteUpdateLabel')}</span>`
-        + `<span class="site-update-date">${escapeHtml(date)}</span>`;
+        + `<span class="site-update-date">${escapeHtml(date)}</span>`
+        + bulle;
+    }
+
+    /* =========================================================================
+       JOURNAL DES CHANGEMENTS
+       Saisi dans l'admin (STREAMER_CONFIG.siteUpdate.changelog), du plus récent
+       au plus ancien. Une entrée sans aucune ligne remplie est ignorée : la bulle
+       ne s'affiche donc jamais pour ouvrir une fenêtre vide.
+       ========================================================================= */
+    function changelogEntries() {
+      const brut = (STREAMER_CONFIG.siteUpdate || {}).changelog;
+      if (!Array.isArray(brut)) return [];
+      return brut
+        .map(e => ({ date: loc(e.date), items: (e.items || []).map(loc).filter(x => x && x.trim()) }))
+        .filter(e => e.items.length);
+    }
+
+    function renderChangelog() {
+      const corps = document.getElementById('changelogBody');
+      const titre = document.getElementById('changelogTitle');
+      if (!corps || !titre) return;
+      titre.textContent = t('changelogTitle');
+      const entrees = changelogEntries();
+      corps.innerHTML = entrees.length
+        ? entrees.map(e => `<section class="changelog-entry">`
+            + (e.date ? `<h3 class="changelog-date">${escapeHtml(e.date)}</h3>` : '')
+            + `<ul class="changelog-list">${e.items.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>`
+          + `</section>`).join('')
+        : `<div class="empty-state">${t('changelogEmpty')}</div>`;
+    }
+
+    function openChangelog() {
+      const o = document.getElementById('changelogOverlay');
+      if (!o) return;
+      renderChangelog();
+      o.classList.add('active');
+      o.setAttribute('aria-hidden', 'false');
+      document.getElementById('closeChangelogBtn')?.focus();
+    }
+
+    function closeChangelog() {
+      const o = document.getElementById('changelogOverlay');
+      if (!o) return;
+      o.classList.remove('active');
+      o.setAttribute('aria-hidden', 'true');
+      document.getElementById('changelogBtn')?.focus();
     }
     
     function renderFilters() { els.roleFilters.innerHTML=roles().map(r=>`<button class="filter-chip${state.role===r?' active':''}" type="button" data-role="${r}">${locRole(r)}</button>`).join(''); }
@@ -1265,6 +1318,15 @@ els.homeBtn.addEventListener('click', (e) => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&els.videoOverlay.classList.contains('active')) closeLightbox();});
+
+    // Journal des changements : ouverture par la bulle, fermeture au fond, à la croix ou par Échap.
+    els.siteUpdate?.addEventListener('click', e => { if (e.target.closest('#changelogBtn')) openChangelog(); });
+    (() => {
+      const o = document.getElementById('changelogOverlay');
+      if (!o) return;
+      o.addEventListener('click', e => { if (e.target === o || e.target.closest('#closeChangelogBtn')) closeChangelog(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && o.classList.contains('active')) closeChangelog(); });
+    })();
     document.addEventListener('click', (e) => {
   if (!e.target.closest('.floating-trigger') && !e.target.closest('.floating-tooltip')) {
     hideFloatingTooltip(true);
