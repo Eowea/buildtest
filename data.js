@@ -34161,16 +34161,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Cœur du Magma (D) sauve un fort menacé, ou verrouille la voie sur ses ruines.",
-        "en": "Molten Core (D) saves a threatened Fort, or locks the lane on its ruins."
+        "fr": "Utilise Cœur du Magma (D) pour empêcher un fort de mourir, ou pour jouer et défendre un objectif à distance.",
+        "en": "Use Molten Core (D) to prevent a fort from being destroyed, or to play and defend a target from a distance."
       },
       {
-        "fr": "Météore vivant (Z) se vise en deux temps : le point de chute, puis la direction.",
-        "en": "Living Meteor (W) is aimed in two steps: the landing point, then the direction."
+        "fr": "Vague explosive (E) est utilisable sur un allié pour qu'il court plus vite.",
+        "en": "Explosive Wave (E) can be used on an ally to make them run faster."
       },
       {
-        "fr": "Garde Renforcement de Sulfuras (A) pour les héros : il t'y soigne bien plus.",
-        "en": "Save Empower Sulfuras (Q) for Heroes: it heals you far more off them."
+        "fr": "Utilise Renforcement de Sulfuras (A) entre deux attaques de base pour optimiser ton waveclear.",
+        "en": "Use Empower Sulfuras (Q) between two basic attacks to optimize your wave clear."
       }
     ],
     "builds": [
@@ -34547,7 +34547,12 @@ const HEROES = [
         }
       }
     ],
-    "codeKey": "Ragnaros"
+    "codeKey": "Ragnaros",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "raynor",
