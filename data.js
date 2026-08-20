@@ -23875,16 +23875,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Galvanisation absorbe un burst : anticipe plutôt que de la lancer trop tard.",
-        "en": "Iron Skin absorbs burst: anticipate rather than casting it too late."
+        "fr": "Galvanisation absorbe un burst et les contrôles : anticipe plutôt que de la lancer trop tard.",
+        "en": "Iron Skin absorbs burst and controls: anticipate rather than casting it too late."
       },
       {
         "fr": "Éblouissement aveugle : parfait contre les héros qui vivent de leurs attaques de base.",
         "en": "Shield Glare Blinds: perfect against Heroes who live off their Basic Attacks."
       },
       {
-        "fr": "Couperet rejoint un allié en difficulté à l'autre bout du combat.",
-        "en": "Falling Sword reaches a struggling ally across the fight."
+        "fr": "Bouclier Divin est à utiliser pour démarrer un combat ou protéger ses alliés, pas à la fin.",
+        "en": "Divine Shield should be used to start a battle or protect your allies, not at the end."
       }
     ],
     "builds": [
@@ -24246,7 +24246,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Johanna"
+    "codeKey": "Johanna",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "junkrat",
