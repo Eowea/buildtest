@@ -22909,16 +22909,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Applique ta marque (D) sur un maximum de cibles avant de la déclencher.",
-        "en": "Apply your brand (D) to as many targets as possible before triggering it."
+        "fr": "Ta marque (D)  te soigne à chaque fois que tu la déclenches.",
+        "en": "Your mark (D) heals you every time you trigger it."
       },
       {
         "fr": "Arsenal angélique (R) te donne un bouclier : engage avec.",
         "en": "Angelic Armaments (R) gives you a shield: engage with it."
       },
       {
-        "fr": "Fureur des Angiris (R) est un excellent outil pour isoler un soigneur.",
-        "en": "Wrath of the Angiris (R) is a great tool to isolate a healer."
+        "fr": "Fureur des Angiris (R) est un excellent outil pour isoler un ennemi et se replacer. ",
+        "en": "Wrath of the Angiris (R) is an excellent tool for isolating an enemy and repositioning yourself. "
       }
     ],
     "builds": [
