@@ -617,11 +617,14 @@ function renderHeroRotationBody(rotation) {
     const h = HEROES.find(x => x.id === id);
     if (!h) return '';
     const name = loc(h.name);
-    return `
-    <div class="rotation-hero">
+    const inner = `
       <div class="rotation-hero-portrait" data-fallback="${esc(initials(name))}"><img src="${esc(h.portrait)}" alt="${esc(name)}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>
-      <div class="rotation-hero-name">${esc(name)}</div>
-    </div>`;
+      <div class="rotation-hero-name">${esc(name)}</div>`;
+    // Seul un héros qui a sa fiche sur le site est cliquable : les autres sont
+    // dans la rotation du jeu sans avoir encore de page ici.
+    return h.enabled
+      ? `<button class="rotation-hero" type="button" data-hero-id="${esc(h.id)}" title="${esc(name)}">${inner}</button>`
+      : `<div class="rotation-hero">${inner}</div>`;
   }).filter(Boolean).join('');
 
   container.innerHTML = `${dateRangeHtml}<div class="rotation-hero-grid">${cardsHtml}</div>`;
@@ -1132,21 +1135,23 @@ window.goToBuild = (heroId, buildIndex) => {
   scrollToHeroes();
 });
 
-els.heroList.addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-hero-id]');
-    if (!btn) return;
-
-    const heroId = btn.dataset.heroId;
+// Ouvre la fiche d'un héros et amène la vue dessus. Utilisé par la liste des héros
+// comme par les portraits de la rotation gratuite.
+function goToHero(heroId) {
     const heroObj = HEROES.find(h => h.id === heroId);
+    if (!heroObj) return;
 
-    if (heroObj) {
-        markEverythingAsSeen(heroObj); // On valide tout d'un coup au clic
-    }
+    markEverythingAsSeen(heroObj); // On valide tout d'un coup au clic
+
+    // Un filtre de rôle ou une recherche en cours écarterait aussitôt la sélection :
+    // on les lève pour que le clic aboutisse toujours.
+    if (state.role !== 'all' && heroObj.role !== state.role) state.role = 'all';
+    if (state.search) { state.search = ''; if (els.searchInput) els.searchInput.value = ''; }
 
     state.heroId = heroId;
     state.buildIndex = firstBuildIndex(heroObj);
     state.formId = null;
-    renderAll(); //
+    renderAll();
 
   setTimeout(() => {
     const detailEl = document.getElementById('detailViewWrap');
@@ -1156,6 +1161,19 @@ els.heroList.addEventListener('click', (e) => {
     const y = detailEl.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top: y, behavior: 'smooth' });
   }, 0);
+}
+
+els.heroList.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-hero-id]');
+    if (!btn) return;
+    goToHero(btn.dataset.heroId);
+});
+
+// Les portraits de la rotation vivent dans la vue de détail : même délégation, même effet.
+els.detailView.addEventListener('click', (e) => {
+    const btn = e.target.closest('.rotation-hero[data-hero-id]');
+    if (!btn) return;
+    goToHero(btn.dataset.heroId);
 });
     els.searchInput.addEventListener('input', e => {
       clearTimeout(searchTimeout);

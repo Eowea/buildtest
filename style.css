@@ -1138,9 +1138,10 @@
     .video-group { min-width: 0; width: 100%; }
 
     /* ── Rotation gratuite ── */
+    /* Même bordure que les cartes du site : l'or y est réservé à la sélection. */
     .rotation-section {
       border-radius: var(--radius-sm);
-      border: 1px solid var(--gold-border);
+      border: 1px solid var(--blue-border);
       background: linear-gradient(180deg, rgba(20, 28, 44, 0.8), rgba(12, 18, 28, 0.9));
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 5px 15px rgba(0,0,0,0.5);
       padding: 16px;
@@ -1169,16 +1170,45 @@
       align-items: center;
       width: 76px;
       text-align: center;
+      /* Les héros publiés sont des boutons : on neutralise le style natif. */
+      padding: 0;
+      border: none;
+      background: none;
+      font: inherit;
+      color: inherit;
     }
 
+    /* Le contour hexagonal reprend celui des portraits de la liste des héros. */
     .rotation-hero-portrait {
       width: 64px;
       height: 64px;
-      background: var(--gold-border);
+      background: var(--blue-border);
       clip-path: var(--hex-clip);
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: all var(--t);
+    }
+
+    /* Un héros qui a sa fiche sur le site s'ouvre au clic et passe à l'or au survol,
+       comme le portrait sélectionné dans la liste. Les autres restent inertes. */
+    button.rotation-hero { cursor: pointer; }
+
+    button.rotation-hero:hover .rotation-hero-portrait,
+    button.rotation-hero:focus-visible .rotation-hero-portrait {
+      background: var(--gold-bright);
+      filter: drop-shadow(0 0 8px var(--gold-glow));
+      transform: scale(1.05);
+    }
+
+    button.rotation-hero:hover .rotation-hero-name,
+    button.rotation-hero:focus-visible .rotation-hero-name {
+      color: var(--gold-bright);
+    }
+
+    button.rotation-hero:focus-visible {
+      outline: 2px solid var(--gold-border);
+      outline-offset: 3px;
     }
 
     .rotation-hero-portrait img {
