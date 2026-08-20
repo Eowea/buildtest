@@ -10569,8 +10569,8 @@ const HEROES = [
       "en": "He grabs the back line and buries it."
     },
     "gameplay": {
-      "fr": "Anub'arak entre en combat avec Charge enfouie pour étourdir la backline, puis survit grâce à Carapace endurcie et à ses scarabées.",
-      "en": "Anub'arak engages with Burrow Charge to stun the back line, then survives thanks to Harden Carapace and his Beetles."
+      "fr": "Anub'arak peut étourdir les ennemis et tanker leurs sorts avec ses scarabées.",
+      "en": "Anub'arak can stun enemies and absorb their spells with his beetles."
     },
     "spells": [
       {
@@ -17012,8 +17012,8 @@ const HEROES = [
       "en": "He opens fights and closes them on the enemy."
     },
     "gameplay": {
-      "fr": "E.T.C. glisse dans la mêlée pour étourdir plusieurs cibles, puis enchaîne avec Pogo ou repousse les plongeurs loin de sa backline.",
-      "en": "E.T.C. slides into the fray to stun multiple targets, then follows up with Mosh Pit or peels divers away from his back line."
+      "fr": "E.T.C. glisse dans la mêlée pour étourdir plusieurs cibles, peut aussi protéger ses alliés en repoussant les ennemis.",
+      "en": "E.T.C. dives into the fray to stun multiple targets and can also protect allies by pushing enemies back."
     },
     "spells": [
       {
@@ -36942,8 +36942,8 @@ const HEROES = [
       "en": "One good Hook, and the fight is already won."
     },
     "gameplay": {
-      "fr": "Balafré cherche à isoler une cible avec Crochet depuis un buisson, puis à la garder au contact avec Choc et Gavage.",
-      "en": "Stitches looks to isolate a target with Hook from a bush, then keep them locked down with Slam and Gorge."
+      "fr": "Balafré peut attraper une cible avec Crochet, puis à la garder au contact avec Choc.",
+      "en": "Stitches can grab a target with Hook, then keep it in contact with Slam."
     },
     "spells": [
       {
