@@ -14082,8 +14082,8 @@ const HEROES = [
         "en": "The longer you wind up Surging Fist, the farther the charge carries."
       },
       {
-        "fr": "Ne plonge que si Gall a ses sorts disponibles : seul, tu ne fais rien.",
-        "en": "Only dive if Gall has his Abilities up: alone, you do nothing."
+        "fr": "N'oublie pas d'activer ton Trait lorsque tu as peu de points de vie. ",
+        "en": "Don't forget to activate your Trait when your health is low."
       }
     ],
     "builds": [
