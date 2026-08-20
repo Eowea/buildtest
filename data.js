@@ -19057,16 +19057,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Seul le bord extérieur de Brise-roc étourdit : recule d'un pas avant de frapper.",
+        "fr": "Seul le bord extérieur de Brise-roc étourdit : recule d'un pas avant de l'utiliser.",
         "en": "Only Groundbreaker's outer edge Stuns: step back before you swing."
       },
       {
-        "fr": "Dans la mêlée sauve un allié plongé : il est insensible aux contrôles en vol.",
-        "en": "Into the Fray saves a dived ally: they are Unstoppable while airborne."
+        "fr": "Dans la mêlée sauve un allié : il est insensible aux contrôles en vol.",
+        "en": "Into the Fray saves an ally: they are Unstoppable while airborne."
       },
       {
-        "fr": "Défi du seigneur de guerre annule complètement un désengagement ennemi.",
-        "en": "Warlord's Challenge completely denies an enemy disengage."
+        "fr": "Défi du seigneur de guerre peut être utilisé juste après Boulet de démolition.",
+        "en": "Warlord's Challenge can be used immediately after Wrecking Ball."
       }
     ],
     "builds": [
