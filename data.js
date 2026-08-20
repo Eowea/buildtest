@@ -11622,16 +11622,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Rafale hurlante te sert autant à engage qu'à attraper un ennemi en fuite.",
-        "en": "Howling Blast is just as useful for engaging an enemy as it is for catching one on the run."
+        "fr": "Rafale hurlante (Z) te sert autant à engage qu'à attraper un ennemi en fuite.",
+        "en": "Howling Blast (W) is just as useful for engaging an enemy as it is for catching one on the run."
       },
       {
-        "fr": "Tempête gelée draine ton mana en continu : coupe-la hors combat.",
-        "en": "Frozen Tempest drains Mana continuously: turn it off out of combat."
+        "fr": "Tempête gelée (E) draine ton mana en continu : coupe-la hors combat.",
+        "en": "Frozen Tempest (E) drains Mana continuously: turn it off out of combat."
       },
       {
-        "fr": "Armée des morts peut tanker les sorts ennemis.",
-        "en": "Army of the Dead can absorb enemy spells."
+        "fr": "Armée des morts (R) peut tanker les sorts ennemis.",
+        "en": "Army of the Dead (R) can absorb enemy spells."
       }
     ],
     "builds": [
@@ -12585,16 +12585,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tu n'es pas obligé d'allumer Flaque d'Huile : elle ralentit. Si tu l'allumes avec Flambée, alors elle ne ralentit plus mais inflige des dégâts et te soigne. ",
-        "en": "You don't have to activate Oil Slick—it slows enemies. If you activate it with Blaze, it no longer slows enemies but deals damage and heals you."
+        "fr": "Tu n'es pas obligé d'allumer Flaque d'Huile (Z) : elle ralentit. Si tu l'allumes avec Flambée (A), alors elle ne ralentit plus mais inflige des dégâts et te soigne. ",
+        "en": "You don't have to activate Oil Slick (W)—it slows enemies. If you activate it with Blaze (Q), it no longer slows enemies but deals damage and heals you."
       },
       {
-        "fr": "Le Bunker abrite tes alliés et les renforce à la sortie, mais l'ennemi peut le détruire.",
-        "en": "The Bunker shelters your allies and empowers them on exit, but the enemy can destroy it."
+        "fr": "Le Bunker (R) abrite tes alliés et les renforce à la sortie, mais l'ennemi peut le détruire.",
+        "en": "The Bunker (R) shelters your allies and empowers them on exit, but the enemy can destroy it."
       },
       {
-        "fr": "Charge à réaction sert autant à engager qu'à fuir un combat.",
-        "en": "Jet Propulsion is as good for engaging as for disengaging."
+        "fr": "Charge à réaction (E) sert autant à engager qu'à fuir un combat.",
+        "en": "Jet Propulsion (E) is as good for engaging as for disengaging."
       }
     ],
     "builds": [
@@ -14083,12 +14083,12 @@ const HEROES = [
         "en": "Communicate constantly with your Gall: you share the same Health bar."
       },
       {
-        "fr": "Plus tu prépares Poing rageur longtemps, plus la charge porte loin.",
-        "en": "The longer you wind up Surging Fist, the farther the charge carries."
+        "fr": "Plus tu prépares Poing rageur (A) longtemps, plus la charge porte loin.",
+        "en": "The longer you wind up Surging Fist (Q), the farther the charge carries."
       },
       {
-        "fr": "N'oublie pas d'activer ton Trait lorsque tu as peu de points de vie. ",
-        "en": "Don't forget to activate your Trait when your health is low."
+        "fr": "N'oublie pas d'activer ton Trait (D) lorsque tu as peu de points de vie. ",
+        "en": "Don't forget to activate your Trait (D) when your health is low."
       }
     ],
     "builds": [
@@ -16076,12 +16076,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Charge d'ombre n'étourdit que si la cible percute un obstacle : vise le mur.",
-        "en": "Shadow Charge only Stuns if the target hits terrain: aim for the wall."
+        "fr": "Charge d'ombre (A) n'étourdit que si la cible percute un obstacle : vise le mur.",
+        "en": "Shadow Charge (Q) only Stuns if the target hits terrain: aim for the wall."
       },
       {
-        "fr": "Correction jette la cible derrière toi : place-toi entre elle et sa fuite.",
-        "en": "Overpower slams the target behind you: stand between them and their escape."
+        "fr": "Correction (E) jette la cible derrière toi : place-toi entre elle et sa fuite.",
+        "en": "Overpower (E) slams the target behind you: stand between them and their escape."
       },
       {
         "fr": "Si tu as toutes tes âmes, n'est pas peur de mourir tu reviens juste après.",
@@ -19062,16 +19062,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Seul le bord extérieur de Brise-roc étourdit : recule d'un pas avant de l'utiliser.",
-        "en": "Only Groundbreaker's outer edge Stuns: step back before you swing."
+        "fr": "Seul le bord extérieur de Brise-roc (A) étourdit : recule d'un pas avant de l'utiliser.",
+        "en": "Only the outer edge of Groundbreaker (Q) Stuns: step back before you swing."
       },
       {
-        "fr": "Dans la mêlée sauve un allié : il est insensible aux contrôles en vol.",
-        "en": "Into the Fray saves an ally: they are Unstoppable while airborne."
+        "fr": "Dans la mêlée (&) sauve un allié : il est insensible aux contrôles en vol.",
+        "en": "Into the Fray (1) saves an ally: they are Unstoppable while airborne."
       },
       {
-        "fr": "Défi du seigneur de guerre peut être utilisé juste après Boulet de démolition.",
-        "en": "Warlord's Challenge can be used immediately after Wrecking Ball."
+        "fr": "Défi du seigneur de guerre (R) peut être utilisé juste après Boulet de démolition (E).",
+        "en": "Warlord's Challenge (R) can be used immediately after Wrecking Ball (E)."
       }
     ],
     "builds": [
@@ -23880,16 +23880,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Galvanisation absorbe un burst et les contrôles : anticipe plutôt que de la lancer trop tard.",
-        "en": "Iron Skin absorbs burst and controls: anticipate rather than casting it too late."
+        "fr": "Galvanisation (D) absorbe un burst et les contrôles : anticipe plutôt que de la lancer trop tard.",
+        "en": "Iron Skin (D) absorbs burst and controls: anticipate rather than casting it too late."
       },
       {
-        "fr": "Éblouissement aveugle : parfait contre les héros qui vivent de leurs attaques de base.",
-        "en": "Shield Glare Blinds: perfect against Heroes who live off their Basic Attacks."
+        "fr": "Éblouissement (E) aveugle : parfait contre les héros qui vivent de leurs attaques de base.",
+        "en": "Shield Glare (E) Blinds: perfect against Heroes who live off their Basic Attacks."
       },
       {
-        "fr": "Bouclier Divin est à utiliser pour démarrer un combat ou protéger ses alliés, pas à la fin.",
-        "en": "Divine Shield should be used to start a battle or protect your allies, not at the end."
+        "fr": "Bouclier Divin (R) est à utiliser pour démarrer un combat ou protéger ses alliés, pas à la fin.",
+        "en": "Divine Shield (R) should be used to start a battle or protect your allies, not at the end."
       }
     ],
     "builds": [
@@ -28319,12 +28319,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ailes de la nuit peut punir les ennemis tout comme protéger tes alliés.",
-        "en": "Night Rush can both punish enemies and protect your allies."
+        "fr": "Ailes de la nuit (E) peut punir les ennemis tout comme protéger tes alliés.",
+        "en": "Night Rush (E) can both punish enemies and protect your allies."
       },
       {
-        "fr": "Sers toi de Ailes de la nuit pour toucher un maximum de personnes avec Griffes gangrenées. ",
-        "en": "Use Night Rush to reach as many people as possible with Fel Claws."
+        "fr": "Sers toi de Ailes de la nuit (E) pour toucher un maximum de personnes avec Griffes gangrenées (A). ",
+        "en": "Use Night Rush (E) to reach as many people as possible with Fel Claws (Q)."
       },
       {
         "fr": "Reste au contact de plusieurs ennemis pour maximiser tes soins.",
@@ -29768,12 +29768,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Cryostase te soigne et te rend insensible aux contrôles : garde-la pour le burst.",
-        "en": "Cryo-Freeze heals you and makes you Unstoppable: save it for the burst."
+        "fr": "Cryostase (D) te soigne et te rend insensible aux contrôles : garde-la pour le burst.",
+        "en": "Cryo-Freeze (D) heals you and makes you Unstoppable: save it for the burst."
       },
       {
-        "fr": "Blizzard étourdit à son expiration : place-le là où l'ennemi devra rester.",
-        "en": "Blizzard Stuns when it ends: place it where the enemy has to stand."
+        "fr": "Blizzard (Z) étourdit à son expiration : place-le là où l'ennemi devra rester.",
+        "en": "Blizzard (W) Stuns when it ends: place it where the enemy has to stand."
       },
       {
         "fr": "Utilise Givrage (E) pour repousser les ennemis dans ton Blizzard (Z).",
@@ -30717,12 +30717,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Recule quelques instants hors des dégâts pour relancer Second souffle.",
-        "en": "Step out of damage for a moment to let Second Wind kick in."
+        "fr": "Recule quelques instants hors des dégâts pour relancer Second souffle (D).",
+        "en": "Step out of damage for a moment to let Second Wind (D) kick in."
       },
       {
-        "fr": "Lancer de nain sert aussi à fuir un engagement raté.",
-        "en": "Dwarf Toss is also a great escape from a failed engage."
+        "fr": "Lancer de nain (E) sert aussi à fuir un engagement raté.",
+        "en": "Dwarf Toss (E) is also a great escape from a failed engage."
       },
       {
         "fr": "Sers toi du ralentissement de Coup de tonnerre (Z) pour sécuriser ton Éclair de tempête (A).",
@@ -37069,8 +37069,8 @@ const HEROES = [
         "en": "As long as the enemies don't see you, they're afraid of getting caught."
       },
       {
-        "fr": "Main secourable peut sauver un allié et le rend Insensible pendant la trajectoire.",
-        "en": "Helping Hand can save an ally and make them Unstoppable while in flight."
+        "fr": "Main secourable (&) peut sauver un allié et le rend Insensible pendant la trajectoire.",
+        "en": "Helping Hand (1) can save an ally and make them Unstoppable while in flight."
       },
       {
         "fr": "Balafré est un tank, donc il n'est pas absolument pas nécessaire de rester toujours derrière à ne rien faire.",
@@ -40465,12 +40465,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Puissance d’El’druin peut servir pour ralentir un ennemi tout comme fuir un combat. ",
-        "en": "El'druin's Power can be used to slow down an enemy or to flee from combat."
+        "fr": "Puissance d’El’druin (A) peut servir pour ralentir un ennemi tout comme fuir un combat. ",
+        "en": "El'druin's Power (Q) can be used to slow down an enemy or to flee from combat."
       },
       {
-        "fr": "Vertu protège aussi tes alliés proches : place-toi entre eux et l'ennemi.",
-        "en": "Righteousness also Shields nearby allies: stand between them and the enemy."
+        "fr": "Vertu (Z) protège aussi tes alliés proches : place-toi entre eux et l'ennemi.",
+        "en": "Righteousness (W) also Shields nearby allies: stand between them and the enemy."
       },
       {
         "fr": "Ta mort déclenche une explosion : elle inflige des dégâts, réduit les dégâts des ennemis et te faire réapparaitre plus vite.",
