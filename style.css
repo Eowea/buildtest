@@ -1710,10 +1710,15 @@
 /* La carte occupe une 3e colonne de l'en-tête, à droite du nom et de l'accroche.
    Sans bug, .with-issues n'est pas posée et l'en-tête garde ses deux colonnes. */
 /* Le plancher de 300px sur la colonne du milieu tient le nom le plus long d'une seule
-   pièce ("Alexstrasza" en corps 48) : c'est la carte qui rétrécit d'abord, jusqu'à 260px. */
+   pièce ("Alexstrasza" en corps 48) : c'est la carte qui rétrécit d'abord, jusqu'à 260px.
+   Le plafond est large à dessein — plus la carte est large, moins la note descend, et
+   plus la hauteur de l'en-tête reste proche de celle d'un héros sans carte. */
 .hero-header.with-issues {
-    grid-template-columns: 120px minmax(300px, 1fr) minmax(260px, 360px);
+    grid-template-columns: 120px minmax(300px, 1fr) minmax(260px, 440px);
     align-items: start;
+    /* La colonne de texte étant plus étroite, l'accroche passe souvent sur deux lignes :
+       on récupère ces quelques pixels sur le bas de l'en-tête plutôt que sur le corps. */
+    padding-bottom: 16px;
 }
 
 .hero-header .issues-card {
@@ -1772,8 +1777,20 @@
 .issues-carousel {
     display: flex;
     flex-direction: column;
-    min-height: 128px;
+    min-height: 66px;
 }
+
+/* La carte est posée dans l'en-tête, à côté d'un portrait de 120px : tout y est resserré
+   pour que la page d'un héros à bugs garde à peu près la silhouette des autres. */
+.hero-header .issues-card .card-head { padding: 9px 14px; font-size: 13px; }
+.hero-header .issues-card .card-body { padding: 12px 14px; }
+.hero-header .issues-card .issue-trigger { width: 44px; height: 44px; }
+.hero-header .issues-card .issue-row { gap: 11px; }
+.hero-header .issues-card .issue-name { font-size: 13px; margin-bottom: 2px; }
+.hero-header .issues-card .issue-note { font-size: 13px; line-height: 1.5; }
+.hero-header .issues-card .issues-nav { gap: 10px; padding-top: 6px; }
+.hero-header .issues-card .issues-arrow { width: 20px; height: 20px; font-size: 10px; }
+.hero-header .issues-card .issues-dot { width: 7px; height: 7px; }
 
 .issue-slide { display: none; }
 .issue-slide.is-active { display: block; }
