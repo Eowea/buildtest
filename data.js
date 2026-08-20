@@ -13908,7 +13908,7 @@ const HEROES = [
   },
   {
     "id": "chogall",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Cho",
       "en": "Cho"
@@ -14033,7 +14033,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Chogall]",
+        "buildCode": "[T2331314,Chogall]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -14042,17 +14042,17 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmgns5b2c01thn",
+            "primaryId": "tmgns5b2c02gd7",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmgns5b2c04a26",
+            "primaryId": "tmgns5b2c06plc",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmgns5b2c07bww",
+            "primaryId": "tmgns5b2c09z4w",
             "alternativeIds": []
           },
           {
@@ -14062,7 +14062,7 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tmgns5b2c12ung",
+            "primaryId": "tmgns5b2c14cc2",
             "alternativeIds": []
           },
           {
@@ -14072,7 +14072,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmgns5b2c18z9a",
+            "primaryId": "tmgns5b2c21mgk",
             "alternativeIds": []
           }
         ]
@@ -15894,7 +15894,7 @@ const HEROES = [
   },
   {
     "id": "diablo",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Diablo",
       "en": "Diablo"
@@ -16019,7 +16019,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Diablo]",
+        "buildCode": "[T3212224,Diablo]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -16028,12 +16028,12 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmdgc72j40133k",
+            "primaryId": "tmdgc72j403nut",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmdgc72j404jwv",
+            "primaryId": "tmdgc72j405xvc",
             "alternativeIds": []
           },
           {
@@ -16043,22 +16043,22 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tmdgc72j410uxr",
+            "primaryId": "tmdgc72j411qtj",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmdgc72j412pv5",
+            "primaryId": "tmdgc72j413act",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmdgc72j415oro",
+            "primaryId": "tmdgc72j416gbg",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmdgc72j418jfg",
+            "primaryId": "tmdgc72j421r4c",
             "alternativeIds": []
           }
         ]
@@ -16915,7 +16915,7 @@ const HEROES = [
   },
   {
     "id": "etc",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "E.T.C.",
       "en": "E.T.C."
@@ -17040,7 +17040,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,ETC]",
+        "buildCode": "[T3221135,ETC]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -17049,17 +17049,17 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm67ii8d101ruq",
+            "primaryId": "tm67ii8d103m4n",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tm67ii8d104lil",
+            "primaryId": "tm67ii8d105qhg",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tm67ii8d1074pd",
+            "primaryId": "tm67ii8d1088zy",
             "alternativeIds": []
           },
           {
@@ -17074,12 +17074,12 @@ const HEROES = [
           },
           {
             "level": 16,
-            "primaryId": "tm67ii8d1159zn",
+            "primaryId": "tm67ii8d1177bg",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tm67ii8d118d52",
+            "primaryId": "tm67ii8d122od3",
             "alternativeIds": []
           }
         ]
@@ -18857,7 +18857,7 @@ const HEROES = [
   },
   {
     "id": "garrosh",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Garrosh",
       "en": "Garrosh"
@@ -18995,7 +18995,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Garrosh]",
+        "buildCode": "[T1321133,Garrosh]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -19009,12 +19009,12 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmkha7eo004c7t",
+            "primaryId": "tmkha7eo006iq2",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmkha7eo007e0g",
+            "primaryId": "tmkha7eo0084wf",
             "alternativeIds": []
           },
           {
@@ -19029,12 +19029,12 @@ const HEROES = [
           },
           {
             "level": 16,
-            "primaryId": "tmkha7eo015yt6",
+            "primaryId": "tmkha7eo0177v6",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmkha7eo018788",
+            "primaryId": "tmkha7eo020lyc",
             "alternativeIds": []
           }
         ]
@@ -23688,7 +23688,7 @@ const HEROES = [
   },
   {
     "id": "johanna",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Johanna",
       "en": "Johanna"
@@ -23813,7 +23813,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Johanna]",
+        "buildCode": "[T1322222,Johanna]",
         "videos": [],
         "updatedAt": {
           "fr": "18 Août 2026",
@@ -23827,32 +23827,32 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tm4ay2y4m044ny",
+            "primaryId": "tm4ay2y4m06nvs",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tm4ay2y4m07f0p",
+            "primaryId": "tm4ay2y4m08ybm",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tm4ay2y4m10hjr",
+            "primaryId": "tm4ay2y4m11s5b",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tm4ay2y4m12mgo",
+            "primaryId": "tm4ay2y4m13qf4",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tm4ay2y4m151jm",
+            "primaryId": "tm4ay2y4m16kq7",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tm4ay2y4m18rx0",
+            "primaryId": "tm4ay2y4m19b1k",
             "alternativeIds": []
           }
         ]
@@ -36840,7 +36840,7 @@ const HEROES = [
   },
   {
     "id": "stitches",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Balafré",
       "en": "Stitches"
