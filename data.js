@@ -94,8 +94,8 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "20 Août 2026",
-      "en": "August 20, 2026"
+      "fr": "21 Août 2026",
+      "en": "August 21, 2026"
     },
     "changelog": [
       {
@@ -13174,8 +13174,8 @@ const HEROES = [
         "en": "Blind first, then strike: you hit Blinded targets far harder."
       },
       {
-        "fr": "Javelot foudroyant se scinde à l'impact : vise le serviteur devant le héros.",
-        "en": "Lightning Fury splits on impact: aim at the Minion in front of the Hero."
+        "fr": "Javelot foudroyant se scinde à l'impact : tu peux donc faire plus de dégâts pendant une phase de siège.",
+        "en": "Lightning Fury splits upon impact, allowing you to deal more damage during a siege."
       }
     ],
     "builds": [
@@ -13194,11 +13194,11 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Cassia]",
+        "buildCode": "[T1331221,Cassia]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "21 Août 2026",
+          "en": "August 21, 2026"
         },
         "talentSelections": [
           {
@@ -13208,35 +13208,45 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmtje8oul04m7z",
+            "primaryId": "tmtje8oul06w9d",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmtje8oul073r0",
+            "primaryId": "tmtje8oul097j5",
             "alternativeIds": []
           },
           {
             "level": 10,
             "primaryId": "tmtje8oul109yw",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmtje8oul11rp9"
+            ]
           },
           {
             "level": 13,
-            "primaryId": "tmtje8oul12wjd",
-            "alternativeIds": []
+            "primaryId": "tmtje8oul13cqs",
+            "alternativeIds": [
+              "tmtje8oul144ih"
+            ]
           },
           {
             "level": 16,
-            "primaryId": "tmtje8oul15m67",
-            "alternativeIds": []
+            "primaryId": "tmtje8oul16cb0",
+            "alternativeIds": [
+              "tmtje8oul15m67"
+            ]
           },
           {
             "level": 20,
             "primaryId": "tmtje8oul18ogn",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmtje8oul19tjg",
+              "tmtje8oul21p1a"
+            ]
           }
-        ]
+        ],
+        "isNew": true
       }
     ],
     "guideVideos": [],
@@ -13537,7 +13547,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Cassia"
+    "codeKey": "Cassia",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "chen",

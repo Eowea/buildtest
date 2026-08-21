@@ -162,6 +162,17 @@
   .subitem{border:1px dashed var(--border);border-radius:6px;padding:12px;margin-bottom:10px;position:relative;}
   .subitem .remove-btn{position:absolute;top:8px;right:8px;}
 
+  /* Infobulle de survol. En position fixe et attachée au body : les panneaux de
+     l'admin sont en overflow:hidden, une bulle en CSS pur y serait rognée. */
+  #adminTip{
+    position:fixed;z-index:9999;max-width:340px;pointer-events:none;
+    display:none;padding:8px 10px;border-radius:6px;
+    background:#12151c;border:1px solid var(--border);
+    box-shadow:0 8px 24px rgba(0,0,0,.55);
+    font-size:12px;line-height:1.5;color:var(--text);
+  }
+  #adminTip .t{display:block;margin-bottom:4px;font-weight:700;color:var(--gold);}
+
   details.collapsible{background:var(--panel-alt);border:1px solid var(--border);border-radius:8px;margin-bottom:10px;overflow:hidden;}
   details.collapsible > summary{list-style:none;cursor:pointer;padding:10px 14px;display:flex;align-items:center;gap:10px;user-select:none;}
   .drag-handle{cursor:grab;color:var(--text-dim);font-size:14px;flex:0 0 auto;padding:2px 4px;touch-action:none;}
@@ -1996,7 +2007,7 @@ function renderBuildTalentSelectionUI(hero, build, buildIdx){
       const isAlt = (sel.alternativeIds||[]).includes(p.id);
       return `
         <div class="row" style="align-items:center;gap:10px;margin-bottom:6px;flex-wrap:nowrap;">
-          <img src="${assetRawUrl(p.icon)}" style="width:28px;height:28px;border-radius:4px;object-fit:cover;background:#000;flex:0 0 auto;" onerror="this.style.visibility='hidden'" />
+          <img src="${assetRawUrl(p.icon)}" data-tip-title="${escapeHtml(p.name?.fr || 'Talent sans nom')}" data-tip="${escapeHtml((p.description?.fr || '').trim() || 'Pas de description.')}" style="width:28px;height:28px;border-radius:4px;object-fit:cover;background:#000;flex:0 0 auto;cursor:help;" onerror="this.style.visibility='hidden'" />
           <div style="flex:1;font-size:13px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${escapeHtml(p.name?.fr || 'Talent sans nom')}</div>
           <label style="display:flex;align-items:center;gap:4px;font-size:11px;text-transform:none;margin:0;flex:0 0 auto;">
             <input type="radio" style="width:auto;" name="primary-${currentHeroIndex}-${buildIdx}-${level}" ${isPrimary?'checked':''} onchange="setBuildTalentPrimary(${currentHeroIndex},${buildIdx},${selIdx},'${p.id}')" /> Principal
@@ -2416,6 +2427,43 @@ function showConfigPanel(){
     </div>
   `;
 }
+
+/* ---------- Infobulle de survol ----------
+   Un seul élément réutilisé, posé sur le body et suivi à la souris. La délégation
+   sur document survit aux nombreux re-rendus des panneaux, contrairement à des
+   écouteurs posés sur chaque ligne. */
+(function bindAdminTip(){
+  const tip = document.createElement('div');
+  tip.id = 'adminTip';
+  document.body.appendChild(tip);
+
+  const placer = (x, y) => {
+    // On garde la bulle dans la fenêtre : elle bascule à gauche ou au-dessus si
+    // le curseur est près d'un bord.
+    const r = tip.getBoundingClientRect();
+    const gx = x + 16 + r.width > innerWidth ? x - r.width - 12 : x + 16;
+    const gy = y + 16 + r.height > innerHeight ? y - r.height - 12 : y + 16;
+    tip.style.left = Math.max(8, gx) + 'px';
+    tip.style.top = Math.max(8, gy) + 'px';
+  };
+
+  document.addEventListener('mouseover', e => {
+    const el = e.target.closest('[data-tip]');
+    if (!el) return;
+    const titre = el.getAttribute('data-tip-title');
+    tip.innerHTML = (titre ? '<span class="t">' + escapeHtml(titre) + '</span>' : '') + escapeHtml(el.getAttribute('data-tip'));
+    tip.style.display = 'block';
+    placer(e.clientX, e.clientY);
+  });
+  document.addEventListener('mousemove', e => {
+    if (tip.style.display === 'block') placer(e.clientX, e.clientY);
+  });
+  document.addEventListener('mouseout', e => {
+    if (e.target.closest('[data-tip]')) tip.style.display = 'none';
+  });
+  // Un panneau qui défile sous une bulle ouverte la laisserait flotter dans le vide.
+  document.addEventListener('scroll', () => { tip.style.display = 'none'; }, true);
+})();
 
 /* ---------- Journal des changements ---------- */
 function renderChangelogEditor(){
