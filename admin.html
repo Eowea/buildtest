@@ -1783,7 +1783,7 @@ function renderOneBuild(hero, b, i, pos){
   const videosHtml = (b.videos||[]).map((v, vi) => `
     <div class="subitem" data-drag-item data-drag-list="buildVideos:${i}" data-drag-index="${vi}" style="padding-left:34px;">
       <span class="drag-handle" title="Glisser pour réordonner" style="position:absolute;left:8px;top:12px;">⠿</span>
-      <button class="ghost remove-btn" onclick="HEROES[${currentHeroIndex}].builds[${i}].videos.splice(${vi},1); markDirty(); renderHeroPanel();">✕</button>
+      <button class="ghost remove-btn" onclick="HEROES[${currentHeroIndex}].builds[${i}].videos.splice(${vi},1); touchBuild(${currentHeroIndex},${i}); markDirty(); renderHeroPanel();">✕</button>
       <div class="row">
         <div class="field"><label>Titre (FR)</label><input value="${escapeHtml(v.title?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'title.fr',this.value)" /></div>
         <div class="field"><label>Titre (EN)</label><input value="${escapeHtml(v.title?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}].videos[${vi}],'title.en',this.value)" /></div>
@@ -1800,7 +1800,7 @@ function renderOneBuild(hero, b, i, pos){
     </div>
   `).join('');
   return `
-    <details class="collapsible" data-uid="${buildUid}"${collapsibleState[buildUid]?' open':''} data-drag-item data-drag-list="builds" data-drag-index="${pos}">
+    <details class="collapsible" data-uid="${buildUid}"${collapsibleState[buildUid]?' open':''} data-build-index="${i}" data-drag-item data-drag-list="builds" data-drag-index="${pos}">
       <summary>
         <span class="drag-handle" title="Glisser pour réordonner">⠿</span>
         <span class="chevron">▸</span>
@@ -1840,12 +1840,13 @@ function renderOneBuild(hero, b, i, pos){
         <div class="field"><label>Résumé (EN)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'summary.en',this.value)">${escapeHtml(b.summary?.en)}</textarea></div>
       </div>
       <div class="row">
-        <div class="field"><label>Date de mise à jour (FR)</label><input value="${escapeHtml(b.updatedAt?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'updatedAt.fr',this.value)" /></div>
-        <div class="field"><label>Date de mise à jour (EN)</label><input value="${escapeHtml(b.updatedAt?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'updatedAt.en',this.value)" /></div>
+        <div class="field"><label>Date de mise à jour (FR)</label><input data-no-touch value="${escapeHtml(b.updatedAt?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'updatedAt.fr',this.value)" /></div>
+        <div class="field"><label>Date de mise à jour (EN)</label><input data-no-touch value="${escapeHtml(b.updatedAt?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'updatedAt.en',this.value)" /></div>
       </div>
+      <small class="help" style="margin-top:-6px;">Ces deux dates se remplissent toutes seules dès que tu modifies quoi que ce soit dans ce build. Tu peux les corriger à la main : ta saisie tient jusqu'à la prochaine modification du build.</small>
       <div class="field"><label>Vidéos liées au build (YouTube ou fichier assets)</label>
         ${videosHtml}
-        <button onclick="HEROES[${currentHeroIndex}].builds[${i}].videos=(HEROES[${currentHeroIndex}].builds[${i}].videos||[]); HEROES[${currentHeroIndex}].builds[${i}].videos.push({title:{fr:'',en:''},desc:{fr:'',en:''},youtubeId:''}); markDirty(); renderHeroPanel();">+ Ajouter une vidéo</button>
+        <button onclick="HEROES[${currentHeroIndex}].builds[${i}].videos=(HEROES[${currentHeroIndex}].builds[${i}].videos||[]); HEROES[${currentHeroIndex}].builds[${i}].videos.push({title:{fr:'',en:''},desc:{fr:'',en:''},youtubeId:''}); touchBuild(${currentHeroIndex},${i}); markDirty(); renderHeroPanel();">+ Ajouter une vidéo</button>
       </div>
       <h3 style="margin-top:16px;">Talents (sélection pour ce build)</h3>
       <small class="help" style="margin-top:-4px;margin-bottom:10px;">Coche "Principal" pour le talent recommandé à chaque palier, et "Alternatif" pour ceux à proposer en option. Un talent non coché n'apparaîtra pas du tout sur ce build. Pour ajouter de nouveaux talents disponibles, va dans l'onglet "Talents".</small>
@@ -2059,6 +2060,7 @@ function regenerateBuildCode(heroIdx, buildIdx){
     alert("Il manque un talent principal sur au moins un palier : le code ne peut pas être calculé.");
     return;
   }
+  touchBuild(heroIdx, buildIdx);
   markDirty(); renderHeroPanel();
 }
 function setBuildTalentPrimary(heroIdx, buildIdx, selIdx, poolId){
@@ -2082,7 +2084,7 @@ function toggleBuildTalentAlternative(heroIdx, buildIdx, selIdx, poolId, checked
 function addBuild(idx){
   const b = {
     enabled: true, order: (HEROES[idx].builds.length+1),
-    label:{fr:'Nouveau build',en:'New build'}, updatedAt:{fr:'',en:''},
+    label:{fr:'Nouveau build',en:'New build'}, updatedAt:dateDuJour(),
     summary:{fr:'',en:''}, buildCodeTitle:{fr:"A COLLER DANS L'ARBRE DES TALENTS",en:"PASTE IN TALENT TREE"},
     buildCode:'', videos:[], talentSelections:[]
   };
@@ -2427,6 +2429,50 @@ function showConfigPanel(){
     </div>
   `;
 }
+
+/* ---------- Date de mise à jour d'un build ----------
+   Elle s'affiche sur le site sous les onglets de build ; un build retouché
+   aujourd'hui qui montre une vieille date raconte quelque chose de faux.
+   On la repose donc à la date du jour dès qu'une valeur du build change. */
+function dateDuJour(){
+  const d = new Date();
+  return {
+    // "20 août 2026" → "20 Août 2026", pour coller aux dates déjà saisies.
+    fr: d.toLocaleDateString('fr-FR', { day:'numeric', month:'long', year:'numeric' })
+         .replace(/ (\p{L})/u, (m, c) => ' ' + c.toUpperCase()),
+    en: d.toLocaleDateString('en-US', { month:'long', day:'numeric', year:'numeric' })
+  };
+}
+function touchBuild(heroIdx, buildIdx){
+  const b = HEROES[heroIdx]?.builds?.[buildIdx];
+  if (!b) return;
+  const jour = dateDuJour();
+  if (b.updatedAt && b.updatedAt.fr === jour.fr && b.updatedAt.en === jour.en) return;
+  b.updatedAt = jour;
+  // Le champ visible est rafraîchi sans re-rendre le panneau : un re-rendu en pleine
+  // frappe ferait perdre le curseur dans le champ en cours d'édition.
+  const bloc = document.querySelector(`[data-build-index="${buildIdx}"]`);
+  if (bloc){
+    const champs = bloc.querySelectorAll('input[data-no-touch]');
+    if (champs[0]) champs[0].value = jour.fr;
+    if (champs[1]) champs[1].value = jour.en;
+  }
+}
+
+// Toute saisie dans le bloc d'un build le date, sauf dans les deux champs de date
+// eux-mêmes : sinon corriger la date à la main la réécrirait aussitôt.
+(function bindBuildTouch(){
+  const marquer = e => {
+    if (currentHeroIndex === null) return;
+    const champ = e.target;
+    if (champ.closest('[data-no-touch]') || champ.hasAttribute?.('data-no-touch')) return;
+    const bloc = champ.closest?.('[data-build-index]');
+    if (!bloc) return;
+    touchBuild(currentHeroIndex, Number(bloc.dataset.buildIndex));
+  };
+  document.addEventListener('input', marquer, true);
+  document.addEventListener('change', marquer, true);
+})();
 
 /* ---------- Infobulle de survol ----------
    Un seul élément réutilisé, posé sur le body et suivi à la souris. La délégation
