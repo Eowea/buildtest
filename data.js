@@ -13106,8 +13106,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/spells/storm_ui_icon_cassia_lightningfury.png",
         "description": {
-          "fr": "Projette un javelot de foudre qui se scinde à l’impact.",
-          "en": "Hurl a lightning javelin that splits upon impact"
+          "fr": "Projette un javelot de foudre qui frappe le premier ennemi touché, puis se scinde en deux éclairs qui blessent les ennemis sur leur trajectoire.",
+          "en": "Throws a lightning javelin that strikes the first enemy hit, then splits into two bolts that damage the enemies in their path."
         },
         "demoYoutubeId": ""
       },
@@ -13145,8 +13145,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/spells/storm_ui_icon_cassia_balllightning.png",
         "description": {
-          "fr": "Lance une boule de foudre qui rebondit.",
-          "en": "Throw a bouncing lightning ball"
+          "fr": "Lance une boule de foudre qui rebondit entre Cassia, le héros visé et les héros adverses proches, et blesse à chaque impact.",
+          "en": "Hurls a ball of lightning that bounces between Cassia, the targeted Hero and nearby enemy Heroes, damaging on every hit."
         },
         "demoYoutubeId": ""
       },
@@ -13260,8 +13260,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/spells/storm_ui_icon_cassia_lightningfury.png",
         "description": {
-          "fr": "Quête : augmente les dégâts de Javelot foudroyant.",
-          "en": "Quest: Increase Lightning Fury damage"
+          "fr": "Javelot foudroyant frappe plus fort. Quête : chaque héros touché en augmente définitivement les dégâts.",
+          "en": "Lightning Fury hits harder. Quest: each Hero hit permanently increases its damage."
         },
         "demoYoutubeId": null
       },
@@ -13274,8 +13274,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/spells/storm_ui_icon_cassia_fend.png",
         "description": {
-          "fr": "Augmente la portée et les dégâts de Fulgurance.",
-          "en": "Increase Fend range and damage"
+          "fr": "Fulgurance porte plus loin et plus large, et frappe bien plus fort les ennemis déjà bas en points de vie.",
+          "en": "Fend reaches farther and wider, and hits enemies already low on Health far harder."
         },
         "demoYoutubeId": null
       },
@@ -13288,8 +13288,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/talents/storm_ui_icon_cassia_new_chargedstrikes.png",
         "description": {
-          "fr": "Augmente la vitesse d’attaque et les dégâts des rebonds.",
-          "en": "Gain Attack Speed, bounce damage"
+          "fr": "Augmente la vitesse d'attaque. Toutes les quelques attaques, le coup frappe plus fort et rebondit sur les héros adverses proches.",
+          "en": "Increases Attack Speed. Every few attacks, the strike hits harder and bounces to nearby enemy Heroes."
         },
         "demoYoutubeId": null
       },
@@ -13302,8 +13302,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/talents/storm_ui_icon_cassia_avoidance_b.png",
         "description": {
-          "fr": "Fluidité rend des points de vie.",
-          "en": "Avoidance regenerates Health"
+          "fr": "Fluidité rend des points de vie en continu, et bien davantage quand elle est chargée au maximum.",
+          "en": "Avoidance restores Health continuously, and far more when it is fully charged."
         },
         "demoYoutubeId": null
       },
@@ -13330,8 +13330,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/talents/storm_ui_icon_cassia_innerlight.png",
         "description": {
-          "fr": "Rend des points de vie.",
-          "en": "Activate to heal"
+          "fr": "Capacité active : rend des points de vie sur la durée. Toucher un héros avec Javelot foudroyant en rapproche la prochaine utilisation.",
+          "en": "Active Ability: restores Health over time. Hitting a Hero with Lightning Fury brings the next cast closer."
         },
         "demoYoutubeId": null
       },
@@ -13358,8 +13358,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/spells/storm_ui_icon_cassia_blindinglight.png",
         "description": {
-          "fr": "Renforce les attaques de base et Lumière aveuglante.",
-          "en": "Empower Basic Attacks, Blinding Light"
+          "fr": "Attaquer sa cible principale rend du mana et rapproche Lumière aveuglante. Effet passif : renforce les dégâts supplémentaires infligés aux cibles aveuglées.",
+          "en": "Attacking her primary target restores Mana and brings Blinding Light closer. Passive: strengthens the bonus damage dealt to Blinded targets."
         },
         "demoYoutubeId": null
       },
@@ -13372,8 +13372,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/talents/storm_ui_icon_cassia_avoidance_b.png",
         "description": {
-          "fr": "Activer Fluidité inflige des dégâts.",
-          "en": "Activate Avoidance to deal damage"
+          "fr": "Une fois assez de dégâts encaissés sous Fluidité, l'activer déchaîne une décharge qui blesse les ennemis autour d'elle.",
+          "en": "Once enough damage is taken under Avoidance, activating it releases a burst that damages the enemies around her."
         },
         "demoYoutubeId": null
       },
@@ -13386,8 +13386,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/spells/storm_ui_icon_cassia_balllightning.png",
         "description": {
-          "fr": "Lance une boule de foudre qui rebondit.",
-          "en": "Throw a bouncing lightning ball"
+          "fr": "Lance une boule de foudre qui rebondit entre Cassia, le héros visé et les héros adverses proches, et blesse à chaque impact.",
+          "en": "Hurls a ball of lightning that bounces between Cassia, the targeted Hero and nearby enemy Heroes, damaging on every hit."
         },
         "demoYoutubeId": null
       },
@@ -13428,8 +13428,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/talents/storm_ui_icon_cassia_avoidance_b.png",
         "description": {
-          "fr": "Augmente la vitesse de déplacement, invocation de monture instantanée.",
-          "en": "Increase Movement Speed, instant Mount"
+          "fr": "Cassia se déplace plus vite, et à Fluidité pleine elle accélère encore et invoque sa monture instantanément.",
+          "en": "Cassia moves faster, and at full Avoidance she speeds up further and mounts instantly."
         },
         "demoYoutubeId": null
       },
@@ -13442,8 +13442,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/talents/storm_ui_icon_cassia_new_gloves.png",
         "description": {
-          "fr": "Augmente la portée des attaques de base.",
-          "en": "Increase Attack Range"
+          "fr": "Allonge la portée des attaques de base, et davantage encore tant que Fluidité est chargée au maximum.",
+          "en": "Extends Basic Attack range, and further still while Avoidance is fully charged."
         },
         "demoYoutubeId": null
       },
@@ -13456,8 +13456,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/talents/storm_ui_icon_cassia_combo_q_w.png",
         "description": {
-          "fr": "Javelot foudroyant transperce les ennemis et lance Lumière aveuglante.",
-          "en": "Lightning Fury pierces and casts Blinding Light"
+          "fr": "Javelot foudroyant transperce les ennemis mais ne se scinde que sur les héros. Chaque héros touché en rapproche le retour et se retrouve marqué ; assez de marques déclenchent une Lumière aveuglante à leurs pieds.",
+          "en": "Lightning Fury pierces enemies but only splits on Heroes. Each Hero hit brings it back sooner and becomes marked; enough marks trigger a Blinding Light at their feet."
         },
         "demoYoutubeId": null
       },
@@ -13470,8 +13470,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/talents/storm_ui_icon_cassia_combo_q_e.png",
         "description": {
-          "fr": "Fulgurance lance des éclairs de Javelot foudroyant.",
-          "en": "Fend releases Lightning Fury bolts"
+          "fr": "Javelot foudroyant gagne des charges supplémentaires, et Fulgurance lance un éclair vers chaque héros adverse proche à l'impact.",
+          "en": "Lightning Fury gains extra charges, and Fend looses a bolt at each nearby enemy Hero on impact."
         },
         "demoYoutubeId": null
       },
@@ -13498,8 +13498,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/spells/storm_ui_icon_cassia_balllightning.png",
         "description": {
-          "fr": "Boule de foudre rebondit indéfiniment.",
-          "en": "Ball Lightning bounces indefinitely"
+          "fr": "Boule de foudre rebondit indéfiniment, et chaque rebond en rapproche la prochaine utilisation.",
+          "en": "Ball Lightning bounces endlessly, and each bounce brings the next cast closer."
         },
         "demoYoutubeId": null
       },
@@ -13526,8 +13526,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/talents/storm_ui_icon_cassia_avoidance_b.png",
         "description": {
-          "fr": "Les dégâts des attaques de base ne sont pas affectés par l’armure.",
-          "en": "Basic Attacks ignore Armor"
+          "fr": "Les attaques de base ignorent l'armure de leurs cibles, et frappent plus fort tant que Fluidité est chargée au maximum.",
+          "en": "Basic Attacks ignore their targets' Armor, and hit harder while Avoidance is fully charged."
         },
         "demoYoutubeId": null
       },
@@ -13540,8 +13540,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/spells/storm_ui_icon_cassia_avoidance.png",
         "description": {
-          "fr": "Charge instantanément Fluidité et renforce son armure.",
-          "en": "Instantly charge and empower Avoidance"
+          "fr": "Charge aussitôt Fluidité au maximum et en renforce fortement l'armure pendant un temps. Perdre Fluidité fait tomber le bonus.",
+          "en": "Instantly charges Avoidance to maximum and greatly strengthens its Armor for a time. Losing Avoidance drops the bonus."
         },
         "demoYoutubeId": null
       }
