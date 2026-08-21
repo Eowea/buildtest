@@ -13069,7 +13069,7 @@ const HEROES = [
   },
   {
     "id": "cassia",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Cassia",
       "en": "Cassia"
