@@ -94,8 +94,8 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "21 Août 2026",
-      "en": "August 21, 2026"
+      "fr": "22 Août 2026",
+      "en": "August 22, 2026"
     },
     "changelog": [
       {
@@ -10106,7 +10106,12 @@ const HEROES = [
       }
     ],
     "codeKey": "Abathur",
-    "isNew": true
+    "isNew": true,
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "alarak",
@@ -45391,4 +45396,43 @@ const HEROES = [
   }
 ];
 
-const BATTLEGROUNDS = [];
+const BATTLEGROUNDS = [
+  {
+    "id": "test",
+    "enabled": true,
+    "name": {
+      "fr": "test",
+      "en": "test"
+    },
+    "image": "assets/heroes/portraits/storm_ui_glues_draft_portrait_abathur.png",
+    "minimapImage": "assets/maps/minimap/map_mines.jpg",
+    "headline": {
+      "fr": "blablabla",
+      "en": ""
+    },
+    "objectives": {
+      "fr": "blablabla",
+      "en": ""
+    },
+    "tips": [
+      {
+        "fr": "attention",
+        "en": ""
+      }
+    ],
+    "mercenaryCamps": [
+      {
+        "image": "assets/heroes/portraits/storm_ui_glues_draft_portrait_deathwing.png",
+        "name": {
+          "fr": "jean",
+          "en": ""
+        },
+        "description": {
+          "fr": "jean",
+          "en": ""
+        }
+      }
+    ],
+    "guideVideos": []
+  }
+];
