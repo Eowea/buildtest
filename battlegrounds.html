@@ -70,7 +70,8 @@
     // Mesure d'audience : même réglage que la page Builds, lu dans data.js.
     // Sans code renseigné dans l'admin, rien n'est chargé.
     (function () {
-      var a = (window.STREAMER_CONFIG && STREAMER_CONFIG.analytics) || {};
+      // STREAMER_CONFIG est déclaré en const : il n'existe pas sur window, d'où le typeof.
+      var a = (typeof STREAMER_CONFIG !== 'undefined' && STREAMER_CONFIG.analytics) || {};
       var code = a.enabled === false ? '' : String(a.goatcounterCode || '').trim();
       if (!code) return;
       var s = document.createElement('script');

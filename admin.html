@@ -2609,60 +2609,226 @@ function touchBuild(heroIdx, buildIdx){
 
 /* =========================================================================
    STATISTIQUES DE FRÉQUENTATION (GoatCounter)
-   Le tableau de bord est affiché tel quel dans une iframe. Il faut pour cela
-   que le site soit réglé sur « public » chez GoatCounter, sinon la page
-   demande une connexion et l'iframe reste vide.
+   GoatCounter refuse d'être affiché dans un cadre (en-tête X-Frame-Options),
+   son tableau de bord s'ouvre donc dans un onglet. Les chiffres montrés ici
+   viennent de son API, lue directement depuis cette page.
+   Le jeton d'API reste dans le navigateur : il n'est jamais écrit dans data.js.
    ========================================================================= */
 function statsCode(){
   const a = (STREAMER_CONFIG && STREAMER_CONFIG.analytics) || {};
   return String(a.goatcounterCode || '').trim();
+}
+function gcToken(){ return localStorage.getItem('eowea_admin_gc_token') || ''; }
+function setGcToken(v){
+  const t = String(v || '').trim();
+  if (t) localStorage.setItem('eowea_admin_gc_token', t);
+  else localStorage.removeItem('eowea_admin_gc_token');
+}
+function enregistrerGcToken(){
+  const champ = document.getElementById('gcTokenInput');
+  if (!champ) return;
+  setGcToken(champ.value);
+  toast(gcToken() ? 'Jeton enregistré dans ce navigateur' : 'Jeton effacé', 'success');
+  showStatsPanel();
+}
+function oublierGcToken(){ setGcToken(''); toast('Jeton effacé', 'success'); showStatsPanel(); }
+
+// Bornes de la période, arrondies à l'heure comme l'attend l'API.
+function bornesPeriode(jours){
+  const fin = new Date();
+  fin.setMinutes(0, 0, 0);
+  const rfc = d => d.toISOString().slice(0, 13) + ':00:00Z';
+  if (!jours) return { end: rfc(fin) };            // sans début : tout l'historique
+  const debut = new Date(fin.getTime() - jours * 864e5);
+  return { start: rfc(debut), end: rfc(fin) };
+}
+
+async function appelGc(chemin, params){
+  const url = new URL('https://' + statsCode() + '.goatcounter.com/api/v0/' + chemin);
+  Object.entries(params || {}).forEach(([k, v]) => { if (v != null) url.searchParams.set(k, v); });
+  const r = await fetch(url, { headers: { 'Authorization': 'Bearer ' + gcToken() } });
+  if (!r.ok){
+    const brut = await r.text().catch(() => '');
+    const e = new Error('HTTP ' + r.status);
+    e.statut = r.status;
+    // GoatCounter renvoie soit du JSON, soit une page d'erreur entière : seul le JSON est lisible.
+    try { const j = JSON.parse(brut); e.detail = String(j.error || (j.errors ? JSON.stringify(j.errors) : '')).slice(0, 300); }
+    catch (_){ e.detail = ''; }
+    throw e;
+  }
+  return r.json();
+}
+
+const STATS_PERIODES = [[7, '7 jours'], [30, '30 jours'], [90, '90 jours'], [0, 'Depuis le début']];
+let statsPeriode = 30;
+
+function setStatsPeriode(j){ statsPeriode = j; showStatsPanel(); }
+
+function nomHerosParId(id){
+  const h = (HEROES || []).find(x => x.id === id);
+  return h ? (h.name && h.name.fr ? h.name.fr : h.id) : id;
+}
+
+// Un tableau « libellé / nombre », avec une barre proportionnelle pour situer les écarts.
+function tableauStats(lignes, videTexte){
+  if (!lignes.length) return '<p style="color:var(--text-dim);font-size:13px;margin:0;">' + escapeHtml(videTexte) + '</p>';
+  const max = Math.max.apply(null, lignes.map(l => l.n)) || 1;
+  return '<table style="width:100%;border-collapse:collapse;font-size:13px;">' + lignes.map(l =>
+    '<tr>' +
+      '<td style="padding:4px 8px 4px 0;color:var(--text);white-space:nowrap;">' + escapeHtml(l.label) + '</td>' +
+      '<td style="padding:4px 0;width:100%;">' +
+        '<div style="background:var(--gold-border);height:8px;border-radius:2px;width:' +
+          Math.round(l.n / max * 100) + '%;min-width:2px;"></div>' +
+      '</td>' +
+      '<td style="padding:4px 0 4px 10px;text-align:right;color:var(--text-dim);white-space:nowrap;">' + l.n + '</td>' +
+    '</tr>').join('') + '</table>';
+}
+
+async function chargerStats(){
+  const zone = document.getElementById('statsResultat');
+  if (!zone) return;
+  zone.innerHTML = '<p style="color:var(--text-dim);font-size:13px;margin:0;">Lecture en cours…</p>';
+  const bornes = bornesPeriode(statsPeriode);
+  try {
+    const reponses = await Promise.all([
+      appelGc('stats/total', bornes),
+      appelGc('stats/hits', Object.assign({ limit: 200 }, bornes))
+    ]);
+    const total = reponses[0], hits = reponses[1];
+
+    const liste = (hits.hits || []).map(h => ({
+      chemin: String(h.path || '').replace(/^\//, ''),
+      evenement: !!h.event,
+      n: h.count || 0
+    }));
+    const prendre = prefixe => liste
+      .filter(l => l.evenement && l.chemin.indexOf(prefixe) === 0)
+      .map(l => ({ label: nomHerosParId(l.chemin.slice(prefixe.length)), n: l.n }))
+      .sort((a, b) => b.n - a.n);
+
+    const heros   = prendre('heros/');
+    const copies  = prendre('build-copie/');
+    const journal = liste.filter(l => l.evenement && l.chemin === 'changements')
+                         .reduce((s, l) => s + l.n, 0);
+    const pages   = liste.filter(l => !l.evenement)
+                         .map(l => ({ label: '/' + l.chemin, n: l.n }))
+                         .sort((a, b) => b.n - a.n).slice(0, 10);
+
+    const somme = t => t.reduce((s, x) => s + x.n, 0);
+    const bloc = (titre, contenu) =>
+      '<div style="margin-bottom:18px;"><div style="font-weight:600;font-size:13px;margin-bottom:6px;">' +
+      titre + '</div>' + contenu + '</div>';
+    const chiffre = (v, l) =>
+      '<div style="flex:1;min-width:120px;"><div style="font-size:24px;font-weight:600;">' + v +
+      '</div><div style="color:var(--text-dim);font-size:12px;">' + l + '</div></div>';
+
+    zone.innerHTML =
+      '<div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px;">' +
+        chiffre(total.total || 0, 'pages vues') +
+        chiffre(total.total_events || 0, 'évènements') +
+        chiffre(somme(heros), 'fiches de héros ouvertes') +
+        chiffre(somme(copies), 'codes de build copiés') +
+        chiffre(journal, 'ouvertures du journal') +
+      '</div>' +
+      bloc('Héros les plus consultés', tableauStats(heros.slice(0, 15), 'Aucune fiche ouverte sur la période.')) +
+      bloc('Builds les plus copiés', tableauStats(copies.slice(0, 15), 'Aucun code copié sur la période.')) +
+      bloc('Pages les plus vues', tableauStats(pages, 'Aucune page vue sur la période.')) +
+      (hits.more ? '<small class="help">Seules les 200 premières entrées sont lues ; au-delà, passe par le tableau de bord.</small>' : '');
+  } catch (e){
+    const messages = {
+      401: "Jeton refusé. Vérifie qu'il est bien copié en entier, et qu'il autorise la lecture des statistiques.",
+      403: "Ce jeton n'a pas le droit de lire les statistiques : recrée-le en cochant « Read statistics ».",
+      404: 'Le site « ' + statsCode() + ' » est introuvable chez GoatCounter. Vérifie le code dans Configuration du site.'
+    };
+    zone.innerHTML =
+      '<p style="color:var(--danger,#e06c6c);font-size:13px;margin:0 0 6px;">' +
+        escapeHtml(messages[e.statut] || ('Lecture impossible (' + e.message + ').')) + '</p>' +
+      (e.detail ? '<small class="help" style="white-space:pre-wrap;">' + escapeHtml(e.detail) + '</small>' : '');
+  }
 }
 
 function showStatsPanel(){
   currentHeroIndex = null;
   renderHeroList();
   const code = statsCode();
-  const url = code ? `https://${code}.goatcounter.com` : '';
-  document.getElementById('contentEl').innerHTML = `
-    <div class="hero-header"><div><h2 style="margin-bottom:4px;">Statistiques</h2>
-      <div style="color:var(--text-dim);font-size:12px;">Fréquentation du site, sans cookie ni donnée personnelle</div></div></div>
+  const url = code ? 'https://' + code + '.goatcounter.com' : '';
+  const jeton = gcToken();
 
-    ${code ? `
-      <div class="card">
-        <div class="card-head"><span class="title">Tableau de bord</span>
-          <a href="${escapeHtml(url)}" target="_blank" rel="noopener">Ouvrir dans un onglet ↗</a></div>
-        <iframe src="${escapeHtml(url)}" title="Statistiques GoatCounter"
-                style="width:100%;height:70vh;border:1px solid var(--border);border-radius:var(--radius);background:#fff;"></iframe>
-        <small class="help" style="margin-top:8px;">Si le cadre reste vide, c'est que ton site GoatCounter est encore en privé : va dans ses réglages et coche l'accès public, ou utilise le lien ci-dessus.</small>
-      </div>
+  const guide =
+    '<div class="card">' +
+      '<div class="card-head"><span class="title">À configurer</span></div>' +
+      '<p style="color:var(--text-dim);font-size:13px;line-height:1.7;">' +
+        "Aucun code GoatCounter n'est renseigné : <strong>le site n'envoie rien pour l'instant</strong>, " +
+        "et il n'y a donc rien à afficher ici." +
+      '</p>' +
+      '<ol style="color:var(--text-dim);font-size:13px;line-height:1.9;padding-left:18px;">' +
+        '<li>Crée un compte sur <a href="https://www.goatcounter.com" target="_blank" rel="noopener">goatcounter.com</a>.</li>' +
+        '<li>Choisis un code de site, par exemple <code>eowea</code> — ton tableau de bord sera alors <code>eowea.goatcounter.com</code>.</li>' +
+        '<li>Reviens dans <strong>Configuration du site</strong>, colle ce code, puis enregistre sur GitHub.</li>' +
+        '<li>Repasse ici et colle un jeton d&rsquo;API pour voir les chiffres sans quitter le panneau.</li>' +
+      '</ol>' +
+    '</div>';
 
-      <div class="card">
-        <div class="card-head"><span class="title">Ce qui est mesuré</span></div>
-        <p style="color:var(--text-dim);font-size:13px;line-height:1.6;margin:0 0 10px;">
-          En plus des pages vues, le site envoie quatre évènements nommés. Ils apparaissent
-          dans l'onglet <em>Events</em> du tableau de bord.
-        </p>
-        <ul style="color:var(--text-dim);font-size:13px;line-height:1.8;margin:0;padding-left:18px;">
-          <li><code>heros/&lt;identifiant&gt;</code> — une fiche de héros ouverte</li>
-          <li><code>build-copie/&lt;identifiant&gt;</code> — un code de build copié</li>
-          <li><code>changements</code> — la fenêtre « Ce qui a changé » ouverte</li>
-          <li>et les visites classiques : pages, référents, pays, navigateurs</li>
-        </ul>
-      </div>
-    ` : `
-      <div class="card">
-        <div class="card-head"><span class="title">À configurer</span></div>
-        <p style="color:var(--text-dim);font-size:13px;line-height:1.7;">
-          Aucun code GoatCounter n'est renseigné : le site n'envoie rien pour l'instant.
-        </p>
-        <ol style="color:var(--text-dim);font-size:13px;line-height:1.9;padding-left:18px;">
-          <li>Crée un compte sur <a href="https://www.goatcounter.com" target="_blank" rel="noopener">goatcounter.com</a>.</li>
-          <li>Choisis un code de site, par exemple <code>eowea</code> — ton tableau de bord sera alors <code>eowea.goatcounter.com</code>.</li>
-          <li>Dans ses réglages, coche l'accès public pour pouvoir l'afficher ici.</li>
-          <li>Reviens dans <strong>Configuration du site</strong> et colle ce code.</li>
-        </ol>
-      </div>
-    `}`;
+  const carteTableau =
+    '<div class="card">' +
+      '<div class="card-head"><span class="title">Tableau de bord</span></div>' +
+      '<p style="color:var(--text-dim);font-size:13px;line-height:1.7;margin:0 0 10px;">' +
+        'Le tableau de bord complet — référents, pays, navigateurs, graphiques — vit chez GoatCounter. ' +
+        "Il refuse d'être intégré dans une autre page, il s'ouvre donc dans un onglet." +
+      '</p>' +
+      '<a href="' + escapeHtml(url) + '" target="_blank" rel="noopener" class="list-add-btn" ' +
+        'style="display:inline-block;text-decoration:none;">Ouvrir ' + escapeHtml(code) + '.goatcounter.com ↗</a>' +
+    '</div>';
+
+  const carteJeton =
+    '<div class="card">' +
+      '<div class="card-head"><span class="title">Jeton d&rsquo;API</span></div>' +
+      (jeton
+        ? '<p style="color:var(--text-dim);font-size:13px;line-height:1.7;margin:0 0 10px;">' +
+            'Un jeton est enregistré dans ce navigateur. Il sert uniquement à lire les chiffres ci-dessous ' +
+            "et n'est jamais écrit dans <code>data.js</code>." +
+          '</p><button class="ghost" onclick="oublierGcToken()">Oublier ce jeton</button>'
+        : '<p style="color:var(--text-dim);font-size:13px;line-height:1.7;margin:0 0 10px;">' +
+            'Pour afficher les chiffres ici, crée un jeton dans ' +
+            '<a href="' + escapeHtml(url) + '/user/api" target="_blank" rel="noopener">Paramètres → API</a> ' +
+            'en cochant <strong>Read statistics</strong>, puis colle-le ci-dessous. ' +
+            "Il reste dans ce navigateur et n'est jamais publié." +
+          '</p>' +
+          '<div class="row">' +
+            '<div class="field"><input id="gcTokenInput" type="password" placeholder="Jeton d&rsquo;API GoatCounter" /></div>' +
+            '<button class="list-add-btn" style="flex:0 0 auto;margin-bottom:10px;" onclick="enregistrerGcToken()">Enregistrer</button>' +
+          '</div>') +
+    '</div>';
+
+  const carteChiffres = !jeton ? '' :
+    '<div class="card">' +
+      '<div class="card-head"><span class="title">Chiffres</span><div style="display:flex;gap:6px;">' +
+        STATS_PERIODES.map(p => '<button class="ghost" onclick="setStatsPeriode(' + p[0] + ')" style="' +
+          (p[0] === statsPeriode ? 'border-color:var(--gold);color:var(--gold-bright);' : '') + '">' + p[1] + '</button>').join('') +
+      '</div></div>' +
+      '<div id="statsResultat"></div>' +
+    '</div>';
+
+  const carteMesure =
+    '<div class="card">' +
+      '<div class="card-head"><span class="title">Ce qui est mesuré</span></div>' +
+      '<p style="color:var(--text-dim);font-size:13px;line-height:1.6;margin:0 0 10px;">' +
+        'En plus des pages vues, le site envoie trois évènements nommés. Ils apparaissent ' +
+        'dans l&rsquo;onglet <em>Events</em> du tableau de bord.' +
+      '</p>' +
+      '<ul style="color:var(--text-dim);font-size:13px;line-height:1.8;margin:0;padding-left:18px;">' +
+        '<li><code>heros/&lt;identifiant&gt;</code> — une fiche de héros ouverte</li>' +
+        '<li><code>build-copie/&lt;identifiant&gt;</code> — un code de build copié</li>' +
+        '<li><code>changements</code> — la fenêtre « Ce qui a changé » ouverte</li>' +
+      '</ul>' +
+    '</div>';
+
+  document.getElementById('contentEl').innerHTML =
+    '<div class="hero-header"><div><h2 style="margin-bottom:4px;">Statistiques</h2>' +
+      '<div style="color:var(--text-dim);font-size:12px;">Fréquentation du site, sans cookie ni donnée personnelle</div></div></div>' +
+    (code ? carteTableau + carteJeton + carteChiffres + carteMesure : guide);
+
+  if (code && jeton) chargerStats();
 }
 
 /* ---------- Journal des changements ---------- */
