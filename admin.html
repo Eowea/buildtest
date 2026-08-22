@@ -2780,9 +2780,11 @@ async function chargerStats(){
   }
 }
 
-// Deux sondes suffisent à trancher : une vers GoatCounter, une vers un domaine
-// ordinaire. En mode no-cors la réponse est opaque, mais un échec reste un échec,
-// ce qui est exactement ce qu'on veut mesurer ici.
+// Trois sondes : la cible, l'autre domaine de GoatCounter, et un domaine neutre.
+// En mode no-cors la réponse est opaque, mais un échec reste un échec — c'est
+// exactement ce qu'on mesure ici. Le filtrage peut venir d'une extension, mais
+// aussi du navigateur lui-même, du DNS ou d'un antivirus : le message ne doit
+// pas désigner un seul coupable.
 async function diagnostiquerAcces(){
   const sonde = async url => {
     try { await fetch(url, { mode: 'no-cors', cache: 'no-store' }); return true; }
@@ -2790,29 +2792,45 @@ async function diagnostiquerAcces(){
   };
   const resultats = await Promise.all([
     sonde('https://' + statsCode() + '.goatcounter.com/api/v0/stats/total'),
+    sonde('https://gc.zgo.at/count.js'),
     sonde('https://api.github.com/')
   ]);
-  const gc = resultats[0], ailleurs = resultats[1];
+  const gc = resultats[0], zgo = resultats[1], ailleurs = resultats[2];
   const local = location.protocol === 'file:';
 
   const alerte = t => '<p style="color:var(--danger,#e06c6c);font-size:13px;margin:0 0 8px;">' + t + '</p>';
-  const aide = t => '<small class="help" style="line-height:1.7;">' + t + '</small>';
+  const aide = t => '<small class="help" style="line-height:1.7;display:block;">' + t + '</small>';
+  const lien = 'https://' + escapeHtml(statsCode()) + '.goatcounter.com';
+  // Le test manuel tranche là où les sondes ne peuvent plus : si cette page ne
+  // s'ouvre pas non plus, le filtrage est en amont du navigateur.
+  const testManuel = aide('<strong>Pour trancher :</strong> ouvre <a href="' + lien + '" target="_blank" rel="noopener">' + lien + '</a> ' +
+    'dans un onglet. Si la page ne s&rsquo;affiche pas davantage, le filtrage est en amont du navigateur — DNS ou antivirus. ' +
+    'Si elle s&rsquo;affiche, seules les requêtes de fond sont arrêtées.');
 
   if (local){
     return alerte('La page est ouverte depuis un fichier local.') +
       aide('Ouverte en <code>file://</code>, la page n&rsquo;a pas le droit d&rsquo;interroger GoatCounter. ' +
            'Ouvre l&rsquo;administration depuis son adresse en ligne — la mesure, elle, fonctionne normalement sur le site publié.');
   }
-  if (!gc && ailleurs){
-    return alerte('Les requêtes vers goatcounter.com sont bloquées par ton navigateur.') +
-      aide('Les autres domaines répondent, seul GoatCounter est arrêté : c&rsquo;est presque toujours un bloqueur de publicités ' +
-           '(uBlock, AdGuard…) ou la protection anti-pistage du navigateur, qui rangent les outils de mesure dans leurs listes. ' +
-           'Ajoute <code>' + escapeHtml(statsCode()) + '.goatcounter.com</code> en exception, ou consulte le tableau de bord dans un onglet. ' +
-           'À noter : ce même blocage empêche aussi ta propre visite d&rsquo;être comptée — les visiteurs, eux, ne sont pas concernés.');
-  }
-  if (!gc && !ailleurs){
+  if (!ailleurs && !gc){
     return alerte('Aucune requête ne sort de cette page.') +
       aide('Ni GoatCounter ni les autres domaines ne répondent : vérifie la connexion réseau, un pare-feu ou un proxy.');
+  }
+  if (!gc){
+    const partout = !zgo;
+    return alerte('Les requêtes vers ' + (partout ? 'la mesure d&rsquo;audience' : 'goatcounter.com') + ' sont filtrées.') +
+      aide('Les domaines ordinaires répondent, ' +
+           (partout
+             ? 'mais <code>goatcounter.com</code> et <code>gc.zgo.at</code> sont tous deux arrêtés — le filtrage vise la catégorie « mesure d&rsquo;audience » dans son ensemble.'
+             : 'seul <code>goatcounter.com</code> est arrêté.') +
+           '<br>Quatre sources possibles, et désactiver un bloqueur de publicités n&rsquo;écarte que la première :' +
+           '<br>• une extension de blocage ;' +
+           '<br>• la protection anti-pistage intégrée au navigateur (Brave, Firefox en mode strict, Edge strict) — indépendante des extensions ;' +
+           '<br>• un filtrage DNS : Pi-hole, NextDNS, AdGuard DNS, ou celui de ta box ou de ton opérateur ;' +
+           '<br>• le bouclier web d&rsquo;un antivirus.') +
+      testManuel +
+      aide('À noter : ce même filtrage empêche aussi tes propres visites d&rsquo;être comptées. Tes visiteurs, eux, ne sont pas concernés — ' +
+           'et le tableau de bord reste consultable depuis un autre réseau, un téléphone en 4G par exemple.');
   }
   return alerte('GoatCounter répond, mais refuse la lecture depuis cette page.') +
     aide('Le domaine est joignable et la requête part bien. Si tu utilises une extension de confidentialité, ' +
