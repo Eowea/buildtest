@@ -134,7 +134,7 @@ const STREAMER_CONFIG = {
   },
   "analytics": {
     "enabled": true,
-    "goatcounterCode": ""
+    "goatcounterCode": "https://eowea.goatcounter.com/count"
   }
 };
 
