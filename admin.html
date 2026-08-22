@@ -424,6 +424,7 @@
       <div class="sidebar-footer">
         <button onclick="addHero()">+ Nouveau héros</button>
         <button onclick="showBattlegroundsPanel()">🗺 Cartes</button>
+        <button onclick="showStatsPanel()">📊 Statistiques</button>
         <button onclick="showConfigPanel()">⚙ Configuration du site</button>
         <button id="adminsPanelBtn" onclick="showAdminsPanel()">👤 Administrateurs</button>
       </div>
@@ -2507,6 +2508,17 @@ function showConfigPanel(){
         <div class="field"><label>Date (EN)</label><input ${STREAMER_CONFIG.siteUpdate?.autoDate !== false ? 'disabled' : ''} value="${escapeHtml(STREAMER_CONFIG.siteUpdate?.date?.en)}" oninput="setNested(STREAMER_CONFIG,'siteUpdate.date.en',this.value)" placeholder="Ex: August 15, 2026" /></div>
       </div>
 
+      <h3 style="margin-top:20px;">Mesure d'audience</h3>
+      <small class="help" style="margin-top:-4px;margin-bottom:10px;">GoatCounter : pas de cookie, pas de donnée personnelle, donc pas de bandeau de consentement à afficher. Laisse vide pour ne rien mesurer du tout.</small>
+      <div class="checkbox-row">
+        <input type="checkbox" ${STREAMER_CONFIG.analytics?.enabled !== false ? 'checked' : ''} onchange="setNested(STREAMER_CONFIG,'analytics.enabled',this.checked)" />
+        <label style="margin:0;text-transform:none;">Activer la mesure d'audience</label>
+      </div>
+      <div class="field">
+        <label>Code du site GoatCounter</label>
+        <input value="${escapeHtml(STREAMER_CONFIG.analytics?.goatcounterCode || '')}" oninput="setNested(STREAMER_CONFIG,'analytics.goatcounterCode',this.value.trim())" placeholder="ex. eowea  (pour eowea.goatcounter.com)" />
+      </div>
+
       <h3 style="margin-top:20px;">Ce qui a changé</h3>
       <small class="help" style="margin-top:-4px;margin-bottom:10px;">Une bulle apparaît à côté de la date : cliquée, elle ouvre une fenêtre avec ces lignes. La bulle reste invisible tant qu'aucune ligne n'est remplie. Range les entrées de la plus récente à la plus ancienne.</small>
       ${renderChangelogEditor()}
@@ -2594,6 +2606,64 @@ function touchBuild(heroIdx, buildIdx){
   // Un panneau qui défile sous une bulle ouverte la laisserait flotter dans le vide.
   document.addEventListener('scroll', () => { tip.style.display = 'none'; }, true);
 })();
+
+/* =========================================================================
+   STATISTIQUES DE FRÉQUENTATION (GoatCounter)
+   Le tableau de bord est affiché tel quel dans une iframe. Il faut pour cela
+   que le site soit réglé sur « public » chez GoatCounter, sinon la page
+   demande une connexion et l'iframe reste vide.
+   ========================================================================= */
+function statsCode(){
+  const a = (STREAMER_CONFIG && STREAMER_CONFIG.analytics) || {};
+  return String(a.goatcounterCode || '').trim();
+}
+
+function showStatsPanel(){
+  currentHeroIndex = null;
+  renderHeroList();
+  const code = statsCode();
+  const url = code ? `https://${code}.goatcounter.com` : '';
+  document.getElementById('contentEl').innerHTML = `
+    <div class="hero-header"><div><h2 style="margin-bottom:4px;">Statistiques</h2>
+      <div style="color:var(--text-dim);font-size:12px;">Fréquentation du site, sans cookie ni donnée personnelle</div></div></div>
+
+    ${code ? `
+      <div class="card">
+        <div class="card-head"><span class="title">Tableau de bord</span>
+          <a href="${escapeHtml(url)}" target="_blank" rel="noopener">Ouvrir dans un onglet ↗</a></div>
+        <iframe src="${escapeHtml(url)}" title="Statistiques GoatCounter"
+                style="width:100%;height:70vh;border:1px solid var(--border);border-radius:var(--radius);background:#fff;"></iframe>
+        <small class="help" style="margin-top:8px;">Si le cadre reste vide, c'est que ton site GoatCounter est encore en privé : va dans ses réglages et coche l'accès public, ou utilise le lien ci-dessus.</small>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="title">Ce qui est mesuré</span></div>
+        <p style="color:var(--text-dim);font-size:13px;line-height:1.6;margin:0 0 10px;">
+          En plus des pages vues, le site envoie quatre évènements nommés. Ils apparaissent
+          dans l'onglet <em>Events</em> du tableau de bord.
+        </p>
+        <ul style="color:var(--text-dim);font-size:13px;line-height:1.8;margin:0;padding-left:18px;">
+          <li><code>heros/&lt;identifiant&gt;</code> — une fiche de héros ouverte</li>
+          <li><code>build-copie/&lt;identifiant&gt;</code> — un code de build copié</li>
+          <li><code>changements</code> — la fenêtre « Ce qui a changé » ouverte</li>
+          <li>et les visites classiques : pages, référents, pays, navigateurs</li>
+        </ul>
+      </div>
+    ` : `
+      <div class="card">
+        <div class="card-head"><span class="title">À configurer</span></div>
+        <p style="color:var(--text-dim);font-size:13px;line-height:1.7;">
+          Aucun code GoatCounter n'est renseigné : le site n'envoie rien pour l'instant.
+        </p>
+        <ol style="color:var(--text-dim);font-size:13px;line-height:1.9;padding-left:18px;">
+          <li>Crée un compte sur <a href="https://www.goatcounter.com" target="_blank" rel="noopener">goatcounter.com</a>.</li>
+          <li>Choisis un code de site, par exemple <code>eowea</code> — ton tableau de bord sera alors <code>eowea.goatcounter.com</code>.</li>
+          <li>Dans ses réglages, coche l'accès public pour pouvoir l'afficher ici.</li>
+          <li>Reviens dans <strong>Configuration du site</strong> et colle ce code.</li>
+        </ol>
+      </div>
+    `}`;
+}
 
 /* ---------- Journal des changements ---------- */
 function renderChangelogEditor(){

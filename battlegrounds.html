@@ -66,6 +66,21 @@
   <script src="data.js"></script>
   <script src="battlegrounds.js"></script>
 
+  <script>
+    // Mesure d'audience : même réglage que la page Builds, lu dans data.js.
+    // Sans code renseigné dans l'admin, rien n'est chargé.
+    (function () {
+      var a = (window.STREAMER_CONFIG && STREAMER_CONFIG.analytics) || {};
+      var code = a.enabled === false ? '' : String(a.goatcounterCode || '').trim();
+      if (!code) return;
+      var s = document.createElement('script');
+      s.async = true;
+      s.setAttribute('data-goatcounter', 'https://' + code + '.goatcounter.com/count');
+      s.src = '//gc.zgo.at/count.js';
+      document.head.appendChild(s);
+    })();
+  </script>
+
 <script>
   document.addEventListener("click", function(e) {
     if (window.innerWidth <= 768) {

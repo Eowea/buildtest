@@ -131,6 +131,10 @@ const STREAMER_CONFIG = {
         ]
       }
     ]
+  },
+  "analytics": {
+    "enabled": true,
+    "goatcounterCode": ""
   }
 };
 
