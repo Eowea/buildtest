@@ -8,20 +8,41 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  /* Palette reprise telle quelle de style.css : mêmes valeurs, mêmes noms côté site,
+     pour que le panneau et les pages publiques ne divergent jamais. */
   :root{
-    --bg:#0d0a26;
-    --panel:#151238;
-    --panel-alt:#1c1845;
-    --border:#2e2a5c;
-    --text:#e0e6ed;
-    --text-dim:#98a1b3;
+    --bg:#0d0a26;            /* --bg-deep */
+    --bg-0:#131238;
+    --panel:#191642;         /* --bg-1 */
+    --panel-alt:#201c50;     /* --bg-2 */
+    --panel-hi:#29245e;      /* --bg-3 */
+
     --gold:#f0b429;
+    --gold-bright:#ffd873;
     --gold-dim:#a67c00;
-    --blue:#c9c0f5;
-    --red:#c1554d;
-    --red-dim:#7a2e2a;
+    --gold-glow:rgba(240,180,41,.25);
+    --gold-border:rgba(240,180,41,.5);
+    --gold-soft:rgba(240,180,41,.08);
+
+    --blue:#e2d8ff;
+    --blue-bright:#f2ecff;
+    --blue-glow:rgba(226,216,255,.25);
+    --blue-soft:rgba(226,216,255,.05);
+    --border:rgba(226,216,255,.35);   /* --blue-border */
+    --border-hover:rgba(226,216,255,.8);
+
+    --text:#e0e6ed;
+    --text-bright:#ffffff;
+    --text-dim:#9aa5b5;
+    --text-muted:#5c7a9a;
+
+    --red:#ff6b5e;
+    --red-dim:rgba(255,107,94,.45);
     --green:#5f9e6f;
-    --radius:8px;
+
+    --card-bg:linear-gradient(180deg,rgba(20,28,44,.8),rgba(12,18,28,.9));
+    --card-shadow:inset 0 1px 0 rgba(255,255,255,.05), 0 5px 15px rgba(0,0,0,.5);
+    --radius:4px;            /* --radius-sm : le site est anguleux, pas arrondi */
   }
   @font-face {
     font-family: 'Metronic for Blizzard';
@@ -173,6 +194,8 @@
   }
   #adminTip .t{display:block;margin-bottom:4px;font-weight:700;color:var(--gold);}
 
+
+
   details.collapsible{background:var(--panel-alt);border:1px solid var(--border);border-radius:8px;margin-bottom:10px;overflow:hidden;}
   details.collapsible > summary{list-style:none;cursor:pointer;padding:10px 14px;display:flex;align-items:center;gap:10px;user-select:none;}
   .drag-handle{cursor:grab;color:var(--text-dim);font-size:14px;flex:0 0 auto;padding:2px 4px;touch-action:none;}
@@ -236,6 +259,67 @@
 
     .login-card, .token-card{width:100%;padding:22px;}
   }
+  /* ═══ Harmonisation avec le site ═══════════════════════════════════════════
+     Les règles ci-dessous reprennent les traitements caractéristiques de
+     style.css : fond de carte en dégradé avec liseré intérieur, or réservé à
+     ce qui est actif ou sélectionné, libellés capitales espacées, halo doré
+     sur les titres. La géométrie des panneaux n'est pas touchée. */
+
+  /* Surfaces : le fond de carte du site, plutôt qu'un aplat. */
+  .card, .login-card, .token-card, .subitem, details.collapsible{
+    background:var(--card-bg);
+    box-shadow:var(--card-shadow);
+  }
+  /* Le site est anguleux : on ramène les coins arrondis codés en dur au rayon commun. */
+  .login-card, .token-card, details.collapsible, .subitem, .card, .snippet,
+  .hero-item, .hero-item img, .thumb-picker img{border-radius:var(--radius);}
+  .topbar, .sidebar{background:linear-gradient(180deg,var(--panel),var(--bg-0));}
+
+  /* Titres : or et halo, comme les en-têtes de carte du site. */
+  h1,h2{text-shadow:0 0 8px var(--gold-glow);}
+  h1{text-transform:uppercase;letter-spacing:.05em;}
+
+  /* Libellés de champ : capitales espacées, teinte bleutée du site. */
+  label{color:var(--text-muted);letter-spacing:.05em;}
+
+  /* Onglets : soulignement doré et halo sur l'actif. */
+  .tab{transition:color .15s,border-color .15s;}
+  .tab:hover{color:var(--blue-bright);}
+  .tab.active{color:var(--gold-bright);border-color:var(--gold-bright);text-shadow:0 0 8px var(--gold-glow);}
+
+  /* Boutons : le principal reprend le dégradé métallique du site. */
+  button.primary{
+    background:linear-gradient(180deg,var(--gold-bright),var(--gold));
+    border-color:var(--gold);color:#1b1400;
+  }
+  button.primary:hover{box-shadow:0 0 12px var(--gold-glow);}
+  button:hover{border-color:var(--gold-border);}
+  button:focus-visible{outline:2px solid var(--gold-border);outline-offset:2px;}
+
+  /* Champs : liseré doré et halo à la saisie, comme les éléments actifs du site. */
+  input:focus,textarea:focus,select:focus{
+    border-color:var(--gold-border);
+    box-shadow:0 0 0 1px var(--gold-soft),0 0 10px var(--gold-glow);
+  }
+
+  /* Héros sélectionné : rail doré à gauche, repris de .hero-link du site. */
+  .hero-item{border-left:3px solid transparent;transition:background .15s,border-color .15s;}
+  .hero-item:hover{background:linear-gradient(90deg,var(--blue-soft),transparent);border-left-color:var(--border-hover);}
+  .hero-item.active{
+    background:linear-gradient(90deg,var(--gold-soft),transparent);
+    border:1px solid var(--gold-border);border-left:3px solid var(--gold-bright);
+  }
+
+  /* Le badge de la barre supérieure devient l'hexagone du site. */
+  .topbar .brand .badge{
+    border-radius:0;
+    clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+    filter:drop-shadow(0 0 8px var(--gold-glow));
+  }
+
+  /* Pastilles d'état : mêmes rouges que la carte « Bugs connus ». */
+  .dot.off{background:var(--red);}
+  .topbar .status.dirty{color:var(--gold-bright);}
 </style>
 </head>
 <body>
