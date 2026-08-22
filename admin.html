@@ -2766,11 +2766,57 @@ async function chargerStats(){
       403: "Ce jeton n'a pas le droit de lire les statistiques : recrée-le en cochant « Read statistics ».",
       404: 'Le site « ' + statsCode() + ' » est introuvable chez GoatCounter. Vérifie le code dans Configuration du site.'
     };
+    // Sans statut HTTP, la requête n'est jamais arrivée : le jeton n'y est pour rien.
+    // On cherche alors qui l'a arrêtée plutôt que de renvoyer « Failed to fetch ».
+    if (!e.statut){
+      zone.innerHTML = '<p style="color:var(--text-dim);font-size:13px;margin:0;">La requête n&rsquo;a pas abouti, recherche de la cause…</p>';
+      zone.innerHTML = await diagnostiquerAcces();
+      return;
+    }
     zone.innerHTML =
       '<p style="color:var(--danger,#e06c6c);font-size:13px;margin:0 0 6px;">' +
         escapeHtml(messages[e.statut] || ('Lecture impossible (' + e.message + ').')) + '</p>' +
       (e.detail ? '<small class="help" style="white-space:pre-wrap;">' + escapeHtml(e.detail) + '</small>' : '');
   }
+}
+
+// Deux sondes suffisent à trancher : une vers GoatCounter, une vers un domaine
+// ordinaire. En mode no-cors la réponse est opaque, mais un échec reste un échec,
+// ce qui est exactement ce qu'on veut mesurer ici.
+async function diagnostiquerAcces(){
+  const sonde = async url => {
+    try { await fetch(url, { mode: 'no-cors', cache: 'no-store' }); return true; }
+    catch (err) { return false; }
+  };
+  const resultats = await Promise.all([
+    sonde('https://' + statsCode() + '.goatcounter.com/api/v0/stats/total'),
+    sonde('https://api.github.com/')
+  ]);
+  const gc = resultats[0], ailleurs = resultats[1];
+  const local = location.protocol === 'file:';
+
+  const alerte = t => '<p style="color:var(--danger,#e06c6c);font-size:13px;margin:0 0 8px;">' + t + '</p>';
+  const aide = t => '<small class="help" style="line-height:1.7;">' + t + '</small>';
+
+  if (local){
+    return alerte('La page est ouverte depuis un fichier local.') +
+      aide('Ouverte en <code>file://</code>, la page n&rsquo;a pas le droit d&rsquo;interroger GoatCounter. ' +
+           'Ouvre l&rsquo;administration depuis son adresse en ligne — la mesure, elle, fonctionne normalement sur le site publié.');
+  }
+  if (!gc && ailleurs){
+    return alerte('Les requêtes vers goatcounter.com sont bloquées par ton navigateur.') +
+      aide('Les autres domaines répondent, seul GoatCounter est arrêté : c&rsquo;est presque toujours un bloqueur de publicités ' +
+           '(uBlock, AdGuard…) ou la protection anti-pistage du navigateur, qui rangent les outils de mesure dans leurs listes. ' +
+           'Ajoute <code>' + escapeHtml(statsCode()) + '.goatcounter.com</code> en exception, ou consulte le tableau de bord dans un onglet. ' +
+           'À noter : ce même blocage empêche aussi ta propre visite d&rsquo;être comptée — les visiteurs, eux, ne sont pas concernés.');
+  }
+  if (!gc && !ailleurs){
+    return alerte('Aucune requête ne sort de cette page.') +
+      aide('Ni GoatCounter ni les autres domaines ne répondent : vérifie la connexion réseau, un pare-feu ou un proxy.');
+  }
+  return alerte('GoatCounter répond, mais refuse la lecture depuis cette page.') +
+    aide('Le domaine est joignable et la requête part bien. Si tu utilises une extension de confidentialité, ' +
+         'elle peut retirer l&rsquo;en-tête d&rsquo;autorisation. Le tableau de bord reste accessible dans un onglet.');
 }
 
 function showStatsPanel(){
