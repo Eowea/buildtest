@@ -2780,61 +2780,83 @@ async function chargerStats(){
   }
 }
 
-// Trois sondes : la cible, l'autre domaine de GoatCounter, et un domaine neutre.
-// En mode no-cors la réponse est opaque, mais un échec reste un échec — c'est
-// exactement ce qu'on mesure ici. Le filtrage peut venir d'une extension, mais
-// aussi du navigateur lui-même, du DNS ou d'un antivirus : le message ne doit
-// pas désigner un seul coupable.
+// Quatre sondes, et le détail de chacune est affiché : sans ça, impossible de
+// distinguer un filtrage d'une panne. La sonde par balise <script> emprunte un
+// autre chemin que fetch — certains filtres n'arrêtent que l'un des deux.
 async function diagnostiquerAcces(){
-  const sonde = async url => {
-    try { await fetch(url, { mode: 'no-cors', cache: 'no-store' }); return true; }
-    catch (err) { return false; }
+  const parFetch = async url => {
+    try { await fetch(url, { mode: 'no-cors', cache: 'no-store' }); return { ok: true }; }
+    catch (err) { return { ok: false, err: err.name + ' : ' + err.message }; }
   };
-  const resultats = await Promise.all([
-    sonde('https://' + statsCode() + '.goatcounter.com/api/v0/stats/total'),
-    sonde('https://gc.zgo.at/count.js'),
-    sonde('https://api.github.com/')
-  ]);
-  const gc = resultats[0], zgo = resultats[1], ailleurs = resultats[2];
+  const parScript = url => new Promise(res => {
+    const s = document.createElement('script');
+    let fini = false;
+    const finir = r => { if (!fini) { fini = true; s.remove(); res(r); } };
+    s.onload = () => finir({ ok: true });
+    s.onerror = () => finir({ ok: false, err: 'chargement refusé' });
+    setTimeout(() => finir({ ok: false, err: 'délai dépassé' }), 8000);
+    s.src = url;
+    document.head.appendChild(s);
+  });
+
+  const hote = statsCode() + '.goatcounter.com';
+  const sondes = [
+    { nom: hote + '/user/new', type: 'fetch', p: parFetch('https://' + hote + '/user/new') },
+    { nom: 'gc.zgo.at/count.js', type: 'fetch', p: parFetch('https://gc.zgo.at/count.js') },
+    { nom: 'gc.zgo.at/count.js', type: 'script', p: parScript('https://gc.zgo.at/count.js') },
+    { nom: 'api.github.com', type: 'fetch', p: parFetch('https://api.github.com/') }
+  ];
+  const res = await Promise.all(sondes.map(s => s.p));
+  sondes.forEach((s, i) => { s.r = res[i]; });
+
+  const gcFetch = res[0].ok, zgoFetch = res[1].ok, zgoScript = res[2].ok, ailleurs = res[3].ok;
   const local = location.protocol === 'file:';
 
   const alerte = t => '<p style="color:var(--danger,#e06c6c);font-size:13px;margin:0 0 8px;">' + t + '</p>';
   const aide = t => '<small class="help" style="line-height:1.7;display:block;">' + t + '</small>';
-  const lien = 'https://' + escapeHtml(statsCode()) + '.goatcounter.com';
-  // Le test manuel tranche là où les sondes ne peuvent plus : si cette page ne
-  // s'ouvre pas non plus, le filtrage est en amont du navigateur.
-  const testManuel = aide('<strong>Pour trancher :</strong> ouvre <a href="' + lien + '" target="_blank" rel="noopener">' + lien + '</a> ' +
-    'dans un onglet. Si la page ne s&rsquo;affiche pas davantage, le filtrage est en amont du navigateur — DNS ou antivirus. ' +
-    'Si elle s&rsquo;affiche, seules les requêtes de fond sont arrêtées.');
+  const lien = 'https://' + escapeHtml(hote);
+
+  // Le relevé brut : c'est lui qui permet de trancher sans deviner.
+  const detail = '<details style="margin-top:10px;"><summary style="cursor:pointer;color:var(--text-dim);font-size:12px;">Détail des sondes</summary>' +
+    '<pre style="font-size:11px;color:var(--text-dim);white-space:pre-wrap;margin:8px 0 0;">' +
+    sondes.map(s => escapeHtml(('[' + s.type + '] ' + s.nom).padEnd(42) + (s.r.ok ? 'ok' : 'ÉCHEC — ' + s.r.err))).join('\n') +
+    '\n' + escapeHtml('origine de la page'.padEnd(42) + location.origin) +
+    '\n' + escapeHtml('navigateur'.padEnd(42) + navigator.userAgent.slice(0, 120)) +
+    '</pre></details>';
 
   if (local){
     return alerte('La page est ouverte depuis un fichier local.') +
       aide('Ouverte en <code>file://</code>, la page n&rsquo;a pas le droit d&rsquo;interroger GoatCounter. ' +
-           'Ouvre l&rsquo;administration depuis son adresse en ligne — la mesure, elle, fonctionne normalement sur le site publié.');
+           'Ouvre l&rsquo;administration depuis son adresse en ligne — la mesure, elle, fonctionne normalement sur le site publié.') + detail;
   }
-  if (!ailleurs && !gc){
+  if (!ailleurs && !gcFetch){
     return alerte('Aucune requête ne sort de cette page.') +
-      aide('Ni GoatCounter ni les autres domaines ne répondent : vérifie la connexion réseau, un pare-feu ou un proxy.');
+      aide('Ni GoatCounter ni les autres domaines ne répondent : vérifie la connexion réseau, un pare-feu ou un proxy.') + detail;
   }
-  if (!gc){
-    const partout = !zgo;
-    return alerte('Les requêtes vers ' + (partout ? 'la mesure d&rsquo;audience' : 'goatcounter.com') + ' sont filtrées.') +
-      aide('Les domaines ordinaires répondent, ' +
-           (partout
-             ? 'mais <code>goatcounter.com</code> et <code>gc.zgo.at</code> sont tous deux arrêtés — le filtrage vise la catégorie « mesure d&rsquo;audience » dans son ensemble.'
-             : 'seul <code>goatcounter.com</code> est arrêté.') +
-           '<br>Quatre sources possibles, et désactiver un bloqueur de publicités n&rsquo;écarte que la première :' +
+  if (!gcFetch){
+    const scriptPasse = zgoScript && !zgoFetch;
+    return alerte('Les requêtes vers la mesure d&rsquo;audience sont filtrées.') +
+      aide('Les domaines ordinaires répondent, mais ceux de GoatCounter sont arrêtés.' +
+           (scriptPasse
+             ? '<br><strong>Précision utile :</strong> le script de comptage se charge normalement, seules les requêtes de fond sont arrêtées. ' +
+               'Le comptage de tes visiteurs n&rsquo;est donc pas affecté — c&rsquo;est uniquement la lecture des chiffres ici qui l&rsquo;est.'
+             : '<br><strong>Précision utile :</strong> le script de comptage lui-même est refusé. ' +
+               'Dans ce navigateur, tes propres visites ne sont donc pas comptées — ce qui évite au passage ' +
+               'que tes essais ne faussent tes chiffres. Tes visiteurs, eux, ne sont pas concernés.') +
+           '<br><br>Quatre sources possibles, et désactiver un bloqueur de publicités n&rsquo;écarte que la première :' +
            '<br>• une extension de blocage ;' +
-           '<br>• la protection anti-pistage intégrée au navigateur (Brave, Firefox en mode strict, Edge strict) — indépendante des extensions ;' +
+           '<br>• la protection anti-pistage <strong>intégrée au navigateur</strong>, active sans extension : ' +
+           'Opera et Opera GX la fournissent d&rsquo;origine, tout comme Brave, Firefox en mode strict ou Edge strict ;' +
            '<br>• un filtrage DNS : Pi-hole, NextDNS, AdGuard DNS, ou celui de ta box ou de ton opérateur ;' +
            '<br>• le bouclier web d&rsquo;un antivirus.') +
-      testManuel +
-      aide('À noter : ce même filtrage empêche aussi tes propres visites d&rsquo;être comptées. Tes visiteurs, eux, ne sont pas concernés — ' +
-           'et le tableau de bord reste consultable depuis un autre réseau, un téléphone en 4G par exemple.');
+      aide('<strong>Le plus simple :</strong> ouvre <a href="' + lien + '" target="_blank" rel="noopener">' + lien + '</a> ' +
+           'dans un onglet — le tableau de bord complet y est accessible, cette page-ci n&rsquo;étant qu&rsquo;un raccourci. ' +
+           'Un autre navigateur, ou une fenêtre de navigation privée sans extension, fonctionne aussi.') +
+      detail;
   }
   return alerte('GoatCounter répond, mais refuse la lecture depuis cette page.') +
     aide('Le domaine est joignable et la requête part bien. Si tu utilises une extension de confidentialité, ' +
-         'elle peut retirer l&rsquo;en-tête d&rsquo;autorisation. Le tableau de bord reste accessible dans un onglet.');
+         'elle peut retirer l&rsquo;en-tête d&rsquo;autorisation. Le tableau de bord reste accessible dans un onglet.') + detail;
 }
 
 function showStatsPanel(){
@@ -2883,6 +2905,8 @@ function showStatsPanel(){
             '<a href="' + escapeHtml(url) + '/user/api" target="_blank" rel="noopener">Paramètres → API</a> ' +
             'en cochant <strong>Read statistics</strong>, puis colle-le ci-dessous. ' +
             "Il reste dans ce navigateur et n'est jamais publié." +
+            '<br><br>Attention à ne pas le confondre avec le <em>jeton secret</em> de la page Paramètres : ' +
+            'celui-là sert à ouvrir le tableau de bord par son adresse, et ne fonctionne pas pour l&rsquo;API.' +
           '</p>' +
           '<div class="row">' +
             '<div class="field"><input id="gcTokenInput" type="password" placeholder="Jeton d&rsquo;API GoatCounter" /></div>' +
