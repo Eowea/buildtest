@@ -2669,6 +2669,18 @@ function nomHerosParId(id){
   return h ? (h.name && h.name.fr ? h.name.fr : h.id) : id;
 }
 
+// Même règle de fabrication d'identifiant que navSlug() dans app.js, pour
+// retrouver le libellé d'un lien à partir de ce qui a été mesuré.
+function slugLien(lien){
+  const brut = (lien && lien.label && lien.label.fr) || (lien && lien.label && lien.label.en) || (lien && lien.url) || 'lien';
+  return String(brut).normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().replace(/ /g, '-') || 'lien';
+}
+function nomLienParId(id){
+  const l = ((STREAMER_CONFIG && STREAMER_CONFIG.navLinks) || []).find(x => slugLien(x) === id);
+  return l ? (l.label && l.label.fr ? l.label.fr : id) : id;
+}
+
 // Un tableau « libellé / nombre », avec une barre proportionnelle pour situer les écarts.
 function tableauStats(lignes, videTexte){
   if (!lignes.length) return '<p style="color:var(--text-dim);font-size:13px;margin:0;">' + escapeHtml(videTexte) + '</p>';
@@ -2692,9 +2704,12 @@ async function chargerStats(){
   try {
     const reponses = await Promise.all([
       appelGc('stats/total', bornes),
-      appelGc('stats/hits', Object.assign({ limit: 200 }, bornes))
+      appelGc('stats/hits', Object.assign({ limit: 200 }, bornes)),
+      // Les pays viennent d'un autre point d'accès. S'il échoue, le reste doit
+      // quand même s'afficher : on récupère l'échec sans le propager.
+      appelGc('stats/locations', Object.assign({ limit: 20 }, bornes)).catch(() => null)
     ]);
-    const total = reponses[0], hits = reponses[1];
+    const total = reponses[0], hits = reponses[1], pays = reponses[2];
 
     const liste = (hits.hits || []).map(h => ({
       chemin: String(h.path || '').replace(/^\//, ''),
@@ -2713,6 +2728,13 @@ async function chargerStats(){
     const pages   = liste.filter(l => !l.evenement)
                          .map(l => ({ label: '/' + l.chemin, n: l.n }))
                          .sort((a, b) => b.n - a.n).slice(0, 10);
+    // Les liens du header portent le libellé qu'ils avaient au moment du clic.
+    const liens   = liste.filter(l => l.evenement && l.chemin.indexOf('lien/') === 0)
+                         .map(l => ({ label: nomLienParId(l.chemin.slice(5)), n: l.n }))
+                         .sort((a, b) => b.n - a.n);
+    const listePays = ((pays && pays.stats) || [])
+                         .map(p => ({ label: p.name || p.id || '—', n: p.count || 0 }))
+                         .sort((a, b) => b.n - a.n);
 
     const somme = t => t.reduce((s, x) => s + x.n, 0);
     const bloc = (titre, contenu) =>
@@ -2732,6 +2754,10 @@ async function chargerStats(){
       '</div>' +
       bloc('Héros les plus consultés', tableauStats(heros.slice(0, 15), 'Aucune fiche ouverte sur la période.')) +
       bloc('Builds les plus copiés', tableauStats(copies.slice(0, 15), 'Aucun code copié sur la période.')) +
+      bloc('Liens du header', tableauStats(liens, 'Aucun clic sur un lien du header sur la période.')) +
+      bloc('Pays', pays
+        ? tableauStats(listePays, 'Aucune visite localisée sur la période.')
+        : '<p style="color:var(--text-dim);font-size:13px;margin:0;">Les pays n\'ont pas pu être lus.</p>') +
       bloc('Pages les plus vues', tableauStats(pages, 'Aucune page vue sur la période.')) +
       (hits.more ? '<small class="help">Seules les 200 premières entrées sont lues ; au-delà, passe par le tableau de bord.</small>' : '');
   } catch (e){
@@ -2813,12 +2839,13 @@ function showStatsPanel(){
     '<div class="card">' +
       '<div class="card-head"><span class="title">Ce qui est mesuré</span></div>' +
       '<p style="color:var(--text-dim);font-size:13px;line-height:1.6;margin:0 0 10px;">' +
-        'En plus des pages vues, le site envoie trois évènements nommés. Ils apparaissent ' +
-        'dans l&rsquo;onglet <em>Events</em> du tableau de bord.' +
+        'En plus des pages vues et des pays, le site envoie quatre évènements nommés. ' +
+        'Ils apparaissent dans l&rsquo;onglet <em>Events</em> du tableau de bord.' +
       '</p>' +
       '<ul style="color:var(--text-dim);font-size:13px;line-height:1.8;margin:0;padding-left:18px;">' +
         '<li><code>heros/&lt;identifiant&gt;</code> — une fiche de héros ouverte</li>' +
         '<li><code>build-copie/&lt;identifiant&gt;</code> — un code de build copié</li>' +
+        '<li><code>lien/&lt;identifiant&gt;</code> — un lien du header cliqué</li>' +
         '<li><code>changements</code> — la fenêtre « Ce qui a changé » ouverte</li>' +
       '</ul>' +
     '</div>';

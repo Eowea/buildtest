@@ -259,7 +259,7 @@ function markEverythingAsSeen(hero) {
         .filter(l => l.enabled !== false && l.showOnBuilds !== false)
         .map(l => {
           const isActive = (l.url || '').replace(/^\.?\//, '') === 'index.html';
-          return `<a class="header-nav-link${isActive ? ' active' : ''}" href="${escapeHtml(l.url || '#')}"${l.newTab ? ' target="_blank" rel="noreferrer"' : ''}>${escapeHtml(loc(l.label))}</a>`;
+          return `<a class="header-nav-link${isActive ? ' active' : ''}" href="${escapeHtml(l.url || '#')}" data-nav-id="${escapeHtml(navSlug(l))}"${l.newTab ? ' target="_blank" rel="noreferrer"' : ''}>${escapeHtml(loc(l.label))}</a>`;
         }).join('');
       renderSiteUpdate();
     }
@@ -683,6 +683,23 @@ function track(nom, titre) {
     if (!analyticsCode() || !window.goatcounter || !window.goatcounter.count) return;
     window.goatcounter.count({ path: nom, title: titre || nom, event: true });
   } catch (e) { /* sans effet */ }
+}
+
+// Un identifiant lisible et stable pour un lien du header. On part du libellé
+// français : renommer un lien en anglais ne doit pas couper l'historique.
+function navSlug(lien) {
+  const brut = (lien && lien.label && lien.label.fr) || (lien && lien.label && lien.label.en) || (lien && lien.url) || 'lien';
+  return normalize(brut).replace(/ /g, '-') || 'lien';
+}
+
+// Clics sur les liens du header. L'écoute est posée sur le document car le
+// header est réécrit à chaque changement de langue.
+function initNavTracking() {
+  document.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('#headerNav a');
+    if (!a) return;
+    track('lien/' + (a.dataset.navId || 'lien'), a.textContent.trim());
+  });
 }
 
 /* =========================================================================
@@ -1404,6 +1421,7 @@ els.homeBtn.addEventListener('click', (e) => {
     window.addEventListener('scroll', queueTooltipPosition, { passive: true, capture: true });
 
 initAnalytics();
+initNavTracking();
 restoreFromHash(); renderAll();
 
     // --- NOUVEAU : Auto-scroll au chargement si on arrive via un lien de partage ---

@@ -46,6 +46,12 @@ function bgT(key, vars) {
 const bgEsc = (v) => String(v||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 function bgNormalize(text) { return String(text||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(); }
 function bgInitials(text) { return String(text||'').split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase(); }
+// Même règle que navSlug() dans app.js : les deux pages doivent produire le même
+// identifiant pour un lien donné, sinon ses clics seraient comptés deux fois.
+function bgNavSlug(lien) {
+  const brut = (lien && lien.label && lien.label.fr) || (lien && lien.label && lien.label.en) || (lien && lien.url) || 'lien';
+  return bgNormalize(brut).replace(/ /g, '-') || 'lien';
+}
 function bgParseYouTubeId(i) { if(!i) return ''; const r=String(i).trim(); if(/^[a-zA-Z0-9_-]{11}$/.test(r)) return r; try { const u=new URL(r); if(u.hostname.includes('youtu.be')) return u.pathname.split('/').filter(Boolean)[0]||''; if(u.searchParams.get('v')) return u.searchParams.get('v')||''; const p=u.pathname.split('/').filter(Boolean); if(['embed','shorts','live'].includes(p[0])) return p[1]||''; } catch{} return ''; }
 const bgYtThumb = id => `https://i.ytimg.com/vi/${encodeURIComponent(id)}/hqdefault.jpg`;
 
@@ -77,7 +83,7 @@ function renderBgHeader() {
     .filter(l => l.enabled !== false && l.showOnBattlegrounds !== false)
     .map(l => {
       const isActive = (l.url || '').replace(/^\.?\//, '') === 'battlegrounds.html';
-      return `<a class="header-nav-link${isActive ? ' active' : ''}" href="${bgEsc(l.url || '#')}"${l.newTab ? ' target="_blank" rel="noreferrer"' : ''}>${bgEsc(bgLoc(l.label))}</a>`;
+      return `<a class="header-nav-link${isActive ? ' active' : ''}" href="${bgEsc(l.url || '#')}" data-nav-id="${bgEsc(bgNavSlug(l))}"${l.newTab ? ' target="_blank" rel="noreferrer"' : ''}>${bgEsc(bgLoc(l.label))}</a>`;
     }).join('');
   renderBgSiteUpdate();
 }

@@ -79,6 +79,19 @@
       s.setAttribute('data-goatcounter', 'https://' + code + '.goatcounter.com/count');
       s.src = '//gc.zgo.at/count.js';
       document.head.appendChild(s);
+
+      // Clics sur les liens du header, sous les mêmes noms que sur la page Builds.
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('#headerNav a');
+        if (!a || !window.goatcounter || !window.goatcounter.count) return;
+        try {
+          window.goatcounter.count({
+            path: 'lien/' + (a.dataset.navId || 'lien'),
+            title: a.textContent.trim(),
+            event: true
+          });
+        } catch (err) { /* sans effet */ }
+      });
     })();
   </script>
 
