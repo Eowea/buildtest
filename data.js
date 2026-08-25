@@ -28799,7 +28799,7 @@ const HEROES = [
   },
   {
     "id": "malthael",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Malthael",
       "en": "Malthael"
@@ -28836,8 +28836,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_soulrip.png",
         "description": {
-          "fr": "Inflige des dégâts aux ennemis marqués et rend des points de vie à Malthaël.",
-          "en": "Damage Marked enemies and heal"
+          "fr": "Arrache l'âme des ennemis marqués alentour : ils encaissent des dégâts et Malthaël se soigne pour chacun d'eux, bien davantage sur un héros.",
+          "en": "Rips the souls of nearby marked enemies: they take damage and Malthael heals for each of them, far more from a Hero."
         },
         "demoYoutubeId": ""
       },
@@ -28896,16 +28896,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ta marque ronge un pourcentage de vie : concentre les tanks, pas les fragiles.",
-        "en": "Your Mark eats a percentage of Health: focus tanks, not squishies."
+        "fr": "Marque du faucheur (D) ronge une part des points de vie maximum : concentre les tanks, pas les fragiles.",
+        "en": "Reaper's Mark (D) eats a share of maximum Health: focus the tanks, not the squishies."
       },
       {
-        "fr": "Frappe éthérée te téléporte sur une cible marquée, même de l'autre côté d'un mur.",
-        "en": "Wraith Strike teleports you to a Marked target, even through a wall."
+        "fr": "Frappe éthérée (Z) te téléporte sur une cible marquée, même de l'autre côté d'un mur.",
+        "en": "Wraith Strike (W) teleports you onto a marked target, even through a wall."
       },
       {
-        "fr": "Ne récolte les âmes qu'après avoir marqué plusieurs ennemis.",
-        "en": "Only reap souls after Marking several enemies."
+        "fr": "Ne lance Moisson d'âmes (A) qu'après avoir marqué plusieurs ennemis : elle te soigne pour chaque cible touchée.",
+        "en": "Only cast Soul Rip (Q) once several enemies are marked: it heals you for every target hit."
       }
     ],
     "builds": [
@@ -28980,8 +28980,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_wraithstrike.png",
         "description": {
-          "fr": "Augmente la portée de Frappe éthérée",
-          "en": "Increase Wraith Strike range"
+          "fr": "Frappe éthérée atteint des cibles nettement plus lointaines.",
+          "en": "Wraith Strike reaches targets much further away."
         },
         "demoYoutubeId": null
       },
@@ -28995,7 +28995,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_onpalehorse.png",
         "description": {
           "fr": "Augmente la vitesse de déplacement sur monture.",
-          "en": "Increase mounted Movement Speed"
+          "en": "Increases Movement Speed while mounted."
         },
         "demoYoutubeId": null
       },
@@ -29008,8 +29008,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_fearthereaper.png",
         "description": {
-          "fr": "Augmente la vitesse de déplacement.",
-          "en": "Activate to increase Movement Speed"
+          "fr": "S'active pour augmenter la vitesse de déplacement et traverser les autres unités un court moment.",
+          "en": "Activates to increase Movement Speed and pass through other units for a short while."
         },
         "demoYoutubeId": null
       },
@@ -29022,8 +29022,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_soulrip.png",
         "description": {
-          "fr": "Augmente les dégâts que Moisson d'âmes inflige à une cible unique.",
-          "en": "Increase Soul Rip single-target damage"
+          "fr": "Moisson d'âmes frappe bien plus fort un héros qu'elle touche seul.",
+          "en": "Soul Rip hits far harder against a Hero it catches alone."
         },
         "demoYoutubeId": null
       },
@@ -29036,8 +29036,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_deathshroud.png",
         "description": {
-          "fr": "Augmente la portée de Voile du faucheur et réduit son temps de recharge.",
-          "en": "Increase Death Shroud range, reduce cooldown"
+          "fr": "Voile du faucheur porte plus loin, revient plus vite et coûte moins de mana. Son impact initial ronge en outre une part des points de vie maximum des ennemis touchés.",
+          "en": "Death Shroud reaches further, returns sooner and costs less Mana. Its initial impact also eats away at the maximum Health of the enemies it hits."
         },
         "demoYoutubeId": null
       },
@@ -29050,8 +29050,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_reapersmark.png",
         "description": {
-          "fr": "Quête : augmente la durée de Marque du faucheur.",
-          "en": "Quest: Increase Reaper's Mark duration"
+          "fr": "Quête : maintenir Marque du faucheur sur des héros adverses assez longtemps. Récompense : la marque dure définitivement plus longtemps.",
+          "en": "Quest: keep Reaper's Mark on enemy Heroes long enough. Reward: the Mark permanently lasts longer."
         },
         "demoYoutubeId": null
       },
@@ -29064,8 +29064,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_soulrip.png",
         "description": {
-          "fr": "Moisson d'âmes ralentit.",
-          "en": "Soul Rip Slows"
+          "fr": "Moisson d'âmes ralentit les ennemis qu'elle touche.",
+          "en": "Soul Rip Slows the enemies it hits."
         },
         "demoYoutubeId": null
       },
@@ -29078,8 +29078,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_wraithstrike.png",
         "description": {
-          "fr": "Frappe éthérée inflige des dégâts de zone.",
-          "en": "Wraith Strike hits an area"
+          "fr": "Frappe éthérée blesse aussi les ennemis autour de sa cible et leur applique Marque du faucheur.",
+          "en": "Wraith Strike also damages enemies around its target and applies Reaper's Mark to them."
         },
         "demoYoutubeId": null
       },
@@ -29092,8 +29092,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_touchofdeath.png",
         "description": {
-          "fr": "Réduit les soins reçus par l'adversaire à l'activation.",
-          "en": "Activate to reduce enemy healing"
+          "fr": "S'active pour réduire fortement les soins reçus par les héros porteurs de Marque du faucheur.",
+          "en": "Activates to sharply cut the healing received by Heroes carrying Reaper's Mark."
         },
         "demoYoutubeId": null
       },
@@ -29134,8 +29134,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_soulrip.png",
         "description": {
-          "fr": "Augmente l'effet de soin de Moisson d'âmes.",
-          "en": "Increase Soul Rip healing"
+          "fr": "Moisson d'âmes rend nettement plus de points de vie sur les héros.",
+          "en": "Soul Rip restores markedly more Health from Heroes."
         },
         "demoYoutubeId": null
       },
@@ -29148,8 +29148,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_reapersmark.png",
         "description": {
-          "fr": "Les cibles marquées confèrent de l'armure physique.",
-          "en": "Marked targets grant Physical Armor"
+          "fr": "Confère de l'armure physique pour chaque héros adverse portant Marque du faucheur, jusqu'à un plafond.",
+          "en": "Grants Physical Armor for each enemy Hero carrying Reaper's Mark, up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -29162,8 +29162,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_inevitableend.png",
         "description": {
-          "fr": "Rend insensible, mais dissipe les marques du faucheur.",
-          "en": "Activate to become Unstoppable, remove Marks"
+          "fr": "S'active pour devenir brièvement insensible aux effets de contrôle, au prix de toutes les marques du faucheur en cours.",
+          "en": "Activates to become briefly Unstoppable, at the cost of every active Reaper's Mark."
         },
         "demoYoutubeId": null
       },
@@ -29190,8 +29190,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_soulrip.png",
         "description": {
-          "fr": "Augmente la portée de Moisson d'âmes et réduit son temps de recharge.",
-          "en": "Increase Soul Rip range, reduce cooldown"
+          "fr": "Moisson d'âmes porte plus loin et se recharge plus vite.",
+          "en": "Soul Rip reaches further and recharges faster."
         },
         "demoYoutubeId": null
       },
@@ -29204,8 +29204,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_wraithstrike.png",
         "description": {
-          "fr": "Frappe éthérée inflige un surplus de dégâts aux héros.",
-          "en": "Wraith Strike deals bonus damage to Heroes"
+          "fr": "Frappe éthérée inflige aux héros des dégâts supplémentaires proportionnels à leurs points de vie maximum.",
+          "en": "Wraith Strike deals Heroes bonus damage scaling with their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -29218,8 +29218,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_reapersmark.png",
         "description": {
-          "fr": "Les dégâts de Marque du faucheur augmentent sur la durée.",
-          "en": "Reaper's Mark deals increased damage over time"
+          "fr": "Marque du faucheur frappe bien plus fort une fois qu'elle ronge sa cible depuis un moment.",
+          "en": "Reaper's Mark hits far harder once it has been eating away at its target for a while."
         },
         "demoYoutubeId": null
       },
@@ -29246,8 +29246,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_lastrites.png",
         "description": {
-          "fr": "Extrême-onction rend des points de vie.",
-          "en": "Last Rites heals"
+          "fr": "Extrême-onction rend à Malthaël l'intégralité des dégâts qu'elle inflige, et amplifie fortement la réduction de temps de recharge que sa quête lui accorde.",
+          "en": "Last Rites heals Malthael for all the damage it deals, and greatly amplifies the cooldown reduction its quest grants it."
         },
         "demoYoutubeId": null
       },
@@ -29260,8 +29260,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/spells/storm_ui_icon_malthael_deathshroud.png",
         "description": {
-          "fr": "Voile du faucheur laisse un sillage persistant.",
-          "en": "Death Shroud leaves a trail"
+          "fr": "Voile du faucheur laisse derrière lui un sillage qui applique Marque du faucheur aux ennemis qui s'y trouvent.",
+          "en": "Death Shroud leaves a trail behind it that applies Reaper's Mark to enemies caught in it."
         },
         "demoYoutubeId": null
       },
@@ -29274,8 +29274,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malthael/images/talents/storm_ui_icon_malthael_noonecanstopdeath.png",
         "description": {
-          "fr": "Ressuscite instantanément.",
-          "en": "Activate to respawn"
+          "fr": "S'active une fois mort pour ressusciter sur-le-champ, mais allonge le délai de la prochaine réapparition.",
+          "en": "Activates while dead to respawn on the spot, but lengthens the next respawn timer."
         },
         "demoYoutubeId": null
       }
