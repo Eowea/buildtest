@@ -34746,7 +34746,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Balle perforante (A) est ta seule défense : garde-la pour repousser un plongeon, pas pour grappiller des dégâts.",
+        "fr": "Balle perforante (A)  peut t'aider pour te protéger. ",
         "en": "Penetrating Round (Q) is your only defence: save it to push a dive off you, not to squeeze out extra damage."
       },
       {
@@ -34754,7 +34754,7 @@ const HEROES = [
         "en": "Cast Inspire (W) right after a Basic Attack: it resets your attack, so you land one more."
       },
       {
-        "fr": "Poussée d'adrénaline (E) revient d'autant plus vite que tu frappes : reste au contact pour la ravoir plutôt que de reculer.",
+        "fr": "Poussée d'adrénaline (E) se recharge plus vite à chaque attaque de base, doublé contre les héros.",
         "en": "Adrenaline Rush (E) comes back faster the more you attack: stay in and keep hitting rather than backing off to get it."
       }
     ],
