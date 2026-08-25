@@ -23503,7 +23503,7 @@ const HEROES = [
       },
       {
         "fr": "Ton Blizzard (Z) waveclear les sbires tout seul, pas besoin des autres sorts.",
-        "en": "You have no escape: keep Cone of Cold (E) to slow a diver rather than to finish off a wave."
+        "en": "Your Blizzard (W) clears Minion waves on its own — no need for your other spells."
       }
     ],
     "builds": [
@@ -36708,8 +36708,8 @@ const HEROES = [
         "en": "Ancient Spear (Q) pulls you to the first enemy it hits: misplaced, it throws you into the middle of their team."
       },
       {
-        "fr": "En 1v1, ton Z est ta source de dégâts principale.",
-        "en": "Whirlwind (E) heals you far more off Heroes than off Minions: it keeps you alive in a fight, not in lane."
+        "fr": "En 1v1, Secousse sismique (Z) est ta principale source de dégâts.",
+        "en": "In a 1v1, Seismic Slam (W) is your main source of damage."
       },
       {
         "fr": "Ta Fureur (D) monte en encaissant autant qu'en frappant : reculer au premier échange te prive de tes capacités.",
