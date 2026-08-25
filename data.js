@@ -23384,7 +23384,7 @@ const HEROES = [
   },
   {
     "id": "jaina",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Jaina",
       "en": "Jaina"
@@ -23460,8 +23460,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_improvediceblock.png",
         "description": {
-          "fr": "Capacité débloquée par la quête de Morsure de givre : rend Jaina temporairement invulnérable. La récompense mythique la fait devenir Glaciation, qui lui permet en plus de se déplacer et de lancer des sorts pendant l'effet.",
-          "en": "Ability unlocked by Frostbite's quest: makes Jaina temporarily Invulnerable. The mythic reward turns it into Ice Cold, which additionally lets her move and cast during it."
+          "fr": "Capacité débloquée par la quête de Morsure de givre : Jaina entre en stase, invulnérable mais incapable d'agir, et glace les ennemis proches lorsque l'effet se dissipe. La récompense mythique la transforme en Glaciation, qui lui permet de se déplacer et de lancer des sorts pendant la durée.",
+          "en": "Unlocked by Frostbite's quest: Jaina enters Stasis, Invulnerable but unable to act, and Chills nearby enemies when the effect ends. The Mythic reward turns it into Ice Cold, letting her move and cast for the duration."
         },
         "demoYoutubeId": ""
       },
@@ -23486,24 +23486,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_summonwaterelemental.png",
         "description": {
-          "fr": "Invoque un élémentaire dont les attaques infligent des dégâts de zone et glacent. Peut être réactivé pour lui assigner une nouvelle cible.",
-          "en": "Summons an elemental whose attacks deal splash damage and Chill. Can be reactivated to assign it a new target."
+          "fr": "Invoque à distance un élémentaire dont les attaques infligent des dégâts de zone et glacent. Peut être réactivé pour lui assigner une nouvelle cible. Il perd des points de vie avec le temps et finit par s'effondrer.",
+          "en": "Summons an Elemental at range whose attacks splash and Chill. Can be reactivated to give it a new target. It loses Health over time and eventually collapses."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Glace toujours ta cible avant ton burst : tes capacités lui feront plus mal.",
-        "en": "Always Chill your target before your burst: your Abilities will hit harder."
+        "fr": "Glace toujours ta cible avant ton burst : Morsure de givre (D) fait mal aux capacités qui suivent.",
+        "en": "Always Chill your target before your burst: Frostbite (D) makes the Abilities that follow hurt."
       },
       {
-        "fr": "Blizzard sur une vague de serviteurs accélère énormément ta lane.",
-        "en": "Blizzard on a minion wave clears your lane very fast."
+        "fr": "Blizzard (Z) sur une vague de serviteurs accélère énormément ta lane.",
+        "en": "Blizzard (W) on a Minion wave clears your lane far faster."
       },
       {
-        "fr": "Anneau de givre est un contrôle de zone gigantesque : anticipe-le.",
-        "en": "Ring of Frost is huge area control: telegraph it well."
+        "fr": "Anneau de givre (R) est un contrôle de zone gigantesque : anticipe-le.",
+        "en": "Ring of Frost (R) is a huge area control tool: telegraph it in advance."
       }
     ],
     "builds": [
@@ -23676,8 +23676,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_coneofcold.png",
         "description": {
-          "fr": "Élargit fortement Cône de froid, et chaque héros touché réduit son temps de recharge, davantage encore si la cible est glacée.",
-          "en": "Greatly widens Cone of Cold, and each Hero hit reduces its cooldown, more so against Chilled targets."
+          "fr": "Élargit fortement Cône de froid, et chaque héros touché en réduit le temps de recharge, davantage encore si la cible est glacée, jusqu'à un plafond par utilisation.",
+          "en": "Greatly widens Cone of Cold, and each Hero hit reduces its cooldown, more so if the target is Chilled, up to a cap per cast."
         },
         "demoYoutubeId": null
       },
@@ -23690,8 +23690,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_blizzard.png",
         "description": {
-          "fr": "Les attaques de base contre les ennemis glacés infligent plus de dégâts et réduisent le temps de recharge de Blizzard.",
-          "en": "Basic Attacks against Chilled enemies deal more damage and reduce Blizzard's cooldown."
+          "fr": "Les attaques de base contre les ennemis glacés infligent plus de dégâts et rechargent Blizzard plus vite. Ces effets sont bien plus marqués contre les héros.",
+          "en": "Basic Attacks against Chilled enemies deal more damage and bring Blizzard back faster. Both effects are far stronger against Heroes."
         },
         "demoYoutubeId": null
       },
@@ -23718,8 +23718,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_summonwaterelemental.png",
         "description": {
-          "fr": "Invoque un élémentaire dont les attaques infligent des dégâts de zone et glacent. Peut être réactivé pour lui assigner une nouvelle cible.",
-          "en": "Summons an elemental whose attacks deal splash damage and Chill. Can be reactivated to assign it a new target."
+          "fr": "Invoque à distance un élémentaire dont les attaques infligent des dégâts de zone et glacent. Peut être réactivé pour lui assigner une nouvelle cible. Il perd des points de vie avec le temps et finit par s'effondrer.",
+          "en": "Summons an Elemental at range whose attacks splash and Chill. Can be reactivated to give it a new target. It loses Health over time and eventually collapses."
         },
         "demoYoutubeId": null
       },
@@ -23774,8 +23774,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_blizzard.png",
         "description": {
-          "fr": "Augmente les dégâts des vagues suivantes de Blizzard.",
-          "en": "Increases the damage of Blizzard's later waves."
+          "fr": "Les vagues successives de Blizzard frappent de plus en plus fort.",
+          "en": "Blizzard's successive waves hit harder and harder."
         },
         "demoYoutubeId": null
       },
@@ -23816,8 +23816,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_ringoffrost.png",
         "description": {
-          "fr": "La zone centrale d'Anneau de givre inflige des dégâts et immobilise à son tour après l'expiration de l'anneau extérieur. Chaque héros touché réduit son temps de recharge.",
-          "en": "Ring of Frost's center area also damages and Roots once the outer ring expires. Each Hero hit reduces its cooldown."
+          "fr": "La zone centrale d'Anneau de givre inflige des dégâts et immobilise à son tour après l'expiration de l'anneau extérieur. Chaque héros touché fait revenir la capacité plus vite.",
+          "en": "Ring of Frost's centre area deals damage and Roots in turn once the outer ring expires. Each Hero hit brings the Ability back sooner."
         },
         "demoYoutubeId": null
       },
