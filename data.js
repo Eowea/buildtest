@@ -24851,7 +24851,7 @@ const HEROES = [
   },
   {
     "id": "kelthuzad",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Kel'Thuzad",
       "en": "Kel'Thuzad"
@@ -24914,8 +24914,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_chains.png",
         "description": {
-          "fr": "Lance une chaîne sur un héros adverse. La relancer sur une seconde cible les attire l'un vers l'autre et les étourdit.",
-          "en": "Throws a chain at an enemy Hero. Reactivating it on a second target pulls them together and Stuns them."
+          "fr": "Lance une chaîne sur le premier héros adverse touché. Dans la foulée, elle peut être relancée sur une seconde cible : les ennemis sont alors attirés l'un vers l'autre et étourdis.",
+          "en": "Launches a chain at the first enemy Hero hit. Right after, it can be sent to a second target: both enemies are pulled together and Stunned."
         },
         "demoYoutubeId": ""
       },
@@ -24961,16 +24961,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Chaînes se relance sur une seconde cible : c'est un combo, pas un sort simple.",
-        "en": "Chains reactivates onto a second target: it is a combo, not a single cast."
+        "fr": "Chaînes de Kel'Thuzad (E) se relance sur une seconde cible : c'est un combo, pas un sort simple.",
+        "en": "Chains of Kel'Thuzad (E) is sent on to a second target: it's a combo, not a single spell."
       },
       {
-        "fr": "Immobilise avec le centre de Nova de givre pour enchaîner tes Chaînes.",
-        "en": "Root with Frost Nova's center so your Chains can follow up."
+        "fr": "Immobilise avec le centre de Nova de givre (Z) pour enchaîner Chaînes de Kel'Thuzad (E).",
+        "en": "Root with the centre of Frost Nova (W) to chain into Chains of Kel'Thuzad (E)."
       },
       {
-        "fr": "Fissure d'ombre frappe n'importe où sur la carte : achève de loin.",
-        "en": "Shadow Fissure strikes anywhere on the Battleground: finish from afar."
+        "fr": "Fissure d'ombre (R) frappe n'importe où sur la carte : achève de loin.",
+        "en": "Shadow Fissure (R) strikes anywhere on the map: finish people off from across it."
       }
     ],
     "builds": [
@@ -25045,8 +25045,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_deathanddecay.png",
         "description": {
-          "fr": "Augmente la durée et le rayon de Mort et décomposition.",
-          "en": "Increase Death and Decay duration, radius"
+          "fr": "Mort et décomposition dure plus longtemps, et sa nappe s'élargit une fois assez de chancre accumulé.",
+          "en": "Death and Decay lasts longer, and its pool widens once enough Blight has been gathered."
         },
         "demoYoutubeId": null
       },
@@ -25073,8 +25073,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_chains.png",
         "description": {
-          "fr": "Les chaînes infligent plus de dégâts et réduisent l'armure.",
-          "en": "Chains deals more damage, reduces Armor"
+          "fr": "Les chaînes frappent bien plus fort et, une fois assez de chancre accumulé, réduisent l'armure des héros qu'elles attirent.",
+          "en": "The chains hit far harder and, once enough Blight has been gathered, reduce the Armor of the Heroes they pull."
         },
         "demoYoutubeId": null
       },
@@ -25101,8 +25101,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kelthuzad/images/talents/storm_ui_icon_kelthuzad_phylactery.png",
         "description": {
-          "fr": "Quête : collecter des globes de régénération charge le phylactère, qui permet de ressusciter instantanément une fois mort. Tant qu'il est chargé, les dégâts de capacité soignent Kel'Thuzad.",
-          "en": "Quest: gathering Regeneration Globes charges the phylactery, allowing an instant respawn once dead. While charged, Ability damage heals Kel'Thuzad."
+          "fr": "Quête : collecter des globes de régénération charge le phylactère, qui permet de ressusciter instantanément une fois mort, puis doit être rechargé. Tant qu'il est chargé, les dégâts de capacité soignent Kel'Thuzad.",
+          "en": "Quest: gathering Regeneration Globes charges the Phylactery, which can be used while dead to respawn instantly, then has to be charged again. While charged, Spell Damage heals Kel'Thuzad."
         },
         "demoYoutubeId": null
       },
@@ -25129,8 +25129,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_deathanddecay.png",
         "description": {
-          "fr": "Les dégâts de Mort et décomposition augmentent.",
-          "en": "Death and Decay damage increases"
+          "fr": "Chaque salve de la nappe de Mort et décomposition rend la suivante plus douloureuse pour le héros qui s'y attarde, l'effet se cumulant jusqu'à un plafond.",
+          "en": "Each tick of Death and Decay's pool makes the next one hurt more for a Hero standing in it, stacking up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -25157,8 +25157,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kelthuzad/images/talents/storm_ui_icon_kelthuzad_glacialspike.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Pointe glaciaire.",
-          "en": "Reduce cooldown of Glacial Spike"
+          "fr": "Pointe glaciaire revient bien plus vite et frappe bien plus fort.",
+          "en": "Glacial Spike returns much sooner and hits far harder."
         },
         "demoYoutubeId": null
       },
@@ -25199,8 +25199,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_frostnova.png",
         "description": {
-          "fr": "Augmente l'intensité du ralentissement de Nova de givre et réduit son temps de recharge.",
-          "en": "Increase Frost Nova Slow, reduce cooldown"
+          "fr": "Nova de givre ralentit davantage, et chaque coup porté à un ennemi ainsi ralenti en réduit le temps de recharge.",
+          "en": "Frost Nova Slows harder, and every hit landed on an enemy Slowed this way reduces Frost Nova's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -25227,8 +25227,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kelthuzad/images/talents/storm_ui_icon_kelthuzad_chains_a.png",
         "description": {
-          "fr": "Attirer un héros avec Chaînes de Kel'Thuzad en raccourcit le temps de recharge et en restitue le coût en mana.",
-          "en": "Pulling a Hero with Chains of Kel'Thuzad brings the next cast closer and refunds its Mana cost."
+          "fr": "Attirer un héros avec Chaînes de Kel'Thuzad en restitue le coût en mana et écourte son temps de recharge.",
+          "en": "Pulling a Hero with Chains of Kel'Thuzad refunds its Mana cost and cuts its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -25241,8 +25241,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_deathanddecay.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Mort et décomposition.",
-          "en": "Reduce Death and Decay cooldown"
+          "fr": "Chaque héros adverse touché par l'explosion de Mort et décomposition en accélère le retour.",
+          "en": "Every enemy Hero caught by Death and Decay's explosion speeds up its return."
         },
         "demoYoutubeId": null
       },
@@ -25255,8 +25255,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_abilitytalent_damage.png",
         "description": {
-          "fr": "Inflige des dégâts supplémentaires aux ennemis immobilisés.",
-          "en": "Deal bonus damage to Rooted enemies"
+          "fr": "Chaque coup porté à un ennemi immobilisé lui inflige des dégâts supplémentaires.",
+          "en": "Every hit landed on a Rooted enemy deals bonus damage."
         },
         "demoYoutubeId": null
       },
@@ -25283,8 +25283,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_frozentomb.png",
         "description": {
-          "fr": "Ralentit. Tuer des ennemis déclenche des explosions supplémentaires.",
-          "en": "Frost Blast Slows, Takedowns release blasts"
+          "fr": "Quand l'immobilisation d'Explosion de givre prend fin, les ennemis restent ralentis. Un héros qui meurt encore sous son effet déclenche une nouvelle explosion.",
+          "en": "When Frost Blast's Root ends, enemies are left Slowed. A Hero who dies while still under it sets off another explosion."
         },
         "demoYoutubeId": null
       },
@@ -25297,8 +25297,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kelthuzad/images/spells/storm_ui_icon_kelthuzad_shadowfissure.png",
         "description": {
-          "fr": "Toucher un héros avec Fissure d'ombre en déclenche une seconde sous lui peu après.",
-          "en": "Hitting a Hero with Shadow Fissure triggers a second one beneath them shortly after."
+          "fr": "Toucher un héros avec Fissure d'ombre en déclenche une seconde sous lui peu après. Celle-ci ne se duplique pas à son tour.",
+          "en": "Hitting a Hero with Shadow Fissure sets off a second one beneath them shortly after. That one does not duplicate in turn."
         },
         "demoYoutubeId": null
       },
@@ -25311,8 +25311,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kelthuzad/images/talents/storm_ui_icon_kelthuzad_shiftingmalice.png",
         "description": {
-          "fr": "Projette Kel'Thuzad vers l'avant en blessant les ennemis sur son passage. Faire une victime le rend aussitôt réutilisable.",
-          "en": "Dashes Kel'Thuzad forward, damaging the enemies in his path. A Takedown makes it immediately reusable."
+          "fr": "Projette Kel'Thuzad vers l'avant en blessant les ennemis sur son passage. Faire une victime remet la capacité à disposition sur-le-champ.",
+          "en": "Dashes Kel'Thuzad forward, damaging enemies in the path. A Takedown puts the Ability straight back at his disposal."
         },
         "demoYoutubeId": null
       },
@@ -25325,8 +25325,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kelthuzad/images/talents/storm_ui_icon_kelthuzad_cultofthedamned.png",
         "description": {
-          "fr": "Invoque une ombre qui reproduit chaque Mort et décomposition lancée par Kel'Thuzad.",
-          "en": "Summons a Shade that mirrors every Death and Decay Kel'Thuzad casts."
+          "fr": "Invoque pour un temps une ombre qui reproduit chaque Mort et décomposition lancée par Kel'Thuzad.",
+          "en": "Summons a Shade for a while that mirrors every Death and Decay Kel'Thuzad casts."
         },
         "demoYoutubeId": null
       }
