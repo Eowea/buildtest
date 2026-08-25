@@ -34642,7 +34642,7 @@ const HEROES = [
   },
   {
     "id": "raynor",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Raynor",
       "en": "Raynor"
@@ -34666,8 +34666,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_acquireweakspot.png",
         "description": {
-          "fr": "Périodiquement, l'attaque de base de Raynor frappe en zone et bien plus fort.",
-          "en": "Periodically, Raynor's Basic Attack splashes and hits far harder."
+          "fr": "Après plusieurs attaques consécutives, l'attaque de base de Raynor éclabousse une petite zone et frappe bien plus fort sa cible principale.",
+          "en": "After several consecutive Basic Attacks, Raynor's next one splashes in a small area and hits its main target far harder."
         },
         "demoYoutubeId": ""
       },
@@ -34679,8 +34679,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_penetratinground.png",
         "description": {
-          "fr": "Tire un projectile qui frappe, repousse et ralentit les ennemis.",
-          "en": "Fire a shot damaging, knocking back, and Slowing enemies"
+          "fr": "Tire une salve qui traverse les ennemis sur une ligne, les repousse et les ralentit. Plus la cible se trouve près de Raynor, plus elle est projetée loin.",
+          "en": "Fires a round through enemies in a line, knocking them back and Slowing them. The closer a target is to Raynor, the further it is thrown."
         },
         "demoYoutubeId": ""
       },
@@ -34692,8 +34692,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_inspire.png",
         "description": {
-          "fr": "Augmente fortement la vitesse d'attaque et de déplacement de Raynor et des serviteurs alliés proches, et relance aussitôt son attaque.",
-          "en": "Greatly increases the Attack and Movement Speed of Raynor and nearby allied Minions, and immediately resets his attack."
+          "fr": "Accélère l'attaque et le déplacement de Raynor ainsi que des serviteurs et mercenaires alliés proches. Lancer Inspiration relance immédiatement son attaque de base.",
+          "en": "Speeds up the attacks and movement of Raynor and of nearby allied Minions and Mercenaries. Casting Inspire immediately resets his Basic Attack."
         },
         "demoYoutubeId": ""
       },
@@ -34705,8 +34705,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_adrenalinrush.png",
         "description": {
-          "fr": "Rend des points de vie.",
-          "en": "Activate to heal"
+          "fr": "Rend à Raynor une part de ses points de vie maximum en un court instant. Ses attaques de base en raccourcissent le temps de recharge, bien davantage contre les héros.",
+          "en": "Heals Raynor for a share of his maximum Health over a brief moment. His Basic Attacks shorten its cooldown, far more against Heroes."
         },
         "demoYoutubeId": ""
       },
@@ -34718,8 +34718,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_hyperion.png",
         "description": {
-          "fr": "L'Hypérion bombarde la carte.",
-          "en": "Call down a strafing Battlecruiser"
+          "fr": "Ordonne à l'Hypérion de mitrailler la zone visée pendant un moment, touchant plusieurs ennemis à la fois. Régulièrement, il pointe son canon Yamato sur un bâtiment et lui inflige de lourds dégâts.",
+          "en": "Orders the Hyperion to strafe the targeted area for a while, hitting several enemies at once. Periodically it fires its Yamato Cannon at a Structure for heavy damage."
         },
         "demoYoutubeId": ""
       },
@@ -34739,16 +34739,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Balle perforante repousse : sers-t'en pour te dégager, pas pour les dégâts.",
-        "en": "Penetrating Round knocks back: use it to escape, not for the damage."
+        "fr": "Balle perforante (A) repousse : sers-t'en pour te dégager, pas pour les dégâts.",
+        "en": "Penetrating Round (Q) knocks back: use it to escape, not for the damage."
       },
       {
-        "fr": "Inspiration relance ton attaque et accélère aussi tes serviteurs en lane.",
-        "en": "Inspire resets your attack and speeds up your Minions in lane too."
+        "fr": "Inspiration (Z) relance ton attaque et accélère aussi tes serviteurs en lane.",
+        "en": "Inspire (W) resets your attack and speeds up your Minions in lane too."
       },
       {
-        "fr": "Poussée d'adrénaline te soigne d'un coup : attaquer en réduit fortement le temps de recharge.",
-        "en": "Adrenaline Rush heals you in one burst: attacking sharply cuts its cooldown."
+        "fr": "Poussée d'adrénaline (E) te soigne d'un coup : attaquer en réduit fortement le temps de recharge.",
+        "en": "Adrenaline Rush (E) heals you in one burst: attacking sharply cuts its cooldown."
       }
     ],
     "builds": [
@@ -34824,7 +34824,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_inspire.png",
         "description": {
           "fr": "Les attaques de base frappent bien plus fort les serviteurs, mercenaires et monstres, davantage encore pendant Inspiration. Effet passif : Inspiration n'expire plus sur les serviteurs et mercenaires alliés.",
-          "en": "Basic Attacks hit Minions, Mercenaries and monsters far harder, more so during Inspire. Passive: Inspire no longer expires on allied Minions and Mercenaries."
+          "en": "Basic Attacks hit Minions, Mercenaries and Monsters far harder, more so during Inspire. Passive: Inspire no longer expires on allied Minions and Mercenaries."
         },
         "demoYoutubeId": null
       },
@@ -34837,8 +34837,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_acquireweakspot.png",
         "description": {
-          "fr": "Tactique : augmente les dégâts d'On les assaisonne ! Quête : augmente les dégâts d'On les assaisonne !",
-          "en": "Gambit: Gain Give 'Em Some Pepper damage Quest: Gain Give 'Em Some Pepper damage"
+          "fr": "Quête : chaque fois qu'On les assaisonne ! frappe un héros comme cible principale, ses dégâts augmentent définitivement. Tactique : le talent démarre avec un bonus de dégâts conséquent, que chaque mort de Raynor entame.",
+          "en": "Quest: every time Give 'Em Some Pepper strikes a Hero as its primary target, its damage permanently increases. Gambit: the talent starts with a sizeable damage bonus that every death chips away."
         },
         "demoYoutubeId": null
       },
@@ -34851,7 +34851,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/talents/storm_ui_icon_raynor_acardtoplay.png",
         "description": {
-          "fr": "Inflige davantage de dégâts aux héros étourdis ou ralentis, et On les assaisonne ! ralentit désormais les héros touchés.",
+          "fr": "Inflige davantage de dégâts aux héros étourdis ou ralentis, et On les assaisonne ! ralentit désormais les héros touchés.",
           "en": "Deals more damage to Stunned or Slowed Heroes, and Give 'Em Some Pepper now Slows the Heroes it hits."
         },
         "demoYoutubeId": null
@@ -34865,8 +34865,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_adrenalinrush.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Poussée d'adrénaline et confère de l'armure.",
-          "en": "Lower Adrenaline Rush cooldown, grants Armor"
+          "fr": "Raccourcit le temps de recharge de Poussée d'adrénaline, et son activation confère brièvement de l'armure à Raynor.",
+          "en": "Shortens Adrenaline Rush's cooldown, and casting it briefly grants Raynor Armor."
         },
         "demoYoutubeId": null
       },
@@ -34879,8 +34879,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_acquireweakspot.png",
         "description": {
-          "fr": "Les attaques d'On les assaisonne ! rendent des points de vie.",
-          "en": "Give 'Em Some Pepper attacks heal"
+          "fr": "On les assaisonne ! rend des points de vie à Raynor, bien davantage lorsque sa cible principale est un héros.",
+          "en": "Give 'Em Some Pepper heals Raynor, far more when its primary target is a Hero."
         },
         "demoYoutubeId": null
       },
@@ -34893,8 +34893,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/talents/storm_ui_icon_raynor_hulkarmor.png",
         "description": {
-          "fr": "Quête : augmente le maximum de point de vie.",
-          "en": "Quest: Gain bonus max Health"
+          "fr": "Augmente d'emblée le maximum de points de vie. Quête : chaque héros touché comme cible principale d'On les assaisonne ! l'augmente encore, définitivement.",
+          "en": "Immediately increases maximum Health. Quest: every Hero hit as Give 'Em Some Pepper's primary target raises it further, permanently."
         },
         "demoYoutubeId": null
       },
@@ -34907,8 +34907,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_penetratinground.png",
         "description": {
-          "fr": "Augmente le ralentissement infligé par Balle perforante.",
-          "en": "Improve Penetrating Round's Slow"
+          "fr": "Balle perforante ralentit davantage, et bien plus longtemps.",
+          "en": "Penetrating Round Slows harder, and for much longer."
         },
         "demoYoutubeId": null
       },
@@ -34921,8 +34921,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/talents/storm_ui_icon_raynor_split_debilitatingrounds.png",
         "description": {
-          "fr": "Tant qu'Inspiration est active, les attaques de base rechargent bien plus vite Poussée d'adrénaline, surtout contre les héros.",
-          "en": "While Inspire is active, Basic Attacks bring Adrenaline Rush back much faster, especially against Heroes."
+          "fr": "Tant qu'Inspiration est active, les attaques de base rechargent bien plus vite Poussée d'adrénaline, surtout contre les héros. Effet passif : Poussée d'adrénaline coûte moins de mana.",
+          "en": "While Inspire is active, Basic Attacks bring Adrenaline Rush back much faster, especially against Heroes. Passive: Adrenaline Rush costs less Mana."
         },
         "demoYoutubeId": null
       },
@@ -34935,8 +34935,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_acquireweakspot.png",
         "description": {
-          "fr": "La zone d'effet d'On les assaisonne ! est augmentée, réduit les temps de recharge.",
-          "en": "Give 'Em Some Pepper area increased, reduces cooldowns"
+          "fr": "Élargit la zone d'On les assaisonne ! Chaque héros adverse touché rend du mana à Raynor et raccourcit le temps de recharge de Balle perforante.",
+          "en": "Widens Give 'Em Some Pepper's area. Each enemy Hero hit restores Mana to Raynor and shortens Penetrating Round's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -34949,8 +34949,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_hyperion.png",
         "description": {
-          "fr": "L'Hypérion bombarde la carte.",
-          "en": "Call down a strafing Battlecruiser"
+          "fr": "Ordonne à l'Hypérion de mitrailler la zone visée pendant un moment, touchant plusieurs ennemis à la fois. Régulièrement, il pointe son canon Yamato sur un bâtiment et lui inflige de lourds dégâts.",
+          "en": "Orders the Hyperion to strafe the targeted area for a while, hitting several enemies at once. Periodically it fires its Yamato Cannon at a Structure for heavy damage."
         },
         "demoYoutubeId": null
       },
@@ -34977,8 +34977,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_penetratinground.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Balle perforante.",
-          "en": "Reduce Penetrating Round's cooldown"
+          "fr": "Raccourcit le temps de recharge de Balle perforante, et davantage encore lorsqu'elle traverse plusieurs héros adverses.",
+          "en": "Shortens Penetrating Round's cooldown, and shortens it further when it passes through several enemy Heroes."
         },
         "demoYoutubeId": null
       },
@@ -34991,8 +34991,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_inspire.png",
         "description": {
-          "fr": "Augmente la vitesse de déplacement. Effet renforcé par Inspiration.",
-          "en": "Gain Move Speed, increased during Inspire"
+          "fr": "Augmente la vitesse de déplacement, à pied comme en monture, et Inspiration l'augmente encore.",
+          "en": "Increases Movement Speed both mounted and unmounted, and Inspire raises it further."
         },
         "demoYoutubeId": null
       },
@@ -35005,8 +35005,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/talents/storm_ui_icon_raynor_split_debilitatingrounds.png",
         "description": {
-          "fr": "Renforce Poussée d'adrénaline et Inspiration.",
-          "en": "Empower Adrenaline Rush and Inspire"
+          "fr": "Tant qu'Inspiration est active, Raynor attaque de plus loin. Effet passif : Poussée d'adrénaline dure plus longtemps et soigne donc davantage.",
+          "en": "While Inspire is active, Raynor attacks from further away. Passive: Adrenaline Rush lasts longer and therefore heals more."
         },
         "demoYoutubeId": null
       },
@@ -35019,8 +35019,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_penetratinground.png",
         "description": {
-          "fr": "Balle perforante inflige davantage de dégâts et rend des points de vie.",
-          "en": "Penetrating Round deals more damage, heals"
+          "fr": "Balle perforante frappe plus fort et rend à Raynor une partie des dégâts qu'elle inflige aux héros.",
+          "en": "Penetrating Round hits harder and heals Raynor for part of the damage it deals to Heroes."
         },
         "demoYoutubeId": null
       },
@@ -35033,8 +35033,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_inspire.png",
         "description": {
-          "fr": "Renforce le bonus de vitesse d'attaque d'Inspiration. Effet passif : toutes les quelques attaques de base, Inspiration se lance gratuitement.",
-          "en": "Strengthens Inspire's Attack Speed bonus. Passive: every few Basic Attacks, Inspire casts itself for free."
+          "fr": "Renforce le bonus de vitesse d'attaque d'Inspiration. Effet passif : après plusieurs attaques de base, Inspiration se déclenche gratuitement.",
+          "en": "Strengthens Inspire's Attack Speed bonus. Passive: after several Basic Attacks, Inspire triggers for free."
         },
         "demoYoutubeId": null
       },
@@ -35047,8 +35047,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_acquireweakspot.png",
         "description": {
-          "fr": "Renforce On les assaisonne ! et confère de l'armure.",
-          "en": "Empowers Give 'Em Some Pepper, grants Armor"
+          "fr": "Lorsqu'On les assaisonne ! frappe un héros, il subit des dégâts supplémentaires proportionnels à ses points de vie maximum et Raynor gagne de l'armure. Le talent peut être activé pour appliquer On les assaisonne ! à la prochaine attaque de base.",
+          "en": "When Give 'Em Some Pepper strikes a Hero, it deals bonus damage scaling with their maximum Health and grants Raynor Armor. Can be activated to apply Give 'Em Some Pepper to the next Basic Attack."
         },
         "demoYoutubeId": null
       },
@@ -35061,8 +35061,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_hyperion.png",
         "description": {
-          "fr": "Toucher un héros avec On les assaisonne ! raccourcit le temps de recharge de l'Hypérion et marque la cible, qui subit davantage de dégâts de sa part.",
-          "en": "Hitting a Hero with Give 'Em Some Pepper brings the Hyperion closer and marks that target, who then takes more damage from it."
+          "fr": "Toucher un héros avec On les assaisonne ! raccourcit le temps de recharge de l'Hypérion. L'Hypérion prend alors ce héros pour cible et lui inflige bien plus de dégâts pendant un moment.",
+          "en": "Hitting a Hero with Give 'Em Some Pepper shortens the Hyperion's cooldown. The Hyperion then singles that Hero out and deals far more damage to them for a while."
         },
         "demoYoutubeId": null
       },
@@ -35075,8 +35075,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_raynorsraiders.png",
         "description": {
-          "fr": "Améliore Rebelle de Raynor.",
-          "en": "Upgrade Raynor's Raider"
+          "fr": "La Banshee gagne des points de vie et peut s'éloigner bien plus loin de Raynor. Ses attaques de base réduisent l'armure des héros adverses, effet qui se cumule jusqu'à un plafond.",
+          "en": "The Banshee gains Health and can roam much further from Raynor. Its Basic Attacks lower enemy Hero Armor, stacking up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -35103,8 +35103,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_acquireweakspot.png",
         "description": {
-          "fr": "On les assaisonne ! se déclenche plus souvent.",
-          "en": "Give 'Em Some Pepper triggers more often."
+          "fr": "On les assaisonne ! se déclenche après moins d'attaques de base.",
+          "en": "Give 'Em Some Pepper triggers after fewer Basic Attacks."
         },
         "demoYoutubeId": null
       },
@@ -35117,8 +35117,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/talents/storm_ui_icon_raynor_advancedoptics.png",
         "description": {
-          "fr": "À la mort de Raynor, l'Hypérion fonce sur le héros adverse le plus proche et bombarde les cibles les plus mal en point.",
-          "en": "On Raynor's death, the Hyperion charges the nearest enemy Hero and strafes the targets in the worst shape."
+          "fr": "À la mort de Raynor, l'Hypérion fonce sur le héros adverse le plus proche et mitraille les cibles les plus mal en point. Son canon Yamato vise lui aussi les héros, et non plus les bâtiments. Effet passif : Raynor réapparaît bien plus vite.",
+          "en": "On Raynor's death, the Hyperion charges the nearest enemy Hero and strafes the targets in the worst shape. Its Yamato Cannon also aims at Heroes rather than Structures. Passive: Raynor respawns far sooner."
         },
         "demoYoutubeId": null
       }
