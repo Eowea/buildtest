@@ -23522,47 +23522,54 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1211231,Jaina]",
+        "buildCode": "[T3121321,Jaina]",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "25 Août 2026",
+          "en": "August 25, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm0illd8e01lrb",
+            "primaryId": "tm0illd8e03zo5",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tm0illd8e05oah",
+            "primaryId": "tm0illd8e04yhw",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tm0illd8e073b4",
+            "primaryId": "tm0illd8e08qke",
             "alternativeIds": []
           },
           {
             "level": 10,
             "primaryId": "tm0illd8e104u0",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tm0illd8e11dj7"
+            ]
           },
           {
             "level": 13,
-            "primaryId": "tm0illd8e133zm",
-            "alternativeIds": []
+            "primaryId": "tm0illd8e14x3i",
+            "alternativeIds": [
+              "tm0illd8e133zm"
+            ]
           },
           {
             "level": 16,
-            "primaryId": "tm0illd8e17mbe",
+            "primaryId": "tm0illd8e16b97",
             "alternativeIds": []
           },
           {
             "level": 20,
             "primaryId": "tm0illd8e189lz",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tm0illd8e19n51",
+              "tm0illd8e213mx"
+            ]
           }
         ]
       }
