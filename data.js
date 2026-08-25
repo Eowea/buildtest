@@ -23502,7 +23502,7 @@ const HEROES = [
         "en": "Ring of Frost (R) takes a moment to close: place it where the enemy is going, not where they are."
       },
       {
-        "fr": "Ton Blizzard (Z) waveclear les sbires tout seul, pas besoin des autres sorts.",
+        "fr": "Ton Blizzard (Z) waveclear les serviteurs tout seul, pas besoin des autres sorts.",
         "en": "Your Blizzard (W) clears Minion waves on its own — no need for your other spells."
       }
     ],
@@ -31683,7 +31683,7 @@ const HEROES = [
       "en": "A sustained damage Mage who gains power when killing enemy minions."
     },
     "gameplay": {
-      "fr": "Nasibo accumule des points de vie en tuant des sbires grâce à sa quête, et couvre le terrain d'araignées, de crapauds et de murs de zombies.",
+      "fr": "Nasibo accumule des points de vie en tuant des serviteurs grâce à sa quête, et couvre le terrain d'araignées, de crapauds et de murs de zombies.",
       "en": "Nazeebo stacks Health by killing minions through his quest and covers the ground with spiders, toads, and zombie walls."
     },
     "spells": [
