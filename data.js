@@ -36595,7 +36595,7 @@ const HEROES = [
   },
   {
     "id": "sonya",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Sonya",
       "en": "Sonya"
@@ -36619,8 +36619,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_fury.png",
         "description": {
-          "fr": "La fureur remplace le mana : elle s'accumule en infligeant et en encaissant des coups. Utiliser une capacité accélère aussi Sonya.",
-          "en": "Fury replaces Mana: it builds by dealing and taking Basic Attack damage. Using an Ability also speeds Sonya up."
+          "fr": "La fureur remplace le mana : elle monte en portant des attaques de base et en encaissant des coups. Utiliser une capacité de base ou héroïque augmente sa vitesse de déplacement pendant un court moment.",
+          "en": "Fury replaces Mana: it builds by landing Basic Attacks and by taking damage. Using a Basic or Heroic Ability grants Movement Speed for a short while."
         },
         "demoYoutubeId": ""
       },
@@ -36632,8 +36632,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_ancientspear.png",
         "description": {
-          "fr": "Projette une lance qui attire Sonya vers le premier ennemi touché, l'étourdit et lui inflige des dégâts.",
-          "en": "Throw a spear and pull self to the first enemy hit, stunning and dealing damage"
+          "fr": "Projette une lance qui attire Sonya jusqu'au premier ennemi touché, l'étourdit brièvement et lui inflige des dégâts. Toucher une cible génère de la fureur.",
+          "en": "Throws a spear that pulls Sonya to the first enemy hit, briefly Stunning and damaging them. Hitting a target generates Fury."
         },
         "demoYoutubeId": ""
       },
@@ -36645,8 +36645,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_seismicslam.png",
         "description": {
-          "fr": "Inflige des dégâts à un ennemi et des dégâts de zone derrière lui.",
-          "en": "Damage an enemy and splash damage behind them"
+          "fr": "Frappe le sol devant Sonya : la cible visée encaisse le gros des dégâts, les ennemis placés derrière elle sont éclaboussés.",
+          "en": "Slams the ground in front of Sonya: the target takes the brunt of the damage, and enemies behind it are caught in the splash."
         },
         "demoYoutubeId": ""
       },
@@ -36658,8 +36658,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_whirlwind.png",
         "description": {
-          "fr": "Tournoie en blessant les ennemis proches et se soigne d'une part des dégâts infligés, bien davantage contre les héros.",
-          "en": "Spins, damaging nearby enemies and healing for part of the damage dealt, far more against Heroes."
+          "fr": "Tournoie en blessant les ennemis proches et rend à Sonya une part des dégâts infligés, bien davantage contre les héros.",
+          "en": "Spins, damaging nearby enemies and healing Sonya for part of the damage dealt, far more against Heroes."
         },
         "demoYoutubeId": ""
       },
@@ -36671,8 +36671,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_leap.png",
         "description": {
-          "fr": "Bondit vers l'endroit ciblé, frappe les ennemis et les étourdit.",
-          "en": "Jump to a location, deal damage, and stun enemies"
+          "fr": "Sonya s'élève puis retombe sur la zone visée, blessant et étourdissant les ennemis proches.",
+          "en": "Sonya leaps and lands on the targeted area, damaging and Stunning nearby enemies."
         },
         "demoYoutubeId": ""
       },
@@ -36684,24 +36684,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_wrathoftheberserker.png",
         "description": {
-          "fr": "Augmente fortement les dégâts de Sonya et écourte de moitié les étourdissements, ralentissements et immobilisations qu'elle subit ; accumuler de la fureur prolonge l'effet.",
-          "en": "Greatly increases Sonya's damage and halves the Stuns, Slows and Roots she suffers; building Fury extends it."
+          "fr": "Augmente fortement les dégâts de Sonya et écourte nettement les étourdissements, ralentissements et immobilisations qu'elle subit. Accumuler de la fureur prolonge l'effet.",
+          "en": "Greatly increases Sonya's damage and sharply shortens the Stuns, Slows and Roots she suffers. Building Fury extends it."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Lance des anciens te permet de rejoindre une cible ou de fuir un mauvais combat.",
-        "en": "Ancient Spear lets you reach a target or escape a bad fight."
+        "fr": "Lance des anciens (A) te permet de rejoindre une cible ou de fuir un mauvais combat.",
+        "en": "Ancient Spear (Q) lets you close on a target or get out of a fight gone wrong."
       },
       {
-        "fr": "Trombe te soigne : utilise-la sur un groupe de serviteurs pour rester en lane.",
-        "en": "Whirlwind heals you: use it on a Minion wave to stay in lane."
+        "fr": "Trombe (E) te soigne : utilise-la sur un groupe de serviteurs pour rester en lane.",
+        "en": "Whirlwind (E) heals you: use it on a Minion wave to stay in lane."
       },
       {
-        "fr": "Ta fureur monte en encaissant : ne recule pas dès le premier échange.",
-        "en": "Your Fury builds by taking hits: do not back off after the first trade."
+        "fr": "Ta Fureur (D) monte aussi en encaissant : ne recule pas dès le premier échange.",
+        "en": "Your Fury (D) also builds by taking hits: don't back off at the first trade."
       }
     ],
     "builds": [
@@ -36776,8 +36776,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_seismicslam.png",
         "description": {
-          "fr": "Renforce Secousse sismique",
-          "en": "Empower Seismic Slam"
+          "fr": "Régulièrement, Secousse sismique frappe bien plus fort sa cible principale et ne coûte aucune fureur.",
+          "en": "Regularly, Seismic Slam hits its primary target far harder and costs no Fury."
         },
         "demoYoutubeId": null
       },
@@ -36790,8 +36790,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_heal.png",
         "description": {
-          "fr": "Les attaques de base rendent des points de vie.",
-          "en": "Basic Attacks heal"
+          "fr": "Les attaques de base de Sonya lui rendent une partie des dégâts qu'elles infligent.",
+          "en": "Sonya's Basic Attacks heal her for part of the damage they deal."
         },
         "demoYoutubeId": null
       },
@@ -36804,8 +36804,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_block.png",
         "description": {
-          "fr": "Confère régulièrement de l'armure physique contre la prochaine attaque de base adverse. Se cumule en charges, bien plus vite tant que le bonus de vitesse de Fureur est actif.",
-          "en": "Regularly grants Physical Armor against the next enemy Basic Attack. Stores charges, far faster while Fury's Movement Speed bonus is active."
+          "fr": "Confère régulièrement de l'armure physique contre la prochaine attaque de base d'un héros adverse. Se cumule en charges jusqu'à un plafond, bien plus vite tant que le bonus de vitesse de déplacement de Fureur est actif.",
+          "en": "Regularly grants Physical Armor against the next enemy Hero's Basic Attack. Stores charges up to a cap, far faster while Fury's Movement Speed bonus is active."
         },
         "demoYoutubeId": null
       },
@@ -36818,8 +36818,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_seismicslam.png",
         "description": {
-          "fr": "Augmente les dégâts de zone de Secousse sismique.",
-          "en": "Increase Seismic Slam splash damage"
+          "fr": "Renforce nettement les dégâts de zone de Secousse sismique. Viser un héros les augmente encore, tandis que viser un autre ennemi allonge la zone touchée.",
+          "en": "Greatly strengthens Seismic Slam's splash damage. Targeting a Hero raises it further, while targeting any other enemy lengthens the area struck."
         },
         "demoYoutubeId": null
       },
@@ -36832,8 +36832,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_whirlwind.png",
         "description": {
-          "fr": "Trombe supprime ralentissements et immobilisations.",
-          "en": "Whirlwind removes Slows and Roots"
+          "fr": "Trombe se recharge plus vite et dissipe les ralentissements et immobilisations qui affectent Sonya.",
+          "en": "Whirlwind comes back faster and clears any Slows and Roots affecting Sonya."
         },
         "demoYoutubeId": null
       },
@@ -36846,8 +36846,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_fury.png",
         "description": {
-          "fr": "Génère de la fureur à l'activation, même pendant Trombe. Effet passif : la première attaque de base portée après Secousse sismique frappe plus fort.",
-          "en": "Generates Fury on activation, even during Whirlwind. Passive: the first Basic Attack after Seismic Slam hits harder."
+          "fr": "S'active pour générer aussitôt de la fureur, même en pleine Trombe. Effet passif : la première attaque de base portée après Secousse sismique frappe plus fort.",
+          "en": "Activates to instantly generate Fury, even mid-Whirlwind. Passive: the first Basic Attack after Seismic Slam hits harder."
         },
         "demoYoutubeId": null
       },
@@ -36860,8 +36860,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_ancientspear.png",
         "description": {
-          "fr": "Lance des anciens inflige des dégâts sur la durée.",
-          "en": "Ancient Spear deals damage over time"
+          "fr": "Lance des anciens empoisonne sa cible, qui subit des dégâts supplémentaires sur la durée.",
+          "en": "Ancient Spear poisons its target, dealing additional damage over time."
         },
         "demoYoutubeId": null
       },
@@ -36874,8 +36874,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_whirlwind.png",
         "description": {
-          "fr": "Augmente les soins de Trombe.",
-          "en": "Increases Whirlwind healing"
+          "fr": "Trombe rend à Sonya une part bien plus grande des dégâts qu'elle inflige.",
+          "en": "Whirlwind heals Sonya for a much larger share of the damage it deals."
         },
         "demoYoutubeId": null
       },
@@ -36888,8 +36888,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_mercenarylord.png",
         "description": {
-          "fr": "Rend aussitôt une partie des points de vie de Sonya, même pendant Trombe. Se cumule en charges. Effet passif : Sonya frappe plus fort les mercenaires.",
-          "en": "Instantly restores part of Sonya's Health, even during Whirlwind. Stores charges. Passive: Sonya hits Mercenaries harder."
+          "fr": "S'active pour rendre aussitôt une partie des points de vie de Sonya, même en pleine Trombe, et se cumule en charges. Effet passif : Sonya frappe plus fort les mercenaires.",
+          "en": "Activates to instantly restore part of Sonya's Health, even mid-Whirlwind, and stores charges. Passive: Sonya hits Mercenaries harder."
         },
         "demoYoutubeId": null
       },
@@ -36902,8 +36902,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_leap.png",
         "description": {
-          "fr": "Bondit vers l'endroit ciblé, frappe les ennemis et les étourdit.",
-          "en": "Jump to a location, deal damage, and stun enemies"
+          "fr": "Sonya s'élève puis retombe sur la zone visée, blessant et étourdissant les ennemis proches.",
+          "en": "Sonya leaps and lands on the targeted area, damaging and Stunning nearby enemies."
         },
         "demoYoutubeId": null
       },
@@ -36916,8 +36916,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_wrathoftheberserker.png",
         "description": {
-          "fr": "Augmente fortement les dégâts de Sonya et écourte de moitié les étourdissements, ralentissements et immobilisations qu'elle subit ; accumuler de la fureur prolonge l'effet.",
-          "en": "Greatly increases Sonya's damage and halves the Stuns, Slows and Roots she suffers; building Fury extends it."
+          "fr": "Augmente fortement les dégâts de Sonya et écourte nettement les étourdissements, ralentissements et immobilisations qu'elle subit. Accumuler de la fureur prolonge l'effet.",
+          "en": "Greatly increases Sonya's damage and sharply shortens the Stuns, Slows and Roots she suffers. Building Fury extends it."
         },
         "demoYoutubeId": null
       },
@@ -36930,8 +36930,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_ancientspear.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Lance des anciens et attire même sans toucher de cible.",
-          "en": "Ancient Spear always pulls, cooldown reduced"
+          "fr": "Lance des anciens attire Sonya au point visé même sans toucher personne, et revient alors plus vite.",
+          "en": "Ancient Spear pulls Sonya to the targeted spot even when it hits nothing, and returns sooner when used that way."
         },
         "demoYoutubeId": null
       },
@@ -36944,8 +36944,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_whirlwind.png",
         "description": {
-          "fr": "Augmente les dégâts que Trombe inflige aux cibles dont les points de vie sont bas.",
-          "en": "Increase Whirlwind damage to low Health targets"
+          "fr": "Trombe frappe bien plus fort les héros dont les points de vie sont bas, sans pour autant soigner davantage.",
+          "en": "Whirlwind hits Heroes on low Health far harder, without healing any more for it."
         },
         "demoYoutubeId": null
       },
@@ -36958,8 +36958,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_fury.png",
         "description": {
-          "fr": "Augmente le bonus de vitesse de déplacement des capacités.",
-          "en": "Abilities give more Movement Speed"
+          "fr": "Le bonus de vitesse de déplacement conféré par l'utilisation d'une capacité est nettement plus important.",
+          "en": "The Movement Speed bonus from using an Ability is markedly greater."
         },
         "demoYoutubeId": null
       },
@@ -36972,8 +36972,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_seismicslam.png",
         "description": {
-          "fr": "Les attaques de base et Secousse sismique infligent des dégâts supplémentaires.",
-          "en": "Basic Attacks and Seismic Slam deal bonus damage"
+          "fr": "Les attaques de base et Secousse sismique infligent aux héros des dégâts supplémentaires proportionnels à leurs points de vie maximum, et en rendent une bonne part à Sonya.",
+          "en": "Basic Attacks and Seismic Slam deal Heroes bonus damage scaling with their maximum Health, and heal Sonya for a good share of it."
         },
         "demoYoutubeId": null
       },
@@ -36986,8 +36986,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_cooldown.png",
         "description": {
-          "fr": "Les attaques de base réduisent le temps de recharge de Lance des anciens.",
-          "en": "Basic Attacks reduce Ancient Spear cooldown"
+          "fr": "Les attaques de base frappent plus fort et rendent Lance des anciens disponible plus vite.",
+          "en": "Basic Attacks hit harder and make Ancient Spear available again sooner."
         },
         "demoYoutubeId": null
       },
@@ -37000,8 +37000,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/talents/storm_ui_icon_sonya_nervesofsteel.png",
         "description": {
-          "fr": "Confère un bouclier.",
-          "en": "Activate to gain a Shield"
+          "fr": "S'active pour se doter, un court moment, d'un bouclier proportionnel à ses points de vie maximum, même en pleine Trombe.",
+          "en": "Activates for a brief Shield scaling with maximum Health, even mid-Whirlwind."
         },
         "demoYoutubeId": null
       },
@@ -37014,8 +37014,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_leap.png",
         "description": {
-          "fr": "Bond génère un cratère et bénéficie d'un temps de recharge réduit.",
-          "en": "Leap creates a crater and has reduced cooldown"
+          "fr": "Bond laisse derrière lui un cratère infranchissable et voit son temps de recharge nettement réduit.",
+          "en": "Leap leaves an impassable crater behind it, and its cooldown drops sharply."
         },
         "demoYoutubeId": null
       },
@@ -37028,8 +37028,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_wrathoftheberserker.png",
         "description": {
-          "fr": "Courroux du berserker peut rendre insensible aux effets de contrôle.",
-          "en": "Wrath of the Berserker can grant Unstoppable"
+          "fr": "Courroux du berserker augmente le maximum de points de vie et débloque Jeu de jambes, à activer pour devenir brièvement insensible aux effets de contrôle.",
+          "en": "Wrath of the Berserker raises maximum Health and unlocks Striding Giant, activated to become briefly Unstoppable."
         },
         "demoYoutubeId": null
       },
@@ -37042,8 +37042,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/spells/storm_ui_icon_sonya_ancientspear.png",
         "description": {
-          "fr": "Augmente la portée de Lance des anciens et confère de l'armure.",
-          "en": "Increase Ancient Spear range, grants Armor"
+          "fr": "Lance des anciens porte bien plus loin, et toucher un héros adverse confère de l'armure à Sonya.",
+          "en": "Ancient Spear reaches much further, and hitting an enemy Hero grants Sonya Armor."
         },
         "demoYoutubeId": null
       },
@@ -37056,8 +37056,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sonya/images/talents/storm_ui_icon_sonya_ignorepain.png",
         "description": {
-          "fr": "Confère une grande quantité d'armure.",
-          "en": "Activate to gain massive Armor"
+          "fr": "S'active pour encaisser bien moins de dégâts pendant un court moment, même en pleine Trombe.",
+          "en": "Activates to take far less damage for a short while, even mid-Whirlwind."
         },
         "demoYoutubeId": null
       }
