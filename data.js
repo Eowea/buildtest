@@ -34747,7 +34747,7 @@ const HEROES = [
     "tips": [
       {
         "fr": "Balle perforante (A)  peut t'aider pour te protéger. ",
-        "en": "Penetrating Round (Q) is your only defence: save it to push a dive off you, not to squeeze out extra damage."
+        "en": "Penetrating Round (Q) can help you keep yourself safe."
       },
       {
         "fr": "Lance Inspiration (Z) juste après une attaque de base : elle relance ton attaque, tu en places donc une de plus.",
@@ -34755,7 +34755,7 @@ const HEROES = [
       },
       {
         "fr": "Poussée d'adrénaline (E) se recharge plus vite à chaque attaque de base, doublé contre les héros.",
-        "en": "Adrenaline Rush (E) comes back faster the more you attack: stay in and keep hitting rather than backing off to get it."
+        "en": "Adrenaline Rush (E) recharges faster with every Basic Attack, doubled against Heroes."
       }
     ],
     "builds": [
