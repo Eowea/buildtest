@@ -23384,7 +23384,7 @@ const HEROES = [
   },
   {
     "id": "jaina",
-    "enabled": true,
+    "enabled": false,
     "name": {
       "fr": "Jaina",
       "en": "Jaina"
