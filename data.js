@@ -36708,7 +36708,7 @@ const HEROES = [
         "en": "Ancient Spear (Q) pulls you to the first enemy it hits: misplaced, it throws you into the middle of their team."
       },
       {
-        "fr": "Trombe (E) te soigne bien plus sur les héros que sur les serviteurs : c'est en plein combat qu'elle te maintient en vie, pas en lane.",
+        "fr": "En 1v1, ton Z est ta source de dégâts principale.",
         "en": "Whirlwind (E) heals you far more off Heroes than off Minions: it keeps you alive in a fight, not in lane."
       },
       {
