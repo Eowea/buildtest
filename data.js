@@ -23494,16 +23494,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Glace toujours ta cible avant ton burst : Morsure de givre (D) fait mal aux capacités qui suivent.",
-        "en": "Always Chill your target before your burst: Frostbite (D) makes the Abilities that follow hurt."
+        "fr": "Glace d'abord, frappe ensuite : tes sorts font bien plus mal à une cible déjà glacée.",
+        "en": "Chill first, then strike: your spells hurt far more against an already Chilled target."
       },
       {
-        "fr": "Blizzard (Z) sur une vague de serviteurs accélère énormément ta lane.",
-        "en": "Blizzard (W) on a Minion wave clears your lane far faster."
+        "fr": "Anneau de givre (R) met un temps avant de se refermer : pose-le là où l'ennemi ira, pas là où il est.",
+        "en": "Ring of Frost (R) takes a moment to close: place it where the enemy is going, not where they are."
       },
       {
-        "fr": "Anneau de givre (R) est un contrôle de zone gigantesque : anticipe-le.",
-        "en": "Ring of Frost (R) is a huge area control tool: telegraph it in advance."
+        "fr": "Tu n'as aucune échappatoire : garde Cône de froid (E) pour ralentir un plongeur plutôt que pour finir une vague.",
+        "en": "You have no escape: keep Cone of Cold (E) to slow a diver rather than to finish off a wave."
       }
     ],
     "builds": [
@@ -34739,16 +34739,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Balle perforante (A) repousse : sers-t'en pour te dégager, pas pour les dégâts.",
-        "en": "Penetrating Round (Q) knocks back: use it to escape, not for the damage."
+        "fr": "Balle perforante (A) est ta seule défense : garde-la pour repousser un plongeon, pas pour grappiller des dégâts.",
+        "en": "Penetrating Round (Q) is your only defence: save it to push a dive off you, not to squeeze out extra damage."
       },
       {
-        "fr": "Inspiration (Z) relance ton attaque et accélère aussi tes serviteurs en lane.",
-        "en": "Inspire (W) resets your attack and speeds up your Minions in lane too."
+        "fr": "Lance Inspiration (Z) juste après une attaque de base : elle relance ton attaque, tu en places donc une de plus.",
+        "en": "Cast Inspire (W) right after a Basic Attack: it resets your attack, so you land one more."
       },
       {
-        "fr": "Poussée d'adrénaline (E) te soigne d'un coup : attaquer en réduit fortement le temps de recharge.",
-        "en": "Adrenaline Rush (E) heals you in one burst: attacking sharply cuts its cooldown."
+        "fr": "Poussée d'adrénaline (E) revient d'autant plus vite que tu frappes : reste au contact pour la ravoir plutôt que de reculer.",
+        "en": "Adrenaline Rush (E) comes back faster the more you attack: stay in and keep hitting rather than backing off to get it."
       }
     ],
     "builds": [
@@ -36692,16 +36692,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Lance des anciens (A) te permet de rejoindre une cible ou de fuir un mauvais combat.",
-        "en": "Ancient Spear (Q) lets you close on a target or get out of a fight gone wrong."
+        "fr": "Lance des anciens (A) t'attire vers le premier ennemi touché : mal placée, elle te jette au milieu de leur équipe.",
+        "en": "Ancient Spear (Q) pulls you to the first enemy it hits: misplaced, it throws you into the middle of their team."
       },
       {
-        "fr": "Trombe (E) te soigne : utilise-la sur un groupe de serviteurs pour rester en lane.",
-        "en": "Whirlwind (E) heals you: use it on a Minion wave to stay in lane."
+        "fr": "Trombe (E) te soigne bien plus sur les héros que sur les serviteurs : c'est en plein combat qu'elle te maintient en vie, pas en lane.",
+        "en": "Whirlwind (E) heals you far more off Heroes than off Minions: it keeps you alive in a fight, not in lane."
       },
       {
-        "fr": "Ta Fureur (D) monte aussi en encaissant : ne recule pas dès le premier échange.",
-        "en": "Your Fury (D) also builds by taking hits: don't back off at the first trade."
+        "fr": "Ta Fureur (D) monte en encaissant autant qu'en frappant : reculer au premier échange te prive de tes capacités.",
+        "en": "Your Fury (D) builds from taking hits as much as landing them: backing off at the first trade leaves you with no Abilities."
       }
     ],
     "builds": [
