@@ -36720,11 +36720,11 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Sonya]",
+        "buildCode": "[T1112334,Sonya]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "25 Août 2026",
+          "en": "August 25, 2026"
         },
         "talentSelections": [
           {
@@ -36744,22 +36744,26 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tmrct8f3510591",
-            "alternativeIds": []
+            "primaryId": "tmrct8f3511ywn",
+            "alternativeIds": [
+              "tmrct8f3510591"
+            ]
           },
           {
             "level": 13,
-            "primaryId": "tmrct8f3512kfu",
-            "alternativeIds": []
+            "primaryId": "tmrct8f35147jl",
+            "alternativeIds": [
+              "tmrct8f3512kfu"
+            ]
           },
           {
             "level": 16,
-            "primaryId": "tmrct8f3515xid",
+            "primaryId": "tmrct8f3517z9m",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrct8f3518mo9",
+            "primaryId": "tmrct8f3521vxp",
             "alternativeIds": []
           }
         ]
@@ -37063,7 +37067,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Sonya"
+    "codeKey": "Sonya",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "stitches",
