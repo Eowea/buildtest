@@ -94,8 +94,8 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "22 Août 2026",
-      "en": "August 22, 2026"
+      "fr": "25 Août 2026",
+      "en": "August 25, 2026"
     },
     "changelog": [
       {
@@ -34767,47 +34767,58 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Raynor]",
+        "buildCode": "[T3131215,Raynor]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "25 Août 2026",
+          "en": "August 25, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmgyjetir01fjj",
+            "primaryId": "tmgyjetir03ov7",
             "alternativeIds": []
           },
           {
             "level": 4,
             "primaryId": "tmgyjetir04v34",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmgyjetir06f5j"
+            ]
           },
           {
             "level": 7,
-            "primaryId": "tmgyjetir07ja0",
+            "primaryId": "tmgyjetir09ed8",
             "alternativeIds": []
           },
           {
             "level": 10,
             "primaryId": "tmgyjetir10y95",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmgyjetir11imv"
+            ]
           },
           {
             "level": 13,
-            "primaryId": "tmgyjetir12yki",
-            "alternativeIds": []
+            "primaryId": "tmgyjetir13smc",
+            "alternativeIds": [
+              "tmgyjetir12yki"
+            ]
           },
           {
             "level": 16,
             "primaryId": "tmgyjetir15xs6",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tmgyjetir17b89"
+            ]
           },
           {
             "level": 20,
-            "primaryId": "tmgyjetir18rkb",
-            "alternativeIds": []
+            "primaryId": "tmgyjetir22emi",
+            "alternativeIds": [
+              "tmgyjetir21sf0",
+              "tmgyjetir200ig"
+            ]
           }
         ]
       }
@@ -35124,7 +35135,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Raynor"
+    "codeKey": "Raynor",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "rexxar",
