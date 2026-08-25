@@ -23502,7 +23502,7 @@ const HEROES = [
         "en": "Ring of Frost (R) takes a moment to close: place it where the enemy is going, not where they are."
       },
       {
-        "fr": "Tu n'as aucune échappatoire : garde Cône de froid (E) pour ralentir un plongeur plutôt que pour finir une vague.",
+        "fr": "Ton Blizzard (Z) waveclear les sbires tout seul, pas besoin des autres sorts.",
         "en": "You have no escape: keep Cone of Cold (E) to slow a diver rather than to finish off a wave."
       }
     ],
@@ -23872,7 +23872,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Jaina"
+    "codeKey": "Jaina",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "johanna",
