@@ -23604,7 +23604,7 @@ const HEROES = [
           "fr": "Doigts de givre",
           "en": "Fingers of Frost"
         },
-        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_frostbite_var1.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_conjurerspursuit.png",
         "description": {
           "fr": "Quête : collecter des globes de régénération augmente la régénération de mana. Récompense : au bout d'un certain nombre, le bonus de dégâts de Morsure de givre est accru.",
           "en": "Quest: gathering Regeneration Globes increases Mana regeneration. Reward: after enough Globes, Frostbite's damage bonus is increased."
@@ -23688,7 +23688,7 @@ const HEROES = [
           "fr": "Baguette furie-de-glace",
           "en": "Icefury Wand"
         },
-        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_blizzard.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
         "description": {
           "fr": "Les attaques de base contre les ennemis glacés infligent plus de dégâts et rechargent Blizzard plus vite. Ces effets sont bien plus marqués contre les héros.",
           "en": "Basic Attacks against Chilled enemies deal more damage and bring Blizzard back faster. Both effects are far stronger against Heroes."
@@ -23744,7 +23744,7 @@ const HEROES = [
           "fr": "Barrière de glace",
           "en": "Ice Barrier"
         },
-        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_frostarmor.png",
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_frostbite.png",
         "description": {
           "fr": "Confère un bouclier temporaire proportionnel aux dégâts de capacité infligés aux cibles glacées.",
           "en": "Grants a temporary Shield based on Ability damage dealt to Chilled targets."
@@ -23828,7 +23828,7 @@ const HEROES = [
           "fr": "Muetdhiver",
           "en": "Wintermute"
         },
-        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_commandwaterelemental.png",
+        "icon": "assets/heroes/base_spells/jaina/images/spells/storm_ui_icon_jaina_summonwaterelemental.png",
         "description": {
           "fr": "Augmente la portée d'invocation de l'élémentaire d'eau, qui reproduit désormais les capacités de base de Jaina pour une partie de leurs dégâts.",
           "en": "Increases the Water Elemental's summon range, and it now mimics Jaina's Basic Abilities for part of their damage."
@@ -23842,7 +23842,7 @@ const HEROES = [
           "fr": "Courant d'air",
           "en": "Ice Blink"
         },
-        "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_improvediceblock_new_active.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_boltofthestorm.png",
         "description": {
           "fr": "Capacité active : se téléporte sur une courte distance et glace les ennemis proches.",
           "en": "Active: teleports a short distance and Chills nearby enemies."
