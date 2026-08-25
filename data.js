@@ -34705,8 +34705,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_adrenalinrush.png",
         "description": {
-          "fr": "Rend à Raynor une part de ses points de vie maximum en un court instant. Ses attaques de base en raccourcissent le temps de recharge, bien davantage contre les héros.",
-          "en": "Heals Raynor for a share of his maximum Health over a brief moment. His Basic Attacks shorten its cooldown, far more against Heroes."
+          "fr": "Rend à Raynor une part de ses points de vie maximum en un court instant. Ses attaques de base en réduisent le temps de recharge, bien davantage contre les héros.",
+          "en": "Heals Raynor for a share of his maximum Health over a brief moment. His Basic Attacks reduce its cooldown, far more against Heroes."
         },
         "demoYoutubeId": ""
       },
@@ -34865,8 +34865,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_adrenalinrush.png",
         "description": {
-          "fr": "Raccourcit le temps de recharge de Poussée d'adrénaline, et son activation confère brièvement de l'armure à Raynor.",
-          "en": "Shortens Adrenaline Rush's cooldown, and casting it briefly grants Raynor Armor."
+          "fr": "Réduit le temps de recharge de Poussée d'adrénaline, et son activation confère brièvement de l'armure à Raynor.",
+          "en": "Reduces Adrenaline Rush's cooldown, and casting it briefly grants Raynor Armor."
         },
         "demoYoutubeId": null
       },
@@ -34935,8 +34935,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_acquireweakspot.png",
         "description": {
-          "fr": "Élargit la zone d'On les assaisonne ! Chaque héros adverse touché rend du mana à Raynor et raccourcit le temps de recharge de Balle perforante.",
-          "en": "Widens Give 'Em Some Pepper's area. Each enemy Hero hit restores Mana to Raynor and shortens Penetrating Round's cooldown."
+          "fr": "Élargit la zone d'On les assaisonne ! Chaque héros adverse touché rend du mana à Raynor et recharge Balle perforante plus vite.",
+          "en": "Widens Give 'Em Some Pepper's area. Each enemy Hero hit restores Mana to Raynor and brings Penetrating Round back faster."
         },
         "demoYoutubeId": null
       },
@@ -34977,8 +34977,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_penetratinground.png",
         "description": {
-          "fr": "Raccourcit le temps de recharge de Balle perforante, et davantage encore lorsqu'elle traverse plusieurs héros adverses.",
-          "en": "Shortens Penetrating Round's cooldown, and shortens it further when it passes through several enemy Heroes."
+          "fr": "Balle perforante voit son temps de recharge réduit, davantage encore lorsqu'elle traverse plusieurs héros adverses.",
+          "en": "Penetrating Round's cooldown is reduced, and reduced further when it passes through several enemy Heroes."
         },
         "demoYoutubeId": null
       },
@@ -35061,8 +35061,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/raynor/images/spells/storm_ui_icon_raynor_hyperion.png",
         "description": {
-          "fr": "Toucher un héros avec On les assaisonne ! raccourcit le temps de recharge de l'Hypérion. L'Hypérion prend alors ce héros pour cible et lui inflige bien plus de dégâts pendant un moment.",
-          "en": "Hitting a Hero with Give 'Em Some Pepper shortens the Hyperion's cooldown. The Hyperion then singles that Hero out and deals far more damage to them for a while."
+          "fr": "Toucher un héros avec On les assaisonne ! fait revenir l'Hypérion plus vite. L'Hypérion prend alors ce héros pour cible et lui inflige bien plus de dégâts pendant un moment.",
+          "en": "Hitting a Hero with Give 'Em Some Pepper brings the Hyperion back sooner. The Hyperion then singles that Hero out and deals far more damage to them for a while."
         },
         "demoYoutubeId": null
       },
