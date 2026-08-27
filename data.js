@@ -38055,7 +38055,7 @@ const HEROES = [
   },
   {
     "id": "tassadar",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Tassadar",
       "en": "Tassadar"
@@ -38105,8 +38105,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tassadar/images/spells/storm_ui_icon_tassadar_psionicstorm.png",
         "description": {
-          "fr": "Crée une tempête qui blesse les ennemis présents, de plus en plus fort à chaque salve.",
-          "en": "Creates a storm that damages the enemies inside, harder with each pulse."
+          "fr": "Crée une tempête qui blesse les ennemis présents, de plus en plus fort à chaque salve, jusqu'à un plafond.",
+          "en": "Creates a storm that damages the enemies inside, harder with each pulse, up to a cap."
         },
         "demoYoutubeId": ""
       },
@@ -38131,8 +38131,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tassadar/images/spells/storm_ui_icon_tassadar_archon.png",
         "description": {
-          "fr": "Tassadar se change en archonte : il gagne un bouclier et son rayon frappe en zone tout en réduisant l'armure anti-sort des héros touchés.",
-          "en": "Tassadar transforms into an Archon: he gains a Shield and his beam splashes while reducing the Spell Armor of the Heroes it hits."
+          "fr": "Tassadar se change en archonte : il gagne un bouclier proportionnel à ses points de vie maximum, et Rayon de résonance reste chargé au maximum le temps de la transformation, frappant en zone et rongeant l'armure anti-sort des héros touchés.",
+          "en": "Tassadar turns into an Archon: he gains a Shield scaling with his maximum Health, and Resonance Beam stays fully charged for the duration, splashing and eating away at the Spell Armor of the Heroes it hits."
         },
         "demoYoutubeId": ""
       },
@@ -38152,16 +38152,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Empile ton rayon avant l'engagement : tes dégâts montent avec la canalisation.",
-        "en": "Ramp your beam before the engage: your damage grows with the channel."
+        "fr": "Empile ton rayon avant l'engagement : Rayon de résonance (D) monte en dégâts tant que tu canalises.",
+        "en": "Stack your beam before the engage: Resonance Beam (D) ramps up as long as you keep channelling."
       },
       {
-        "fr": "Mur de force isole une cible ou coupe une fuite : c'est ton vrai impact.",
-        "en": "Force Wall isolates a target or cuts an escape: that is your real impact."
+        "fr": "Mur de force (E) isole une cible ou coupe une fuite : c'est ton vrai impact.",
+        "en": "Force Wall (E) cuts a target off or blocks an escape: that's where your real impact is."
       },
       {
-        "fr": "Tempête psionique frappe de plus en plus fort : place-la où l'ennemi doit rester.",
-        "en": "Psionic Storm hits harder each pulse: place it where the enemy must stand."
+        "fr": "Tempête psionique (Z) frappe de plus en plus fort : place-la où l'ennemi doit rester.",
+        "en": "Psionic Storm (W) hits harder the longer it burns: place it where the enemy has to stay."
       }
     ],
     "builds": [
@@ -38236,8 +38236,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tassadar/images/spells/storm_ui_icon_tassadar_rework_q_ray.png",
         "description": {
-          "fr": "Quête : toucher des héros augmente les dégâts.",
-          "en": "Quest: Hero hits increase damage"
+          "fr": "Quête : chaque héros touché par Rayon de choc en augmente définitivement les dégâts, jusqu'à un plafond, et charge Rayon de résonance.",
+          "en": "Quest: every Hero hit by Shock Ray permanently raises its damage, up to a cap, and charges Resonance Beam."
         },
         "demoYoutubeId": null
       },
@@ -38250,8 +38250,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tassadar/images/spells/storm_ui_icon_tassadar_psionicstorm.png",
         "description": {
-          "fr": "Portée augmentée, rend des points de mana en touchant des ennemis.",
-          "en": "Increased range, hits return Mana"
+          "fr": "Tempête psionique porte plus loin et rend du mana pour chaque ennemi touché, bien davantage sur un héros.",
+          "en": "Psionic Storm reaches further and restores Mana for every enemy hit, far more from a Hero."
         },
         "demoYoutubeId": null
       },
@@ -38264,8 +38264,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tassadar/images/spells/storm_ui_icon_tassadar_rework_trait.png",
         "description": {
-          "fr": "Quête : renforce Rayon de résonance.",
-          "en": "Quest: Empower Resonance Beam"
+          "fr": "Quête : Rayon de résonance se charge plus vite. Récompense : à force de le maintenir à pleine charge, il finit par rebondir sur des cibles supplémentaires, les héros en priorité.",
+          "en": "Quest: Resonance Beam charges faster. Reward: keeping it at full charge long enough makes it bounce to additional targets, prioritising Heroes."
         },
         "demoYoutubeId": null
       },
@@ -38278,8 +38278,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tassadar/images/spells/storm_ui_icon_tassadar_rework_q_ray.png",
         "description": {
-          "fr": "Rayon de choc augmente la vitesse de déplacement.",
-          "en": "Shock Ray grants Movement Speed"
+          "fr": "Augmente la vitesse de déplacement de Tassadar, et Rayon de choc la pousse bien plus haut un court moment.",
+          "en": "Increases Tassadar's Movement Speed, and Shock Ray pushes it much higher for a short while."
         },
         "demoYoutubeId": null
       },
@@ -38292,8 +38292,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tassadar/images/spells/storm_ui_icon_tassadar_forcewall.png",
         "description": {
-          "fr": "Mur de force inflige des dégâts et ralentit.",
-          "en": "Force Wall deals damage and Slows"
+          "fr": "Mur de force blesse et ralentit les ennemis qui le longent.",
+          "en": "Force Wall damages and Slows the enemies alongside it."
         },
         "demoYoutubeId": null
       },
@@ -38306,8 +38306,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tassadar/images/spells/storm_ui_icon_tassadar_rework_trait.png",
         "description": {
-          "fr": "La charge de Rayon de résonance confère un bouclier.",
-          "en": "Resonance Beam charge grants Shields"
+          "fr": "Tant que Rayon de résonance est chargé au maximum, Tassadar accumule un bouclier, jusqu'à un plafond.",
+          "en": "While Resonance Beam is fully charged, Tassadar builds up a Shield, up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -38334,8 +38334,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tassadar/images/spells/storm_ui_icon_tassadar_psionicstorm.png",
         "description": {
-          "fr": "Rayon de choc génère une Tempête psionique sur le héros touché.",
-          "en": "Shock Ray creates Psionic Storm on Hero hit"
+          "fr": "Lancer Tempête psionique rend le prochain Rayon de choc moins coûteux et lui fait déclencher une Tempête psionique sur le premier héros touché.",
+          "en": "Casting Psionic Storm makes the next Shock Ray cheaper and has it spawn a Psionic Storm on the first Hero hit."
         },
         "demoYoutubeId": null
       },
@@ -38348,8 +38348,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tassadar/images/spells/storm_ui_icon_tassadar_rework_trait.png",
         "description": {
-          "fr": "Rayon de résonance génère des Tempêtes psioniques.",
-          "en": "Resonance Beam creates Psionic Storms"
+          "fr": "Tant que Rayon de résonance est chargé au maximum, Tassadar attaque de plus loin et son rayon déclenche régulièrement une Tempête psionique sur sa cible.",
+          "en": "While Resonance Beam is fully charged, Tassadar attacks from further away and his beam regularly spawns a Psionic Storm on its target."
         },
         "demoYoutubeId": null
       },
@@ -38404,8 +38404,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tassadar/images/talents/storm_ui_icon_tassadar_dimensionalshift.png",
         "description": {
-          "fr": "Tassadar se camoufle temporairement, confère de l'armure.",
-          "en": "Become temporarily Stealthed, gain Armor"
+          "fr": "Tassadar se camoufle sans pouvoir être révélé, gagne en vitesse et en armure, mais ne peut ni attaquer ni lancer de capacité le temps de l'effet. Utilisable en pleine canalisation de Rayon de choc.",
+          "en": "Tassadar becomes Cloaked and cannot be revealed, gaining Movement Speed and Armor, but can neither attack nor cast for the duration. Usable mid-channel of Shock Ray."
         },
         "demoYoutubeId": null
       },
@@ -38432,8 +38432,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tassadar/images/spells/storm_ui_icon_tassadar_rework_q_ray.png",
         "description": {
-          "fr": "Pourcentage de dégâts contre le premier héros.",
-          "en": "Percentage damage against first Hero"
+          "fr": "Rayon de choc inflige au premier héros touché des dégâts supplémentaires proportionnels à ses points de vie maximum.",
+          "en": "Shock Ray deals the first Hero it hits bonus damage scaling with their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -38460,8 +38460,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_abilitytalent_damage.png",
         "description": {
-          "fr": "Renforce Rayon de résonance.",
-          "en": "Activate to empower Resonance Beam"
+          "fr": "Démarre Rayon de résonance à pleine charge. Tant qu'il y reste, Tassadar gagne en puissance de capacité et voit les temps de recharge de ses capacités réduits.",
+          "en": "Starts Resonance Beam at full charge. While it stays there, Tassadar gains Spell Power and sees his Abilities' cooldowns reduced."
         },
         "demoYoutubeId": null
       },
@@ -38474,8 +38474,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tassadar/images/spells/storm_ui_icon_tassadar_archon.png",
         "description": {
-          "fr": "Les attaques de base augmentent la durée d'Archonte.",
-          "en": "Basic Attacks increase Archon duration"
+          "fr": "Les attaques de base portées sous forme d'archonte en prolongent la durée.",
+          "en": "Basic Attacks landed in Archon form extend its duration."
         },
         "demoYoutubeId": null
       },
@@ -38488,8 +38488,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tassadar/images/spells/storm_ui_icon_tassadar_rework_blackhole.png",
         "description": {
-          "fr": "Trou noir réduit l'armure et génère des Tempêtes psioniques.",
-          "en": "Black Hole reduces Armor, creates Psionic Storms"
+          "fr": "Les héros touchés par le centre du Trou noir voient leur armure réduite, et une Tempête psionique éclot à leur emplacement.",
+          "en": "Heroes caught by Black Hole's centre have their Armor reduced, and a Psionic Storm blooms where they stand."
         },
         "demoYoutubeId": null
       },
@@ -38502,8 +38502,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tassadar/images/spells/storm_ui_icon_tassadar_forcewall.png",
         "description": {
-          "fr": "Portée augmentée, temps de recharge réduit.",
-          "en": "Increased range, reduced cooldown"
+          "fr": "Mur de force dure plus longtemps, se pose de bien plus loin et revient plus vite.",
+          "en": "Force Wall lasts longer, is placed from much further away and returns sooner."
         },
         "demoYoutubeId": null
       },
@@ -38516,8 +38516,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tassadar/images/talents/storm_ui_icon_tassadar_rework_active_khala.png",
         "description": {
-          "fr": "Les alliés proches confèrent et gagnent de la puissance de capacité.",
-          "en": "Nearby Allies grant and gain Spell Power"
+          "fr": "Confère de la puissance de capacité à Tassadar et à chaque héros allié proche, jusqu'à un plafond. Le total obtenu est partagé avec tous ceux qui y ont contribué.",
+          "en": "Grants Spell Power to Tassadar and to every nearby allied Hero, up to a cap. The total gained is shared with everyone who contributed."
         },
         "demoYoutubeId": null
       }
@@ -39485,7 +39485,7 @@ const HEROES = [
   },
   {
     "id": "tracer",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Tracer",
       "en": "Tracer"
@@ -39509,8 +39509,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/spells/storm_ui_icon_tracer_reload.png",
         "description": {
-          "fr": "Tracer peut se déplacer en attaquant et ses attaques de base utilisent des munitions.",
-          "en": "Tracer can move while Basic Attacking; Basic Attacks cost ammo"
+          "fr": "Tracer tire tout en se déplaçant, mais doit recharger ses pulseurs une fois le chargeur vide — elle peut le déclencher elle-même avant d'être à sec. Ses attaques de base la soignent d'une part des dégâts infligés.",
+          "en": "Tracer shoots while moving, but has to reload her pistols once the magazine runs dry — she can trigger it herself beforehand. Her Basic Attacks heal her for part of the damage dealt."
         },
         "demoYoutubeId": ""
       },
@@ -39535,8 +39535,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/spells/storm_ui_icon_tracer_melee.png",
         "description": {
-          "fr": "Frappe un ennemi proche au corps à corps, ce qui recharge Bombe à impulsion.",
-          "en": "Strikes a nearby enemy in melee, which charges up Pulse Bomb."
+          "fr": "Frappe au corps à corps l'ennemi le plus proche, en visant les héros en priorité, et charge Bombe à impulsion — bien davantage sur un héros.",
+          "en": "Strikes the nearest enemy in melee, prioritising Heroes, and charges Pulse Bomb — far more against a Hero."
         },
         "demoYoutubeId": ""
       },
@@ -39569,16 +39569,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Rappel te replace et te purge, mais ne te soigne pas : c'est une esquive, pas un soin.",
-        "en": "Recall repositions and cleanses you, but does not heal: it is a dodge, not a heal."
+        "fr": "Rappel (E) te replace et te purge, mais ne te soigne pas : c'est une esquive, pas un soin.",
+        "en": "Recall (E) repositions and cleanses you, but does not heal: it's a dodge, not a heal."
       },
       {
         "fr": "Tu ne montes pas : tu es toujours prête à te battre, où que tu sois.",
-        "en": "You never mount: you are always ready to fight, wherever you are."
+        "en": "You never mount up: you're always ready to fight, wherever you are."
       },
       {
-        "fr": "Bombe à impulsion sur un tank est du gâchis : vise les cibles fragiles.",
-        "en": "Pulse Bomb on a tank is a waste: aim at the squishy targets."
+        "fr": "Bombe à impulsion (R) sur un tank est du gâchis : vise les cibles fragiles.",
+        "en": "Pulse Bomb (R) on a tank is wasted: aim for the squishy targets."
       }
     ],
     "builds": [
@@ -39653,8 +39653,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/spells/storm_ui_icon_tracer_melee.png",
         "description": {
-          "fr": "Mêlée gagne une charge et bénéficie d'un temps de recharge réduit.",
-          "en": "Melee gains an additional charge, reduced cooldown"
+          "fr": "Mêlée gagne une charge supplémentaire et revient plus vite.",
+          "en": "Melee gains an extra charge and returns sooner."
         },
         "demoYoutubeId": null
       },
@@ -39667,8 +39667,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/talents/storm_ui_icon_tracer_combo_e_r.png",
         "description": {
-          "fr": "Rappel sème des bombes qui blessent et ralentissent les héros touchés, tout en chargeant Bombe à impulsion.",
-          "en": "Recall drops bombs that damage and Slow the Heroes hit, while charging Pulse Bomb."
+          "fr": "Rappel sème derrière lui des bombes qui frappent chacune une cible différente, ralentissent les héros touchés et chargent Bombe à impulsion.",
+          "en": "Recall drops bombs behind it, each striking a different target, Slowing the Heroes hit and charging Pulse Bomb."
         },
         "demoYoutubeId": null
       },
@@ -39681,8 +39681,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/spells/storm_ui_icon_tracer_reload.png",
         "description": {
-          "fr": "Les attaques de base révèlent les ennemis et la portée est augmentée.",
-          "en": "Basic Attacks reveal, increased range"
+          "fr": "Les attaques de base portent plus loin et révèlent une zone autour des héros touchés.",
+          "en": "Basic Attacks reach further and reveal an area around the Heroes they hit."
         },
         "demoYoutubeId": null
       },
@@ -39695,8 +39695,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/spells/storm_ui_icon_tracer_reload.png",
         "description": {
-          "fr": "Augmente les points de vie rendus par les attaques de base.",
-          "en": "Increase Basic Attack healing"
+          "fr": "Les attaques de base soignent d'autant plus que Tracer est mal en point.",
+          "en": "Basic Attacks heal all the more the worse shape Tracer is in."
         },
         "demoYoutubeId": null
       },
@@ -39709,8 +39709,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/talents/storm_ui_icon_tracer_combo_q_r.png",
         "description": {
-          "fr": "Bombe à impulsion rend des points de vie et réinitialise une charge de Transfert.",
-          "en": "Pulse Bomb heals Tracer, refreshes Blink charge"
+          "fr": "Coller Bombe à impulsion sur un héros adverse soigne Tracer et lui rend une charge de Transfert.",
+          "en": "Sticking Pulse Bomb on an enemy Hero heals Tracer and gives her back a Blink charge."
         },
         "demoYoutubeId": null
       },
@@ -39723,8 +39723,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/talents/storm_ui_icon_tracer_medpack.png",
         "description": {
-          "fr": "Ramasser un globe de régénération rend aussitôt une part des points de vie de Tracer et raccourcit le temps de recharge des fontaines de soins. Boire à une fontaine la soigne également d'un coup.",
-          "en": "Picking up a Regeneration Globe instantly restores part of Tracer's Health and brings the next Healing Fountain closer. Drinking from a Fountain also heals her at once."
+          "fr": "Ramasser un globe de régénération rend aussitôt une part des points de vie de Tracer et remet les fontaines de soins à disposition plus tôt. Boire à une fontaine la soigne également d'un coup.",
+          "en": "Picking up a Regeneration Globe instantly restores part of Tracer's Health and makes Healing Fountains available sooner. Drinking from a fountain also heals her at once."
         },
         "demoYoutubeId": null
       },
@@ -39737,8 +39737,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/spells/storm_ui_icon_tracer_reload.png",
         "description": {
-          "fr": "Recharge bien plus rapidement.",
-          "en": "Reload is far faster."
+          "fr": "Recharge est bien plus brève, ce qui augmente d'autant les dégâts soutenus.",
+          "en": "Reload is much briefer, raising sustained damage accordingly."
         },
         "demoYoutubeId": null
       },
@@ -39751,8 +39751,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/talents/storm_ui_icon_tracer_reload_b.png",
         "description": {
-          "fr": "Vider un chargeur sur un ennemi inflige des dégâts supplémentaires.",
-          "en": "Unloading a magazine on an enemy does bonus damage"
+          "fr": "Vider un chargeur entier sur un même ennemi fait frapper la dernière balle bien plus fort.",
+          "en": "Emptying a whole magazine into the same enemy makes the last bullet hit far harder."
         },
         "demoYoutubeId": null
       },
@@ -39765,8 +39765,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/talents/storm_ui_icon_tracer_reload_c.png",
         "description": {
-          "fr": "Utiliser Recharge au bon moment augmente les dégâts des attaques de base.",
-          "en": "Time Reload perfectly to gain Basic Attack damage"
+          "fr": "Relancer Recharge vers la fin de son cycle renforce les dégâts du chargeur qui suit.",
+          "en": "Triggering Reload again near the end of its cycle strengthens the damage of the magazine that follows."
         },
         "demoYoutubeId": null
       },
@@ -39779,8 +39779,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/spells/storm_ui_icon_tracer_pulsebomb.png",
         "description": {
-          "fr": "Augmente le rayon de Bombe à impulsion et lui confère ralentissement.",
-          "en": "Increases Pulse Bomb area and adds Slow"
+          "fr": "Bombe à impulsion couvre une zone plus large et ralentit fortement les ennemis touchés.",
+          "en": "Pulse Bomb covers a wider area and heavily Slows the enemies it hits."
         },
         "demoYoutubeId": null
       },
@@ -39793,8 +39793,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/talents/storm_ui_icon_tracer_pulsebomb_b.png",
         "description": {
-          "fr": "Bombe à impulsion bénéficie d'un bonus aux dégâts.",
-          "en": "Pulse Bomb deals percentage damage"
+          "fr": "Bombe à impulsion inflige aux héros des dégâts supplémentaires proportionnels à leurs points de vie maximum.",
+          "en": "Pulse Bomb deals Heroes bonus damage scaling with their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -39807,8 +39807,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/talents/storm_ui_icon_tracer_pulsebomb_c.png",
         "description": {
-          "fr": "Augmente la portée et le taux de charge de Bombe à impulsion.",
-          "en": "Increases Pulse Bomb range and charge rate"
+          "fr": "Bombe à impulsion se lance de plus loin et se charge bien plus vite sur les héros.",
+          "en": "Pulse Bomb throws further and charges far faster against Heroes."
         },
         "demoYoutubeId": null
       },
@@ -39835,8 +39835,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/talents/storm_ui_icon_tracer_blink.png",
         "description": {
-          "fr": "Transfert confère un bouclier et bénéficie d'un temps de recharge réduit.",
-          "en": "Blink grants Shield, reduced cooldown"
+          "fr": "Une fois Transfert à court de charges, celles-ci se rechargent bien plus vite. Chaque utilisation confère en outre un bouclier temporaire, cumulable.",
+          "en": "Once Blink is out of charges, they come back far faster. Each use also grants a temporary Shield that stacks."
         },
         "demoYoutubeId": null
       },
@@ -39849,8 +39849,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/spells/storm_ui_icon_tracer_recall.png",
         "description": {
-          "fr": "Inflige des dégâts et repousse les ennemis à l'issue du Rappel.",
-          "en": "Damage and knockback on Recall arrival"
+          "fr": "Effet passif : frapper un héros adverse rend Rappel disponible plus tôt. À son retour, Tracer est impossible à tuer un court instant, blesse les ennemis proches et les repousse.",
+          "en": "Passive: hitting an enemy Hero makes Recall available sooner. On her return, Tracer is unkillable for a brief moment, damaging nearby enemies and knocking them back."
         },
         "demoYoutubeId": null
       },
@@ -39863,8 +39863,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/spells/storm_ui_icon_tracer_melee.png",
         "description": {
-          "fr": "Mêlée touche tous les ennemis à portée.",
-          "en": "Melee hits all enemies in range"
+          "fr": "Mêlée couvre une zone plus large et touche tous les ennemis à portée.",
+          "en": "Melee covers a wider area and hits every enemy in range."
         },
         "demoYoutubeId": null
       },
@@ -39877,8 +39877,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/talents/storm_ui_icon_tracer_melee_b.png",
         "description": {
-          "fr": "Mêlée réduit l'armure.",
-          "en": "Melee reduces Armor"
+          "fr": "Mêlée réduit l'armure des héros touchés.",
+          "en": "Melee reduces the Armor of the Heroes it hits."
         },
         "demoYoutubeId": null
       },
@@ -39891,8 +39891,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/spells/storm_ui_icon_tracer_reload.png",
         "description": {
-          "fr": "Les attaques de base peuvent ricocher sur un ennemi proche.",
-          "en": "Basic Attacks can bounce to a nearby enemy"
+          "fr": "Les attaques de base ricochent souvent sur un ennemi proche, en visant les héros en priorité.",
+          "en": "Basic Attacks often ricochet onto a nearby enemy, prioritising Heroes."
         },
         "demoYoutubeId": null
       },
@@ -39905,8 +39905,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/talents/storm_ui_icon_tracer_combo_q_trait.png",
         "description": {
-          "fr": "Transfert renforce les munitions.",
-          "en": "Blink empowers ammo"
+          "fr": "Juste après un Transfert, les attaques de base ne consomment plus de munitions.",
+          "en": "Right after a Blink, Basic Attacks stop consuming ammo."
         },
         "demoYoutubeId": null
       },
@@ -39933,8 +39933,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/spells/storm_ui_icon_tracer_recall.png",
         "description": {
-          "fr": "Rappel peut rendre des points de vie.",
-          "en": "Recall can restore Health"
+          "fr": "Rappel rend à Tracer tous les points de vie qu'elle a perdus pendant l'intervalle qu'il annule.",
+          "en": "Recall restores all the Health Tracer lost during the window it rewinds."
         },
         "demoYoutubeId": null
       },
@@ -39947,8 +39947,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tracer/images/spells/storm_ui_icon_tracer_pulsebomb.png",
         "description": {
-          "fr": "Coller une bombe à impulsion sur un héros en largue une deuxième.",
-          "en": "Hitting Heroes with Pulse Bomb leaves a second"
+          "fr": "Coller Bombe à impulsion sur un héros en largue une seconde à ses pieds, moins puissante et qui explose un peu plus tôt.",
+          "en": "Sticking Pulse Bomb on a Hero drops a second one at their feet, weaker and detonating slightly sooner."
         },
         "demoYoutubeId": null
       }
