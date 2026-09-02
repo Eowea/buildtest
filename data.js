@@ -300,8 +300,8 @@ const HEROES = [
           "en": "The best build, plain and simple."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3111124,Kaelthas]",
         "videos": [],
@@ -345,7 +345,8 @@ const HEROES = [
             "primaryId": "tmrryr6jobfvo1",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": false,
@@ -359,8 +360,8 @@ const HEROES = [
           "en": "Devastating against melee-heavy compositions."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2322131,Kaelthas]",
         "videos": [],
@@ -404,7 +405,8 @@ const HEROES = [
             "primaryId": "tmrryr6jowrwxu",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [
@@ -853,8 +855,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2132134,Anduin]",
         "videos": [],
@@ -905,7 +907,8 @@ const HEROES = [
             "primaryId": "tmrryr6jop1tna",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": false,
@@ -919,8 +922,8 @@ const HEROES = [
           "en": "Build centered around Lightbomb and basic attacks."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2222222,Anduin]",
         "videos": [],
@@ -964,7 +967,8 @@ const HEROES = [
             "primaryId": "tmrryr6jop1tna",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -1265,7 +1269,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Anduin"
+    "codeKey": "Anduin",
+    "isNew": false
   },
   {
     "id": "rehgar",
@@ -1408,8 +1413,8 @@ const HEROES = [
           "en": "Easiest build: the totem becomes the central point of your gameplay."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2111121,Rehgar]",
         "videos": [],
@@ -1449,7 +1454,8 @@ const HEROES = [
             "primaryId": "tmrryr6joboe03",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": true,
@@ -1467,8 +1473,8 @@ const HEROES = [
           "en": "More aggressive build: requires flawless game knowledge."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3131231,Rehgar]",
         "videos": [],
@@ -1508,7 +1514,8 @@ const HEROES = [
             "primaryId": "tmrryr6joboe03",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [
@@ -1828,7 +1835,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Rehgar"
+    "codeKey": "Rehgar",
+    "isNew": false
   },
   {
     "id": "luisaile",
@@ -1971,8 +1979,8 @@ const HEROES = [
           "en": "Build that allows more frequent use of Cleanse."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2331323,Brightwing]",
         "videos": [],
@@ -2014,7 +2022,8 @@ const HEROES = [
             "primaryId": "tmrryr6joubnhr",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [
@@ -2334,7 +2343,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Brightwing"
+    "codeKey": "Brightwing",
+    "isNew": false
   },
   {
     "id": "deckard",
@@ -2464,8 +2474,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3121331,Deckard]",
         "videos": [],
@@ -2505,7 +2515,8 @@ const HEROES = [
             "primaryId": "tmrryr6jodwv3i",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": true,
@@ -2523,8 +2534,8 @@ const HEROES = [
           "en": "It goes ding-ding and deals damage."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1321314,Deckard]",
         "videos": [],
@@ -2564,7 +2575,8 @@ const HEROES = [
             "primaryId": "tmrryr6jo35wyo",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": true
       }
     ],
     "guideVideos": [
@@ -2898,7 +2910,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Deckard"
+    "codeKey": "Deckard",
+    "isNew": false
   },
   {
     "id": "alexstrasza",
@@ -3085,8 +3098,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2231121,Alexstrasza]",
         "videos": [],
@@ -3140,7 +3153,8 @@ const HEROES = [
               "tmw3k2alx14gi6"
             ]
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": false,
@@ -3154,8 +3168,8 @@ const HEROES = [
           "en": "Damage and frequent dragons."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3331333,Alexstrasza]",
         "videos": [],
@@ -3199,7 +3213,8 @@ const HEROES = [
             "primaryId": "tmrryr6jo8uzwx",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -3501,7 +3516,8 @@ const HEROES = [
         "demoYoutubeId": null
       }
     ],
-    "codeKey": "Alexstrasza"
+    "codeKey": "Alexstrasza",
+    "isNew": false
   },
   {
     "id": "ana",
@@ -3627,8 +3643,8 @@ const HEROES = [
           "en": "Amplifies anti-heal and burst healing."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111331,Ana]",
         "videos": [],
@@ -3678,7 +3694,8 @@ const HEROES = [
               "tmt9k2ana10tg3"
             ]
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": true,
@@ -3692,8 +3709,8 @@ const HEROES = [
           "en": "A build that provides some followup even if the sleeping target is awakened"
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2221331,Ana]",
         "videos": [],
@@ -3747,7 +3764,8 @@ const HEROES = [
               "tmt9k2ana10tg3"
             ]
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -4179,8 +4197,8 @@ const HEROES = [
           "en": "Generates a huge amount of Energy on its own."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3332332,Auriel]",
         "videos": [],
@@ -4220,7 +4238,8 @@ const HEROES = [
             "primaryId": "tmrryr6jocv1nn",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": true,
@@ -4238,8 +4257,8 @@ const HEROES = [
           "en": "Ideal if you have a very strong hyper-carry."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1112232,Auriel]",
         "videos": [],
@@ -4281,7 +4300,8 @@ const HEROES = [
             "primaryId": "tmrryr6jocv1nn",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [
@@ -4601,7 +4621,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Auriel"
+    "codeKey": "Auriel",
+    "isNew": false
   },
   {
     "id": "kharazim",
@@ -4727,8 +4748,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2312113,Kharazim]",
         "videos": [],
@@ -4782,7 +4803,8 @@ const HEROES = [
               "tmq8v3khz226ex"
             ]
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": false,
@@ -4796,8 +4818,8 @@ const HEROES = [
           "en": "The classic sustained healing build."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1121331,Kharazim]",
         "videos": [],
@@ -4841,7 +4863,8 @@ const HEROES = [
             "primaryId": "tmq8v3khz1842q",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -5156,7 +5179,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Kharazim"
+    "codeKey": "Kharazim",
+    "isNew": false
   },
   {
     "id": "lili",
@@ -5282,8 +5306,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode.\n"
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1231111,LiLi]",
         "videos": [],
@@ -5330,7 +5354,8 @@ const HEROES = [
             "primaryId": "tmp5w2lil18irz",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": true,
@@ -5344,8 +5369,8 @@ const HEROES = [
           "en": "Extra healing via W."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2111131,LiLi]",
         "videos": [],
@@ -5389,7 +5414,8 @@ const HEROES = [
             "primaryId": "tmp5w2lil18irz",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": true,
@@ -5407,8 +5433,8 @@ const HEROES = [
           "en": "If you love running through spells and bait."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE IN TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3322131,LiLi]",
         "videos": [],
@@ -5453,7 +5479,8 @@ const HEROES = [
               "tmp5w2lil19o9c"
             ]
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -5754,7 +5781,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "LiLi"
+    "codeKey": "LiLi",
+    "isNew": false
   },
   {
     "id": "ltmorales",
@@ -5880,8 +5908,8 @@ const HEROES = [
           "en": "Maximum armor to save targets."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2222233,LtMorales]",
         "videos": [],
@@ -5925,7 +5953,8 @@ const HEROES = [
             "primaryId": "tmn4x9mor20bc9",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": true,
@@ -5939,8 +5968,8 @@ const HEROES = [
           "en": "More knockbacks and energy regeneration."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3311233,LtMorales]",
         "videos": [],
@@ -5992,7 +6021,8 @@ const HEROES = [
               "tmn4x9mor18jn9"
             ]
           }
-        ]
+        ],
+        "isNew": true
       }
     ],
     "guideVideos": [],
@@ -6293,7 +6323,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "LtMorales"
+    "codeKey": "LtMorales",
+    "isNew": false
   },
   {
     "id": "malfurion",
@@ -6424,8 +6455,8 @@ const HEROES = [
           "en": "Very high continuous damage and healing."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3131131,Malfurion]",
         "videos": [],
@@ -6479,8 +6510,8 @@ const HEROES = [
           "en": "More control and zoning."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "",
         "videos": [],
@@ -6488,7 +6519,8 @@ const HEROES = [
           "fr": "",
           "en": ""
         },
-        "talentSelections": []
+        "talentSelections": [],
+        "isNew": false
       }
     ],
     "guideVideos": [
@@ -6821,7 +6853,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "20 Août 2026",
       "en": "August 20, 2026"
-    }
+    },
+    "isNew": false
   },
   {
     "id": "stukov",
@@ -6947,8 +6980,8 @@ const HEROES = [
           "en": "Maximizes the impact of the silence zone."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3322212,Stukov]",
         "videos": [],
@@ -6992,7 +7025,8 @@ const HEROES = [
               "tmrryr6joxwsxq"
             ]
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": false,
@@ -7006,8 +7040,8 @@ const HEROES = [
           "en": "Huge burst and slow on W explosion."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1112111,Stukov]",
         "videos": [],
@@ -7021,7 +7055,8 @@ const HEROES = [
             "primaryId": "tmrryr6jotcxbw",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [
@@ -7369,7 +7404,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Stukov"
+    "codeKey": "Stukov",
+    "isNew": false
   },
   {
     "id": "tyrande",
@@ -7499,8 +7535,8 @@ const HEROES = [
           "en": "Reliable stuns and sustained healing."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2332312,Tyrande]",
         "videos": [],
@@ -7540,7 +7576,8 @@ const HEROES = [
             "primaryId": "tmrryr6joj6pwf",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": false,
@@ -7554,8 +7591,8 @@ const HEROES = [
           "en": "Very long-range sniper build for poke."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2332312,Tyrande]",
         "videos": [],
@@ -7569,7 +7606,8 @@ const HEROES = [
             "primaryId": "tmrryr6joux1d1",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": true,
@@ -7583,8 +7621,8 @@ const HEROES = [
           "en": "Focused on Sentinel."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1312223,Tyrande]",
         "videos": [],
@@ -7628,7 +7666,8 @@ const HEROES = [
             "primaryId": "tc901a3oc20nav",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": true
       },
       {
         "enabled": true,
@@ -7642,8 +7681,8 @@ const HEROES = [
           "en": "Built around Basic Attacks."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3332332,Tyrande]",
         "videos": [],
@@ -7687,7 +7726,8 @@ const HEROES = [
             "primaryId": "tmrryr6joj6pwf",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": true
       }
     ],
     "guideVideos": [
@@ -8007,7 +8047,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Tyrande"
+    "codeKey": "Tyrande",
+    "isNew": false
   },
   {
     "id": "uther",
@@ -8152,8 +8193,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2231234,Uther]",
         "videos": [],
@@ -8208,7 +8249,8 @@ const HEROES = [
               "tmv7k4uth20ezi"
             ]
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": false,
@@ -8222,8 +8264,8 @@ const HEROES = [
           "en": "Plays like a secondary tank with his CC."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3222222,Uther]",
         "videos": [],
@@ -8267,7 +8309,8 @@ const HEROES = [
             "primaryId": "tmv7k4uth19egw",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -8583,7 +8626,8 @@ const HEROES = [
         }
       }
     ],
-    "codeKey": "Uther"
+    "codeKey": "Uther",
+    "isNew": false
   },
   {
     "id": "whitemane",
@@ -8726,8 +8770,8 @@ const HEROES = [
           "en": "Build focused on Inquisition (W)."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1231121,Whitemane]",
         "videos": [],
@@ -8767,7 +8811,8 @@ const HEROES = [
             "primaryId": "tmrryr6jo7szcd",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": false,
@@ -8781,8 +8826,8 @@ const HEROES = [
           "en": "Stronger direct heals but very mana intensive."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1112111,Whitemane]",
         "videos": [],
@@ -8796,7 +8841,8 @@ const HEROES = [
             "primaryId": "tmrryr6jo7l6vs",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": true,
@@ -8810,8 +8856,8 @@ const HEROES = [
           "en": "Focused on Searing Lash."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2231231,Whitemane]",
         "videos": [],
@@ -8855,7 +8901,8 @@ const HEROES = [
             "primaryId": "tmrryr6jo7szcd",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": true
       }
     ],
     "guideVideos": [
@@ -9189,7 +9236,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Whitemane"
+    "codeKey": "Whitemane",
+    "isNew": false
   },
   {
     "id": "lucio",
@@ -9328,8 +9376,8 @@ const HEROES = [
           "en": "THE ONLY PLAYABLE BUILD"
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2322222,Lucio]",
         "videos": [],
@@ -9383,7 +9431,8 @@ const HEROES = [
               "tmrryr6jobmfb8"
             ]
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": false,
@@ -9397,8 +9446,8 @@ const HEROES = [
           "en": "Under construction."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "",
         "videos": [],
@@ -9442,7 +9491,8 @@ const HEROES = [
             "primaryId": null,
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [
@@ -9933,8 +9983,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1131213,Abathur]",
         "videos": [],
@@ -9978,7 +10028,8 @@ const HEROES = [
             "primaryId": "tmatgxdrn22bhc",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -10323,7 +10374,7 @@ const HEROES = [
       }
     ],
     "codeKey": "Abathur",
-    "isNew": true,
+    "isNew": false,
     "bugs": [],
     "bugsUpdatedAt": {
       "fr": "",
@@ -10454,8 +10505,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1122312,Alarak]",
         "videos": [],
@@ -10509,7 +10560,8 @@ const HEROES = [
               "tmxq76prv21cn5"
             ]
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -10810,7 +10862,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Alarak"
+    "codeKey": "Alarak",
+    "isNew": false
   },
   {
     "id": "anubarak",
@@ -10936,8 +10989,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1212114,Anubarak]",
         "videos": [],
@@ -10981,7 +11034,8 @@ const HEROES = [
             "primaryId": "tm2aikcka21rx6",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -11288,7 +11342,7 @@ const HEROES = [
       "fr": "",
       "en": ""
     },
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "artanis",
@@ -11414,8 +11468,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2121331,Artanis]",
         "videos": [],
@@ -11464,7 +11518,8 @@ const HEROES = [
               "tmu77uh7t21aei"
             ]
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -11785,7 +11840,7 @@ const HEROES = [
       "fr": "",
       "en": ""
     },
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "arthas",
@@ -11911,8 +11966,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1131233,Arthas]",
         "videos": [],
@@ -11961,7 +12016,8 @@ const HEROES = [
               "tmmuhvqmf18tu3"
             ]
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -12268,7 +12324,7 @@ const HEROES = [
       "fr": "",
       "en": ""
     },
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "azmodan",
@@ -12394,8 +12450,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2112112,Azmodan]",
         "videos": [],
@@ -12448,7 +12504,8 @@ const HEROES = [
               "tm5gyssra21kif"
             ]
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": true,
@@ -12462,8 +12519,8 @@ const HEROES = [
           "en": "Built around Basic Attacks."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3322132,Azmodan]",
         "videos": [],
@@ -12507,7 +12564,8 @@ const HEROES = [
             "primaryId": "tm5gyssra19hi8",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": true
       }
     ],
     "guideVideos": [],
@@ -12809,7 +12867,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Azmodan",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "blaze",
@@ -12935,8 +12993,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1321331,Blaze]",
         "videos": [],
@@ -12980,7 +13038,8 @@ const HEROES = [
             "primaryId": "tmv97jimq19w25",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": true,
@@ -12994,8 +13053,8 @@ const HEROES = [
           "en": "A tougher build, built around engaging and protecting allies."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2221331,Blaze]",
         "videos": [],
@@ -13039,7 +13098,8 @@ const HEROES = [
             "primaryId": "tmv97jimq19w25",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -13346,7 +13406,7 @@ const HEROES = [
       "fr": "",
       "en": ""
     },
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "cassia",
@@ -13472,8 +13532,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1331221,Cassia]",
         "videos": [],
@@ -13541,8 +13601,8 @@ const HEROES = [
           "en": "Built around Basic Attacks."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3331333,Cassia]",
         "videos": [],
@@ -13586,7 +13646,8 @@ const HEROES = [
             "primaryId": "tmtje8oul20ux4",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": true
       }
     ],
     "guideVideos": [],
@@ -13892,7 +13953,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": false
   },
   {
     "id": "chen",
@@ -14018,8 +14080,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Chen]",
         "videos": [],
@@ -14063,7 +14125,8 @@ const HEROES = [
             "primaryId": "tmdpbfh1o19kph",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -14378,7 +14441,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Chen"
+    "codeKey": "Chen",
+    "isNew": false
   },
   {
     "id": "chogall",
@@ -14504,8 +14568,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2331314,Chogall]",
         "videos": [],
@@ -14555,7 +14619,8 @@ const HEROES = [
               "tmgns5b2c20wan"
             ]
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -14862,7 +14927,7 @@ const HEROES = [
       "fr": "",
       "en": ""
     },
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "chromie",
@@ -14988,8 +15053,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Chromie]",
         "videos": [],
@@ -15033,7 +15098,8 @@ const HEROES = [
             "primaryId": "tm0pgywku186mc",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -15334,7 +15400,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Chromie"
+    "codeKey": "Chromie",
+    "isNew": false
   },
   {
     "id": "deathwing",
@@ -15530,8 +15597,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1232322,Deathwing]",
         "videos": [],
@@ -15582,7 +15649,8 @@ const HEROES = [
             "primaryId": "tm9hcq5er19b8l",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -15892,7 +15960,7 @@ const HEROES = [
       }
     ],
     "codeKey": "Deathwing",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "dehaka",
@@ -16031,8 +16099,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Dehaka]",
         "videos": [],
@@ -16076,7 +16144,8 @@ const HEROES = [
             "primaryId": "tmpz9nmdo18bxd",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -16377,7 +16446,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Dehaka"
+    "codeKey": "Dehaka",
+    "isNew": false
   },
   {
     "id": "diablo",
@@ -16503,8 +16573,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3212224,Diablo]",
         "videos": [],
@@ -16548,7 +16618,8 @@ const HEROES = [
             "primaryId": "tmdgc72j421r4c",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": true,
@@ -16562,8 +16633,8 @@ const HEROES = [
           "en": "Focused on Shadow Charge."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2121114,Diablo]",
         "videos": [],
@@ -16607,7 +16678,8 @@ const HEROES = [
             "primaryId": "tmdgc72j421r4c",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": true
       }
     ],
     "guideVideos": [],
@@ -16914,7 +16986,7 @@ const HEROES = [
       "fr": "",
       "en": ""
     },
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "dva",
@@ -17102,8 +17174,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,DVa]",
         "videos": [],
@@ -17147,7 +17219,8 @@ const HEROES = [
             "primaryId": "tmp39iuvv182pi",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -17463,7 +17536,8 @@ const HEROES = [
         }
       }
     ],
-    "codeKey": "DVa"
+    "codeKey": "DVa",
+    "isNew": false
   },
   {
     "id": "etc",
@@ -17589,8 +17663,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3221135,ETC]",
         "videos": [],
@@ -17634,7 +17708,8 @@ const HEROES = [
             "primaryId": "tm67ii8d122od3",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -17955,7 +18030,7 @@ const HEROES = [
       "fr": "",
       "en": ""
     },
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "falstad",
@@ -18094,8 +18169,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Falstad]",
         "videos": [],
@@ -18139,7 +18214,8 @@ const HEROES = [
             "primaryId": "tm4qbndwf18elr",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -18440,7 +18516,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Falstad"
+    "codeKey": "Falstad",
+    "isNew": false
   },
   {
     "id": "fenix",
@@ -18566,8 +18643,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Fenix]",
         "videos": [],
@@ -18611,7 +18688,8 @@ const HEROES = [
             "primaryId": "tmv92dwyy196qo",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -18926,7 +19004,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Fenix"
+    "codeKey": "Fenix",
+    "isNew": false
   },
   {
     "id": "gall",
@@ -19065,8 +19144,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Gall]",
         "videos": [],
@@ -19110,7 +19189,8 @@ const HEROES = [
             "primaryId": "tm6dnf23x18hzp",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -19411,7 +19491,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Gall"
+    "codeKey": "Gall",
+    "isNew": false
   },
   {
     "id": "garrosh",
@@ -19550,8 +19631,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1321133,Garrosh]",
         "videos": [],
@@ -19595,7 +19676,8 @@ const HEROES = [
             "primaryId": "tmkha7eo020lyc",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -19897,7 +19979,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Garrosh",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "gazlowe",
@@ -20036,8 +20118,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Gazlowe]",
         "videos": [],
@@ -20081,7 +20163,8 @@ const HEROES = [
             "primaryId": "tmozdoi9u18bvz",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -20382,7 +20465,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Gazlowe"
+    "codeKey": "Gazlowe",
+    "isNew": false
   },
   {
     "id": "genji",
@@ -20508,8 +20592,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Genji]",
         "videos": [],
@@ -20553,7 +20637,8 @@ const HEROES = [
             "primaryId": "tmqa6eo9z188s8",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -20854,7 +20939,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Genji"
+    "codeKey": "Genji",
+    "isNew": false
   },
   {
     "id": "greymane",
@@ -21010,8 +21096,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1312313,Greymane]",
         "videos": [],
@@ -21055,7 +21141,8 @@ const HEROES = [
             "primaryId": "tmko5bxaq20cir",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -21372,7 +21459,8 @@ const HEROES = [
       }
     ],
     "codeKey": "Greymane",
-    "bugs": []
+    "bugs": [],
+    "isNew": true
   },
   {
     "id": "guldan",
@@ -21498,8 +21586,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Guldan]",
         "videos": [],
@@ -21543,7 +21631,8 @@ const HEROES = [
             "primaryId": "tmnekplj9192jp",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -21844,7 +21933,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Guldan"
+    "codeKey": "Guldan",
+    "isNew": false
   },
   {
     "id": "hanzo",
@@ -21970,8 +22060,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Hanzo]",
         "videos": [],
@@ -22015,7 +22105,8 @@ const HEROES = [
             "primaryId": "tm4bf9uol189dy",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -22316,7 +22407,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Hanzo"
+    "codeKey": "Hanzo",
+    "isNew": false
   },
   {
     "id": "hogger",
@@ -22442,8 +22534,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Hogger]",
         "videos": [],
@@ -22487,7 +22579,8 @@ const HEROES = [
             "primaryId": "tmb5z86pc18tiq",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -22788,7 +22881,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Hogger"
+    "codeKey": "Hogger",
+    "isNew": false
   },
   {
     "id": "illidan",
@@ -22914,8 +23008,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Illidan]",
         "videos": [],
@@ -22959,7 +23053,8 @@ const HEROES = [
             "primaryId": "tmo2tufu01819c",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -23260,7 +23355,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Illidan"
+    "codeKey": "Illidan",
+    "isNew": false
   },
   {
     "id": "imperius",
@@ -23386,8 +23482,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2112114,Imperius]",
         "videos": [],
@@ -23437,7 +23533,8 @@ const HEROES = [
               "tmfp1zq8g22yka"
             ]
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -23753,7 +23850,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Imperius",
-    "isNew": true,
+    "isNew": false,
     "bugs": [],
     "bugsUpdatedAt": {
       "fr": "",
@@ -23897,8 +23994,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3121321,Jaina]",
         "videos": [],
@@ -23949,7 +24046,8 @@ const HEROES = [
               "tm0illd8e213mx"
             ]
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -24255,7 +24353,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": false
   },
   {
     "id": "johanna",
@@ -24381,8 +24480,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1322222,Johanna]",
         "videos": [],
@@ -24426,7 +24525,8 @@ const HEROES = [
             "primaryId": "tm4ay2y4m19b1k",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -24733,7 +24833,7 @@ const HEROES = [
       "fr": "",
       "en": ""
     },
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "junkrat",
@@ -24859,8 +24959,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2211231,Junkrat]",
         "videos": [],
@@ -24910,7 +25010,8 @@ const HEROES = [
               "tm0q03buz2177j"
             ]
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -25225,7 +25326,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Junkrat"
+    "codeKey": "Junkrat",
+    "isNew": false
   },
   {
     "id": "kelthuzad",
@@ -25364,8 +25466,8 @@ const HEROES = [
           "en": "Focused on Chains: combos over and over."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3322334,KelThuzad]",
         "videos": [],
@@ -25409,7 +25511,8 @@ const HEROES = [
             "primaryId": "tmkvpkqvt21vs2",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": true,
@@ -25423,8 +25526,8 @@ const HEROES = [
           "en": "Repeated Roots and damage on locked-down targets."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2321124,KelThuzad]",
         "videos": [],
@@ -25468,7 +25571,8 @@ const HEROES = [
             "primaryId": "tmkvpkqvt21vs2",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": true,
@@ -25482,8 +25586,8 @@ const HEROES = [
           "en": "Focused on Death and Decay, for poke and area control."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1311334,KelThuzad]",
         "videos": [],
@@ -25527,7 +25631,8 @@ const HEROES = [
             "primaryId": "tmkvpkqvt21vs2",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -25828,7 +25933,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "KelThuzad"
+    "codeKey": "KelThuzad",
+    "isNew": true
   },
   {
     "id": "kerrigan",
@@ -25954,8 +26060,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Kerrigan]",
         "videos": [],
@@ -25999,7 +26105,8 @@ const HEROES = [
             "primaryId": "tm3wj1pr818n0q",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -26300,7 +26407,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Kerrigan"
+    "codeKey": "Kerrigan",
+    "isNew": false
   },
   {
     "id": "leoric",
@@ -26426,8 +26534,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Leoric]",
         "videos": [],
@@ -26471,7 +26579,8 @@ const HEROES = [
             "primaryId": "tmeai9b6f18kdu",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -26772,7 +26881,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Leoric"
+    "codeKey": "Leoric",
+    "isNew": false
   },
   {
     "id": "liming",
@@ -26898,8 +27008,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2232122,LiMing]",
         "videos": [],
@@ -26949,7 +27059,8 @@ const HEROES = [
               "tmr7gscbm21a5l"
             ]
           }
-        ]
+        ],
+        "isNew": true
       }
     ],
     "guideVideos": [],
@@ -27425,8 +27536,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,LostVikings]",
         "videos": [],
@@ -27470,7 +27581,8 @@ const HEROES = [
             "primaryId": "tmdxk6lgh21dbr",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -27828,7 +27940,8 @@ const HEROES = [
         }
       }
     ],
-    "codeKey": "LostVikings"
+    "codeKey": "LostVikings",
+    "isNew": false
   },
   {
     "id": "lunara",
@@ -27967,8 +28080,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Lunara]",
         "videos": [],
@@ -28012,7 +28125,8 @@ const HEROES = [
             "primaryId": "tm53a7ftx20c10",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -28355,7 +28469,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Lunara"
+    "codeKey": "Lunara",
+    "isNew": false
   },
   {
     "id": "maiev",
@@ -28481,8 +28596,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Maiev]",
         "videos": [],
@@ -28526,7 +28641,8 @@ const HEROES = [
             "primaryId": "tm3j6xrib18wk9",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -28813,7 +28929,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Maiev"
+    "codeKey": "Maiev",
+    "isNew": false
   },
   {
     "id": "malganis",
@@ -28939,8 +29056,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1121131,MalGanis]",
         "videos": [],
@@ -28984,7 +29101,8 @@ const HEROES = [
             "primaryId": "tmfz40dna18n91",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -29291,7 +29409,7 @@ const HEROES = [
       "fr": "",
       "en": ""
     },
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "malthael",
@@ -29417,8 +29535,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1222324,Malthael]",
         "videos": [],
@@ -29462,7 +29580,8 @@ const HEROES = [
             "primaryId": "tm43qtplb222is",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -29777,7 +29896,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Malthael"
+    "codeKey": "Malthael",
+    "isNew": true
   },
   {
     "id": "medivh",
@@ -29903,8 +30023,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Medivh]",
         "videos": [],
@@ -29948,7 +30068,8 @@ const HEROES = [
             "primaryId": "tmxb709kx18oub",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -30263,7 +30384,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Medivh"
+    "codeKey": "Medivh",
+    "isNew": false
   },
   {
     "id": "mei",
@@ -30389,8 +30511,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2221321,Mei]",
         "videos": [],
@@ -30434,7 +30556,8 @@ const HEROES = [
             "primaryId": "tm9stkg6b18t7j",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -30741,7 +30864,7 @@ const HEROES = [
       "fr": "",
       "en": ""
     },
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "mephisto",
@@ -30867,8 +30990,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Mephisto]",
         "videos": [],
@@ -30912,7 +31035,8 @@ const HEROES = [
             "primaryId": "tmlbthulu18m34",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -31213,7 +31337,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Mephisto"
+    "codeKey": "Mephisto",
+    "isNew": false
   },
   {
     "id": "muradin",
@@ -31339,8 +31464,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2331223,Muradin]",
         "videos": [],
@@ -31384,7 +31509,8 @@ const HEROES = [
             "primaryId": "tmx3fbf1k20nfn",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -31691,7 +31817,7 @@ const HEROES = [
       "fr": "",
       "en": ""
     },
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "murky",
@@ -31817,8 +31943,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Murky]",
         "videos": [],
@@ -31862,7 +31988,8 @@ const HEROES = [
             "primaryId": "tmx5ehs81182b0",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -32163,7 +32290,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Murky"
+    "codeKey": "Murky",
+    "isNew": false
   },
   {
     "id": "nazeebo",
@@ -32289,8 +32417,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111213,Nazeebo]",
         "videos": [],
@@ -32340,7 +32468,8 @@ const HEROES = [
               "tmh3n8naz19on4"
             ]
           }
-        ]
+        ],
+        "isNew": true
       },
       {
         "enabled": true,
@@ -32358,8 +32487,8 @@ const HEROES = [
           "en": "LOTS OF FROGS"
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE IN TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2231233,Nazeebo]",
         "videos": [],
@@ -32405,7 +32534,8 @@ const HEROES = [
               "tmh3n8naz18d5n"
             ]
           }
-        ]
+        ],
+        "isNew": true
       }
     ],
     "guideVideos": [],
@@ -32833,8 +32963,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Nova]",
         "videos": [],
@@ -32878,7 +33008,8 @@ const HEROES = [
             "primaryId": "tmp56mauf184xd",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -33179,7 +33310,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Nova"
+    "codeKey": "Nova",
+    "isNew": false
   },
   {
     "id": "orphea",
@@ -33305,8 +33437,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Orphea]",
         "videos": [],
@@ -33350,7 +33482,8 @@ const HEROES = [
             "primaryId": "tm6mv4g9v18h95",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -33651,7 +33784,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Orphea"
+    "codeKey": "Orphea",
+    "isNew": false
   },
   {
     "id": "probius",
@@ -33790,8 +33924,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Probius]",
         "videos": [],
@@ -33835,7 +33969,8 @@ const HEROES = [
             "primaryId": "tmtq3f5gq187dg",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -34136,7 +34271,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Probius"
+    "codeKey": "Probius",
+    "isNew": false
   },
   {
     "id": "qhira",
@@ -34262,8 +34398,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Qhira]",
         "videos": [],
@@ -34307,7 +34443,8 @@ const HEROES = [
             "primaryId": "tm7ldovsn1849s",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -34608,7 +34745,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Qhira"
+    "codeKey": "Qhira",
+    "isNew": false
   },
   {
     "id": "ragnaros",
@@ -34779,8 +34917,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3231233,Ragnaros]",
         "videos": [],
@@ -34824,7 +34962,8 @@ const HEROES = [
             "primaryId": "tm2l3mj2c20h65",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": true
       },
       {
         "enabled": true,
@@ -34838,8 +34977,8 @@ const HEROES = [
           "en": "Focused on Living Meteor."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2121223,Ragnaros]",
         "videos": [],
@@ -34883,7 +35022,8 @@ const HEROES = [
             "primaryId": "tm2l3mj2c20h65",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": true
       },
       {
         "enabled": true,
@@ -34897,8 +35037,8 @@ const HEROES = [
           "en": "Focused on Empower Sulfuras and Basic Attacks."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1311113,Ragnaros]",
         "videos": [],
@@ -34942,7 +35082,8 @@ const HEROES = [
             "primaryId": "tm2l3mj2c20h65",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": true
       }
     ],
     "guideVideos": [],
@@ -35264,7 +35405,7 @@ const HEROES = [
       "fr": "",
       "en": ""
     },
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "raynor",
@@ -35390,8 +35531,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3131215,Raynor]",
         "videos": [],
@@ -35446,7 +35587,8 @@ const HEROES = [
               "tmgyjetir200ig"
             ]
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -35766,7 +35908,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": false
   },
   {
     "id": "rexxar",
@@ -35892,8 +36035,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Rexxar]",
         "videos": [],
@@ -35937,7 +36080,8 @@ const HEROES = [
             "primaryId": "tmzo33kmh194pf",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -36252,7 +36396,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Rexxar"
+    "codeKey": "Rexxar",
+    "isNew": false
   },
   {
     "id": "samuro",
@@ -36378,8 +36523,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Samuro]",
         "videos": [],
@@ -36423,7 +36568,8 @@ const HEROES = [
             "primaryId": "tmjveafxq18w5e",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -36724,7 +36870,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Samuro"
+    "codeKey": "Samuro",
+    "isNew": false
   },
   {
     "id": "sgthammer",
@@ -36863,8 +37010,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T3221334,SgtHammer]",
         "videos": [],
@@ -36915,7 +37062,8 @@ const HEROES = [
             "primaryId": "tmw9c4hmr216ho",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": true
       }
     ],
     "guideVideos": [],
@@ -37343,8 +37491,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1112334,Sonya]",
         "videos": [],
@@ -37392,7 +37540,8 @@ const HEROES = [
             "primaryId": "tmrct8f3521vxp",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -37698,7 +37847,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": false
   },
   {
     "id": "stitches",
@@ -37837,8 +37987,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1112112,Stitches]",
         "videos": [],
@@ -37886,7 +38036,8 @@ const HEROES = [
               "tmhvf372020zva"
             ]
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -38193,7 +38344,7 @@ const HEROES = [
       "fr": "",
       "en": ""
     },
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "sylvanas",
@@ -38319,8 +38470,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Sylvanas]",
         "videos": [],
@@ -38364,7 +38515,8 @@ const HEROES = [
             "primaryId": "tmw5gdvgs18h8s",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -38665,7 +38817,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Sylvanas"
+    "codeKey": "Sylvanas",
+    "isNew": false
   },
   {
     "id": "tassadar",
@@ -38791,8 +38944,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1211211,Tassadar]",
         "videos": [],
@@ -38836,7 +38989,8 @@ const HEROES = [
             "primaryId": "tmhqvfczx18mrv",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       },
       {
         "enabled": true,
@@ -38850,8 +39004,8 @@ const HEROES = [
           "en": "Focused on Psionic Storm: sustained area damage."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2221221,Tassadar]",
         "videos": [],
@@ -38895,7 +39049,8 @@ const HEROES = [
             "primaryId": "tmhqvfczx18mrv",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -39196,7 +39351,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Tassadar"
+    "codeKey": "Tassadar",
+    "isNew": true
   },
   {
     "id": "thebutcher",
@@ -39322,8 +39478,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,TheButcher]",
         "videos": [],
@@ -39367,7 +39523,8 @@ const HEROES = [
             "primaryId": "tmfm4t2ae18vqd",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -39668,7 +39825,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "TheButcher"
+    "codeKey": "TheButcher",
+    "isNew": false
   },
   {
     "id": "thrall",
@@ -39794,8 +39952,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Thrall]",
         "videos": [],
@@ -39839,7 +39997,8 @@ const HEROES = [
             "primaryId": "tmw21n1bn18cka",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -40154,7 +40313,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Thrall"
+    "codeKey": "Thrall",
+    "isNew": false
   },
   {
     "id": "tracer",
@@ -40267,8 +40427,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2232212,Tracer]",
         "videos": [],
@@ -40312,7 +40472,8 @@ const HEROES = [
             "primaryId": "tmh8oh5hr20863",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -40632,7 +40793,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "",
       "en": ""
-    }
+    },
+    "isNew": true
   },
   {
     "id": "tychus",
@@ -40806,8 +40968,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1211331,Tychus]",
         "videos": [],
@@ -40859,7 +41021,7 @@ const HEROES = [
             "alternativeIds": []
           }
         ],
-        "isNew": false
+        "isNew": true
       }
     ],
     "guideVideos": [],
@@ -41302,8 +41464,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2221311,Tyrael]",
         "videos": [],
@@ -41347,7 +41509,8 @@ const HEROES = [
             "primaryId": "tm9rrdqrv18f7a",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -41663,7 +41826,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Tyrael",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "valeera",
@@ -41837,8 +42000,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Valeera]",
         "videos": [],
@@ -41882,7 +42045,8 @@ const HEROES = [
             "primaryId": "tmz35spgj20im6",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -42226,7 +42390,8 @@ const HEROES = [
         }
       }
     ],
-    "codeKey": "Valeera"
+    "codeKey": "Valeera",
+    "isNew": false
   },
   {
     "id": "valla",
@@ -42352,8 +42517,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Valla]",
         "videos": [],
@@ -42397,7 +42562,8 @@ const HEROES = [
             "primaryId": "tm1n5fg7d185mu",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -42698,7 +42864,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Valla"
+    "codeKey": "Valla",
+    "isNew": false
   },
   {
     "id": "varian",
@@ -42837,8 +43004,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Varian]",
         "videos": [],
@@ -42882,7 +43049,8 @@ const HEROES = [
             "primaryId": "tm7wdaidi18957",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -43197,7 +43365,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Varian"
+    "codeKey": "Varian",
+    "isNew": false
   },
   {
     "id": "xul",
@@ -43336,8 +43505,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Xul]",
         "videos": [],
@@ -43381,7 +43550,8 @@ const HEROES = [
             "primaryId": "tmxwxxlzy18awv",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -43695,7 +43865,8 @@ const HEROES = [
     "bugsUpdatedAt": {
       "fr": "20 Août 2026",
       "en": "August 20, 2026"
-    }
+    },
+    "isNew": false
   },
   {
     "id": "yrel",
@@ -43821,8 +43992,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Yrel]",
         "videos": [],
@@ -43866,7 +44037,8 @@ const HEROES = [
             "primaryId": "tm1z1xjms187m7",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -44167,7 +44339,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Yrel"
+    "codeKey": "Yrel",
+    "isNew": false
   },
   {
     "id": "zagara",
@@ -44293,8 +44466,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode.\n"
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T2131114,Zagara]",
         "videos": [],
@@ -44338,7 +44511,8 @@ const HEROES = [
             "primaryId": "tmy5r2zag21tsv",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -44766,8 +44940,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Zarya]",
         "videos": [],
@@ -44811,7 +44985,8 @@ const HEROES = [
             "primaryId": "tmrsrymnm21bb2",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -45154,7 +45329,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Zarya"
+    "codeKey": "Zarya",
+    "isNew": false
   },
   {
     "id": "zeratul",
@@ -45293,8 +45469,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Zeratul]",
         "videos": [],
@@ -45338,7 +45514,8 @@ const HEROES = [
             "primaryId": "tmya4zmzu18752",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -45639,7 +45816,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Zeratul"
+    "codeKey": "Zeratul",
+    "isNew": false
   },
   {
     "id": "zuljin",
@@ -45765,8 +45943,8 @@ const HEROES = [
           "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
-          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
-          "en": "PASTE INTO TALENT TREE"
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
         },
         "buildCode": "[T1111111,Zuljin]",
         "videos": [],
@@ -45810,7 +45988,8 @@ const HEROES = [
             "primaryId": "tm67a7du418mub",
             "alternativeIds": []
           }
-        ]
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -46111,7 +46290,8 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Zuljin"
+    "codeKey": "Zuljin",
+    "isNew": false
   }
 ];
 
