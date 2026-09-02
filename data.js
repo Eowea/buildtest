@@ -3345,8 +3345,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alexstrasza/images/talents/storm_ui_icon_alexstrasza_pacify.png",
         "description": {
-          "fr": "Nouvelle capacité active : ralentit un héros adverse et réduit ses dégâts. Soigner un allié étourdi, réduit au silence ou immobilisé en raccourcit le temps de recharge.",
-          "en": "New active Ability: Slows an enemy Hero and lowers their damage. Healing an ally who is Stunned, Silenced or Rooted brings the next cast closer."
+          "fr": "Nouvelle capacité active : ralentit un héros adverse et réduit ses dégâts. Soigner un allié étourdi, réduit au silence ou immobilisé en accélère le retour.",
+          "en": "New active Ability: Slows an enemy Hero and lowers their damage. Healing an ally who is Stunned, Silenced or Rooted speeds up its return."
         },
         "demoYoutubeId": null
       },
@@ -6765,8 +6765,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malfurion/images/spells/storm_ui_icon_malfurion_moonfire.png",
         "description": {
-          "fr": "Toucher un héros avec Éclat lunaire en raccourcit le temps de recharge et renforce le suivant, effet cumulable.",
-          "en": "Hitting a Hero with Moonfire brings its next cast closer and empowers the following one, stacking."
+          "fr": "Toucher un héros avec Éclat lunaire le rend disponible plus tôt et renforce le suivant, effet cumulable.",
+          "en": "Hitting a Hero with Moonfire makes it available sooner and empowers the next one, stacking."
         },
         "demoYoutubeId": null
       }
@@ -7531,6 +7531,124 @@ const HEROES = [
           {
             "level": 1,
             "primaryId": "tmrryr6joux1d1",
+            "alternativeIds": []
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "order": 3,
+        "label": {
+          "fr": "Build Z",
+          "en": "W build"
+        },
+        "summary": {
+          "fr": "",
+          "en": ""
+        },
+        "buildCodeTitle": {
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
+        },
+        "buildCode": "[T1312223,Tyrande]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmrryr6joux1d1",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmrryr6joa0l8n",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tc901a3oc12m9l",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmrryr6jo11r25",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tc901a3oc16rlt",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tc901a3oc17g4a",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tc901a3oc20nav",
+            "alternativeIds": []
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "order": 4,
+        "label": {
+          "fr": "Build autoattaque",
+          "en": "Auto-attack build"
+        },
+        "summary": {
+          "fr": "",
+          "en": ""
+        },
+        "buildCodeTitle": {
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
+        },
+        "buildCode": "[T3332332,Tyrande]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tc901a3oc09k6e",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmrryr6joa0l8n",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmrryr6jo0ea2i",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmrryr6jo11r25",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmrryr6jokobuh",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tc901a3oc18bfm",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmrryr6joj6pwf",
             "alternativeIds": []
           }
         ]
@@ -8640,6 +8758,65 @@ const HEROES = [
           {
             "level": 1,
             "primaryId": "tmrryr6jo7l6vs",
+            "alternativeIds": []
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "order": 3,
+        "label": {
+          "fr": "Build E",
+          "en": "E build"
+        },
+        "summary": {
+          "fr": "",
+          "en": ""
+        },
+        "buildCodeTitle": {
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
+        },
+        "buildCode": "[T2231231,Whitemane]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tcom8pm1h098rw",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmrryr6jo3sgqb",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmrryr6josvjkq",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmrryr6jojnohm",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tcom8pm1h160ys",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tcom8pm1h19utx",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmrryr6jo7szcd",
             "alternativeIds": []
           }
         ]
@@ -11103,8 +11280,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/artanis/images/spells/storm_ui_icon_artanis_shieldoverload.png",
         "description": {
-          "fr": "Sous un certain seuil de points de vie, subir des dégâts confère un bouclier à Artanis. Ses attaques de base en raccourcissent le temps de recharge.",
-          "en": "Below a Health threshold, taking damage grants Artanis a Shield. His Basic Attacks bring the next trigger closer."
+          "fr": "Sous un certain seuil de points de vie, subir des dégâts confère un bouclier à Artanis. Ses attaques de base en accélèrent le retour.",
+          "en": "Below a Health threshold, taking damage grants Artanis a Shield. His Basic Attacks speed up its return."
         },
         "demoYoutubeId": ""
       },
@@ -12236,6 +12413,65 @@ const HEROES = [
             ]
           }
         ]
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build autoattaque",
+          "en": "Auto-attack build"
+        },
+        "summary": {
+          "fr": "",
+          "en": ""
+        },
+        "buildCodeTitle": {
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
+        },
+        "buildCode": "[T3322132,Azmodan]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tm5gyssra03uf4",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tm5gyssra06p8z",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tm5gyssra085qf",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tm5gyssra11nsg",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tm5gyssra12pct",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tm5gyssra17iku",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tm5gyssra19hi8",
+            "alternativeIds": []
+          }
+        ]
       }
     ],
     "guideVideos": [],
@@ -12473,8 +12709,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/azmodan/images/talents/storm_ui_icon_azmodan_trample.png",
         "description": {
-          "fr": "Charge en avant sur une courte distance en blessant et en ralentissant les ennemis traversés. Toucher un héros raccourcit le temps de recharge de la capacité héroïque d'Asmodan.",
-          "en": "Charges forward a short distance, damaging and Slowing the enemies passed through. Hitting a Hero brings Azmodan's Heroic Ability closer."
+          "fr": "Charge en avant sur une courte distance en blessant et en ralentissant les ennemis traversés. Toucher un héros rend la capacité héroïque d'Asmodan disponible plus tôt.",
+          "en": "Charges forward a short distance, damaging and Slowing the enemies passed through. Hitting a Hero makes Azmodan's Heroic Ability available sooner."
         },
         "demoYoutubeId": null
       },
@@ -13192,8 +13428,8 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build recommandé",
-          "en": "Recommended build"
+          "fr": "Build A",
+          "en": "Q build"
         },
         "summary": {
           "fr": "Build qui passe partout, peu importe le mode de jeu.",
@@ -13206,8 +13442,8 @@ const HEROES = [
         "buildCode": "[T1331221,Cassia]",
         "videos": [],
         "updatedAt": {
-          "fr": "21 Août 2026",
-          "en": "August 21, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
@@ -13256,6 +13492,65 @@ const HEROES = [
           }
         ],
         "isNew": true
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build autoattaque",
+          "en": "Auto-attack build"
+        },
+        "summary": {
+          "fr": "",
+          "en": ""
+        },
+        "buildCodeTitle": {
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
+        },
+        "buildCode": "[T3331333,Cassia]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmtje8oul03f2h",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmtje8oul06w9d",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmtje8oul097j5",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmtje8oul109yw",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmtje8oul144ih",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmtje8oul17em3",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmtje8oul20ux4",
+            "alternativeIds": []
+          }
+        ]
       }
     ],
     "guideVideos": [],
@@ -13339,8 +13634,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cassia/images/talents/storm_ui_icon_cassia_innerlight.png",
         "description": {
-          "fr": "Capacité active : rend des points de vie sur la durée. Toucher un héros avec Javelot foudroyant en raccourcit le temps de recharge.",
-          "en": "Active Ability: restores Health over time. Hitting a Hero with Lightning Fury brings the next cast closer."
+          "fr": "Capacité active : rend des points de vie sur la durée. Toucher un héros avec Javelot foudroyant en accélère le retour.",
+          "en": "Active Ability: restores Health over time. Hitting a Hero with Lightning Fury speeds up its return."
         },
         "demoYoutubeId": null
       },
@@ -14336,8 +14631,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cho/images/spells/storm_ui_icon_cho_consumingflame.png",
         "description": {
-          "fr": "Attaquer un héros enflammé raccourcit le temps de recharge de Flambée dévorante. Effet passif : elle se recharge déjà plus vite.",
-          "en": "Attacking an ignited Hero brings Consuming Blaze closer. Passive: it already returns sooner."
+          "fr": "Attaquer un héros enflammé rend Flambée dévorante disponible plus tôt. Effet passif : elle se recharge déjà plus vite.",
+          "en": "Attacking an ignited Hero makes Consuming Blaze available sooner. Passive: it already recharges faster."
         },
         "demoYoutubeId": null
       },
@@ -15531,8 +15826,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_destroyer.png",
         "description": {
-          "fr": "Atterrir en Destructeur augmente les dégâts d'Aile de Mort et raccourcit ses capacités de base ; blesser des héros relance l'effet.",
-          "en": "Landing as the Destroyer boosts Deathwing's damage and shortens his Basic Abilities; damaging Heroes refreshes it."
+          "fr": "Atterrir en Destructeur augmente les dégâts d'Aile de Mort et réduit le temps de recharge de ses capacités de base ; blesser des héros relance l'effet.",
+          "en": "Landing as the Destroyer boosts Deathwing's damage and reduces his Basic Abilities' cooldowns; damaging Heroes refreshes it."
         },
         "demoYoutubeId": null
       }
@@ -16469,8 +16764,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/diablo/images/spells/storm_ui_icon_diablo_apocalypse.png",
         "description": {
-          "fr": "Chaque héros adverse touché par Apocalypse en raccourcit le temps de recharge, et Apocalypse se déclenche d'elle-même à la mort de Diablo.",
-          "en": "Each enemy Hero hit by Apocalypse brings its next cast closer, and Apocalypse fires on its own when Diablo dies."
+          "fr": "Chaque héros adverse touché par Apocalypse en accélère le retour, et Apocalypse se déclenche d'elle-même à la mort de Diablo.",
+          "en": "Each enemy Hero hit by Apocalypse speeds up its return, and Apocalypse fires on its own when Diablo dies."
         },
         "demoYoutubeId": null
       },
@@ -23073,8 +23368,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/imperius/images/spells/storm_ui_icon_imperius_q.png",
         "description": {
-          "fr": "Charge céleste inflige bien plus de dégâts aux héros, l'effet diminuant à chaque cible supplémentaire touchée. Chaque marque présente à la fin de l'étourdissement en raccourcit le temps de recharge, déjà abaissée passivement avec son coût en mana.",
-          "en": "Celestial Charge deals far more damage to Heroes, less with each extra target hit. Each mark present when the Stun ends brings the next cast closer, already lowered passively along with its Mana cost."
+          "fr": "Charge céleste inflige bien plus de dégâts aux héros, l'effet diminuant à chaque cible supplémentaire touchée. Chaque marque présente à la fin de l'étourdissement en accélère le retour, que le talent abaisse déjà passivement, tout comme son coût en mana.",
+          "en": "Celestial Charge deals far more damage to Heroes, less with each extra target hit. Each mark present when the Stun ends speeds up its return, which the talent already lowers passively, along with its Mana cost."
         },
         "demoYoutubeId": null
       },
@@ -28844,7 +29139,7 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/malganis/images/talents/storm_ui_icon_malganis_blindbat.png",
         "description": {
-          "fr": "Griffes gangrenées n'a plus ni temps de recharge ni coût en mana, mais Mal'Ganis perd toute vision. Toucher un héros avec le dernier coup raccourcit la durée d'attente avant de relancer la rage, qui suspend la progression de ses quêtes.",
+          "fr": "Griffes gangrenées n'a plus ni temps de recharge ni coût en mana, mais Mal'Ganis perd toute vision. Toucher un héros avec le dernier coup réduit l'attente avant de relancer la rage, qui suspend la progression de ses quêtes.",
           "en": "Fel Claws loses both its cooldown and its Mana cost, but Mal'Ganis loses all vision. Landing the final swing on a Hero shortens the wait before raging again, and no Quest progress is gained while it lasts."
         },
         "demoYoutubeId": null
@@ -34397,23 +34692,23 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "",
+          "en": ""
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T2232223,Ragnaros]",
+        "buildCode": "[T3231233,Ragnaros]",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm2l3mj2c021rh",
+            "primaryId": "tm2l3mj2c03ee4",
             "alternativeIds": []
           },
           {
@@ -34428,7 +34723,66 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tm2l3mj2c111qd",
+            "primaryId": "tm2l3mj2c10x6f",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tm2l3mj2c13x0y",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tm2l3mj2c17kk5",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tm2l3mj2c20h65",
+            "alternativeIds": []
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build Z",
+          "en": "W build"
+        },
+        "summary": {
+          "fr": "",
+          "en": ""
+        },
+        "buildCodeTitle": {
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
+        },
+        "buildCode": "[T2121223,Ragnaros]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tm2l3mj2c021rh",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tm2l3mj2c04fq4",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tm2l3mj2c08t1k",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tm2l3mj2c10x6f",
             "alternativeIds": []
           },
           {
@@ -34439,6 +34793,65 @@ const HEROES = [
           {
             "level": 16,
             "primaryId": "tm2l3mj2c163oz",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tm2l3mj2c20h65",
+            "alternativeIds": []
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "order": 3,
+        "label": {
+          "fr": "Build A",
+          "en": "Q build"
+        },
+        "summary": {
+          "fr": "",
+          "en": ""
+        },
+        "buildCodeTitle": {
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
+        },
+        "buildCode": "[T1311113,Ragnaros]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tm2l3mj2c01uz6",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tm2l3mj2c06n2g",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tm2l3mj2c0720t",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tm2l3mj2c10x6f",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tm2l3mj2c12nlu",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tm2l3mj2c15wgx",
             "alternativeIds": []
           },
           {
@@ -41154,8 +41567,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/tyrael/images/spells/storm_ui_icon_tyrael_archangelswrath.png",
         "description": {
-          "fr": "Après un temps de préparation, confère les effets de Courroux de l'archange sans mourir, et chaque héros adverse pris dans l'explosion en raccourcit le temps de recharge.",
-          "en": "After a wind-up, grants Archangel's Wrath's effects without dying, and each enemy Hero caught in the blast brings the next cast closer."
+          "fr": "Après un temps de préparation, confère les effets de Courroux de l'archange sans mourir, et chaque héros adverse pris dans l'explosion la rend disponible plus tôt.",
+          "en": "After a wind-up, grants Archangel's Wrath's effects without dying, and each enemy Hero caught in the blast makes it available sooner."
         },
         "demoYoutubeId": null
       }
