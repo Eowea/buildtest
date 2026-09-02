@@ -53,6 +53,13 @@ const STREAMER_CONFIG = {
   "latestVideos": [
     {
       "title": {
+        "fr": "GUIDE COMPLET: Mine Hantée",
+        "en": "COMPLETE GUIDE: Haunted Mine"
+      },
+      "youtubeId": "https://youtu.be/6LcTtaws0yk"
+    },
+    {
+      "title": {
         "fr": "Slapathur Master Gameplay - Aucun commentaire",
         "en": "Slapathur Master Gameplay - No commentary"
       },
@@ -71,13 +78,6 @@ const STREAMER_CONFIG = {
         "en": "Dehaka Grandmaster Gameplay - Analysis & Explanations"
       },
       "youtubeId": "Nfp1w2JU-DQ"
-    },
-    {
-      "title": {
-        "fr": "Zagara Grand Master Gameplay - Analyse & Explications",
-        "en": "Zagara Grandmaster Gameplay - Analysis & Explanations"
-      },
-      "youtubeId": "https://youtu.be/iPxEnYt_2Y0"
     }
   ],
   "patchVideos": [
