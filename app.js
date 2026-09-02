@@ -538,7 +538,10 @@ function renderBuildCode(b) {
 // Construit le carrousel de vignettes YouTube (utilisé par le guide d'un héros, et par les
 // sections "Dernière vidéo" / "Analyse Patchs" de la page d'accueil). `videos` est une liste
 // d'objets {title:{fr,en}, youtubeId}.
-function buildYoutubeCarouselMarkup(videos) {
+// `contexte` sert uniquement à la mesure d'audience : il dit d'où part le clic
+// (« guide/valla », « derniere », « patch »). Sans lui, les trois carrousels
+// tomberaient dans le même compteur.
+function buildYoutubeCarouselMarkup(videos, contexte) {
   const slides = (videos||[])
     .map(v => ({ v, id: parseYouTubeId(v?.youtubeId||v?.youtubeUrl||v?.url||'') }))
     .filter(x => x.id);
@@ -554,7 +557,7 @@ function buildYoutubeCarouselMarkup(videos) {
   const slidesHtml = slides.map((x, idx) => `
     <div class="combo-slide${idx===0?' is-active':''}" data-index="${idx}">
       <div class="combo-slide-title">${esc(loc(x.v.title) || 'Guide')}</div>
-      <a class="combo-stage guide-stage-link" data-yt-id="${x.id}" href="https://www.youtube.com/watch?v=${x.id}"${linkAttrs}>
+      <a class="combo-stage guide-stage-link" data-yt-id="${x.id}" data-video-track="${esc(videoSlug(x.v, x.id, contexte))}" data-video-title="${esc(videoTitreStable(x.v, x.id))}" href="https://www.youtube.com/watch?v=${x.id}"${linkAttrs}>
         <img class="combo-poster" src="${ytThumb(x.id)}" alt="${esc(loc(x.v.title))}" loading="lazy" />
         ${APP_CONFIG.showGuideBadge ? '<span class="youtube-badge">guide</span>' : ''}
         <span class="youtube-play"></span>
@@ -570,7 +573,7 @@ function buildYoutubeCarouselMarkup(videos) {
   return `<div class="combo-carousel">${slidesHtml}${navHtml}</div>`;
 }
 function renderGuide(h) {
-  const markup = buildYoutubeCarouselMarkup(getGuideVideos(h));
+  const markup = buildYoutubeCarouselMarkup(getGuideVideos(h), 'guide/' + (h && h.id ? h.id : 'inconnu'));
   if (!markup) return '';
   return `<section class="video-group guide-video-section">${markup}</section>`;
 }
@@ -646,8 +649,8 @@ const tabsHtml = sortedBuildIndices.map(i => {
 }
 
 function renderHomeVideoSections() {
-  const latestMarkup = buildYoutubeCarouselMarkup(STREAMER_CONFIG.latestVideos || []);
-  const patchMarkup = buildYoutubeCarouselMarkup(STREAMER_CONFIG.patchVideos || []);
+  const latestMarkup = buildYoutubeCarouselMarkup(STREAMER_CONFIG.latestVideos || [], 'derniere');
+  const patchMarkup = buildYoutubeCarouselMarkup(STREAMER_CONFIG.patchVideos || [], 'patch');
 
   const col = (titleKey, markup) => `
     <div class="video-group">
@@ -718,6 +721,31 @@ function initNavTracking() {
     const a = e.target.closest && e.target.closest('#headerNav a');
     if (!a) return;
     track('lien/' + (a.dataset.navId || 'lien'), a.textContent.trim());
+  });
+}
+
+// Même principe pour une vidéo : on part du titre français, pour qu'une lecture
+// en anglais compte au même endroit qu'une lecture en français. Sans titre, on
+// se rabat sur l'identifiant YouTube, qui ne bouge jamais.
+function videoSlug(video, id, contexte) {
+  const brut = (video && video.title && video.title.fr) || (video && video.title && video.title.en) || '';
+  const nom = normalize(brut).replace(/ /g, '-') || id;
+  return contexte ? contexte + '/' + nom : nom;
+}
+function videoTitreStable(video, id) {
+  return (video && video.title && video.title.fr) || (video && video.title && video.title.en) || id;
+}
+
+// Clics sur les vignettes vidéo : guide d'un héros, dernières vidéos et analyses
+// de patch. L'écoute est déléguée au document car les carrousels sont réécrits à
+// chaque rendu, et elle survit au preventDefault posé sur mobile pour ouvrir
+// l'application YouTube : cet appel-là n'arrête pas la propagation.
+function initVideoTracking() {
+  document.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('.guide-stage-link');
+    if (!a) return;
+    const chemin = a.dataset.videoTrack || a.dataset.ytId || 'inconnue';
+    track('video/' + chemin, a.dataset.videoTitle || chemin);
   });
 }
 
@@ -1441,6 +1469,7 @@ els.homeBtn.addEventListener('click', (e) => {
 
 initAnalytics();
 initNavTracking();
+initVideoTracking();
 restoreFromHash(); renderAll();
 
     // --- NOUVEAU : Auto-scroll au chargement si on arrive via un lien de partage ---
