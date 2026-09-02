@@ -24961,16 +24961,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Chaînes de Kel'Thuzad (E) se relance sur une seconde cible : c'est un combo, pas un sort simple.",
-        "en": "Chains of Kel'Thuzad (E) is sent on to a second target: it's a combo, not a single spell."
+        "fr": "Ton combo, c'est Chaînes (E), Nova de givre (Z) entre les cibles, puis Chaînes à nouveau : pris séparément, tes sorts ne font presque rien.",
+        "en": "Your combo is Chains (E), Frost Nova (W) between the targets, then Chains again: taken separately, your spells do almost nothing."
       },
       {
-        "fr": "Immobilise avec le centre de Nova de givre (Z) pour enchaîner Chaînes de Kel'Thuzad (E).",
-        "en": "Root with the centre of Frost Nova (W) to chain into Chains of Kel'Thuzad (E)."
+        "fr": "Remplis ta quête de chancre le plus tôt possible : tout ton pic de dégâts en dépend.",
+        "en": "Finish your Blight quest as early as you can: your whole damage spike depends on it."
       },
       {
-        "fr": "Fissure d'ombre (R) frappe n'importe où sur la carte : achève de loin.",
-        "en": "Shadow Fissure (R) strikes anywhere on the map: finish people off from across it."
+        "fr": "Tu n'as aucune échappatoire : un héros mobile te tue avant que tes sorts ne touchent, reste derrière ton équipe.",
+        "en": "You have no escape: a mobile Hero kills you before your spells even land, so stay behind your team."
       }
     ],
     "builds": [
@@ -24978,37 +24978,96 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build recommandé",
-          "en": "Recommended build"
+          "fr": "Build chaînes",
+          "en": "Chains build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "",
+          "en": ""
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,KelThuzad]",
+        "buildCode": "[T3322334,KelThuzad]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmkvpkqvt01dj2",
+            "primaryId": "tmkvpkqvt03624",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmkvpkqvt04196",
+            "primaryId": "tmkvpkqvt06b1y",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmkvpkqvt07gax",
+            "primaryId": "tmkvpkqvt087i1",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmkvpkqvt111rs",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmkvpkqvt14zc6",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmkvpkqvt17w0u",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmkvpkqvt21vs2",
+            "alternativeIds": []
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build root",
+          "en": "Root build"
+        },
+        "summary": {
+          "fr": "",
+          "en": ""
+        },
+        "buildCodeTitle": {
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
+        },
+        "buildCode": "[T2321124,KelThuzad]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmkvpkqvt02qct",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmkvpkqvt06b1y",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmkvpkqvt087i1",
             "alternativeIds": []
           },
           {
@@ -25023,12 +25082,71 @@ const HEROES = [
           },
           {
             "level": 16,
-            "primaryId": "tmkvpkqvt15t05",
+            "primaryId": "tmkvpkqvt1668z",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmkvpkqvt18esk",
+            "primaryId": "tmkvpkqvt21vs2",
+            "alternativeIds": []
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "order": 3,
+        "label": {
+          "fr": "Build A",
+          "en": "Q build"
+        },
+        "summary": {
+          "fr": "",
+          "en": ""
+        },
+        "buildCodeTitle": {
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
+        },
+        "buildCode": "[T1311334,KelThuzad]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmkvpkqvt01dj2",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmkvpkqvt06b1y",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmkvpkqvt07gax",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmkvpkqvt1052v",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmkvpkqvt14zc6",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmkvpkqvt17w0u",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmkvpkqvt21vs2",
             "alternativeIds": []
           }
         ]
@@ -28896,16 +29014,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Marque du faucheur (D) ronge une part des points de vie maximum : concentre les tanks, pas les fragiles.",
-        "en": "Reaper's Mark (D) eats a share of maximum Health: focus the tanks, not the squishies."
+        "fr": "Tes attaques de base frappent en arc : balaie plusieurs ennemis pour en marquer un maximum plutôt que de t'acharner sur un seul.",
+        "en": "Your Basic Attacks hit in an arc: sweep several enemies to spread your Marks instead of tunnelling one."
       },
       {
-        "fr": "Frappe éthérée (Z) te téléporte sur une cible marquée, même de l'autre côté d'un mur.",
-        "en": "Wraith Strike (W) teleports you onto a marked target, even through a wall."
+        "fr": "N'engage jamais seul : harcèle la frontline jusqu'à ce qu'elle brûle ses contrôles, puis rentre dedans.",
+        "en": "Never engage alone: poke the frontline until it burns its crowd control, then go in."
       },
       {
-        "fr": "Ne lance Moisson d'âmes (A) qu'après avoir marqué plusieurs ennemis : elle te soigne pour chaque cible touchée.",
-        "en": "Only cast Soul Rip (Q) once several enemies are marked: it heals you for every target hit."
+        "fr": "Extrême-onction (R) ne se garde pas : lance-la dès qu'elle peut achever une cible, chaque victime en réduit définitivement le temps de recharge.",
+        "en": "Last Rites (R) isn't meant to be held: cast it as soon as a target is executable — every kill permanently cuts its cooldown."
       }
     ],
     "builds": [
@@ -28917,18 +29035,18 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "",
+          "en": ""
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Malthael]",
+        "buildCode": "[T1222324,Malthael]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
@@ -28938,32 +29056,32 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tm43qtplb04wbe",
+            "primaryId": "tm43qtplb0520g",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tm43qtplb07lp7",
+            "primaryId": "tm43qtplb08ap6",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tm43qtplb1066d",
+            "primaryId": "tm43qtplb1138v",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tm43qtplb12ywt",
+            "primaryId": "tm43qtplb14p1y",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tm43qtplb16sov",
+            "primaryId": "tm43qtplb17sdj",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tm43qtplb19jbe",
+            "primaryId": "tm43qtplb222is",
             "alternativeIds": []
           }
         ]
@@ -36704,16 +36822,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Lance des anciens (A) t'attire vers le premier ennemi touché : mal placée, elle te jette au milieu de leur équipe.",
-        "en": "Ancient Spear (Q) pulls you to the first enemy it hits: misplaced, it throws you into the middle of their team."
+        "fr": "Alterne Secousse sismique (Z) et attaques de base plutôt que de tout enchaîner : c'est ce rythme qui entretient tes dégâts et ta fureur.",
+        "en": "Alternate Seismic Slam (W) and Basic Attacks rather than dumping everything: that rhythm is what keeps both your damage and your Fury flowing."
       },
       {
-        "fr": "En 1v1, Secousse sismique (Z) est ta principale source de dégâts.",
-        "en": "In a 1v1, Seismic Slam (W) is your main source of damage."
+        "fr": "Tu n'as aucune fuite : n'entre pas sur une cible que ton équipe ne peut pas suivre, tu n'en ressortiras pas.",
+        "en": "You have no escape: don't dive a target your team can't follow up on, because you won't get back out."
       },
       {
-        "fr": "Ta Fureur (D) monte en encaissant autant qu'en frappant : reculer au premier échange te prive de tes capacités.",
-        "en": "Your Fury (D) builds from taking hits as much as landing them: backing off at the first trade leaves you with no Abilities."
+        "fr": "Courroux du berserker (R) se prolonge tant que tu gagnes de la fureur : c'est en restant au contact qu'il te transforme en tank.",
+        "en": "Wrath of the Berserker (R) keeps extending as long as you gain Fury: staying in the fight is what turns you into a tank."
       }
     ],
     "builds": [
@@ -38152,16 +38270,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Empile ton rayon avant l'engagement : Rayon de résonance (D) monte en dégâts tant que tu canalises.",
-        "en": "Stack your beam before the engage: Resonance Beam (D) ramps up as long as you keep channelling."
+        "fr": "Garde Rayon de résonance (D) actif : c'est lui qui paie ton mana, et enchaîner Rayon de choc avec Tempête psionique te met à sec en un rien de temps.",
+        "en": "Keep Resonance Beam (D) up: it's what pays your Mana, and chaining Shock Ray into Psionic Storm drains you in no time."
       },
       {
-        "fr": "Mur de force (E) isole une cible ou coupe une fuite : c'est ton vrai impact.",
-        "en": "Force Wall (E) cuts a target off or blocks an escape: that's where your real impact is."
+        "fr": "Tes sorts se placent, ils ne se lancent pas : attends le contrôle d'un allié plutôt que d'espérer toucher une cible mobile.",
+        "en": "Your spells are placed, not thrown: wait for an ally's crowd control instead of hoping to land on a mobile target."
       },
       {
-        "fr": "Tempête psionique (Z) frappe de plus en plus fort : place-la où l'ennemi doit rester.",
-        "en": "Psionic Storm (W) hits harder the longer it burns: place it where the enemy has to stay."
+        "fr": "Mur de force (E) coupe aussi les tiens : mal posé, il enferme ton équipe au lieu de sauver quelqu'un.",
+        "en": "Force Wall (E) blocks your own side too: badly placed, it traps your team instead of saving anyone."
       }
     ],
     "builds": [
@@ -38173,18 +38291,18 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "",
+          "en": ""
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Tassadar]",
+        "buildCode": "[T1211211,Tassadar]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
@@ -38194,7 +38312,7 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmhqvfczx04sog",
+            "primaryId": "tmhqvfczx05x8i",
             "alternativeIds": []
           },
           {
@@ -38209,12 +38327,71 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tmhqvfczx12kyl",
+            "primaryId": "tmhqvfczx13wu2",
             "alternativeIds": []
           },
           {
             "level": 16,
             "primaryId": "tmhqvfczx15xth",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmhqvfczx18mrv",
+            "alternativeIds": []
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build Z",
+          "en": "W build"
+        },
+        "summary": {
+          "fr": "",
+          "en": ""
+        },
+        "buildCodeTitle": {
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
+        },
+        "buildCode": "[T2221221,Tassadar]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmhqvfczx020oq",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmhqvfczx05x8i",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmhqvfczx08tp0",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmhqvfczx10w2q",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmhqvfczx13wu2",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmhqvfczx1676s",
             "alternativeIds": []
           },
           {
@@ -39569,16 +39746,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Rappel (E) te replace et te purge, mais ne te soigne pas : c'est une esquive, pas un soin.",
-        "en": "Recall (E) repositions and cleanses you, but does not heal: it's a dodge, not a heal."
+        "fr": "Garde toujours une charge de Transfert (A) pour esquiver : entrer sans porte de sortie, c'est mourir.",
+        "en": "Always keep a Blink (Q) charge to dodge with: going in without a way out is dying."
       },
       {
-        "fr": "Tu ne montes pas : tu es toujours prête à te battre, où que tu sois.",
-        "en": "You never mount up: you're always ready to fight, wherever you are."
+        "fr": "Rappel (E) te purge : garde-le pour le contrôle qui va te tuer, pas pour te replacer confortablement.",
+        "en": "Recall (E) cleanses you: save it for the crowd control that would kill you, not for a comfortable reposition."
       },
       {
-        "fr": "Bombe à impulsion (R) sur un tank est du gâchis : vise les cibles fragiles.",
-        "en": "Pulse Bomb (R) on a tank is wasted: aim for the squishy targets."
+        "fr": "Laisse les lanes à ton équipe : ta valeur est sur les cibles fragiles et immobiles, pas sur les vagues de serviteurs.",
+        "en": "Leave the lanes to your team: your value is on squishy, immobile targets, not on Minion waves."
       }
     ],
     "builds": [
