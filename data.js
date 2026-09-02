@@ -42395,7 +42395,7 @@ const HEROES = [
   },
   {
     "id": "valla",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Valla",
       "en": "Valla"
@@ -42419,8 +42419,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_hatred.png",
         "description": {
-          "fr": "Les attaques de base confèrent des bonus temporaires aux dégâts et à la vitesse de déplacement.",
-          "en": "Basic Attacks grant bonus Attack Damage and Move Speed temporarily"
+          "fr": "Chaque attaque de base confère un point de haine, cumulable jusqu'à un maximum. Chaque point augmente les dégâts des attaques de base et la vitesse de déplacement de Valla, et les cumuls retombent si elle cesse d'attaquer.",
+          "en": "Each Basic Attack grants a stack of Hatred, up to a cap. Each stack increases Valla's Basic Attack damage and Movement Speed, and the stacks fall off if she stops attacking."
         },
         "demoYoutubeId": ""
       },
@@ -42432,8 +42432,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_hungeringarrow.png",
         "description": {
-          "fr": "Tire une flèche qui poursuit et frappe plusieurs cibles.",
-          "en": "Fire an arrow which seeks out and strikes multiple targets"
+          "fr": "Tire une flèche qui frappe une première cible, puis repart vers d'autres ennemis en visant les héros en priorité. Elle peut toucher un même ennemi plusieurs fois.",
+          "en": "Fires an arrow that hits a first target, then seeks other enemies, prioritizing Heroes. It can hit the same enemy several times."
         },
         "demoYoutubeId": ""
       },
@@ -42445,8 +42445,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_multishot.png",
         "description": {
-          "fr": "Frappe les ennemis dans une zone.",
-          "en": "Damage enemies in an area"
+          "fr": "Blesse tous les ennemis présents dans la zone ciblée.",
+          "en": "Damages every enemy in the target area."
         },
         "demoYoutubeId": ""
       },
@@ -42458,8 +42458,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_vault.png",
         "description": {
-          "fr": "Fonce vers l'endroit ciblé ; la première attaque qui suit frappe d'autant plus fort que Valla a accumulé de haine.",
-          "en": "Dashes to the target location; the first attack after it hits harder the more Hatred Valla has stacked."
+          "fr": "Bondit vers l'endroit ciblé. Dans la foulée, la première attaque de base de Valla frappe d'autant plus fort qu'elle a accumulé de haine.",
+          "en": "Dashes to the target spot. Right after, Valla's next Basic Attack hits harder the more Hatred she has stacked."
         },
         "demoYoutubeId": ""
       },
@@ -42471,8 +42471,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_strafe.png",
         "description": {
-          "fr": "Tire une volée continue sur les ennemis proches, en priorité les héros. Acrobatie reste utilisable pendant ce temps.",
-          "en": "Fires a continuous flurry at nearby enemies, prioritizing Heroes. Vault stays usable throughout."
+          "fr": "Tire sans interruption sur les ennemis proches, les héros en priorité. Valla peut se déplacer et utiliser Acrobatie pendant toute la durée.",
+          "en": "Rapidly fires at nearby enemies, prioritizing Heroes. Valla can move and use Vault for the whole duration."
         },
         "demoYoutubeId": ""
       },
@@ -42484,24 +42484,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_rainofvengeance.png",
         "description": {
-          "fr": "Libère une vague de bêtes d'ombre qui blessent et étourdissent les ennemis de la zone ciblée. Se cumule en charges.",
-          "en": "Unleashes a wave of shadow beasts that damage and Stun the enemies in the target area. Stores charges."
+          "fr": "Libère une vague de bêtes d'ombre qui blessent et étourdissent brièvement les ennemis de la zone ciblée. Se cumule en charges.",
+          "en": "Unleashes a wave of Shadow Beasts that damage and briefly Stun enemies in the target area. Stores charges."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Garde tes cumuls de haine actifs en attaquant régulièrement, même des serviteurs.",
-        "en": "Keep your Hatred stacks up by attacking regularly, even Minions."
+        "fr": "Tes stacks de haine tombent si tu ne frappes rien pendant quelques secondes : remonte-les sur les serviteurs avant un fight au lieu d'engager à vide.",
+        "en": "Your Hatred stacks drop if you hit nothing for a few seconds: stack them back up on Minions before a fight instead of engaging empty."
       },
       {
-        "fr": "Acrobatie sert à esquiver un contrôle, pas seulement à fuir.",
-        "en": "Vault is for dodging crowd control, not just for running."
+        "fr": "Acrobatie est ton seul disengage : la cramer pour dive une cible te laisse sans issue quand l'équipe d'en face se retourne sur toi.",
+        "en": "Vault is your only disengage: burning it to dive a target leaves you with no way out when the enemy team turns on you."
       },
       {
-        "fr": "Rafale frappe seule les ennemis proches, et Acrobatie reste utilisable pendant ce temps.",
-        "en": "Strafe fires on nearby enemies by itself, and Vault stays usable throughout."
+        "fr": "Rafale (R) saute au moindre CC : lance-la quand les contrôles adverses sont down, et kite pendant qu'elle tire.",
+        "en": "Strafe (R) breaks on any CC: pop it once their crowd control is down, and kite while it fires."
       }
     ],
     "builds": [
@@ -42509,22 +42509,82 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build recommandé",
-          "en": "Recommended build"
+          "fr": "Build auto-attaque",
+          "en": "Auto-attack build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build tourné vers les attaques de base.",
+          "en": "Built around Basic Attacks."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Valla]",
+        "buildCode": "[T3232234,Valla]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tm1n5fg7d03nb4",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tm1n5fg7d055om",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tm1n5fg7d09zym",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tm1n5fg7d11cnm",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tm1n5fg7d133ow",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tm1n5fg7d17avy",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tm1n5fg7d21e07",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build A",
+          "en": "Q build"
+        },
+        "summary": {
+          "fr": "Build centré sur Flèche vorace, pour harceler à distance et se soigner.",
+          "en": "Focused on Hungering Arrow, to poke from range and heal up."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T1322133,Valla]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
@@ -42534,17 +42594,17 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tm1n5fg7d046aa",
+            "primaryId": "tm1n5fg7d066tw",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tm1n5fg7d071bi",
+            "primaryId": "tm1n5fg7d08na9",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tm1n5fg7d10ffs",
+            "primaryId": "tm1n5fg7d11cnm",
             "alternativeIds": []
           },
           {
@@ -42554,12 +42614,12 @@ const HEROES = [
           },
           {
             "level": 16,
-            "primaryId": "tm1n5fg7d15w5c",
+            "primaryId": "tm1n5fg7d17avy",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tm1n5fg7d185mu",
+            "primaryId": "tm1n5fg7d20swq",
             "alternativeIds": []
           }
         ],
@@ -42577,8 +42637,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_hungeringarrow.png",
         "description": {
-          "fr": "Quête : confère un rebond de Flèche vorace supplémentaire et augmente ses dégâts.",
-          "en": "Quest: Gain Hungering Arrow bounce, damage"
+          "fr": "Confère un rebond supplémentaire à Flèche vorace. Quête : toucher un héros avec son impact initial rend du mana et en augmente définitivement les dégâts.",
+          "en": "Grants Hungering Arrow an extra bounce. Quest: hitting a Hero with its initial impact refunds Mana and permanently increases that impact's damage."
         },
         "demoYoutubeId": null
       },
@@ -42591,8 +42651,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_multishot.png",
         "description": {
-          "fr": "Quête : augmente les dégâts de Tir multiple et confère de la haine.",
-          "en": "Quest: Gain Multishot damage, Hatred"
+          "fr": "Quête : toucher un héros avec Tir multiple confère de la haine et en augmente définitivement les dégâts. Récompense : au bout d'un certain nombre de héros touchés, ses dégâts augmentent nettement.",
+          "en": "Quest: hitting a Hero with Multishot grants Hatred and permanently increases its damage. Reward: after enough Heroes are hit, its damage rises sharply."
         },
         "demoYoutubeId": null
       },
@@ -42605,8 +42665,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_hatred.png",
         "description": {
-          "fr": "Tactique : augmente la vitesse d'attaque. Quête : augmente le bonus aux dégâts des attaques de base conféré par la haine.",
-          "en": "Gambit: Gain Attack Speed Quest: Increase Hatred Basic Attack bonus"
+          "fr": "Quête : les attaques de base portées aux héros augmentent progressivement le bonus aux dégâts conféré par chaque point de haine, jusqu'à un plafond. Tactique : confère de la vitesse d'attaque, réduite à chaque mort de Valla.",
+          "en": "Quest: Basic Attacks against Heroes gradually increase the damage bonus of each Hatred stack, up to a cap. Gambit: grants Attack Speed, reduced with each of Valla's deaths."
         },
         "demoYoutubeId": null
       },
@@ -42619,8 +42679,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_multishot.png",
         "description": {
-          "fr": "Augmente la portée de Tir multiple et envoie des grenades.",
-          "en": "Increase Multishot range, launch grenades"
+          "fr": "Augmente la portée de Tir multiple, qui lance aussi des grenades : elles blessent les ennemis et rendent du mana lorsqu'elles touchent un héros.",
+          "en": "Increases Multishot's range, and it also throws grenades: they damage enemies and refund Mana when they hit a Hero."
         },
         "demoYoutubeId": null
       },
@@ -42633,8 +42693,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_vault.png",
         "description": {
-          "fr": "Augmente le bonus aux dégâts d'Acrobatie et réduit son temps de recharge.",
-          "en": "Increases Vault damage bonus, reduce cooldown"
+          "fr": "Augmente nettement le bonus aux dégâts qu'Acrobatie confère à l'attaque suivante. Si cette attaque tue sa cible, le mana et le temps de recharge d'Acrobatie sont rendus. Effet passif : réduit le temps de recharge d'Acrobatie.",
+          "en": "Greatly increases the damage bonus Vault grants to the next Basic Attack. If that attack kills its target, Vault's Mana cost and cooldown are refunded. Passive: reduces Vault's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -42647,8 +42707,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/talents/storm_ui_icon_valla_repeatingarrow.png",
         "description": {
-          "fr": "Annule le temps de recharge de Flèche vorace.",
-          "en": "Vault refreshes Hungering Arrow"
+          "fr": "Acrobatie ne coûte plus de mana et remet Flèche vorace à zéro.",
+          "en": "Vault no longer costs Mana and resets Hungering Arrow's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -42661,8 +42721,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_hungeringarrow.png",
         "description": {
-          "fr": "Augmente les dégâts que Flèche vorace inflige aux cibles non héroïques.",
-          "en": "Increase Hungering Arrow non-Hero damage"
+          "fr": "Flèche vorace inflige bien plus de dégâts aux serviteurs, aux mercenaires et aux monstres.",
+          "en": "Hungering Arrow deals far more damage to Minions, Mercenaries and Monsters."
         },
         "demoYoutubeId": null
       },
@@ -42675,8 +42735,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/talents/storm_ui_icon_valla_siphoningarrow.png",
         "description": {
-          "fr": "Tir multiple ralentit, augmente les dégâts de Flèche vorace.",
-          "en": "Gain Multishot Slow, Hungering Arrow damage"
+          "fr": "Tir multiple ralentit les ennemis touchés, et Flèche vorace frappe plus fort les héros ralentis.",
+          "en": "Multishot Slows the enemies it hits, and Hungering Arrow hits Slowed enemies harder."
         },
         "demoYoutubeId": null
       },
@@ -42689,8 +42749,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_hatred.png",
         "description": {
-          "fr": "Augmente le bonus à la vitesse de déplacement conféré par la haine.",
-          "en": "Increase Hatred Move Speed bonus"
+          "fr": "Double le bonus à la vitesse de déplacement conféré par chaque point de haine.",
+          "en": "Doubles the Movement Speed bonus granted by each Hatred stack."
         },
         "demoYoutubeId": null
       },
@@ -42703,8 +42763,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_strafe.png",
         "description": {
-          "fr": "Tire une volée continue sur les ennemis proches, en priorité les héros. Acrobatie reste utilisable pendant ce temps.",
-          "en": "Fires a continuous flurry at nearby enemies, prioritizing Heroes. Vault stays usable throughout."
+          "fr": "Tire sans interruption sur les ennemis proches, les héros en priorité. Valla peut se déplacer et utiliser Acrobatie pendant toute la durée.",
+          "en": "Rapidly fires at nearby enemies, prioritizing Heroes. Valla can move and use Vault for the whole duration."
         },
         "demoYoutubeId": null
       },
@@ -42717,8 +42777,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_rainofvengeance.png",
         "description": {
-          "fr": "Libère une vague de bêtes d'ombre qui blessent et étourdissent les ennemis de la zone ciblée. Se cumule en charges.",
-          "en": "Unleashes a wave of shadow beasts that damage and Stun the enemies in the target area. Stores charges."
+          "fr": "Libère une vague de bêtes d'ombre qui blessent et étourdissent brièvement les ennemis de la zone ciblée. Se cumule en charges.",
+          "en": "Unleashes a wave of Shadow Beasts that damage and briefly Stun enemies in the target area. Stores charges."
         },
         "demoYoutubeId": null
       },
@@ -42731,8 +42791,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/talents/storm_ui_icon_valla_siphoningarrow.png",
         "description": {
-          "fr": "Flèche vorace et Tir multiple rendent des points de vie.",
-          "en": "Hungering Arrow and Multishot heal"
+          "fr": "Toucher un héros avec Flèche vorace rend des points de vie à Valla ; Tir multiple lui en rend un peu.",
+          "en": "Hitting a Hero with Hungering Arrow heals Valla; Multishot heals her a little."
         },
         "demoYoutubeId": null
       },
@@ -42745,8 +42805,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_hatred.png",
         "description": {
-          "fr": "Les attaques de base rendent des points de vie. Montant augmenté par la haine.",
-          "en": "Basic Attacks heal, increased by Hatred"
+          "fr": "Les attaques de base rendent une part des dégâts infligés en points de vie, d'autant plus grande que la haine est haute.",
+          "en": "Basic Attacks heal for a share of the damage dealt, larger the higher her Hatred."
         },
         "demoYoutubeId": null
       },
@@ -42760,7 +42820,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/valla/images/talents/storm_ui_icon_valla_hatred_var1.png",
         "description": {
           "fr": "À l'activation, consomme toute la haine accumulée pour conférer de l'armure anti-sort à proportion. Effet passif : confère déjà de l'armure anti-sort, et chaque point de haine régénère des points de vie.",
-          "en": "On activation, spends all accumulated Hatred to grant Spell Armor in proportion. Passive: already grants Spell Armor, and each stack of Hatred regenerates Health."
+          "en": "On activation, consumes all stacked Hatred to grant Spell Armor in proportion. Passive: already grants Spell Armor, and each Hatred stack regenerates Health."
         },
         "demoYoutubeId": null
       },
@@ -42774,7 +42834,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_multishot.png",
         "description": {
           "fr": "Au maximum de haine, Tir multiple se recharge bien plus vite. Effet passif : réduit son coût en mana.",
-          "en": "At maximum Hatred, Multishot recharges far faster. Passive: lowers its Mana cost."
+          "en": "At maximum Hatred, Multishot's cooldown recharges much faster. Passive: reduces its Mana cost."
         },
         "demoYoutubeId": null
       },
@@ -42787,8 +42847,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_hatred.png",
         "description": {
-          "fr": "Augmente tous les dégâts au maximum de haine.",
-          "en": "Increase all damage at max Hatred"
+          "fr": "Tant que la haine est au maximum, augmente tous les dégâts infligés.",
+          "en": "While at maximum Hatred, increases all damage dealt."
         },
         "demoYoutubeId": null
       },
@@ -42801,8 +42861,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_searing.png",
         "description": {
-          "fr": "Augmente les dégâts des attaques de base portées aux héros.",
-          "en": "Increase Basic Attacks against Heroes"
+          "fr": "Une attaque de base sur trois portée au même héros inflige des dégâts supplémentaires proportionnels à ses points de vie maximum.",
+          "en": "Every third Basic Attack against the same Hero deals bonus damage based on their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -42815,8 +42875,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_strafe.png",
         "description": {
-          "fr": "Rafale dure plus longtemps et tire des carreaux perforants.",
-          "en": "Strafe lasts longer, fires penetrating bolts"
+          "fr": "Chaque héros touché par Rafale en prolonge la durée. Rafale tire aussi des carreaux perforants sur une ligne.",
+          "en": "Every Hero hit by Strafe extends its duration. Strafe also fires penetrating bolts in a line."
         },
         "demoYoutubeId": null
       },
@@ -42829,8 +42889,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_rainofvengeance.png",
         "description": {
-          "fr": "Réduit le temps de recharge et augmente la vitesse d'attaque.",
-          "en": "Reduce cooldown, gain Attack Speed"
+          "fr": "Les attaques de base portées aux héros réduisent le temps de recharge de Pluie de vengeance. Effet passif : chaque point de haine augmente la vitesse d'attaque, et davantage encore au maximum de haine.",
+          "en": "Basic Attacks against Heroes reduce Rain of Vengeance's cooldown. Passive: each Hatred stack increases Attack Speed, and even more at maximum Hatred."
         },
         "demoYoutubeId": null
       },
@@ -42843,8 +42903,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_vault.png",
         "description": {
-          "fr": "Confère des charges d'Acrobatie supplémentaires, et chaque acrobatie sème des chausse-trappes qui blessent et ralentissent les ennemis.",
-          "en": "Grants extra Vault charges, and each vault drops caltrops that damage and Slow enemies."
+          "fr": "Confère des charges d'Acrobatie supplémentaires. Chaque acrobatie sème des chausse-trappes qui blessent et ralentissent les ennemis.",
+          "en": "Grants additional Vault charges. Each Vault drops caltrops that damage and Slow enemies."
         },
         "demoYoutubeId": null
       },
@@ -42857,15 +42917,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valla/images/spells/storm_ui_icon_valla_hatred.png",
         "description": {
-          "fr": "Augmente la portée des attaques de base. Montant augmenté par la haine.",
-          "en": "Gain Basic Attack range, increased by Hatred"
+          "fr": "Augmente la portée des attaques de base, et davantage encore au maximum de haine.",
+          "en": "Increases Basic Attack range, and even more at maximum Hatred."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Valla",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "varian",
