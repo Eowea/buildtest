@@ -105,16 +105,16 @@ const STREAMER_CONFIG = {
         },
         "items": [
           {
-            "fr": "Cinq nouveaux héros en ligne : Grisetête, Kel'Thuzad, Malthaël, Tassadar et Tracer.",
-            "en": "Five new Heroes online: Greymane, Kel'Thuzad, Malthael, Tassadar and Tracer. "
+            "fr": "5 nouveaux héros en ligne : Grisetête, Kel'Thuzad, Malthaël, Tassadar et Tracer.",
+            "en": "5 new Heroes online: Greymane, Kel'Thuzad, Malthael, Tassadar and Tracer."
           },
           {
             "fr": "Plusieurs builds au choix sur Asmodan, Blanchetête, Cassia, Diablo, Kel'Thuzad, Ragnaros, Tassadar et Tyrande.",
             "en": "Several builds to choose from on Azmodan, Cassia, Diablo, Kel'Thuzad, Ragnaros, Tassadar, Tyrande and Whitemane."
           },
           {
-            "fr": "Sept codes de build corrigés sur Deckard Cain, Li-Ming, Lt. Morales, Nasibo, Sgt. Marteau et Tychus : le code que vous copiez correspond maintenant à l'arbre affiché.",
-            "en": "Seven build codes fixed on Deckard Cain, Li-Ming, Lt. Morales, Nazeebo, Sgt. Hammer and Tychus: the code you copy now matches the tree on the page."
+            "fr": "7 codes de build corrigés sur Deckard Cain, Li-Ming, Lt. Morales, Nasibo, Sgt. Marteau et Tychus : le code que vous copiez correspond maintenant à l'arbre affiché.",
+            "en": "7 build codes fixed on Deckard Cain, Li-Ming, Lt. Morales, Nazeebo, Sgt. Hammer and Tychus: the code you copy now matches the tree on the page."
           },
           {
             "fr": "Descriptions revues sur Aile de Mort, Alexstrasza, Artanis, Asmodan, Cassia, Cho, Diablo, Impérius, Malfurion, Mal'Ganis et Tyrael.",
@@ -129,7 +129,7 @@ const STREAMER_CONFIG = {
             "en": "The site measures its traffic, with no cookies and no personal data."
           },
           {
-            "fr": "Ajout des rotations de héros gratuits sur la page d'acceuil. ",
+            "fr": "Ajout des rotations de héros gratuits sur la page d'accueil.",
             "en": "Added free hero rotations to the home page."
           }
         ]
