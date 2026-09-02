@@ -497,7 +497,14 @@ function renderBuildCode(b) {
   // Le code copié est le signal le plus parlant : c'est le moment où un visiteur
   // emporte vraiment un build en jeu.
   const heros = currentHero();
-  const marquerCopie = () => track('build-copie/' + (heros ? heros.id : 'inconnu'), heros ? loc(heros.name) : 'Build copié');
+  const build = heros && heros.builds ? heros.builds[state.buildIndex] : null;
+  // Le libellé du build entre dans le chemin : sans lui, les trois builds d'un
+  // même héros tomberaient dans le même compteur.
+  const cleBuild = build ? normalize((build.label || {}).fr || '').replace(/ /g, '-') : '';
+  const marquerCopie = () => track(
+    'build-copie/' + (heros ? heros.id : 'inconnu') + (cleBuild ? '/' + cleBuild : ''),
+    heros ? loc(heros.name) + (build ? ' — ' + loc(build.label) : '') : 'Build copié'
+  );
 
   try {
     await navigator.clipboard.writeText(buildCode);
