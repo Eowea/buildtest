@@ -20962,16 +20962,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ne reste pas en worgen : rebascule en humain dès que la cible est morte.",
-        "en": "Don't stay in Worgen: shift back to Human as soon as the target is down."
+        "fr": "Ton passage en worgen est ton moment le plus vulnérable : n'entre que si ton équipe a déjà posé son contrôle.",
+        "en": "Shifting into Worgen is when you're most exposed: only go in once your team has landed its crowd control."
       },
       {
-        "fr": "Balle maudite (R) ampute une part des points de vie actuels : vise le tank, pas le fragile.",
-        "en": "Cursed Bullet (R) strips a share of current Health: aim at the tank, not the squishy."
+        "fr": "Balle maudite (R) n'est pas faite pour harceler. Lancée en worgen, elle te ramène en humain et te rend Sombre course pour ressortir.",
+        "en": "Cursed Bullet (R) isn't for poking. Cast in Worgen, it returns you to Human and gives Darkflight back so you can get out."
       },
       {
-        "fr": "Bête intérieure (Z) se relance à chaque attaque : ne coupe jamais ta chaîne de coups.",
-        "en": "Inner Beast (W) refreshes with every attack: never break your attack chain."
+        "fr": "L'armure de la forme worgen est là pour encaisser : reste au corps à corps tant que tu frappes, repasse humain dès qu'on te bloque.",
+        "en": "Worgen Form's Armor is there to soak: stay in melee while you're landing hits, shift back to Human the moment you get locked down."
       }
     ],
     "builds": [
