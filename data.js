@@ -7598,7 +7598,7 @@ const HEROES = [
         "enabled": true,
         "order": 4,
         "label": {
-          "fr": "Build autoattaque",
+          "fr": "Build auto-attaque",
           "en": "Auto-attack build"
         },
         "summary": {
@@ -12418,7 +12418,7 @@ const HEROES = [
         "enabled": true,
         "order": 2,
         "label": {
-          "fr": "Build autoattaque",
+          "fr": "Build auto-attaque",
           "en": "Auto-attack build"
         },
         "summary": {
@@ -13497,7 +13497,7 @@ const HEROES = [
         "enabled": true,
         "order": 2,
         "label": {
-          "fr": "Build autoattaque",
+          "fr": "Build auto-attaque",
           "en": "Auto-attack build"
         },
         "summary": {
@@ -16505,6 +16505,65 @@ const HEROES = [
           {
             "level": 16,
             "primaryId": "tmdgc72j416gbg",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmdgc72j421r4c",
+            "alternativeIds": []
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build A",
+          "en": "Q build"
+        },
+        "summary": {
+          "fr": "Build centré sur la Charge d'ombre.",
+          "en": "Focused on Shadow Charge."
+        },
+        "buildCodeTitle": {
+          "fr": "A COLLER DANS L'ARBRE DES TALENTS",
+          "en": "PASTE INTO TALENT TREE"
+        },
+        "buildCode": "[T2121114,Diablo]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmdgc72j402m4t",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmdgc72j404jwv",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmdgc72j408h5f",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmdgc72j410uxr",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmdgc72j412pv5",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmdgc72j415oro",
             "alternativeIds": []
           },
           {
