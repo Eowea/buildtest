@@ -105,8 +105,8 @@ const STREAMER_CONFIG = {
         },
         "items": [
           {
-            "fr": "Cinq nouveaux héros en ligne : Grisetête, Kel'Thuzad, Malthaël, Tassadar et Tracer. La rotation gratuite est complète.",
-            "en": "Five new Heroes online: Greymane, Kel'Thuzad, Malthael, Tassadar and Tracer. The free rotation is complete."
+            "fr": "Cinq nouveaux héros en ligne : Grisetête, Kel'Thuzad, Malthaël, Tassadar et Tracer.",
+            "en": "Five new Heroes online: Greymane, Kel'Thuzad, Malthael, Tassadar and Tracer. "
           },
           {
             "fr": "Plusieurs builds au choix sur Asmodan, Blanchetête, Cassia, Diablo, Kel'Thuzad, Ragnaros, Tassadar et Tyrande.",
@@ -127,6 +127,10 @@ const STREAMER_CONFIG = {
           {
             "fr": "Le site mesure sa fréquentation, sans cookie ni donnée personnelle.",
             "en": "The site measures its traffic, with no cookies and no personal data."
+          },
+          {
+            "fr": "Ajout des rotations de héros gratuits sur la page d'acceuil. ",
+            "en": "Added free hero rotations to the home page."
           }
         ]
       },
