@@ -19149,27 +19149,27 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build recommandé",
-          "en": "Recommended build"
+          "fr": "Build Z",
+          "en": "W build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build centré sur Orbe funeste : rebonds élargis et étourdissement.",
+          "en": "Focused on Dread Orb: wider bounces and a Stun."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Gall]",
+        "buildCode": "[T3112312,Gall]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm6dnf23x017c9",
+            "primaryId": "tm6dnf23x03hd3",
             "alternativeIds": []
           },
           {
@@ -19184,12 +19184,12 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tm6dnf23x102w1",
+            "primaryId": "tm6dnf23x114vs",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tm6dnf23x12o2b",
+            "primaryId": "tm6dnf23x14gds",
             "alternativeIds": []
           },
           {
@@ -19199,7 +19199,67 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tm6dnf23x18hzp",
+            "primaryId": "tm6dnf23x19zwd",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build Bombe",
+          "en": "Bomb build"
+        },
+        "summary": {
+          "fr": "Build centré sur Explosion runique : la bombe de Cho frappe plus fort et réduit au silence.",
+          "en": "Focused on Runic Blast: Cho's bomb hits harder and Silences."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T3312222,Gall]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tm6dnf23x03hd3",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tm6dnf23x06tam",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tm6dnf23x07aa9",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tm6dnf23x114vs",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tm6dnf23x137sc",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tm6dnf23x16o57",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tm6dnf23x19zwd",
             "alternativeIds": []
           }
         ],
