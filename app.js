@@ -667,9 +667,21 @@ function renderHomeVideoSections() {
    cookie et ne stocke pas de donnée personnelle, d'où l'absence de bandeau
    de consentement.
    ========================================================================= */
+// Le site de test et les aperçus locaux ne comptent jamais, quel que soit le
+// code présent dans data.js. Les deux dépôts peuvent donc porter le même
+// réglage : copier data.js de l'un vers l'autre ne casse plus la mesure.
+// Écrite en fonction pure de ses deux arguments pour rester vérifiable.
+function siteDeTest(hote, chemin) {
+  hote = hote === undefined ? location.hostname : hote;
+  chemin = chemin === undefined ? location.pathname : chemin;
+  if (!hote || hote === 'localhost' || hote === '127.0.0.1') return true;
+  return /(^|\/)buildtest(\/|$)/i.test(chemin);
+}
+
 function analyticsCode() {
   const a = (typeof STREAMER_CONFIG !== 'undefined' && STREAMER_CONFIG.analytics) || {};
-  return a.enabled === false ? '' : String(a.goatcounterCode || '').trim();
+  if (a.enabled === false || siteDeTest()) return '';
+  return String(a.goatcounterCode || '').trim();
 }
 
 function initAnalytics() {

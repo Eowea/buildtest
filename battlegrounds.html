@@ -73,6 +73,9 @@
       // STREAMER_CONFIG est déclaré en const : il n'existe pas sur window, d'où le typeof.
       var a = (typeof STREAMER_CONFIG !== 'undefined' && STREAMER_CONFIG.analytics) || {};
       var code = a.enabled === false ? '' : String(a.goatcounterCode || '').trim();
+      // Même garde que sur la page Builds : le site de test ne compte jamais.
+      var h = location.hostname, c = location.pathname;
+      if (!h || h === 'localhost' || h === '127.0.0.1' || /(^|\/)buildtest(\/|$)/i.test(c)) return;
       if (!code) return;
       var s = document.createElement('script');
       s.async = true;
