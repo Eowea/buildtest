@@ -94,10 +94,50 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "25 Août 2026",
-      "en": "August 25, 2026"
+      "fr": "2 Septembre 2026",
+      "en": "September 2, 2026"
     },
     "changelog": [
+      {
+        "date": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "items": [
+          {
+            "fr": "Cinq nouveaux héros en ligne : Grisetête, Kel'Thuzad, Malthaël, Tassadar et Tracer. La rotation gratuite est couverte en entier.",
+            "en": "Five new Heroes online: Greymane, Kel'Thuzad, Malthael, Tassadar and Tracer. The free rotation is now fully covered."
+          },
+          {
+            "fr": "Grisetête a droit au sélecteur de forme : ses capacités changent selon qu'il est humain ou worgen.",
+            "en": "Greymane gets the form selector: his Abilities change depending on whether he's Human or Worgen."
+          },
+          {
+            "fr": "Plusieurs builds là où il n'y en avait qu'un : Kel'Thuzad, Ragnaros et Tyrande en proposent trois ; Tassadar, Asmodan, Cassia, Diablo et Blanchetête passent à deux.",
+            "en": "Several builds where there used to be one: Kel'Thuzad, Ragnaros and Tyrande now offer three; Tassadar, Azmodan, Cassia, Diablo and Whitemane move up to two."
+          },
+          {
+            "fr": "Dix codes de build corrigés, chez Deckard Cain, Lt. Morales, Li-Ming, Nasibo, Sgt. Marteau et Tychus : le code que vous copiez correspond désormais exactement à l'arbre affiché.",
+            "en": "Ten build codes fixed, on Deckard Cain, Lt. Morales, Li-Ming, Nazeebo, Sgt. Hammer and Tychus: the code you copy now matches exactly the tree shown on the page."
+          },
+          {
+            "fr": "Le « Build Grenade » de Lt. Morales devient son Build recommandé.",
+            "en": "Lt. Morales' \"Grenade Build\" becomes her Recommended build."
+          },
+          {
+            "fr": "Descriptions revues sur onze héros déjà en ligne, dont deux talents qui décrivaient mal ce qu'ils font.",
+            "en": "Descriptions reworked on eleven Heroes already online, including two talents that described their effect wrongly."
+          },
+          {
+            "fr": "Conseils réécrits sur Jaina et Sonya, et écrits pour les cinq nouveaux venus.",
+            "en": "Tips rewritten for Jaina and Sonya, and written for the five newcomers."
+          },
+          {
+            "fr": "Le site mesure désormais sa fréquentation, sans cookie ni donnée personnelle.",
+            "en": "The site now measures its traffic, with no cookies and no personal data."
+          }
+        ]
+      },
       {
         "date": {
           "fr": "20 Août 2026",
