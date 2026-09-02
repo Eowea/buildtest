@@ -20822,7 +20822,7 @@ const HEROES = [
   },
   {
     "id": "greymane",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Grisetête",
       "en": "Greymane"
@@ -20830,8 +20830,8 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_greymane.png",
     "headline": {
-      "fr": "Un assassin capable de harceler ses adversaires à distance avant de bondir sur ses cibles pour leur porter le coup de grâce.<n/><n/><img path=\"@UI/StormTalentInTextArmorIcon\" alignment=\"uppermiddle\" color=\"BBBBBB\" width=\"20\" height=\"22\"/><c val=\"bfd4fd\">10 points d'armure (sous forme de worgen)</c>",
-      "en": "A high damage Assassin that wears down enemies from afar and dives in for the kill.<n/><n/><img path=\"@UI/StormTalentInTextArmorIcon\" alignment=\"uppermiddle\" color=\"BBBBBB\" width=\"20\" height=\"22\"/><c val=\"bfd4fd\">10 Armor (in Worgen Form)</c>"
+      "fr": "Un assassin capable de harceler ses adversaires à distance avant de bondir sur ses cibles pour leur porter le coup de grâce. Il gagne de l'armure sous forme de worgen.",
+      "en": "An assassin who harries his opponents from range before leaping on them to finish the job. He gains Armor in Worgen Form."
     },
     "gameplay": {
       "fr": "Grisetête harcèle à distance en humain, puis bascule en worgen avec Sombre course pour achever au corps à corps, avant de se dégager d'une roulade.",
@@ -20846,8 +20846,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_curseoftheworgen.png",
         "description": {
-          "fr": "Certaines capacités font passer Grisetête d'une forme à l'autre. En humain, ses attaques de base portent à distance ; en worgen, il gagne de l'armure mais frappe au corps à corps.",
-          "en": "Certain Abilities switch Greymane between forms. As a human his Basic Attacks are ranged; as a worgen he gains Armor but strikes in melee."
+          "fr": "Certaines capacités font passer Grisetête d'une forme à l'autre. En humain, ses attaques de base portent à distance ; en worgen, il gagne de l'armure et frappe bien plus fort, mais seulement au corps à corps.",
+          "en": "Certain Abilities switch Greymane between forms. As a Human his Basic Attacks are ranged; as a Worgen he gains Armor and hits far harder, but only in melee."
         },
         "demoYoutubeId": ""
       },
@@ -20859,8 +20859,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_qattack.png",
         "description": {
-          "fr": "Inflige des dégâts au premier ennemi touché ainsi que de lourds dégâts derrière lui.",
-          "en": "Damage the first enemy hit and deal heavy damage behind them"
+          "fr": "Lance une fiole qui blesse le premier ennemi touché, puis explose en cône derrière lui pour infliger de bien plus lourds dégâts.",
+          "en": "Hurls a flask that damages the first enemy hit, then explodes in a cone behind them for far heavier damage."
         },
         "demoYoutubeId": "",
         "form": "humain"
@@ -20874,8 +20874,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/talents/storm_ui_icon_greymane_swipe.png",
         "description": {
-          "fr": "Attaque circulaire qui déchire les ennemis devant Grisetête.",
-          "en": "A sweeping strike that tears into the enemies in front of Greymane."
+          "fr": "Grisetête se jette en avant et déchire les ennemis sur son passage.",
+          "en": "Greymane lunges forward and tears into the enemies in his path."
         },
         "demoYoutubeId": ""
       },
@@ -20887,8 +20887,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_beastfocus.png",
         "description": {
-          "fr": "Augmente considérablement la vitesse d'attaque ; chaque attaque de base relance la durée et en réduit le temps de recharge.",
-          "en": "Greatly increases Attack Speed; each Basic Attack refreshes the duration and brings the next cast closer."
+          "fr": "Augmente considérablement la vitesse d'attaque. Chaque attaque de base en relance la durée et en réduit le temps de recharge.",
+          "en": "Greatly increases Attack Speed. Each Basic Attack refreshes its duration and reduces its cooldown."
         },
         "demoYoutubeId": ""
       },
@@ -20901,7 +20901,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_darkflight.png",
         "description": {
           "fr": "Bondit sur un ennemi en le blessant et prend forme de worgen.",
-          "en": "Leaps at an enemy, damaging them, and shifts into worgen form."
+          "en": "Leaps at an enemy, damaging them, and shifts into Worgen Form."
         },
         "demoYoutubeId": "",
         "form": "humain"
@@ -20915,8 +20915,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/talents/storm_ui_icon_greymane_disengage.png",
         "description": {
-          "fr": "Effectue une roulade en arrière et reprend forme humaine.",
-          "en": "Rolls backward and returns to human form."
+          "fr": "Effectue une roulade d'esquive et reprend forme humaine.",
+          "en": "Rolls away evasively and returns to Human Form."
         },
         "demoYoutubeId": ""
       },
@@ -20941,8 +20941,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_goforthethroat.png",
         "description": {
-          "fr": "Se rue sur un héros adverse en prenant forme de worgen et l'éviscère. S'il en meurt, la capacité est aussitôt réutilisable.",
-          "en": "Leaps at an enemy Hero, shifting into worgen form, and eviscerates them. If they die from it, the Ability is immediately reusable."
+          "fr": "Se rue sur un héros adverse en prenant forme de worgen et l'éviscère. S'il en meurt, la capacité peut être relancée gratuitement dans la foulée.",
+          "en": "Leaps at an enemy Hero, shifting into Worgen Form, and eviscerates them. If they die from it, the Ability can be recast for free straight after."
         },
         "demoYoutubeId": ""
       },
@@ -20954,8 +20954,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_snapshot.png",
         "description": {
-          "fr": "Grisetête reprend forme humaine et tire une balle qui ampute le premier héros touché d'une part de ses points de vie actuels.",
-          "en": "Greymane returns to human form and fires a bullet that strips the first Hero hit of a share of their current Health."
+          "fr": "Grisetête reprend forme humaine et tire une balle qui ampute le premier héros touché d'une part de ses points de vie actuels. Sans effet sur les véhicules.",
+          "en": "Greymane returns to Human Form and fires a bullet that strips the first Hero hit of a share of their current Health. Has no effect on Vehicles."
         },
         "demoYoutubeId": ""
       }
@@ -20963,15 +20963,15 @@ const HEROES = [
     "tips": [
       {
         "fr": "Ne reste pas en worgen : rebascule en humain dès que la cible est morte.",
-        "en": "Do not linger in worgen form: shift back to human as soon as the target dies."
+        "en": "Don't stay in Worgen: shift back to Human as soon as the target is down."
       },
       {
-        "fr": "Balle maudite ampute un pourcentage de vie : vise le tank, pas le fragile.",
-        "en": "Cursed Bullet strips a percentage of Health: aim at the tank, not the squishy."
+        "fr": "Balle maudite (R) ampute une part des points de vie actuels : vise le tank, pas le fragile.",
+        "en": "Cursed Bullet (R) strips a share of current Health: aim at the tank, not the squishy."
       },
       {
-        "fr": "Bête intérieure se relance à chaque attaque : ne coupe jamais ta chaîne de coups.",
-        "en": "Inner Beast refreshes with every attack: never break your attack chain."
+        "fr": "Bête intérieure (Z) se relance à chaque attaque : ne coupe jamais ta chaîne de coups.",
+        "en": "Inner Beast (W) refreshes with every attack: never break your attack chain."
       }
     ],
     "builds": [
@@ -20990,11 +20990,11 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Greymane]",
+        "buildCode": "[T1312313,Greymane]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
@@ -21004,7 +21004,7 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmko5bxaq048dj",
+            "primaryId": "tmko5bxaq064sr",
             "alternativeIds": []
           },
           {
@@ -21014,12 +21014,12 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tmko5bxaq10mit",
+            "primaryId": "tmko5bxaq11xav",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmko5bxaq12c4a",
+            "primaryId": "tmko5bxaq14t0z",
             "alternativeIds": []
           },
           {
@@ -21029,7 +21029,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmko5bxaq18yrc",
+            "primaryId": "tmko5bxaq20cir",
             "alternativeIds": []
           }
         ]
@@ -21046,8 +21046,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_beastfocus.png",
         "description": {
-          "fr": "Augmente l'armure sous forme de worgen et réduit le temps de recharge de Bête intérieure.",
-          "en": "Increase Worgen Armor, Inner Beast cooldown reduction"
+          "fr": "Pendant Bête intérieure, les attaques de base la rechargent bien plus vite, et l'armure de la forme de worgen augmente.",
+          "en": "During Inner Beast, Basic Attacks recharge it much faster, and Worgen Form's Armor increases."
         },
         "demoYoutubeId": null
       },
@@ -21060,8 +21060,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_qattack.png",
         "description": {
-          "fr": "Augmente la portée et rend du mana quand un héros est touché.",
-          "en": "Increases Gilnean Cocktail's range and refunds Mana against Heroes"
+          "fr": "Cocktail gilnéen porte plus loin et rend du mana lorsqu'il touche un héros adverse.",
+          "en": "Gilnean Cocktail reaches further and refunds Mana when it hits an enemy Hero."
         },
         "demoYoutubeId": null
       },
@@ -21074,8 +21074,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/talents/storm_ui_icon_greymane_beastfocus_var1.png",
         "description": {
-          "fr": "Prolonge la durée de Bête intérieure et met fin aux temps de recharge.",
-          "en": "Increases Inner Beast duration, Abilities refresh"
+          "fr": "Bête intérieure dure plus longtemps, et les dégâts de capacité en relancent aussi la durée.",
+          "en": "Inner Beast lasts longer, and Ability damage also refreshes its duration."
         },
         "demoYoutubeId": null
       },
@@ -21088,8 +21088,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_darkflight.png",
         "description": {
-          "fr": "Sombre course confère de l'armure physique.",
-          "en": "Darkflight grants Physical Armor"
+          "fr": "Sombre course confère de l'armure physique contre les prochaines attaques de base de héros encaissées sous forme de worgen.",
+          "en": "Darkflight grants Physical Armor against the next Hero Basic Attacks taken while in Worgen Form."
         },
         "demoYoutubeId": null
       },
@@ -21102,8 +21102,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/talents/storm_ui_icon_greymane_disengage.png",
         "description": {
-          "fr": "Désengagement confère camouflage.",
-          "en": "Disengage grants Stealth"
+          "fr": "Désengagement camoufle Grisetête un court moment.",
+          "en": "Disengage Cloaks Greymane for a short while."
         },
         "demoYoutubeId": null
       },
@@ -21116,8 +21116,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_beastfocus.png",
         "description": {
-          "fr": "Confère du mana et réduit le temps de recharge des fontaines de soins.",
-          "en": "Gain Mana, reduce Healing Fountain cooldown"
+          "fr": "Les attaques de base rendent du mana et rendent les fontaines de soins disponibles plus tôt.",
+          "en": "Basic Attacks restore Mana and make Healing Fountains available sooner."
         },
         "demoYoutubeId": null
       },
@@ -21130,8 +21130,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_curseoftheworgen.png",
         "description": {
-          "fr": "Augmente la portée des attaques de base sous forme humaine.",
-          "en": "Increases Human Basic Attack range"
+          "fr": "Les attaques de base sous forme humaine portent plus loin.",
+          "en": "Human Basic Attacks reach further."
         },
         "demoYoutubeId": null
       },
@@ -21158,8 +21158,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/talents/storm_ui_icon_greymane_curseoftheworgen_var1.png",
         "description": {
-          "fr": "Quête : les attaques de base portées aux héros augmentent les dégâts.",
-          "en": "Quest: Basic Attack Heroes to gain damage"
+          "fr": "Quête : les attaques de base portées aux héros augmentent définitivement les dégâts des attaques de base, jusqu'à un plafond. Celles portées en worgen font avancer la quête bien plus vite, et mourir en efface une partie.",
+          "en": "Quest: Basic Attacks against Heroes permanently raise Basic Attack damage, up to a cap. Worgen ones advance the quest far faster, and dying wipes part of the bonus."
         },
         "demoYoutubeId": null
       },
@@ -21172,8 +21172,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_goforthethroat.png",
         "description": {
-          "fr": "Se rue sur un héros adverse en prenant forme de worgen et l'éviscère. S'il en meurt, la capacité est aussitôt réutilisable.",
-          "en": "Leaps at an enemy Hero, shifting into worgen form, and eviscerates them. If they die from it, the Ability is immediately reusable."
+          "fr": "Se rue sur un héros adverse en prenant forme de worgen et l'éviscère. S'il en meurt, la capacité peut être relancée gratuitement dans la foulée.",
+          "en": "Leaps at an enemy Hero, shifting into Worgen Form, and eviscerates them. If they die from it, the Ability can be recast for free straight after."
         },
         "demoYoutubeId": null
       },
@@ -21186,8 +21186,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_snapshot.png",
         "description": {
-          "fr": "Grisetête reprend forme humaine et tire une balle qui ampute le premier héros touché d'une part de ses points de vie actuels.",
-          "en": "Greymane returns to human form and fires a bullet that strips the first Hero hit of a share of their current Health."
+          "fr": "Grisetête reprend forme humaine et tire une balle qui ampute le premier héros touché d'une part de ses points de vie actuels. Sans effet sur les véhicules.",
+          "en": "Greymane returns to Human Form and fires a bullet that strips the first Hero hit of a share of their current Health. Has no effect on Vehicles."
         },
         "demoYoutubeId": null
       },
@@ -21200,8 +21200,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_darkflight.png",
         "description": {
-          "fr": "Améliore la portée et le temps de recharge de Sombre course et de Désengagement.",
-          "en": "Improve Darkflight and Disengage range, cooldown"
+          "fr": "Sombre course et Désengagement portent plus loin et reviennent plus vite.",
+          "en": "Darkflight and Disengage reach further and return sooner."
         },
         "demoYoutubeId": null
       },
@@ -21214,8 +21214,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/talents/storm_ui_icon_greymane_swipe.png",
         "description": {
-          "fr": "Augmente la portée de Coup de rasoir et réduit son temps de recharge.",
-          "en": "Increases Razor Swipe range, reduces cooldown"
+          "fr": "Coup de rasoir bondit de bien plus loin, et les attaques de base sous forme de worgen en accélèrent le retour.",
+          "en": "Razor Swipe lunges from much further, and Worgen Basic Attacks speed up its return."
         },
         "demoYoutubeId": null
       },
@@ -21228,8 +21228,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_beastfocus.png",
         "description": {
-          "fr": "Bête intérieure augmente la vitesse de déplacement.",
-          "en": "Inner Beast increases Movement Speed"
+          "fr": "Une fois Bête intérieure active depuis un moment, Grisetête gagne en vitesse de déplacement.",
+          "en": "Once Inner Beast has been active for a while, Greymane gains Movement Speed."
         },
         "demoYoutubeId": null
       },
@@ -21242,8 +21242,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_beastfocus.png",
         "description": {
-          "fr": "Augmente le bonus à la vitesse d'attaque conféré par Bête intérieure.",
-          "en": "Increases Inner Beast Attack Speed"
+          "fr": "Une fois Bête intérieure active depuis un moment, son bonus de vitesse d'attaque grimpe encore.",
+          "en": "Once Inner Beast has been active for a while, its Attack Speed bonus climbs higher still."
         },
         "demoYoutubeId": null
       },
@@ -21270,8 +21270,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/talents/storm_ui_icon_greymane_curseoftheworgen_var1.png",
         "description": {
-          "fr": "Renforce les attaques de base de worgen portées aux héros.",
-          "en": "Increases Worgen Basic Attacks against Heroes"
+          "fr": "Les attaques de base sous forme de worgen infligent aux héros des dégâts supplémentaires proportionnels à leurs points de vie maximum.",
+          "en": "Worgen Basic Attacks deal Heroes bonus damage scaling with their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -21284,8 +21284,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_goforthethroat.png",
         "description": {
-          "fr": "Augmente les dégâts de À la gorge, réinitialise les temps de recharge des capacités.",
-          "en": "Increase Go for the Throat damage, reset Ability cooldowns"
+          "fr": "À la gorge frappe plus fort. Si elle tue sa cible, elle rend son coût en mana et remet toutes les capacités de Grisetête à disposition.",
+          "en": "Go for the Throat hits harder. If it kills its target, it refunds its Mana cost and puts all of Greymane's Abilities back at his disposal."
         },
         "demoYoutubeId": null
       },
@@ -21298,8 +21298,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_snapshot.png",
         "description": {
-          "fr": "Balle maudite inflige moins de dégâts, temps de recharge réduit.",
-          "en": "Cursed Bullet deals less damage, lower cooldown"
+          "fr": "Balle maudite ampute une part un peu moindre des points de vie, mais son temps de recharge est très nettement réduit.",
+          "en": "Cursed Bullet strips a slightly smaller share of Health, but its cooldown drops dramatically."
         },
         "demoYoutubeId": null
       },
@@ -21312,8 +21312,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/spells/storm_ui_icon_greymane_curseoftheworgen.png",
         "description": {
-          "fr": "Ajoute des dégâts de zone aux attaques sous forme d'humain.",
-          "en": "Human Basic Attacks splash"
+          "fr": "Sous forme humaine, les attaques de base éclaboussent les ennemis situés derrière la cible.",
+          "en": "In Human Form, Basic Attacks splash onto the enemies behind the target."
         },
         "demoYoutubeId": null
       },
@@ -21326,8 +21326,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/greymane/images/talents/storm_ui_icon_greymane_curseoftheworgen_var1.png",
         "description": {
-          "fr": "Renforce la forme de worgen.",
-          "en": "Empower Worgen form"
+          "fr": "Les attaques de base sous forme de worgen frappent désormais en arc, et Coup de rasoir fait bien plus mal.",
+          "en": "Worgen Basic Attacks now cleave, and Razor Swipe hits far harder."
         },
         "demoYoutubeId": null
       }
