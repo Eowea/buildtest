@@ -7543,8 +7543,8 @@ const HEROES = [
           "en": "W build"
         },
         "summary": {
-          "fr": "",
-          "en": ""
+          "fr": "Build centré sur la Sentinelle.",
+          "en": "Focused on Sentinel."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -7602,8 +7602,8 @@ const HEROES = [
           "en": "Auto-attack build"
         },
         "summary": {
-          "fr": "",
-          "en": ""
+          "fr": "Build tourné vers les attaques de base.",
+          "en": "Built around Basic Attacks."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -8770,8 +8770,8 @@ const HEROES = [
           "en": "E build"
         },
         "summary": {
-          "fr": "",
-          "en": ""
+          "fr": "Build centré sur la Flagellation.",
+          "en": "Focused on Searing Lash."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -12422,8 +12422,8 @@ const HEROES = [
           "en": "Auto-attack build"
         },
         "summary": {
-          "fr": "",
-          "en": ""
+          "fr": "Build tourné vers les attaques de base.",
+          "en": "Built around Basic Attacks."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -12954,8 +12954,8 @@ const HEROES = [
           "en": "Tank Build"
         },
         "summary": {
-          "fr": "",
-          "en": ""
+          "fr": "Build plus résistant, tourné vers l'engagement et la protection des alliés.",
+          "en": "A tougher build, built around engaging and protecting allies."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -13501,8 +13501,8 @@ const HEROES = [
           "en": "Auto-attack build"
         },
         "summary": {
-          "fr": "",
-          "en": ""
+          "fr": "Build tourné vers les attaques de base.",
+          "en": "Built around Basic Attacks."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -25277,8 +25277,8 @@ const HEROES = [
           "en": "Chains build"
         },
         "summary": {
-          "fr": "",
-          "en": ""
+          "fr": "Build centré sur les Chaînes : combos à répétition.",
+          "en": "Focused on Chains: combos over and over."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -25336,8 +25336,8 @@ const HEROES = [
           "en": "Root build"
         },
         "summary": {
-          "fr": "",
-          "en": ""
+          "fr": "Immobilisations à répétition et dégâts sur les cibles bloquées.",
+          "en": "Repeated Roots and damage on locked-down targets."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -25395,8 +25395,8 @@ const HEROES = [
           "en": "Q build"
         },
         "summary": {
-          "fr": "",
-          "en": ""
+          "fr": "Build centré sur Mort et décomposition, pour le poke et le contrôle de zone.",
+          "en": "Focused on Death and Decay, for poke and area control."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -29330,8 +29330,8 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "",
-          "en": ""
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -34692,8 +34692,8 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "",
-          "en": ""
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -34751,8 +34751,8 @@ const HEROES = [
           "en": "W build"
         },
         "summary": {
-          "fr": "",
-          "en": ""
+          "fr": "Build centré sur le Météore vivant.",
+          "en": "Focused on Living Meteor."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -34810,8 +34810,8 @@ const HEROES = [
           "en": "Q build"
         },
         "summary": {
-          "fr": "",
-          "en": ""
+          "fr": "Build centré sur le Renforcement de Sulfuras et les attaques de base.",
+          "en": "Focused on Empower Sulfuras and Basic Attacks."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -38704,8 +38704,8 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "",
-          "en": ""
+          "fr": "Build qui passe partout, peu importe le mode de jeu.",
+          "en": "A build that works in any situation, no matter the game mode."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
@@ -38763,8 +38763,8 @@ const HEROES = [
           "en": "W build"
         },
         "summary": {
-          "fr": "",
-          "en": ""
+          "fr": "Build centré sur la Tempête psionique : dégâts de zone continus.",
+          "en": "Focused on Psionic Storm: sustained area damage."
         },
         "buildCodeTitle": {
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
