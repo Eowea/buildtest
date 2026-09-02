@@ -20953,19 +20953,6 @@ const HEROES = [
         "demoYoutubeId": ""
       },
       {
-        "key": "W",
-        "name": {
-          "fr": "Appeler une monture",
-          "en": "Summon Mount"
-        },
-        "icon": "assets/heroes/base_spells/generic/images/spells/storm_ui_icon_generic_mount.png",
-        "description": {
-          "fr": "Reprend forme humaine et accélère.",
-          "en": "Returns to human form and speeds up."
-        },
-        "demoYoutubeId": ""
-      },
-      {
         "key": "R1",
         "name": {
           "fr": "À la gorge",
@@ -21380,7 +21367,8 @@ const HEROES = [
         }
       }
     ],
-    "codeKey": "Greymane"
+    "codeKey": "Greymane",
+    "bugs": []
   },
   {
     "id": "guldan",
