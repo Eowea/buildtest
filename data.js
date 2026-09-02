@@ -1954,8 +1954,8 @@ const HEROES = [
         "en": "Use your Polymorph (W) to interrupt enemy channels or protect your allies."
       },
       {
-        "fr": "Garde un oeil sur la mini-carte pour ton global.",
-        "en": "Keep an eye on the minimap to use your global effectively."
+        "fr": "Garde un œil sur la mini-carte pour ton global (W) : Déphasage te téléporte sur n'importe quel allié.",
+        "en": "Keep an eye on the minimap for your global (Z): Phase Shift teleports you to any ally."
       },
       {
         "fr": "Essaye d'utiliser Poudre de perlimpinpin (E) sur allié quand il va se faire burst.",
@@ -3622,8 +3622,8 @@ const HEROES = [
         "en": "Save the grenade (W) to prevent an enemy rescue."
       },
       {
-        "fr": "Place-toi très en arrière pour soigner.",
-        "en": "Position yourself very far back to heal."
+        "fr": "Place-toi très en arrière : Fléchette soignante (A) porte assez loin pour soigner de là.",
+        "en": "Position yourself very far back: Healing Dart (Q) reaches far enough to heal from there."
       },
       {
         "fr": "Lorsque tu touches un ennemi avec Fléchette hypodermique (E), pendant 0,5secondes il ne peut pas être réveillé. ",
@@ -4723,8 +4723,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tape sans arrêt pour maximiser ton passif. ",
-        "en": "Attack constantly to maximize your passive."
+        "fr": "Tape sans arrêt pour maximiser ton passif (D).",
+        "en": "Attack constantly to maximize your passive (D)."
       },
       {
         "fr": "Garde une charge de Frappe éclair (A) pour fuir.",
@@ -5285,8 +5285,8 @@ const HEROES = [
         "en": "Hold down Healing Brew (Q) during combat."
       },
       {
-        "fr": "Approche toi de la cible que tu veux soigner.",
-        "en": "Move closer to the target you want to heal."
+        "fr": "Approche-toi de la cible que tu veux soigner : Infusion requinquante (A) part toujours sur l'allié le plus bas à portée.",
+        "en": "Move closer to the target you want to heal: Healing Brew (Q) always goes to the lowest-Health ally in range."
       },
       {
         "fr": "De temps en temps, prends des dégâts pour bénéficier de ton trait (D).",
@@ -5883,8 +5883,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tu peux soigner les serviteurs.",
-        "en": "You can heal the minions."
+        "fr": "Tu peux soigner les serviteurs avec Rayon de soins (A).",
+        "en": "You can heal Minions with Healing Beam (Q)."
       },
       {
         "fr": "Ta grenade (E) est ton seul moyen de te défendre.",
@@ -7510,8 +7510,8 @@ const HEROES = [
         "en": "Use your Owl (W) to scout Bosses."
       },
       {
-        "fr": "Marque la cible que ton tank engage.",
-        "en": "Mark the target your tank engages on."
+        "fr": "Pose Marque du chasseur (D) sur la cible que ton tank engage.",
+        "en": "Put Hunter's Mark (D) on the target your tank engages."
       },
       {
         "fr": "Les dégâts que fait Tyrande réduisent le temps de recharge de Lumière d'Élune (A), même les dégâts de sa capacité héroïque !",
@@ -8168,12 +8168,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "N'utilise pas tes soins juste pour la vie, utilise-les pour l'armure.",
-        "en": "Do not just heal for HP, use heals for the armor buff."
+        "fr": "N'utilise pas tes soins juste pour la vie : chaque capacité de base donne aussi de l'armure grâce à Dévotion (D).",
+        "en": "Don't just heal for HP: every Basic Ability also grants Armor through Devotion (D)."
       },
       {
-        "fr": "N'hésite pas à mourir pour sauver ton équipe.",
-        "en": "Do not hesitate to die to save your team as a ghost."
+        "fr": "N'hésite pas à mourir pour sauver ton équipe : Dévotion (D) te laisse encore agir en esprit.",
+        "en": "Don't hesitate to die to save your team: Devotion (D) still lets you act as a spirit."
       },
       {
         "fr": "Utilise ton Bouclier Divin (R) quand ton allié saute dedans ou qu'il va prendre d'énormes dégâts ou contrôles, et pas quand il est sur le point de mourir.",
@@ -9351,16 +9351,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Pense à toujours être en Wall Ride afin de profiter au maximum de ta mobilité.",
-        "en": "Remember to always stay in the Wall Ride position to make the most of your mobility."
+        "fr": "Pense à toujours être en Wall Ride : c'est ce qui porte ta mobilité et ouvre Saute-muraille (D).",
+        "en": "Remember to always stay on Wall Ride: it carries your mobility and unlocks Push Off (D)."
       },
       {
         "fr": "Ton Onde Sonore (A) servira dans la majorité des cas à protéger tes alliés et non à juste faire des dégâts.",
         "en": "In most cases, your Soundwave (Q) will be used to protect your allies rather than just to deal damage."
       },
       {
-        "fr": "Le beat de Soin est de couleur jaune, et non vert qui est le Beat de déplacement. ",
-        "en": "Healing's beat is yellow, not green, which is the movement beat. "
+        "fr": "Le beat de soin de Crossfade (Z) est jaune, le vert est celui de vitesse.",
+        "en": "Crossfade's (W) healing beat is yellow, the green one is speed."
       }
     ],
     "builds": [
@@ -10964,8 +10964,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tes scarabées peuvent servir pour tanker les sorts et aussi assiéger les bâtiments.",
-        "en": "Your beetles can be used to absorb spells and also to lay siege to buildings."
+        "fr": "Tes scarabées (D) peuvent servir à tanker les sorts et à assiéger les bâtiments.",
+        "en": "Your Beetles (D) can be used to soak spells and to siege buildings."
       },
       {
         "fr": "Utilise ton Empale (A) en premier pour sécuriser ta Charge enfouie (E) et ne pas la louper.",
@@ -12433,8 +12433,8 @@ const HEROES = [
         "en": "All Shall Burn (E) heavily Slows you: never channel it unprotected."
       },
       {
-        "fr": "Tes démons peuvent tanker les sorts ennemis.",
-        "en": "Your demons can tank enemy spells."
+        "fr": "Tes Guerriers démoniaques (Z) peuvent tanker les sorts ennemis.",
+        "en": "Your Demon Warriors (W) can tank enemy spells."
       }
     ],
     "builds": [
@@ -13507,16 +13507,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ne t'arrête jamais : ton armure disparaît presque aussitôt à l'arrêt.",
-        "en": "Never stand still: your Armor falls off almost immediately."
+        "fr": "Ne t'arrête jamais : l'armure de Fluidité (D) disparaît presque aussitôt à l'arrêt.",
+        "en": "Never stand still: Avoidance (D) Armor falls off almost immediately."
       },
       {
-        "fr": "Aveugle d'abord, frappe ensuite : tu fais bien plus mal aux cibles aveuglées.",
-        "en": "Blind first, then strike: you hit Blinded targets far harder."
+        "fr": "Aveugle avec Lumière aveuglante (Z) d'abord, frappe ensuite : tu fais bien plus mal aux cibles aveuglées.",
+        "en": "Blind with Blinding Light (W) first, then strike: you hit Blinded targets far harder."
       },
       {
-        "fr": "Javelot foudroyant se scinde à l'impact : tu peux donc faire plus de dégâts pendant une phase de siège.",
-        "en": "Lightning Fury splits upon impact, allowing you to deal more damage during a siege."
+        "fr": "Javelot foudroyant (A) se scinde à l'impact : tu peux donc faire plus de dégâts pendant une phase de siège.",
+        "en": "Lightning Fury (Q) splits upon impact, allowing you to deal more damage during a siege."
       }
     ],
     "builds": [
@@ -15572,8 +15572,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tes plaques d'armure ne se rechargent qu'en vol : décolle pour les regagner.",
-        "en": "Your Armor Plates only recharge while flying: take off to get them back."
+        "fr": "Tes plaques d'armure (D) ne se rechargent qu'en Vol draconique (W) : décolle pour les regagner.",
+        "en": "Your Armor Plates (D) only recharge during Dragonflight (Z): take off to get them back."
       },
       {
         "fr": "Forme Destructeur (A) pour le corps à corps, Brise-monde (Z) pour le contrôle de zone.",
@@ -16556,8 +16556,8 @@ const HEROES = [
         "en": "Overpower (E) slams the target behind you: stand between them and their escape."
       },
       {
-        "fr": "Si tu as toutes tes âmes, n'est pas peur de mourir tu reviens juste après.",
-        "en": "If you have all your souls, don't be afraid to die—you'll just come back right away."
+        "fr": "Si ta Pierre d'âme noire (D) est pleine, n'aie pas peur de mourir : tu reviens juste après.",
+        "en": "If your Black Soulstone (D) is full, don't be afraid to die: you come back right away."
       }
     ],
     "builds": [
@@ -19009,7 +19009,7 @@ const HEROES = [
   },
   {
     "id": "gall",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Gall",
       "en": "Gall"
@@ -19033,8 +19033,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_ogrerage.png",
         "description": {
-          "fr": "Augmente les dégâts de Gall à l'activation, au prix de l'armure de Cho. Effet passif : Gall ne peut être ni étourdi ni réduit au silence.",
-          "en": "Increases Gall's damage on activation, at the cost of Cho's Armor. Passive: Gall cannot be Stunned or Silenced."
+          "fr": "Augmente les dégâts de Gall à l'activation, au prix d'une partie de l'armure de Cho. Effet passif : Gall ne peut être ni étourdi ni réduit au silence.",
+          "en": "Activate to increase Gall's damage, at the cost of some of Cho's Armor. Passive: Gall can be neither Stunned nor Silenced."
         },
         "demoYoutubeId": ""
       },
@@ -19046,8 +19046,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_shadowflame.png",
         "description": {
-          "fr": "Blesse les ennemis sur une trajectoire rectiligne étroite.",
-          "en": "Blast enemies in a narrow line"
+          "fr": "Blesse aussitôt tous les ennemis présents dans la zone ciblée.",
+          "en": "Instantly damages every enemy in the target area."
         },
         "demoYoutubeId": ""
       },
@@ -19059,8 +19059,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_chaoscollision.png",
         "description": {
-          "fr": "Lance une boule d'énergie qui rebondit trois fois en blessant les ennemis qu'elle touche.",
-          "en": "Lob a ball of energy that bounces three times, damaging enemies it hits"
+          "fr": "Lance une bombe qui rebondit trois fois en blessant les ennemis à chaque impact.",
+          "en": "Throws a bomb that bounces three times, damaging enemies on each impact."
         },
         "demoYoutubeId": ""
       },
@@ -19072,8 +19072,21 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_detonaterunes.png",
         "description": {
-          "fr": "Fait exploser la bombe runique de Cho en infligeant des dégâts de zone.",
-          "en": "Detonate Cho's Rune Bomb, dealing area damage"
+          "fr": "Fait exploser la Bombe runique lancée par Cho : elle blesse les ennemis tout autour d'elle.",
+          "en": "Detonates the Rune Bomb thrown by Cho, damaging enemies all around it."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "&",
+        "name": {
+          "fr": "Œil de Kilrogg",
+          "en": "Eye of Kilrogg"
+        },
+        "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_eyeofkilrogg.png",
+        "description": {
+          "fr": "Pose un œil qui révèle une large zone autour de lui. Les ennemis peuvent le détruire en quelques attaques de base. Se cumule en charges.",
+          "en": "Places an eye that reveals a wide area around it. Enemies can destroy it with a few Basic Attacks. Stores charges."
         },
         "demoYoutubeId": ""
       },
@@ -19085,8 +19098,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_shove.png",
         "description": {
-          "fr": "Pousse Cho sur une courte distance.",
-          "en": "Nudge Cho a short distance"
+          "fr": "Pousse Cho sur quelques mètres et augmente sa vitesse de déplacement un court instant.",
+          "en": "Nudges Cho a few feet and briefly increases his Movement Speed."
         },
         "demoYoutubeId": ""
       },
@@ -19098,8 +19111,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_twistingnether_a.png",
         "description": {
-          "fr": "Blesse les ennemis proches à l'activation, puis les ralentit tant que Gall canalise la capacité.",
-          "en": "Damages nearby enemies on activation, then Slows them for as long as Gall channels the Ability."
+          "fr": "Blesse les ennemis proches à l'activation, puis les ralentit fortement tant que Gall canalise la capacité.",
+          "en": "Damages nearby enemies on activation, then heavily Slows them for as long as Gall channels."
         },
         "demoYoutubeId": ""
       },
@@ -19111,24 +19124,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_shadowboltvolley.png",
         "description": {
-          "fr": "Après un court délai, déchaîne une longue salve de traits de l'ombre qui suivent le pointeur.",
-          "en": "After a short delay, unleashes a long volley of shadow bolts that follow the cursor."
+          "fr": "Après un court délai, déchaîne une longue salve de traits de l'ombre qui suivent le pointeur. Chaque trait s'arrête sur le premier ennemi touché.",
+          "en": "After a short delay, unleashes a long volley of Shadow Bolts that follow the cursor. Each bolt stops on the first enemy hit."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Communique en permanence avec ton Cho : tu ne choisis pas où tu vas.",
-        "en": "Communicate constantly with your Cho: you do not choose where you go."
+        "fr": "Ombreflamme (A) est ton gros dégât et il part instantanément : balance-la dès qu'elle est up plutôt que de la garder pour un combo.",
+        "en": "Shadowflame (Q) is your big damage and it lands instantly: throw it the moment it's up instead of saving it for a combo."
       },
       {
-        "fr": "Orbe funeste rebondit trois fois : anticipe les rebonds plutôt que la cible.",
-        "en": "Dread Orb bounces three times: aim for the bounces, not the target."
+        "fr": "Explosion runique (E) ne part que si Cho a lancé sa Bombe runique : demande-lui de la call, sinon tu perds ton meilleur burst.",
+        "en": "Runic Blast (E) only fires if Cho has thrown his Rune Bomb: ask him to call it, or you lose your best burst."
       },
       {
-        "fr": "Rage d'ogre te renforce mais fragilise Cho : ne l'active pas pendant un engagement.",
-        "en": "Ogre Rage empowers you but weakens Cho: do not use it during an engage."
+        "fr": "Rage d'ogre (D) te boost mais fait fondre l'armure de Cho : ne la pop pas quand il se fait focus, garde-la pour poke tranquille.",
+        "en": "Ogre Rage (D) buffs you but melts Cho's Armor: don't pop it while he's getting focused, save it for safe poke."
       }
     ],
     "builds": [
@@ -19204,8 +19217,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_shove.png",
         "description": {
-          "fr": "Augmente la durée et l'intensité du bonus à la vitesse de déplacement conféré par Bourrade.",
-          "en": "Increased Shove Move Speed amount and duration"
+          "fr": "Augmente le bonus à la vitesse de déplacement conféré par Bourrade et en prolonge la durée.",
+          "en": "Increases the Movement Speed bonus Shove grants and extends its duration."
         },
         "demoYoutubeId": null
       },
@@ -19218,8 +19231,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/talents/storm_ui_icon_gall_shove_a.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Bourrade.",
-          "en": "Reduce Shove's cooldown"
+          "fr": "Chaque attaque de base d'un héros encaissée par Cho réduit le temps de recharge de Bourrade.",
+          "en": "Every Hero Basic Attack Cho takes reduces Shove's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -19232,8 +19245,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/talents/storm_ui_icon_gall_eyeofkilrogg.png",
         "description": {
-          "fr": "Réduit le temps de recharge d'Œil de Kilrogg.",
-          "en": "Lower Eye of Kilrogg cooldown"
+          "fr": "Réduit fortement le temps de recharge d'Œil de Kilrogg, augmente sa portée de pose, et il encaisse une attaque de base de plus avant d'être détruit.",
+          "en": "Greatly reduces Eye of Kilrogg's cooldown, increases how far it can be placed, and it survives one more Basic Attack."
         },
         "demoYoutubeId": null
       },
@@ -19246,8 +19259,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_chaoscollision.png",
         "description": {
-          "fr": "Augmente les dégâts et l'aire d'effet d'Orbe funeste.",
-          "en": "Increase Dread Orb area and damage"
+          "fr": "Chaque rebond d'Orbe funeste élargit sa zone et augmente ses dégâts. Relancer la capacité avant la fin du deuxième rebond inverse la trajectoire du troisième.",
+          "en": "Each bounce of Dread Orb widens its area and increases its damage. Recasting before the second bounce ends reverses the direction of the third."
         },
         "demoYoutubeId": null
       },
@@ -19260,8 +19273,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_detonaterunes.png",
         "description": {
-          "fr": "Explosion runique inflige des dégâts supplémentaires sur la durée.",
-          "en": "Runic Blast deals additional damage over time"
+          "fr": "Explosion runique laisse une zone qui blesse encore les ennemis pendant quelques secondes.",
+          "en": "Runic Blast leaves an area that keeps damaging enemies for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -19274,8 +19287,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/cho/images/talents/storm_ui_icon_cho_runebomb_var1.png",
         "description": {
-          "fr": "Quête : renforce Explosion runique.",
-          "en": "Quest: Empower Runic Blast"
+          "fr": "Quête : toucher un héros avec Explosion runique en augmente définitivement les dégâts, jusqu'à un plafond. Récompense : au bout d'un certain nombre de héros touchés, la Bombe runique de Cho gagne en portée et en vitesse.",
+          "en": "Quest: hitting a Hero with Runic Blast permanently increases its damage, up to a cap. Reward: after enough Heroes are hit, Cho's Rune Bomb gains range and speed."
         },
         "demoYoutubeId": null
       },
@@ -19288,8 +19301,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_shadowflame.png",
         "description": {
-          "fr": "Augmente les dégâts d'Ombreflamme.",
-          "en": "Increase Shadowflame damage"
+          "fr": "Chaque Ombreflamme qui retouche le même héros lui inflige davantage de dégâts, jusqu'à un plafond. Le cumul retombe si ce héros reste quelques secondes sans être touché.",
+          "en": "Each Shadowflame that hits the same Hero again deals more damage, up to a cap. The stacks fall off if that Hero goes a few seconds without being hit."
         },
         "demoYoutubeId": null
       },
@@ -19302,8 +19315,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/talents/storm_ui_icon_gall_shadowflame_var1.png",
         "description": {
-          "fr": "Quête : réduit le temps de recharge d'Ombreflamme.",
-          "en": "Quest: Lower Shadowflame's cooldown"
+          "fr": "Quête : toucher avec Ombreflamme un héros affecté par Flambée dévorante de Cho en réduit le temps de recharge. Récompense : au bout d'un certain nombre de héros touchés, la réduction devient permanente.",
+          "en": "Quest: hitting a Hero afflicted by Cho's Consuming Blaze with Shadowflame reduces its cooldown. Reward: after enough Heroes are hit, the reduction becomes permanent."
         },
         "demoYoutubeId": null
       },
@@ -19316,8 +19329,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_ogrerage.png",
         "description": {
-          "fr": "Renforce Rage d'ogre.",
-          "en": "Empower Ogre Rage"
+          "fr": "Augmente le bonus aux dégâts de Rage d'ogre. Chaque héros blessé pendant qu'elle est active fait encore monter ce bonus, jusqu'à un plafond.",
+          "en": "Increases Ogre Rage's damage bonus. Each Hero damaged while it is active pushes that bonus higher, up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -19330,8 +19343,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_shadowboltvolley.png",
         "description": {
-          "fr": "Après un court délai, déchaîne une longue salve de traits de l'ombre qui suivent le pointeur.",
-          "en": "After a short delay, unleashes a long volley of shadow bolts that follow the cursor."
+          "fr": "Après un court délai, déchaîne une longue salve de traits de l'ombre qui suivent le pointeur. Chaque trait s'arrête sur le premier ennemi touché.",
+          "en": "After a short delay, unleashes a long volley of Shadow Bolts that follow the cursor. Each bolt stops on the first enemy hit."
         },
         "demoYoutubeId": null
       },
@@ -19344,8 +19357,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_twistingnether_a.png",
         "description": {
-          "fr": "Blesse les ennemis proches à l'activation, puis les ralentit tant que Gall canalise la capacité.",
-          "en": "Damages nearby enemies on activation, then Slows them for as long as Gall channels the Ability."
+          "fr": "Blesse les ennemis proches à l'activation, puis les ralentit fortement tant que Gall canalise la capacité.",
+          "en": "Damages nearby enemies on activation, then heavily Slows them for as long as Gall channels."
         },
         "demoYoutubeId": null
       },
@@ -19358,8 +19371,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_shadowflame.png",
         "description": {
-          "fr": "Augmente les dégâts qu'Ombreflamme inflige aux héros.",
-          "en": "Increased Shadowflame Hero damage"
+          "fr": "Les héros touchés par Ombreflamme subissent des dégâts supplémentaires proportionnels à leurs points de vie maximum.",
+          "en": "Heroes hit by Shadowflame take bonus damage based on their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -19372,8 +19385,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/talents/storm_ui_icon_gall_psychoticbreak.png",
         "description": {
-          "fr": "Augmente les dégâts contre les héros, et peut lancer des capacités après la mort.",
-          "en": "Gain damage to Heroes, cast Abilities after death"
+          "fr": "Augmente les dégâts infligés aux héros. En cas de mort, Gall obtient Rage d'ogre et peut encore lancer ses capacités un court moment.",
+          "en": "Increases damage dealt to Heroes. On death, Gall gains Ogre Rage and can still cast his Abilities for a short while."
         },
         "demoYoutubeId": null
       },
@@ -19386,8 +19399,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/talents/storm_ui_icon_gall_chaoscollision_var1.png",
         "description": {
-          "fr": "Orbe funeste lance des bombes supplémentaires.",
-          "en": "Dread Orb launches extra bombs."
+          "fr": "Après le premier rebond d'Orbe funeste, deux bombes supplémentaires partent rebondir sur les côtés.",
+          "en": "After Dread Orb's first bounce, two extra bombs bounce off to the sides."
         },
         "demoYoutubeId": null
       },
@@ -19400,8 +19413,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_chaoscollision.png",
         "description": {
-          "fr": "Orbe funeste étourdit.",
-          "en": "Dread Orb Stuns"
+          "fr": "Orbe funeste étourdit brièvement les héros touchés.",
+          "en": "Dread Orb briefly Stuns the Heroes it hits."
         },
         "demoYoutubeId": null
       },
@@ -19414,8 +19427,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_detonaterunes.png",
         "description": {
-          "fr": "Explosion runique réduit au silence.",
-          "en": "Runic Blast Silences"
+          "fr": "Explosion runique réduit les héros touchés au silence.",
+          "en": "Runic Blast Silences the Heroes it hits."
         },
         "demoYoutubeId": null
       },
@@ -19428,8 +19441,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/talents/storm_ui_icon_gall_twoheaded.png",
         "description": {
-          "fr": "Les capacités de base ralentissent les héros.",
-          "en": "Basic Abilities Slow Heroes"
+          "fr": "Les héros touchés par les capacités de base de Gall sont ralentis, et l'effet se cumule deux fois.",
+          "en": "Heroes hit by Gall's Basic Abilities are Slowed, and the effect stacks twice."
         },
         "demoYoutubeId": null
       },
@@ -19442,8 +19455,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_shadowboltvolley.png",
         "description": {
-          "fr": "Salve de traits de l'ombre transperce les ennemis.",
-          "en": "Shadow Bolt Volley pierces"
+          "fr": "Les traits de l'ombre ne s'arrêtent plus au premier ennemi et frappent tout ce qui se trouve sur leur passage.",
+          "en": "Shadow Bolts no longer stop on the first enemy and hit everything in their path."
         },
         "demoYoutubeId": null
       },
@@ -19457,7 +19470,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_twistingnether_a.png",
         "description": {
           "fr": "Néant distordu téléporte Cho à l'endroit ciblé avant que la canalisation ne commence.",
-          "en": "Twisting Nether teleports Cho to the target location before the channel begins."
+          "en": "Twisting Nether teleports Cho to the targeted spot before the channel begins."
         },
         "demoYoutubeId": null
       },
@@ -19470,8 +19483,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/spells/storm_ui_icon_gall_ogrerage.png",
         "description": {
-          "fr": "Faire des victimes augmente le bonus aux dégâts conféré par Rage d'ogre.",
-          "en": "Takedowns increase Ogre Rage's Damage Bonus"
+          "fr": "Chaque victime augmente définitivement le bonus aux dégâts conféré par Rage d'ogre.",
+          "en": "Each Takedown permanently increases Ogre Rage's damage bonus."
         },
         "demoYoutubeId": null
       },
@@ -19484,15 +19497,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gall/images/talents/storm_ui_icon_gall_psychoticbreak.png",
         "description": {
-          "fr": "Réduit les temps de recharge.",
-          "en": "Activate to reduce cooldowns"
+          "fr": "À l'activation, réduit fortement les temps de recharge d'Ombreflamme et d'Orbe funeste pendant quelques secondes.",
+          "en": "Activate to sharply reduce the cooldowns of Shadowflame and Dread Orb for a few seconds."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Gall",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "garrosh",
@@ -21071,16 +21084,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ton passage en worgen est ton moment le plus vulnérable : n'entre que si ton équipe a déjà posé son contrôle.",
-        "en": "Shifting into Worgen is when you're most exposed: only go in once your team has landed its crowd control."
+        "fr": "Ton passage en worgen (D) est ton moment le plus vulnérable : n'entre que si ton équipe a déjà posé son contrôle.",
+        "en": "Shifting into Worgen (D) is when you're most exposed: only go in once your team has landed its crowd control."
       },
       {
         "fr": "Balle maudite (R) te repasse en forme humaine, mais elle ne te propulse pas comme Désengagement.",
         "en": "Cursed Bullet (R) shifts you back to Human Form, but it doesn't launch you clear the way Disengage does."
       },
       {
-        "fr": "L'armure de la forme worgen est là pour encaisser : reste au corps à corps tant que tu frappes, repasse humain dès qu'on te bloque.",
-        "en": "Worgen Form's Armor is there to soak: stay in melee while you're landing hits, shift back to Human the moment you get locked down."
+        "fr": "L'armure de la forme worgen (D) est là pour encaisser : reste au corps à corps tant que tu frappes, repasse humain dès qu'on te bloque.",
+        "en": "Worgen Form's Armor (D) is there to soak: stay in melee while you're landing hits, shift back to Human the moment you get locked down."
       }
     ],
     "builds": [
@@ -23969,8 +23982,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Glace d'abord, frappe ensuite : tes sorts font bien plus mal à une cible déjà glacée.",
-        "en": "Chill first, then strike: your spells hurt far more against an already Chilled target."
+        "fr": "Glace d'abord, frappe ensuite : Morsure de givre (D) fait bien plus mal à une cible déjà glacée.",
+        "en": "Chill first, then strike: Frostbite (D) hurts far more against an already Chilled target."
       },
       {
         "fr": "Anneau de givre (R) met un temps avant de se refermer : pose-le là où l'ennemi ira, pas là où il est.",
@@ -25445,8 +25458,8 @@ const HEROES = [
         "en": "Your combo is Chains (E), Frost Nova (W) between the targets, then Chains again: taken separately, your spells do almost nothing."
       },
       {
-        "fr": "Remplis ta quête de chancre le plus tôt possible : tout ton pic de dégâts en dépend.",
-        "en": "Finish your Blight quest as early as you can: your whole damage spike depends on it."
+        "fr": "Remplis la quête de chancre de ton trait (D) le plus tôt possible : tout ton pic de dégâts en dépend.",
+        "en": "Finish your trait's (D) Blight quest as early as you can: your whole damage spike depends on it."
       },
       {
         "fr": "Tu n'as aucune échappatoire : un héros mobile te tue avant que tes sorts ne touchent, reste derrière ton équipe.",
@@ -26983,12 +26996,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Une élimination remet tes sorts à zéro : enchaîne immédiatement.",
-        "en": "A takedown resets your abilities: chain immediately."
+        "fr": "Masse critique (D) remet tous tes sorts à zéro à chaque élimination : enchaîne immédiatement.",
+        "en": "Critical Mass (D) resets all your Abilities on every Takedown: chain immediately."
       },
       {
-        "fr": "Pense à poke les structure de temps en temps.",
-        "en": "Remember to poke the structures from time to time."
+        "fr": "Pense à poke les structures à l'Orbe arcanique (Z) de temps en temps.",
+        "en": "Remember to poke structures with Arcane Orb (W) from time to time."
       },
       {
         "fr": "Téléportation (E) peut annuler des attaques de base des héros ou structures.",
@@ -29039,8 +29052,8 @@ const HEROES = [
         "en": "Use Night Rush (E) to reach as many people as possible with Fel Claws (Q)."
       },
       {
-        "fr": "Reste au contact de plusieurs ennemis pour maximiser tes soins.",
-        "en": "Stay in contact with several enemies to maximize your healing."
+        "fr": "Reste au contact de plusieurs ennemis : Toucher vampirique (D) te rend une part de tous les dégâts que tu infliges.",
+        "en": "Stay in contact with several enemies: Vampiric Touch (D) returns part of all the damage you deal."
       }
     ],
     "builds": [
@@ -29510,12 +29523,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tes attaques de base frappent en arc : balaie plusieurs ennemis pour en marquer un maximum plutôt que de t'acharner sur un seul.",
-        "en": "Your Basic Attacks hit in an arc: sweep several enemies to spread your Marks instead of tunnelling one."
+        "fr": "Tes attaques de base frappent en arc : balaie plusieurs ennemis pour poser un maximum de Marques du faucheur (D) plutôt que de t'acharner sur un seul.",
+        "en": "Your Basic Attacks hit in an arc: sweep several enemies to spread Reaper's Mark (D) instead of tunnelling one."
       },
       {
-        "fr": "N'engage jamais seul : harcèle la frontline jusqu'à ce qu'elle brûle ses contrôles, puis rentre dedans.",
-        "en": "Never engage alone: poke the frontline until it burns its crowd control, then go in."
+        "fr": "N'engage jamais seul : harcèle la frontline à la Moisson d'âmes (A) jusqu'à ce qu'elle brûle ses contrôles, puis rentre dedans.",
+        "en": "Never engage alone: poke the frontline with Soul Rip (Q) until it burns its crowd control, then go in."
       },
       {
         "fr": "Extrême-onction (R) ne se garde pas : lance-la dès qu'elle peut achever une cible, chaque victime en réduit définitivement le temps de recharge.",
@@ -32392,8 +32405,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tu n'es pas obligé d'avoir tes stacks pour le talent 20 à la fin de la game !",
-        "en": "You don't need to have your stacks for Talent 20 by the end of the game!"
+        "fr": "Tu n'es pas obligé d'avoir tous tes cumuls de Rituel vaudou (D) pour le talent 20 à la fin de la game !",
+        "en": "You don't need all your Voodoo Ritual (D) stacks for the level 20 talent by the end of the game!"
       },
       {
         "fr": "Mur de zombies (Z) bloque les gens à l'intérieur, pense à le désactiver si c'est un allié.",
@@ -37962,8 +37975,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tant que les ennemis ne te voient pas, ils ont peur de se faire attraper.",
-        "en": "As long as the enemies don't see you, they're afraid of getting caught."
+        "fr": "Tant que les ennemis ne te voient pas, ils ont peur de se faire attraper au Crochet (A).",
+        "en": "As long as enemies can't see you, they're afraid of getting caught by Hook (Q)."
       },
       {
         "fr": "Main secourable (&) peut sauver un allié et le rend Insensible pendant la trajectoire.",
@@ -38923,8 +38936,8 @@ const HEROES = [
         "en": "Keep Resonance Beam (D) up: it's what pays your Mana, and chaining Shock Ray into Psionic Storm drains you in no time."
       },
       {
-        "fr": "Tes sorts se placent, ils ne se lancent pas : attends le contrôle d'un allié plutôt que d'espérer toucher une cible mobile.",
-        "en": "Your spells are placed, not thrown: wait for an ally's crowd control instead of hoping to land on a mobile target."
+        "fr": "Tempête psionique (Z) et Mur de force (E) se placent, ils ne se lancent pas : attends le contrôle d'un allié plutôt que d'espérer toucher une cible mobile.",
+        "en": "Psionic Storm (W) and Force Wall (E) are placed, not thrown: wait for an ally's crowd control instead of hoping to land on a mobile target."
       },
       {
         "fr": "Mur de force (E) coupe aussi les tiens : mal posé, il enferme ton équipe au lieu de sauver quelqu'un.",
@@ -41447,8 +41460,8 @@ const HEROES = [
         "en": "Righteousness (W) also Shields nearby allies: stand between them and the enemy."
       },
       {
-        "fr": "Ta mort déclenche une explosion : elle inflige des dégâts, réduit les dégâts des ennemis et te faire réapparaitre plus vite.",
-        "en": "Your death triggers an explosion: it deals damage, reduces damage from enemies, and makes you respawn faster."
+        "fr": "Courroux de l'archange (D) explose à ta mort : il inflige des dégâts, réduit ceux des ennemis et te fait réapparaître plus vite.",
+        "en": "Archangel's Wrath (D) explodes on your death: it deals damage, reduces enemy damage and makes you respawn faster."
       }
     ],
     "builds": [
@@ -42492,12 +42505,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tes stacks de haine tombent si tu ne frappes rien pendant quelques secondes : remonte-les sur les serviteurs avant un fight au lieu d'engager à vide.",
-        "en": "Your Hatred stacks drop if you hit nothing for a few seconds: stack them back up on Minions before a fight instead of engaging empty."
+        "fr": "Tes stacks de haine (D) tombent si tu ne frappes rien pendant quelques secondes : remonte-les sur les serviteurs avant un fight au lieu d'engager à vide.",
+        "en": "Your Hatred (D) stacks drop if you hit nothing for a few seconds: stack them back up on Minions before a fight instead of engaging empty."
       },
       {
-        "fr": "Acrobatie est ton seul disengage : la cramer pour dive une cible te laisse sans issue quand l'équipe d'en face se retourne sur toi.",
-        "en": "Vault is your only disengage: burning it to dive a target leaves you with no way out when the enemy team turns on you."
+        "fr": "Acrobatie (E) est ton seul disengage : la cramer pour dive une cible te laisse sans issue quand l'équipe d'en face se retourne sur toi.",
+        "en": "Vault (E) is your only disengage: burning it to dive a target leaves you with no way out when the enemy team turns on you."
       },
       {
         "fr": "Rafale (R) saute au moindre CC : lance-la quand les contrôles adverses sont down, et kite pendant qu'elle tire.",
@@ -44509,8 +44522,8 @@ const HEROES = [
         "en": "Hunter Killer (W) is an excellent ranged damage source."
       },
       {
-        "fr": "Tes invocations peuvent tanker les sorts ennemis.",
-        "en": "Your summons can tank enemy spells."
+        "fr": "Tes invocations (Z et E) peuvent tanker les sorts ennemis.",
+        "en": "Your summons (W and E) can tank enemy spells."
       }
     ],
     "builds": [
