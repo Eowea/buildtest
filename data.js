@@ -40201,7 +40201,7 @@ const HEROES = [
           "fr": "Transfert",
           "en": "Blink"
         },
-        "icon": "assets/heroes/base_spells/tracer/images/spells/storm_ui_icon_tracer_blink_empty.png",
+        "icon": "assets/heroes/base_spells/tracer/images/talents/storm_ui_icon_tracer_blink.png",
         "description": {
           "fr": "Fonce vers l'endroit ciblé. Possède plusieurs charges.",
           "en": "Dashes to the target location. Has multiple charges."
@@ -40635,7 +40635,12 @@ const HEROES = [
       }
     ],
     "forms": [],
-    "codeKey": "Tracer"
+    "codeKey": "Tracer",
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "tychus",
