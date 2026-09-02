@@ -34984,7 +34984,7 @@ const HEROES = [
           "fr": "Comète",
           "en": "Shifting Meteor"
         },
-        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_shiftingmeteor.png",
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_livingmeteor.png",
         "description": {
           "fr": "Météore vivant inflige davantage de dégâts à chaque fois qu'il touche le même ennemi. Quête : toucher des héros avec lui allonge sa durée et permet de changer sa direction en cours de route.",
           "en": "Living Meteor deals more damage each time it hits the same enemy. Quest: hitting Heroes with it extends its duration and lets it change direction mid-course."
@@ -35054,7 +35054,7 @@ const HEROES = [
           "fr": "Main de Ragnaros",
           "en": "Hand of Ragnaros"
         },
-        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_empowersulfuras_active.png",
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_empowersulfuras.png",
         "description": {
           "fr": "Si Renforcement de Sulfuras touche plusieurs héros, il rend du mana et son temps de recharge s'écoule bien plus vite pendant quelques secondes.",
           "en": "If Empower Sulfuras hits several Heroes, it refunds Mana and its cooldown recharges much faster for a few seconds."
@@ -35082,7 +35082,7 @@ const HEROES = [
           "fr": "Attaques cuisantes",
           "en": "Blistering Attacks"
         },
-        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_empowersulfuras.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
         "description": {
           "fr": "Régulièrement, la prochaine attaque de base contre un héros inflige des dégâts supplémentaires. Toucher des ennemis avec une capacité de base accélère ce cycle.",
           "en": "Periodically, the next Basic Attack against a Hero deals bonus damage. Hitting enemies with Basic Abilities speeds up this cycle."
@@ -35152,7 +35152,7 @@ const HEROES = [
           "fr": "Flamme persistante",
           "en": "Resilient Flame"
         },
-        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_return.png",
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_resistance.png",
         "description": {
           "fr": "Être étourdi confère temporairement de l'armure à Ragnaros.",
           "en": "Being Stunned temporarily grants Ragnaros Armor."
@@ -35166,7 +35166,7 @@ const HEROES = [
           "fr": "Brûlure intense",
           "en": "Giant Scorcher"
         },
-        "icon": "assets/heroes/base_spells/ragnaros/images/talents/storm_ui_icon_ragnaros_empowersulfuras_active.png",
+        "icon": "assets/heroes/base_spells/ragnaros/images/spells/storm_ui_icon_ragnaros_empowersulfuras.png",
         "description": {
           "fr": "Renforcement de Sulfuras consume les héros adverses proportionnellement à leur maximum de points de vie. Ces dégâts ne soignent pas Ragnaros.",
           "en": "Empower Sulfuras burns enemy Heroes based on their maximum Health. This damage does not heal Ragnaros."
