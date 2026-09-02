@@ -40278,36 +40278,36 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1111111,Tracer]",
+        "buildCode": "[T2232212,Tracer]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmh8oh5hr01r8h",
+            "primaryId": "tmh8oh5hr021n5",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmh8oh5hr04pmr",
+            "primaryId": "tmh8oh5hr05noq",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmh8oh5hr07861",
+            "primaryId": "tmh8oh5hr09l4e",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmh8oh5hr10bfs",
+            "primaryId": "tmh8oh5hr11y0r",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmh8oh5hr13y3a",
+            "primaryId": "tmh8oh5hr14uyh",
             "alternativeIds": []
           },
           {
@@ -40317,7 +40317,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmh8oh5hr19yk4",
+            "primaryId": "tmh8oh5hr20863",
             "alternativeIds": []
           }
         ]
