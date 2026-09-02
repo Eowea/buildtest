@@ -20966,8 +20966,8 @@ const HEROES = [
         "en": "Shifting into Worgen is when you're most exposed: only go in once your team has landed its crowd control."
       },
       {
-        "fr": "Balle maudite (R) n'est pas faite pour harceler. Lancée en worgen, elle te ramène en humain et te rend Sombre course pour ressortir.",
-        "en": "Cursed Bullet (R) isn't for poking. Cast in Worgen, it returns you to Human and gives Darkflight back so you can get out."
+        "fr": "Balle maudite (R) te repasse en forme humaine, mais elle ne te propulse pas comme Désengagement.",
+        "en": "Cursed Bullet (R) shifts you back to Human Form, but it doesn't launch you clear the way Disengage does."
       },
       {
         "fr": "L'armure de la forme worgen est là pour encaisser : reste au corps à corps tant que tu frappes, repasse humain dès qu'on te bloque.",
