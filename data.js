@@ -2479,8 +2479,8 @@ const HEROES = [
           "en": "ARAM Build"
         },
         "updatedAt": {
-          "fr": "6 Mai 2026",
-          "en": "May 6, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "summary": {
           "fr": "Ça fait ding ding et des dégats.",
@@ -2490,7 +2490,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1311314,Deckard]",
+        "buildCode": "[T1321314,Deckard]",
         "videos": [],
         "talentSelections": [
           {
@@ -5895,8 +5895,8 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build Grenade",
-          "en": "Grenade Build"
+          "fr": "Build recommandé",
+          "en": "Recommended build"
         },
         "summary": {
           "fr": "Plus de repoussements et de régénération d'énergie.",
@@ -5906,11 +5906,11 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T3312124,LtMorales]",
+        "buildCode": "[T3311233,LtMorales]",
         "videos": [],
         "updatedAt": {
-          "fr": "14 Août 2026",
-          "en": "August 14, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
@@ -26877,11 +26877,11 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1211312,LiMing]",
+        "buildCode": "[T2232122,LiMing]",
         "videos": [],
         "updatedAt": {
-          "fr": "14 Août 2026",
-          "en": "August 14, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
@@ -32268,11 +32268,11 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T1132212,Nazeebo]",
+        "buildCode": "[T1111213,Nazeebo]",
         "videos": [],
         "updatedAt": {
-          "fr": "14 Août 2026",
-          "en": "August 14, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
@@ -32326,8 +32326,8 @@ const HEROES = [
           "en": "French build"
         },
         "updatedAt": {
-          "fr": "14 Août 2026",
-          "en": "August 14, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "summary": {
           "fr": "PLEIN DE GRENOUILLES",
@@ -32337,7 +32337,7 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE IN TALENT TREE"
         },
-        "buildCode": "[T2331233,Nazeebo]",
+        "buildCode": "[T2231233,Nazeebo]",
         "videos": [],
         "talentSelections": [
           {
@@ -36842,11 +36842,11 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T2112212,SgtHammer]",
+        "buildCode": "[T3221334,SgtHammer]",
         "videos": [],
         "updatedAt": {
-          "fr": "14 Août 2026",
-          "en": "August 14, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
@@ -40780,11 +40780,11 @@ const HEROES = [
           "fr": "A COLLER DANS L'ARBRE DES TALENTS",
           "en": "PASTE INTO TALENT TREE"
         },
-        "buildCode": "[T3221331,Tychus]",
+        "buildCode": "[T1211331,Tychus]",
         "videos": [],
         "updatedAt": {
-          "fr": "15 Août 2026",
-          "en": "August 15, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
