@@ -20056,7 +20056,7 @@ const HEROES = [
   },
   {
     "id": "gazlowe",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Gazleu",
       "en": "Gazlowe"
@@ -20081,7 +20081,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_salvager.png",
         "description": {
           "fr": "Gazleu accumule des débris avec le temps, et les tourelles détruites en laissent un à ramasser. À l'activation, il démonte lui-même une tourelle.",
-          "en": "Gazlowe accumulates Scrap over time, and destroyed turrets leave a piece to pick up. On activation, he salvages a turret himself."
+          "en": "Gazlowe accumulates Scrap over time, and destroyed turrets leave one behind to pick up. Activate to scrap one of his own turrets."
         },
         "demoYoutubeId": ""
       },
@@ -20093,8 +20093,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_rockitturret.png",
         "description": {
-          "fr": "Pose une tourelle qui vise en priorité le héros adverse le plus proche et dépérit avec le temps.",
-          "en": "Deploys a turret that prioritizes the nearest enemy Hero and decays over time."
+          "fr": "Pose une tourelle qui tire sur les ennemis proches, en visant le héros le plus proche au moment où elle sort. Elle dépérit avec le temps.",
+          "en": "Places a turret that fires at nearby enemies, targeting the closest Hero when it first appears. It decays over time."
         },
         "demoYoutubeId": ""
       },
@@ -20107,7 +20107,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_dethlazor.png",
         "description": {
           "fr": "Après un temps de charge, inflige des dégâts aux ennemis sur une ligne et rend des points de vie à Gazleu, bien davantage contre les héros.",
-          "en": "After a wind-up, damages enemies in a line and heals Gazlowe, far more against Heroes."
+          "en": "After a wind-up, damages enemies in a line and heals Gazlowe, far more so against Heroes."
         },
         "demoYoutubeId": ""
       },
@@ -20120,7 +20120,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_explodiumcharge.png",
         "description": {
           "fr": "Pose une bombe qui explose après un délai, blessant et étourdissant les ennemis de la zone.",
-          "en": "Plants a bomb that detonates after a delay, damaging and Stunning the enemies in the area."
+          "en": "Plants a bomb that detonates after a delay, damaging and Stunning enemies in the area."
         },
         "demoYoutubeId": ""
       },
@@ -20128,7 +20128,7 @@ const HEROES = [
         "key": "&",
         "name": {
           "fr": "Directeur de tir",
-          "en": "Focus Turrets"
+          "en": "Focus Turrets!"
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_rockitturret_var1.png",
         "description": {
@@ -20145,8 +20145,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_robogoblin.png",
         "description": {
-          "fr": "Rend insensible aux effets de contrôle et augmente les dégâts des attaques de base.",
-          "en": "Gain Unstoppable, increase Basic Attack damage"
+          "fr": "À l'activation, rend insensible aux effets de contrôle un court instant. Effet passif : les attaques de base infligent des dégâts supplémentaires sur la durée, cumulables plusieurs fois.",
+          "en": "Activate to become Unstoppable for a moment. Passive: Basic Attacks deal bonus damage over time, stacking several times."
         },
         "demoYoutubeId": ""
       },
@@ -20166,16 +20166,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ramasse toujours les débris : ils alimentent toutes tes capacités.",
-        "en": "Always pick up Scrap: it fuels every one of your Abilities."
+        "fr": "Trucidolaser (Z) te soigne beaucoup plus sur les héros : attends qu'ils s'alignent ou qu'un CC tombe avant de le tirer.",
+        "en": "Deth Lazor (W) heals you far more off Heroes: wait for them to line up or for a CC to land before firing."
       },
       {
-        "fr": "Pose tes tourelles derrière un mur pour qu'elles soient difficiles à détruire.",
-        "en": "Place your turrets behind a wall so they are hard to destroy."
+        "fr": "Charge d'X-plosium (E) est trop lente pour toucher toute seule : garde-la en suivi d'un CC allié, ou enchaîne-la sur Gravitobombe 3000 (R) si tu la prends.",
+        "en": "Xplodium Charge (E) is too slow to land on its own: hold it as follow-up to an ally's CC, or chain it off Grav-O-Bomb 3000 (R) if you take it."
       },
       {
-        "fr": "Gravitobombe 3000 combinée à un contrôle allié fait des ravages.",
-        "en": "Grav-O-Bomb 3000 combined with allied crowd control is devastating."
+        "fr": "Tes tourelles (A) tapent trop peu pour clear : sers-t'en pour bloquer les skillshots, démonter les ennemis et scout les rotations.",
+        "en": "Your turrets (Q) hit far too softly to clear: use them to block skillshots, dismount enemies and scout rotations."
       }
     ],
     "builds": [
@@ -20194,11 +20194,11 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Gazlowe]",
+        "buildCode": "[T1321324,Gazlowe]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
@@ -20208,12 +20208,12 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmozdoi9u04wk5",
+            "primaryId": "tmozdoi9u06rbl",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmozdoi9u07i6a",
+            "primaryId": "tmozdoi9u08t5l",
             "alternativeIds": []
           },
           {
@@ -20223,17 +20223,17 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tmozdoi9u1267d",
+            "primaryId": "tmozdoi9u14ivw",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmozdoi9u159qr",
+            "primaryId": "tmozdoi9u16o3c",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmozdoi9u18bvz",
+            "primaryId": "tmozdoi9u21s2v",
             "alternativeIds": []
           }
         ],
@@ -20251,8 +20251,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_explodiumcharge.png",
         "description": {
-          "fr": "Augmente la portée et les dégâts de Charge d'X-plosium.",
-          "en": "Increase Xplodium Charge cast range, damage"
+          "fr": "Augmente la portée et les dégâts de Charge d'X-plosium. Toucher un héros avec elle augmente la vitesse de déplacement de Gazleu.",
+          "en": "Increases Xplodium Charge's range and damage. Hitting a Hero with it increases Gazlowe's Movement Speed."
         },
         "demoYoutubeId": null
       },
@@ -20265,8 +20265,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_salvager.png",
         "description": {
-          "fr": "Toucher des héros, des mercenaires et des monstres augmente les débris.",
-          "en": "Hitting Heroes, Mercs, Monsters increase Scrap"
+          "fr": "Augmente le maximum de débris. Les attaques de base portées aux héros, aux mercenaires et aux monstres accélèrent la régénération des débris.",
+          "en": "Increases maximum Scrap. Basic Attacks against Heroes, Mercenaries and Monsters speed up Scrap regeneration."
         },
         "demoYoutubeId": null
       },
@@ -20279,8 +20279,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
         "description": {
-          "fr": "Utiliser une capacité de base renforce la prochaine attaque de base. Se cumule en charges.",
-          "en": "Using a Basic Ability empowers the next Basic Attack. Stores charges."
+          "fr": "Utiliser une capacité de base renforce nettement la prochaine attaque de base. Se cumule en charges.",
+          "en": "Casting a Basic Ability greatly empowers the next Basic Attack. Stores charges."
         },
         "demoYoutubeId": null
       },
@@ -20293,8 +20293,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_rockitturret.png",
         "description": {
-          "fr": "L'utilisation de Tourelle Sulfatt confère un bouclier.",
-          "en": "Casting Rock-It! Turret grants a Shield"
+          "fr": "Poser une Tourelle Sulfatt confère un bouclier à Gazleu pendant quelques secondes.",
+          "en": "Casting Rock-It! Turret grants Gazlowe a Shield for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -20308,7 +20308,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_combo_w_e.png",
         "description": {
           "fr": "Trucidolaser et Charge d'X-plosium blessent les héros en proportion de leur maximum de points de vie, et Gazleu récupère une part de ces dégâts.",
-          "en": "Deth Lazor and Xplodium Charge damage Heroes based on their maximum Health, and Gazlowe recovers part of that damage."
+          "en": "Deth Lazor and Xplodium Charge damage Heroes based on their maximum Health, and Gazlowe heals for part of that damage."
         },
         "demoYoutubeId": null
       },
@@ -20321,8 +20321,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_imposingpresence.png",
         "description": {
-          "fr": "Confère de l'armure et réduit les dégâts infligés par les ennemis.",
-          "en": "Activate to gain Armor, reduce enemy damage"
+          "fr": "À l'activation, confère beaucoup d'armure à Gazleu et réduit de moitié les dégâts infligés par les héros et les invocations autour de lui.",
+          "en": "Activate to gain heavy Armor and halve the damage dealt by enemy Heroes and Summons around Gazlowe."
         },
         "demoYoutubeId": null
       },
@@ -20335,8 +20335,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_combo_q_w.png",
         "description": {
-          "fr": "Trucidolaser peut générer des débris.",
-          "en": "Deth Lazor can generate Scrap"
+          "fr": "Chaque héros touché par Trucidolaser rapporte des débris.",
+          "en": "Each Hero hit by Deth Lazor yields Scrap."
         },
         "demoYoutubeId": null
       },
@@ -20349,8 +20349,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_dethlazor_a.png",
         "description": {
-          "fr": "Confère une charge supplémentaire de Trucidolaser.",
-          "en": "Gain an additional Deth Lazor charge"
+          "fr": "Trucidolaser gagne une charge supplémentaire, et chaque héros touché en réduit le temps de recharge.",
+          "en": "Deth Lazor gains an extra charge, and each Hero hit reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -20363,8 +20363,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_combo_w_e.png",
         "description": {
-          "fr": "Trucidolaser et Charge d'X-plosium ralentissent les ennemis.",
-          "en": "Deth Lazor and Xplodium Charge Slow"
+          "fr": "Trucidolaser et Charge d'X-plosium ralentissent les ennemis touchés. Les tirs des tourelles Sulfatt sur une cible ainsi ralentie prolongent le ralentissement.",
+          "en": "Deth Lazor and Xplodium Charge Slow the enemies they hit. Rock-It! Turret shots on a target Slowed this way extend the Slow."
         },
         "demoYoutubeId": null
       },
@@ -20377,8 +20377,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_robogoblin.png",
         "description": {
-          "fr": "Rend insensible aux effets de contrôle et augmente les dégâts des attaques de base.",
-          "en": "Gain Unstoppable, increase Basic Attack damage"
+          "fr": "À l'activation, rend insensible aux effets de contrôle un court instant. Effet passif : les attaques de base infligent des dégâts supplémentaires sur la durée, cumulables plusieurs fois.",
+          "en": "Activate to become Unstoppable for a moment. Passive: Basic Attacks deal bonus damage over time, stacking several times."
         },
         "demoYoutubeId": null
       },
@@ -20405,8 +20405,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_rockitturret.png",
         "description": {
-          "fr": "Les attaques des tourelles augmentent la vitesse d'attaque de Gazleu.",
-          "en": "Rock-It! Turret attacks increase Attack Speed"
+          "fr": "Les tirs directs des tourelles Sulfatt sur les héros augmentent la vitesse d'attaque de Gazleu.",
+          "en": "Primary Rock-It! Turret shots on Heroes increase Gazlowe's Attack Speed."
         },
         "demoYoutubeId": null
       },
@@ -20419,8 +20419,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_rockitturret_var1.png",
         "description": {
-          "fr": "Les tourelles Sulfatt attaquent plusieurs ennemis.",
-          "en": "Rock-It! Turrets attack multiple enemies"
+          "fr": "Les tourelles Sulfatt frappent plusieurs ennemis à la fois, pour des dégâts réduits sur les cibles supplémentaires, et tirent de plus loin.",
+          "en": "Rock-It! Turrets hit several enemies at once, for reduced damage on the extra targets, and shoot from farther away."
         },
         "demoYoutubeId": null
       },
@@ -20433,8 +20433,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/talents/storm_ui_icon_gazlowe_rockitturret_var2.png",
         "description": {
-          "fr": "Augmente la puissance de capacité et la durée des Tourelles Sulfatt.",
-          "en": "Rock-It! Turrets increase Spell Power, duration"
+          "fr": "Chaque tourelle Sulfatt active augmente la puissance de capacité de Gazleu, jusqu'à un plafond. Ses attaques de base soignent les tourelles.",
+          "en": "Each active Rock-It! Turret increases Gazlowe's Spell Power, up to a cap. His Basic Attacks heal the turrets."
         },
         "demoYoutubeId": null
       },
@@ -20447,8 +20447,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_dethlazor.png",
         "description": {
-          "fr": "Les tourelles Sulfatt utilisent un Trucidolaser.",
-          "en": "Rock It! Turrets fire Deth Lazorz"
+          "fr": "À chaque Trucidolaser, toutes les tourelles Sulfatt tirent le leur.",
+          "en": "Whenever Deth Lazor fires, every Rock-It! Turret fires one of its own."
         },
         "demoYoutubeId": null
       },
@@ -20461,8 +20461,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_explodiumcharge.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Charge d'X-plosium et crée des tourelles.",
-          "en": "Xplodium Charge creates Turrets, reduce cooldown"
+          "fr": "Réduit le temps de recharge de Charge d'X-plosium, qui fait aussi apparaître des tourelles Sulfatt miniatures. Elles ne laissent pas de débris et ne profitent d'aucun autre talent.",
+          "en": "Reduces Xplodium Charge's cooldown, and it also spawns miniature Rock-It! Turrets. They drop no Scrap and benefit from no other Talent."
         },
         "demoYoutubeId": null
       },
@@ -20475,8 +20475,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_searing.png",
         "description": {
-          "fr": "Attaquer des héros augmente la vitesse et inflige des dégâts bonus.",
-          "en": "Attacks grant Move Speed, deal bonus damage"
+          "fr": "Les attaques de base augmentent la vitesse de déplacement de Gazleu. Celles portées aux héros leur infligent des dégâts supplémentaires proportionnels à leurs points de vie maximum.",
+          "en": "Basic Attacks increase Gazlowe's Movement Speed. Those landed on Heroes deal bonus damage based on their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -20490,7 +20490,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_robogoblin.png",
         "description": {
           "fr": "Les attaques de base confèrent de l'armure à Gazleu, effet cumulable, et frappent plus fort les ennemis étourdis ou ralentis.",
-          "en": "Basic Attacks grant Gazlowe Armor, stacking, and hit Stunned or Slowed enemies harder."
+          "en": "Basic Attacks grant Gazlowe stacking Armor and hit Stunned or Slowed enemies harder."
         },
         "demoYoutubeId": null
       },
@@ -20503,8 +20503,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_gravobomb.png",
         "description": {
-          "fr": "Augmente le rayon et les dégâts, réduit le temps de recharge.",
-          "en": "Increase radius and damage, reduce cooldown"
+          "fr": "Élargit Gravitobombe 3000 et augmente ses dégâts. Chaque héros attiré en réduit fortement le temps de recharge.",
+          "en": "Widens Grav-O-Bomb 3000 and increases its damage. Each Hero pulled sharply reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -20518,7 +20518,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_rockitturret.png",
         "description": {
           "fr": "Les tourelles Sulfatt coûtent moins de débris, et chaque débris ramassé en rapporte davantage.",
-          "en": "Rock-It! Turrets cost less Scrap, and each piece picked up yields more."
+          "en": "Rock-It! Turrets cost less Scrap, and each Scrap picked up is worth more."
         },
         "demoYoutubeId": null
       },
@@ -20531,15 +20531,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/gazlowe/images/spells/storm_ui_icon_gazlowe_explodiumcharge.png",
         "description": {
-          "fr": "Charge d'X-plosium libère plus de charges.",
-          "en": "Xplodium Charge releases more bombs"
+          "fr": "Charge d'X-plosium gagne une deuxième charge et lâche des bombes supplémentaires en explosant.",
+          "en": "Xplodium Charge gains a second charge and drops extra bombs when it detonates."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Gazlowe",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "genji",
