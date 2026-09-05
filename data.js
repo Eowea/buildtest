@@ -40440,22 +40440,22 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build recommandé",
-          "en": "Recommended build"
+          "fr": "Build late game",
+          "en": "Late-game build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build à quêtes : discret au début, redoutable une fois les récompenses débloquées.",
+          "en": "A quest build: quiet early, brutal once the rewards are unlocked."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Thrall]",
+        "buildCode": "[T1211321,Thrall]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
@@ -40465,7 +40465,7 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmw21n1bn04dnn",
+            "primaryId": "tmw21n1bn05huo",
             "alternativeIds": []
           },
           {
@@ -40480,7 +40480,67 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tmw21n1bn12jjn",
+            "primaryId": "tmw21n1bn14a16",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmw21n1bn16vbl",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmw21n1bn18cka",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build E",
+          "en": "E build"
+        },
+        "summary": {
+          "fr": "Build centré sur Furie-des-vents et les attaques de base.",
+          "en": "Focused on Windfury and Basic Attacks."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T3131315,Thrall]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmw21n1bn03pkz",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmw21n1bn04dnn",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmw21n1bn096gd",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmw21n1bn104tn",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmw21n1bn14a16",
             "alternativeIds": []
           },
           {
@@ -40490,7 +40550,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmw21n1bn18cka",
+            "primaryId": "tmw21n1bn22yl9",
             "alternativeIds": []
           }
         ],
