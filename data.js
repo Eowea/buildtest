@@ -22191,7 +22191,7 @@ const HEROES = [
   },
   {
     "id": "hanzo",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Hanzo",
       "en": "Hanzo"
@@ -22215,8 +22215,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_wallvault.png",
         "description": {
-          "fr": "Permet de franchir les obstacles.",
-          "en": "Jump over terrain"
+          "fr": "Bondit par-dessus un mur ou un bâtiment, jusqu'à une certaine distance.",
+          "en": "Vaults over a wall or a Structure, up to a certain distance."
         },
         "demoYoutubeId": ""
       },
@@ -22228,8 +22228,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_stormbow.png",
         "description": {
-          "fr": "Charge une flèche dévastatrice : plus Hanzo canalise longtemps, plus elle porte loin.",
-          "en": "Charges a devastating arrow: the longer Hanzo channels, the farther it flies."
+          "fr": "Charge une flèche dévastatrice qui frappe le premier ennemi touché : plus Hanzo canalise longtemps, plus elle porte loin.",
+          "en": "Charges a devastating arrow that hits the first enemy in its path: the longer Hanzo channels, the farther it reaches."
         },
         "demoYoutubeId": ""
       },
@@ -22241,8 +22241,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_scatterarrow.png",
         "description": {
-          "fr": "Décoche une flèche qui rebondit et se fragmente.",
-          "en": "Fire an arrow that ricochets and splits"
+          "fr": "Décoche une flèche qui blesse le premier héros touché. Quand elle heurte un obstacle ou un bâtiment, elle se scinde en plusieurs flèches qui repartent et rebondissent encore, chacune blessant le premier ennemi rencontré.",
+          "en": "Fires an arrow that damages the first Hero hit. When it strikes terrain or a Structure, it splits into several arrows that travel on and ricochet again, each damaging the first enemy it meets."
         },
         "demoYoutubeId": ""
       },
@@ -22254,8 +22254,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_sonicarrow.png",
         "description": {
-          "fr": "Révèle une large zone dans la durée. Si la flèche atteint directement un ennemi, elle le suit dans ses déplacements.",
-          "en": "Reveals a large area over time. If the arrow lands directly on an enemy, it follows them as they move."
+          "fr": "Décoche une flèche qui dévoile une large zone un moment et révèle les ennemis qui s'y trouvent. Si elle atteint directement un ennemi, elle le blesse et le suit dans ses déplacements.",
+          "en": "Fires an arrow that grants vision of a large area for a while and reveals the enemies inside it. If it lands directly on an enemy, it damages them and follows them as they move."
         },
         "demoYoutubeId": ""
       },
@@ -22268,7 +22268,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_dragonstrike.png",
         "description": {
           "fr": "Après un temps de préparation, invoque deux esprits dragons qui filent droit devant en blessant les héros adverses, bien plus fort au centre de leur trajectoire.",
-          "en": "After a wind-up, summons two dragon spirits that race straight ahead, damaging enemy Heroes and hitting far harder along the center of their path."
+          "en": "After a wind-up, summons two spirit dragons that travel straight ahead, damaging enemy Heroes and hitting far harder along the center of their path."
         },
         "demoYoutubeId": ""
       },
@@ -22280,24 +22280,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_thedragonsarrow.png",
         "description": {
-          "fr": "Décoche une flèche à portée illimitée qui inflige des dégâts et étourdit.",
-          "en": "Fire a global arrow that Stuns, damages"
+          "fr": "Décoche une flèche qui traverse toute la carte et explose sur le premier héros touché, blessant et étourdissant les ennemis autour. Plus elle a voyagé loin, plus les dégâts et l'étourdissement sont importants.",
+          "en": "Fires an arrow that crosses the whole battleground and explodes on the first Hero hit, damaging and Stunning the enemies around them. The farther it has travelled, the bigger the damage and the Stun."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Mille-flèches rebondit sur les murs : tire dans les couloirs, pas en terrain ouvert.",
-        "en": "Scatter Arrow ricochets off walls: shoot in corridors, not open ground."
+        "fr": "La portée d'Arc tempête (A) monte pendant que tu canalises : recule en chargeant pour tirer de plus loin que ce que l'adversaire croit.",
+        "en": "Storm Bow (Q) gains range while you channel: back up as you charge so you fire from farther than the enemy expects."
       },
       {
-        "fr": "Flèche sonique posée sur un objectif donne une vision permanente à ton équipe.",
-        "en": "Sonic Arrow on an objective gives your team permanent vision."
+        "fr": "Mille-flèches (Z) part instantanément : c'est ton outil pour démonter un ennemi ou couper une pierre de foyer. Et comme il ricoche, tire dans les couloirs, pas en terrain ouvert.",
+        "en": "Scatter Arrow (W) fires instantly: it's your tool to dismount someone or cut a Hearthstone. And since it ricochets, shoot it in corridors, not in open ground."
       },
       {
-        "fr": "Flèche du dragon frappe plus fort de loin : tire du fond de la carte.",
-        "en": "Dragon's Arrow hits harder from afar: fire from across the Battleground."
+        "fr": "Flèche du dragon (R) frappe d'autant plus fort qu'elle vient de loin : garde-la pour une équipe qui décroche en ligne droite.",
+        "en": "Dragon's Arrow (R) hits harder the farther it has flown: save it for a team backing off in a straight line."
       }
     ],
     "builds": [
@@ -22305,22 +22305,22 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build recommandé",
-          "en": "Recommended build"
+          "fr": "Build A",
+          "en": "Q build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build centré sur Arc tempête.",
+          "en": "Focused on Storm Bow."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Hanzo]",
+        "buildCode": "[T1112123,Hanzo]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
@@ -22340,7 +22340,7 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tm4bf9uol10z58",
+            "primaryId": "tm4bf9uol11q1s",
             "alternativeIds": []
           },
           {
@@ -22350,12 +22350,132 @@ const HEROES = [
           },
           {
             "level": 16,
-            "primaryId": "tm4bf9uol150o9",
+            "primaryId": "tm4bf9uol16yo7",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tm4bf9uol189dy",
+            "primaryId": "tm4bf9uol200zb",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build auto-attaque",
+          "en": "Auto-attack build"
+        },
+        "summary": {
+          "fr": "Build tourné vers les attaques de base.",
+          "en": "Built around Basic Attacks."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T3332133,Hanzo]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tm4bf9uol03bhl",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tm4bf9uol063g6",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tm4bf9uol09e8p",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tm4bf9uol11q1s",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tm4bf9uol12086",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tm4bf9uol17wx0",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tm4bf9uol200zb",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 3,
+        "label": {
+          "fr": "Build Z",
+          "en": "W build"
+        },
+        "summary": {
+          "fr": "Build centré sur Mille-flèches.",
+          "en": "Focused on Scatter Arrow."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T2222133,Hanzo]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tm4bf9uol02eqt",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tm4bf9uol05gx4",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tm4bf9uol08bvl",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tm4bf9uol11q1s",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tm4bf9uol12086",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tm4bf9uol17wx0",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tm4bf9uol200zb",
             "alternativeIds": []
           }
         ],
@@ -22373,8 +22493,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_stormbow.png",
         "description": {
-          "fr": "Quête : toucher tous les héros adverses renforce Arc tempête.",
-          "en": "Quest: Hit all enemy Heroes to empower Storm Bow"
+          "fr": "Quête : toucher chaque héros adverse avec Arc tempête. Récompenses : sa portée augmente, puis ses dégâts une fois chacun touché plusieurs fois.",
+          "en": "Quest: hit every enemy Hero with Storm Bow. Rewards: its range increases, then its damage once each of them has been hit several times."
         },
         "demoYoutubeId": null
       },
@@ -22387,8 +22507,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_scatterarrow.png",
         "description": {
-          "fr": "Quête : Mille-flèches crée davantage de projectiles.",
-          "en": "Quest: Gain additional Scatter Arrows"
+          "fr": "Quête : toucher un héros avec plusieurs flèches d'un même Mille-flèches. Récompense : au premier obstacle heurté, Mille-flèches produit deux flèches de plus.",
+          "en": "Quest: hit a Hero with several arrows from the same Scatter Arrow. Reward: on the first piece of terrain it strikes, Scatter Arrow creates two extra arrows."
         },
         "demoYoutubeId": null
       },
@@ -22401,8 +22521,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/talents/storm_ui_icon_hanzo_redemption.png",
         "description": {
-          "fr": "Quête : toucher des héros augmente la vitesse d'attaque.",
-          "en": "Quest: Hit Heroes to gain Attack Speed"
+          "fr": "Quête : deux attaques de base sur le même héros en peu de temps confèrent un point d'Honneur, et mourir en fait perdre. Récompense : au maximum d'Honneur, la vitesse d'attaque augmente fortement.",
+          "en": "Quest: two Basic Attacks on the same Hero in quick succession grant a point of Redemption, and dying costs some. Reward: at maximum Redemption, Attack Speed rises sharply."
         },
         "demoYoutubeId": null
       },
@@ -22415,8 +22535,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_stormbow.png",
         "description": {
-          "fr": "Les flèches d'Arc tempête explosent à l'impact avec les serviteurs et les monstres.",
-          "en": "Storm Bow arrows explode on Minions, Monsters"
+          "fr": "À l'impact sur un serviteur ou un monstre, Arc tempête blesse aussi les ennemis autour de la cible.",
+          "en": "On hitting a Minion or a Monster, Storm Bow also damages the enemies around the target."
         },
         "demoYoutubeId": null
       },
@@ -22429,8 +22549,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_scatterarrow.png",
         "description": {
-          "fr": "Mille-flèches inflige plus de dégâts aux cibles non héroïques.",
-          "en": "Scatter Arrow deals more damage to non-Heroes"
+          "fr": "Mille-flèches inflige bien plus de dégâts aux serviteurs, aux mercenaires et aux monstres.",
+          "en": "Scatter Arrow deals far more damage to Minions, Mercenaries and Monsters."
         },
         "demoYoutubeId": null
       },
@@ -22443,8 +22563,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/talents/storm_ui_icon_hanzo_fromonething.png",
         "description": {
-          "fr": "Augmente la portée des attaques de base et leur permet de tuer instantanément les serviteurs.",
-          "en": "Basic Attacks instantly kill Minions, increase range"
+          "fr": "Les attaques de base tuent instantanément les serviteurs, et leur portée augmente un court instant après.",
+          "en": "Basic Attacks instantly kill Minions, and their range increases for a short while afterwards."
         },
         "demoYoutubeId": null
       },
@@ -22457,8 +22577,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/talents/storm_ui_icon_hanzo_draconicadvantage.png",
         "description": {
-          "fr": "Arc tempête augmente la puissance de capacité.",
-          "en": "Storm Bow grants Spell Power"
+          "fr": "Toucher un héros avec Arc tempête augmente la puissance de capacité de Hanzo, cumulable jusqu'à un plafond.",
+          "en": "Hitting a Hero with Storm Bow increases Hanzo's Spell Power, stacking up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -22471,8 +22591,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_scatterarrow.png",
         "description": {
-          "fr": "Les attaques de base réduisent le temps de recharge de Mille-flèches.",
-          "en": "Basic Attacks reduce Scatter Arrow cooldown"
+          "fr": "Réduit le coût en mana de Mille-flèches, et les attaques de base portées aux héros en réduisent le temps de recharge.",
+          "en": "Reduces Scatter Arrow's Mana cost, and Basic Attacks on Heroes reduce its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -22485,8 +22605,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/talents/storm_ui_icon_hanzo_shieldbreaker.png",
         "description": {
-          "fr": "Les attaques de base et Arc tempête réduisent l'armure.",
-          "en": "Basic Attacks, Storm Bow reduce Armor"
+          "fr": "Toucher un héros avec Arc tempête ou une attaque de base réduit son armure, cumulable jusqu'à un plafond.",
+          "en": "Hitting a Hero with Storm Bow or a Basic Attack reduces their Armor, stacking up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -22500,7 +22620,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_dragonstrike.png",
         "description": {
           "fr": "Après un temps de préparation, invoque deux esprits dragons qui filent droit devant en blessant les héros adverses, bien plus fort au centre de leur trajectoire.",
-          "en": "After a wind-up, summons two dragon spirits that race straight ahead, damaging enemy Heroes and hitting far harder along the center of their path."
+          "en": "After a wind-up, summons two spirit dragons that travel straight ahead, damaging enemy Heroes and hitting far harder along the center of their path."
         },
         "demoYoutubeId": null
       },
@@ -22513,8 +22633,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_thedragonsarrow.png",
         "description": {
-          "fr": "Décoche une flèche à portée illimitée qui inflige des dégâts et étourdit.",
-          "en": "Fire a global arrow that Stuns, damages"
+          "fr": "Décoche une flèche qui traverse toute la carte et explose sur le premier héros touché, blessant et étourdissant les ennemis autour. Plus elle a voyagé loin, plus les dégâts et l'étourdissement sont importants.",
+          "en": "Fires an arrow that crosses the whole battleground and explodes on the first Hero hit, damaging and Stunning the enemies around them. The farther it has travelled, the bigger the damage and the Stun."
         },
         "demoYoutubeId": null
       },
@@ -22527,8 +22647,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_stormbow.png",
         "description": {
-          "fr": "Arc tempête augmente la vitesse de déplacement.",
-          "en": "Storm Bow grants Move Speed"
+          "fr": "Toucher un héros avec Arc tempête augmente la vitesse de déplacement de Hanzo, cumulable jusqu'à un plafond.",
+          "en": "Hitting a Hero with Storm Bow increases Hanzo's Movement Speed, stacking up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -22541,8 +22661,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_wallvault.png",
         "description": {
-          "fr": "Arc tempête réduit le temps de recharge d'Agilité naturelle.",
-          "en": "Storm Bow lowers Natural Agility cooldown"
+          "fr": "Toucher des héros avec Arc tempête réduit le temps de recharge d'Agilité naturelle, et faire une victime l'annule.",
+          "en": "Hitting Heroes with Storm Bow reduces Natural Agility's cooldown, and a Takedown resets it."
         },
         "demoYoutubeId": null
       },
@@ -22556,7 +22676,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/hanzo/images/talents/storm_ui_icon_hanzo_grabthereins.png",
         "description": {
           "fr": "La monture s'invoque plus vite et Hanzo accélère davantage juste après l'avoir appelée. Agilité naturelle invoque aussitôt la monture.",
-          "en": "The Mount is summoned sooner and Hanzo speeds up more right after calling it. Natural Agility instantly summons the Mount."
+          "en": "The mount is summoned sooner and Hanzo speeds up further right after calling it. Natural Agility mounts him instantly."
         },
         "demoYoutubeId": null
       },
@@ -22569,8 +22689,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/talents/storm_ui_icon_hanzo_fromonething.png",
         "description": {
-          "fr": "Arc tempête et les attaques de base se renforcent mutuellement.",
-          "en": "Storm Bow, Basic Attacks empower each other"
+          "fr": "Toucher un héros avec Arc tempête renforce la prochaine attaque de base, et une attaque de base sur un héros renforce le prochain Arc tempête.",
+          "en": "Hitting a Hero with Storm Bow empowers the next Basic Attack, and a Basic Attack on a Hero empowers the next Storm Bow."
         },
         "demoYoutubeId": null
       },
@@ -22583,8 +22703,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/talents/storm_ui_icon_hanzo_piercingarrows.png",
         "description": {
-          "fr": "Les projectiles d'Arc tempête et de Mille-flèches transpercent leur cible.",
-          "en": "Storm Bow, Scatter Arrow pierce"
+          "fr": "Arc tempête et Mille-flèches transpercent leur cible pour en toucher une de plus, et Mille-flèches transperce à nouveau à chaque rebond.",
+          "en": "Storm Bow and Scatter Arrow pierce their target to hit one more, and Scatter Arrow pierces again on every ricochet."
         },
         "demoYoutubeId": null
       },
@@ -22597,8 +22717,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/talents/storm_ui_icon_hanzo_kaijuhunter.png",
         "description": {
-          "fr": "Les attaques de base et Mille-flèches infligent des dégâts supplémentaires.",
-          "en": "Basic Attacks, Scatter Arrow deal bonus damage"
+          "fr": "Les héros touchés par Mille-flèches ou par les attaques de base subissent des dégâts supplémentaires proportionnels à leurs points de vie maximum.",
+          "en": "Heroes hit by Scatter Arrow or Basic Attacks take bonus damage based on their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -22611,8 +22731,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_dragonstrike.png",
         "description": {
-          "fr": "Les capacités et les attaques de base réduisent le temps de recharge de Frappe du dragon.",
-          "en": "Abilities and Attacks reduce Dragonstrike cooldown"
+          "fr": "Toucher un héros avec Arc tempête, Mille-flèches ou une attaque de base réduit le temps de recharge de Frappe du dragon.",
+          "en": "Hitting a Hero with Storm Bow, Scatter Arrow or a Basic Attack reduces Dragonstrike's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -22626,7 +22746,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_thedragonsarrow.png",
         "description": {
           "fr": "Flèche du dragon peut être réactivée pendant son vol et peu après l'impact pour téléporter Hanzo à destination, où il bondit en arrière, insensible aux effets de contrôle. Après impact, il décoche aussi une volée sur les cibles touchées.",
-          "en": "Dragon's Arrow can be reactivated in flight and shortly after impact to teleport Hanzo to its destination, where he leaps backward, Unstoppable. After impact, he also looses a volley at the targets it struck."
+          "en": "Dragon's Arrow can be reactivated in flight or shortly after impact to teleport Hanzo to its location, where he leaps backwards, Unstoppable. Used after impact, he also looses a volley at the targets it hit."
         },
         "demoYoutubeId": null
       },
@@ -22639,8 +22759,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_sonicarrow.png",
         "description": {
-          "fr": "Flèche sonique se déplace plus vite et étourdit.",
-          "en": "Sonic Arrow travels faster, Stuns"
+          "fr": "Flèche sonique va plus vite, sa zone centrale s'élargit, et les héros pris dedans sont étourdis.",
+          "en": "Sonic Arrow travels faster, its center widens, and the Heroes caught there are Stunned."
         },
         "demoYoutubeId": null
       },
@@ -22653,15 +22773,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hanzo/images/spells/storm_ui_icon_hanzo_wallvault.png",
         "description": {
-          "fr": "Confère une charge d'Agilité naturelle et réduit le temps de recharge.",
-          "en": "Gain Natural Agility charge, cooldown reduced"
+          "fr": "Confère une charge d'Agilité naturelle supplémentaire et en réduit le temps de recharge.",
+          "en": "Grants an extra charge of Natural Agility and reduces its cooldown."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Hanzo",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "hogger",
