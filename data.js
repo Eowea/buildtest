@@ -15275,8 +15275,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_timetrap.png",
         "description": {
-          "fr": "À la fin de la stase, les ennemis pris par le piège sont ralentis et les alliés accélérés.",
-          "en": "When the Time Stop ends, enemies caught by the trap are Slowed and allies are sped up."
+          "fr": "Piège temporel se déclenche tout seul quand un ennemi entre dedans. À la fin de la stase, les ennemis pris sont ralentis et les alliés accélérés.",
+          "en": "Time Trap springs on its own when an enemy walks into it. When the Time Stop ends, the enemies caught are Slowed and allies are sped up."
         },
         "demoYoutubeId": null
       },
@@ -15521,7 +15521,16 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Chromie",
-    "isNew": true
+    "isNew": true,
+    "talentLevels": [
+      1,
+      2,
+      5,
+      8,
+      11,
+      14,
+      18
+    ]
   },
   {
     "id": "deathwing",

@@ -414,6 +414,18 @@ function renderSpells(sp=[]) {
       if(!sp.length) return '';
       return `<div class="spell-strip">${sp.map(s=>`<div class="spell-item">${ftHTML({cls:'spell-trigger floating-trigger',title:s.name,desc:s.description,demoId:s.demoYoutubeId||s.demoYoutubeUrl,inner:`<div class="spell-icon" data-fallback="${esc(uiSpellKey(s.key)||initials(loc(s.name)))}"><img src="${s.icon||svgBadge(loc(s.name))}" alt="${esc(loc(s.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`})}<div class="spell-name">${esc(uiSpellKey(s.key)||'')}</div></div>`).join('')}</div>`;
     }
+// Chromie débloque ses talents deux niveaux avant tout le monde. Le palier stocké
+// dans data.js reste celui du jeu (1, 4, 7, 10, 13, 16, 20) — c'est lui qui porte
+// les codes de build et l'admin — mais on affiche le niveau réel, listé dans
+// hero.talentLevels quand le héros en a un. Fonction pure, donc vérifiable.
+const PALIERS_STANDARD = [1, 4, 7, 10, 13, 16, 20];
+function niveauAffiche(hero, palier) {
+  const perso = hero && Array.isArray(hero.talentLevels) ? hero.talentLevels : null;
+  if (!perso) return palier;
+  const i = PALIERS_STANDARD.indexOf(palier);
+  return (i >= 0 && perso[i] != null) ? perso[i] : palier;
+}
+
 function resolveBuildTalents(hero, build) {
   // Nouveau format : le héros a un "réservoir" de talents (hero.talentPool), et chaque
   // build ne stocke qu'une sélection (quel talent est principal / alternatif par palier).
@@ -424,7 +436,7 @@ function resolveBuildTalents(hero, build) {
       const primary = hero.talentPool.find(p => p.id === sel.primaryId);
       if (!primary) return null;
       const alternatives = (sel.alternativeIds || []).map(id => hero.talentPool.find(p => p.id === id)).filter(Boolean);
-      return { ...primary, alternatives };
+      return { ...primary, level: niveauAffiche(hero, primary.level), alternatives };
     }).filter(Boolean);
   }
   // Ancien format (rétrocompatibilité) : les talents sont écrits en entier dans le build.
@@ -851,7 +863,7 @@ function renderKnownIssues(hero) {
       inner: `<div class="talent-icon" data-fallback="${esc(initials(loc(cible.name)))}"><img src="${cible.icon||svgBadge(loc(cible.name))}" alt="${esc(loc(cible.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`
     });
     // Un talent se repère par son palier, un sort par sa touche.
-    const repere = cible.level != null ? `${t('level')} ${esc(String(cible.level))}` : esc(uiSpellKey(cible.key) || '');
+    const repere = cible.level != null ? `${t('level')} ${esc(String(niveauAffiche(hero, cible.level)))}` : esc(uiSpellKey(cible.key) || '');
     const repereHtml = repere ? `<span class="issue-level">${repere}</span>` : '';
     return `<div class="issue-slide"><div class="issue-row">${trigger}<div class="issue-text"><div class="issue-name">${esc(loc(cible.name))}${repereHtml}</div><p class="issue-note">${esc(note)}</p></div></div></div>`;
   }).filter(Boolean);
