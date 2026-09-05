@@ -40326,7 +40326,7 @@ const HEROES = [
   },
   {
     "id": "thrall",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Thrall",
       "en": "Thrall"
@@ -40351,7 +40351,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_frostwolfresilience.png",
         "description": {
           "fr": "Infliger des dégâts avec une capacité accumule de la Résilience. Au maximum de cumuls, Thrall récupère aussitôt des points de vie.",
-          "en": "Dealing damage with an Ability builds Resilience. At maximum stacks, Thrall instantly restores Health."
+          "en": "Dealing damage with an Ability builds Resilience. At maximum stacks, Thrall is instantly healed."
         },
         "demoYoutubeId": ""
       },
@@ -40363,8 +40363,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_chainlightning.png",
         "description": {
-          "fr": "Une chaîne d'éclairs foudroie les ennemis.",
-          "en": "Shock enemies with bouncing lightning"
+          "fr": "Foudroie un ennemi, puis l'éclair rebondit plusieurs fois vers les ennemis proches, pour des dégâts moindres.",
+          "en": "Shocks an enemy, then the lightning bounces several times to nearby enemies for less damage."
         },
         "demoYoutubeId": ""
       },
@@ -40376,8 +40376,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_feralspirit.png",
         "description": {
-          "fr": "Déchaîne un esprit de loup qui brûle les ennemis sur son chemin ; chaque héros immobilisé au passage le porte plus loin.",
-          "en": "Unleashes a wolf spirit that burns enemies in its path; each Hero it Roots carries it farther."
+          "fr": "Déchaîne un esprit de loup qui blesse les ennemis sur son chemin et immobilise brièvement les héros touchés ; chacun d'eux le porte plus loin.",
+          "en": "Unleashes a wolf spirit that damages enemies in its path and briefly Roots the Heroes it hits; each one carries it farther."
         },
         "demoYoutubeId": ""
       },
@@ -40390,7 +40390,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_windfury.png",
         "description": {
           "fr": "Accélère Thrall et rend ses prochaines attaques de base bien plus rapides, chacune alimentant son trait.",
-          "en": "Speeds Thrall up and makes his next Basic Attacks much faster, each one feeding his trait."
+          "en": "Speeds Thrall up and makes his next Basic Attacks far faster, each one feeding his trait."
         },
         "demoYoutubeId": ""
       },
@@ -40415,24 +40415,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_earthquake.png",
         "description": {
-          "fr": "Après un court délai, trois secousses successives ébranlent une large zone, ralentissant tous les ennemis présents et blessant les héros adverses.",
-          "en": "After a short delay, three successive tremors shake a wide area, Slowing every enemy inside and damaging enemy Heroes."
+          "fr": "Après un court délai, trois secousses successives ébranlent une large zone, ralentissant fortement tous les ennemis présents et blessant les héros adverses.",
+          "en": "After a short delay, three successive pulses shake a wide area, heavily Slowing every enemy inside and damaging enemy Heroes."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Ne recule pas trop tôt : c'est en touchant que tu remplis ton trait.",
-        "en": "Do not back off too early: connecting is what fills your trait."
+        "fr": "Esprit farouche (Z) sur une vague de serviteurs suffit à déclencher le soin de ton trait (D) : pas besoin d'un héros pour te remettre d'aplomb.",
+        "en": "Feral Spirit (W) on a Minion wave is enough to set off your trait's (D) heal: you don't need a Hero to get back up."
       },
       {
-        "fr": "Esprit farouche immobilise et va plus loin à chaque héros touché.",
-        "en": "Feral Spirit Roots and travels farther with each Hero it catches."
+        "fr": "Furie-des-vents (E) n'est pas qu'un pic de dégâts : c'est ton engage et ton disengage. Ne la crame pas pour taper si tu risques de te faire aveugler.",
+        "en": "Windfury (E) isn't only a damage spike: it's your engage and your disengage. Don't burn it for damage if you risk getting Blinded."
       },
       {
-        "fr": "Fracture coupe une équipe en deux : vise le milieu, pas la première cible.",
-        "en": "Sundering splits a team in two: aim for the middle, not the first target."
+        "fr": "Fracture (R) est ton seul moyen de couper une héroïque canalisée : garde-la pour ça plutôt que de la lâcher en poke.",
+        "en": "Sundering (R) is your only way to cut a channeled Heroic: save it for that instead of throwing it out as poke."
       }
     ],
     "builds": [
@@ -40508,8 +40508,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_chainlightning.png",
         "description": {
-          "fr": "Quête : tuer des adversaires confère une charge de rebond de Chaîne d'éclairs.",
-          "en": "Quest: Killing enemies grant chain lightning charges, forks"
+          "fr": "Quête : tuer des ennemis juste après les avoir touchés avec Chaîne d'éclairs. Récompenses : son coût en mana baisse, puis elle gagne une charge, et enfin chaque rebond frappe une cible de plus.",
+          "en": "Quest: kill enemies right after hitting them with Chain Lightning. Rewards: its Mana cost drops, then it gains a charge, and finally each bounce hits one more target."
         },
         "demoYoutubeId": null
       },
@@ -40522,8 +40522,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/talents/storm_ui_icon_thrall_chainlightning_var1.png",
         "description": {
-          "fr": "Quête : toucher de multiples héros renforce Chaîne d'éclairs.",
-          "en": "Quest: Multiple Hero hits empower Chain Lightning"
+          "fr": "Quête : toucher plusieurs héros d'une seule Chaîne d'éclairs ; mourir fait perdre des cumuls. Récompenses : ses rebonds frappent bien plus fort, puis visent les héros en priorité.",
+          "en": "Quest: hit several Heroes with a single Chain Lightning; dying costs stacks. Rewards: its bounces hit far harder, then prioritize Heroes."
         },
         "demoYoutubeId": null
       },
@@ -40536,8 +40536,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_windfury.png",
         "description": {
-          "fr": "Quête : les attaques avec Furie-des-vents augmentent la vitesse de déplacement.",
-          "en": "Quest: Windfury attacks increase Move Speed"
+          "fr": "Quête : attaquer des héros tant que le bonus de vitesse de Furie-des-vents est actif. Récompenses : Furie-des-vents accélère davantage et les attaques de base frappent plus fort, puis Thrall gagne de la vitesse en permanence, et enfin le soin de son trait devient bien plus généreux.",
+          "en": "Quest: Basic Attack Heroes while Windfury's speed bonus is up. Rewards: Windfury speeds him up more and his Basic Attacks hit harder, then he gains permanent Movement Speed, and finally his trait's heal becomes far bigger."
         },
         "demoYoutubeId": null
       },
@@ -40550,8 +40550,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_feralspirit.png",
         "description": {
-          "fr": "Esprit farouche confère de l'armure physique et de la résilience loup-de-givre.",
-          "en": "Feral Spirit grants Physical Armor, Frostwolf Resilience"
+          "fr": "Les héros touchés par Esprit farouche confèrent beaucoup de Résilience loup-de-givre et de l'armure physique contre les prochaines attaques de base de héros. Les charges sont consommées au lancement suivant.",
+          "en": "Heroes hit by Feral Spirit grant a lot of Frostwolf Resilience and Physical Armor against the next Hero Basic Attacks. The charges are spent on the next cast."
         },
         "demoYoutubeId": null
       },
@@ -40564,8 +40564,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/talents/storm_ui_icon_thrall_feralspirit_var1.png",
         "description": {
-          "fr": "Quête : réduit le temps de recharge et le coût en mana d'Esprit farouche.",
-          "en": "Quest: Reduce Feral Spirit cooldown, cost"
+          "fr": "Quête : toucher des héros avec Esprit farouche ; rater un lancer ou mourir remet le compteur à zéro. Récompense : son temps de recharge et son coût en mana sont divisés par deux.",
+          "en": "Quest: hit Heroes with Feral Spirit; missing a cast or dying resets the count. Reward: its cooldown and Mana cost are halved."
         },
         "demoYoutubeId": null
       },
@@ -40578,8 +40578,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_frostwolfresilience.png",
         "description": {
-          "fr": "Résilience loup-de-givre rend du mana et réduit les temps de recharge.",
-          "en": "Frostwolf Resilience restores Mana, lowers cooldowns"
+          "fr": "Résilience loup-de-givre rend aussi du mana et réduit les temps de recharge des capacités de base.",
+          "en": "Frostwolf Resilience also restores Mana and reduces Basic Ability cooldowns."
         },
         "demoYoutubeId": null
       },
@@ -40593,7 +40593,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/thrall/images/talents/storm_ui_icon_thrall_chainlightning_var2.png",
         "description": {
           "fr": "Effet passif : Chaîne d'éclairs rebondit une fois de plus. Attaquer une cible juste après l'avoir touchée avec Chaîne d'éclairs confère un cumul de Résilience et, sur un héros, inflige des dégâts indexés sur ses points de vie que Thrall récupère.",
-          "en": "Passive: Chain Lightning bounces one more time. Attacking a target right after hitting them with Chain Lightning grants a stack of Resilience and, on a Hero, deals damage based on their Health that Thrall recovers."
+          "en": "Passive: Chain Lightning bounces one more time. Basic-attacking a target right after hitting them with Chain Lightning grants a Resilience stack and, on a Hero, deals damage based on their Health that Thrall heals back."
         },
         "demoYoutubeId": null
       },
@@ -40606,8 +40606,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_bloodforblood.png",
         "description": {
-          "fr": "Inflige des dégâts à un héros et rend des points de vie.",
-          "en": "Activate to damage and steal Health from a Hero"
+          "fr": "S'active en consommant des charges, gagnées à chaque déclenchement de Résilience loup-de-givre : inflige à un héros des dégâts proportionnels à ses points de vie maximum, et rend à Thrall bien plus que ça en soins.",
+          "en": "Activated by spending charges, earned each time Frostwolf Resilience triggers: deals damage to a Hero based on their maximum Health, and heals Thrall for far more than that."
         },
         "demoYoutubeId": null
       },
@@ -40620,8 +40620,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
         "description": {
-          "fr": "Les capacités augmentent les dégâts des attaques de base.",
-          "en": "Abilities increase Basic Attack damage"
+          "fr": "Après avoir lancé une capacité, la prochaine attaque de base de Thrall frappe plus fort.",
+          "en": "After casting an Ability, Thrall's next Basic Attack hits harder."
         },
         "demoYoutubeId": null
       },
@@ -40648,8 +40648,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_earthquake.png",
         "description": {
-          "fr": "Après un court délai, trois secousses successives ébranlent une large zone, ralentissant tous les ennemis présents et blessant les héros adverses.",
-          "en": "After a short delay, three successive tremors shake a wide area, Slowing every enemy inside and damaging enemy Heroes."
+          "fr": "Après un court délai, trois secousses successives ébranlent une large zone, ralentissant fortement tous les ennemis présents et blessant les héros adverses.",
+          "en": "After a short delay, three successive pulses shake a wide area, heavily Slowing every enemy inside and damaging enemy Heroes."
         },
         "demoYoutubeId": null
       },
@@ -40662,8 +40662,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_windfury.png",
         "description": {
-          "fr": "Furie-des-vents alimente bien plus vite Résilience loup-de-givre.",
-          "en": "Windfury feeds Frostwolf Resilience far faster."
+          "fr": "Les attaques de Furie-des-vents alimentent deux fois plus vite Résilience loup-de-givre.",
+          "en": "Windfury attacks feed Frostwolf Resilience twice as fast."
         },
         "demoYoutubeId": null
       },
@@ -40676,8 +40676,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_frostwolfresilience.png",
         "description": {
-          "fr": "Déclenche Résilience loup-de-givre pour récupérer des points de vie.",
-          "en": "Activate Frostwolf Resilience to instantly heal"
+          "fr": "Résilience loup-de-givre peut être déclenchée à la main pour se soigner aussitôt, d'autant plus fort que Thrall est bas en vie.",
+          "en": "Frostwolf Resilience can be triggered by hand to heal at once, more the lower Thrall's Health."
         },
         "demoYoutubeId": null
       },
@@ -40690,8 +40690,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_spellshield.png",
         "description": {
-          "fr": "Confère régulièrement de l'armure anti-sort contre la prochaine capacité adverse et celles qui suivent de près. Résilience loup-de-givre en raccourcit le temps de recharge, et son déclenchement automatique peut être désactivé.",
-          "en": "Regularly grants Spell Armor against the next enemy Ability and those following closely. Frostwolf Resilience brings it back sooner, and its automatic trigger can be turned off."
+          "fr": "Confère régulièrement de l'armure anti-sort contre la prochaine capacité adverse et celles qui suivent de près. Résilience loup-de-givre en réduit le temps de recharge, et son déclenchement automatique peut être désactivé.",
+          "en": "Regularly grants Spell Armor against the next enemy Ability and those right after. Frostwolf Resilience reduces its cooldown, and its automatic trigger can be switched off."
         },
         "demoYoutubeId": null
       },
@@ -40704,8 +40704,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_windfury.png",
         "description": {
-          "fr": "La frappe finale de Furie-des-vents frappe à plusieurs reprises.",
-          "en": "Windfury's final strike lands several times."
+          "fr": "La frappe finale de Furie-des-vents touche trois fois, pour des dégâts réduits. Ces coups ne font pas avancer les quêtes.",
+          "en": "Windfury's final strike hits three times for reduced damage. Those hits give no quest progress."
         },
         "demoYoutubeId": null
       },
@@ -40718,8 +40718,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_chainlightning.png",
         "description": {
-          "fr": "Quête : toucher des héros confère un effet de ralentissement à Chaîne d'éclairs.",
-          "en": "Quest: Hit Heroes to make Chain Lightning Slow"
+          "fr": "Chaîne d'éclairs ralentit le héros visé. Quête : viser directement des héros augmente ce ralentissement jusqu'à un plafond, où Chaîne d'éclairs frappe aussi plus fort. Viser deux fois de suite le même héros, ou mourir, remet le bonus à zéro.",
+          "en": "Chain Lightning Slows its primary Hero target. Quest: targeting Heroes directly builds that Slow up to a cap, where Chain Lightning also hits harder. Targeting the same Hero twice in a row, or dying, resets the bonus."
         },
         "demoYoutubeId": null
       },
@@ -40732,8 +40732,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_feralspirit.png",
         "description": {
-          "fr": "Augmente la durée d'immobilisation d'Esprit farouche et les dégâts des attaques.",
-          "en": "Feral Spirit has longer Root, empowers Attacks"
+          "fr": "Juste après avoir été touché par Esprit farouche, un héros subit sur tes attaques de base un supplément de dégâts proportionnel à ses points de vie maximum. Effet passif : l'immobilisation d'Esprit farouche dure plus longtemps.",
+          "en": "Right after being hit by Feral Spirit, a Hero takes bonus damage from your Basic Attacks based on their maximum Health. Passive: Feral Spirit's Root lasts longer."
         },
         "demoYoutubeId": null
       },
@@ -40746,8 +40746,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_sundering.png",
         "description": {
-          "fr": "Fracture crée une faille infranchissable.",
-          "en": "Sundering creates impassable terrain"
+          "fr": "Réduit fortement le temps de recharge de Fracture, qui laisse derrière elle une faille infranchissable quelques secondes.",
+          "en": "Sharply reduces Sundering's cooldown, and it leaves behind an impassable rift for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -40760,8 +40760,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thrall/images/spells/storm_ui_icon_thrall_earthquake.png",
         "description": {
-          "fr": "Confère un bouclier aux alliés dans la zone.",
-          "en": "Grants allies Shields in area"
+          "fr": "À chaque secousse, les alliés présents dans la zone du Séisme gagnent un bouclier.",
+          "en": "On every pulse, allies inside the Earthquake area gain a Shield."
         },
         "demoYoutubeId": null
       },
@@ -40774,8 +40774,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_cooldown.png",
         "description": {
-          "fr": "Les attaques de base réduisent le temps de recharge des capacités.",
-          "en": "Basic Attacks reduce Ability cooldowns"
+          "fr": "Les attaques de base réduisent les temps de recharge de Thrall, trois fois plus quand elles touchent un héros.",
+          "en": "Basic Attacks reduce Thrall's cooldowns, three times as much when they land on a Hero."
         },
         "demoYoutubeId": null
       },
@@ -40788,8 +40788,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_slow.png",
         "description": {
-          "fr": "Les attaques de base infligent plus de dégâts et ralentissent",
-          "en": "Basic Attacks deal more damage and Slow"
+          "fr": "Les attaques de base infligent plus de dégâts et ralentissent leur cible.",
+          "en": "Basic Attacks deal more damage and Slow their target."
         },
         "demoYoutubeId": null
       },
@@ -40802,15 +40802,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_boltofthestorm.png",
         "description": {
-          "fr": "Téléporte et confère Furie-des-vents.",
-          "en": "Activate to teleport and gain Windfury"
+          "fr": "À l'activation, téléporte Thrall à l'endroit ciblé et lui confère Furie-des-vents.",
+          "en": "Activate to teleport Thrall to the target spot and grant him Windfury."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Thrall",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "tracer",
