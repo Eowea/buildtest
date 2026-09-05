@@ -43485,7 +43485,7 @@ const HEROES = [
   },
   {
     "id": "varian",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Varian",
       "en": "Varian"
@@ -43497,8 +43497,8 @@ const HEROES = [
       "en": "A Bruiser that can flex into dealing damage or protecting his team."
     },
     "gameplay": {
-      "fr": "Varian choisit son rôle au niveau 10 : Provocation pour tanker, Lames jumelles de fureur pour les dégâts soutenus, ou Frappe du colosse pour le burst.",
-      "en": "Varian picks his role at level 10: Taunt to tank, Twin Blades of Fury for sustained damage, or Colossus Smash for burst."
+      "fr": "Varian choisit son rôle dès le palier 4 : Provocation pour tanker, Lames jumelles de fureur pour les dégâts soutenus, ou Frappe du colosse pour le burst.",
+      "en": "Varian picks his role as early as tier 4: Taunt to tank, Twin Blades of Fury for sustained damage, or Colossus Smash for burst."
     },
     "spells": [
       {
@@ -43509,8 +43509,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_heroicstrike.png",
         "description": {
-          "fr": "La prochaine attaque de base inflige des dégâts supplémentaires.",
-          "en": "Deal bonus damage on next Basic Attack"
+          "fr": "Régulièrement, la prochaine attaque de base de Varian inflige de gros dégâts supplémentaires. Ses attaques de base réduisent ce temps de recharge.",
+          "en": "Every so often, Varian's next Basic Attack deals heavy bonus damage. His Basic Attacks reduce that cooldown."
         },
         "demoYoutubeId": ""
       },
@@ -43522,8 +43522,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_lionsfang.png",
         "description": {
-          "fr": "Inflige des dégâts et ralentit les ennemis sur une ligne en plus de soigner Varian.",
-          "en": "Damage and Slow enemies in a line and heal Varian"
+          "fr": "Projette une onde de choc qui blesse et ralentit les ennemis sur une ligne, et rend des points de vie à Varian pour chaque cible touchée, bien plus sur un héros.",
+          "en": "Sends a shockwave that damages and Slows enemies in a line, healing Varian for each target hit, far more from a Hero."
         },
         "demoYoutubeId": ""
       },
@@ -43536,7 +43536,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_parry.png",
         "description": {
           "fr": "Pare toutes les attaques de base subies pendant un court instant. Possède plusieurs charges.",
-          "en": "Parries every Basic Attack taken for a brief moment. Has multiple charges."
+          "en": "Parries every incoming Basic Attack for a brief moment. Has several charges."
         },
         "demoYoutubeId": ""
       },
@@ -43548,8 +43548,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_charge.png",
         "description": {
-          "fr": "Charge l'ennemi ciblé, le blesse et le ralentit.",
-          "en": "Charges the targeted enemy, damaging and Slowing them."
+          "fr": "Charge l'ennemi ciblé, le blesse et le ralentit fortement.",
+          "en": "Charges the target enemy, damaging and heavily Slowing them."
         },
         "demoYoutubeId": ""
       },
@@ -43562,7 +43562,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_taunt.png",
         "description": {
           "fr": "Réduit un héros adverse au silence et le contraint à n'attaquer que Varian. Effet passif : augmente durablement son maximum de points de vie et sa récupération.",
-          "en": "Silences an enemy Hero and forces them to attack only Varian. Passive: permanently increases his maximum Health and regeneration."
+          "en": "Silences an enemy Hero and forces them to attack only Varian. Passive: lastingly increases his maximum Health and its regeneration."
         },
         "demoYoutubeId": ""
       },
@@ -43575,7 +43575,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_colossus_smash.png",
         "description": {
           "fr": "Frappe un ennemi et réduit son armure, le rendant bien plus vulnérable. Effet passif : Varian frappe plus fort, mais dispose de moins de points de vie.",
-          "en": "Smashes an enemy and lowers their Armor, leaving them far more vulnerable. Passive: Varian hits harder but has less Health."
+          "en": "Smashes an enemy and cuts their Armor, leaving them far more vulnerable. Passive: Varian hits harder but has less Health."
         },
         "demoYoutubeId": ""
       },
@@ -43588,23 +43588,23 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_twinbladesoffury.png",
         "description": {
           "fr": "Les attaques de base rechargent Frappe héroïque bien plus vite et accélèrent Varian. Effet passif : vitesse d'attaque accrue, mais dégâts par coup réduits.",
-          "en": "Basic Attacks recharge Heroic Strike much faster and speed Varian up. Passive: more Attack Speed, but less damage per hit."
+          "en": "Basic Attacks recharge Heroic Strike far faster and speed Varian up. Passive: higher Attack Speed, but less damage per hit."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Décide de ton niveau 10 selon la composition de ton équipe, pas selon l'ennemi.",
-        "en": "Choose your level 10 based on your own team's composition, not the enemy's."
+        "fr": "Ton héroïque se choisit au palier 4, et il décide de ton rôle : si l'équipe n'a pas de tank, prends Provocation (R) même si tu voulais taper.",
+        "en": "Your Heroic is picked at tier 4, and it decides your role: if the team has no tank, take Taunt (R) even if you wanted to deal damage."
       },
       {
-        "fr": "Charge sert à engager mais aussi à rattraper une cible qui fuit.",
-        "en": "Charge is an engage but also a way to run down a fleeing target."
+        "fr": "Avec Frappe du colosse (R), ouvre toujours dessus : la réduction d'armure fait passer tout le reste, le tien comme celui de ton équipe.",
+        "en": "With Colossus Smash (R), always open with it: the Armor shred boosts everything that follows, yours and your team's."
       },
       {
-        "fr": "Parade bloque toutes les attaques de base : utilise-la contre les assassins.",
-        "en": "Parry blocks every Basic Attack: use it against auto-attackers."
+        "fr": "Provocation (R) est un excellent outil d'engage : attrape la cible clé pour lancer le fight, ou punis celui qui dive ta backline en le forçant à ne taper que toi.",
+        "en": "Taunt (R) is an excellent engage tool: grab the key target to start the fight, or punish whoever dives your backline by forcing them onto you."
       }
     ],
     "builds": [
@@ -43612,27 +43612,27 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build recommandé",
-          "en": "Recommended build"
+          "fr": "Build Tank",
+          "en": "Tank build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build Provocation, pour tenir la ligne de front.",
+          "en": "The Taunt build, to hold the frontline."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Varian]",
+        "buildCode": "[T2122134,Varian]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm7wdaidi01bfp",
+            "primaryId": "tm7wdaidi02684",
             "alternativeIds": []
           },
           {
@@ -43642,12 +43642,12 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tm7wdaidi07s78",
+            "primaryId": "tm7wdaidi08hnq",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tm7wdaidi10gxi",
+            "primaryId": "tm7wdaidi11vdr",
             "alternativeIds": []
           },
           {
@@ -43657,12 +43657,72 @@ const HEROES = [
           },
           {
             "level": 16,
-            "primaryId": "tm7wdaidi15cck",
+            "primaryId": "tm7wdaidi17xkx",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tm7wdaidi18957",
+            "primaryId": "tm7wdaidi21iqc",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build Colosse",
+          "en": "Colossus build"
+        },
+        "summary": {
+          "fr": "Build Frappe du colosse, pour ouvrir sur une cible et la faire fondre.",
+          "en": "The Colossus Smash build, to open on a target and melt it."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T3222134,Varian]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tm7wdaidi03xfw",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tm7wdaidi0560k",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tm7wdaidi08hnq",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tm7wdaidi11vdr",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tm7wdaidi12h5a",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tm7wdaidi17xkx",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tm7wdaidi21iqc",
             "alternativeIds": []
           }
         ],
@@ -43681,7 +43741,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_lionsfang.png",
         "description": {
           "fr": "Quête : chaque héros touché par Croc-de-Lion en augmente définitivement les dégâts. Récompense : son ralentissement devient bien plus fort et plus long.",
-          "en": "Quest: each Hero hit by Lion's Fang permanently increases its damage. Reward: its Slow becomes far stronger and longer."
+          "en": "Quest: every Hero hit by Lion's Fang permanently increases its damage. Reward: its Slow becomes much stronger and longer."
         },
         "demoYoutubeId": null
       },
@@ -43694,8 +43754,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_parry.png",
         "description": {
-          "fr": "Parer l'attaque d'un héros réinitialise Frappe héroïque.",
-          "en": "Parrying a Hero's attack will refresh Heroic Strike"
+          "fr": "Parer l'attaque de base d'un héros remet Frappe héroïque à zéro, et la suivante frappe plus fort.",
+          "en": "Parrying a Hero's Basic Attack resets Heroic Strike, and the next one hits harder."
         },
         "demoYoutubeId": null
       },
@@ -43708,8 +43768,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_highkingsquest.png",
         "description": {
-          "fr": "Quête : accomplir des quêtes augmente les dégâts d'attaque",
-          "en": "Quest: Complete Quests to gain Attack Damage"
+          "fr": "Trois quêtes menées de front : toucher des héros en attaque de base, participer à des éliminations, ramasser des globes de régénération. Chacune terminée augmente les dégâts d'attaque, et les trois ensemble en donnent bien plus.",
+          "en": "Three quests at once: hit Heroes with Basic Attacks, take part in Takedowns, gather Regeneration Globes. Each one finished raises Attack Damage, and all three together give far more."
         },
         "demoYoutubeId": null
       },
@@ -43723,7 +43783,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_taunt.png",
         "description": {
           "fr": "Réduit un héros adverse au silence et le contraint à n'attaquer que Varian. Effet passif : augmente durablement son maximum de points de vie et sa récupération.",
-          "en": "Silences an enemy Hero and forces them to attack only Varian. Passive: permanently increases his maximum Health and regeneration."
+          "en": "Silences an enemy Hero and forces them to attack only Varian. Passive: lastingly increases his maximum Health and its regeneration."
         },
         "demoYoutubeId": null
       },
@@ -43737,7 +43797,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_colossus_smash.png",
         "description": {
           "fr": "Frappe un ennemi et réduit son armure, le rendant bien plus vulnérable. Effet passif : Varian frappe plus fort, mais dispose de moins de points de vie.",
-          "en": "Smashes an enemy and lowers their Armor, leaving them far more vulnerable. Passive: Varian hits harder but has less Health."
+          "en": "Smashes an enemy and cuts their Armor, leaving them far more vulnerable. Passive: Varian hits harder but has less Health."
         },
         "demoYoutubeId": null
       },
@@ -43751,7 +43811,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_twinbladesoffury.png",
         "description": {
           "fr": "Les attaques de base rechargent Frappe héroïque bien plus vite et accélèrent Varian. Effet passif : vitesse d'attaque accrue, mais dégâts par coup réduits.",
-          "en": "Basic Attacks recharge Heroic Strike much faster and speed Varian up. Passive: more Attack Speed, but less damage per hit."
+          "en": "Basic Attacks recharge Heroic Strike far faster and speed Varian up. Passive: higher Attack Speed, but less damage per hit."
         },
         "demoYoutubeId": null
       },
@@ -43764,8 +43824,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_lionsfang.png",
         "description": {
-          "fr": "Augmente les points de vie rendus par Croc-de-Lion.",
-          "en": "Increase Lion's Fang healing"
+          "fr": "Croc-de-Lion rend bien plus de points de vie quand elle touche des héros.",
+          "en": "Lion's Fang heals for far more when it hits Heroes."
         },
         "demoYoutubeId": null
       },
@@ -43778,8 +43838,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_secondwind.png",
         "description": {
-          "fr": "Les attaques de base rendent des points de vie, plus encore quand ceux-ci sont bas.",
-          "en": "Basic Attacks heal, more when low Health"
+          "fr": "Les attaques de base rendent des points de vie, et bien davantage tant que Varian est sous la moitié de sa vie.",
+          "en": "Basic Attacks heal Varian, and far more while he is below half Health."
         },
         "demoYoutubeId": null
       },
@@ -43793,7 +43853,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_victoryrush.png",
         "description": {
           "fr": "Régulièrement, la prochaine attaque de base de Varian lui rend une grande quantité de points de vie. Chaque serviteur ou monstre qui meurt à proximité en réduit le temps de recharge.",
-          "en": "At regular intervals, Varian's next Basic Attack restores a large amount of Health. Each Minion or monster dying nearby brings it back sooner."
+          "en": "Every so often, Varian's next Basic Attack heals him for a large amount. Each Minion or Monster dying nearby reduces that cooldown."
         },
         "demoYoutubeId": null
       },
@@ -43806,8 +43866,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_parry.png",
         "description": {
-          "fr": "Parade immunise contre les dégâts.",
-          "en": "Parry grants Protected"
+          "fr": "Parade bloque désormais tous les dégâts, pas seulement les attaques de base. Elle revient plus vite mais perd une charge.",
+          "en": "Parry now blocks all damage, not only Basic Attacks. It comes back sooner but loses a charge."
         },
         "demoYoutubeId": null
       },
@@ -43820,8 +43880,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_charge.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Charge et permet de l'utiliser sur les alliés.",
-          "en": "Reduce Charge cooldown, can be used on allies"
+          "fr": "Réduit le temps de recharge et le coût en mana de Charge, qui peut désormais être lancée sur un héros allié.",
+          "en": "Reduces Charge's cooldown and Mana cost, and lets it be cast on an allied Hero."
         },
         "demoYoutubeId": null
       },
@@ -43834,8 +43894,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_charge.png",
         "description": {
-          "fr": "Augmente les dégâts de Charge.",
-          "en": "Increase Charge damage"
+          "fr": "Charge inflige aux héros des dégâts supplémentaires proportionnels à leurs points de vie maximum.",
+          "en": "Charge deals Heroes bonus damage based on their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -43848,8 +43908,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_mortalstrike.png",
         "description": {
-          "fr": "Frappe héroïque réduit les soins reçus par l'ennemi.",
-          "en": "Heroic Strike reduces enemy healing"
+          "fr": "Les héros touchés par Frappe héroïque reçoivent nettement moins de soins pendant quelques secondes.",
+          "en": "Heroes hit by Heroic Strike receive far less healing for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -43863,7 +43923,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_shatteringthrow.png",
         "description": {
           "fr": "Lance une épée qui blesse le héros ciblé et ravage ses boucliers. Effet passif : les attaques de base portées aux héros abîment aussi fortement leurs boucliers.",
-          "en": "Throws a sword that damages the targeted Hero and tears through their Shields. Passive: Basic Attacks on Heroes also heavily damage their Shields."
+          "en": "Throws a sword that damages the target Hero and tears through their Shields. Passive: Basic Attacks on Heroes also shred Shields."
         },
         "demoYoutubeId": null
       },
@@ -43876,8 +43936,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_bannerofstormwind.png",
         "description": {
-          "fr": "Bannière qui augmente la vitesse de déplacement.",
-          "en": "Banner that grants Movement Speed"
+          "fr": "Plante une bannière qui accélère les héros alliés proches un bon moment.",
+          "en": "Plants a banner that speeds up nearby allied Heroes for a good while."
         },
         "demoYoutubeId": null
       },
@@ -43890,8 +43950,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_bannerofironforge.png",
         "description": {
-          "fr": "Bannière qui confère de l'armure.",
-          "en": "Banner that grants Armor"
+          "fr": "Plante une bannière qui confère de l'armure aux héros alliés proches un bon moment.",
+          "en": "Plants a banner that grants Armor to nearby allied Heroes for a good while."
         },
         "demoYoutubeId": null
       },
@@ -43904,8 +43964,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_bannerofdalaran.png",
         "description": {
-          "fr": "Bannière qui augmente la puissance de capacité.",
-          "en": "Banner that grants Spell Power"
+          "fr": "Plante une bannière qui augmente la puissance de capacité des héros alliés proches un bon moment.",
+          "en": "Plants a banner that increases nearby allied Heroes' Spell Power for a good while."
         },
         "demoYoutubeId": null
       },
@@ -43918,8 +43978,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_taunt.png",
         "description": {
-          "fr": "Les attaques subies réduisent le temps de recharge de Provocation.",
-          "en": "Incoming attacks reduce Taunt cooldown"
+          "fr": "Chaque attaque de base de héros encaissée réduit le temps de recharge de Provocation.",
+          "en": "Every Hero Basic Attack he takes reduces Taunt's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -43932,8 +43992,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_colossus_smash.png",
         "description": {
-          "fr": "Frappe du colosse touche tous les ennemis proches de la cible et voit son temps de recharge réduit.",
-          "en": "Colossus Smash hits every enemy near the target and returns sooner."
+          "fr": "Frappe du colosse touche tous les ennemis proches de la cible et revient plus vite.",
+          "en": "Colossus Smash hits every enemy near the target and comes back sooner."
         },
         "demoYoutubeId": null
       },
@@ -43946,8 +44006,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/spells/storm_ui_icon_varian_twinbladesoffury.png",
         "description": {
-          "fr": "Augmente les bonus conférés par Lames jumelles de fureur.",
-          "en": "Increase Twin Blades of Fury bonuses"
+          "fr": "Lames jumelles de fureur augmente encore les dégâts de Frappe héroïque, et les attaques de base accélèrent davantage Varian.",
+          "en": "Twin Blades of Fury boosts Heroic Strike's damage further, and Basic Attacks speed Varian up more."
         },
         "demoYoutubeId": null
       },
@@ -43960,8 +44020,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_glorytothealliance.png",
         "description": {
-          "fr": "Les bannières augmentent la récupération de vie des alliés ainsi que tous les soins qu'ils reçoivent, et se rechargent plus vite.",
-          "en": "The banners raise allies' Health regeneration and all the healing they receive, and return sooner."
+          "fr": "Les bannières augmentent la récupération de vie des alliés ainsi que tous les soins qu'ils reçoivent, et se rechargent bien plus vite.",
+          "en": "Banners also increase allies' Health regeneration and all healing they receive, and recharge far faster."
         },
         "demoYoutubeId": null
       },
@@ -43974,15 +44034,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/varian/images/talents/storm_ui_icon_varian_demoralizingshout.png",
         "description": {
-          "fr": "Réduit les dégâts infligés par les ennemis proches.",
-          "en": "Reduce damage of nearby Heroes"
+          "fr": "À l'activation, réduit fortement les dégâts infligés par les héros adverses proches. Chaque fois que l'un d'eux blesse un héros, le temps de recharge de ce cri et celui de Parade diminuent.",
+          "en": "Activate to sharply cut the damage nearby enemy Heroes deal. Each time one of them damages a Hero, this shout's cooldown and Parry's both drop."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Varian",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "xul",
