@@ -20732,7 +20732,7 @@ const HEROES = [
   },
   {
     "id": "genji",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Genji",
       "en": "Genji"
@@ -20756,8 +20756,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_cyberagility.png",
         "description": {
-          "fr": "Permet de sauter par-dessus les obstacles.",
-          "en": "Jump over terrain"
+          "fr": "Bondit vers l'endroit ciblé, murs et bâtiments compris.",
+          "en": "Leaps to the target spot, walls and Structures included."
         },
         "demoYoutubeId": ""
       },
@@ -20769,8 +20769,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_shurikens.png",
         "description": {
-          "fr": "Lance des shurikens en éventail. Possède plusieurs charges, rendues toutes ensemble.",
-          "en": "Throws Shuriken in a spread. Has multiple charges, all restored at once."
+          "fr": "Lance trois shurikens en éventail, chacun blessant le premier ennemi qu'il touche. Possède plusieurs charges, rendues toutes ensemble.",
+          "en": "Throws three shuriken in a spread, each damaging the first enemy it hits. Has several charges, all restored at once."
         },
         "demoYoutubeId": ""
       },
@@ -20783,7 +20783,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_deflect.png",
         "description": {
           "fr": "Genji canalise une garde qui le protège et bloque les dégâts ; chaque source bloquée lui fait lancer un kunaï sur l'ennemi le plus proche, les héros en priorité.",
-          "en": "Genji channels a guard that Protects him and blocks damage; each source blocked sends a kunai at the nearest enemy, Heroes first."
+          "en": "Genji channels a guard that protects him and blocks damage; each blocked source makes him throw a kunai at the nearest enemy, Heroes first."
         },
         "demoYoutubeId": ""
       },
@@ -20796,7 +20796,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_swiftstrike.png",
         "description": {
           "fr": "Se projette vers l'avant en blessant les ennemis traversés. Si un héros touché meurt juste après, la capacité est rendue et son mana remboursé.",
-          "en": "Dashes forward, damaging the enemies passed through. If a Hero hit dies right after, the Ability and its Mana are refunded."
+          "en": "Dashes forward, damaging the enemies he cuts through. If a Hero hit dies right after, the Ability and its Mana are refunded."
         },
         "demoYoutubeId": ""
       },
@@ -20808,8 +20808,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_dragonblade.png",
         "description": {
-          "fr": "Déchaîne la lame du dragon.",
-          "en": "Unleash the Dragonblade"
+          "fr": "Dégaine la lame du dragon quelques secondes : tant qu'elle est active, la relancer projette Genji vers l'avant et frappe dans un large arc.",
+          "en": "Draws the Dragonblade for a few seconds: while it is out, recasting lunges Genji forward and slashes in a wide arc."
         },
         "demoYoutubeId": ""
       },
@@ -20822,23 +20822,23 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_shurikens_xblade.png",
         "description": {
           "fr": "Trace deux sillons qui blessent au passage puis explosent après un instant, frappant de nouveau les ennemis présents.",
-          "en": "Carves two slashes that damage on contact then detonate after a moment, hitting the enemies still inside again."
+          "en": "Cuts two slashes that damage on the way through, then detonate a moment later, hitting the enemies still there again."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Riposte renvoie les projectiles : entre dedans plutôt que de reculer.",
-        "en": "Deflect returns projectiles: walk into them rather than backing off."
+        "fr": "Frappe du vent (E) t'est rendue si ta cible meurt juste après : elle sert à finish, pas à engage, et c'est ce qui te fait enchaîner.",
+        "en": "Swift Strike (E) is refunded if your target dies right after: it's a finisher, not an engage, and that's what lets you chain."
       },
       {
-        "fr": "Frappe du vent se recharge si ta cible meurt juste après : achève, puis repars.",
-        "en": "Swift Strike refunds if your target dies right after: finish, then dash on."
+        "fr": "Riposte (Z) bloque même les tirs des bâtiments quand tu dives, mais pas les dégâts sur la durée : ils continuent de tomber après.",
+        "en": "Deflect (W) blocks even Structure fire while you dive, but not damage over time: it keeps ticking afterwards."
       },
       {
-        "fr": "Agilité cybernétique franchit les murs : ton meilleur outil de fuite.",
-        "en": "Cyber Agility jumps over walls: your best escape tool."
+        "fr": "Regarde ton mana avant d'engage : en dessous du quart tu n'as plus de combo et tu meurs pour rien.",
+        "en": "Check your Mana before you engage: below a quarter you have no combo left and you die for nothing."
       }
     ],
     "builds": [
@@ -20857,11 +20857,71 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Genji]",
+        "buildCode": "[T2132122,Genji]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmqa6eo9z02xv7",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmqa6eo9z04qib",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmqa6eo9z09j4s",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmqa6eo9z1139f",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmqa6eo9z12z6j",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmqa6eo9z16z4u",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmqa6eo9z19y30",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build E",
+          "en": "E build"
+        },
+        "summary": {
+          "fr": "Build centré sur Frappe du vent, pour enchaîner les cibles.",
+          "en": "Focused on Swift Strike, to chain from target to target."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T1211221,Genji]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
@@ -20871,7 +20931,7 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmqa6eo9z04qib",
+            "primaryId": "tmqa6eo9z05504",
             "alternativeIds": []
           },
           {
@@ -20886,12 +20946,12 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tmqa6eo9z12z6j",
+            "primaryId": "tmqa6eo9z136ke",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmqa6eo9z15c21",
+            "primaryId": "tmqa6eo9z16z4u",
             "alternativeIds": []
           },
           {
@@ -20914,8 +20974,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_swiftstrike.png",
         "description": {
-          "fr": "Frappe du vent augmente la vitesse de déplacement.",
-          "en": "Swift Strike grants Move Speed"
+          "fr": "Toucher un héros avec Frappe du vent augmente la vitesse de déplacement de Genji quelques secondes.",
+          "en": "Hitting a Hero with Swift Strike increases Genji's Movement Speed for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -20928,8 +20988,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_cyberagility.png",
         "description": {
-          "fr": "Sur une monture, Agilité cybernétique porte plus loin, revient plus vite et ralentit les héros adverses présents dans la zone d'atterrissage.",
-          "en": "While Mounted, Cyber Agility reaches farther, returns sooner and Slows the enemy Heroes in the landing area."
+          "fr": "Sur une monture, Agilité cybernétique porte bien plus loin, revient bien plus vite et ralentit les héros adverses présents dans la zone d'atterrissage.",
+          "en": "While mounted, Cyber Agility reaches much farther, comes back much sooner and Slows the enemy Heroes in its landing area."
         },
         "demoYoutubeId": null
       },
@@ -20942,8 +21002,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/talents/storm_ui_icon_genji_cyberagility_a.png",
         "description": {
-          "fr": "Franchir un obstacle augmente la vitesse de déplacement et confère camouflage.",
-          "en": "Jumping over terrain gives Move Speed, Stealth"
+          "fr": "Franchir un obstacle avec Agilité cybernétique augmente la vitesse de déplacement et confère le camouflage. Effet passif : sa capacité héroïque lui rend des points de vie sur les dégâts infligés aux héros, d'autant plus qu'il est bas.",
+          "en": "Jumping over terrain with Cyber Agility grants Movement Speed and Stealth. Passive: his Heroic heals him for part of the damage it deals to Heroes, more the lower his Health."
         },
         "demoYoutubeId": null
       },
@@ -20956,8 +21016,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_shurikens.png",
         "description": {
-          "fr": "Quête : augmente les dégâts et rend des charges de Shuriken.",
-          "en": "Quest: Increase Shuriken damage and restore charges"
+          "fr": "Quête : toucher des héros avec Shuriken. Récompenses : Shuriken frappe plus fort, puis Agilité cybernétique en rend toutes les charges.",
+          "en": "Quest: hit Heroes with Shuriken. Rewards: Shuriken hits harder, then Cyber Agility refunds all its charges."
         },
         "demoYoutubeId": null
       },
@@ -20971,7 +21031,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_swiftstrike.png",
         "description": {
           "fr": "En bout de trajectoire, Frappe du vent inflige un surplus de dégâts après un court délai.",
-          "en": "At the end of its path, Swift Strike deals a burst of extra damage after a short delay."
+          "en": "At the end of its path, Swift Strike deals extra damage after a short delay."
         },
         "demoYoutubeId": null
       },
@@ -20984,8 +21044,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/talents/storm_ui_icon_genji_shurikens_dragonsoul.png",
         "description": {
-          "fr": "Inflige des dégâts aux ennemis proches.",
-          "en": "Activate to damage nearby enemies"
+          "fr": "Après avoir bloqué assez de dégâts avec Riposte, s'active pour déchaîner une griffe qui blesse tous les ennemis proches.",
+          "en": "After blocking enough damage with Deflect, activate to unleash a claw that damages every nearby enemy."
         },
         "demoYoutubeId": null
       },
@@ -20998,8 +21058,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_deflect.png",
         "description": {
-          "fr": "Confère un bouclier quand Riposte prend fin.",
-          "en": "Gain a Shield after Deflect ends"
+          "fr": "Quand Riposte prend fin, Genji gagne un bouclier égal à tout ce qu'il vient de bloquer.",
+          "en": "When Deflect ends, Genji gains a Shield equal to everything he just blocked."
         },
         "demoYoutubeId": null
       },
@@ -21012,8 +21072,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/talents/storm_ui_icon_genji_deflect_a.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Riposte.",
-          "en": "Reduce Deflect cooldown"
+          "fr": "Chaque source de dégâts bloquée réduit le temps de recharge de Riposte, jusqu'à un plafond.",
+          "en": "Each blocked source of damage reduces Deflect's cooldown, up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -21026,8 +21086,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_cyberagility.png",
         "description": {
-          "fr": "Genji esquive, Agilité cybernétique confère de l'armure anti-sort.",
-          "en": "Genji Dodges, Cyber Agility grants Spell Armor"
+          "fr": "Agilité cybernétique confère de l'armure anti-sort quelques secondes. Effet passif : Genji esquive régulièrement une attaque de base de héros.",
+          "en": "Cyber Agility grants Spell Armor for a few seconds. Passive: Genji regularly dodges a Hero Basic Attack."
         },
         "demoYoutubeId": null
       },
@@ -21040,8 +21100,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_dragonblade.png",
         "description": {
-          "fr": "Déchaîne la lame du dragon.",
-          "en": "Unleash the Dragonblade"
+          "fr": "Dégaine la lame du dragon quelques secondes : tant qu'elle est active, la relancer projette Genji vers l'avant et frappe dans un large arc.",
+          "en": "Draws the Dragonblade for a few seconds: while it is out, recasting lunges Genji forward and slashes in a wide arc."
         },
         "demoYoutubeId": null
       },
@@ -21055,7 +21115,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_shurikens_xblade.png",
         "description": {
           "fr": "Trace deux sillons qui blessent au passage puis explosent après un instant, frappant de nouveau les ennemis présents.",
-          "en": "Carves two slashes that damage on contact then detonate after a moment, hitting the enemies still inside again."
+          "en": "Cuts two slashes that damage on the way through, then detonate a moment later, hitting the enemies still there again."
         },
         "demoYoutubeId": null
       },
@@ -21068,8 +21128,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_shurikens.png",
         "description": {
-          "fr": "Augmente les dégâts que Shuriken inflige à une cible unique.",
-          "en": "Increase Shuriken single-target damage"
+          "fr": "Toucher un même ennemi avec les trois shurikens inflige des dégâts supplémentaires. Moins efficace contre les bâtiments.",
+          "en": "Hitting the same enemy with all three shuriken deals bonus damage. Less effective against Structures."
         },
         "demoYoutubeId": null
       },
@@ -21082,8 +21142,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_swiftstrike.png",
         "description": {
-          "fr": "Toucher des héros réduit le temps de recharge de Frappe du vent.",
-          "en": "Hitting Heroes reduces Swift Strike cooldown"
+          "fr": "Chaque héros touché par Frappe du vent en réduit le temps de recharge.",
+          "en": "Each Hero hit by Swift Strike reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -21096,8 +21156,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
         "description": {
-          "fr": "Augmente la portée et les dégâts des attaques de base.",
-          "en": "Increase Basic Attack range, damage"
+          "fr": "Augmente la portée des attaques de base. Chaque attaque de base portée à un héros en augmente les dégâts, cumulable jusqu'à un plafond.",
+          "en": "Increases Basic Attack range. Each Basic Attack landed on a Hero increases their damage, stacking up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -21110,8 +21170,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_deflect.png",
         "description": {
-          "fr": "Augmente les dégâts de Riposte.",
-          "en": "Increase Deflect damage"
+          "fr": "Riposte inflige aussi une part des dégâts qu'elle a bloqués.",
+          "en": "Deflect also deals a share of the damage it blocked."
         },
         "demoYoutubeId": null
       },
@@ -21124,8 +21184,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_swiftstrike.png",
         "description": {
-          "fr": "Après un court délai, un écho de Frappe du vent inflige des dégâts supplémentaires.",
-          "en": "Swift Strike deals extra damage after a delay"
+          "fr": "Après un court délai, un écho de Frappe du vent inflige des dégâts supplémentaires sur la même trajectoire.",
+          "en": "After a short delay, an echo of Swift Strike deals extra damage along the same path."
         },
         "demoYoutubeId": null
       },
@@ -21138,8 +21198,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/talents/storm_ui_icon_genji_swiftstrike_a.png",
         "description": {
-          "fr": "Toucher des héros augmente les dégâts de Frappe du vent.",
-          "en": "Swift Strike deals increased damage for each Hero hit"
+          "fr": "Chaque héros touché par Frappe du vent augmente les dégâts de la prochaine, cumulable jusqu'à trois fois.",
+          "en": "Each Hero hit by Swift Strike increases the next one's damage, stacking up to three times."
         },
         "demoYoutubeId": null
       },
@@ -21152,8 +21212,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_dragonblade.png",
         "description": {
-          "fr": "Toucher des héros augmente la durée de Lame du dragon.",
-          "en": "Hitting Heroes increases Dragonblade duration"
+          "fr": "Chaque héros touché par Lame du dragon en prolonge la durée. Tuer un héros juste après l'avoir touché remet Frappe du vent à zéro.",
+          "en": "Each Hero hit by Dragonblade extends its duration. Killing a Hero right after hitting them resets Swift Strike."
         },
         "demoYoutubeId": null
       },
@@ -21166,8 +21226,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_shurikens_xblade.png",
         "description": {
-          "fr": "Toucher des héros réduit le temps de recharge de Danse du dragon.",
-          "en": "Hero hits reduce X-Strike's cooldown"
+          "fr": "Chaque héros touché par Danse du dragon en réduit fortement le temps de recharge.",
+          "en": "Each Hero hit by X-Strike sharply reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -21180,8 +21240,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_shurikens.png",
         "description": {
-          "fr": "Shuriken transperce. Frappe du vent confère des charges.",
-          "en": "Shuriken pierce, gain charge from Swift Strike"
+          "fr": "Shuriken transperce tous les ennemis touchés, et le remboursement de Frappe du vent rend aussi une charge de Shuriken.",
+          "en": "Shuriken pierces every enemy hit, and Swift Strike's refund also gives back a Shuriken charge."
         },
         "demoYoutubeId": null
       },
@@ -21194,15 +21254,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/genji/images/spells/storm_ui_icon_genji_deflect.png",
         "description": {
-          "fr": "Quête : Riposte touche tous les héros adverses proches.",
-          "en": "Quest: Deflect hits all nearby Heroes"
+          "fr": "Quête : bloquer beaucoup de dégâts avec Riposte. Récompense : Riposte frappe tous les héros adverses proches.",
+          "en": "Quest: block a lot of damage with Deflect. Reward: Deflect hits every nearby enemy Hero."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Genji",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "greymane",
@@ -25219,7 +25279,7 @@ const HEROES = [
   },
   {
     "id": "junkrat",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Chacal",
       "en": "Junkrat"
@@ -25243,8 +25303,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_bomb_pack.png",
         "description": {
-          "fr": "À sa mort, Chacal lâche des grenades qui explosent après un instant autour de lui, moins efficaces contre les bâtiments. Son trait sert aussi à déclencher sa Mine incapacitante.",
-          "en": "On death, Junkrat drops grenades that blow up around him after a moment, weaker against Structures. His trait also serves to detonate his Concussion Mine."
+          "fr": "À sa mort, Chacal lâche des grenades qui explosent après un instant autour de lui, bien moins efficaces contre les bâtiments. Son trait sert aussi à déclencher sa Mine incapacitante.",
+          "en": "On death, Junkrat drops grenades that blow up around him a moment later, far weaker against Structures. His trait also detonates his Concussion Mine."
         },
         "demoYoutubeId": ""
       },
@@ -25256,8 +25316,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_frag_launcher.png",
         "description": {
-          "fr": "Tire une grenade qui rebondit sur le sol et les obstacles avant d'exploser. Possède plusieurs charges, rendues toutes ensemble.",
-          "en": "Fires a grenade that bounces off the ground and terrain before exploding. Has multiple charges, all restored at once."
+          "fr": "Tire une grenade qui explose au contact d'un ennemi ou en bout de course, et qui peut rebondir sur le sol et les obstacles. Moitié moins efficace contre les bâtiments. Possède plusieurs charges, rendues toutes ensemble.",
+          "en": "Fires a grenade that explodes on hitting an enemy or at the end of its path, and can ricochet off the ground and terrain. Half as effective against Structures. Has several charges, all restored at once."
         },
         "demoYoutubeId": ""
       },
@@ -25269,8 +25329,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_concussion_mine.png",
         "description": {
-          "fr": "Pose une mine que Chacal fait exploser à volonté : elle repousse les ennemis, et lui-même s'il est à portée, sans le blesser.",
-          "en": "Places a mine Junkrat detonates at will: it knocks back enemies, and himself if in range, without hurting him."
+          "fr": "Pose une mine que Chacal fait exploser à volonté : elle repousse les ennemis, et lui-même s'il est à portée, sans le blesser. Une seule mine reste active à la fois.",
+          "en": "Places a mine Junkrat detonates at will: it knocks enemies back, and himself if he is in range, without hurting him. Only one mine stays active at a time."
         },
         "demoYoutubeId": ""
       },
@@ -25296,7 +25356,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_rip_tire.png",
         "description": {
           "fr": "Lance un pneu explosif que Chacal pilote, immobilisé pendant ce temps. Le réactiver le fait détoner aussitôt : il repousse les ennemis proches et les blesse d'autant plus qu'ils sont près du centre.",
-          "en": "Launches an explosive tire Junkrat drives, Rooted while it lasts. Reactivating detonates it instantly: it knocks back nearby enemies and damages them more the closer they are to the center."
+          "en": "Sends out an explosive tire Junkrat steers, rooted in place while he does. Reactivating detonates it at once: it knocks nearby enemies back and hurts them more the closer they are to the center."
         },
         "demoYoutubeId": ""
       },
@@ -25309,23 +25369,23 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_rocket_ride.png",
         "description": {
           "fr": "Après un temps de préparation, Chacal s'envoie en l'air, choisit sa zone d'atterrissage et s'écrase en blessant les ennemis proches et en déclenchant Mauvais perdant. Il y laisse la vie et repart du Hall des tempêtes, monture accélérée.",
-          "en": "After a wind-up, Junkrat launches himself skyward, picks his landing zone and crashes down, damaging nearby enemies and triggering Total Mayhem. It costs him his life: he returns from the Hall of Storms with a faster Mount."
+          "en": "After a wind-up, Junkrat launches into the air, picks his landing spot and crashes down, damaging nearby enemies and setting off Total Mayhem. It costs him his life, and he returns from the Hall of Storms on a faster mount."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Tire tes grenades contre les murs : elles rebondissent là où l'ennemi se cache.",
-        "en": "Bounce your grenades off walls: they reach where the enemy hides."
+        "fr": "Vise juste devant ta cible au Lance-grenades (A) : la grenade rebondit dedans, alors qu'un tir trop long lui passe derrière.",
+        "en": "Aim just in front of your target with Frag Launcher (Q): the grenade bounces into them, while an overshoot sails past behind."
       },
       {
-        "fr": "Mine incapacitante te propulse aussi : c'est ton unique moyen de fuite.",
-        "en": "Concussion Mine launches you too: it is your only escape."
+        "fr": "Mine incapacitante (Z) est ton seul disengage : ne la crame pas dès qu'elle est up, et joue très safe tant qu'elle est down.",
+        "en": "Concussion Mine (W) is your only disengage: don't burn it the second it's up, and play very safe while it's down."
       },
       {
-        "fr": "Piège d'acier posé dans un buisson bloque un ennemi le temps d'un combat.",
-        "en": "A Steel Trap in a bush locks an enemy down for a whole fight."
+        "fr": "Piège d'acier (E) met deux secondes à s'armer : pose-le avant le fight sur un point de passage, jamais au milieu de la bagarre.",
+        "en": "Steel Trap (E) takes two seconds to arm: place it before the fight on a choke, never in the middle of the brawl."
       }
     ],
     "builds": [
@@ -25344,11 +25404,11 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T2211231,Junkrat]",
+        "buildCode": "[T2231231,Junkrat]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
@@ -25363,10 +25423,8 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tm0q03buz07myd",
-            "alternativeIds": [
-              "tm0q03buz09swx"
-            ]
+            "primaryId": "tm0q03buz09swx",
+            "alternativeIds": []
           },
           {
             "level": 10,
@@ -25381,16 +25439,12 @@ const HEROES = [
           {
             "level": 16,
             "primaryId": "tm0q03buz185ty",
-            "alternativeIds": [
-              "tm0q03buz17lgv"
-            ]
+            "alternativeIds": []
           },
           {
             "level": 20,
             "primaryId": "tm0q03buz19jpr",
-            "alternativeIds": [
-              "tm0q03buz2177j"
-            ]
+            "alternativeIds": []
           }
         ],
         "isNew": false
@@ -25407,8 +25461,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_frag_launcher.png",
         "description": {
-          "fr": "La vitesse de déplacement augmente quand le lance-grenades se recharge.",
-          "en": "Gain Move Speed while Frag Launcher replenishes"
+          "fr": "Tant que Lance-grenades n'a plus aucune charge, Chacal se déplace plus vite et ses attaques de base frappent plus fort.",
+          "en": "While Frag Launcher is out of charges, Junkrat moves faster and his Basic Attacks hit harder."
         },
         "demoYoutubeId": null
       },
@@ -25421,8 +25475,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/talents/storm_ui_icon_junkrat_frag_launcher_b.png",
         "description": {
-          "fr": "Les grenades de Lance-grenades infligent des dégâts supplémentaires.",
-          "en": "Frag Launcher grenades deal bonus damage"
+          "fr": "Les grenades restent en jeu plus longtemps avant d'exploser d'elles-mêmes, et la dernière grenade tirée frappe deux fois plus fort.",
+          "en": "Grenades linger longer before detonating on their own, and the last grenade fired hits twice as hard."
         },
         "demoYoutubeId": null
       },
@@ -25435,8 +25489,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/talents/storm_ui_icon_junkrat_trap_mine.png",
         "description": {
-          "fr": "Mine incapacitante et Piège d'acier augmentent les dégâts.",
-          "en": "Concussion Mine and Steel Trap increase damage"
+          "fr": "Toucher un héros avec Mine incapacitante ou Piège d'acier augmente les dégâts des attaques et des capacités de base de Chacal quelques secondes.",
+          "en": "Hitting a Hero with Concussion Mine or Steel Trap increases Junkrat's Basic Attack and Basic Ability damage for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -25449,8 +25503,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_frag_launcher.png",
         "description": {
-          "fr": "Quête : augmente les dégâts de Lance-grenades.",
-          "en": "Quest: Increase Frag Launcher damage"
+          "fr": "Quête : chaque héros touché par Lance-grenades en augmente définitivement les dégâts, jusqu'à un plafond.",
+          "en": "Quest: every Hero hit by Frag Launcher permanently increases its damage, up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -25463,8 +25517,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_concussion_mine.png",
         "description": {
-          "fr": "Toucher des héros réduit le temps de recharge de Mine incapacitante.",
-          "en": "Hitting Heroes reduces Concussion Mine cooldown"
+          "fr": "Toucher un héros avec Mine incapacitante réduit fortement son temps de recharge.",
+          "en": "Hitting a Hero with Concussion Mine sharply reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -25477,8 +25531,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_steel_trap.png",
         "description": {
-          "fr": "Le piège pourchasse les héros.",
-          "en": "Steel Traps chase Heroes"
+          "fr": "Les pièges d'acier se déplacent lentement vers les héros adverses proches.",
+          "en": "Steel Traps slowly crawl toward nearby enemy Heroes."
         },
         "demoYoutubeId": null
       },
@@ -25491,8 +25545,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_concussion_mine.png",
         "description": {
-          "fr": "Mine incapacitante ralentit.",
-          "en": "Concussion Mine Slows"
+          "fr": "Les ennemis projetés par Mine incapacitante sont ralentis en retombant.",
+          "en": "Enemies launched by Concussion Mine are Slowed when they land."
         },
         "demoYoutubeId": null
       },
@@ -25505,8 +25559,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_steel_trap.png",
         "description": {
-          "fr": "Piège d'acier réduit les héros au silence.",
-          "en": "Steel Trap Silences Heroes"
+          "fr": "Les héros pris dans Piège d'acier sont aussi réduits au silence.",
+          "en": "Heroes caught in Steel Trap are Silenced as well."
         },
         "demoYoutubeId": null
       },
@@ -25520,7 +25574,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_bomb_pack.png",
         "description": {
           "fr": "Agrandit l'explosion de Mauvais perdant. Sous la moitié de ses points de vie, être étourdi, immobilisé ou blessé par un héros adverse fait tomber des grenades à ses pieds.",
-          "en": "Widens Total Mayhem's blast. Below half Health, being Stunned, Rooted or damaged by an enemy Hero drops grenades at his feet."
+          "en": "Widens Total Mayhem's explosion. Below half Health, being Stunned, Rooted or damaged by an enemy Hero drops grenades at his feet."
         },
         "demoYoutubeId": null
       },
@@ -25534,7 +25588,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_rip_tire.png",
         "description": {
           "fr": "Lance un pneu explosif que Chacal pilote, immobilisé pendant ce temps. Le réactiver le fait détoner aussitôt : il repousse les ennemis proches et les blesse d'autant plus qu'ils sont près du centre.",
-          "en": "Launches an explosive tire Junkrat drives, Rooted while it lasts. Reactivating detonates it instantly: it knocks back nearby enemies and damages them more the closer they are to the center."
+          "en": "Sends out an explosive tire Junkrat steers, rooted in place while he does. Reactivating detonates it at once: it knocks nearby enemies back and hurts them more the closer they are to the center."
         },
         "demoYoutubeId": null
       },
@@ -25548,7 +25602,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_rocket_ride.png",
         "description": {
           "fr": "Après un temps de préparation, Chacal s'envoie en l'air, choisit sa zone d'atterrissage et s'écrase en blessant les ennemis proches et en déclenchant Mauvais perdant. Il y laisse la vie et repart du Hall des tempêtes, monture accélérée.",
-          "en": "After a wind-up, Junkrat launches himself skyward, picks his landing zone and crashes down, damaging nearby enemies and triggering Total Mayhem. It costs him his life: he returns from the Hall of Storms with a faster Mount."
+          "en": "After a wind-up, Junkrat launches into the air, picks his landing spot and crashes down, damaging nearby enemies and setting off Total Mayhem. It costs him his life, and he returns from the Hall of Storms on a faster mount."
         },
         "demoYoutubeId": null
       },
@@ -25561,8 +25615,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_frag_launcher.png",
         "description": {
-          "fr": "Augmente la portée et les dégâts des attaques de base.",
-          "en": "Gain Basic Attack range, damage"
+          "fr": "Augmente la portée des attaques de base, et les grenades tirées juste après une attaque de base frappent plus fort.",
+          "en": "Increases Basic Attack range, and grenades fired right after a Basic Attack hit harder."
         },
         "demoYoutubeId": null
       },
@@ -25575,8 +25629,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_concussion_mine.png",
         "description": {
-          "fr": "Mine incapacitante projette Chacal plus loin.",
-          "en": "Concussion Mine knocks Junkrat farther"
+          "fr": "Mine incapacitante projette Chacal plus loin, et son temps de recharge chute nettement quand elle n'a touché que lui.",
+          "en": "Concussion Mine launches Junkrat farther, and its cooldown drops sharply when he is the only one hit."
         },
         "demoYoutubeId": null
       },
@@ -25590,7 +25644,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_steel_trap.png",
         "description": {
           "fr": "Piège d'acier revient plus vite et Chacal peut désormais en garder deux actifs.",
-          "en": "Steel Trap returns sooner and Junkrat can now keep two active."
+          "en": "Steel Trap comes back sooner and Junkrat can keep two active at a time."
         },
         "demoYoutubeId": null
       },
@@ -25603,8 +25657,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/talents/storm_ui_icon_junkrat_steel_trap_a.png",
         "description": {
-          "fr": "Piège d'acier cible les héros.",
-          "en": "Steel Traps focus Heroes"
+          "fr": "Piège d'acier ne se déclenche plus que sur les héros, réduit leur armure, et gagne en rayon comme en dégâts.",
+          "en": "Steel Trap only triggers on Heroes now, reduces their Armor, and gains both radius and damage."
         },
         "demoYoutubeId": null
       },
@@ -25618,7 +25672,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/junkrat/images/talents/storm_ui_icon_junkrat_frag_launcher_f.png",
         "description": {
           "fr": "Lance-grenades vide toutes ses charges en une salve continue ; il se recharge plus vite mais stocke une charge de moins.",
-          "en": "Frag Launcher spends all its charges in one continuous burst; it returns sooner but stores one charge less."
+          "en": "Frag Launcher empties every charge in one continuous burst; it reloads faster but holds one charge less."
         },
         "demoYoutubeId": null
       },
@@ -25631,8 +25685,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/talents/storm_ui_icon_junkrat_frag_launcher_e.png",
         "description": {
-          "fr": "Toucher des héros réduit le temps de recharge de Lance-grenades.",
-          "en": "Hitting Heroes reduces Frag Launcher cooldown"
+          "fr": "Toucher un héros avec Lance-grenades en réduit le temps de recharge.",
+          "en": "Hitting a Hero with Frag Launcher reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -25645,8 +25699,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/talents/storm_ui_icon_junkrat_frag_launcher_d.png",
         "description": {
-          "fr": "Tire plusieurs grenades à divers angles de tir.",
-          "en": "Activate to make Frag Launcher spread"
+          "fr": "À l'activation, Lance-grenades tire deux grenades de plus en éventail, le temps de quelques charges.",
+          "en": "Activate to make Frag Launcher fire two extra grenades in a spread, for a few charges."
         },
         "demoYoutubeId": null
       },
@@ -25659,8 +25713,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_rip_tire.png",
         "description": {
-          "fr": "Augmente l'effet de recul de Pneumastic et réduit son temps de recharge.",
-          "en": "Increase RIP-Tire knockback, reduce cooldown"
+          "fr": "Augmente fortement le recul de Pneumastic, et chaque héros touché en réduit le temps de recharge.",
+          "en": "Greatly increases RIP-Tire's knockback, and each Hero hit reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -25673,8 +25727,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/spells/storm_ui_icon_junkrat_rocket_ride.png",
         "description": {
-          "fr": "Confère aussi Pneumastic.",
-          "en": "Also gain RIP-Tire"
+          "fr": "Chacal obtient aussi Pneumastic et alterne entre ses deux héroïques à chaque utilisation. Effet passif : réduit les deux temps de recharge.",
+          "en": "Junkrat also gains RIP-Tire and swaps between his two Heroics each time he uses one. Passive: reduces both cooldowns."
         },
         "demoYoutubeId": null
       },
@@ -25687,8 +25741,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/talents/storm_ui_icon_junkrat_frag_launcher_g.png",
         "description": {
-          "fr": "Les grenades des attaques de base et de Lance-grenades déclenchent de plus grosses explosions.",
-          "en": "Bigger Basic Attack, Frag Launcher explosions"
+          "fr": "Augmente la portée et le rayon d'explosion des grenades, celles des attaques de base comme celles de Lance-grenades.",
+          "en": "Increases the reach and blast radius of his grenades, both from Basic Attacks and from Frag Launcher."
         },
         "demoYoutubeId": null
       },
@@ -25701,15 +25755,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/junkrat/images/talents/storm_ui_icon_junkrat_mount_rocket.png",
         "description": {
-          "fr": "Invoque la fusée de Chacal !",
-          "en": "Ride Junkrat's Rocket!"
+          "fr": "Chacal chevauche en permanence sa fusée et se déplace bien plus vite, mais sa monture normale met plus longtemps à revenir.",
+          "en": "Junkrat permanently rides his rocket and moves far faster, but his normal mount takes longer to come back."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Junkrat",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "kelthuzad",
