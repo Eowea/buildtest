@@ -21786,7 +21786,7 @@ const HEROES = [
   },
   {
     "id": "guldan",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Gul'dan",
       "en": "Gul'dan"
@@ -21810,8 +21810,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_lifetap.png",
         "description": {
-          "fr": "Gul'dan ne régénère aucun mana : il doit en échanger contre ses propres points de vie.",
-          "en": "Gul'dan regenerates no Mana at all: he must trade his own Health for it."
+          "fr": "Gul'dan ne régénère aucun mana. À l'activation, Connexion lui en rend une bonne part, payée sur ses propres points de vie.",
+          "en": "Gul'dan regenerates no Mana at all. Activate Life Tap to get a good chunk of it back, paid for with his own Health."
         },
         "demoYoutubeId": ""
       },
@@ -21823,8 +21823,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_felflame.png",
         "description": {
-          "fr": "Déchaîne une vague de flammes qui inflige des dégâts aux ennemis.",
-          "en": "Release a wave of flame that damages enemies"
+          "fr": "Déchaîne une vague de flammes qui blesse les ennemis devant lui.",
+          "en": "Unleashes a wave of flame that damages the enemies in front of him."
         },
         "demoYoutubeId": ""
       },
@@ -21836,8 +21836,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_healthfunnel.png",
         "description": {
-          "fr": "Gul'dan récupère des points de vie tout en infligeant des dégâts à une cible adverse.",
-          "en": "Drain Health from an enemy, dealing damage and healing Gul'dan"
+          "fr": "Draine la vie d'un ennemi quelques secondes : il perd des points de vie, Gul'dan en récupère.",
+          "en": "Drains an enemy's life for a few seconds: they lose Health, Gul'dan gains it."
         },
         "demoYoutubeId": ""
       },
@@ -21849,8 +21849,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_handofguldan.png",
         "description": {
-          "fr": "Fait surgir des explosions démoniaques qui rongent les ennemis dans la durée, effet cumulable.",
-          "en": "Erupts with demonic blasts that eat away at enemies over time, stacking several times."
+          "fr": "Fait surgir trois explosions d'énergie démoniaque qui rongent les ennemis dans la durée. L'effet se cumule jusqu'à trois fois sur une même cible.",
+          "en": "Calls up three bursts of demonic energy that eat away at enemies over time. The effect stacks up to three times on the same target."
         },
         "demoYoutubeId": ""
       },
@@ -21863,7 +21863,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_horrify.png",
         "description": {
           "fr": "Après un court délai, blesse et apeure les héros de la zone : ils fuient le centre et restent réduits au silence.",
-          "en": "After a short delay, damages and Fears Heroes in the area: they flee the center and stay Silenced."
+          "en": "After a short delay, damages and Fears the Heroes in the area: they flee the center and stay Silenced."
         },
         "demoYoutubeId": ""
       },
@@ -21875,24 +21875,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_rainoffire.png",
         "description": {
-          "fr": "Après un court délai, Gul'dan canalise une pluie de météores qui s'abat sur une zone.",
-          "en": "After a short delay, Gul'dan channels a rain of meteors falling on an area."
+          "fr": "Après un court délai, Gul'dan canalise une pluie de météores qui s'abat sur une zone, chacun blessant les ennemis à son point de chute.",
+          "en": "After a short delay, Gul'dan channels a rain of meteors over an area, each one damaging enemies where it lands."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Surveille ta vie autant que ton mana : Connexion peut te tuer.",
-        "en": "Watch your Health as closely as your Mana: Life Tap can kill you."
+        "fr": "Connexion (D) se paie sur ta vie : n'en abuse pas avant un fight, sinon tu arrives à moitié mort et sans moyen de remonter.",
+        "en": "Life Tap (D) is paid in Health: don't spam it before a fight, or you show up half dead with no way back up."
       },
       {
-        "fr": "Drain de vie te soigne beaucoup : engage-le dès que tu es au contact.",
-        "en": "Drain Life heals a lot: start it as soon as you are in range."
+        "fr": "Gangreflamme (A) revient très vite : relance-la sans arrêt sur ce qui passe plutôt que de la garder pour une cible précise.",
+        "en": "Fel Flame (Q) comes back fast: keep throwing it at whatever is in front of you instead of saving it for one target."
       },
       {
-        "fr": "Épouvante réduit au silence en plus d'apeurer : c'est ton vrai contrôle.",
-        "en": "Horrify Silences on top of Fearing: that is your real crowd control."
+        "fr": "Drain de vie (Z) ne tient que si la cible ne peut pas partir : lance-le sur un ennemi déjà pris dans un CC allié.",
+        "en": "Drain Life (W) only holds if the target can't leave: cast it on an enemy already caught in an ally's CC."
       }
     ],
     "builds": [
@@ -21900,22 +21900,82 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build recommandé",
-          "en": "Recommended build"
+          "fr": "Build E",
+          "en": "E build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build centré sur Corruption, pour ronger toute une équipe dans la durée.",
+          "en": "Focused on Corruption, to grind down a whole team over time."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Guldan]",
+        "buildCode": "[T3331421,Guldan]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmnekplj903gar",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmnekplj906pqk",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmnekplj909l55",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmnekplj910sg4",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmnekplj915hba",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmnekplj9177fj",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmnekplj9192jp",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build A",
+          "en": "Q build"
+        },
+        "summary": {
+          "fr": "Build centré sur Gangreflamme.",
+          "en": "Focused on Fel Flame."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T1331111,Guldan]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
@@ -21925,12 +21985,12 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmnekplj904v82",
+            "primaryId": "tmnekplj906pqk",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmnekplj9073tw",
+            "primaryId": "tmnekplj909l55",
             "alternativeIds": []
           },
           {
@@ -21968,8 +22028,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_felflame.png",
         "description": {
-          "fr": "Quête : toucher des héros avec Gangreflamme en augmente le rayon.",
-          "en": "Quest: hitting Heroes with Fel Flame increases its area."
+          "fr": "Quête : toucher des héros avec Gangreflamme sans mourir. Récompense : son rayon augmente définitivement.",
+          "en": "Quest: hit Heroes with Fel Flame without dying. Reward: its radius grows permanently."
         },
         "demoYoutubeId": null
       },
@@ -21982,8 +22042,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_healthfunnel.png",
         "description": {
-          "fr": "Quête : ramasser des globes de régénération réduit les coûts en mana.",
-          "en": "Quest: Gather Regen Globes to reduce Mana costs"
+          "fr": "Augmente la portée de Drain de vie et les soins des globes de régénération. Quête : ramasser des globes réduit définitivement le coût en mana des capacités de base.",
+          "en": "Increases Drain Life's range and the healing from Regeneration Globes. Quest: gathering Globes permanently lowers Basic Ability Mana costs."
         },
         "demoYoutubeId": null
       },
@@ -21997,7 +22057,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_handofguldan.png",
         "description": {
           "fr": "Quête : toucher des héros adverses avec Corruption. Récompense : la troisième frappe se déclenche aussi dans la direction opposée. Récompense mythique : Corruption rend ensuite autant de points de vie qu'elle inflige de dégâts.",
-          "en": "Quest: hit enemy Heroes with Corruption. Reward: the third burst also fires in the opposite direction. Mythic reward: Corruption then restores as much Health as the damage it deals."
+          "en": "Quest: hit enemy Heroes with Corruption. Reward: the third strike also fires in the opposite direction. Mythic reward: Corruption then heals for as much as it deals."
         },
         "demoYoutubeId": null
       },
@@ -22011,7 +22071,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_healthfunnel.png",
         "description": {
           "fr": "Le temps de recharge de Drain de vie s'écoule bien plus vite pendant la canalisation, et il est annulé si la victime meurt.",
-          "en": "Drain Life's cooldown ticks far faster while channeling, and is reset outright if the victim dies."
+          "en": "Drain Life's cooldown runs down far faster while channeling, and is wiped entirely if the victim dies."
         },
         "demoYoutubeId": null
       },
@@ -22025,7 +22085,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_lifetap.png",
         "description": {
           "fr": "Connexion rend davantage de mana.",
-          "en": "Life Tap restores more Mana"
+          "en": "Life Tap restores more Mana."
         },
         "demoYoutubeId": null
       },
@@ -22039,7 +22099,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/guldan/images/talents/storm_ui_icon_guldan_darkpact.png",
         "description": {
           "fr": "Tue instantanément un serviteur adverse et rend des points de vie. Se cumule en charges.",
-          "en": "Instantly kills an enemy Minion and restores Health. Stores charges."
+          "en": "Instantly kills an enemy Minion and heals him. Stores charges."
         },
         "demoYoutubeId": null
       },
@@ -22052,8 +22112,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_felflame.png",
         "description": {
-          "fr": "Toucher des cibles avec Gangreflamme réduit le temps de recharge de Corruption.",
-          "en": "Fel Flame hits reduce the cooldown of Corruption"
+          "fr": "Chaque héros touché par Gangreflamme réduit le temps de recharge de Corruption.",
+          "en": "Each Hero hit by Fel Flame reduces Corruption's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -22066,8 +22126,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_healthfunnel.png",
         "description": {
-          "fr": "Drain de vie inflige davantage de dégâts et ralentit.",
-          "en": "Drain Life deals more damage, Slows"
+          "fr": "Drain de vie inflige davantage de dégâts et ralentit fortement sa cible.",
+          "en": "Drain Life deals more damage and heavily Slows its target."
         },
         "demoYoutubeId": null
       },
@@ -22080,8 +22140,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/talents/storm_ui_icon_guldan_hungerforpower.png",
         "description": {
-          "fr": "Augmente la puissance de capacité mais diminue les soins reçus.",
-          "en": "Gain Spell Power but reduce healing received"
+          "fr": "Augmente la puissance de capacité, mais réduit les soins que Gul'dan reçoit de ses alliés.",
+          "en": "Increases Spell Power, but reduces the healing Gul'dan receives from allies."
         },
         "demoYoutubeId": null
       },
@@ -22095,7 +22155,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_horrify.png",
         "description": {
           "fr": "Après un court délai, blesse et apeure les héros de la zone : ils fuient le centre et restent réduits au silence.",
-          "en": "After a short delay, damages and Fears Heroes in the area: they flee the center and stay Silenced."
+          "en": "After a short delay, damages and Fears the Heroes in the area: they flee the center and stay Silenced."
         },
         "demoYoutubeId": null
       },
@@ -22108,8 +22168,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_rainoffire.png",
         "description": {
-          "fr": "Après un court délai, Gul'dan canalise une pluie de météores qui s'abat sur une zone.",
-          "en": "After a short delay, Gul'dan channels a rain of meteors falling on an area."
+          "fr": "Après un court délai, Gul'dan canalise une pluie de météores qui s'abat sur une zone, chacun blessant les ennemis à son point de chute.",
+          "en": "After a short delay, Gul'dan channels a rain of meteors over an area, each one damaging enemies where it lands."
         },
         "demoYoutubeId": null
       },
@@ -22122,8 +22182,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_felflame.png",
         "description": {
-          "fr": "Gangreflamme confère de l'armure anti-sort.",
-          "en": "Fel Flame grants Spell Armor"
+          "fr": "Toucher un héros avec Gangreflamme confère de l'armure anti-sort quelques secondes.",
+          "en": "Hitting a Hero with Fel Flame grants Spell Armor for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -22136,8 +22196,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_healthfunnel.png",
         "description": {
-          "fr": "Drain de vie rend davantage de points de vie lorsqu'il est canalisé sur un héros.",
-          "en": "Drain Life restores more Health when channeled on a Hero."
+          "fr": "Drain de vie rend bien plus de points de vie lorsqu'il est canalisé sur un héros.",
+          "en": "Drain Life heals for far more when channeled on a Hero."
         },
         "demoYoutubeId": null
       },
@@ -22150,8 +22210,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/talents/storm_ui_icon_guldan_darkbargain.png",
         "description": {
-          "fr": "Augmente la vie maximale et la durée de réapparition.",
-          "en": "Increase Health, respawn time"
+          "fr": "Augmente durablement le maximum de points de vie de Gul'dan, mais allonge aussi son temps de réapparition.",
+          "en": "Permanently increases Gul'dan's maximum Health, but also lengthens his respawn time."
         },
         "demoYoutubeId": null
       },
@@ -22164,8 +22224,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/talents/storm_ui_icon_guldan_healthstone.png",
         "description": {
-          "fr": "Rend des points de vie à l'activation.",
-          "en": "Activate to heal"
+          "fr": "À l'activation, rend une bonne part des points de vie de Gul'dan.",
+          "en": "Activate to restore a good chunk of Gul'dan's Health."
         },
         "demoYoutubeId": null
       },
@@ -22178,8 +22238,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_felflame.png",
         "description": {
-          "fr": "Augmente les dégâts de Gangreflamme.",
-          "en": "Increases Fel Flame's damage"
+          "fr": "Toucher un héros avec Gangreflamme en augmente les dégâts quelques secondes, cumulable plusieurs fois.",
+          "en": "Hitting a Hero with Fel Flame increases its damage for a few seconds, stacking several times."
         },
         "demoYoutubeId": null
       },
@@ -22192,8 +22252,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_handofguldan.png",
         "description": {
-          "fr": "Corruption inflige des dégâts supplémentaires.",
-          "en": "Corruption deals bonus damage"
+          "fr": "Corruption frappe plus fort à l'impact, et bien plus encore sur la troisième explosion si les deux premières ont touché.",
+          "en": "Corruption hits harder on impact, and far harder on the third burst if the first two connected."
         },
         "demoYoutubeId": null
       },
@@ -22206,8 +22266,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_lifetap.png",
         "description": {
-          "fr": "L'utilisation de Connexion augmente les dégâts infligés.",
-          "en": "Life Tap to gain Damage"
+          "fr": "Après avoir infligé assez de dégâts aux héros, la prochaine Connexion ne coûte plus de points de vie et augmente la puissance de capacité de Gul'dan.",
+          "en": "After dealing enough damage to Heroes, the next Life Tap costs no Health and grants Gul'dan Spell Power."
         },
         "demoYoutubeId": null
       },
@@ -22221,7 +22281,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_horrify.png",
         "description": {
           "fr": "Prolonge Épouvante et réduit l'armure des ennemis apeurés, qui subissent donc plus de dégâts.",
-          "en": "Extends Horrify and lowers the Armor of Feared enemies, so they take more damage."
+          "en": "Extends Horrify and cuts the Armor of the Feared enemies, so they take more damage."
         },
         "demoYoutubeId": null
       },
@@ -22234,8 +22294,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/spells/storm_ui_icon_guldan_rainoffire.png",
         "description": {
-          "fr": "Pluie de destruction réduit la vitesse de déplacement ennemie.",
-          "en": "Rain of Destruction slows enemy Movement Speed"
+          "fr": "Pluie de destruction ralentit très fortement les ennemis touchés.",
+          "en": "Rain of Destruction heavily Slows the enemies it hits."
         },
         "demoYoutubeId": null
       },
@@ -22248,15 +22308,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/guldan/images/talents/storm_ui_icon_guldan_demoniccircle.png",
         "description": {
-          "fr": "Invoque un cercle démoniaque vers lequel Gul'dan peut se téléporter.",
-          "en": "Summon a Demonic Circle that Gul'dan can teleport to"
+          "fr": "Invoque un cercle démoniaque à l'endroit où se trouve Gul'dan. À l'activation, il s'y téléporte.",
+          "en": "Summons a Demonic Circle where Gul'dan stands. Activate to teleport back to it."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Guldan",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "hanzo",
