@@ -45260,7 +45260,7 @@ const HEROES = [
   },
   {
     "id": "zarya",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Zarya",
       "en": "Zarya"
@@ -45284,8 +45284,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_energy.png",
         "description": {
-          "fr": "Les dégâts absorbés par les écrans de Zarya augmentent ceux qu'elle inflige. Passé un court moment sans en gagner, l'énergie s'épuise progressivement.",
-          "en": "The damage Zarya's shields absorb increases the damage she deals. After a short while without gaining more, Energy steadily drains away."
+          "fr": "Les dégâts absorbés par les écrans de Zarya lui rapportent de l'énergie, et chaque point d'énergie augmente les dégâts qu'elle inflige. Passé un court moment sans en gagner, l'énergie s'épuise progressivement.",
+          "en": "Damage absorbed by Zarya's Shields grants her Energy, and each point of Energy increases the damage she deals. After a short moment without gaining any, Energy decays away."
         },
         "demoYoutubeId": ""
       },
@@ -45297,8 +45297,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_particlegrenade.png",
         "description": {
-          "fr": "Projette une grenade qui inflige des dégâts dans une zone, réduits contre les bâtiments. Possède plusieurs charges.",
-          "en": "Throws a grenade dealing damage in an area, reduced against Structures. Has multiple charges."
+          "fr": "Projette une grenade qui inflige des dégâts dans une zone, moitié moins contre les bâtiments. Possède plusieurs charges.",
+          "en": "Lobs a grenade that damages enemies in an area, for half against Structures. Has several charges."
         },
         "demoYoutubeId": ""
       },
@@ -45310,8 +45310,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_personalbarrier.png",
         "description": {
-          "fr": "Confère un bouclier qui absorbe les dégâts.",
-          "en": "Gain a Shield that absorbs damage"
+          "fr": "Confère à Zarya un bouclier qui absorbe les dégâts quelques secondes.",
+          "en": "Grants Zarya a Shield that absorbs damage for a few seconds."
         },
         "demoYoutubeId": ""
       },
@@ -45323,8 +45323,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_shieldally.png",
         "description": {
-          "fr": "Confère un bouclier à un allié.",
-          "en": "Grant an ally a Shield that absorbs damage"
+          "fr": "Confère à un héros allié un bouclier qui absorbe les dégâts quelques secondes.",
+          "en": "Grants an allied Hero a Shield that absorbs damage for a few seconds."
         },
         "demoYoutubeId": ""
       },
@@ -45336,8 +45336,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_gravitonsurge.png",
         "description": {
-          "fr": "Lance une bombe gravitationnelle qui attire les ennemis.",
-          "en": "Launch a gravity bomb that draws in enemies"
+          "fr": "Lance une bombe qui explose après un instant, puis attire les héros adverses vers son centre et les y blesse pendant quelques secondes.",
+          "en": "Throws a bomb that detonates after a moment, then pulls enemy Heroes toward its center and damages them there for a few seconds."
         },
         "demoYoutubeId": ""
       },
@@ -45349,24 +45349,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_expulsionzone.png",
         "description": {
-          "fr": "Lance une bombe qui repousse les ennemis continuellement.",
-          "en": "Launch a bomb that continually pushes enemies"
+          "fr": "Lance une bombe qui blesse à l'impact et laisse une zone derrière elle : tout ennemi qui y entre est repoussé et ralenti.",
+          "en": "Throws a bomb that damages on impact and leaves a zone behind: any enemy stepping in is knocked back and Slowed."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Lance Écran généré juste avant les dégâts : un écran gaspillé, c'est de l'Énergie perdue.",
-        "en": "Cast Shield Ally just before the damage: a wasted Shield is lost Energy."
+        "fr": "Pose tes écrans (Z) et (E) avant que les dégâts tombent, pas après : un écran en retard, c'est de l'énergie (D) que tu ne toucheras jamais.",
+        "en": "Drop your Shields (W) and (E) before the damage lands, not after: a late Shield is Energy (D) you will never get."
       },
       {
-        "fr": "Ton Énergie monte en encaissant : cherche les échanges, ne les fuis pas.",
-        "en": "Your Energy builds by absorbing: seek trades, don't avoid them."
+        "fr": "Écran personnel (Z) encaisse aussi les tirs des bâtiments : va te faire taper par un fort pour remonter ton énergie (D) avant un fight.",
+        "en": "Personal Barrier (W) soaks Structure fire too: go take a few tower shots to top up your Energy (D) before a fight."
       },
       {
-        "fr": "Orbe à gravitons rassemble toute une équipe : le rêve de tes alliés qui frappent en zone.",
-        "en": "Graviton Surge bunches up a whole team: a gift to your allies who hit in an area."
+        "fr": "Orbe à gravitons (R) n'attrape que si tu anticipes : vise là où l'équipe d'en face va aller, pas là où elle est.",
+        "en": "Graviton Surge (R) only lands if you predict: aim where the enemy team is going, not where it stands."
       }
     ],
     "builds": [
@@ -45385,21 +45385,21 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Zarya]",
+        "buildCode": "[T4312124,Zarya]",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrsrymnm011ox",
+            "primaryId": "tmrsrymnm04yde",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmrsrymnm05jis",
+            "primaryId": "tmrsrymnm0725p",
             "alternativeIds": []
           },
           {
@@ -45409,7 +45409,7 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tmrsrymnm12geh",
+            "primaryId": "tmrsrymnm13n67",
             "alternativeIds": []
           },
           {
@@ -45419,12 +45419,12 @@ const HEROES = [
           },
           {
             "level": 16,
-            "primaryId": "tmrsrymnm187h0",
+            "primaryId": "tmrsrymnm19l5m",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrsrymnm21bb2",
+            "primaryId": "tmrsrymnm246jr",
             "alternativeIds": []
           }
         ],
@@ -45442,8 +45442,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_particlegrenade.png",
         "description": {
-          "fr": "Quête : augmente le rayon et diminue le temps de recharge de Grenade à particules.",
-          "en": "Quest: Increases Particle Grenade radius and reduces cooldown"
+          "fr": "Quête : chaque héros touché par Grenade à particules en accélère la recharge. Récompense : au bout d'un certain nombre de héros touchés, son rayon augmente.",
+          "en": "Quest: every Hero hit by Particle Grenade speeds up its recharge. Reward: after enough Heroes are hit, its radius grows."
         },
         "demoYoutubeId": null
       },
@@ -45456,8 +45456,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_shieldally.png",
         "description": {
-          "fr": "Les dégâts infligés par les alliés protégés par Écran généré alimentent la réserve d'énergie.",
-          "en": "Allied damage dealt with Shield Ally contributes to Energy"
+          "fr": "Pendant quelques secondes après avoir reçu Écran généré, les dégâts infligés par l'allié protégé alimentent l'énergie de Zarya, jusqu'à un plafond par écran.",
+          "en": "For a few seconds after receiving Shield Ally, the damage the shielded ally deals feeds Zarya's Energy, up to a cap per Shield."
         },
         "demoYoutubeId": null
       },
@@ -45470,8 +45470,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
         "description": {
-          "fr": "Les attaques de base infligent davantage de dégâts à proximité, amplitude augmentée.",
-          "en": "Basic Attack deals more damage to close enemies, increased size"
+          "fr": "Les attaques de base frappent bien plus fort les ennemis au contact, et leur amplitude augmente à haute énergie.",
+          "en": "Basic Attacks hit far harder against enemies in melee range, and grow wider at high Energy."
         },
         "demoYoutubeId": null
       },
@@ -45484,8 +45484,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_energy.png",
         "description": {
-          "fr": "Les globes de régénération donnent de l'énergie Quête : augmente l'énergie maximale.",
-          "en": "Regen Globes grant Energy Quest: Increases maximum Energy"
+          "fr": "Les globes de régénération confèrent aussitôt de l'énergie. Quête : passer assez de temps à haute énergie augmente l'énergie maximale.",
+          "en": "Regeneration Globes instantly grant Energy. Quest: spending enough time at high Energy raises her maximum Energy."
         },
         "demoYoutubeId": null
       },
@@ -45498,8 +45498,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_personalbarrier.png",
         "description": {
-          "fr": "Renforce le bouclier d'Écran personnel et augmente l'énergie reçue.",
-          "en": "Increases Personal Barrier Shield amount, Energy received"
+          "fr": "Écran personnel absorbe davantage. Effet passif : les dégâts absorbés par les écrans de Zarya rapportent plus d'énergie.",
+          "en": "Personal Barrier absorbs more. Passive: damage absorbed by Zarya's Shields yields more Energy."
         },
         "demoYoutubeId": null
       },
@@ -45512,8 +45512,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_shieldally.png",
         "description": {
-          "fr": "Quête : augmente les dégâts que peut absorber Écran généré et réduit son temps de recharge.",
-          "en": "Quest: Increases Shield Ally absorb amount and reduces cooldown"
+          "fr": "Quête : chaque globe de régénération augmente définitivement ce qu'absorbe Écran généré. Récompense : au bout d'un certain nombre de globes, son temps de recharge baisse pour de bon.",
+          "en": "Quest: each Regeneration Globe permanently increases what Shield Ally absorbs. Reward: after enough Globes, its cooldown drops for good."
         },
         "demoYoutubeId": null
       },
@@ -45526,8 +45526,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_shieldally_a.png",
         "description": {
-          "fr": "Écran généré augmente la vitesse de déplacement.",
-          "en": "Shield Ally grants Movement Speed"
+          "fr": "Écran généré augmente fortement la vitesse de déplacement de l'allié pendant toute sa durée.",
+          "en": "Shield Ally greatly increases the ally's Movement Speed for its whole duration."
         },
         "demoYoutubeId": null
       },
@@ -45540,8 +45540,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_pumped.png",
         "description": {
-          "fr": "Écran personnel et Écran généré confèrent de l'armure physique.",
-          "en": "Personal Barrier, Shield Ally grant Physical Armor"
+          "fr": "Quand un écran expire ou se brise, il confère de l'armure physique contre les prochaines attaques de base de héros.",
+          "en": "When a Shield expires or breaks, it grants Physical Armor against the next Hero Basic Attacks."
         },
         "demoYoutubeId": null
       },
@@ -45554,8 +45554,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_particlegrenade.png",
         "description": {
-          "fr": "Grenade à particules inflige davantage de dégâts dans la zone centrale et ralentit.",
-          "en": "Particle Grenade center deals more damage, Slows"
+          "fr": "Grenade à particules frappe plus fort au centre de l'explosion et y ralentit les ennemis touchés.",
+          "en": "Particle Grenade hits harder at the center of the blast and Slows the enemies caught there."
         },
         "demoYoutubeId": null
       },
@@ -45568,8 +45568,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_particlegrenade_a.png",
         "description": {
-          "fr": "Grenade à particules peut générer de l'énergie.",
-          "en": "Particle Grenade can generate Energy"
+          "fr": "Après avoir touché un héros avec Grenade à particules, tes attaques de base sur lui rapportent de l'énergie pendant quelques secondes.",
+          "en": "After hitting a Hero with Particle Grenade, your Basic Attacks on them generate Energy for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -45582,8 +45582,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_personalbarrier.png",
         "description": {
-          "fr": "Écran personnel inflige des dégâts de zone.",
-          "en": "Personal Barrier deals area damage"
+          "fr": "Quand Écran personnel expire ou se brise, il explose et blesse les ennemis proches.",
+          "en": "When Personal Barrier expires or breaks, it explodes and damages nearby enemies."
         },
         "demoYoutubeId": null
       },
@@ -45596,8 +45596,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_gravitonsurge.png",
         "description": {
-          "fr": "Lance une bombe gravitationnelle qui attire les ennemis.",
-          "en": "Launch a gravity bomb that draws in enemies"
+          "fr": "Lance une bombe qui explose après un instant, puis attire les héros adverses vers son centre et les y blesse pendant quelques secondes.",
+          "en": "Throws a bomb that detonates after a moment, then pulls enemy Heroes toward its center and damages them there for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -45610,8 +45610,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_expulsionzone.png",
         "description": {
-          "fr": "Lance une bombe qui repousse les ennemis continuellement.",
-          "en": "Launch a bomb that continually pushes enemies"
+          "fr": "Lance une bombe qui blesse à l'impact et laisse une zone derrière elle : tout ennemi qui y entre est repoussé et ralenti.",
+          "en": "Throws a bomb that damages on impact and leaves a zone behind: any enemy stepping in is knocked back and Slowed."
         },
         "demoYoutubeId": null
       },
@@ -45624,8 +45624,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_personalbarrier.png",
         "description": {
-          "fr": "Écran personnel rend insensible aux effets de contrôle.",
-          "en": "Personal Barrier grants Unstoppable"
+          "fr": "Écran personnel rend Zarya insensible aux effets de contrôle le temps qu'il tient.",
+          "en": "Personal Barrier makes Zarya Unstoppable for as long as it holds."
         },
         "demoYoutubeId": null
       },
@@ -45638,8 +45638,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_personalbarrier_a.png",
         "description": {
-          "fr": "Écran personnel confère de l'armure anti-sort.",
-          "en": "Personal Barrier grants Spell Armor"
+          "fr": "Quand Écran personnel expire ou se brise, Zarya gagne de l'armure anti-sort quelques secondes.",
+          "en": "When Personal Barrier expires or breaks, Zarya gains Spell Armor for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -45652,8 +45652,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_energy.png",
         "description": {
-          "fr": "À niveau d'énergie élevé, confère de l'armure.",
-          "en": "Gain Armor at high Energy"
+          "fr": "Tant que l'énergie reste haute, Zarya gagne de l'armure.",
+          "en": "While her Energy stays high, Zarya gains Armor."
         },
         "demoYoutubeId": null
       },
@@ -45666,8 +45666,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_painistemporary.png",
         "description": {
-          "fr": "Consomme l'énergie pour obtenir un bouclier.",
-          "en": "Consume Energy to gain a Shield"
+          "fr": "À l'activation, consomme toute l'énergie pour un bouclier d'autant plus gros qu'elle en avait accumulé. Zarya ne peut porter qu'un seul bouclier personnel à la fois.",
+          "en": "Activate to consume all Energy for a Shield as big as the Energy spent. Zarya can only carry one personal Shield at a time."
         },
         "demoYoutubeId": null
       },
@@ -45681,7 +45681,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_shieldally.png",
         "description": {
           "fr": "Écran généré supprime tous les effets incapacitants et revient plus vite.",
-          "en": "Shield Ally removes every disabling effect and returns sooner."
+          "en": "Shield Ally removes every disabling effect and comes back sooner."
         },
         "demoYoutubeId": null
       },
@@ -45694,8 +45694,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_shieldally_a.png",
         "description": {
-          "fr": "Écran généré se propage à un second allié.",
-          "en": "Shield Ally now affects a second ally"
+          "fr": "À l'impact, Écran généré protège aussi un second allié proche, sans le renfort des autres talents.",
+          "en": "On impact, Shield Ally also shields a second nearby ally, without the benefit of her other Talents."
         },
         "demoYoutubeId": null
       },
@@ -45708,8 +45708,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_energy.png",
         "description": {
-          "fr": "À niveau d'énergie élevé, réduit les temps de recharge.",
-          "en": "Reduces cooldowns at high Energy"
+          "fr": "Tant que l'énergie reste haute, les temps de recharge de Zarya s'écoulent plus vite.",
+          "en": "While her Energy stays high, Zarya's cooldowns run down faster."
         },
         "demoYoutubeId": null
       },
@@ -45722,8 +45722,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_gravitonsurge.png",
         "description": {
-          "fr": "Augmente la durée d'Orbe à gravitons et lui permet de réduire l'ennemi au silence. ",
-          "en": "Graviton Surge has increased duration and Silences"
+          "fr": "Prolonge Orbe à gravitons et réduit au silence les héros pris dans sa zone.",
+          "en": "Extends Graviton Surge and Silences the Heroes caught in its area."
         },
         "demoYoutubeId": null
       },
@@ -45736,8 +45736,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_expulsionzone.png",
         "description": {
-          "fr": "Réduit le temps de recharge de la Zone d'exclusion et augmente sa durée.",
-          "en": "Reduce Expulsion Zone cooldown, increase duration"
+          "fr": "Réduit fortement le temps de recharge de Zone d'exclusion et en prolonge la durée.",
+          "en": "Sharply reduces Expulsion Zone's cooldown and extends its duration."
         },
         "demoYoutubeId": null
       },
@@ -45751,7 +45751,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/zarya/images/spells/storm_ui_icon_zarya_particlegrenade.png",
         "description": {
           "fr": "Restaure instantanément toutes les charges de Grenade à particules.",
-          "en": "Particle Grenade charges are returned at once"
+          "en": "Instantly restores every charge of Particle Grenade."
         },
         "demoYoutubeId": null
       },
@@ -45764,15 +45764,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zarya/images/talents/storm_ui_icon_zarya_unyieldingdefender.png",
         "description": {
-          "fr": "Réinitialise le temps de recharge des écrans.",
-          "en": "Activate to reset Shield cooldowns"
+          "fr": "À l'activation, remet à zéro le temps de recharge d'Écran personnel et d'Écran généré.",
+          "en": "Activate to reset the cooldowns of Personal Barrier and Shield Ally."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Zarya",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "zeratul",
