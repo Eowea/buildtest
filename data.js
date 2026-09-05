@@ -36409,7 +36409,7 @@ const HEROES = [
   },
   {
     "id": "rexxar",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Rexxar",
       "en": "Rexxar"
@@ -36433,8 +36433,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_mishafixate.png",
         "description": {
-          "fr": "Ordonne à Misha d'attaquer une cible, de rejoindre un point ou de revenir auprès de Rexxar. Effet passif : Misha se déplace plus vite.",
-          "en": "Commands Misha to attack a target, move to a point, or return to Rexxar. Passive: Misha moves faster."
+          "fr": "Ordonne à Misha d'attaquer une cible, de rejoindre un point, de tenir sa position ou de revenir auprès de Rexxar en accélérant. Effet passif : Misha se déplace plus vite.",
+          "en": "Commands Misha to attack a target, move to a spot, hold her ground, or run back to Rexxar at speed. Passive: Misha moves faster."
         },
         "demoYoutubeId": ""
       },
@@ -36446,8 +36446,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_spiritswoop.png",
         "description": {
-          "fr": "Lance un faucon qui inflige des dégâts aux ennemis et les ralentit.",
-          "en": "Launch a hawk to damage enemies and slow them"
+          "fr": "Lance un faucon qui blesse les ennemis sur sa trajectoire et les ralentit.",
+          "en": "Sends a hawk that damages the enemies in its path and Slows them."
         },
         "demoYoutubeId": ""
       },
@@ -36459,8 +36459,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_mishacharge.png",
         "description": {
-          "fr": "Ordonne à Misha de charger. Inflige des dégâts aux ennemis et les étourdit.",
-          "en": "Order Misha to charge, damaging and stunning enemies"
+          "fr": "Ordonne à Misha de charger droit devant : elle blesse et étourdit les ennemis qu'elle traverse.",
+          "en": "Orders Misha to charge straight ahead: she damages and Stuns the enemies she runs through."
         },
         "demoYoutubeId": ""
       },
@@ -36473,7 +36473,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_mendpet.png",
         "description": {
           "fr": "Rend des points de vie à Misha sur la durée.",
-          "en": "Heal Misha over time"
+          "en": "Heals Misha over time."
         },
         "demoYoutubeId": ""
       },
@@ -36486,7 +36486,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_unleashtheboars.png",
         "description": {
           "fr": "Lâche une harde de sangliers qui traquent tous les héros adverses, les blessent, révèlent leur position et les ralentissent.",
-          "en": "Unleashes a pack of boars that hunt down every enemy Hero, damaging them, revealing their position and Slowing them."
+          "en": "Releases a herd of boars that hunt down every enemy Hero, damaging, revealing and Slowing them."
         },
         "demoYoutubeId": ""
       },
@@ -36498,24 +36498,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_bestialwrath.png",
         "description": {
-          "fr": "Augmente les dégâts des attaques de base de Misha.",
-          "en": "Increases Misha's Basic Attacks"
+          "fr": "Augmente énormément les dégâts des attaques de base de Misha pendant un long moment.",
+          "en": "Hugely increases Misha's Basic Attack damage for a long while."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Misha peut bloquer un couloir ou intercepter un plongeur à ta place.",
-        "en": "Misha can body-block a corridor or intercept a diver for you."
+        "fr": "Misha (D) est ton tank : envoie-la bloquer un couloir ou intercepter un dive, et rappelle-la sur toi avant qu'elle ne meure pour rien.",
+        "en": "Misha (D) is your tank: send her to hold a corridor or intercept a dive, and call her back before she dies for nothing."
       },
       {
-        "fr": "Guérison du familier se canalise : reste à portée sans t'exposer.",
-        "en": "Mend Pet is channeled: stay in range without exposing yourself."
+        "fr": "Misha, charge ! (Z) sert surtout à peel : lance-la vers toi pour étourdir celui qui te dive, pas seulement droit devant.",
+        "en": "Misha, Charge! (W) is above all a peel: aim it back at yourself to Stun whoever dives you, not just straight ahead."
       },
       {
-        "fr": "Ne laisse jamais Misha mourir sans raison : c'est tout ton bouclier.",
-        "en": "Never let Misha die for nothing: she is your entire Shield."
+        "fr": "Guérison du familier (E) coûte très cher en mana : laisse un globe de régénération soigner Misha quand elle n'est qu'égratignée.",
+        "en": "Mend Pet (E) costs a lot of Mana: let a Regeneration Globe top Misha up when she's only scratched."
       }
     ],
     "builds": [
@@ -36534,11 +36534,11 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Rexxar]",
+        "buildCode": "[T1232232,Rexxar]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
@@ -36548,32 +36548,32 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmzo33kmh04vsi",
+            "primaryId": "tmzo33kmh05bd6",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmzo33kmh081s4",
+            "primaryId": "tmzo33kmh10dqr",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmzo33kmh11cro",
+            "primaryId": "tmzo33kmh12knh",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmzo33kmh13vii",
+            "primaryId": "tmzo33kmh1477c",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmzo33kmh16ofp",
+            "primaryId": "tmzo33kmh1873z",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmzo33kmh194pf",
+            "primaryId": "tmzo33kmh205ni",
             "alternativeIds": []
           }
         ],
@@ -36591,8 +36591,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_spiritswoop.png",
         "description": {
-          "fr": "Augmente les dégâts de Piqué infligés aux serviteurs.",
-          "en": "Increases Spirit Swoop damage to Minions"
+          "fr": "Piqué inflige bien plus de dégâts aux serviteurs.",
+          "en": "Spirit Swoop deals far more damage to Minions."
         },
         "demoYoutubeId": null
       },
@@ -36619,8 +36619,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_flare.png",
         "description": {
-          "fr": "Dévoile une zone.",
-          "en": "Gain vision of an area"
+          "fr": "Lance une fusée qui dévoile une zone un long moment.",
+          "en": "Fires a flare that reveals an area for a long while."
         },
         "demoYoutubeId": null
       },
@@ -36634,7 +36634,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_heremishaactive.png",
         "description": {
           "fr": "Les attaques de base de Misha lui rendent des points de vie.",
-          "en": "Misha's Basic Attacks heal her"
+          "en": "Misha's Basic Attacks heal her."
         },
         "demoYoutubeId": null
       },
@@ -36648,7 +36648,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_regenerationmaster.png",
         "description": {
           "fr": "Quête : chaque globe de régénération ramassé augmente la récupération de vie de Rexxar et de Misha. Récompense : tous deux gagnent aussi de l'armure.",
-          "en": "Quest: each Regeneration Globe collected raises Rexxar's and Misha's Health regeneration. Reward: both also gain Armor."
+          "en": "Quest: each Regeneration Globe gathered increases Rexxar's and Misha's Health regeneration. Reward: both also gain Armor."
         },
         "demoYoutubeId": null
       },
@@ -36675,8 +36675,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_stayinalive.png",
         "description": {
-          "fr": "Le maximum de points de vie augmente sur la durée.",
-          "en": "Max Health increase over time"
+          "fr": "Le maximum de points de vie de Rexxar et de Misha monte chaque seconde tant que Rexxar reste en vie. Tout le bonus est perdu à sa mort.",
+          "en": "Rexxar's and Misha's maximum Health climbs every second Rexxar stays alive. The whole bonus is lost when he dies."
         },
         "demoYoutubeId": null
       },
@@ -36690,7 +36690,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_spiritswoop.png",
         "description": {
           "fr": "Augmente la durée et l'intensité du ralentissement infligé par Piqué.",
-          "en": "Increases Spirit Swoop slow amount and duration"
+          "en": "Increases both the strength and the duration of Spirit Swoop's Slow."
         },
         "demoYoutubeId": null
       },
@@ -36703,8 +36703,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_spiritswoop_var1.png",
         "description": {
-          "fr": "Augmente la portée de Piqué. Toucher un héros adverse en restitue le coût en mana et en raccourcit le temps de recharge.",
-          "en": "Increases Spirit Swoop's range. Hitting an enemy Hero refunds its Mana cost and brings the next cast closer."
+          "fr": "Augmente la portée de Piqué. Toucher un héros adverse en restitue le coût en mana et en réduit le temps de recharge.",
+          "en": "Increases Spirit Swoop's range. Hitting an enemy Hero refunds its Mana and reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -36717,8 +36717,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_mishacharge.png",
         "description": {
-          "fr": "Les attaques de base de Misha réduisent le temps de recharge de Misha, charge !",
-          "en": "Misha's Basic Attacks lower Misha, Charge! cooldown"
+          "fr": "Chaque attaque de base de Misha réduit le temps de recharge de Misha, charge !",
+          "en": "Each of Misha's Basic Attacks reduces the cooldown of Misha, Charge!"
         },
         "demoYoutubeId": null
       },
@@ -36731,8 +36731,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_bestialwrath.png",
         "description": {
-          "fr": "Augmente les dégâts des attaques de base de Misha.",
-          "en": "Increases Misha's Basic Attacks"
+          "fr": "Augmente énormément les dégâts des attaques de base de Misha pendant un long moment.",
+          "en": "Hugely increases Misha's Basic Attack damage for a long while."
         },
         "demoYoutubeId": null
       },
@@ -36746,7 +36746,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_unleashtheboars.png",
         "description": {
           "fr": "Lâche une harde de sangliers qui traquent tous les héros adverses, les blessent, révèlent leur position et les ralentissent.",
-          "en": "Unleashes a pack of boars that hunt down every enemy Hero, damaging them, revealing their position and Slowing them."
+          "en": "Releases a herd of boars that hunt down every enemy Hero, damaging, revealing and Slowing them."
         },
         "demoYoutubeId": null
       },
@@ -36759,8 +36759,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_spiritswoop.png",
         "description": {
-          "fr": "Piqué augmente la vitesse d'attaque.",
-          "en": "Spirit Swoop increases Attack Speed"
+          "fr": "Toucher un héros avec Piqué augmente énormément la vitesse d'attaque de Rexxar, et les attaques de base de Misha prolongent ce bonus.",
+          "en": "Hitting a Hero with Spirit Swoop hugely increases Rexxar's Attack Speed, and Misha's Basic Attacks extend that bonus."
         },
         "demoYoutubeId": null
       },
@@ -36773,8 +36773,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_mishacharge.png",
         "description": {
-          "fr": "Les attaques de base augmentent les dégâts de Misha, charge !",
-          "en": "Basic Attacks increase damage of Misha, Charge!"
+          "fr": "Chaque attaque de base, de Rexxar comme de Misha, augmente les dégâts de la prochaine charge, jusqu'à un plafond.",
+          "en": "Every Basic Attack, from Rexxar or Misha, increases the damage of the next charge, up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -36787,8 +36787,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_burningrage.png",
         "description": {
-          "fr": "Misha inflige des dégâts aux ennemis proches.",
-          "en": "Misha deals damage to nearby enemies"
+          "fr": "Misha blesse en continu les ennemis autour d'elle.",
+          "en": "Misha continuously damages the enemies around her."
         },
         "demoYoutubeId": null
       },
@@ -36801,8 +36801,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_heremishaactive.png",
         "description": {
-          "fr": "Les attaques de base augmentent la vitesse de déplacement.",
-          "en": "Basic Attacks increase Move Speed"
+          "fr": "Les attaques de base de Rexxar augmentent sa vitesse de déplacement et celle de Misha.",
+          "en": "Rexxar's Basic Attacks increase his own and Misha's Movement Speed."
         },
         "demoYoutubeId": null
       },
@@ -36815,8 +36815,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_imposingpresence.png",
         "description": {
-          "fr": "Réduit les vitesses d'attaque et de déplacement des ennemis.",
-          "en": "Activate to slow enemy Attack and Move speed"
+          "fr": "À l'activation, réduit fortement la vitesse d'attaque et la vitesse de déplacement des héros et invocations proches de Rexxar ou de Misha. Effet passif : ceux qui les attaquent voient leur vitesse d'attaque réduite.",
+          "en": "Activate to sharply cut the Attack Speed and Movement Speed of Heroes and Summons near Rexxar or Misha. Passive: whoever attacks them has their Attack Speed cut."
         },
         "demoYoutubeId": null
       },
@@ -36829,8 +36829,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/talents/storm_ui_icon_rexxar_feigndeath.png",
         "description": {
-          "fr": "Rend invulnérable et incontrôlable.",
-          "en": "Become Invulnerable and control Misha"
+          "fr": "Rexxar fait le mort : il devient invulnérable et impossible à cibler quelques secondes, et tu prends le contrôle direct de Misha.",
+          "en": "Rexxar plays dead: he becomes Invulnerable and untargetable for a few seconds, and you take direct control of Misha."
         },
         "demoYoutubeId": null
       },
@@ -36843,8 +36843,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_bestialwrath.png",
         "description": {
-          "fr": "Les attaques de base de Misha rendent des points de vie à Rexxar.",
-          "en": "Misha's Basic Attacks heal Rexxar"
+          "fr": "Prolonge Courroux bestial, et pendant sa durée les attaques de base de Misha rendent des points de vie à Rexxar.",
+          "en": "Extends Bestial Wrath, and while it lasts Misha's Basic Attacks heal Rexxar."
         },
         "demoYoutubeId": null
       },
@@ -36857,8 +36857,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/rexxar/images/spells/storm_ui_icon_rexxar_unleashtheboars.png",
         "description": {
-          "fr": "Lâchez les sangliers inflige davantage de dégâts et immobilise.",
-          "en": "Unleash the Boars deals more damage and roots"
+          "fr": "Lâchez les sangliers inflige davantage de dégâts et immobilise les héros touchés.",
+          "en": "Unleash the Boars deals more damage and Roots the Heroes it hits."
         },
         "demoYoutubeId": null
       },
@@ -36871,8 +36871,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_slow.png",
         "description": {
-          "fr": "Augmente les dégâts des attaques de base de Rexxar et ralentit les cibles de Misha.",
-          "en": "Rexxar's Basic Attacks deal more damage, Misha's attacks slow"
+          "fr": "Augmente les dégâts des attaques de base de Rexxar, et celles de Misha ralentissent leur cible.",
+          "en": "Increases Rexxar's Basic Attack damage, and Misha's Basic Attacks Slow their target."
         },
         "demoYoutubeId": null
       },
@@ -36885,15 +36885,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_hardenedshield.png",
         "description": {
-          "fr": "Rexxar et Misha obtiennent une grande quantité d'armure.",
-          "en": "Rexxar and Misha gain massive Armor"
+          "fr": "Rexxar et Misha gagnent énormément d'armure pendant quelques secondes.",
+          "en": "Rexxar and Misha gain a huge amount of Armor for a few seconds."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Rexxar",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "samuro",
