@@ -31894,7 +31894,7 @@ const HEROES = [
   },
   {
     "id": "murky",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Bourbie",
       "en": "Murky"
@@ -31918,8 +31918,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_trait_spawnegg.png",
         "description": {
-          "fr": "Place un œuf qui révèle les environs et depuis lequel Bourbie renaît rapidement en cas de mort. Le tuer ne rapporte qu'une fraction d'expérience ; si l'œuf est détruit, Bourbie est révélé aux ennemis.",
-          "en": "Places an Egg that reveals the surrounding area and from which Murky quickly respawns on death. Killing him grants only a fraction of the usual experience; if the Egg is destroyed, Murky is revealed to enemies."
+          "fr": "Place un œuf qui révèle les environs et depuis lequel Bourbie renaît rapidement en cas de mort. Le tuer ne rapporte qu'une fraction d'expérience ; si l'œuf est détruit, Bourbie est révélé aux ennemis un long moment et l'œuf part en temps de recharge.",
+          "en": "Places an Egg that reveals the area around it and from which Murky quickly respawns when he dies. Killing him yields only a fraction of the usual experience; if the Egg is destroyed, Murky is revealed to enemies for a long while and the Egg goes on cooldown."
         },
         "demoYoutubeId": ""
       },
@@ -31931,8 +31931,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_slime.png",
         "description": {
-          "fr": "Projette de la bourbe qui inflige des dégâts aux ennemis proches et les ralentit, et qui frappe bien plus fort les cibles déjà embourbées.",
-          "en": "Releases Slime that damages and Slows nearby enemies, hitting already-Slimed targets much harder."
+          "fr": "Projette de la bourbe qui inflige des dégâts aux ennemis proches et les ralentit, et qui frappe bien plus fort les cibles déjà embourbées. Les bâtiments encaissent moitié moins.",
+          "en": "Sprays Slime that damages and Slows nearby enemies, and hits already-Slimed targets far harder. Structures take half damage."
         },
         "demoYoutubeId": ""
       },
@@ -31944,8 +31944,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_pufferfish.png",
         "description": {
-          "fr": "Crache un poisson-globe qui explose après quelques secondes en infligeant de lourds dégâts, moins aux bâtiments. Les ennemis peuvent le détruire avant. Quête : tuer des adversaires embourbés ou les frapper avec le poisson-globe pour renforcer définitivement ses capacités de base.",
-          "en": "Spits out a Pufferfish that bursts after a few seconds for heavy damage, less against Structures. Enemies can destroy it first. Quest: kill Slimed enemies or hit them with the Pufferfish to permanently empower his Basic Abilities."
+          "fr": "Crache un poisson-globe qui explose après quelques secondes en infligeant de lourds dégâts, moitié moins aux bâtiments. Les ennemis peuvent le détruire avant. Quête : tuer des adversaires embourbés ou les frapper avec le poisson-globe supprime à terme la réduction contre les bâtiments, puis augmente nettement les points de vie de Bourbie.",
+          "en": "Spits out a pufferfish that explodes after a few seconds for heavy damage, halved against Structures. Enemies can destroy it first. Quest: killing Slimed enemies or hitting them with the pufferfish eventually removes the Structure penalty, then greatly increases Murky's Health."
         },
         "demoYoutubeId": ""
       },
@@ -31958,7 +31958,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_safetybubble.png",
         "description": {
           "fr": "Devient invulnérable, mais ne peut pas attaquer ou utiliser de capacités.",
-          "en": "Becomes Invulnerable, but cannot attack or use abilities"
+          "en": "Becomes Invulnerable, but cannot attack or use Abilities."
         },
         "demoYoutubeId": ""
       },
@@ -31970,8 +31970,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_marchofthemurlocs.png",
         "description": {
-          "fr": "Après un court délai, envoie une marée de murlocs dans la direction visée ; chacun bondit sur le premier héros ou bâtiment rencontré, lui inflige des dégâts et le ralentit.",
-          "en": "After a short delay, sends a tide of murlocs in the chosen direction; each leaps on the first Hero or Structure it meets, damaging and Slowing it."
+          "fr": "Après un court délai, envoie une marée de murlocs dans la direction visée ; chacun bondit sur le premier héros ou bâtiment rencontré, lui inflige des dégâts et le ralentit. Les bâtiments encaissent moitié moins.",
+          "en": "After a short delay, sends a tide of murlocs in the chosen direction; each leaps onto the first enemy Hero or Structure it meets, damaging and Slowing it. Structures take half damage."
         },
         "demoYoutubeId": ""
       },
@@ -31983,24 +31983,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_octograb.png",
         "description": {
-          "fr": "Bourbie devient insensible aux effets de contrôle, étourdit longuement un héros adverse et le griffe.",
-          "en": "Murky becomes Unstoppable, Stunning an enemy Hero for a long time while clawing at them."
+          "fr": "Bourbie devient insensible aux effets de contrôle et étourdit longuement un héros adverse, en le griffant pour des dégâts dérisoires.",
+          "en": "Murky becomes Unstoppable and Stuns an enemy Hero for a long moment, clawing at them for laughable damage."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Cache toujours ton Œuf dans un endroit imprévisible, jamais deux fois le même.",
-        "en": "Always hide your Egg somewhere unpredictable, never twice in the same spot."
+        "fr": "Planque ton Œuf (D) dans un buisson ou un recoin, et change d'endroit à chaque fois : sans lui, ta mort redevient un vrai cadeau pour l'adversaire.",
+        "en": "Hide your Egg (D) in a bush or a corner, and move it every time: without it, dying turns back into a real gift for the enemy."
       },
       {
-        "fr": "Embourbe d'abord, lance le Poisson-globe ensuite : Bourbe amplifie tout le reste.",
-        "en": "Slime first, then throw the Pufferfish: Slime amplifies everything else."
+        "fr": "Embourbe (A) avant tout le reste : Bourbe fait bien plus mal sur une cible déjà embourbée, et ta quête de Poisson-globe (Z) ne monte que là-dessus.",
+        "en": "Slime (Q) before anything else: Slime hurts far more on an already-Slimed target, and your Pufferfish (W) quest only counts those."
       },
       {
-        "fr": "Ta mort ne donne presque pas d'expérience : joue bien plus agressivement que les autres.",
-        "en": "Your death gives almost no experience: play far more aggressively than anyone else."
+        "fr": "Bulle de sûreté (E) sert à dodge : garde-la pour avaler un burst ou un skillshot, pas pour partir une fois à moitié mort.",
+        "en": "Safety Bubble (E) is for dodging: save it to eat a burst or a skillshot, not to leave once you're already half dead."
       }
     ],
     "builds": [
@@ -32019,11 +32019,11 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Murky]",
+        "buildCode": "[T1112313,Murky]",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
@@ -32043,12 +32043,12 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tmx5ehs81101t5",
+            "primaryId": "tmx5ehs8111hok",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmx5ehs8112740",
+            "primaryId": "tmx5ehs81145d0",
             "alternativeIds": []
           },
           {
@@ -32058,7 +32058,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmx5ehs81182b0",
+            "primaryId": "tmx5ehs8120zah",
             "alternativeIds": []
           }
         ],
@@ -32076,8 +32076,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_trait_spawnegg.png",
         "description": {
-          "fr": "Renaître de l'œuf accélère fortement la monture de Bourbie. Effet passif : l'œuf gagne des points de vie, voit plus loin et révèle les ennemis qui l'entourent.",
-          "en": "Rebirthing greatly speeds up Murky's Mount. Passive: the egg gains Health, sees farther and reveals the enemies around it."
+          "fr": "Renaître de l'œuf accélère fortement la monture de Bourbie. Effet passif : l'œuf gagne des points de vie, voit bien plus loin et révèle les ennemis qui l'entourent.",
+          "en": "Respawning from the Egg greatly speeds up Murky's mount. Passive: the Egg gains Health, sees much farther and reveals the enemies around it."
         },
         "demoYoutubeId": null
       },
@@ -32091,7 +32091,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/murky/images/talents/storm_ui_icon_murky_egghunt.png",
         "description": {
           "fr": "Bourbie peut placer deux œufs et renaît de l'un d'eux au hasard, mais leur temps de recharge augmente.",
-          "en": "Murky can place two Eggs and respawns from one at random, but their cooldown increases."
+          "en": "Murky can place two Eggs and revives from one of them at random, but their cooldown goes up."
         },
         "demoYoutubeId": null
       },
@@ -32104,8 +32104,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_bribe.png",
         "description": {
-          "fr": "Tuer des serviteurs avec Poisson-globe permet de recruter des mercenaires.",
-          "en": "Kill Minions with Pufferfish to bribe Mercs"
+          "fr": "Tuer des serviteurs avec Poisson-globe accumule des charges de Pot-de-vin, qui permettent d'acheter un camp de mercenaires au lieu de le combattre. Sans effet sur les mercenaires élite.",
+          "en": "Killing Minions with Pufferfish banks Bribe charges, which buy a Mercenary camp instead of fighting it. No effect on Elite Mercenaries."
         },
         "demoYoutubeId": null
       },
@@ -32119,7 +32119,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_slime.png",
         "description": {
           "fr": "Quête : embourber des héros adverses déjà couverts de Bourbe. Récompenses : Bourbe fait perdre davantage de points de vie, puis ralentit bien plus fort.",
-          "en": "Quest: Slime enemy Heroes already covered in Slime. Rewards: Slime drains more Health, then Slows far harder."
+          "en": "Quest: Slime enemy Heroes who are already Slimed. Rewards: Slime deals more damage, then Slows far harder."
         },
         "demoYoutubeId": null
       },
@@ -32146,8 +32146,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/talents/storm_ui_icon_murky_trait_spawnegg_var1.png",
         "description": {
-          "fr": "Quête : tant que Bourbie reste en vie, sa puissance de capacité augmente régulièrement ; le cumul est perdu à sa mort.",
-          "en": "Quest: while Murky stays alive, his Spell Power steadily increases; the stacks are lost on death."
+          "fr": "Quête : tant que Bourbie reste en vie, sa puissance de capacité augmente régulièrement, jusqu'à un plafond ; le cumul est perdu à sa mort.",
+          "en": "Quest: for as long as Murky stays alive, his Spell Power rises at a steady pace up to a cap; the stacks are lost when he dies."
         },
         "demoYoutubeId": null
       },
@@ -32161,7 +32161,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_slime.png",
         "description": {
           "fr": "Augmente le rayon de Bourbe.",
-          "en": "Increases Slime radius"
+          "en": "Increases Slime's radius."
         },
         "demoYoutubeId": null
       },
@@ -32174,8 +32174,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_safetybubble.png",
         "description": {
-          "fr": "Dans sa bulle, Bourbie se déplace plus vite et traverse les unités ; le temps de recharge de Bulle de sûreté est aussi réduit.",
-          "en": "Inside his bubble, Murky moves faster and passes through units; Safety Bubble's cooldown is also reduced."
+          "fr": "Dans sa bulle, Bourbie se déplace bien plus vite et traverse les unités ; le temps de recharge de Bulle de sûreté est aussi réduit.",
+          "en": "Inside his bubble, Murky moves much faster and passes through units; Safety Bubble's cooldown is reduced as well."
         },
         "demoYoutubeId": null
       },
@@ -32188,8 +32188,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_slow.png",
         "description": {
-          "fr": "Les attaques de base portées aux héros les ralentissent et leur infligent des dégâts dans la durée, effet cumulable.",
-          "en": "Basic Attacks against Heroes Slow them and deal damage over time, stacking several times."
+          "fr": "Les attaques de base portées aux héros les ralentissent et leur infligent des dégâts dans la durée, effet cumulable plusieurs fois.",
+          "en": "Basic Attacks on Heroes Slow them and deal damage over time, stacking several times."
         },
         "demoYoutubeId": null
       },
@@ -32202,8 +32202,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_marchofthemurlocs.png",
         "description": {
-          "fr": "Après un court délai, envoie une marée de murlocs dans la direction visée ; chacun bondit sur le premier héros ou bâtiment rencontré, lui inflige des dégâts et le ralentit.",
-          "en": "After a short delay, sends a tide of murlocs in the chosen direction; each leaps on the first Hero or Structure it meets, damaging and Slowing it."
+          "fr": "Après un court délai, envoie une marée de murlocs dans la direction visée ; chacun bondit sur le premier héros ou bâtiment rencontré, lui inflige des dégâts et le ralentit. Les bâtiments encaissent moitié moins.",
+          "en": "After a short delay, sends a tide of murlocs in the chosen direction; each leaps onto the first enemy Hero or Structure it meets, damaging and Slowing it. Structures take half damage."
         },
         "demoYoutubeId": null
       },
@@ -32216,8 +32216,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_octograb.png",
         "description": {
-          "fr": "Bourbie devient insensible aux effets de contrôle, étourdit longuement un héros adverse et le griffe.",
-          "en": "Murky becomes Unstoppable, Stunning an enemy Hero for a long time while clawing at them."
+          "fr": "Bourbie devient insensible aux effets de contrôle et étourdit longuement un héros adverse, en le griffant pour des dégâts dérisoires.",
+          "en": "Murky becomes Unstoppable and Stuns an enemy Hero for a long moment, clawing at them for laughable damage."
         },
         "demoYoutubeId": null
       },
@@ -32230,8 +32230,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_safetybubble.png",
         "description": {
-          "fr": "Bulle de sûreté rend des points de vie.",
-          "en": "Safety Bubble heals"
+          "fr": "Bulle de sûreté rend une bonne part des points de vie de Bourbie.",
+          "en": "Safety Bubble restores a large share of Murky's Health."
         },
         "demoYoutubeId": null
       },
@@ -32244,8 +32244,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_trait_spawnegg.png",
         "description": {
-          "fr": "Placer un œuf ou mourir octroie un bouclier.",
-          "en": "Egg placement or death grants Shield."
+          "fr": "Poser un œuf, ou en perdre un, confère un bouclier à Bourbie.",
+          "en": "Placing an Egg, or losing one, grants Murky a Shield."
         },
         "demoYoutubeId": null
       },
@@ -32258,8 +32258,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/talents/storm_ui_icon_murky_fishtank.png",
         "description": {
-          "fr": "Rend des points de vie selon les dégâts infligés.",
-          "en": "Heal for damage dealt"
+          "fr": "Les attaques de base et les capacités de base rendent des points de vie à proportion des dégâts infligés.",
+          "en": "Basic Attacks and Basic Abilities heal Murky for a share of the damage they deal."
         },
         "demoYoutubeId": null
       },
@@ -32272,8 +32272,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_slime.png",
         "description": {
-          "fr": "Après plusieurs attaques de base consécutives sur un même héros, la suivante déclenche Bourbe gratuitement.",
-          "en": "After several consecutive Basic Attacks on the same Hero, the next one casts Slime for free."
+          "fr": "Une attaque de base sur trois portée d'affilée au même héros lui applique Bourbe gratuitement.",
+          "en": "Every third Basic Attack landed in a row on the same Hero applies a free Slime to them."
         },
         "demoYoutubeId": null
       },
@@ -32286,8 +32286,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_pufferfish.png",
         "description": {
-          "fr": "Déclenche Bourbe sur la position du poisson-globe.",
-          "en": "Casts Slime at Pufferfish location"
+          "fr": "Le Poisson-globe applique Bourbe là où il atterrit.",
+          "en": "The Pufferfish applies Slime where it lands."
         },
         "demoYoutubeId": null
       },
@@ -32314,8 +32314,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_marchofthemurlocs.png",
         "description": {
-          "fr": "Marche des murlocs peut être canalisée indéfiniment.",
-          "en": "March of the Murlocs can channel forever"
+          "fr": "Marche des murlocs peut être canalisée indéfiniment, dure au moins sa durée normale même si tu l'interromps, et ne subit plus de réduction contre les bâtiments.",
+          "en": "March of the Murlocs can be channeled indefinitely, lasts at least its normal duration even if cut short, and no longer takes the Structure penalty."
         },
         "demoYoutubeId": null
       },
@@ -32328,8 +32328,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_octograb.png",
         "description": {
-          "fr": "Augmente les dégâts de Prise du poulpe.",
-          "en": "Increase Octo-Grab's damage"
+          "fr": "Augmente démesurément les dégâts de Prise du poulpe.",
+          "en": "Increases Octo-Grab's damage beyond all reason."
         },
         "demoYoutubeId": null
       },
@@ -32343,7 +32343,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_slime.png",
         "description": {
           "fr": "Réduit le temps de recharge de Bourbe.",
-          "en": "Reduced Slime cooldown"
+          "en": "Reduces Slime's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -32357,14 +32357,14 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/murky/images/spells/storm_ui_icon_murky_pufferfish.png",
         "description": {
           "fr": "Le Poisson-globe explose plus vite.",
-          "en": "Pufferfish explodes faster"
+          "en": "The Pufferfish explodes sooner."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Murky",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "nazeebo",
