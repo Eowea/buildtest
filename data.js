@@ -10965,7 +10965,7 @@ const HEROES = [
     "tips": [
       {
         "fr": "Tes scarabées (D) peuvent servir à tanker les sorts et à assiéger les bâtiments.",
-        "en": "Your Beetles (D) can be used to soak spells and to siege buildings."
+        "en": "Your Beetles (D) can be used to absorb spells and to siege buildings."
       },
       {
         "fr": "Utilise ton Empale (A) en premier pour sécuriser ta Charge enfouie (E) et ne pas la louper.",
@@ -21342,7 +21342,7 @@ const HEROES = [
       },
       {
         "fr": "L'armure de la forme worgen (D) est là pour encaisser : reste au corps à corps tant que tu frappes, repasse humain dès qu'on te bloque.",
-        "en": "Worgen Form's Armor (D) is there to soak: stay in melee while you're landing hits, shift back to Human the moment you get locked down."
+        "en": "Worgen Form's Armor (D) is there to absorb damage: stay in melee while you're landing hits, shift back to Human the moment you get locked down."
       }
     ],
     "builds": [
@@ -23366,7 +23366,7 @@ const HEROES = [
     "tips": [
       {
         "fr": "Ne plonge jamais en premier : attends que le tank ait absorbé les effets de contrôle.",
-        "en": "Never dive first: wait until your tank has soaked the crowd control."
+        "en": "Never dive first: wait until your tank has eaten the crowd control."
       },
       {
         "fr": "Dérobade te rend immunisé aux attaques de base : garde-la pour l'ennemi qui te vise.",
@@ -34289,8 +34289,8 @@ const HEROES = [
         "en": "Warp Rift (W) does nothing on its own: drop it in a corridor the enemy has to walk through, then set it off with Disruption Pulse (Q)."
       },
       {
-        "fr": "Canon à photons (E) sert à zoner et à encaisser : pose-le pour tenir un couloir ou éponger les serviteurs, pas au milieu du fight.",
-        "en": "Photon Cannon (E) is for zoning and soaking: place it to hold a corridor or eat Minion damage, not in the middle of the fight."
+        "fr": "Canon à photons (E) sert à zoner et à prendre les coups à ta place : pose-le pour tenir un couloir ou absorber les tirs des serviteurs, pas au milieu du fight.",
+        "en": "Photon Cannon (E) zones and takes hits for you: place it to hold a corridor or absorb Minion fire, not in the middle of the fight."
       }
     ],
     "builds": [
@@ -45362,7 +45362,7 @@ const HEROES = [
       },
       {
         "fr": "Écran personnel (Z) encaisse aussi les tirs des bâtiments : va te faire taper par un fort pour remonter ton énergie (D) avant un fight.",
-        "en": "Personal Barrier (W) soaks Structure fire too: go take a few tower shots to top up your Energy (D) before a fight."
+        "en": "Personal Barrier (W) absorbs Structure fire too: go take a few tower shots to top up your Energy (D) before a fight."
       },
       {
         "fr": "Orbe à gravitons (R) n'attrape que si tu anticipes : vise là où l'équipe d'en face va aller, pas là où elle est.",
