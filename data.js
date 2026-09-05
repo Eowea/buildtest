@@ -41903,7 +41903,7 @@ const HEROES = [
   },
   {
     "id": "valeera",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Valeera",
       "en": "Valeera"
@@ -41927,8 +41927,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_vanish.png",
         "description": {
-          "fr": "Passe en camouflage et gagne de la vitesse : ses trois capacités de base sont remplacées tant qu'elle reste dissimulée. Après quelques secondes, ces capacités gagnent en portée et la téléportent auprès de sa cible. Immobile, elle devient totalement invisible.",
-          "en": "Enters Stealth and gains Movement Speed: her three Basic Abilities are replaced while she stays concealed. After a few seconds, those Abilities gain range and teleport her to her target. Standing still, she becomes fully invisible."
+          "fr": "Passe en camouflage et gagne de la vitesse : ses trois capacités de base sont remplacées tant qu'elle reste dissimulée. Au tout début, elle ne peut pas être révélée et traverse les unités. Après quelques secondes, ces capacités gagnent en portée et la téléportent auprès de sa cible. Immobile, elle devient totalement invisible.",
+          "en": "Vanishes into Stealth and gains Movement Speed: her three Basic Abilities are replaced for as long as she stays hidden. At the very start she cannot be revealed and passes through units. After a few seconds those Abilities gain range and teleport her to her target. Standing still makes her fully Invisible."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -41942,7 +41942,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_sinisterstrike.png",
         "description": {
           "fr": "Se projette vers l'avant en blessant les ennemis sur son passage. Heurter un héros arrête net sa course et remet la capacité presque aussitôt à disposition. Confère un point de combo.",
-          "en": "Dashes forward, damaging enemies in her path. Hitting a Hero stops the dash and makes the Ability available again almost immediately. Grants a Combo Point."
+          "en": "Dashes forward, damaging enemies along the way. Hitting a Hero stops the dash dead and brings the Ability back almost at once. Awards a Combo Point."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -41956,8 +41956,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_ambush.png",
         "description": {
-          "fr": "Inflige d'importants dégâts à l'ennemi et réduit son armure.",
-          "en": "Deals heavy damage to an enemy and reduces their Armor."
+          "fr": "Frappe un ennemi pour de lourds dégâts et réduit son armure quelques secondes. Confère un point de combo.",
+          "en": "Strikes an enemy for heavy damage and reduces their Armor for a few seconds. Awards a Combo Point."
         },
         "demoYoutubeId": ""
       },
@@ -41970,7 +41970,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_bladeflurry.png",
         "description": {
           "fr": "Inflige des dégâts aux ennemis autour de Valeera et confère un point de combo par héros adverse touché.",
-          "en": "Damages enemies around Valeera and grants a Combo Point for each enemy Hero hit."
+          "en": "Damages enemies around Valeera and awards a Combo Point per enemy Hero hit."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -41984,8 +41984,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_cheapshot.png",
         "description": {
-          "fr": "Étourdit un ennemi, l'aveugle et lui inflige des dégâts.",
-          "en": "Stuns and Blinds an enemy, dealing damage."
+          "fr": "Blesse un ennemi et l'étourdit brièvement ; à la fin de l'étourdissement, il est aveuglé. Confère un point de combo.",
+          "en": "Damages an enemy and briefly Stuns them; when the Stun ends, they are Blinded. Awards a Combo Point."
         },
         "demoYoutubeId": ""
       },
@@ -41998,7 +41998,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_eviscerate.png",
         "description": {
           "fr": "Coup de grâce dont les dégâts augmentent fortement avec le nombre de points de combo accumulés.",
-          "en": "A finishing move whose damage scales sharply with the number of Combo Points accumulated."
+          "en": "A finishing move whose damage rises sharply with the number of Combo Points banked."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -42012,8 +42012,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_garrote.png",
         "description": {
-          "fr": "Inflige d'importants dégâts dans la durée à un ennemi et le réduit au silence.",
-          "en": "Deals heavy damage over time to an enemy and Silences them."
+          "fr": "Blesse un ennemi sur le coup puis dans la durée, et le réduit au silence. Confère un point de combo.",
+          "en": "Damages an enemy on impact and then over time, and Silences them. Awards a Combo Point."
         },
         "demoYoutubeId": ""
       },
@@ -42026,7 +42026,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_cloakofshadows.png",
         "description": {
           "fr": "Dissipe tous les effets de dégâts sur la durée, rend brièvement insensible aux effets de contrôle et confère de l'armure anti-sort, sans interrompre le camouflage.",
-          "en": "Cleanses all damage over time effects, briefly grants Unstoppable and Spell Armor, without breaking Stealth."
+          "en": "Removes every damage-over-time effect, briefly makes her Unstoppable and grants Spell Armor, without breaking Stealth."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -42040,7 +42040,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_smokebomb.png",
         "description": {
           "fr": "Crée un nuage de fumée : à l'intérieur, Valeera ne peut pas être révélée, gagne de l'armure, traverse les unités et peut attaquer ou lancer ses capacités sans se dévoiler. Son utilisation n'interrompt pas le camouflage.",
-          "en": "Creates a cloud of smoke: inside it, Valeera cannot be revealed, gains Armor, walks through units and can attack or cast without breaking cover. Using it does not break Stealth."
+          "en": "Creates a cloud of smoke: inside it, Valeera cannot be revealed, gains Armor, passes through units and can attack or cast without giving herself away. Using it does not break Stealth."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -42048,16 +42048,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ouvre toujours depuis le camouflage : à découvert tu es extrêmement fragile.",
-        "en": "Always open from Stealth: out in the open you are extremely fragile."
+        "fr": "Éviscération (E) ne pique vraiment qu'à trois points de combo : monte-les avant de finish plutôt que de la lâcher dès qu'elle est up.",
+        "en": "Eviscerate (E) only really hurts at three Combo Points: build them up before you finish instead of dumping it the moment it's up."
       },
       {
-        "fr": "Attends quelques secondes camouflée : tes capacités te téléportent alors sur la cible.",
-        "en": "Wait a few seconds in Stealth: your Abilities then teleport you onto the target."
+        "fr": "Évite Éruption de lames (Z) en combat, sauf si tu as loupé ton A : elle consomme plus d'énergie qu'elle ne fait de dégâts.",
+        "en": "Skip Blade Flurry (W) in a fight unless you've missed your Q: it burns more Energy than it deals damage."
       },
       {
-        "fr": "Cape d'ombre dissipe tous les dégâts sur la durée sans te dévoiler.",
-        "en": "Cloak of Shadows cleanses all damage over time without revealing you."
+        "fr": "Tu n'es pas l'engage : laisse ton équipe rentrer avant de dive, et reste loin des AoE, qui cassent ton camouflage (D) avant même ton ouverture.",
+        "en": "You're not the engage: let your team go in before you dive, and stay clear of AoE, which breaks your Stealth (D) before you even open."
       }
     ],
     "builds": [
@@ -42076,16 +42076,16 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Valeera]",
+        "buildCode": "[T4112314,Valeera]",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmz35spgj014ht",
+            "primaryId": "tmz35spgj04cdp",
             "alternativeIds": []
           },
           {
@@ -42100,12 +42100,12 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tmz35spgj127y5",
+            "primaryId": "tmz35spgj134fw",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmz35spgj14tv7",
+            "primaryId": "tmz35spgj16omi",
             "alternativeIds": []
           },
           {
@@ -42115,7 +42115,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmz35spgj20im6",
+            "primaryId": "tmz35spgj23cjd",
             "alternativeIds": []
           }
         ],
@@ -42133,8 +42133,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_conjurerspursuit.png",
         "description": {
-          "fr": "Quête : les globes de régénération augmentent l'énergie maximum.",
-          "en": "Quest: Regen Globes increase max Energy"
+          "fr": "Augmente la régénération d'énergie de Valeera. Récompense : une fois assez de globes de régénération collectés, son énergie maximale augmente.",
+          "en": "Increases Valeera's Energy regeneration. Reward: after gathering enough Regeneration Globes, her maximum Energy increases."
         },
         "demoYoutubeId": null
       },
@@ -42147,8 +42147,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_vanish.png",
         "description": {
-          "fr": "Se téléporter avec Embuscade, Coup bas ou Garrot accélère fortement la régénération d'énergie de Valeera.",
-          "en": "Teleporting with Ambush, Cheap Shot or Garrote greatly increases Valeera's Energy regeneration."
+          "fr": "Se téléporter avec Embuscade, Coup bas ou Garrot accélère fortement la régénération d'énergie de Valeera pendant quelques secondes.",
+          "en": "Teleporting with Ambush, Cheap Shot or Garrote sharply speeds up Valeera's Energy regeneration for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -42162,7 +42162,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_block.png",
         "description": {
           "fr": "Chaque point de combo dépensé confère de l'armure physique contre la prochaine attaque de base d'un héros. Se cumule en charges.",
-          "en": "Each Combo Point spent grants Physical Armor against the next Hero Basic Attack. Stores charges."
+          "en": "Each Combo Point spent grants Physical Armor against the next enemy Hero Basic Attack. Stores charges."
         },
         "demoYoutubeId": null
       },
@@ -42176,7 +42176,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_cripplingpoison.png",
         "description": {
           "fr": "À l'activation, les prochaines capacités offensives de Valeera ralentissent leurs cibles. N'interrompt pas le camouflage.",
-          "en": "On activation, Valeera's next offensive Abilities Slow their targets. Does not break Stealth."
+          "en": "Activate so Valeera's next damaging Abilities Slow their targets. Does not break Stealth."
         },
         "demoYoutubeId": null
       },
@@ -42190,7 +42190,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_sinisterstrike.png",
         "description": {
           "fr": "Réduit le coût en énergie de Frappe subite.",
-          "en": "Reduces Sinister Strike Energy cost"
+          "en": "Reduces Sinister Strike's Energy cost."
         },
         "demoYoutubeId": null
       },
@@ -42203,8 +42203,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_garrote.png",
         "description": {
-          "fr": "Garrot augmente les dégâts des attaques de base.",
-          "en": "Garrote increases Basic Attack damage"
+          "fr": "Les attaques de base de Valeera frappent plus fort les ennemis victimes de Garrot.",
+          "en": "Valeera's Basic Attacks hit enemies affected by Garrote harder."
         },
         "demoYoutubeId": null
       },
@@ -42217,8 +42217,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_vanish.png",
         "description": {
-          "fr": "En mode camouflé, les capacités augmentent la vitesse et confèrent des points de combo.",
-          "en": "Stealth Abilities award Move Speed, Combo Points"
+          "fr": "Embuscade, Coup bas et Garrot augmentent la vitesse de déplacement et confèrent deux points de combo au lieu d'un.",
+          "en": "Ambush, Cheap Shot and Garrote grant Movement Speed and award two Combo Points instead of one."
         },
         "demoYoutubeId": null
       },
@@ -42232,7 +42232,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_woundpoison.png",
         "description": {
           "fr": "À l'activation, les prochaines capacités offensives de Valeera réduisent les soins dont bénéficient leurs cibles. N'interrompt pas le camouflage.",
-          "en": "On activation, Valeera's next offensive Abilities reduce the healing her targets receive. Does not break Stealth."
+          "en": "Activate so Valeera's next damaging Abilities reduce the healing their targets receive. Does not break Stealth."
         },
         "demoYoutubeId": null
       },
@@ -42245,8 +42245,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_sinisterstrike.png",
         "description": {
-          "fr": "Augmente les dégâts de Frappe subite, mais en réduit la portée.",
-          "en": "Increases Sinister Strike damage but reduces range"
+          "fr": "Frappe subite frappe des deux lames et inflige bien plus de dégâts, mais sa portée est réduite.",
+          "en": "Sinister Strike hits with both blades for far more damage, but its range is reduced."
         },
         "demoYoutubeId": null
       },
@@ -42259,8 +42259,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_bladeflurry.png",
         "description": {
-          "fr": "Quête : toucher des héros avec Éruption de lames.",
-          "en": "Quest: Hit Heroes with Blade Flurry"
+          "fr": "Quête : chaque héros touché par Éruption de lames en augmente définitivement les dégâts, jusqu'à un plafond. Récompense : au bout d'un certain nombre de héros touchés, son coût en énergie baisse pour de bon.",
+          "en": "Quest: each Hero hit by Blade Flurry permanently increases its damage, up to a cap. Reward: after enough Heroes are hit, its Energy cost drops for good."
         },
         "demoYoutubeId": null
       },
@@ -42273,8 +42273,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_eviscerate.png",
         "description": {
-          "fr": "Éviscérer avec trois points de combo augmente la vitesse d'attaque de Valeera. Effet passif : ses attaques de base lui rendent de l'énergie.",
-          "en": "Eviscerating with three Combo Points grants Valeera Attack Speed. Passive: her Basic Attacks restore Energy."
+          "fr": "Éviscérer avec trois points de combo augmente énormément la vitesse d'attaque de Valeera, le temps de quelques coups. Effet passif : ses attaques de base lui rendent de l'énergie.",
+          "en": "Eviscerating with three Combo Points hugely increases Valeera's Attack Speed for a few swings. Passive: her Basic Attacks restore Energy."
         },
         "demoYoutubeId": null
       },
@@ -42288,7 +42288,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_smokebomb.png",
         "description": {
           "fr": "Crée un nuage de fumée : à l'intérieur, Valeera ne peut pas être révélée, gagne de l'armure, traverse les unités et peut attaquer ou lancer ses capacités sans se dévoiler. Son utilisation n'interrompt pas le camouflage.",
-          "en": "Creates a cloud of smoke: inside it, Valeera cannot be revealed, gains Armor, walks through units and can attack or cast without breaking cover. Using it does not break Stealth."
+          "en": "Creates a cloud of smoke: inside it, Valeera cannot be revealed, gains Armor, passes through units and can attack or cast without giving herself away. Using it does not break Stealth."
         },
         "demoYoutubeId": null
       },
@@ -42302,7 +42302,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_cloakofshadows.png",
         "description": {
           "fr": "Dissipe tous les effets de dégâts sur la durée, rend brièvement insensible aux effets de contrôle et confère de l'armure anti-sort, sans interrompre le camouflage.",
-          "en": "Cleanses all damage over time effects, briefly grants Unstoppable and Spell Armor, without breaking Stealth."
+          "en": "Removes every damage-over-time effect, briefly makes her Unstoppable and grants Spell Armor, without breaking Stealth."
         },
         "demoYoutubeId": null
       },
@@ -42329,8 +42329,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_cheapshot.png",
         "description": {
-          "fr": "Augmente la durée de l'aveuglement infligé par Coup bas.",
-          "en": "Increase Cheap Shot Blind duration"
+          "fr": "Prolonge nettement l'aveuglement infligé par Coup bas.",
+          "en": "Greatly extends the Blind from Cheap Shot."
         },
         "demoYoutubeId": null
       },
@@ -42343,8 +42343,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_garrote.png",
         "description": {
-          "fr": "Garrot réduit la puissance de capacité.",
-          "en": "Garrote reduces Spell Power"
+          "fr": "Garrot réduit fortement la puissance de capacité du héros touché.",
+          "en": "Garrote sharply reduces the Spell Power of the Hero it hits."
         },
         "demoYoutubeId": null
       },
@@ -42358,7 +42358,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_sinisterstrike.png",
         "description": {
           "fr": "Frappe subite inflige davantage de dégâts et génère un point de combo supplémentaire contre un héros réduit au silence, étourdi ou immobilisé.",
-          "en": "Sinister Strike deals more damage and generates an extra combo point against a Silenced, Stunned or Rooted Hero."
+          "en": "Sinister Strike deals more damage and generates an extra Combo Point against a Silenced, Stunned or Rooted Hero."
         },
         "demoYoutubeId": null
       },
@@ -42372,7 +42372,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_ambush.png",
         "description": {
           "fr": "Embuscade inflige davantage de dégâts et réduit encore l'armure si aucun autre héros adverse ne se trouve près de la cible.",
-          "en": "Ambush deals more damage and further reduces Armor if no other enemy Hero is near the target."
+          "en": "Ambush deals more damage and cuts Armor further if no other enemy Hero is near the target."
         },
         "demoYoutubeId": null
       },
@@ -42385,8 +42385,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_thistletea.png",
         "description": {
-          "fr": "Rend aussitôt de l'énergie, sans interrompre le camouflage.",
-          "en": "Instantly restores Energy without breaking Stealth."
+          "fr": "Rend aussitôt une grande quantité d'énergie, sans interrompre le camouflage.",
+          "en": "Instantly restores a large amount of Energy, without breaking Stealth."
         },
         "demoYoutubeId": null
       },
@@ -42399,8 +42399,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_smokebomb.png",
         "description": {
-          "fr": "Bombe fumigène augmente la régénération d'énergie.",
-          "en": "Smoke Bomb increases Energy regeneration"
+          "fr": "Dans le nuage de Bombe fumigène, Valeera régénère beaucoup plus d'énergie.",
+          "en": "Inside the Smoke Bomb cloud, Valeera regenerates far more Energy."
         },
         "demoYoutubeId": null
       },
@@ -42413,8 +42413,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/spells/storm_ui_icon_valeera_cloakofshadows.png",
         "description": {
-          "fr": "Disparition confère Cape d'ombre.",
-          "en": "Vanish grants Cloak of Shadows"
+          "fr": "Utiliser Disparition confère aussi Cape d'ombre.",
+          "en": "Using Vanish also grants Cloak of Shadows."
         },
         "demoYoutubeId": null
       },
@@ -42427,8 +42427,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/valeera/images/talents/storm_ui_icon_valeera_garrote.png",
         "description": {
-          "fr": "Augmente les dégâts que Garrot inflige sur la durée ; les attaques de base en réinitialisent la durée.",
-          "en": "Increases Garrote's damage over time; Basic Attacks refresh its duration."
+          "fr": "Double les dégâts que Garrot inflige sur la durée, et les attaques de base en réinitialisent la durée.",
+          "en": "Doubles Garrote's damage over time, and Basic Attacks refresh its duration."
         },
         "demoYoutubeId": null
       },
@@ -42464,7 +42464,7 @@ const HEROES = [
       }
     ],
     "codeKey": "Valeera",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "valla",
