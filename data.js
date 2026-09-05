@@ -15165,8 +15165,8 @@ const HEROES = [
         "enabled": true,
         "order": 3,
         "label": {
-          "fr": "Build E",
-          "en": "E build"
+          "fr": "Build utilitaire",
+          "en": "Utility build"
         },
         "summary": {
           "fr": "Build centré sur les pièges temporels et Sables enlisants, pour le contrôle.",
@@ -15179,8 +15179,8 @@ const HEROES = [
         "buildCode": "[T3331331,Chromie]",
         "videos": [],
         "updatedAt": {
-          "fr": "2 Septembre 2026",
-          "en": "September 2, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
@@ -30283,7 +30283,7 @@ const HEROES = [
   },
   {
     "id": "medivh",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Medivh",
       "en": "Medivh"
@@ -30307,8 +30307,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_ravenform.png",
         "description": {
-          "fr": "Transforme en corbeau.",
-          "en": "Transform into a raven"
+          "fr": "Au lieu de prendre une monture, Medivh se change en corbeau : il gagne de la vitesse de déplacement, voit et survole les obstacles, et devient insensible à tous les effets.",
+          "en": "Instead of mounting, Medivh turns into a raven: he gains Movement Speed, sees over and flies across terrain, and becomes immune to every effect."
         },
         "demoYoutubeId": ""
       },
@@ -30320,8 +30320,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_arcanemissile.png",
         "description": {
-          "fr": "Lance un éclair des Arcanes qui frappe les ennemis sur une ligne. Toucher un héros réduit son temps de recharge et rend du mana. Quête : toucher des héros sans mourir augmente durablement ses dégâts.",
-          "en": "Fires an arcane bolt that hits enemies in a line. Hitting a Hero reduces its cooldown and restores Mana. Quest: hitting Heroes without dying permanently increases its damage."
+          "fr": "Lance un éclair des Arcanes qui frappe les ennemis sur une ligne. Toucher un héros réduit son temps de recharge et rend du mana. Quête : toucher des héros sans mourir augmente durablement ses dégâts et la réduction de temps de recharge qu'elle procure.",
+          "en": "Fires an arcane rift that hits enemies in a line. Hitting a Hero reduces its cooldown and refunds Mana. Quest: hitting Heroes without dying permanently increases its damage and the cooldown reduction it gives."
         },
         "demoYoutubeId": ""
       },
@@ -30334,7 +30334,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_forceofwill.png",
         "description": {
           "fr": "Protège un héros allié de tous les dégâts pendant un court instant, puis lui rend une partie des dégâts ainsi absorbés.",
-          "en": "Protects an allied Hero from all damage briefly, then heals them for part of the damage absorbed."
+          "en": "Shields an allied Hero from all damage for a brief moment, then heals them for part of the damage absorbed."
         },
         "demoYoutubeId": ""
       },
@@ -30346,8 +30346,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_portal.png",
         "description": {
-          "fr": "Crée deux portails reliés que Medivh et ses alliés empruntent pour se téléporter de l'un à l'autre.",
-          "en": "Creates two linked portals Medivh and his allies can use to teleport between them."
+          "fr": "Crée deux portails reliés que Medivh et ses alliés empruntent pour se téléporter de l'un à l'autre. Ils ne durent que quelques secondes.",
+          "en": "Creates a linked pair of portals that Medivh and his allies use to teleport between them. They last only a few seconds."
         },
         "demoYoutubeId": ""
       },
@@ -30360,7 +30360,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_polybomb.png",
         "description": {
           "fr": "Métamorphose un héros adverse, ce qui le réduit au silence et l'empêche d'attaquer. À l'expiration, l'effet se propage aux héros adverses proches.",
-          "en": "Polymorphs an enemy Hero, Silencing them and preventing attacks. When it expires, it spreads to nearby enemy Heroes."
+          "en": "Polymorphs an enemy Hero, Silencing them and stopping them from attacking. When it expires, the effect spreads to nearby enemy Heroes."
         },
         "demoYoutubeId": ""
       },
@@ -30373,23 +30373,23 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_leylineblast.png",
         "description": {
           "fr": "Après un court délai, libère une décharge d'énergie qui emprisonne les héros adverses et les plonge en stase.",
-          "en": "After a short delay, releases a burst of energy that traps enemy Heroes and puts them in Stasis."
+          "en": "After a short delay, unleashes a wave of energy that traps enemy Heroes and freezes them in Time Stop."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Pose ton Portail avant le combat, pas pendant : il faut du temps pour le traverser.",
-        "en": "Place your Portal before the fight, not during: it takes time to walk through."
+        "fr": "Force de volonté (Z) annule tous les dégâts pendant un instant : garde-la pour le burst qui tue, pas pour du poke.",
+        "en": "Force of Will (W) cancels all damage for a moment: save it for the burst that kills, not for chip damage."
       },
       {
-        "fr": "Force de volonté annule un burst entier : garde-la pour le sort qui tue.",
-        "en": "Force of Will negates an entire burst: save it for the spell that kills."
+        "fr": "Portail (E) se pose avant le fight, pas pendant : le traverser prend du temps, et l'équipe d'en face peut poser son CC à la sortie.",
+        "en": "Portal (E) goes down before the fight, not during: walking through takes time, and the enemy team can drop CC on the exit."
       },
       {
-        "fr": "En Forme de corbeau tu ne peux pas être ciblé : c'est ta seule vraie défense.",
-        "en": "In Raven Form you cannot be targeted: that is your only real defense."
+        "fr": "Forme de corbeau (D) te rend intouchable et survole les murs : sers-t'en pour scout et intercepter les rotations, mais tu es plus lent qu'à cheval, ne t'éloigne pas trop.",
+        "en": "Raven Form (D) makes you untouchable and flies over walls: use it to scout and intercept rotations, but you're slower than mounted, so don't drift too far."
       }
     ],
     "builds": [
@@ -30408,46 +30408,46 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Medivh]",
+        "buildCode": "[T3222222,Medivh]",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmxb709kx01le6",
+            "primaryId": "tmxb709kx03g7p",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmxb709kx04isw",
+            "primaryId": "tmxb709kx05f4i",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmxb709kx07wqp",
+            "primaryId": "tmxb709kx083a3",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmxb709kx1053u",
+            "primaryId": "tmxb709kx11akh",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmxb709kx121i4",
+            "primaryId": "tmxb709kx133h4",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmxb709kx154f0",
+            "primaryId": "tmxb709kx16tx1",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmxb709kx18oub",
+            "primaryId": "tmxb709kx1923s",
             "alternativeIds": []
           }
         ],
@@ -30465,8 +30465,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_ravenform.png",
         "description": {
-          "fr": "Augmente la vitesse de déplacement sous forme de corbeau.",
-          "en": "Increases Raven Form Movement Speed"
+          "fr": "Double le bonus à la vitesse de déplacement de la forme de corbeau.",
+          "en": "Doubles Raven Form's Movement Speed bonus."
         },
         "demoYoutubeId": null
       },
@@ -30479,8 +30479,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_ravenform_b.png",
         "description": {
-          "fr": "Forme de corbeau augmente la récupération de points de vie et de mana.",
-          "en": "Raven Form increases Health and Mana Regen"
+          "fr": "La forme de corbeau accélère énormément la récupération de points de vie et de mana.",
+          "en": "Raven Form hugely speeds up Health and Mana regeneration."
         },
         "demoYoutubeId": null
       },
@@ -30493,8 +30493,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_portal.png",
         "description": {
-          "fr": "Permet de placer les deux portails.",
-          "en": "Place both Portal locations"
+          "fr": "Permet de placer soi-même les deux portails, sans quitter la forme de corbeau. Le trait annule un portail resté seul.",
+          "en": "Lets him place both portals himself, without breaking Raven Form. His trait cancels a portal left unlinked."
         },
         "demoYoutubeId": null
       },
@@ -30507,8 +30507,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_portal.png",
         "description": {
-          "fr": "Emprunter un portail confère de l'armure.",
-          "en": "Using a Portal grants Armor"
+          "fr": "La première traversée d'un portail confère de l'armure à l'allié quelques secondes.",
+          "en": "The first trip through a portal grants the ally Armor for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -30522,7 +30522,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_portal_a.png",
         "description": {
           "fr": "Emprunter un portail confère un familier corbeau : si l'allié attaque un héros peu après, le corbeau fond sur lui, le blesse et le ralentit.",
-          "en": "Taking a portal grants a Raven familiar: if the ally attacks a Hero soon after, the Raven dives on them, damaging and Slowing them."
+          "en": "Using a portal grants a raven familiar: if the ally attacks a Hero soon after, the raven dives at them, damaging and Slowing them."
         },
         "demoYoutubeId": null
       },
@@ -30536,7 +30536,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_dustofappearance.png",
         "description": {
           "fr": "Élargit fortement le champ de vision et révèle les héros adverses de la zone, sans quitter la forme de corbeau. Effet passif : Medivh voit plus loin en corbeau.",
-          "en": "Greatly widens his sight and reveals the enemy Heroes in the area, without leaving Raven Form. Passive: Medivh sees farther as a Raven."
+          "en": "Greatly widens his sight and reveals the enemy Heroes in the area, without breaking Raven Form. Passive: Medivh sees farther as a raven."
         },
         "demoYoutubeId": null
       },
@@ -30550,7 +30550,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_arcanemissile.png",
         "description": {
           "fr": "Si Faille arcanique touche un héros adverse, la prochaine attaque de base de Medivh frappe bien plus fort et lui rend des points de vie.",
-          "en": "If Arcane Rift hits an enemy Hero, Medivh's next Basic Attack hits far harder and restores Health to him."
+          "en": "If Arcane Rift hits an enemy Hero, Medivh's next Basic Attack hits far harder and heals him."
         },
         "demoYoutubeId": null
       },
@@ -30563,8 +30563,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_forceofwill.png",
         "description": {
-          "fr": "Force de volonté inflige des dégâts de zone.",
-          "en": "Force of Will deals area damage"
+          "fr": "À son expiration, Force de volonté explose et blesse les ennemis proches, d'autant plus fort qu'elle a absorbé de dégâts.",
+          "en": "When it expires, Force of Will bursts and damages nearby enemies, harder the more damage it absorbed."
         },
         "demoYoutubeId": null
       },
@@ -30577,8 +30577,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_forceofwill_a.png",
         "description": {
-          "fr": "Force de volonté peut conférer de la puissance de capacité.",
-          "en": "Force of Will can grant Spell Power"
+          "fr": "Absorber beaucoup de dégâts en une seule Force de volonté confère de la puissance de capacité, cumulable deux fois.",
+          "en": "Absorbing a lot of damage with a single Force of Will grants Spell Power, stacking twice."
         },
         "demoYoutubeId": null
       },
@@ -30592,7 +30592,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_polybomb.png",
         "description": {
           "fr": "Métamorphose un héros adverse, ce qui le réduit au silence et l'empêche d'attaquer. À l'expiration, l'effet se propage aux héros adverses proches.",
-          "en": "Polymorphs an enemy Hero, Silencing them and preventing attacks. When it expires, it spreads to nearby enemy Heroes."
+          "en": "Polymorphs an enemy Hero, Silencing them and stopping them from attacking. When it expires, the effect spreads to nearby enemy Heroes."
         },
         "demoYoutubeId": null
       },
@@ -30606,7 +30606,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_leylineblast.png",
         "description": {
           "fr": "Après un court délai, libère une décharge d'énergie qui emprisonne les héros adverses et les plonge en stase.",
-          "en": "After a short delay, releases a burst of energy that traps enemy Heroes and puts them in Stasis."
+          "en": "After a short delay, unleashes a wave of energy that traps enemy Heroes and freezes them in Time Stop."
         },
         "demoYoutubeId": null
       },
@@ -30620,7 +30620,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_forceofwill.png",
         "description": {
           "fr": "Force de volonté s'applique aussi aux alliés proches de la cible.",
-          "en": "Force of Will applies to allies near target"
+          "en": "Force of Will also applies to the allies near the target."
         },
         "demoYoutubeId": null
       },
@@ -30633,8 +30633,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_forceofwill_a.png",
         "description": {
-          "fr": "Empêcher des dégâts réduit le temps de recharge de Force de volonté.",
-          "en": "Preventing damage reduces Force of Will cooldown"
+          "fr": "Empêcher beaucoup de dégâts avec Force de volonté ramène son temps de recharge à quelques secondes.",
+          "en": "Preventing a lot of damage with Force of Will drops its cooldown to a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -30647,8 +30647,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_forceofwill_b.png",
         "description": {
-          "fr": "Augmente les soins de Force de volonté.",
-          "en": "Increase Force of Will healing"
+          "fr": "Force de volonté rend bien plus de points de vie sur les dégâts absorbés.",
+          "en": "Force of Will heals for much more of the damage it absorbed."
         },
         "demoYoutubeId": null
       },
@@ -30661,8 +30661,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_arcanemissile.png",
         "description": {
-          "fr": "Inflige davantage de dégâts après avoir touché un héros.",
-          "en": "Arcane Rift deals more damage after hitting a Hero"
+          "fr": "Toucher un héros avec Faille arcanique renforce la faille suivante.",
+          "en": "Hitting a Hero with Arcane Rift empowers the next rift."
         },
         "demoYoutubeId": null
       },
@@ -30675,8 +30675,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_arcanemissile_a.png",
         "description": {
-          "fr": "Faille arcanique réduit le temps de recharge de la capacité héroïque.",
-          "en": "Arcane Rift reduces Heroic cooldown"
+          "fr": "Les attaques de base réduisent un peu le temps de recharge de la capacité héroïque, et chaque héros touché par Faille arcanique le réduit bien davantage.",
+          "en": "Basic Attacks shave a little off his Heroic Ability's cooldown, and each Hero hit by Arcane Rift takes off far more."
         },
         "demoYoutubeId": null
       },
@@ -30689,8 +30689,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_portal.png",
         "description": {
-          "fr": "Augmente la durée de portail.",
-          "en": "Increases Portal uptime"
+          "fr": "Réduit le temps de recharge de Portail et en prolonge la durée.",
+          "en": "Reduces Portal's cooldown and extends how long the portals last."
         },
         "demoYoutubeId": null
       },
@@ -30703,8 +30703,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_polybomb.png",
         "description": {
-          "fr": "Bombe métamorphique s'étale instantanément sur une large zone.",
-          "en": "Poly Bomb instantly spreads in a larger area"
+          "fr": "Bombe métamorphique frappe désormais une zone et métamorphose aussitôt, puis frappe la même zone une seconde fois, sur un rayon plus large. En échange, l'effet dure moins longtemps.",
+          "en": "Poly Bomb now hits an area and Polymorphs at once, then strikes the same area a second time, over a wider radius. In exchange, the effect lasts less long."
         },
         "demoYoutubeId": null
       },
@@ -30717,8 +30717,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_leylineblast.png",
         "description": {
-          "fr": "Sceau tellurique peut être redirigé après activation.",
-          "en": "Ley Line Seal can be redirected while active"
+          "fr": "Prolonge la stase de Sceau tellurique et permet d'en rediriger le souffle une fois.",
+          "en": "Extends Ley Line Seal's Time Stop and lets him redirect the wave once."
         },
         "demoYoutubeId": null
       },
@@ -30731,8 +30731,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_arcanemissile.png",
         "description": {
-          "fr": "Tue les serviteurs instantanément, portée augmentée.",
-          "en": "Arcane Rift kills Minions instantly, increased range"
+          "fr": "Faille arcanique tue instantanément les serviteurs et les catapultes, et porte bien plus loin.",
+          "en": "Arcane Rift instantly kills Minions and Catapults, and reaches much farther."
         },
         "demoYoutubeId": null
       },
@@ -30745,8 +30745,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/jaina/images/talents/storm_ui_icon_jaina_arcaneintellect.png",
         "description": {
-          "fr": "Confère de la puissance de capacité et du mana aux alliés.",
-          "en": "Grant Spell Power and Mana to allies"
+          "fr": "Rend aussitôt du mana à tous les héros alliés proches et leur confère de la puissance de capacité un moment.",
+          "en": "Instantly restores Mana to every nearby allied Hero and grants them Spell Power for a while."
         },
         "demoYoutubeId": null
       },
@@ -30760,14 +30760,14 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_invisibility.png",
         "description": {
           "fr": "Camoufle un héros allié, indécelable au tout début ; rester immobile en camouflage le rend invisible. Se cumule en charges.",
-          "en": "Stealths an allied Hero, briefly undetectable; standing still while Stealthed turns them invisible. Stores charges."
+          "en": "Stealths an allied Hero, unrevealable at the very start; standing still while Stealthed makes them Invisible. Stores charges."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Medivh",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "mei",
