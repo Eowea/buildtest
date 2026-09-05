@@ -14931,7 +14931,7 @@ const HEROES = [
   },
   {
     "id": "chromie",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Chromie",
       "en": "Chromie"
@@ -14955,8 +14955,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_timetraveler.png",
         "description": {
-          "fr": "Chromie obtient ses talents en avance sur tout le monde. Son trait sert aussi à déclencher ses pièges temporels.",
-          "en": "Chromie gains her Talents ahead of everyone else. Her trait also triggers her Time Traps."
+          "fr": "Chromie obtient ses talents deux niveaux avant tout le monde. Son trait sert aussi à déclencher ses pièges temporels.",
+          "en": "Chromie unlocks her Talents two levels ahead of everyone else. Her trait also detonates her Time Traps."
         },
         "demoYoutubeId": ""
       },
@@ -14968,8 +14968,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_aethercannon.png",
         "description": {
-          "fr": "Après un court temps de préparation, envoie un projectile à très longue portée qui frappe le premier ennemi touché, et laisse un écho qui reproduit ses tirs en plus faible.",
-          "en": "After a short wind-up, fires a very long-range projectile that strikes the first enemy hit, and leaves an echo that copies her shots for less."
+          "fr": "Après un court temps de préparation, envoie un projectile à très longue portée qui frappe le premier ennemi touché, moitié moins les bâtiments. Il laisse derrière lui un écho, un seul à la fois, qui reproduit en plus faible les Souffles de sable et les attaques de base de Chromie.",
+          "en": "After a brief wind-up, fires a very long-range missile that hits the first enemy in its path, for half damage against Structures. It leaves an Echo behind, only one at a time, which mimics Chromie's Sand Blasts and Basic Attacks for reduced damage."
         },
         "demoYoutubeId": ""
       },
@@ -14981,8 +14981,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_sandstrike.png",
         "description": {
-          "fr": "Projette une salve de boules de sable dans une zone.",
-          "en": "Fire a series of blasts in an area"
+          "fr": "Ciblage vectoriel : envoie trois dragons de sable qui retombent l'un après l'autre le long de la direction choisie, blessant les ennemis à chaque impact.",
+          "en": "Vector targeting: launches three sand dragons that land one after another along the chosen direction, damaging enemies on each impact."
         },
         "demoYoutubeId": ""
       },
@@ -14994,8 +14994,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_timetrap.png",
         "description": {
-          "fr": "Place un piège qui s'arme et devient invisible après un moment. Déclenché par son trait, il plonge en stase tous les héros proches, alliés comme ennemis.",
-          "en": "Places a trap that arms and turns invisible after a moment. Triggered by her trait, it puts every nearby Hero into Stasis, allies included."
+          "fr": "Place un piège qui s'arme et devient invisible après un moment. Déclenché par son trait, il plonge en stase tous les héros proches, alliés comme ennemis. Un seul piège peut être actif à la fois.",
+          "en": "Places a trap that arms and turns invisible after a moment. Detonated by her trait, it freezes every nearby Hero in Time Stop, allies included. Only one trap can be active at a time."
         },
         "demoYoutubeId": ""
       },
@@ -15007,8 +15007,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_looper.png",
         "description": {
-          "fr": "Renvoie un héros adverse à une position antérieure.",
-          "en": "Return an enemy Hero to a previous position"
+          "fr": "Marque un héros adverse : quelques secondes plus tard, il est renvoyé là où il se trouvait au lancement. Dans la foulée, les capacités de base de Chromie se rechargent bien plus vite.",
+          "en": "Marks an enemy Hero: a few seconds later, they are sent back to where they stood when it was cast. In the meantime, Chromie's Basic Abilities recharge far faster."
         },
         "demoYoutubeId": ""
       },
@@ -15020,24 +15020,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_timewarp.png",
         "description": {
-          "fr": "Crée une zone de ralentissement.",
-          "en": "Create a Slowing area"
+          "fr": "Invoque un vortex de sable qui ralentit de plus en plus les ennemis qui restent dedans.",
+          "en": "Summons a sand vortex that Slows the enemies inside it more and more."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Souffle de sable est ton coup le plus fort : rate-le et tu ne fais plus rien.",
-        "en": "Sand Blast is your hardest hit: miss it and you do almost nothing."
+        "fr": "N'aie pas peur de rater ton Souffle de sable (A) : mieux vaut le relancer souvent qu'attendre le tir parfait. Vise le chemin de la cible, pas sa position.",
+        "en": "Don't be afraid to miss Sand Blast (Q): casting it often beats waiting for the perfect shot. Aim where the target is going, not where it is."
       },
       {
-        "fr": "Pose tes pièges temporels avant l'objectif, puis déclenche-les avec ton trait.",
-        "en": "Place your Time Traps before the objective, then trigger them with your trait."
+        "fr": "Piège temporel (E) n'est pas qu'offensif : déclenché au trait (D), il met aussi tes alliés en stase et peut leur faire éviter un burst.",
+        "en": "Time Trap (E) isn't only offensive: detonated with your trait (D), it also freezes your allies and can make them dodge a burst."
       },
       {
-        "fr": "Tu meurs au moindre contact : joue toujours derrière un mur ou un allié.",
-        "en": "You die to any contact: always play behind a wall or an ally."
+        "fr": "Tu meurs au moindre dive : reste derrière ta frontline, hors de portée d'engage, et laisse ta portée faire le travail.",
+        "en": "You die to any dive: stay behind your frontline, out of engage range, and let your range do the work."
       }
     ],
     "builds": [
@@ -15045,22 +15045,22 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build recommandé",
-          "en": "Recommended build"
+          "fr": "Build A",
+          "en": "Q build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build centré sur Souffle de sable et ses échos.",
+          "en": "Focused on Sand Blast and its Echoes."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Chromie]",
+        "buildCode": "[T1112313,Chromie]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
@@ -15080,17 +15080,137 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tm0pgywku10fxq",
+            "primaryId": "tm0pgywku11swp",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tm0pgywku12wyq",
+            "primaryId": "tm0pgywku14iv0",
             "alternativeIds": []
           },
           {
             "level": 16,
             "primaryId": "tm0pgywku15xeq",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tm0pgywku20dll",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build Z",
+          "en": "W build"
+        },
+        "summary": {
+          "fr": "Build centré sur Dragon de sable.",
+          "en": "Focused on Dragon's Breath."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T2222332,Chromie]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tm0pgywku02ilv",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tm0pgywku0569h",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tm0pgywku08ky0",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tm0pgywku11swp",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tm0pgywku14iv0",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tm0pgywku17gsx",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tm0pgywku192jz",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 3,
+        "label": {
+          "fr": "Build E",
+          "en": "E build"
+        },
+        "summary": {
+          "fr": "Build centré sur les pièges temporels et Sables enlisants, pour le contrôle.",
+          "en": "Focused on Time Traps and Slowing Sands, for control."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T3331331,Chromie]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tm0pgywku03jat",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tm0pgywku060x9",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tm0pgywku09z5i",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tm0pgywku10fxq",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tm0pgywku14iv0",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tm0pgywku17gsx",
             "alternativeIds": []
           },
           {
@@ -15113,8 +15233,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_aethercannon.png",
         "description": {
-          "fr": "Quête : Souffle de sable confère un écho supplémentaire.",
-          "en": "Quest: Sand Blast gains another Echo"
+          "fr": "Quête : toucher des héros avec Souffle de sable, le tien comme celui de tes échos. Récompense : un écho de plus en même temps, et des échos qui frappent plus fort.",
+          "en": "Quest: hit Heroes with Sand Blast, yours or your Echoes'. Reward: one more Echo at a time, and Echoes that hit harder."
         },
         "demoYoutubeId": null
       },
@@ -15128,7 +15248,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_sandstrike.png",
         "description": {
           "fr": "Quête : toucher des héros avec Dragon de sable en augmente définitivement les dégâts. Récompense : Dragon de sable voit son temps de recharge réduit et coûte moins de mana.",
-          "en": "Quest: hitting Heroes with Dragon's Breath permanently increases its damage. Reward: Dragon's Breath returns sooner and costs less Mana."
+          "en": "Quest: hitting Heroes with Dragon's Breath permanently increases its damage. Reward: Dragon's Breath gets a shorter cooldown and costs less Mana."
         },
         "demoYoutubeId": null
       },
@@ -15141,8 +15261,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_clairvoyance.png",
         "description": {
-          "fr": "Augmente la puissance de capacité et dévoile une zone.",
-          "en": "Increase Spell Power, Activate to reveal an area"
+          "fr": "Augmente la puissance de capacité et réduit le délai d'armement des pièges temporels. À l'activation, dévoile une zone et garde les ennemis aperçus révélés un moment.",
+          "en": "Increases Spell Power and shortens how long Time Traps take to arm. Activate to reveal an area and keep the enemies spotted revealed for a while."
         },
         "demoYoutubeId": null
       },
@@ -15155,8 +15275,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_timetrap.png",
         "description": {
-          "fr": "Piège temporel se déclenche automatiquement et affecte les vitesses de déplacement alliées et ennemies.",
-          "en": "Time Trap affects enemy/allied Move Speed"
+          "fr": "À la fin de la stase, les ennemis pris par le piège sont ralentis et les alliés accélérés.",
+          "en": "When the Time Stop ends, enemies caught by the trap are Slowed and allies are sped up."
         },
         "demoYoutubeId": null
       },
@@ -15169,8 +15289,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/talents/storm_ui_icon_chromie_timetrap_a.png",
         "description": {
-          "fr": "Piège temporel affecte l'armure des alliés et des ennemis.",
-          "en": "Time Trap affects enemy/allied Armor"
+          "fr": "À la fin de la stase, les ennemis pris par le piège perdent de l'armure et les alliés en gagnent.",
+          "en": "When the Time Stop ends, enemies caught by the trap lose Armor and allies gain some."
         },
         "demoYoutubeId": null
       },
@@ -15183,8 +15303,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/talents/storm_ui_icon_chromie_timetrap_b.png",
         "description": {
-          "fr": "Augmente le nombre de charges de Piège temporel et réduit le temps de recharge.",
-          "en": "Increase Time Trap charges, reduce cooldown"
+          "fr": "Porte à trois le nombre de charges et de pièges actifs à la fois, et réduit le temps de recharge de Piège temporel.",
+          "en": "Raises charges and simultaneous traps to three, and reduces Time Trap's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -15197,8 +15317,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_aethercannon.png",
         "description": {
-          "fr": "Souffle de sable renforce les attaques de base.",
-          "en": "Sand Blast empowers Basic Attacks"
+          "fr": "Toucher un héros avec Souffle de sable, le tien comme celui d'un écho, renforce nettement les attaques de base de Chromie quelques secondes.",
+          "en": "Hitting a Hero with Sand Blast, yours or an Echo's, greatly boosts Chromie's Basic Attacks for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -15211,8 +15331,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_sandstrike.png",
         "description": {
-          "fr": "Dragon de sable inflige davantage de dégâts dans la zone centrale et ralentit.",
-          "en": "Dragon's Breath's center deals more damage, Slows"
+          "fr": "Dragon de sable inflige davantage de dégâts dans sa zone centrale, et y ralentit brièvement les héros touchés.",
+          "en": "Dragon's Breath deals more damage in its center, and briefly Slows the Heroes hit there."
         },
         "demoYoutubeId": null
       },
@@ -15239,8 +15359,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_timewarp.png",
         "description": {
-          "fr": "Crée une zone de ralentissement.",
-          "en": "Create a Slowing area"
+          "fr": "Invoque un vortex de sable qui ralentit de plus en plus les ennemis qui restent dedans.",
+          "en": "Summons a sand vortex that Slows the enemies inside it more and more."
         },
         "demoYoutubeId": null
       },
@@ -15253,8 +15373,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_looper.png",
         "description": {
-          "fr": "Renvoie un héros adverse à une position antérieure.",
-          "en": "Return an enemy Hero to a previous position"
+          "fr": "Marque un héros adverse : quelques secondes plus tard, il est renvoyé là où il se trouvait au lancement. Dans la foulée, les capacités de base de Chromie se rechargent bien plus vite.",
+          "en": "Marks an enemy Hero: a few seconds later, they are sent back to where they stood when it was cast. In the meantime, Chromie's Basic Abilities recharge far faster."
         },
         "demoYoutubeId": null
       },
@@ -15267,8 +15387,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_aethercannon.png",
         "description": {
-          "fr": "Souffle de sable augmente la vitesse de déplacement et les régénérations.",
-          "en": "Sand Blast increases Move Speed and Regen"
+          "fr": "Après un Souffle de sable, Chromie gagne de la vitesse de déplacement et régénère bien plus vite ses points de vie.",
+          "en": "After a Sand Blast, Chromie gains Movement Speed and regenerates Health far faster."
         },
         "demoYoutubeId": null
       },
@@ -15282,7 +15402,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/chromie/images/talents/storm_ui_icon_chromie_herethere.png",
         "description": {
           "fr": "Activer téléporte Chromie auprès d'un de ses échos de sable et envoie celui-ci là où elle se trouvait.",
-          "en": "Activating teleports Chromie next to one of her sand echoes and sends it where she was standing."
+          "en": "Activate to teleport Chromie next to one of her Echoes, sending it where she just stood."
         },
         "demoYoutubeId": null
       },
@@ -15296,7 +15416,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/chromie/images/talents/storm_ui_icon_chromie_timeblock.png",
         "description": {
           "fr": "Activer place Chromie en stase, invulnérable ; réactiver met fin à l'effet plus tôt.",
-          "en": "Activating puts Chromie in Stasis, Invulnerable; reactivating ends it early."
+          "en": "Activate to put Chromie in Stasis, Invulnerable; activate again to end it early."
         },
         "demoYoutubeId": null
       },
@@ -15309,8 +15429,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_aethercannon.png",
         "description": {
-          "fr": "Souffle de sable augmente la puissance de capacité.",
-          "en": "Sand Blast grants Spell Power"
+          "fr": "Toucher un héros avec ton Souffle de sable initial augmente la puissance de capacité, cumulable jusqu'à un plafond. Chaque nouveau tir touché relance la durée.",
+          "en": "Hitting a Hero with your primary Sand Blast grants Spell Power, stacking up to a cap. Each new hit refreshes the duration."
         },
         "demoYoutubeId": null
       },
@@ -15323,8 +15443,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/talents/storm_ui_icon_chromie_aethercannon_a.png",
         "description": {
-          "fr": "Toucher des cibles éloignées avec Souffle de sable réduit son temps de recharge.",
-          "en": "Long range Sand Blasts reduce its cooldown"
+          "fr": "Si ton Souffle de sable initial touche un héros après avoir parcouru une bonne distance, il se recharge presque aussitôt et rend du mana.",
+          "en": "If your primary Sand Blast hits a Hero after travelling a good distance, it comes back almost at once and refunds Mana."
         },
         "demoYoutubeId": null
       },
@@ -15337,8 +15457,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/talents/storm_ui_icon_chromie_hyperdrivesreach.png",
         "description": {
-          "fr": "Activer pour obtenir de la puissance de capacité.",
-          "en": "Activate to gain Spell Power"
+          "fr": "À l'activation, augmente fortement la puissance de capacité quelques secondes. Toucher un héros avec Souffle de sable en réduit le temps de recharge.",
+          "en": "Activate to sharply increase Spell Power for a few seconds. Hitting a Hero with Sand Blast reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -15352,7 +15472,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_timewarp.png",
         "description": {
           "fr": "Les héros ralentis par Sables enlisants perdent régulièrement de l'armure anti-sort, jusqu'à un plancher. Effet passif : augmente la portée de Sables enlisants, qui persiste un moment après son annulation.",
-          "en": "Heroes Slowed by Slowing Sands steadily lose Spell Armor, down to a floor. Passive: increases Slowing Sands' range, and it lingers a moment after being cancelled."
+          "en": "Heroes Slowed by Slowing Sands steadily lose Spell Armor, down to a floor. Passive: increases Slowing Sands' cast range, and it lingers for a while after being cancelled."
         },
         "demoYoutubeId": null
       },
@@ -15365,8 +15485,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_looper.png",
         "description": {
-          "fr": "Boucle temporelle téléporte sa cible en arrière une seconde fois et allonge encore le temps de recharge de ses capacités de base.",
-          "en": "Temporal Loop teleports its target back a second time and extends their Basic Ability cooldowns further."
+          "fr": "Boucle temporelle téléporte sa cible en arrière une seconde fois, et le rechargement accéléré des capacités de base dure plus longtemps et va encore plus vite.",
+          "en": "Temporal Loop teleports its target back a second time, and the accelerated Basic Ability recharge lasts longer and runs even faster."
         },
         "demoYoutubeId": null
       },
@@ -15379,8 +15499,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/spells/storm_ui_icon_chromie_aethercannon.png",
         "description": {
-          "fr": "Souffle de sable traverse sa cible.",
-          "en": "Sand Blast pierces"
+          "fr": "Les Souffles de sable, les tiens comme ceux de tes échos, transpercent tous les ennemis touchés.",
+          "en": "Sand Blasts, yours and your Echoes', pierce through every enemy they hit."
         },
         "demoYoutubeId": null
       },
@@ -15393,15 +15513,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chromie/images/talents/storm_ui_icon_chromie_blessing_of_the_bronze.png",
         "description": {
-          "fr": "Augmente la vitesse de déplacement des alliés et réduit les temps de recharge.",
-          "en": "Increase allied Move Speed and reduce cooldowns"
+          "fr": "À l'activation, accélère Chromie et ses alliés et fait recharger leurs capacités de base plus vite. Toucher un héros avec Souffle de sable en réduit le temps de recharge.",
+          "en": "Activate to speed up Chromie and her allies and make their Basic Abilities recharge faster. Hitting a Hero with Sand Blast reduces its cooldown."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Chromie",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "deathwing",
@@ -18034,7 +18154,7 @@ const HEROES = [
   },
   {
     "id": "falstad",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Falstad",
       "en": "Falstad"
@@ -18058,8 +18178,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_tailwind.png",
         "description": {
-          "fr": "Augmente la vitesse de déplacement si aucun dégât n'est subi pendant un court instant.",
-          "en": "After not taking damage for a brief period, gain increased Movement Speed"
+          "fr": "Falstad gagne de la vitesse de déplacement dès qu'il n'a rien encaissé pendant quelques secondes.",
+          "en": "Falstad gains Movement Speed as soon as he has taken no damage for a few seconds."
         },
         "demoYoutubeId": ""
       },
@@ -18071,8 +18191,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_hammerang.png",
         "description": {
-          "fr": "Lance un marteau qui blesse et ralentit à l'aller comme au retour ; le réactiver le fait exploser.",
-          "en": "Throws a hammer that damages and Slows on the way out and back; reactivating detonates it."
+          "fr": "Lance un marteau qui revient vers lui en blessant et ralentissant les ennemis touchés. Le réactiver le fait exploser sur place, blessant les ennemis proches.",
+          "en": "Throws a hammer that comes back to him, damaging and Slowing the enemies it hits. Reactivate to make it explode where it is, damaging nearby enemies."
         },
         "demoYoutubeId": ""
       },
@@ -18084,8 +18204,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_lightningrod.png",
         "description": {
-          "fr": "Foudroie un ennemi, puis continue de le brûler tant que Falstad reste près de lui.",
-          "en": "Shocks an enemy, then keeps burning them as long as Falstad stays close."
+          "fr": "Foudroie un ennemi, puis le refrappe régulièrement tant que Falstad reste près de lui. Inflige bien plus de dégâts aux serviteurs et aux mercenaires.",
+          "en": "Zaps an enemy, then strikes them again at a steady rhythm for as long as Falstad stays close. Deals far more damage to Minions and Mercenaries."
         },
         "demoYoutubeId": ""
       },
@@ -18097,8 +18217,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_barrelroll.png",
         "description": {
-          "fr": "Permet de foncer vers un endroit ciblé et confère un bouclier.",
-          "en": "Dash to a location and gain a temporary shield"
+          "fr": "Propulse Falstad vers l'endroit ciblé et lui confère un bouclier quelques secondes.",
+          "en": "Launches Falstad to the target spot and grants him a Shield for a few seconds."
         },
         "demoYoutubeId": ""
       },
@@ -18111,7 +18231,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_mount.png",
         "description": {
           "fr": "Au lieu d'utiliser la monture, peut survoler le terrain sur une longue distance.",
-          "en": "Instead of mounting, Falstad can fly a great distance over terrain"
+          "en": "Instead of mounting, he can fly over the terrain for a long distance."
         },
         "demoYoutubeId": ""
       },
@@ -18123,8 +18243,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_mightygust.png",
         "description": {
-          "fr": "Repousse les ennemis et les ralentit.",
-          "en": "Push away enemies and slow them"
+          "fr": "Repousse les ennemis et les ralentit, l'effet s'estompant progressivement.",
+          "en": "Pushes enemies away and Slows them, the effect fading away over a few seconds."
         },
         "demoYoutubeId": ""
       },
@@ -18136,24 +18256,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_hinterlandblast.png",
         "description": {
-          "fr": "Après un temps de visée, un rayon frappe les ennemis sur une très longue ligne ; chaque héros touché en réduit le temps de recharge.",
-          "en": "After aiming, a beam strikes enemies along a very long line; each Hero hit brings the next cast closer."
+          "fr": "Après un temps de visée, un rayon frappe les ennemis sur une très longue ligne ; chaque héros touché en réduit fortement le temps de recharge.",
+          "en": "After an aiming delay, a beam strikes enemies along a very long line; each Hero hit sharply reduces its cooldown."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Vol traverse toute la carte : sers-t'en pour tourner un objectif, pas pour fuir.",
-        "en": "Flight crosses the whole Battleground: use it to flank an objective, not to escape."
+        "fr": "Vol (W) sert à rotate et à gank, pas à fuir : traverse la carte pour arriver là où l'équipe d'en face ne t'attend pas.",
+        "en": "Flight (Z) is for rotating and ganking, not for running: cross the map to show up where the enemy team isn't expecting you."
       },
       {
-        "fr": "Marteau-boomerang blesse à l'aller comme au retour : place-toi pour les deux passages.",
-        "en": "Hammerang damages going out and coming back: position for both passes."
+        "fr": "Ne pose pas Paratonnerre (Z) sur une cible en limite de portée : elle fait un pas en arrière et tu perds tout le reste des décharges.",
+        "en": "Don't put Lightning Rod (W) on a target at the edge of your range: one step back and you lose every remaining strike."
       },
       {
-        "fr": "Paratonnerre exige de rester près de la cible : engage-le seulement si tu peux suivre.",
-        "en": "Lightning Rod needs you close: only start it if you can keep up."
+        "fr": "Tonneau (E) est ta seule mobilité : le cramer pour entrer te laisse sans issue au premier dive sur toi.",
+        "en": "Barrel Roll (E) is your only mobility: burning it to go in leaves you with no way out on the first dive at you."
       }
     ],
     "builds": [
@@ -18161,32 +18281,32 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build recommandé",
-          "en": "Recommended build"
+          "fr": "Build auto-attaque",
+          "en": "Auto-attack build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build tourné vers les attaques de base.",
+          "en": "Built around Basic Attacks."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Falstad]",
+        "buildCode": "[T3312312,Falstad]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm4qbndwf015q6",
+            "primaryId": "tm4qbndwf03kzc",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tm4qbndwf04nhm",
+            "primaryId": "tm4qbndwf06b1a",
             "alternativeIds": []
           },
           {
@@ -18196,12 +18316,12 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tm4qbndwf104jq",
+            "primaryId": "tm4qbndwf11l1l",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tm4qbndwf12cav",
+            "primaryId": "tm4qbndwf14qos",
             "alternativeIds": []
           },
           {
@@ -18211,7 +18331,67 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tm4qbndwf18elr",
+            "primaryId": "tm4qbndwf19bad",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build A",
+          "en": "Q build"
+        },
+        "summary": {
+          "fr": "Build centré sur Marteau-boomerang.",
+          "en": "Focused on Hammerang."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T1322222,Falstad]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "2 Septembre 2026",
+          "en": "September 2, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tm4qbndwf015q6",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tm4qbndwf06b1a",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tm4qbndwf08ge6",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tm4qbndwf11l1l",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tm4qbndwf133ta",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tm4qbndwf16khl",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tm4qbndwf19bad",
             "alternativeIds": []
           }
         ],
@@ -18229,8 +18409,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_hammerang.png",
         "description": {
-          "fr": "Quête : augmente les dégâts de Marteau-boomerang.",
-          "en": "Quest: Increase Hammerang damage"
+          "fr": "Quête : toucher des héros avec Marteau-boomerang rend du mana et, par paliers, en augmente définitivement les dégâts. Mourir fait perdre des cumuls.",
+          "en": "Quest: hitting Heroes with Hammerang restores Mana and, at milestones, permanently increases its damage. Dying costs stacks."
         },
         "demoYoutubeId": null
       },
@@ -18243,8 +18423,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_lightningrod.png",
         "description": {
-          "fr": "Quête : chaque frappe de Paratonnerre qui touche un héros au-delà des premières compte, et une mort sous son effet compte double. Récompenses : la capacité frappe plus fort, voit son temps de recharge réduit, puis frappe un plus grand nombre de fois.",
-          "en": "Quest: each Lightning Rod strike hitting a Hero past the first few counts, and a death under it counts double. Rewards: it hits harder, returns sooner, then strikes more times."
+          "fr": "Quête : chaque frappe de Paratonnerre qui touche un héros au-delà des premières compte, et une mort sous son effet compte double. Récompenses : la capacité frappe plus fort, voit son temps de recharge réduit, puis gagne des frappes supplémentaires dont la dernière étourdit.",
+          "en": "Quest: every Lightning Rod strike on a Hero past the first few counts, and a death under its effect counts double. Rewards: it hits harder, its cooldown drops, then it gains extra strikes whose last one Stuns."
         },
         "demoYoutubeId": null
       },
@@ -18257,8 +18437,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/talents/storm_ui_icon_falstad_tailwind_a.png",
         "description": {
-          "fr": "À l'activation, augmente la vitesse d'attaque et confère Vent arrière. Quête : tuer des adversaires augmente les dégâts des attaques de base.",
-          "en": "Activate to gain Attack Speed, Tailwind Quest: Killing enemies grants Basic Attack Damage"
+          "fr": "À l'activation, augmente la vitesse d'attaque et confère Vent arrière. Quête : tuer des serviteurs et faire des victimes augmente par paliers les dégâts des attaques de base.",
+          "en": "Activate to gain Attack Speed and Tailwind. Quest: killing Minions and scoring Takedowns increases Basic Attack damage at milestones."
         },
         "demoYoutubeId": null
       },
@@ -18271,8 +18451,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_lightningrod.png",
         "description": {
-          "fr": "Les frappes de Paratonnerre confèrent un bouclier.",
-          "en": "Lightning Rod strikes grants Shields"
+          "fr": "Chaque frappe de Paratonnerre confère un bouclier à Falstad, cumulable jusqu'à un plafond.",
+          "en": "Each Lightning Rod strike grants Falstad a Shield, stacking up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -18285,8 +18465,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_barrelroll.png",
         "description": {
-          "fr": "Augmente la portée et le bouclier de Tonneau.",
-          "en": "Increases Barrel Roll range, Shield"
+          "fr": "Augmente la portée de Tonneau et le bouclier qu'il confère, lequel ne s'estompe plus avec le temps.",
+          "en": "Increases Barrel Roll's range and the Shield it grants, which no longer expires."
         },
         "demoYoutubeId": null
       },
@@ -18299,8 +18479,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_heal.png",
         "description": {
-          "fr": "Les attaques de base rendent des points de vie.",
-          "en": "Basic Attacks heal"
+          "fr": "Les attaques de base rendent des points de vie à proportion des dégâts infligés à la cible principale.",
+          "en": "Basic Attacks heal for a share of the damage dealt to the primary target."
         },
         "demoYoutubeId": null
       },
@@ -18313,8 +18493,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_hammerang.png",
         "description": {
-          "fr": "Augmente la portée de Marteau-boomerang et les dégâts des attaques de base.",
-          "en": "Increases Hammerang range, Basic Attack damage"
+          "fr": "Augmente la portée de Marteau-boomerang, et les attaques de base frappent bien plus fort tant que le marteau est en vol.",
+          "en": "Increases Hammerang's range, and Basic Attacks hit far harder while the hammer is in flight."
         },
         "demoYoutubeId": null
       },
@@ -18327,8 +18507,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/talents/storm_ui_icon_falstad_hammerang_a.png",
         "description": {
-          "fr": "L'explosion de Marteau-boomerang frappe plus fort et réduit l'armure anti-sort des héros adverses touchés.",
-          "en": "Hammerang's blast hits harder and lowers the Spell Armor of the enemy Heroes it hits."
+          "fr": "L'explosion de Marteau-boomerang frappe deux fois plus fort et réduit l'armure anti-sort des héros adverses touchés.",
+          "en": "Hammerang's explosion hits twice as hard and reduces the Spell Armor of the enemy Heroes it hits."
         },
         "demoYoutubeId": null
       },
@@ -18341,8 +18521,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_lightningrod.png",
         "description": {
-          "fr": "Augmente les dégâts à chaque frappe.",
-          "en": "Lightning Rod deals increasing damage"
+          "fr": "Paratonnerre frappe plus fort à chaque décharge successive.",
+          "en": "Lightning Rod hits harder with each successive strike."
         },
         "demoYoutubeId": null
       },
@@ -18355,8 +18535,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_hinterlandblast.png",
         "description": {
-          "fr": "Après un temps de visée, un rayon frappe les ennemis sur une très longue ligne ; chaque héros touché en raccourcit le temps de recharge.",
-          "en": "After aiming, a beam strikes enemies along a very long line; each Hero hit brings the next cast closer."
+          "fr": "Après un temps de visée, un rayon frappe les ennemis sur une très longue ligne ; chaque héros touché en réduit fortement le temps de recharge.",
+          "en": "After an aiming delay, a beam strikes enemies along a very long line; each Hero hit sharply reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -18369,8 +18549,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_mightygust.png",
         "description": {
-          "fr": "Repousse les ennemis et les ralentit.",
-          "en": "Push away enemies and slow them"
+          "fr": "Repousse les ennemis et les ralentit, l'effet s'estompant progressivement.",
+          "en": "Pushes enemies away and Slows them, the effect fading away over a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -18383,8 +18563,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_lightningrod.png",
         "description": {
-          "fr": "Augmente la portée de Paratonnerre et annule le temps de recharge lors d'une élimination.",
-          "en": "Increases Lightning Rod range, resets on takedown"
+          "fr": "Augmente la portée de Paratonnerre, et faire une victime en annule le temps de recharge.",
+          "en": "Increases Lightning Rod's range, and a Takedown resets its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -18397,8 +18577,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_tailwind.png",
         "description": {
-          "fr": "Vent arrière recharge les capacités de base plus vite.",
-          "en": "Tailwind recharges Basic Abilities faster"
+          "fr": "Tant que Vent arrière est actif, les capacités de base se rechargent deux fois plus vite.",
+          "en": "While Tailwind is active, Basic Abilities recharge twice as fast."
         },
         "demoYoutubeId": null
       },
@@ -18411,8 +18591,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/talents/storm_ui_icon_falstad_tailwind_a.png",
         "description": {
-          "fr": "Augmente les dégâts des attaques de base portées aux héros.",
-          "en": "Increase Basic Attacks against Heroes"
+          "fr": "Les attaques de base portées aux héros leur infligent des dégâts supplémentaires proportionnels à leurs points de vie maximum, davantage encore tant que Vent arrière est actif.",
+          "en": "Basic Attacks on Heroes deal bonus damage based on their maximum Health, more still while Tailwind is active."
         },
         "demoYoutubeId": null
       },
@@ -18425,8 +18605,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_hammerang.png",
         "description": {
-          "fr": "Augmente le ralentissement de Marteau-boomerang, son explosion ralentit.",
-          "en": "Increases Hammerang Slow, explosion Slows"
+          "fr": "Double le ralentissement de Marteau-boomerang, et son explosion ralentit aussi.",
+          "en": "Doubles Hammerang's Slow, and its explosion Slows as well."
         },
         "demoYoutubeId": null
       },
@@ -18439,8 +18619,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_tailwind.png",
         "description": {
-          "fr": "Réduit le délai d'activation et augmente le bonus à la vitesse de déplacement.",
-          "en": "Reduce Tailwind delay, increase Move Speed"
+          "fr": "Vent arrière s'enclenche plus tôt et confère davantage de vitesse de déplacement.",
+          "en": "Tailwind kicks in sooner and grants more Movement Speed."
         },
         "demoYoutubeId": null
       },
@@ -18453,8 +18633,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_barrelroll.png",
         "description": {
-          "fr": "Augmente la vitesse de déplacement.",
-          "en": "Barrel Roll increases Move Speed"
+          "fr": "Tonneau confère un gros bonus de vitesse de déplacement, qui s'estompe en quelques secondes.",
+          "en": "Barrel Roll grants a big Movement Speed bonus that fades over a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -18467,8 +18647,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_hinterlandblast.png",
         "description": {
-          "fr": "Augmente la portée et les dégâts.",
-          "en": "Increases Hinterland Blast range and damage"
+          "fr": "Double la portée d'Explosion des Hinterlands et en augmente les dégâts.",
+          "en": "Doubles Hinterland Blast's range and increases its damage."
         },
         "demoYoutubeId": null
       },
@@ -18481,8 +18661,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/spells/storm_ui_icon_falstad_mightygust.png",
         "description": {
-          "fr": "Repousse constamment les ennemis.",
-          "en": "Mighty Gust constantly knocks back"
+          "fr": "Bourrasque violente laisse un tunnel de vent qui repousse régulièrement les ennemis pris dedans.",
+          "en": "Mighty Gust leaves a wind tunnel that periodically pushes back the enemies caught in it."
         },
         "demoYoutubeId": null
       },
@@ -18495,8 +18675,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_range.png",
         "description": {
-          "fr": "Augmente la vitesse d'attaque et la portée.",
-          "en": "Increases Attack Speed and Range"
+          "fr": "Augmente la vitesse d'attaque et la portée des attaques de base.",
+          "en": "Increases Attack Speed and Basic Attack range."
         },
         "demoYoutubeId": null
       },
@@ -18509,15 +18689,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/falstad/images/talents/storm_ui_icon_falstad_epicmount.png",
         "description": {
-          "fr": "Réduit le temps de recharge et d'incantation de Vol.",
-          "en": "Reduces Flight cooldown and delay"
+          "fr": "Réduit fortement le temps de recharge de Vol, raccourcit son incantation et augmente sa vitesse.",
+          "en": "Sharply reduces Flight's cooldown, shortens its cast time and increases its speed."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Falstad",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "fenix",
