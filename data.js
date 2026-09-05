@@ -34171,7 +34171,7 @@ const HEROES = [
   },
   {
     "id": "probius",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "EDN-OS",
       "en": "Probius"
@@ -34195,8 +34195,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_warpinpylon.png",
         "description": {
-          "fr": "Transfère un pylône qui projette un champ d'énergie et révèle les alentours. EDN-OS ne regagne du mana que dans ce champ.",
-          "en": "Warps in a Pylon that projects a power field and reveals the area. Probius only regains Mana inside that field."
+          "fr": "Transfère un pylône qui projette un champ d'énergie et révèle les alentours. EDN-OS ne regagne du mana que dans ce champ. Les héros et serviteurs adverses tués lâchent du minerai : le récolter réduit le temps de recharge du pylône. Deux pylônes au maximum.",
+          "en": "Warps in a Pylon that projects a Power Field and reveals the area around it. Probius only regenerates Mana inside that field. Enemy Heroes and Minions drop Minerals when killed: gathering them reduces the Pylon's cooldown. Two Pylons at most."
         },
         "demoYoutubeId": ""
       },
@@ -34208,8 +34208,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_disruptionpulse.png",
         "description": {
-          "fr": "Envoie un projectile qui inflige des dégâts aux ennemis et fait détoner les failles instables.",
-          "en": "Fire a missile in a line that damages enemies and detonates Warp Rifts"
+          "fr": "Envoie un projectile en ligne droite qui blesse tous les ennemis sur son passage. S'il touche le centre d'une faille instable, celle-ci explose.",
+          "en": "Fires a projectile in a straight line that damages every enemy it passes through. If it hits the center of a Warp Rift, the rift explodes."
         },
         "demoYoutubeId": ""
       },
@@ -34221,8 +34221,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_warprift.png",
         "description": {
-          "fr": "Ouvre une faille qui s'arme après un instant, puis ralentit les ennemis proches. Une impulsion disruptive la fait détoner.",
-          "en": "Opens a rift that arms after a moment, then Slows nearby enemies. A Disruption Pulse makes it detonate."
+          "fr": "Ouvre une faille qui s'arme après un instant, puis ralentit les ennemis proches. Elle explose en fin de vie, ou dès qu'une impulsion disruptive la touche.",
+          "en": "Opens a rift that arms after a moment, then Slows nearby enemies. It explodes when it expires, or as soon as a Disruption Pulse hits it."
         },
         "demoYoutubeId": ""
       },
@@ -34234,8 +34234,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_photoncannon.png",
         "description": {
-          "fr": "Transfère un canon qui tire sur les ennemis. Placé dans un champ d'énergie, il tire bien plus vite et révèle les ennemis proches.",
-          "en": "Warps in a cannon that fires at enemies. Inside a power field it fires much faster and reveals nearby enemies."
+          "fr": "Transfère un canon qui tire sur les ennemis quelques secondes. Placé dans un champ d'énergie, il tire bien plus vite et révèle les ennemis proches.",
+          "en": "Warps in a cannon that shoots at enemies for a few seconds. Inside a Power Field, it fires much faster and reveals nearby enemies."
         },
         "demoYoutubeId": ""
       },
@@ -34248,7 +34248,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_mount.png",
         "description": {
           "fr": "Se déplace plus vite de manière passive, et bien plus vite à l'activation — mais subir des dégâts interrompt le bonus. Toujours actif au hall des Tempêtes.",
-          "en": "Moves faster passively, and much faster on activation — but taking damage interrupts the bonus. Always active in the Hall of Storms."
+          "en": "Moves faster passively, and far faster when activated — but taking damage cuts the bonus short. Always active at the Hall of Storms."
         },
         "demoYoutubeId": ""
       },
@@ -34261,7 +34261,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_pylonovercharge.png",
         "description": {
           "fr": "Agrandit les champs d'énergie et arme les pylônes, qui deviennent invulnérables et attaquent les héros adverses.",
-          "en": "Widens the power fields and arms the Pylons, which become Invulnerable and attack enemy Heroes."
+          "en": "Widens the Power Fields and arms the Pylons, which become Invulnerable and attack enemy Heroes."
         },
         "demoYoutubeId": ""
       },
@@ -34273,24 +34273,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_voidgate.png",
         "description": {
-          "fr": "Crée une barrière qui ralentit.",
-          "en": "Create a Slowing barrier"
+          "fr": "Ciblage vectoriel : projette une barrière d'énergie dans la direction choisie. Les ennemis qui la touchent sont très fortement ralentis et blessés tant qu'ils restent au contact.",
+          "en": "Vector targeting: projects a barrier of energy in the chosen direction. Enemies touching it are heavily Slowed and damaged for as long as they stay in contact."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Tu ne récupères du mana que dans un champ de pylône : pose-en un avant tout.",
-        "en": "You only regain Mana inside a power field: place a Pylon first."
+        "fr": "Planque tes pylônes (D) dans un buisson ou derrière un mur : c'est ta seule source de mana, et sans eux tu ne fais plus rien.",
+        "en": "Tuck your Pylons (D) into a bush or behind terrain: they're your only Mana source, and without them you do nothing."
       },
       {
-        "fr": "Une faille instable ne fait rien seule : fais-la détoner avec Impulsion disruptive.",
-        "en": "A Warp Rift does nothing alone: detonate it with Disruption Pulse."
+        "fr": "Faille instable (Z) ne fait rien toute seule : pose-la dans un couloir où l'adversaire doit passer, et fais-la détoner à l'Impulsion disruptive (A).",
+        "en": "Warp Rift (W) does nothing on its own: drop it in a corridor the enemy has to walk through, then set it off with Disruption Pulse (Q)."
       },
       {
-        "fr": "Barrière ionique coupe totalement un couloir : bloque la retraite adverse.",
-        "en": "Null Gate completely seals a corridor: block the enemy retreat."
+        "fr": "Canon à photons (E) sert à zoner et à encaisser : pose-le pour tenir un couloir ou éponger les serviteurs, pas au milieu du fight.",
+        "en": "Photon Cannon (E) is for zoning and soaking: place it to hold a corridor or eat Minion damage, not in the middle of the fight."
       }
     ],
     "builds": [
@@ -34309,46 +34309,46 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Probius]",
+        "buildCode": "[T2322224,Probius]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmtq3f5gq01x0c",
+            "primaryId": "tmtq3f5gq02muc",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmtq3f5gq04wo9",
+            "primaryId": "tmtq3f5gq061bo",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmtq3f5gq079vj",
+            "primaryId": "tmtq3f5gq08bik",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmtq3f5gq10b7v",
+            "primaryId": "tmtq3f5gq119nj",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmtq3f5gq12091",
+            "primaryId": "tmtq3f5gq13il2",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmtq3f5gq15jkw",
+            "primaryId": "tmtq3f5gq16yjn",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmtq3f5gq187dg",
+            "primaryId": "tmtq3f5gq2121u",
             "alternativeIds": []
           }
         ],
@@ -34366,8 +34366,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_disruptionpulse.png",
         "description": {
-          "fr": "L'impulsion disruptive revient à EDN-OS.",
-          "en": "Disruption Pulse returns to Probius"
+          "fr": "L'impulsion disruptive marque un temps d'arrêt en bout de course, puis revient vers EDN-OS en blessant à nouveau tout sur son passage.",
+          "en": "Disruption Pulse pauses at the end of its path, then returns to Probius, damaging everything in its way again."
         },
         "demoYoutubeId": null
       },
@@ -34380,8 +34380,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_warprift.png",
         "description": {
-          "fr": "Quête : toucher des héros en faisant détonner des failles instables.",
-          "en": "Quest: Detonate Warp Rift on Heroes"
+          "fr": "Quête : toucher des héros avec l'explosion de failles instables. Récompenses : l'explosion frappe plus fort, puis Faille instable gagne une charge.",
+          "en": "Quest: hit Heroes with Warp Rift explosions. Rewards: the explosion hits harder, then Warp Rift gains a charge."
         },
         "demoYoutubeId": null
       },
@@ -34394,8 +34394,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_photoncannon.png",
         "description": {
-          "fr": "Quête : récolter du minerai renforce les canons à photons.",
-          "en": "Quest: Collect Minerals to empower Photon Cannons"
+          "fr": "Quête : récolter du minerai augmente les points de vie des canons à photons. Récompense : au bout d'un certain montant, ils infligent aussi bien plus de dégâts.",
+          "en": "Quest: gathering Minerals increases Photon Cannon Health. Reward: past a certain amount, they also deal far more damage."
         },
         "demoYoutubeId": null
       },
@@ -34408,8 +34408,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_photoncannon.png",
         "description": {
-          "fr": "Confère de l'armure anti-sort tant qu'un canon à photons est actif.",
-          "en": "Gain Spell Armor while Photon Cannon is Active"
+          "fr": "Tant qu'un canon à photons est en vie et alimenté par un champ d'énergie, EDN-OS gagne de l'armure anti-sort.",
+          "en": "While a Photon Cannon is alive and powered by a Power Field, Probius gains Spell Armor."
         },
         "demoYoutubeId": null
       },
@@ -34422,8 +34422,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/talents/storm_ui_icon_probius_workerrush.png",
         "description": {
-          "fr": "EDN-OS se déplace plus rapidement et le temps de recharge de Hâte ouvrière est réduit.",
-          "en": "Move faster and decrease Worker Rush's cooldown"
+          "fr": "Hâte ouvrière confère un bonus passif de vitesse de déplacement supplémentaire dans les champs d'énergie, et son temps de recharge est fortement réduit.",
+          "en": "Worker Rush grants extra passive Movement Speed inside Power Fields, and its cooldown drops sharply."
         },
         "demoYoutubeId": null
       },
@@ -34436,8 +34436,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/talents/storm_ui_icon_probius_shieldcapacitor.png",
         "description": {
-          "fr": "Confère un bouclier permanent.",
-          "en": "Gain permanent Shields"
+          "fr": "Confère un bouclier permanent à EDN-OS, qui se régénère vite s'il n'a rien encaissé récemment.",
+          "en": "Grants Probius a permanent Shield that regenerates quickly when he hasn't taken damage recently."
         },
         "demoYoutubeId": null
       },
@@ -34450,8 +34450,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_disruptionpulse.png",
         "description": {
-          "fr": "Une fois assez de héros touchés par Impulsion disruptive, la prochaine faille instable qu'elle déclenche projette des impulsions supplémentaires dans toutes les directions. Effet passif : Impulsion disruptive voit son temps de recharge réduit.",
-          "en": "Once enough Heroes are hit by Disruption Pulse, the next Warp Rift it detonates fires extra pulses in every direction. Passive: Disruption Pulse returns sooner."
+          "fr": "Une fois assez de héros touchés par Impulsion disruptive, la prochaine faille instable qu'elle déclenche projette des impulsions supplémentaires dans toutes les directions. Effet passif : réduit le temps de recharge d'Impulsion disruptive.",
+          "en": "Once enough Heroes have been hit by Disruption Pulse, the next Warp Rift it detonates fires extra pulses in every direction. Passive: reduces Disruption Pulse's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -34464,8 +34464,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_warprift.png",
         "description": {
-          "fr": "Fait exploser des failles instables rapidement pour plus de dégâts",
-          "en": "Detonate Warp Rifts quickly for extra damage"
+          "fr": "Toucher une faille instable avec Impulsion disruptive au moment où elle s'arme inflige des dégâts supplémentaires dans la durée.",
+          "en": "Hitting a Warp Rift with Disruption Pulse right as it arms deals extra damage over time."
         },
         "demoYoutubeId": null
       },
@@ -34478,8 +34478,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_photoncannon.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Canon à photons.",
-          "en": "Reduce Photon Cannon cooldown"
+          "fr": "Blesser un héros adverse avec Impulsion disruptive ou Faille instable réduit le temps de recharge de Canon à photons.",
+          "en": "Damaging an enemy Hero with Disruption Pulse or Warp Rift reduces Photon Cannon's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -34493,7 +34493,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_pylonovercharge.png",
         "description": {
           "fr": "Agrandit les champs d'énergie et arme les pylônes, qui deviennent invulnérables et attaquent les héros adverses.",
-          "en": "Widens the power fields and arms the Pylons, which become Invulnerable and attack enemy Heroes."
+          "en": "Widens the Power Fields and arms the Pylons, which become Invulnerable and attack enemy Heroes."
         },
         "demoYoutubeId": null
       },
@@ -34506,8 +34506,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_voidgate.png",
         "description": {
-          "fr": "Crée une barrière qui ralentit.",
-          "en": "Create a Slowing barrier"
+          "fr": "Ciblage vectoriel : projette une barrière d'énergie dans la direction choisie. Les ennemis qui la touchent sont très fortement ralentis et blessés tant qu'ils restent au contact.",
+          "en": "Vector targeting: projects a barrier of energy in the chosen direction. Enemies touching it are heavily Slowed and damaged for as long as they stay in contact."
         },
         "demoYoutubeId": null
       },
@@ -34520,8 +34520,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_warpinpylon.png",
         "description": {
-          "fr": "Les champs d'énergie augmentent les dégâts d'attaque.",
-          "en": "Power Fields give Attack Damage"
+          "fr": "Le champ d'énergie des pylônes augmente les dégâts d'attaque des héros alliés.",
+          "en": "The Pylons' Power Field increases allied Heroes' Attack Damage."
         },
         "demoYoutubeId": null
       },
@@ -34534,8 +34534,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/talents/storm_ui_icon_probius_warpinpylon_a.png",
         "description": {
-          "fr": "Les champs d'énergie confèrent de la puissance de capacité et du mana.",
-          "en": "Power Fields give Spell Power, Mana"
+          "fr": "Le champ d'énergie des pylônes augmente la puissance de capacité des héros alliés et leur rend du mana.",
+          "en": "The Pylons' Power Field increases allied Heroes' Spell Power and restores their Mana."
         },
         "demoYoutubeId": null
       },
@@ -34548,8 +34548,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/talents/storm_ui_icon_probius_warpinpylon_b.png",
         "description": {
-          "fr": "Les champs d'énergie confèrent un bouclier.",
-          "en": "Power Fields grant Shields"
+          "fr": "Le champ d'énergie des pylônes confère aux héros alliés un bouclier qui monte tant qu'ils y restent, et qui tient encore un peu après en être sortis.",
+          "en": "The Pylons' Power Field grants allied Heroes a Shield that builds while they stay in it, and lingers briefly after they leave."
         },
         "demoYoutubeId": null
       },
@@ -34562,8 +34562,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_warprift.png",
         "description": {
-          "fr": "Le ralentissement des failles instables perdure.",
-          "en": "Warp Rift's slow lingers"
+          "fr": "Le ralentissement des failles instables persiste quelques secondes après le dernier contact.",
+          "en": "Warp Rift's Slow lingers for a few seconds after the last contact."
         },
         "demoYoutubeId": null
       },
@@ -34576,8 +34576,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/talents/storm_ui_icon_probius_warprift_a.png",
         "description": {
-          "fr": "Augmente le ralentissement au centre des faille instables.",
-          "en": "Increase Warp Rift Slow amount in center"
+          "fr": "Plus un ennemi est proche du centre d'une faille instable, plus il est ralenti.",
+          "en": "The closer an enemy is to a Warp Rift's center, the harder they are Slowed."
         },
         "demoYoutubeId": null
       },
@@ -34591,7 +34591,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/probius/images/talents/storm_ui_icon_probius_warprift_c.png",
         "description": {
           "fr": "L'explosion des failles instables réduit la puissance de capacité des héros touchés et les repousse loin du centre.",
-          "en": "The Warp Rift explosion lowers the Spell Power of the Heroes hit and knocks them away from the center."
+          "en": "Warp Rift explosions reduce the Spell Power of the Heroes hit and knock them away from the center."
         },
         "demoYoutubeId": null
       },
@@ -34604,8 +34604,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_pylonovercharge.png",
         "description": {
-          "fr": "Augmente le nombre maximal de pylônes et les dégâts de Surcharge de pylône.",
-          "en": "Increase max Pylon count and Pylon Overcharge damage"
+          "fr": "Porte à trois le nombre de pylônes actifs et augmente les dégâts de Surcharge de pylône.",
+          "en": "Raises the number of active Pylons to three and increases Pylon Overcharge's damage."
         },
         "demoYoutubeId": null
       },
@@ -34618,8 +34618,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_voidgate.png",
         "description": {
-          "fr": "Durée indéfinie tant que la barrière est alimentée par un pylône.",
-          "en": "Indefinite duration while in Pylon Power"
+          "fr": "Barrière ionique dure indéfiniment tant que l'une de ses extrémités touche un champ d'énergie.",
+          "en": "Null Gate lasts indefinitely as long as one of its ends sits in a Power Field."
         },
         "demoYoutubeId": null
       },
@@ -34632,8 +34632,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_disruptionpulse.png",
         "description": {
-          "fr": "Impulsion disruptive blesse les héros adverses en proportion de leur maximum de points de vie. Effet passif : elle revient plus vite.",
-          "en": "Disruption Pulse damages enemy Heroes based on their maximum Health. Passive: it returns sooner."
+          "fr": "Les héros touchés par Impulsion disruptive subissent des dégâts supplémentaires proportionnels à leur maximum de points de vie. Effet passif : réduit le temps de recharge d'Impulsion disruptive.",
+          "en": "Heroes hit by Disruption Pulse take bonus damage based on their maximum Health. Passive: reduces Disruption Pulse's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -34646,15 +34646,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/probius/images/spells/storm_ui_icon_probius_warprift.png",
         "description": {
-          "fr": "Toucher des héros en faisant exploser les failles instables en crée de nouvelles.",
-          "en": "Create new Warp Rifts by hitting Heroes with explosions"
+          "fr": "Chaque explosion de faille instable qui touche un héros en recrée une au même endroit.",
+          "en": "Every Warp Rift explosion that hits a Hero creates a new rift in the same spot."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Probius",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "qhira",
