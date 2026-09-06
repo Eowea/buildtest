@@ -18940,7 +18940,7 @@ const HEROES = [
   },
   {
     "id": "fenix",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Fenix",
       "en": "Fenix"
@@ -18977,8 +18977,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/fenix/images/spells/storm_ui_icon_fenix_q.png",
         "description": {
-          "fr": "Active un laser rotatif qui inflige des dégâts aux ennemis et les ralentit.",
-          "en": "Summon a laser that circles Fenix, damaging and Slowing enemies"
+          "fr": "Trace depuis le point ciblé un laser qui décrit deux cercles complets autour de Fénix, en blessant et en ralentissant les ennemis touchés.",
+          "en": "Draws a laser from the target point that circles Fenix twice, damaging and Slowing the enemies it catches."
         },
         "demoYoutubeId": ""
       },
@@ -18990,8 +18990,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/fenix/images/spells/storm_ui_icon_fenix_w_2.png",
         "description": {
-          "fr": "Augmente fortement la vitesse des attaques de base. À l'activation, l'arme passe en bombe phasique : portée et dégâts accrus, et les attaques frappent en zone.",
-          "en": "Greatly increases Basic Attack speed. On activation the weapon shifts to Phase Bomb: more range, more damage, and attacks that splash."
+          "fr": "Le canon automatique augmente fortement la vitesse des attaques de base. À l'activation, l'arme passe en bombe phasique : portée et dégâts accrus, et les attaques frappent en zone. Réactiver ramène au canon automatique.",
+          "en": "Repeater Cannon greatly increases Basic Attack speed. Activate to switch to Phase Bomb: more range, more damage, and attacks that splash. Activate again to go back to Repeater Cannon."
         },
         "demoYoutubeId": ""
       },
@@ -19037,16 +19037,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ton bouclier se recharge hors combat : recule quelques secondes plutôt que de rentrer.",
-        "en": "Your Shield regenerates out of combat: back off a few seconds instead of using your Hearthstone."
+        "fr": "Ton bouclier (D) se recharge hors combat, pas les points de vie d'en face : trade, décroche deux secondes, reviens — tu gagnes l'échange sur la durée.",
+        "en": "Your Shield (D) recharges out of combat, their Health does not: trade, back off for two seconds, come back — you win the exchange over time."
       },
       {
-        "fr": "Découpeur à plasma décrit deux cercles : place-le pour toucher deux fois.",
-        "en": "Plasma Cutter sweeps two full circles: place it to hit twice."
+        "fr": "Stutter-step à ta portée maximale : Découpeur à plasma (A) d'abord, attaques de base ensuite, jamais l'inverse.",
+        "en": "Stutter-step at your maximum range: Plasma Cutter (Q) first, Basic Attacks after, never the other way around."
       },
       {
-        "fr": "Vitrification traverse toute la carte : combine-la à un contrôle allié.",
-        "en": "Planet Cracker crosses the whole battlefield: pair it with allied crowd control."
+        "fr": "Salve de purification (R) frappe bien plus fort les cibles ralenties : ouvre au Découpeur à plasma (A), et garde-la pour un fight, pas pour du poke.",
+        "en": "Purification Salvo (R) hits Slowed targets far harder: open with Plasma Cutter (Q), and save it for a fight, not for poke."
       }
     ],
     "builds": [
@@ -19058,23 +19058,23 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build canon automatique : dégâts soutenus et boucliers pour gagner tous les duels.",
+          "en": "Repeater Cannon build: sustained damage and Shields to win every duel."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Fenix]",
+        "buildCode": "[T2131314,Fenix]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "6 Septembre 2026",
+          "en": "September 6, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmv92dwyy01hf2",
+            "primaryId": "tmv92dwyy027k8",
             "alternativeIds": []
           },
           {
@@ -19084,7 +19084,7 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tmv92dwyy07los",
+            "primaryId": "tmv92dwyy09as8",
             "alternativeIds": []
           },
           {
@@ -19094,7 +19094,7 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tmv92dwyy12kjv",
+            "primaryId": "tmv92dwyy14xdx",
             "alternativeIds": []
           },
           {
@@ -19104,7 +19104,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmv92dwyy196qo",
+            "primaryId": "tmv92dwyy22kfl",
             "alternativeIds": []
           }
         ],
@@ -19122,8 +19122,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/fenix/images/spells/storm_ui_icon_fenix_q.png",
         "description": {
-          "fr": "Quête : Découpeur à plasma décrit une révolution supplémentaire.",
-          "en": "Quest: Plasma Cutter circles an additional time"
+          "fr": "Quête : toucher des héros avec Découpeur à plasma augmente définitivement les dégâts des attaques de base. Récompense : au bout d'un certain nombre de héros touchés, Découpeur à plasma décrit un cercle de plus.",
+          "en": "Quest: hitting Heroes with Plasma Cutter permanently increases Basic Attack damage. Reward: after enough Heroes are hit, Plasma Cutter circles one more time."
         },
         "demoYoutubeId": null
       },
@@ -19136,8 +19136,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/fenix/images/talents/storm_ui_icon_fenix_w_1.png",
         "description": {
-          "fr": "Canon automatique renforce Bombe phasique.",
-          "en": "Repeater Cannon empowers Phase Bomb"
+          "fr": "Après quelques attaques portées à des héros au canon automatique, la prochaine attaque en bombe phasique frappe bien plus fort et sur une zone élargie.",
+          "en": "After a few Basic Attacks on Heroes with Repeater Cannon, the next attack in Phase Bomb hits far harder and over a wider area."
         },
         "demoYoutubeId": null
       },
@@ -19150,8 +19150,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/fenix/images/spells/storm_ui_icon_fenix_w_2.png",
         "description": {
-          "fr": "Se déplacer renforce les attaques de base.",
-          "en": "Movement empowers Basic Attacks"
+          "fr": "Après un déplacement, la prochaine attaque de base portée à un héros frappe plus fort.",
+          "en": "After moving, the next Basic Attack on a Hero hits harder."
         },
         "demoYoutubeId": null
       },
@@ -19178,8 +19178,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/fenix/images/talents/storm_ui_icon_fenix_w_1.png",
         "description": {
-          "fr": "Bombe phasique peut ralentir les ennemis touchés.",
-          "en": "Phase Bomb can Slow enemies hit"
+          "fr": "Régulièrement, la prochaine attaque de base en bombe phasique ralentit fortement tous les ennemis touchés, effet qui s'estompe peu à peu.",
+          "en": "Every so often, the next Basic Attack in Phase Bomb heavily Slows every enemy hit, decaying away."
         },
         "demoYoutubeId": null
       },
@@ -19276,8 +19276,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/fenix/images/spells/storm_ui_icon_fenix_teleport.png",
         "description": {
-          "fr": "Utiliser Transfert confère de l'armure.",
-          "en": "Warp grants Armor"
+          "fr": "À l'arrivée du Transfert, Fénix obtient de l'armure quelques secondes.",
+          "en": "On arriving from Warp, Fenix gains Armor for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -19304,8 +19304,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/fenix/images/talents/storm_ui_icon_fenix_shield_3.png",
         "description": {
-          "fr": "Les soins régénèrent le bouclier.",
-          "en": "Healing regenerates Shield Capacitor"
+          "fr": "Le bouclier du condensateur se remet à se régénérer plus tôt après des dégâts, et chaque soin reçu en régénère une bonne part.",
+          "en": "Shield Capacitor starts regenerating sooner after taking damage, and every heal received recharges a good share of it."
         },
         "demoYoutubeId": null
       },
@@ -19318,8 +19318,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/fenix/images/talents/storm_ui_icon_fenix_shield_2.png",
         "description": {
-          "fr": "Augmente le bouclier, mais réduit les points de vie.",
-          "en": "Increase Shields but reduce Health"
+          "fr": "Échange une part du maximum de points de vie contre un bouclier bien plus gros. Les attaques de base en régénèrent une fraction des dégâts qu'elles infligent.",
+          "en": "Trades part of maximum Health for a far bigger Shield. Basic Attacks regenerate a fraction of the damage they deal."
         },
         "demoYoutubeId": null
       },
@@ -19332,8 +19332,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/fenix/images/spells/storm_ui_icon_fenix_w_2.png",
         "description": {
-          "fr": "Les attaques successives de Canon automatique gagnent en puissance.",
-          "en": "Successive Repeater Cannon attacks empowered"
+          "fr": "Une attaque de base sur trois portée à un héros au canon automatique lui inflige un supplément de dégâts proportionnel à son maximum de points de vie.",
+          "en": "Every third Basic Attack on a Hero with Repeater Cannon deals bonus damage based on the target's maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -19360,8 +19360,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_cooldown.png",
         "description": {
-          "fr": "Les attaques de base réduisent le temps de recharge des capacités.",
-          "en": "Basic Attacks reduce Ability cooldowns"
+          "fr": "Les attaques de base réduisent le temps de recharge des capacités ; en bombe phasique, la réduction s'applique par héros touché.",
+          "en": "Basic Attacks reduce Ability cooldowns; in Phase Bomb, the reduction applies per Hero hit."
         },
         "demoYoutubeId": null
       },
@@ -19402,8 +19402,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/fenix/images/spells/storm_ui_icon_fenix_w_2.png",
         "description": {
-          "fr": "Augmente les bonus conférés par l'arme modulable.",
-          "en": "Increase Weapon Mode bonuses"
+          "fr": "Le canon automatique gagne encore en vitesse d'attaque, et la bombe phasique en portée.",
+          "en": "Repeater Cannon gains even more Attack Speed, and Phase Bomb more range."
         },
         "demoYoutubeId": null
       },
@@ -19416,15 +19416,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/fenix/images/spells/storm_ui_icon_fenix_shield_1.png",
         "description": {
-          "fr": "Les dégâts fatals rechargent le bouclier.",
-          "en": "Fatal damage recharges Shield Capacitor"
+          "fr": "En cas de dégâts fatals, le condensateur récupère d'un coup un gros bouclier. Ne se redéclenche qu'au bout d'un long moment.",
+          "en": "On taking fatal damage, Shield Capacitor regains a large Shield at once. It only comes back after a long while."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Fenix",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "gall",
@@ -31714,7 +31714,7 @@ const HEROES = [
   },
   {
     "id": "mephisto",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Méphisto",
       "en": "Mephisto"
@@ -31764,8 +31764,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/mephisto/images/spells/storm_ui_icon_mephisto_lightning.png",
         "description": {
-          "fr": "Inflige des dégâts croissants aux ennemis proches.",
-          "en": "Deal increasing damage to nearby enemies"
+          "fr": "Un anneau de foudre entoure Méphisto quelques secondes et blesse en continu les ennemis à son contact. Chaque décharge qui touche un héros en augmente les dégâts, jusqu'à un plafond.",
+          "en": "A ring of lightning surrounds Mephisto for a few seconds, continuously damaging the enemies it touches. Every tick that hits a Hero increases its damage, up to a cap."
         },
         "demoYoutubeId": ""
       },
@@ -31777,8 +31777,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/mephisto/images/spells/storm_ui_icon_mephisto_shade.png",
         "description": {
-          "fr": "Téléporte à un endroit et revient à son point de départ peu après.",
-          "en": "Teleport to a location and return after a delay"
+          "fr": "Téléporte à l'endroit ciblé en blessant les ennemis à l'arrivée, et laisse une ombre au point de départ. Méphisto y est ramené peu après.",
+          "en": "Teleports to the target spot, damaging enemies on arrival, and leaves a Shade behind at the starting point. Mephisto is pulled back to it shortly after."
         },
         "demoYoutubeId": ""
       },
@@ -31811,16 +31811,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Touche plusieurs héros à la fois : c'est ce qui relance toutes tes capacités.",
-        "en": "Hit several Heroes at once: that is what refreshes all your Abilities."
+        "fr": "Nova de foudre (Z) a exactement la portée de tes attaques de base : si tu peux auto-attaquer, tu es dedans — c'est ton repère de placement.",
+        "en": "Lightning Nova (W) has exactly your Basic Attack range: if you can auto-attack, you are inside it — that's your positioning cue."
       },
       {
-        "fr": "Ombre de Méphisto te ramène automatiquement : entre sans crainte, tu reviendras.",
-        "en": "Shade of Mephisto returns you automatically: go in, you will come back."
+        "fr": "Ombre de Méphisto (E) te ramène toujours à ton point de départ : choisis-le avant de partir, pas une fois dedans.",
+        "en": "Shade of Mephisto (E) always pulls you back to where you cast it: pick that spot before you go in, not once you're there."
       },
       {
-        "fr": "Orgie d'âmes révèle toute l'équipe adverse : lance-la avant l'engagement.",
-        "en": "Consume Souls reveals the whole enemy team: cast it before the engage."
+        "fr": "Tu es un follow-up, pas un initiateur : garde Crâne maudit (A) pour les cibles déjà bloquées, et évite le solo lane contre un vrai duelliste.",
+        "en": "You are follow-up, not engage: save Skull Missile (Q) for targets already locked down, and avoid solo laning against a real duelist."
       }
     ],
     "builds": [
@@ -31832,18 +31832,18 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build Crâne maudit : dégâts à distance et enchaînement des temps de recharge.",
+          "en": "Skull Missile build: ranged damage and rolling cooldowns."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Mephisto]",
+        "buildCode": "[T1332112,Mephisto]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "6 Septembre 2026",
+          "en": "September 6, 2026"
         },
         "talentSelections": [
           {
@@ -31853,17 +31853,17 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmlbthulu0471f",
+            "primaryId": "tmlbthulu06tjs",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmlbthulu071qi",
+            "primaryId": "tmlbthulu090v9",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmlbthulu10hed",
+            "primaryId": "tmlbthulu11sf7",
             "alternativeIds": []
           },
           {
@@ -31878,7 +31878,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmlbthulu18m34",
+            "primaryId": "tmlbthulu19q8p",
             "alternativeIds": []
           }
         ],
@@ -31910,8 +31910,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/mephisto/images/spells/storm_ui_icon_mephisto_lightning.png",
         "description": {
-          "fr": "Nova de foudre inflige des dégâts supplémentaires.",
-          "en": "Lightning Nova deals bonus damage"
+          "fr": "Un impact sur trois contre la même cible, Nova de foudre inflige un supplément de dégâts et rend du mana.",
+          "en": "Every third hit on the same target, Lightning Nova deals bonus damage and restores Mana."
         },
         "demoYoutubeId": null
       },
@@ -31924,8 +31924,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/mephisto/images/spells/storm_ui_icon_mephisto_shade.png",
         "description": {
-          "fr": "L'ombre de Méphisto augmente la puissance de capacité.",
-          "en": "Shade of Mephisto grants Spell Power"
+          "fr": "Ombre de Méphisto augmente la puissance de capacité tant qu'elle est active et un moment après. Toucher assez souvent des héros avec les capacités de base pendant l'ombre allonge nettement ce sursis.",
+          "en": "Shade of Mephisto grants Spell Power while active and for a moment after. Hitting Heroes often enough with Basic Abilities during the Shade extends that window considerably."
         },
         "demoYoutubeId": null
       },
@@ -31938,8 +31938,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/mephisto/images/spells/storm_ui_icon_mephisto_skull.png",
         "description": {
-          "fr": "Crâne maudit rend des points de vie.",
-          "en": "Skull Missile heals"
+          "fr": "Crâne maudit rend du mana et soigne Méphisto d'une bonne part des dégâts qu'il inflige aux héros.",
+          "en": "Skull Missile restores Mana and heals Mephisto for a good share of the damage it deals to Heroes."
         },
         "demoYoutubeId": null
       },
@@ -31952,8 +31952,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/mephisto/images/spells/storm_ui_icon_mephisto_lightning.png",
         "description": {
-          "fr": "Nova de foudre confère un bouclier.",
-          "en": "Lightning Nova grants a Shield"
+          "fr": "À la fin de sa durée, Nova de foudre confère un bouclier proportionnel aux dégâts qu'elle a infligés aux héros.",
+          "en": "When its duration ends, Lightning Nova grants a Shield based on the damage it dealt to Heroes."
         },
         "demoYoutubeId": null
       },
@@ -31966,8 +31966,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/mephisto/images/spells/storm_ui_icon_mephisto_hatred.png",
         "description": {
-          "fr": "Les globes de régénération activent Seigneur de la Haine.",
-          "en": "Regen Globes activate Lord of Hatred"
+          "fr": "Les globes de régénération soignent deux fois plus longtemps, et chaque tic de ce soin déclenche Seigneur de la Haine.",
+          "en": "Regeneration Globes heal for twice as long, and every tick of that healing triggers Lord of Hatred."
         },
         "demoYoutubeId": null
       },
@@ -31980,8 +31980,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/mephisto/images/spells/storm_ui_icon_mephisto_shade.png",
         "description": {
-          "fr": "L'ombre de Méphisto confère de l'armure.",
-          "en": "Shade of Mephisto grants Armor"
+          "fr": "Ombre de Méphisto confère de l'armure tant qu'elle est active et un moment après.",
+          "en": "Shade of Mephisto grants Armor while active and for a moment after."
         },
         "demoYoutubeId": null
       },
@@ -31994,8 +31994,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/mephisto/images/talents/storm_ui_icon_mephisto_shade_b.png",
         "description": {
-          "fr": "Ombre de Méphisto permet à Nova de foudre de ralentir.",
-          "en": "Shade of Mephisto causes Lightning Nova to Slow"
+          "fr": "Tant que l'ombre est active, Nova de foudre ralentit les ennemis touchés et le ralentissement de Crâne maudit devient bien plus fort.",
+          "en": "While the Shade is active, Lightning Nova Slows the enemies it hits and Skull Missile's Slow becomes far stronger."
         },
         "demoYoutubeId": null
       },
@@ -32008,8 +32008,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/mephisto/images/talents/storm_ui_icon_mephisto_shade_c.png",
         "description": {
-          "fr": "Ombre de Méphisto augmente la vitesse de déplacement.",
-          "en": "Shade of Mephisto grants Move Speed"
+          "fr": "Ombre de Méphisto accélère Méphisto tant qu'elle est active et un moment après. Toucher assez souvent des héros avec les capacités de base pendant l'ombre annule son temps de recharge.",
+          "en": "Shade of Mephisto speeds Mephisto up while active and for a moment after. Hitting Heroes often enough with Basic Abilities during the Shade resets its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -32050,8 +32050,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/mephisto/images/spells/storm_ui_icon_mephisto_skull.png",
         "description": {
-          "fr": "Augmente les dégâts de Crâne maudit, confère de la puissance de capacité.",
-          "en": "Increase Skull Missile damage, grants Spell Power"
+          "fr": "Toucher un héros avec Crâne maudit augmente la puissance de capacité quelques secondes. La capacité frappe en plus bien plus fort les héros sous la moitié de leurs points de vie.",
+          "en": "Hitting a Hero with Skull Missile grants Spell Power for a few seconds. The Ability also hits Heroes below half Health far harder."
         },
         "demoYoutubeId": null
       },
@@ -32106,8 +32106,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/mephisto/images/spells/storm_ui_icon_mephisto_lightning.png",
         "description": {
-          "fr": "Nova de foudre peut infliger un pourcentage de dégâts.",
-          "en": "Lightning Nova can deal Percent Damage"
+          "fr": "Une fois le bonus de dégâts de Nova de foudre à son maximum, les héros pris dedans encaissent un pourcentage de leur maximum de points de vie.",
+          "en": "Once Lightning Nova's damage bonus is maxed out, Heroes caught inside take a percentage of their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -32134,8 +32134,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/mephisto/images/spells/storm_ui_icon_mephisto_souls.png",
         "description": {
-          "fr": "Orgie d'âmes se relance quand elle fait une victime.",
-          "en": "Consume Souls recasts upon Takedown"
+          "fr": "Orgie d'âmes inflige un supplément de dégâts proportionnel aux points de vie qui manquent à ses cibles, et se relance une fois de plus si elle tue un héros.",
+          "en": "Consume Souls deals bonus damage based on the target's missing Health, and casts one more time if it kills a Hero."
         },
         "demoYoutubeId": null
       },
@@ -32162,8 +32162,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/mephisto/images/spells/storm_ui_icon_mephisto_lightning.png",
         "description": {
-          "fr": "Ombre de Méphisto peut lancer Nova de foudre.",
-          "en": "Shade of Mephisto can cast Lightning Nova"
+          "fr": "Tant que l'ombre et Nova de foudre sont actives ensemble, la nova se lance aussi depuis l'ombre.",
+          "en": "While both the Shade and Lightning Nova are active, the nova also casts from the Shade's location."
         },
         "demoYoutubeId": null
       },
@@ -32176,15 +32176,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/mephisto/images/spells/storm_ui_icon_mephisto_shade.png",
         "description": {
-          "fr": "Permet à Méphisto de changer de place avec son ombre.",
-          "en": "Activate to swap with Shade of Mephisto"
+          "fr": "À l'activation, Méphisto prend la place de son ombre et en relance la durée. Effet passif : l'ombre bénéficie de tous les talents du palier 7.",
+          "en": "Activate to swap places with the Shade and refresh its duration. Passive: the Shade benefits from every tier 7 Talent."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Mephisto",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "muradin",
@@ -33687,7 +33687,7 @@ const HEROES = [
   },
   {
     "id": "nova",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Nova",
       "en": "Nova"
@@ -33750,8 +33750,21 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/nova/images/spells/storm_ui_icon_nova_holodecoy.png",
         "description": {
-          "fr": "Crée un leurre qui attaque faiblement à sa place, sans interrompre le camouflage de Nova.",
-          "en": "Creates a decoy that attacks weakly in her place, without breaking Nova's Stealth."
+          "fr": "Crée un leurre à l'image de Nova qui attaque faiblement à sa place. Il encaisse le double des dégâts qu'il reçoit. L'utiliser ne rompt pas le camouflage.",
+          "en": "Creates a decoy in Nova's likeness that attacks weakly in her place. It takes double the damage dealt to it. Using it does not break Stealth."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "&",
+        "name": {
+          "fr": "Protocole fantôme",
+          "en": "Ghost Protocol"
+        },
+        "icon": "assets/heroes/base_spells/nova/images/spells/storm_ui_icon_nova_personalcloaking.png",
+        "description": {
+          "fr": "À l'activation, Nova se camoufle instantanément et laisse un hologramme sur place. Elle est indétectable pendant le premier instant du camouflage.",
+          "en": "Activate to instantly Stealth Nova and spawn a Holo Decoy where she stood. She cannot be revealed for the first moment of that Stealth."
         },
         "demoYoutubeId": ""
       },
@@ -33784,16 +33797,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ne dévoile jamais ta position pour un serviteur : tu perds tes cumuls et ta surprise.",
-        "en": "Never reveal yourself for a Minion: you lose your stacks and your surprise."
+        "fr": "Tu n'as aucune mobilité : garde toujours un chemin de repli ouvert derrière toi, le camouflage (D) n'est pas une échappatoire.",
+        "en": "You have no mobility at all: always keep a way out behind you, Stealth (D) is not an escape."
       },
       {
-        "fr": "Un Tir de précision manqué remet tes cumuls à zéro : ne le lâche qu'à coup sûr.",
-        "en": "A missed Snipe resets your stacks: only let it go when it's a sure thing."
+        "fr": "Tir anesthésiant (Z) d'abord, Tir de précision (A) ensuite : sur une cible mobile, tu ne toucheras pas sans le ralentissement.",
+        "en": "Pinning Shot (W) first, Snipe (Q) after: on a mobile target you will not land it without the Slow."
       },
       {
-        "fr": "Hologramme n'interrompt pas ton camouflage : sers-t'en pour tester un buisson.",
-        "en": "Holo Decoy does not break Stealth: use it to scout a bush."
+        "fr": "Hologramme (E) sert d'abord à manger un skillshot : pose-le entre toi et celui qui vise, pas sur la vague.",
+        "en": "Holo Decoy (E) is there to eat a skillshot first: drop it between you and whoever is aiming, not on the wave."
       }
     ],
     "builds": [
@@ -33805,23 +33818,23 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build hologramme : pression permanente et échappatoires sans jamais se dévoiler.",
+          "en": "Holo Decoy build: constant pressure and outs without ever revealing yourself."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Nova]",
+        "buildCode": "[T3132334,Nova]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "6 Septembre 2026",
+          "en": "September 6, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmp56mauf016c5",
+            "primaryId": "tmp56mauf034ff",
             "alternativeIds": []
           },
           {
@@ -33831,27 +33844,27 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tmp56mauf077b4",
+            "primaryId": "tmp56mauf092eg",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmp56mauf10gb4",
+            "primaryId": "tmp56mauf11c1l",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmp56mauf12tml",
+            "primaryId": "tmp56mauf14dbf",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmp56mauf15stj",
+            "primaryId": "tmp56mauf17orz",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmp56mauf184xd",
+            "primaryId": "tmp56mauf21tnd",
             "alternativeIds": []
           }
         ],
@@ -33869,8 +33882,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/nova/images/spells/storm_ui_icon_nova_pinningshot.png",
         "description": {
-          "fr": "Augmente la portée de Tir anesthésiant.",
-          "en": "Increases Pinning Shot range"
+          "fr": "Augmente la portée de Tir anesthésiant, ainsi que celle de la prochaine attaque de base.",
+          "en": "Increases Pinning Shot's range, and that of the next Basic Attack."
         },
         "demoYoutubeId": null
       },
@@ -33939,8 +33952,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_bribe.png",
         "description": {
-          "fr": "Tuer des serviteurs ou des héros permet de recruter des mercenaires.",
-          "en": "Kill Minions or Heroes to bribe a Mercenary"
+          "fr": "Tuer des serviteurs à proximité accumule des charges, bien davantage sur une victime héroïque, à dépenser pour acheter un camp de mercenaires au lieu de le combattre. Sans effet sur les mercenaires élite.",
+          "en": "Killing Minions nearby banks charges, far more from a Hero Takedown, spent to buy a Mercenary camp instead of fighting it. No effect on Elite Mercenaries."
         },
         "demoYoutubeId": null
       },
@@ -33981,8 +33994,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_antiarmorshells.png",
         "description": {
-          "fr": "Les attaques de base infligent plus de dégâts et réduisent l'armure physique.",
-          "en": "Basic Attacks hit harder, reduce Physical Armor"
+          "fr": "Les attaques de base frappent beaucoup plus fort et réduisent l'armure physique des héros touchés, mais la vitesse d'attaque baisse d'autant.",
+          "en": "Basic Attacks hit far harder and reduce the Physical Armor of Heroes hit, but Attack Speed drops by as much."
         },
         "demoYoutubeId": null
       },
@@ -34023,8 +34036,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/nova/images/spells/storm_ui_icon_nova_snipe.png",
         "description": {
-          "fr": "Augmente la portée de Tir de précision et lui permet de cumuler des charges.",
-          "en": "Increase Snipe range and stacks"
+          "fr": "Augmente la portée de Tir de précision, et chaque héros touché confère un cumul de dégâts supplémentaire.",
+          "en": "Increases Snipe's range, and each Hero hit grants an extra damage stack."
         },
         "demoYoutubeId": null
       },
@@ -34107,8 +34120,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/nova/images/spells/storm_ui_icon_nova_tripletap.png",
         "description": {
-          "fr": "Le temps de recharge est annulé si un héros est tué.",
-          "en": "Triple Tap cooldown resets on Hero kills"
+          "fr": "Le temps de recharge de Salve est annulé si elle tue un héros.",
+          "en": "Triple Tap's cooldown is reset if it kills a Hero."
         },
         "demoYoutubeId": null
       },
@@ -34149,19 +34162,19 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_rewind.png",
         "description": {
-          "fr": "Annule les temps de recharge.",
-          "en": "Activate to reset cooldowns"
+          "fr": "À l'activation, annule le temps de recharge des capacités de base.",
+          "en": "Activate to reset the cooldowns of the Basic Abilities."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Nova",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "orphea",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Orphea",
       "en": "Orphea"
@@ -34185,8 +34198,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/orphea/images/spells/storm_ui_icon_orphea_trait.png",
         "description": {
-          "fr": "Les capacités de base confèrent des points de chaos quand elles touchent des héros adverses.",
-          "en": "Basic Abilities against enemy Heroes grant Chaos"
+          "fr": "Toucher un héros adverse avec une capacité de base confère un point de chaos, cumulable plusieurs fois. Tant qu'Orphéa en dispose, sa prochaine attaque de base sur un héros les consomme tous : elle frappe d'autant plus fort et lui rend autant de points de vie qu'elle inflige de dégâts.",
+          "en": "Hitting an enemy Hero with a Basic Ability grants a stack of Chaos, several at most. While Orphea has any, her next Basic Attack on a Hero consumes them all: it hits that much harder and heals her for as much as it deals."
         },
         "demoYoutubeId": ""
       },
@@ -34258,16 +34271,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Toucher avec Valse d'ombre te permet de te projeter : c'est ta mobilité.",
-        "en": "Hitting with Shadow Waltz lets you dash: that is your mobility."
+        "fr": "Valse d'ombre (A) n'est pas à lâcher dès qu'elle est up : sa ruée est ton seul dodge, garde-la pour esquiver le skillshot qui te tue.",
+        "en": "Shadow Waltz (Q) is not to be thrown out on cooldown: its dash is your only dodge, save it for the skillshot that kills you."
       },
       {
-        "fr": "Consomme tes points de chaos avec une attaque de base, jamais en les gardant.",
-        "en": "Spend your Chaos on a Basic Attack, never by hoarding it."
+        "fr": "Vise Effroi (E) un peu derrière une cible ralentie ou bloquée : la vague et l'éruption la touchent alors toutes les deux.",
+        "en": "Aim Dread (E) slightly behind a Slowed or locked-down target: the wave and the eruption then both connect."
       },
       {
-        "fr": "Effroi jaillit une seconde fois en fin de course : place-le sur la fuite.",
-        "en": "Dread erupts a second time at the end: place it on the escape path."
+        "fr": "Avant Magie de mort, ne crame pas une attaque chargée de chaos (D) sur un héros blindé : l'armure rogne les dégâts, donc tes soins.",
+        "en": "Before Dead Magic, don't burn a Chaos-charged attack (D) on an armored Hero: Armor cuts the damage, so it cuts your healing."
       }
     ],
     "builds": [
@@ -34279,33 +34292,33 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build standard : soins par le chaos et fenêtres de dégâts sur les cibles bloquées.",
+          "en": "Standard build: healing off Chaos and damage windows on locked-down targets."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Orphea]",
+        "buildCode": "[T3231321,Orphea]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "6 Septembre 2026",
+          "en": "September 6, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm6mv4g9v01k1s",
+            "primaryId": "tm6mv4g9v03vnq",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tm6mv4g9v04b99",
+            "primaryId": "tm6mv4g9v05urq",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tm6mv4g9v07kr6",
+            "primaryId": "tm6mv4g9v09de4",
             "alternativeIds": []
           },
           {
@@ -34315,12 +34328,12 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tm6mv4g9v12xg4",
+            "primaryId": "tm6mv4g9v14yuh",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tm6mv4g9v15wku",
+            "primaryId": "tm6mv4g9v16e1f",
             "alternativeIds": []
           },
           {
@@ -34343,8 +34356,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/orphea/images/spells/storm_ui_icon_orphea_q.png",
         "description": {
-          "fr": "Valse d'ombre inflige des dégâts supplémentaires à son extrémité.",
-          "en": "Extra Shadow Waltz damage at its end"
+          "fr": "Valse d'ombre frappe bien plus fort les ennemis touchés par son extrémité et confère un point de chaos de plus.",
+          "en": "Shadow Waltz hits enemies caught by its far end much harder and grants one extra Chaos."
         },
         "demoYoutubeId": null
       },
@@ -34357,8 +34370,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/orphea/images/spells/storm_ui_icon_orphea_e.png",
         "description": {
-          "fr": "Renforce l'éruption d'Effroi. Quête : la faire toucher plusieurs héros d'un coup en augmente définitivement les dégâts et le ralentissement.",
-          "en": "Empowers Dread's eruption. Quest: hitting several Heroes with one eruption permanently increases its damage and its Slow."
+          "fr": "Augmente les dégâts d'Effroi. Quête : toucher plusieurs héros d'une seule éruption en augmente définitivement les dégâts et le ralentissement.",
+          "en": "Increases Dread's damage. Quest: hitting several Heroes with a single eruption permanently increases its damage and its Slow."
         },
         "demoYoutubeId": null
       },
@@ -34371,8 +34384,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/orphea/images/spells/storm_ui_icon_orphea_trait.png",
         "description": {
-          "fr": "Les capacités de base frappent plus fort les ennemis étourdis, immobilisés, réduits au silence ou ralentis, et les héros touchés par Chaos débordant sont eux-mêmes ralentis.",
-          "en": "Basic Abilities hit Stunned, Rooted, Silenced or Slowed enemies harder, and Heroes hit by Overflowing Chaos are Slowed themselves."
+          "fr": "Les capacités non héroïques frappent plus fort les ennemis étourdis, immobilisés, réduits au silence ou ralentis, et les héros qui encaissent une attaque chargée de chaos sont ralentis.",
+          "en": "Non-Heroic Abilities hit Stunned, Rooted, Silenced or Slowed enemies harder, and Heroes taking a Chaos-charged attack are Slowed."
         },
         "demoYoutubeId": null
       },
@@ -34385,8 +34398,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/orphea/images/spells/storm_ui_icon_orphea_q.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Valse d'ombre.",
-          "en": "Reduce Shadow Waltz cooldown"
+          "fr": "Réduit le temps de recharge de Valse d'ombre, et toucher un héros avec son extrémité le ramène presque à zéro.",
+          "en": "Reduces Shadow Waltz's cooldown, and hitting a Hero with its far end brings it down to almost nothing."
         },
         "demoYoutubeId": null
       },
@@ -34413,8 +34426,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/orphea/images/spells/storm_ui_icon_orphea_trait.png",
         "description": {
-          "fr": "Augmente les dégâts de Chaos débordant.",
-          "en": "Increase Overflowing Chaos damage"
+          "fr": "Une attaque de base portée à un héros avec le maximum de points de chaos frappe bien plus fort.",
+          "en": "A Basic Attack on a Hero at maximum Chaos hits far harder."
         },
         "demoYoutubeId": null
       },
@@ -34427,8 +34440,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/orphea/images/spells/storm_ui_icon_orphea_w.png",
         "description": {
-          "fr": "Toucher un héros réduit le temps de recharge de Mandibule.",
-          "en": "Hitting a Hero reduces Chomp's cooldown"
+          "fr": "Toucher un héros avec Mandibule ramène son temps de recharge à quelques secondes.",
+          "en": "Hitting a Hero with Chomp brings its cooldown down to a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -34441,8 +34454,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/orphea/images/talents/storm_ui_icon_orphea_w_2.png",
         "description": {
-          "fr": "Quête : faire des victimes avec Mandibule augmente ses dégâts et rend des points de vie.",
-          "en": "Quest: Chomp kills increase damage, heals"
+          "fr": "Quête : les serviteurs qui meurent juste après avoir été touchés par Mandibule en augmentent définitivement les dégâts et rendent des points de vie à Orphéa ; une victime héroïque compte bien davantage.",
+          "en": "Quest: Minions that die right after being hit by Chomp permanently increase its damage and heal Orphea; a Hero Takedown counts for far more."
         },
         "demoYoutubeId": null
       },
@@ -34455,8 +34468,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/orphea/images/spells/storm_ui_icon_orphea_e.png",
         "description": {
-          "fr": "Quête : augmente les dégâts d'Effroi et réduit son temps de recharge.",
-          "en": "Quest: Increase Dread damage, reduce cooldown"
+          "fr": "Quête : toucher des héros avec Effroi en augmente définitivement les dégâts. Récompense : toucher un héros avec l'éruption ramène le temps de recharge à quelques secondes et rend du mana.",
+          "en": "Quest: hitting Heroes with Dread permanently increases its damage. Reward: hitting a Hero with the eruption brings its cooldown down to a few seconds and refunds Mana."
         },
         "demoYoutubeId": null
       },
@@ -34497,8 +34510,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/orphea/images/spells/storm_ui_icon_orphea_q.png",
         "description": {
-          "fr": "Valse d'ombre confère de l'armure anti-sort après la ruée.",
-          "en": "Shadow Waltz grants Spell Armor after dashing"
+          "fr": "Après la ruée de Valse d'ombre, Orphéa obtient de l'armure anti-sort contre la prochaine capacité adverse, cumulable deux fois. Tant qu'elle en bénéficie, ses dégâts physiques augmentent.",
+          "en": "After dashing with Shadow Waltz, Orphea gains Spell Armor against the next enemy Ability, stacking twice. While she has it, her Physical damage is increased."
         },
         "demoYoutubeId": null
       },
@@ -34511,8 +34524,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/orphea/images/spells/storm_ui_icon_orphea_w.png",
         "description": {
-          "fr": "Toucher des héros avec Mandibule confère plus de points de chaos et un bouclier.",
-          "en": "Chomp hitting Heroes grants more Chaos, Shield"
+          "fr": "Toucher un héros avec Mandibule confère aussitôt le maximum de points de chaos et un bouclier.",
+          "en": "Hitting a Hero with Chomp instantly grants maximum Chaos and a Shield."
         },
         "demoYoutubeId": null
       },
@@ -34539,8 +34552,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/orphea/images/spells/storm_ui_icon_orphea_q.png",
         "description": {
-          "fr": "Valse d'ombre vole un pourcentage de points de vie.",
-          "en": "Shadow Waltz steals percent Health"
+          "fr": "Valse d'ombre inflige aux héros un supplément de dégâts proportionnel à leur maximum de points de vie et en rend la moitié à Orphéa.",
+          "en": "Shadow Waltz deals Heroes bonus damage based on their maximum Health and heals Orphea for half of it."
         },
         "demoYoutubeId": null
       },
@@ -34581,8 +34594,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/orphea/images/spells/storm_ui_icon_orphea_ult_darkfall.png",
         "description": {
-          "fr": "Festin perpétuel confère des points de chaos et réduit les temps de recharge.",
-          "en": "Eternal Feast grants Chaos, reduce cooldowns"
+          "fr": "Festin perpétuel confère un point de chaos par héros touché, et les capacités de base se rechargent beaucoup plus vite tant qu'il dure et un moment après.",
+          "en": "Eternal Feast grants a Chaos per Hero hit, and Basic Abilities recharge far faster while it lasts and for a moment after."
         },
         "demoYoutubeId": null
       },
@@ -34595,8 +34608,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/orphea/images/spells/storm_ui_icon_orphea_ult_thrasher.png",
         "description": {
-          "fr": "Mort sûre réduit l'armure et son temps de recharge est réduit.",
-          "en": "Crushing Jaws lowers Armor, reduces cooldown"
+          "fr": "Mort sûre réduit fortement l'armure des héros touchés, et faire une victime ramène son temps de recharge à quelques secondes.",
+          "en": "Crushing Jaws heavily reduces the Armor of Heroes hit, and a Takedown brings its cooldown down to a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -34609,8 +34622,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/orphea/images/spells/storm_ui_icon_orphea_trait.png",
         "description": {
-          "fr": "Consommer du chaos confère de l'armure anti-sort.",
-          "en": "Consuming Chaos grants Spell Power"
+          "fr": "Chaque point de chaos consommé augmente la puissance de capacité d'Orphéa quelques secondes ; une fois le plafond atteint, elle grimpe encore d'un cran.",
+          "en": "Each Chaos consumed increases Orphea's Spell Power for a few seconds; once the cap is reached, it climbs another notch."
         },
         "demoYoutubeId": null
       },
@@ -34623,15 +34636,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/orphea/images/talents/storm_ui_icon_orphea_reset.png",
         "description": {
-          "fr": "Le temps de recharge de Valse d'ombre prend fin après la ruée.",
-          "en": "Shadow Waltz cooldown resets after dashing"
+          "fr": "À l'activation, annule le temps de recharge de Valse d'ombre. Pendant les secondes qui suivent, chaque ruée l'annule à nouveau et prolonge l'effet.",
+          "en": "Activate to reset Shadow Waltz's cooldown. For the next few seconds, each dash resets it again and extends the effect."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Orphea",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "probius",
