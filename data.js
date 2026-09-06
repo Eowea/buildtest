@@ -17349,7 +17349,7 @@ const HEROES = [
   },
   {
     "id": "dva",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "D.Va",
       "en": "D.Va"
@@ -17485,8 +17485,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_bunnyhop.png",
         "description": {
-          "fr": "En mode méca, devient insensible aux effets de contrôle et étourdit les héros proches.",
-          "en": "Become Unstoppable and Stun nearby Heroes"
+          "fr": "En mode méca, D.Va devient insensible aux effets de contrôle et rebondit sans arrêt en blessant les ennemis autour d'elle. Tous les quelques bonds sur un même héros, le coup frappe bien plus fort et l'étourdit.",
+          "en": "In Mech Mode, D.Va becomes Unstoppable and bounces nonstop, damaging the enemies around her. Every few hops on the same Hero, the landing hits far harder and Stuns them."
         },
         "demoYoutubeId": "",
         "form": "meca"
@@ -17508,16 +17508,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ne gaspille pas Autodestruction : force l'ennemi à quitter la zone.",
-        "en": "Do not waste Self-Destruct: use it to force the enemy off the point."
+        "fr": "Matrice défensive (Z) se réoriente en la relançant et s'annule au trait (D) : pose-la sur celui qui tape, pas devant toi par réflexe.",
+        "en": "Defense Matrix (W) is re-aimed by recasting and cancelled with your trait (D): put it on whoever is dealing the damage, not in front of you out of habit."
       },
       {
-        "fr": "En mode pilote, attaque sans relâche : chaque coup rapproche ton nouveau méca.",
-        "en": "In Pilot Mode, keep attacking: every hit brings your new mech closer."
+        "fr": "Autodestruction (E) se lance pendant Turboréacteurs (A) : projette ton méca au milieu d'eux au lieu de le poser à leurs pieds.",
+        "en": "Self-Destruct (E) can be launched during Boosters (Q): fling your Mech into the middle of them instead of dropping it at their feet."
       },
       {
-        "fr": "Matrice défensive réduit énormément les dégâts : sers-t'en pour couvrir ton assassin.",
-        "en": "Defense Matrix heavily cuts damage: use it to cover your assassin."
+        "fr": "Ton méca réapparaît toujours au même endroit : décale-toi avant de le rappeler (Z), sinon l'équipe d'en face t'accueille avec ses contrôles.",
+        "en": "Your Mech always lands in the same predictable spot: move before you call it (W), or the enemy team greets it with their crowd control."
       }
     ],
     "builds": [
@@ -17529,18 +17529,18 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build centré sur Matrice défensive.",
+          "en": "Focused on Defense Matrix."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,DVa]",
+        "buildCode": "[T1231124,DVa]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
@@ -17550,12 +17550,12 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmp39iuvv0462o",
+            "primaryId": "tmp39iuvv0539g",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmp39iuvv079ne",
+            "primaryId": "tmp39iuvv09ioa",
             "alternativeIds": []
           },
           {
@@ -17570,12 +17570,12 @@ const HEROES = [
           },
           {
             "level": 16,
-            "primaryId": "tmp39iuvv15bss",
+            "primaryId": "tmp39iuvv16yqn",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmp39iuvv182pi",
+            "primaryId": "tmp39iuvv21zxe",
             "alternativeIds": []
           }
         ],
@@ -17593,8 +17593,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_mechmode.png",
         "description": {
-          "fr": "Augmente les points de vie du méca, les Fusio-canons rendent des points de vie.",
-          "en": "Increase Mech Health, Fusion Cannons heal"
+          "fr": "Augmente les points de vie du méca, et les Fusio-canons rendent des points de vie sur les ennemis touchés dans leur zone d'effet.",
+          "en": "Raises the Mech's Health, and Fusion Cannons heal off the enemies caught in their splash."
         },
         "demoYoutubeId": null
       },
@@ -17607,8 +17607,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/talents/storm_ui_icon_dva_mechmode_a.png",
         "description": {
-          "fr": "Subir des dégâts augmente la vitesse de déplacement et l'armure.",
-          "en": "Taking damage increases Move Speed, Armor"
+          "fr": "Chaque coup encaissé accélère le méca et lui donne de l'armure, effet cumulable qui retombe vite. En mode pilote, attaquer un héros accélère en plus le retour du méca.",
+          "en": "Every hit taken speeds the Mech up and grants it Armor, stacking but decaying fast. In Pilot Mode, attacking a Hero also brings the Mech back sooner."
         },
         "demoYoutubeId": null
       },
@@ -17635,8 +17635,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_boosters.png",
         "description": {
-          "fr": "Turboréacteurs vole des points de vie et augmente les dégâts aux ennemis non héroïques.",
-          "en": "Boosters steals Health, increase non-hero damage"
+          "fr": "Turboréacteurs inflige aux héros des dégâts supplémentaires proportionnels à leurs points de vie maximum et rend au méca autant qu'il inflige. Frappe aussi bien plus fort les cibles non héroïques.",
+          "en": "Boosters deals Heroes bonus damage based on their maximum Health and heals the Mech for as much as it deals. It also hits non-Heroic targets far harder."
         },
         "demoYoutubeId": null
       },
@@ -17649,8 +17649,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_defensematrix.png",
         "description": {
-          "fr": "Matrice défensive réduit les soins, temps de recharge réduit.",
-          "en": "Defense Matrix reduces healing, lower cooldown"
+          "fr": "Les héros pris dans Matrice défensive reçoivent nettement moins de soins. Effet passif : les attaques de base portées aux héros réduisent son temps de recharge.",
+          "en": "Heroes caught in Defense Matrix receive far less healing. Passive: Basic Attacks on Heroes reduce its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -17663,8 +17663,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_selfdestruct.png",
         "description": {
-          "fr": "Renforce les Fusio-canons et Autodestruction.",
-          "en": "Empower Fusion Cannons and Self-Destruct"
+          "fr": "Toucher ton propre méca en train de s'autodétruire avec Tir de PGM accélère nettement l'explosion. Effet passif : les dégâts de contact des Fusio-canons sur un héros chargent Autodestruction.",
+          "en": "Hitting your own self-destructing Mech with Big Shot speeds the blast up sharply. Passive: Fusion Cannons' close-range damage on a Hero charges Self-Destruct."
         },
         "demoYoutubeId": null
       },
@@ -17677,8 +17677,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_boosters.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Turboréacteurs et augmente la vitesse de déplacement des alliés.",
-          "en": "Reduce Boosters cooldown, grants allies move speed"
+          "fr": "Turboréacteurs accélère aussi les alliés proches. Effet passif : si D.Va n'a rien encaissé depuis quelques secondes, Turboréacteurs se recharge deux fois plus vite.",
+          "en": "Boosters also speeds up nearby allies. Passive: if D.Va has taken no damage for a few seconds, Boosters recharges twice as fast."
         },
         "demoYoutubeId": null
       },
@@ -17691,8 +17691,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/talents/storm_ui_icon_dva_boosters_a.png",
         "description": {
-          "fr": "Les turboréacteurs octroient un bonus à la vitesse immédiat et étourdissent les ennemis.",
-          "en": "Boosters give extra immediate speed, stuns"
+          "fr": "Turboréacteurs part sur une poussée bien plus violente, qui retombe aussitôt à sa valeur normale. Pendant cet instant, il étourdit les ennemis percutés.",
+          "en": "Boosters launches with a far more violent burst that drops back to normal at once. During that instant, it Stuns the enemies it slams into."
         },
         "demoYoutubeId": null
       },
@@ -17719,8 +17719,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_bunnyhop.png",
         "description": {
-          "fr": "En mode méca, devient insensible aux effets de contrôle et étourdit les héros proches.",
-          "en": "Become Unstoppable and Stun nearby Heroes"
+          "fr": "En mode méca, D.Va devient insensible aux effets de contrôle et rebondit sans arrêt en blessant les ennemis autour d'elle. Tous les quelques bonds sur un même héros, le coup frappe bien plus fort et l'étourdit.",
+          "en": "In Mech Mode, D.Va becomes Unstoppable and bounces nonstop, damaging the enemies around her. Every few hops on the same Hero, the landing hits far harder and Stuns them."
         },
         "demoYoutubeId": null
       },
@@ -17747,8 +17747,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_defensematrix.png",
         "description": {
-          "fr": "Matrice défensive réduit l'armure et ralentit les ennemis.",
-          "en": "Defense Matrix lowers Armor, Slows"
+          "fr": "Un héros qui reste un instant dans Matrice défensive perd de l'armure et se retrouve ralenti quelques secondes.",
+          "en": "A Hero who lingers a moment in Defense Matrix loses Armor and is Slowed for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -17775,8 +17775,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/talents/storm_ui_icon_dva_bigshot.png",
         "description": {
-          "fr": "Tir de PGM fait feu à plusieurs reprises.",
-          "en": "Big Shot fires multiple pulses"
+          "fr": "En mode pilote, Tir de PGM part en trois coups rapprochés, chacun un peu moins fort qu'un tir unique.",
+          "en": "In Pilot Mode, Big Shot fires three shots in quick succession, each a little weaker than a single one."
         },
         "demoYoutubeId": null
       },
@@ -17789,8 +17789,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_boosters.png",
         "description": {
-          "fr": "Turboréacteurs confère un bouclier et augmente les dégâts d'attaque.",
-          "en": "Boosters grants a Shield, increases attack damage"
+          "fr": "Turboréacteurs confère un bouclier à D.Va, et chaque héros percuté augmente les dégâts d'attaque du méca, cumulable plusieurs fois.",
+          "en": "Boosters grants D.Va a Shield, and each Hero slammed raises the Mech's Attack Damage, stacking several times."
         },
         "demoYoutubeId": null
       },
@@ -17803,8 +17803,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_defensematrix.png",
         "description": {
-          "fr": "Augmente la taille de Matrice défensive et rend des points de vie.",
-          "en": "Increase Defense Matrix area, adds healing"
+          "fr": "Agrandit considérablement Matrice défensive, et chaque fois qu'elle absorbe des dégâts sur un héros, le méca récupère des points de vie.",
+          "en": "Widens Defense Matrix considerably, and every time it soaks damage from a Hero, the Mech regains Health."
         },
         "demoYoutubeId": null
       },
@@ -17817,8 +17817,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_mechmode.png",
         "description": {
-          "fr": "Confère un bouclier au méca en cas de dégâts fatals.",
-          "en": "Mech gains a Shield instead of dying"
+          "fr": "Quand le méca encaisse un coup fatal, il reçoit à la place un bouclier qui tient quelques secondes. Ne se redéclenche qu'au bout d'un moment.",
+          "en": "When the Mech takes a lethal hit, it gets a Shield instead, lasting a few seconds. It only comes back after a while."
         },
         "demoYoutubeId": null
       },
@@ -17831,8 +17831,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_bunnyhop.png",
         "description": {
-          "fr": "La durée de Saut de lapin est augmentée, et mise en pause lorsque le méca ne se déplace pas",
-          "en": "Bunny Hop lasts longer, paused if stationary"
+          "fr": "Prolonge Saut de lapin, dont la durée ne s'écoule plus tant que le méca ne se déplace pas.",
+          "en": "Extends Bunny Hop, and its duration stops running down while the Mech stays put."
         },
         "demoYoutubeId": null
       },
@@ -17845,8 +17845,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_micromissiles.png",
         "description": {
-          "fr": "Obtient une charge, les héros touchés réduisent le temps de recharge.",
-          "en": "Gain a charge, Hero hits reduce cooldown"
+          "fr": "Micro-missiles gagne une charge, et chaque héros touché réduit son temps de recharge ainsi que celui de ses charges.",
+          "en": "Micro Missiles gains a charge, and each Hero hit cuts both its cooldown and its charge cooldown."
         },
         "demoYoutubeId": null
       },
@@ -17873,8 +17873,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dva/images/spells/storm_ui_icon_dva_mechmode.png",
         "description": {
-          "fr": "Soigne une partie des dégâts de capacité subis.",
-          "en": "Heal for portion of Spell damage taken"
+          "fr": "Une bonne part des dégâts de capacité encaissés par le méca lui est rendue en points de vie sur quelques secondes.",
+          "en": "A good share of the Ability damage the Mech takes comes back to it as Health over a few seconds."
         },
         "demoYoutubeId": null
       }
@@ -17896,7 +17896,7 @@ const HEROES = [
       }
     ],
     "codeKey": "DVa",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "etc",
