@@ -16153,7 +16153,7 @@ const HEROES = [
   },
   {
     "id": "dehaka",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Dehaka",
       "en": "Dehaka"
@@ -16178,7 +16178,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_essencecollection.png",
         "description": {
           "fr": "Les victimes laissent de l'essence que Dehaka accumule, puis consume pour se soigner dans la durée. Utilisable pendant Traction et Enfouissement.",
-          "en": "Takedowns leave Essence that Dehaka stockpiles, then consumes to heal over time. Usable during Drag and Burrow."
+          "en": "Kills leave Essence that Dehaka banks, then burns to heal over time. Usable during Drag and Burrow."
         },
         "demoYoutubeId": ""
       },
@@ -16191,7 +16191,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_drag.png",
         "description": {
           "fr": "Donne un coup de langue qui attrape le premier ennemi touché, l'étourdit et le traîne derrière lui. Être étourdi ou réduit au silence interrompt la traction.",
-          "en": "Lashes out with his tongue, grabbing the first enemy hit, Stunning them and dragging them along. Being Stunned or Silenced interrupts the drag."
+          "en": "Lashes out his tongue, grabbing the first enemy hit, Stunning them and dragging them along. Being Stunned or Silenced cuts the drag short."
         },
         "demoYoutubeId": ""
       },
@@ -16204,7 +16204,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_trample.png",
         "description": {
           "fr": "Blesse continuellement les ennemis proches et permet à Dehaka de traverser les unités. Utilisable pendant Traction et Enfouissement.",
-          "en": "Continuously damages nearby enemies and lets Dehaka pass through units. Usable during Drag and Burrow."
+          "en": "Continuously damages nearby enemies and lets Dehaka move through units. Usable during Drag and Burrow."
         },
         "demoYoutubeId": ""
       },
@@ -16217,7 +16217,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_burrow.png",
         "description": {
           "fr": "S'enfouit sous terre : Dehaka entre en stase et devient invulnérable, tout en continuant de se déplacer lentement.",
-          "en": "Burrows underground: Dehaka enters Stasis and becomes Invulnerable while still moving slowly."
+          "en": "Burrows underground: Dehaka enters Stasis and becomes Invulnerable, while still crawling along slowly."
         },
         "demoYoutubeId": ""
       },
@@ -16229,8 +16229,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_mount.png",
         "description": {
-          "fr": "S'enfouit pour réapparaître dissimulé dans n'importe quel buisson de la carte. Effet passif : Dehaka se déplace plus vite dans les buissons et un instant après en être sorti, et chaque globe de régénération ramassé en raccourcit le temps de recharge.",
-          "en": "Burrows to reappear hidden in any bush on the Battleground. Passive: Dehaka moves faster in bushes and for a moment after leaving them, and each Regeneration Globe collected brings the next cast closer."
+          "fr": "S'enfouit pour réapparaître dans n'importe quel buisson de la carte. Effet passif : Dehaka se déplace plus vite dans les buissons et un instant après en être sorti, et chaque globe de régénération ramassé en réduit fortement le temps de recharge.",
+          "en": "Burrows away to resurface in any bush on the map. Passive: Dehaka moves faster in bushes and briefly after leaving one, and each Regeneration Globe gathered cuts its cooldown sharply."
         },
         "demoYoutubeId": ""
       },
@@ -16243,7 +16243,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_isolation.png",
         "description": {
           "fr": "Projette une biomasse qui blesse le premier héros adverse touché, le révèle, le réduit au silence, le ralentit et lui coupe la vision.",
-          "en": "Throws biomass that damages the first enemy Hero hit, reveals them, Silences them, Slows them and cuts their sight."
+          "en": "Launches biomass that damages the first enemy Hero hit, revealing, Silencing and Slowing them, and shrinking their vision."
         },
         "demoYoutubeId": ""
       },
@@ -16256,23 +16256,23 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_adaptation.png",
         "description": {
           "fr": "Après un court moment, Dehaka récupère d'un coup tous les points de vie perdus pendant ce laps de temps.",
-          "en": "After a short while, Dehaka instantly recovers all the Health lost during that window."
+          "en": "After a short moment, Dehaka instantly gets back every point of Health he lost during it."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Traqueur de la jungle te rend présent partout : soutiens deux lanes à la fois.",
-        "en": "Brushstalker puts you everywhere: support two lanes at once."
+        "fr": "Ne lance pas Traction (A) dès que la cible entre à portée : avance en tapant, et pull seulement quand tu es sûr de toucher.",
+        "en": "Don't fire Drag (Q) the second a target is in range: walk in weaving Basic Attacks, and pull only when you're sure it lands."
       },
       {
-        "fr": "Traction ramène une cible vers ton équipe, mais un contrôle t'interrompt.",
-        "en": "Drag pulls a target back to your team, but any crowd control stops it."
+        "fr": "Traction (A) sert à sortir un ennemi de sa position : ramène-le sous ta tour ou dans les sorts de ton équipe.",
+        "en": "Drag (Q) is there to pull an enemy out of position: bring them under your tower or into your team's Abilities."
       },
       {
-        "fr": "Enfouissement te met à l'abri et te laisse continuer d'avancer sous terre.",
-        "en": "Burrow shelters you and still lets you keep moving underground."
+        "fr": "Garde ton essence (D) pleine pour les fights : hors combat, remonte ta vie à la fontaine ou en pierre de foyer, Traqueur de la jungle (W) te ramène aussitôt.",
+        "en": "Keep your Essence (D) full for fights: out of combat, top up at the fountain or Hearthstone, Brushstalker (Z) brings you straight back."
       }
     ],
     "builds": [
@@ -16291,16 +16291,16 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Dehaka]",
+        "buildCode": "[T3111121,Dehaka]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmpz9nmdo01klt",
+            "primaryId": "tmpz9nmdo03z7r",
             "alternativeIds": []
           },
           {
@@ -16325,12 +16325,72 @@ const HEROES = [
           },
           {
             "level": 16,
-            "primaryId": "tmpz9nmdo15ry5",
+            "primaryId": "tmpz9nmdo16b26",
             "alternativeIds": []
           },
           {
             "level": 20,
             "primaryId": "tmpz9nmdo18bxd",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build main tank",
+          "en": "Main tank build"
+        },
+        "summary": {
+          "fr": "Build tourné vers l'encaissement, pour tenir le rôle de tank principal.",
+          "en": "Built around soaking punishment, to hold the main tank role."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T3332132,Dehaka]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmpz9nmdo03z7r",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmpz9nmdo06e7n",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmpz9nmdo09rtq",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmpz9nmdo110yu",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmpz9nmdo12bs2",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmpz9nmdo17z0m",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmpz9nmdo19sdh",
             "alternativeIds": []
           }
         ],
@@ -16348,8 +16408,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_trample.png",
         "description": {
-          "fr": "Augmente la durée d'Essaim noir et confère un bouclier anti-sort.",
-          "en": "Increases Dark Swarm duration, grants Spell Armor"
+          "fr": "Essaim noir dure plus longtemps et confère de l'armure anti-sort tant qu'il est actif.",
+          "en": "Dark Swarm lasts longer and grants Spell Armor while it is up."
         },
         "demoYoutubeId": null
       },
@@ -16362,8 +16422,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_essencecollection.png",
         "description": {
-          "fr": "Quête : l'essence augmente la récupération des points de vie et le maximum d'essence.",
-          "en": "Quest: Essence increases Health Regen, max Essence"
+          "fr": "Les globes de régénération rapportent de l'essence. Quête répétable : chaque palier d'essence récoltée augmente définitivement la récupération de points de vie et le maximum d'essence.",
+          "en": "Regeneration Globes yield Essence. Repeatable quest: every milestone of Essence gathered permanently raises Health regeneration and maximum Essence."
         },
         "demoYoutubeId": null
       },
@@ -16376,8 +16436,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_brushstalker.png",
         "description": {
-          "fr": "Quête : l'essence augmente le bonus à la vitesse de déplacement conféré par Traqueur de la jungle.",
-          "en": "Quest: Essence increases Brushstalker Move Speed"
+          "fr": "Le bonus de vitesse de Traqueur de la jungle dure plus longtemps après la sortie d'un buisson. Quête répétable : chaque palier d'essence récoltée l'augmente définitivement.",
+          "en": "Brushstalker's speed bonus lasts longer after leaving a bush. Repeatable quest: every milestone of Essence gathered permanently increases it."
         },
         "demoYoutubeId": null
       },
@@ -16391,7 +16451,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_burrow.png",
         "description": {
           "fr": "Sortir d'Enfouissement camoufle Dehaka et repousse les ennemis proches en les blessant et en les ralentissant. Effet passif : Enfouissement se recharge plus vite.",
-          "en": "Emerging from Burrow Stealths Dehaka and knocks back nearby enemies, damaging and Slowing them. Passive: Burrow returns sooner."
+          "en": "Emerging from Burrow Stealths Dehaka and knocks nearby enemies back, damaging and Slowing them. Passive: Burrow recharges faster."
         },
         "demoYoutubeId": null
       },
@@ -16404,8 +16464,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_essencecollection.png",
         "description": {
-          "fr": "Augmente l'essence des serviteurs et les dégâts qu'Essaim noir inflige aux mercenaires.",
-          "en": "Increases Essence from Minions, Dark Swarm damage to Mercenaries"
+          "fr": "Augmente l'essence récoltée sur les serviteurs, et Essaim noir frappe plus fort les mercenaires.",
+          "en": "Increases the Essence gathered from Minions, and Dark Swarm hits Mercenaries harder."
         },
         "demoYoutubeId": null
       },
@@ -16418,8 +16478,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_essencecollection_var1.png",
         "description": {
-          "fr": "Tuer des héros confère davantage d'essence.",
-          "en": "Takedowns grant more Essence"
+          "fr": "Double l'essence gagnée sur les victimes héroïques, et chaque héros touché par Essaim noir en rapporte aussi.",
+          "en": "Doubles the Essence from Hero Takedowns, and each Hero hit by Dark Swarm yields some too."
         },
         "demoYoutubeId": null
       },
@@ -16432,8 +16492,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_drag.png",
         "description": {
-          "fr": "Tactique : les attaques de base réduisent le temps de recharge de Traction",
-          "en": "Gambit: Basic Attacks reduce Drag cooldown"
+          "fr": "Prolonge Traction. Tactique : les attaques de base en réduisent le temps de recharge, et chaque mort de Dehaka rogne cette réduction.",
+          "en": "Extends Drag. Gambit: Basic Attacks reduce its cooldown, and each of Dehaka's deaths eats into that reduction."
         },
         "demoYoutubeId": null
       },
@@ -16446,8 +16506,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_drag_var1.png",
         "description": {
-          "fr": "Traction ralentit les ennemis et réduit les soins",
-          "en": "Drag Slows, reduces Healing"
+          "fr": "Traction ralentit fortement sa cible et réduit de moitié les soins qu'elle reçoit, pendant la traction et un moment après. Les attaques de base de Dehaka entretiennent cette réduction de soins.",
+          "en": "Drag heavily Slows its target and halves the healing they receive, during the drag and for a while after. Dehaka's Basic Attacks keep that healing cut going."
         },
         "demoYoutubeId": null
       },
@@ -16460,8 +16520,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_trample.png",
         "description": {
-          "fr": "Réduit le temps de recharge d'Essaim noir pour chaque héros touché.",
-          "en": "Reduces Dark Swarm cooldown against Heroes"
+          "fr": "Chaque héros touché par Essaim noir en réduit le temps de recharge.",
+          "en": "Each Hero hit by Dark Swarm reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -16475,7 +16535,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_isolation.png",
         "description": {
           "fr": "Projette une biomasse qui blesse le premier héros adverse touché, le révèle, le réduit au silence, le ralentit et lui coupe la vision.",
-          "en": "Throws biomass that damages the first enemy Hero hit, reveals them, Silences them, Slows them and cuts their sight."
+          "en": "Launches biomass that damages the first enemy Hero hit, revealing, Silencing and Slowing them, and shrinking their vision."
         },
         "demoYoutubeId": null
       },
@@ -16489,7 +16549,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_adaptation.png",
         "description": {
           "fr": "Après un court moment, Dehaka récupère d'un coup tous les points de vie perdus pendant ce laps de temps.",
-          "en": "After a short while, Dehaka instantly recovers all the Health lost during that window."
+          "en": "After a short moment, Dehaka instantly gets back every point of Health he lost during it."
         },
         "demoYoutubeId": null
       },
@@ -16502,8 +16562,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_trample.png",
         "description": {
-          "fr": "Traqueur de la jungle ralentit les héros adverses et augmente la puissance d'Essaim noir.",
-          "en": "Brushstalker Slows, increases Dark Swarm damage"
+          "fr": "Essaim noir ralentit les héros adverses, et frappe bien plus fort tant que le bonus de vitesse de Traqueur de la jungle est actif.",
+          "en": "Dark Swarm Slows enemy Heroes, and hits far harder while Brushstalker's speed bonus is up."
         },
         "demoYoutubeId": null
       },
@@ -16516,8 +16576,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_trample_a.png",
         "description": {
-          "fr": "Essaim noir réduit l'armure des ennemis.",
-          "en": "Dark Swarm lowers enemies' Armor"
+          "fr": "Essaim noir réduit brièvement l'armure des ennemis touchés, qui subissent donc plus de dégâts.",
+          "en": "Dark Swarm briefly cuts the Armor of the enemies it hits, so they take more damage."
         },
         "demoYoutubeId": null
       },
@@ -16530,8 +16590,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_essencecollection.png",
         "description": {
-          "fr": "L'essence augmente les dégâts d'attaque.",
-          "en": "Essence increases Attack Damage"
+          "fr": "Chaque unité d'essence en réserve augmente les dégâts des attaques de base de Dehaka.",
+          "en": "Every point of stored Essence increases Dehaka's Basic Attack damage."
         },
         "demoYoutubeId": null
       },
@@ -16545,7 +16605,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_drag.png",
         "description": {
           "fr": "Augmente la portée de Traction.",
-          "en": "Increases Drag range"
+          "en": "Increases Drag's range."
         },
         "demoYoutubeId": null
       },
@@ -16558,8 +16618,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/talents/storm_ui_icon_dehaka_burrow.png",
         "description": {
-          "fr": "Augmente la vitesse de déplacement lors de l'enfouissement.",
-          "en": "Increase Burrow movement speed"
+          "fr": "Dehaka se déplace bien plus vite pendant l'enfouissement.",
+          "en": "Dehaka moves far faster while Burrowed."
         },
         "demoYoutubeId": null
       },
@@ -16572,8 +16632,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_brushstalker.png",
         "description": {
-          "fr": "Confère de l'armure et augmente la vitesse d'attaque près des buissons.",
-          "en": "Gain Armor, Attack Speed near bushes"
+          "fr": "Confère de l'armure à Dehaka et augmente sa vitesse d'attaque dans un buisson, et un moment après en être sorti.",
+          "en": "Grants Dehaka Armor and Attack Speed while in a bush, and for a while after leaving it."
         },
         "demoYoutubeId": null
       },
@@ -16586,8 +16646,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_isolation.png",
         "description": {
-          "fr": "Aliénation affecte les héros proches.",
-          "en": "Isolation splashes to nearby Heroes"
+          "fr": "Aliénation touche tous les héros proches de la première cible, mais frappe bien moins fort.",
+          "en": "Isolation hits every Hero near the first target, but hits far softer."
         },
         "demoYoutubeId": null
       },
@@ -16600,8 +16660,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_adaptation.png",
         "description": {
-          "fr": "Augmente les soins et diminue le temps de recharge d'Adaptation.",
-          "en": "Enhanced Adaptation healing, cooldown"
+          "fr": "Adaptation rend le double des dégâts subis et revient bien plus vite.",
+          "en": "Adaptation returns twice the damage taken and comes back far sooner."
         },
         "demoYoutubeId": null
       },
@@ -16614,8 +16674,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_essencecollection.png",
         "description": {
-          "fr": "Les attaques de base ralentissent la cible et confèrent de l'essence.",
-          "en": "Basic Attacks slow, grant Essence"
+          "fr": "Les attaques de base ralentissent leur cible, et celles portées à un héros rapportent de l'essence.",
+          "en": "Basic Attacks Slow their target, and those landed on a Hero yield Essence."
         },
         "demoYoutubeId": null
       },
@@ -16628,15 +16688,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/dehaka/images/spells/storm_ui_icon_dehaka_brushstalker.png",
         "description": {
-          "fr": "Réduit les temps de recharge et d'incantation de Traqueur de la jungle.",
-          "en": "Reduced Brushstalker cooldown, cast time"
+          "fr": "Réduit énormément le temps de recharge de Traqueur de la jungle et raccourcit son incantation.",
+          "en": "Massively cuts Brushstalker's cooldown and shortens its cast time."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Dehaka",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "diablo",
@@ -20415,8 +20475,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Trucidolaser (Z) te soigne beaucoup plus sur les héros : attends qu'ils s'alignent ou qu'un CC tombe avant de le tirer.",
-        "en": "Deth Lazor (W) heals you far more off Heroes: wait for them to line up or for a CC to land before firing."
+        "fr": "Trucidolaser (Z) te soigne beaucoup plus sur les héros : attends qu'ils s'alignent ou qu'un CC tombe avant de le lâcher.",
+        "en": "Deth Lazor (W) heals you far more off Heroes: wait for them to line up or for a CC to land before you let it go."
       },
       {
         "fr": "Charge d'X-plosium (E) est trop lente pour toucher toute seule : garde-la en suivi d'un CC allié, ou enchaîne-la sur Gravitobombe 3000 (R) si tu la prends.",
@@ -22477,12 +22537,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "La portée d'Arc tempête (A) monte pendant que tu canalises : recule en chargeant pour tirer de plus loin que ce que l'adversaire croit.",
-        "en": "Storm Bow (Q) gains range while you channel: back up as you charge so you fire from farther than the enemy expects."
+        "fr": "La portée d'Arc tempête (A) monte pendant que tu canalises : recule en chargeant pour le lâcher de bien plus loin que ce que l'adversaire croit.",
+        "en": "Storm Bow (Q) gains range while you channel: back up as you charge so you let it go from far beyond what the enemy expects."
       },
       {
-        "fr": "Mille-flèches (Z) part instantanément : c'est ton outil pour démonter un ennemi ou couper une pierre de foyer. Et comme il ricoche, tire dans les couloirs, pas en terrain ouvert.",
-        "en": "Scatter Arrow (W) fires instantly: it's your tool to dismount someone or cut a Hearthstone. And since it ricochets, shoot it in corridors, not in open ground."
+        "fr": "Mille-flèches (Z) part instantanément : c'est ton outil pour démonter un ennemi ou couper une pierre de foyer. Et comme il ricoche, sers-t'en dans les couloirs, pas en terrain ouvert.",
+        "en": "Scatter Arrow (W) fires instantly: it's your tool to dismount someone or cut a Hearthstone. And since it ricochets, use it in corridors, not in open ground."
       },
       {
         "fr": "Flèche du dragon (R) frappe d'autant plus fort qu'elle vient de loin : garde-la pour une équipe qui décroche en ligne droite.",
@@ -33498,8 +33558,8 @@ const HEROES = [
         "en": "Never reveal yourself for a Minion: you lose your stacks and your surprise."
       },
       {
-        "fr": "Un Tir de précision manqué remet tes cumuls à zéro : ne tire qu'à coup sûr.",
-        "en": "A missed Snipe resets your stacks: only fire when you cannot miss."
+        "fr": "Un Tir de précision manqué remet tes cumuls à zéro : ne le lâche qu'à coup sûr.",
+        "en": "A missed Snipe resets your stacks: only let it go when it's a sure thing."
       },
       {
         "fr": "Hologramme n'interrompt pas ton camouflage : sers-t'en pour tester un buisson.",
@@ -43116,8 +43176,8 @@ const HEROES = [
         "en": "Vault (E) is your only disengage: burning it to dive a target leaves you with no way out when the enemy team turns on you."
       },
       {
-        "fr": "Rafale (R) saute au moindre CC : lance-la quand les contrôles adverses sont down, et kite pendant qu'elle tire.",
-        "en": "Strafe (R) breaks on any CC: pop it once their crowd control is down, and kite while it fires."
+        "fr": "Rafale (R) saute au moindre CC : lance-la quand les contrôles adverses sont down, et kite pendant toute la canalisation.",
+        "en": "Strafe (R) breaks on any CC: pop it once their crowd control is down, and kite for the whole channel."
       }
     ],
     "builds": [
