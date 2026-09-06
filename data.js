@@ -28226,7 +28226,7 @@ const HEROES = [
   },
   {
     "id": "lostvikings",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Les Vikings perdus",
       "en": "The Lost Vikings"
@@ -28264,8 +28264,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_spintowin.png",
         "description": {
-          "fr": "Inflige des dégâts autour de chacun des Vikings.",
-          "en": "Deals damage around each Viking"
+          "fr": "À l'activation, chacun des trois Vikings blesse les ennemis autour de lui, deux fois plus fort contre les héros.",
+          "en": "On activation, each of the three Vikings damages the enemies around him, twice as hard against Heroes."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -28292,8 +28292,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_jump.png",
         "description": {
-          "fr": "Rend momentanément invulnérable",
-          "en": "Grants temporary Invulnerability"
+          "fr": "Rend les trois Vikings invulnérables un court instant et leur permet de sauter par-dessus les ennemis.",
+          "en": "Makes all three Vikings Invulnerable for a brief moment and lets them jump over enemies."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -28306,8 +28306,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_bribe.png",
         "description": {
-          "fr": "Tuer des serviteurs et des mercenaires près des Vikings accumule des charges, à dépenser pour acheter un camp de mercenaires au lieu de le combattre.",
-          "en": "Killing Minions and Mercenaries near the Vikings builds charges, spent to buy a Mercenary camp instead of fighting it."
+          "fr": "Tuer des serviteurs et des mercenaires près des Vikings accumule des charges, à dépenser pour acheter un camp de mercenaires au lieu de le combattre. Sans effet sur les mercenaires élite.",
+          "en": "Killing Minions and Mercenaries near the Vikings banks charges, spent to buy a Mercenary camp instead of fighting it. No effect on Elite Mercenaries."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -28334,8 +28334,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_longboatraid.png",
         "description": {
-          "fr": "Les Vikings montent à bord d'un drakkar insensible aux effets de contrôle qui tire en continu sur les ennemis proches et dispose d'un mortier frappant en zone. Il gagne des points de vie par Viking embarqué, et sa destruction étourdit tout l'équipage.",
-          "en": "The Vikings board an Unstoppable longboat that fires continuously at nearby enemies and carries an area-hitting mortar. It gains Health for each Viking aboard, and its destruction Stuns the whole crew."
+          "fr": "Les Vikings montent à bord d'un drakkar insensible aux effets de contrôle qui tire en continu sur les ennemis proches et dispose d'un mortier frappant en zone. Il gagne des points de vie par Viking embarqué, et sa destruction étourdit tout l'équipage. Il faut que tous les Vikings en vie soient à proximité pour l'appeler.",
+          "en": "The Vikings board an Unstoppable longboat that fires continuously at nearby enemies and carries a mortar hitting an area. It gains Health per Viking aboard, and its destruction Stuns the whole crew. Every living Viking must be nearby to call it."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -28348,8 +28348,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_playagain.png",
         "description": {
-          "fr": "Ranime et invoque les Vikings",
-          "en": "Revive and summon Vikings"
+          "fr": "Un Viking se concentre quelques secondes pour ranimer et rassembler les autres à l'endroit ciblé, avec tous leurs points de vie. Un seul peut s'y employer à la fois.",
+          "en": "One Viking channels for a few seconds to revive and gather the others at the target spot, at full Health. Only one can do it at a time."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -28361,12 +28361,12 @@ const HEROES = [
         "en": "Split them to soak, regroup them before every objective."
       },
       {
-        "fr": "Tous au drakkar ! transforme le trio en une seule cible bien plus solide.",
-        "en": "Longboat! turns the trio into a single, far sturdier target."
+        "fr": "Chacun a son poste : Olaf tient la ligne et gêne, Baleog nettoie les vagues, Erik va prendre les camps et canaliser les objectifs.",
+        "en": "Each has his job: Olaf holds the line and disrupts, Baleog clears waves, Erik takes camps and channels objectives."
       },
       {
-        "fr": "Perdre un Viking coûte peu : ne rends jamais les trois en même temps.",
-        "en": "Losing one Viking costs little: never hand over all three at once."
+        "fr": "Ne les colle pas les uns sur les autres en combat : une seule AoE ramasse les trois d'un coup.",
+        "en": "Don't bunch them up in a fight: a single AoE picks up all three at once."
       }
     ],
     "builds": [
@@ -28385,11 +28385,11 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,LostVikings]",
+        "buildCode": "[T1222214,LostVikings]",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
@@ -28399,22 +28399,22 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmdxk6lgh05dw0",
+            "primaryId": "tmdxk6lgh06jxr",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmdxk6lgh09qgj",
+            "primaryId": "tmdxk6lgh10a8l",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmdxk6lgh1223j",
+            "primaryId": "tmdxk6lgh13vxj",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmdxk6lgh143k8",
+            "primaryId": "tmdxk6lgh157j9",
             "alternativeIds": []
           },
           {
@@ -28424,7 +28424,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmdxk6lgh21dbr",
+            "primaryId": "tmdxk6lgh24wen",
             "alternativeIds": []
           }
         ],
@@ -28456,8 +28456,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_selecterik.png",
         "description": {
-          "fr": "Camoufle Erik et augmente sa vision s'il reste immobile.",
-          "en": "Erik gains Stealth and increases vision if stationary"
+          "fr": "Erik se camoufle en restant immobile et voit bien plus loin. Le camouflage tient encore un instant s'il bouge, et à sa rupture ses attaques de base frappent bien plus fort quelques secondes.",
+          "en": "Erik Stealths by standing still and sees much farther. The Stealth holds a moment if he moves, and when it breaks his Basic Attacks hit far harder for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -28484,8 +28484,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_bribe.png",
         "description": {
-          "fr": "Tuer des serviteurs et des mercenaires près des Vikings accumule des charges, à dépenser pour acheter un camp de mercenaires au lieu de le combattre.",
-          "en": "Killing Minions and Mercenaries near the Vikings builds charges, spent to buy a Mercenary camp instead of fighting it."
+          "fr": "Tuer des serviteurs et des mercenaires près des Vikings accumule des charges, à dépenser pour acheter un camp de mercenaires au lieu de le combattre. Sans effet sur les mercenaires élite.",
+          "en": "Killing Minions and Mercenaries near the Vikings banks charges, spent to buy a Mercenary camp instead of fighting it. No effect on Elite Mercenaries."
         },
         "demoYoutubeId": null
       },
@@ -28498,8 +28498,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_selectbaleog.png",
         "description": {
-          "fr": "Baleog récupère des points de vie sur les dégâts de ses attaques de base et de ses éclaboussures, davantage contre les héros.",
-          "en": "Baleog restores Health from his Basic Attack and splash damage, more against Heroes."
+          "fr": "Les attaques de base et leurs dégâts de zone rendent des points de vie, deux fois plus contre les héros.",
+          "en": "Basic Attacks and their splash damage heal, twice as much against Heroes."
         },
         "demoYoutubeId": null
       },
@@ -28526,8 +28526,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_selecterik_var1.png",
         "description": {
-          "fr": "Renforce les attaques d'Erik portées aux bâtiments. ",
-          "en": "Erik's attacks stronger against Structures"
+          "fr": "Les attaques d'Erik enflamment les bâtiments, qui continuent de brûler quelques secondes.",
+          "en": "Erik's attacks set Structures alight, and they keep burning for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -28554,8 +28554,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_selectbaleog.png",
         "description": {
-          "fr": "Augmente la vitesse d'attaque et la portée de Baleog.",
-          "en": "Baleog gains Attack Speed, Range"
+          "fr": "Augmente la portée des attaques de Baleog. Près d'Olaf et d'Erik, sa vitesse d'attaque grimpe en plus de moitié.",
+          "en": "Increases Baleog's attack range. Near Olaf and Erik, his Attack Speed climbs by half again."
         },
         "demoYoutubeId": null
       },
@@ -28568,8 +28568,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_spintowin.png",
         "description": {
-          "fr": "Inflige des dégâts autour de chacun des Vikings.",
-          "en": "Deals damage around each Viking"
+          "fr": "À l'activation, chacun des trois Vikings blesse les ennemis autour de lui, deux fois plus fort contre les héros.",
+          "en": "On activation, each of the three Vikings damages the enemies around him, twice as hard against Heroes."
         },
         "demoYoutubeId": null
       },
@@ -28582,8 +28582,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_norseforce.png",
         "description": {
-          "fr": "Confère un bouclier à tous les Vikings.",
-          "en": "All Vikings gain a Shield"
+          "fr": "Confère un bouclier à chacun des Vikings, d'autant plus gros qu'ils sont nombreux à être en vie.",
+          "en": "Grants each Viking a Shield, bigger the more of them are still alive."
         },
         "demoYoutubeId": null
       },
@@ -28596,8 +28596,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_longboatraid.png",
         "description": {
-          "fr": "Les Vikings montent à bord d'un drakkar insensible aux effets de contrôle qui tire en continu sur les ennemis proches et dispose d'un mortier frappant en zone. Il gagne des points de vie par Viking embarqué, et sa destruction étourdit tout l'équipage.",
-          "en": "The Vikings board an Unstoppable longboat that fires continuously at nearby enemies and carries an area-hitting mortar. It gains Health for each Viking aboard, and its destruction Stuns the whole crew."
+          "fr": "Les Vikings montent à bord d'un drakkar insensible aux effets de contrôle qui tire en continu sur les ennemis proches et dispose d'un mortier frappant en zone. Il gagne des points de vie par Viking embarqué, et sa destruction étourdit tout l'équipage. Il faut que tous les Vikings en vie soient à proximité pour l'appeler.",
+          "en": "The Vikings board an Unstoppable longboat that fires continuously at nearby enemies and carries a mortar hitting an area. It gains Health per Viking aboard, and its destruction Stuns the whole crew. Every living Viking must be nearby to call it."
         },
         "demoYoutubeId": null
       },
@@ -28610,8 +28610,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_playagain.png",
         "description": {
-          "fr": "Ranime et invoque les Vikings",
-          "en": "Revive and summon Vikings"
+          "fr": "Un Viking se concentre quelques secondes pour ranimer et rassembler les autres à l'endroit ciblé, avec tous leurs points de vie. Un seul peut s'y employer à la fois.",
+          "en": "One Viking channels for a few seconds to revive and gather the others at the target spot, at full Health. Only one can do it at a time."
         },
         "demoYoutubeId": null
       },
@@ -28638,8 +28638,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_jump.png",
         "description": {
-          "fr": "Rend momentanément invulnérable",
-          "en": "Grants temporary Invulnerability"
+          "fr": "Rend les trois Vikings invulnérables un court instant et leur permet de sauter par-dessus les ennemis.",
+          "en": "Makes all three Vikings Invulnerable for a brief moment and lets them jump over enemies."
         },
         "demoYoutubeId": null
       },
@@ -28652,8 +28652,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_searing.png",
         "description": {
-          "fr": "Les Vikings infligent des dégâts supplémentaires quand ils sont ensemble.",
-          "en": "Vikings deal bonus damage when together"
+          "fr": "Tant qu'un Viking se tient près des deux autres, ses attaques de base infligent aux héros des dégâts supplémentaires proportionnels à leurs points de vie maximum.",
+          "en": "While a Viking stands near the other two, his Basic Attacks deal Heroes bonus damage based on their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -28666,8 +28666,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_selectolaf.png",
         "description": {
-          "fr": "Charger sur les ennemis les étourdit",
-          "en": "Charge stuns enemies"
+          "fr": "La charge d'Olaf étourdit les ennemis qu'il percute.",
+          "en": "Olaf's charge Stuns the enemies he slams into."
         },
         "demoYoutubeId": null
       },
@@ -28694,8 +28694,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/talents/storm_ui_icon_lostvikings_64kbmarathon.png",
         "description": {
-          "fr": "Accélère la course et dissipe les ralentissements et immobilisations",
-          "en": "Run faster and break Slows and Roots"
+          "fr": "À l'activation, Hop, hop, hop ! accélère encore davantage les Vikings et les libère des immobilisations et des ralentissements.",
+          "en": "On activation, Go Go Go! speeds the Vikings up further and frees them from Roots and Slows."
         },
         "demoYoutubeId": null
       },
@@ -28736,8 +28736,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_playagain.png",
         "description": {
-          "fr": "Résurrection et soins supplémentaires.",
-          "en": "Additional revive and heal"
+          "fr": "Quelques secondes après Jouer encore !, les Vikings morts sont ressuscités et invoqués à leur tour, avec tous leurs points de vie.",
+          "en": "A few seconds after Play Again!, the fallen Vikings are revived and summoned in turn, at full Health."
         },
         "demoYoutubeId": null
       },
@@ -28764,8 +28764,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
         "description": {
-          "fr": "Répercute les attaques de base sur les cibles non héroïques.",
-          "en": "Basic Attacks chain to non-Heroes"
+          "fr": "Régulièrement, la prochaine attaque de base d'un Viking frappe plus fort et ravage les serviteurs, mercenaires et monstres autour de la cible. Chaque Viking a son propre délai.",
+          "en": "Every so often, a Viking's next Basic Attack hits harder and tears through the Minions, Mercenaries and Monsters around the target. Each Viking has his own timer."
         },
         "demoYoutubeId": null
       }
@@ -28787,7 +28787,7 @@ const HEROES = [
       }
     ],
     "codeKey": "LostVikings",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "lunara",
