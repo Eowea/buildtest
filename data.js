@@ -23034,7 +23034,7 @@ const HEROES = [
   },
   {
     "id": "hogger",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Lardeur",
       "en": "Hogger"
@@ -23058,8 +23058,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_trait.png",
         "description": {
-          "fr": "Jette un tas de fourbi qui repousse les ennemis et sert d'obstacle. À sa destruction, il laisse un morceau de viande qui soigne Lardeur.",
-          "en": "Hurls a hoard that knocks enemies back and acts as terrain. When it breaks, it drops a piece of meat that heals Hogger."
+          "fr": "Jette un tas de fourbi qui blesse et repousse les ennemis au point de chute, puis sert d'obstacle quelques secondes.",
+          "en": "Throws a pile of junk that damages and knocks back enemies where it lands, then acts as terrain for a few seconds."
         },
         "demoYoutubeId": ""
       },
@@ -23071,8 +23071,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_q.png",
         "description": {
-          "fr": "Frappe dans un large arc de cercle et repousse les ennemis ; celui qui percute un obstacle est étourdi et rapporte de la rage.",
-          "en": "Swings in a wide arc, knocking enemies back; one that hits terrain is Stunned and grants Rage."
+          "fr": "Frappe dans un large arc de cercle et repousse les ennemis ; celui qui percute un obstacle encaisse un surplus de dégâts, est étourdi et rapporte de la rage.",
+          "en": "Swings in a wide arc and knocks enemies back; anyone slammed into terrain takes extra damage, is Stunned and yields Rage."
         },
         "demoYoutubeId": ""
       },
@@ -23084,8 +23084,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_w.png",
         "description": {
-          "fr": "Lance de la dynamite qui explose peu après en blessant et ralentissant. Posée sur un héros, elle explose aussitôt et rapporte de la rage.",
-          "en": "Throws dynamite that detonates shortly after, damaging and Slowing. Landed on a Hero, it explodes instantly and grants Rage."
+          "fr": "Lance de la dynamite qui explose peu après en blessant et ralentissant les ennemis. Posée directement sur un héros, elle explose aussitôt.",
+          "en": "Throws dynamite that goes off shortly after, damaging and Slowing enemies. Landed straight on a Hero, it detonates at once."
         },
         "demoYoutubeId": ""
       },
@@ -23097,8 +23097,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_e.png",
         "description": {
-          "fr": "Après un temps de préparation, Lardeur devient insensible aux effets de contrôle et tournoie sans contrôle, rebondissant sur les obstacles — chaque rebond relance le tournoiement. Plus il a de rage, plus il blesse les héros.",
-          "en": "After a wind-up, Hogger becomes Unstoppable and spins out of control, bouncing off obstacles — each bounce restarts the spin. The more Rage he holds, the harder he hits Heroes."
+          "fr": "Après un temps de préparation, Lardeur devient insensible aux effets de contrôle et tournoie sans contrôle dans la direction visée, rebondissant sur les obstacles — chaque rebond relance le tournoiement.",
+          "en": "After a wind-up, Hogger becomes Unstoppable and spins out of control in the chosen direction, bouncing off terrain — each bounce restarts the spin."
         },
         "demoYoutubeId": ""
       },
@@ -23111,7 +23111,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_r1.png",
         "description": {
           "fr": "Catapulte Lardeur accroché à un Chope butin renforcé, blessant et ralentissant les ennemis au point de chute.",
-          "en": "Launches Hogger attached to an empowered Loot Hoard, damaging and Slowing enemies where it lands."
+          "en": "Catapults Hogger clinging to a beefed-up Loot Hoard, damaging and Slowing enemies where it lands."
         },
         "demoYoutubeId": ""
       },
@@ -23124,23 +23124,23 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_r2.png",
         "description": {
           "fr": "Après un temps de préparation, Lardeur frappe le sol : l'impact blesse et étourdit durement, et l'onde de choc qui file droit devant blesse et étourdit plus brièvement.",
-          "en": "After a wind-up, Hogger slams the ground: the impact damages and Stuns hard, while the shockwave racing straight ahead damages and Stuns more briefly."
+          "en": "After a wind-up, Hogger slams the ground: the impact damages and heavily Stuns, and the shockwave racing ahead damages and Stuns more briefly."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Projette les ennemis contre un mur avec Coup ahurissant pour les étourdir.",
-        "en": "Slam enemies into a wall with Staggering Blow to Stun them."
+        "fr": "Coup ahurissant (A) ne paie vraiment que contre un mur : place-toi pour renvoyer la cible dedans, tu gagnes l'étourdissement et la rage.",
+        "en": "Staggering Blow (Q) only really pays against terrain: position so the target slams into it, and you get the Stun and the Rage."
       },
       {
-        "fr": "Ramasse ton butin après un combat pour te soigner sans rentrer.",
-        "en": "Pick up your loot after a fight to heal without using your Hearthstone."
+        "fr": "Chope butin (D) n'est pas qu'un dégât : c'est un obstacle que tu poses toi-même, donc un mur à renvoyer les ennemis dedans.",
+        "en": "Loot Hoard (D) isn't just damage: it's terrain you place yourself, so it's a wall to slam enemies into."
       },
       {
-        "fr": "Lardée sauvage rebondit sur les obstacles : sert autant à fuir qu'à poursuivre.",
-        "en": "Hogg Wild bounces off terrain: it is as good for fleeing as for chasing."
+        "fr": "Lardée sauvage (E) rebondit sur les obstacles et te rend insensible aux contrôles : elle sert autant à engage qu'à décrocher.",
+        "en": "Hogg Wild (E) bounces off terrain and makes you Unstoppable: it's as much an engage as a way out."
       }
     ],
     "builds": [
@@ -23159,21 +23159,21 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Hogger]",
+        "buildCode": "[T3312213,Hogger]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmb5z86pc01rjr",
+            "primaryId": "tmb5z86pc03xop",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmb5z86pc04vgp",
+            "primaryId": "tmb5z86pc06fhg",
             "alternativeIds": []
           },
           {
@@ -23183,12 +23183,12 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tmb5z86pc10mju",
+            "primaryId": "tmb5z86pc11gqt",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmb5z86pc12spd",
+            "primaryId": "tmb5z86pc13cf4",
             "alternativeIds": []
           },
           {
@@ -23198,7 +23198,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmb5z86pc18tiq",
+            "primaryId": "tmb5z86pc20jmt",
             "alternativeIds": []
           }
         ],
@@ -23216,8 +23216,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_w.png",
         "description": {
-          "fr": "Quête : Dynamite Ev-Lan soigne et augmente les points de vie.",
-          "en": "Quest: Ez-Thro Dynamite heals, increases Health"
+          "fr": "Chaque héros touché par Dynamite Ev-Lan rend des points de vie à Lardeur.",
+          "en": "Every Hero hit by EZ-Thro Dynamite heals Hogger."
         },
         "demoYoutubeId": null
       },
@@ -23230,8 +23230,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_trait.png",
         "description": {
-          "fr": "Chope butin génère davantage de viande et confère de l'armure.",
-          "en": "Loot Hoard creates more Meat, gain Armor"
+          "fr": "En retombant, Chope butin laisse un morceau de viande. Se soigner dessus confère aussi de l'armure.",
+          "en": "On landing, Loot Hoard drops a piece of meat. Healing off it also grants Armor."
         },
         "demoYoutubeId": null
       },
@@ -23244,8 +23244,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_rage.png",
         "description": {
-          "fr": "Rend périodiquement des points de vie et confère de la rage à l'activation.",
-          "en": "Periodically heal, activate to gain Rage"
+          "fr": "À l'activation, Lardeur accumule de la rage pendant quelques secondes.",
+          "en": "Activate and Hogger builds Rage over a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -23258,8 +23258,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_combo_q_d.png",
         "description": {
-          "fr": "Augmente les dégâts d'attaque et la portée de Chope butin. Quête : toucher des héros avec Coup ahurissant.",
-          "en": "Increases Loot Hoard damage, range. Quest: Hit Heroes with Staggering Blow."
+          "fr": "Augmente la portée et les dégâts de Chope butin.",
+          "en": "Increases Loot Hoard's range and damage."
         },
         "demoYoutubeId": null
       },
@@ -23272,8 +23272,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_e.png",
         "description": {
-          "fr": "Augmente le rayon de Lardée sauvage et génère de la rage.",
-          "en": "Increase Hogg Wild radius, generates Rage"
+          "fr": "Augmente le rayon de Lardée sauvage, et chaque ennemi touché rapporte de la rage, bien davantage sur un héros.",
+          "en": "Widens Hogg Wild, and each enemy hit yields Rage, far more from a Hero."
         },
         "demoYoutubeId": null
       },
@@ -23286,8 +23286,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_rage.png",
         "description": {
-          "fr": "La rage augmente la vitesse de déplacement et les soins reçus.",
-          "en": "Rage increases Move Speed, healing received"
+          "fr": "Au-dessus d'un certain seuil de rage, Lardeur se déplace plus vite et reçoit davantage de soins.",
+          "en": "Above a certain Rage threshold, Hogger moves faster and receives more healing."
         },
         "demoYoutubeId": null
       },
@@ -23300,8 +23300,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_w.png",
         "description": {
-          "fr": "Génère davantage de dynamite Ev-Lan.",
-          "en": "Create more Ez-Thro Dynamite"
+          "fr": "Une dynamite qui explose instantanément sur un héros en fait apparaître une seconde derrière lui.",
+          "en": "A dynamite detonating instantly on a Hero spawns a second one behind them."
         },
         "demoYoutubeId": null
       },
@@ -23314,8 +23314,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_trait.png",
         "description": {
-          "fr": "Chope butin voit son temps de recharge réduit, et l'amas posé au sol blesse et ralentit en continu les ennemis d'une large zone autour de lui.",
-          "en": "Loot Hoard returns sooner, and the pile on the ground continuously damages and Slows the enemies in a wide area around it."
+          "fr": "Chope butin revient plus vite, et le tas posé au sol blesse et ralentit en continu les ennemis d'une large zone autour de lui.",
+          "en": "Loot Hoard comes back sooner, and the pile on the ground continuously damages and Slows enemies in a wide area around it."
         },
         "demoYoutubeId": null
       },
@@ -23328,8 +23328,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_rage.png",
         "description": {
-          "fr": "La rage renforce les capacités de base et les attaques de base.",
-          "en": "Rage empowers Basic Abilities, Basic Attacks"
+          "fr": "Au-dessus d'un certain seuil de rage, la vitesse d'attaque de Lardeur augmente et les temps de recharge de Coup ahurissant et Lardée sauvage s'écoulent plus vite.",
+          "en": "Above a certain Rage threshold, Hogger's Attack Speed rises and the cooldowns of Staggering Blow and Hogg Wild run down faster."
         },
         "demoYoutubeId": null
       },
@@ -23343,7 +23343,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_r1.png",
         "description": {
           "fr": "Catapulte Lardeur accroché à un Chope butin renforcé, blessant et ralentissant les ennemis au point de chute.",
-          "en": "Launches Hogger attached to an empowered Loot Hoard, damaging and Slowing enemies where it lands."
+          "en": "Catapults Hogger clinging to a beefed-up Loot Hoard, damaging and Slowing enemies where it lands."
         },
         "demoYoutubeId": null
       },
@@ -23357,7 +23357,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_r2.png",
         "description": {
           "fr": "Après un temps de préparation, Lardeur frappe le sol : l'impact blesse et étourdit durement, et l'onde de choc qui file droit devant blesse et étourdit plus brièvement.",
-          "en": "After a wind-up, Hogger slams the ground: the impact damages and Stuns hard, while the shockwave racing straight ahead damages and Stuns more briefly."
+          "en": "After a wind-up, Hogger slams the ground: the impact damages and heavily Stuns, and the shockwave racing ahead damages and Stuns more briefly."
         },
         "demoYoutubeId": null
       },
@@ -23370,8 +23370,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_e.png",
         "description": {
-          "fr": "Lardée sauvage confère de l'armure.",
-          "en": "Hogg Wild grants Armor"
+          "fr": "Lardée sauvage confère de l'armure pendant toute sa durée et un moment après, et davantage encore à haute rage.",
+          "en": "Hogg Wild grants Armor for its whole duration and a while after, and more still at high Rage."
         },
         "demoYoutubeId": null
       },
@@ -23384,8 +23384,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_e_variant.png",
         "description": {
-          "fr": "Lardée sauvage ralentit et réduit la puissance de capacité.",
-          "en": "Hogg Wild Slows, reduces Spell Power"
+          "fr": "Les ennemis touchés par Lardée sauvage sont ralentis, effet cumulable plusieurs fois.",
+          "en": "Enemies hit by Hogg Wild are Slowed, stacking several times."
         },
         "demoYoutubeId": null
       },
@@ -23398,8 +23398,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_heal.png",
         "description": {
-          "fr": "Les dégâts infligés aux héros par les attaques de base, Coup ahurissant et Lardée sauvage rendent une partie des points de vie.",
-          "en": "Damage dealt to Heroes by Basic Attacks, Staggering Blow and Hogg Wild restores part of it as Health."
+          "fr": "Les dégâts infligés aux héros par les attaques de base, Coup ahurissant et Lardée sauvage rendent un tiers de leur montant en points de vie.",
+          "en": "Damage dealt to Heroes by Basic Attacks, Staggering Blow and Hogg Wild heals for a third of its amount."
         },
         "demoYoutubeId": null
       },
@@ -23412,8 +23412,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_q.png",
         "description": {
-          "fr": "Augmente les dégâts de Coup ahurissant et étourdit.",
-          "en": "Increase Staggering Blow damage, Stun"
+          "fr": "Les héros étourdis par Coup ahurissant subissent des dégâts supplémentaires proportionnels à leurs points de vie maximum et restent étourdis plus longtemps.",
+          "en": "Heroes Stunned by Staggering Blow take bonus damage based on their maximum Health and stay Stunned longer."
         },
         "demoYoutubeId": null
       },
@@ -23426,8 +23426,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_w.png",
         "description": {
-          "fr": "Les explosions instantanées de Dynamite Ev-Lan frappent plus fort, ralentissent davantage et en réduisent le temps de recharge. Effet passif : augmente sa portée.",
-          "en": "Ez-Thro Dynamite's instant blasts hit harder, Slow more and bring the next cast closer. Passive: increases its range."
+          "fr": "Les explosions instantanées de Dynamite Ev-Lan frappent plus fort, ralentissent davantage et réduisent son temps de recharge.",
+          "en": "EZ-Thro Dynamite's instant detonations hit harder, Slow more and cut its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -23440,8 +23440,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
         "description": {
-          "fr": "Renforce les attaques de base et augmente la vitesse de déplacement.",
-          "en": "Empower Basic Attacks, increase Move Speed"
+          "fr": "Toucher un héros avec Coup ahurissant ou Dynamite Ev-Lan renforce nettement la prochaine attaque de base, cumulable deux fois.",
+          "en": "Hitting a Hero with Staggering Blow or EZ-Thro Dynamite sharply empowers the next Basic Attack, stacking twice."
         },
         "demoYoutubeId": null
       },
@@ -23454,8 +23454,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_r1.png",
         "description": {
-          "fr": "Chope butin lance de la dynamite et de la viande.",
-          "en": "Loot Hoard launches Dynamite and Meat"
+          "fr": "Le Chope butin lancé par Lance-butin jette régulièrement de la dynamite, en visant les héros adverses proches en priorité.",
+          "en": "The Loot Hoard thrown by Hoardapult regularly lobs dynamite, aiming at nearby enemy Heroes first."
         },
         "demoYoutubeId": null
       },
@@ -23468,8 +23468,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/spells/storm_ui_icon_hogger_r2.png",
         "description": {
-          "fr": "Effet de choc réduit l'armure et son temps de recharge est réduit.",
-          "en": "Shockwave reduces Armor, reduced cooldown"
+          "fr": "Toucher des héros avec Effet de choc réduit leur armure et rapporte de la rage à Lardeur.",
+          "en": "Hitting Heroes with Shockwave cuts their Armor and yields Hogger Rage."
         },
         "demoYoutubeId": null
       },
@@ -23482,8 +23482,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_e_variant.png",
         "description": {
-          "fr": "Pourchasse les ennemis avec Lardée sauvage.",
-          "en": "Chase enemies with Hogg Wild"
+          "fr": "À l'activation, Lardeur part en Lardée sauvage et pourchasse un héros adverse, puis rebondit vers un autre une fois la cible atteinte.",
+          "en": "Activate and Hogger tears off in a Hogg Wild that chases an enemy Hero, then bounces to another once it reaches them."
         },
         "demoYoutubeId": null
       },
@@ -23496,15 +23496,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/hogger/images/talents/storm_ui_icon_hogger_rage.png",
         "description": {
-          "fr": "Augmente la rage maximum et le gain de rage.",
-          "en": "Increase max Rage, increase Rage gains"
+          "fr": "Augmente le maximum de rage, ce qui relève d'autant le plafond de réduction des temps de recharge et celui des dégâts que Lardée sauvage inflige aux héros.",
+          "en": "Raises maximum Rage, lifting both the cooldown reduction cap and the cap on Hogg Wild's damage to Heroes."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Hogger",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "illidan",
@@ -27028,7 +27028,7 @@ const HEROES = [
   },
   {
     "id": "leoric",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Leoric",
       "en": "Leoric"
@@ -27053,7 +27053,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_trait.png",
         "description": {
           "fr": "À sa mort, Léoric erre en spectre et revient à la vie une fois ses points de vie remplis. Sous cette forme, il n'inflige aucun dégât.",
-          "en": "On death, Leoric roams as a ghost and returns to life once his Health refills. In that form he deals no damage."
+          "en": "On death, Leoric wanders as a wraith and returns to life once his Health refills. In that form he deals no damage."
         },
         "demoYoutubeId": ""
       },
@@ -27065,8 +27065,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_skeletalswing.png",
         "description": {
-          "fr": "Coup de masse qui blesse et ralentit les ennemis ; toucher un héros en rembourse une bonne part du temps de recharge et du mana.",
-          "en": "A mace swing that damages and Slows enemies; hitting a Hero refunds much of its cooldown and Mana."
+          "fr": "Coup de masse qui blesse et ralentit les ennemis, et frappe bien plus fort les serviteurs. Toucher un héros en rembourse une bonne part du temps de recharge et du mana.",
+          "en": "A mace swing that damages and Slows enemies, and hits Minions far harder. Hitting a Hero refunds a good share of its cooldown and Mana."
         },
         "demoYoutubeId": ""
       },
@@ -27078,8 +27078,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_drainhope.png",
         "description": {
-          "fr": "Ponctionne les points de vie d'un héros adverse tant que Léoric reste près de lui, au prix de sa propre vitesse de déplacement.",
-          "en": "Drains an enemy Hero's Health as long as Leoric stays near them, at the cost of his own Movement Speed."
+          "fr": "Ponctionne les points de vie d'un ennemi tant que Léoric reste près de lui, au prix de sa propre vitesse de déplacement.",
+          "en": "Siphons an enemy's Health for as long as Leoric stays close, at the cost of his own Movement Speed."
         },
         "demoYoutubeId": ""
       },
@@ -27092,7 +27092,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_wraithwalk.png",
         "description": {
           "fr": "Léoric quitte son corps : il devient insensible aux effets de contrôle et accélère progressivement, puis son corps se téléporte à l'emplacement du spectre à la fin de l'effet.",
-          "en": "Leoric leaves his body: he becomes Unstoppable and steadily speeds up, then his body teleports to the wraith's position when the effect ends."
+          "en": "Leoric leaves his body: he becomes Unstoppable and speeds up steadily, then his body teleports to the wraith when it ends."
         },
         "demoYoutubeId": ""
       },
@@ -27104,8 +27104,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_entomb.png",
         "description": {
-          "fr": "Emmure une zone.",
-          "en": "Wall in an area"
+          "fr": "Crée une tombe infranchissable qui tient quelques secondes.",
+          "en": "Creates an impassable tomb that holds for a few seconds."
         },
         "demoYoutubeId": ""
       },
@@ -27117,24 +27117,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_r2.png",
         "description": {
-          "fr": "Léoric devient insensible aux effets de contrôle et avance en assénant de violents coups de masse, se soignant sur chaque héros touché.",
-          "en": "Leoric becomes Unstoppable and marches forward with heavy mace blows, healing from each Hero hit."
+          "fr": "Léoric devient insensible aux effets de contrôle et avance en assénant trois violents coups de masse, se soignant sur chaque héros touché.",
+          "en": "Leoric becomes Unstoppable and marches forward with three heavy mace swings, healing off every Hero he hits."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "En spectre, reste au contact des ennemis pour réduire ton temps de réapparition.",
-        "en": "As a ghost, stay near enemies to cut your respawn timer."
+        "fr": "Ta mort n'est qu'une pause : en spectre, colle les héros adverses, chaque seconde passée à leur contact fait tomber ton temps de réapparition.",
+        "en": "Dying is only a pause: as a wraith, stick to enemy Heroes, every second spent near them drops your respawn timer."
       },
       {
-        "fr": "Drain d'espoir doit durer : place-toi pour que la cible ne s'éloigne pas.",
-        "en": "Drain Hope needs time: position so the target cannot get away."
+        "fr": "Drain d'espoir (Z) ne paie que s'il va au bout : lance-le quand la cible ne peut pas décrocher, pas au milieu d'un fight ouvert.",
+        "en": "Drain Hope (W) only pays if it runs its course: cast it when the target can't peel away, not in the middle of an open fight."
       },
       {
-        "fr": "Tombeau isole une cible ou coupe complètement une retraite.",
-        "en": "Entomb isolates a target or completely cuts off a retreat."
+        "fr": "Marche spectrale (E) te rend insensible aux contrôles : sers-t'en pour traverser un combo adverse, pas seulement pour fuir.",
+        "en": "Wraith Walk (E) makes you Unstoppable: use it to walk through an enemy combo, not just to escape."
       }
     ],
     "builds": [
@@ -27142,32 +27142,152 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build recommandé",
-          "en": "Recommended build"
+          "fr": "Build auto-attaque",
+          "en": "Auto-attack build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build tourné vers les attaques de base.",
+          "en": "Built around Basic Attacks."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Leoric]",
+        "buildCode": "[T3211331,Leoric]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmeai9b6f01qxm",
+            "primaryId": "tmeai9b6f03mxe",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmeai9b6f04smw",
+            "primaryId": "tmeai9b6f054k9",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmeai9b6f071b4",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmeai9b6f10za9",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmeai9b6f14g32",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmeai9b6f172mk",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmeai9b6f18kdu",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build E",
+          "en": "E build"
+        },
+        "summary": {
+          "fr": "Build centré sur Marche spectrale, pour entrer et ressortir sans être arrêté.",
+          "en": "Focused on Wraith Walk, to get in and back out without being stopped."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T3211221,Leoric]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmeai9b6f03mxe",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmeai9b6f054k9",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmeai9b6f071b4",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmeai9b6f10za9",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmeai9b6f1357g",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmeai9b6f16tml",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmeai9b6f18kdu",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 3,
+        "label": {
+          "fr": "Build Z",
+          "en": "W build"
+        },
+        "summary": {
+          "fr": "Build centré sur Drain d'espoir.",
+          "en": "Focused on Drain Hope."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T3211111,Leoric]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmeai9b6f03mxe",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmeai9b6f054k9",
             "alternativeIds": []
           },
           {
@@ -27210,8 +27330,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_skeletalswing.png",
         "description": {
-          "fr": "Chaque héros adverse touché par Frappe du squelette rend des points de vie à Léoric, et la capacité voit son temps de recharge réduit.",
-          "en": "Each enemy Hero hit by Skeletal Swing restores Health to Leoric, and the Ability returns sooner."
+          "fr": "Chaque héros touché par Frappe du squelette rend des points de vie à Léoric, et la capacité revient plus vite.",
+          "en": "Each Hero hit by Skeletal Swing heals Leoric, and the Ability comes back sooner."
         },
         "demoYoutubeId": null
       },
@@ -27224,8 +27344,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_trait.png",
         "description": {
-          "fr": "À leur mort, les serviteurs octroient des points de vie et de mana.",
-          "en": "Gain Health and Mana when Minions die"
+          "fr": "Chaque serviteur qui meurt à proximité, allié comme ennemi, rend des points de vie et du mana à Léoric.",
+          "en": "Every Minion dying nearby, friend or foe, restores Health and Mana to Leoric."
         },
         "demoYoutubeId": null
       },
@@ -27238,8 +27358,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_amplifiedhealing.png",
         "description": {
-          "fr": "Rend des points de vie à l'activation.",
-          "en": "Activate to heal"
+          "fr": "À l'activation, rend une grosse part des points de vie de Léoric sur quelques secondes. Les globes de régénération en réduisent fortement le temps de recharge.",
+          "en": "Activate to restore a big chunk of Leoric's Health over a few seconds. Regeneration Globes sharply cut its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -27253,7 +27373,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_skeletalswing.png",
         "description": {
           "fr": "Augmente la portée de Frappe du squelette.",
-          "en": "Increase Skeletal Swing range"
+          "en": "Increases Skeletal Swing's range."
         },
         "demoYoutubeId": null
       },
@@ -27267,7 +27387,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/leoric/images/talents/storm_ui_icon_leoric_skeletalswing_var1.png",
         "description": {
           "fr": "Augmente le ralentissement de Frappe du squelette.",
-          "en": "Increase Skeletal Swing Slow"
+          "en": "Increases Skeletal Swing's Slow."
         },
         "demoYoutubeId": null
       },
@@ -27280,8 +27400,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/talents/storm_ui_icon_leoric_skeletalswing_var2.png",
         "description": {
-          "fr": "Renforce Frappe du squelette contre les cibles non héroïques",
-          "en": "Empower Skeletal Swing against non-Heroes"
+          "fr": "Frappe du squelette frappe bien plus fort les mercenaires et les monstres, et les toucher déclenche aussi son remboursement.",
+          "en": "Skeletal Swing hits Mercenaries and Monsters far harder, and hitting them also triggers its refund."
         },
         "demoYoutubeId": null
       },
@@ -27294,8 +27414,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_drainhope.png",
         "description": {
-          "fr": "Augmente les soins de Drain d'espoir.",
-          "en": "Increase Drain Hope healing"
+          "fr": "Drain d'espoir rend davantage de points de vie, et un supplément immédiat s'il va jusqu'à son terme.",
+          "en": "Drain Hope heals for more, plus an instant bonus if it runs to the end."
         },
         "demoYoutubeId": null
       },
@@ -27308,8 +27428,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/talents/storm_ui_icon_leoric_drainhope_var1.png",
         "description": {
-          "fr": "Drain d'espoir augmente la vitesse de déplacement.",
-          "en": "Drain Hope grants Move Speed"
+          "fr": "Drain d'espoir ne ralentit plus Léoric : au contraire, mené à son terme, il l'accélère quelques secondes.",
+          "en": "Drain Hope no longer Slows Leoric: run to the end, it speeds him up for a few seconds instead."
         },
         "demoYoutubeId": null
       },
@@ -27323,7 +27443,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/leoric/images/talents/storm_ui_icon_leoric_drainhope_var2.png",
         "description": {
           "fr": "Augmente la portée de Drain d'espoir.",
-          "en": "Increase Drain Hope range"
+          "en": "Increases Drain Hope's range."
         },
         "demoYoutubeId": null
       },
@@ -27336,8 +27456,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_entomb.png",
         "description": {
-          "fr": "Emmure une zone.",
-          "en": "Wall in an area"
+          "fr": "Crée une tombe infranchissable qui tient quelques secondes.",
+          "en": "Creates an impassable tomb that holds for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -27350,8 +27470,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_r2.png",
         "description": {
-          "fr": "Léoric devient insensible aux effets de contrôle et avance en assénant de violents coups de masse, se soignant sur chaque héros touché.",
-          "en": "Leoric becomes Unstoppable and marches forward with heavy mace blows, healing from each Hero hit."
+          "fr": "Léoric devient insensible aux effets de contrôle et avance en assénant trois violents coups de masse, se soignant sur chaque héros touché.",
+          "en": "Leoric becomes Unstoppable and marches forward with three heavy mace swings, healing off every Hero he hits."
         },
         "demoYoutubeId": null
       },
@@ -27364,8 +27484,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_drainhope.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Drain d'espoir.",
-          "en": "Reduce Drain Hope cooldown"
+          "fr": "Chaque seconde passée à drainer réduit le temps de recharge de Drain d'espoir, et le mener à son terme le réduit encore.",
+          "en": "Every second spent draining cuts Drain Hope's cooldown, and finishing it cuts it further."
         },
         "demoYoutubeId": null
       },
@@ -27378,8 +27498,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_wraithwalk.png",
         "description": {
-          "fr": "Renforce Marche spectrale.",
-          "en": "Empower Wraith Walk"
+          "fr": "Double la durée de Marche spectrale, et les héros qui touchent le spectre infligent moitié moins de dégâts pendant quelques secondes.",
+          "en": "Doubles Wraith Walk's duration, and Heroes who touch the wraith deal half damage for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -27392,8 +27512,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_heal.png",
         "description": {
-          "fr": "Les attaques de base infligent plus de dégâts et rendent des points de vie.",
-          "en": "Basic Attacks deal extra damage and heal"
+          "fr": "Les attaques de base portées aux héros infligent des dégâts supplémentaires proportionnels à leurs points de vie maximum et rendent le double de ce montant à Léoric.",
+          "en": "Basic Attacks on Heroes deal bonus damage based on their maximum Health and heal Leoric for twice that amount."
         },
         "demoYoutubeId": null
       },
@@ -27406,8 +27526,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_drainhope.png",
         "description": {
-          "fr": "Mener Drain d'espoir à son terme inflige des dégâts supplémentaires.",
-          "en": "Full duration Drain Hope deals bonus damage"
+          "fr": "Mener Drain d'espoir à son terme inflige aussitôt de gros dégâts proportionnels aux points de vie maximum de la victime. Ces dégâts-là ne soignent pas Léoric.",
+          "en": "Running Drain Hope to the end instantly deals heavy damage based on the victim's maximum Health. That damage does not heal Leoric."
         },
         "demoYoutubeId": null
       },
@@ -27420,8 +27540,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_wraithwalk.png",
         "description": {
-          "fr": "Marche spectrale renforce la prochaine Frappe du squelette, et chaque héros adverse touché par celle-ci raccourcit le temps de recharge de Marche spectrale.",
-          "en": "Wraith Walk empowers the next Skeletal Swing, and each enemy Hero it hits brings the next Wraith Walk closer."
+          "fr": "Marche spectrale renforce la prochaine Frappe du squelette, et chaque héros touché par celle-ci réduit fortement le temps de recharge de Marche spectrale.",
+          "en": "Wraith Walk empowers the next Skeletal Swing, and each Hero it hits sharply cuts Wraith Walk's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -27434,8 +27554,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_speed.png",
         "description": {
-          "fr": "Quête : renforce Courroux du roi d'os.",
-          "en": "Quest: Empower Wrath Of The Bone King"
+          "fr": "Augmente la vitesse d'attaque de Léoric.",
+          "en": "Increases Leoric's Attack Speed."
         },
         "demoYoutubeId": null
       },
@@ -27448,8 +27568,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_entomb.png",
         "description": {
-          "fr": "Tombeau inflige des dégâts aux ennemis et les réduit au silence.",
-          "en": "Entomb damages and Silences"
+          "fr": "Tombeau dure un peu moins longtemps, mais les ennemis qu'il piège sont réduits au silence et blessés en continu.",
+          "en": "Entomb lasts a little less, but the enemies trapped inside are Silenced and damaged continuously."
         },
         "demoYoutubeId": null
       },
@@ -27462,8 +27582,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_r2.png",
         "description": {
-          "fr": "Marche du roi noir applique Drain d'espoir.",
-          "en": "March of the Black King applies Drain Hope"
+          "fr": "Le dernier coup de Marche du roi noir applique aussi Drain d'espoir aux héros proches.",
+          "en": "March of the Black King's last swing also applies Drain Hope to nearby Heroes."
         },
         "demoYoutubeId": null
       },
@@ -27476,8 +27596,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/leoric/images/spells/storm_ui_icon_leoric_drainhope.png",
         "description": {
-          "fr": "Inflige des dégâts aux ennemis proches et confère de l'armure.",
-          "en": "Damage nearby enemies, gain Armor"
+          "fr": "Léoric blesse en continu les ennemis autour de lui.",
+          "en": "Leoric continuously damages the enemies around him."
         },
         "demoYoutubeId": null
       },
@@ -27490,15 +27610,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_hardenedshield.png",
         "description": {
-          "fr": "Immunise contre tous les dégâts à l'activation.",
-          "en": "Activate to become Protected"
+          "fr": "À l'activation, immunise Léoric contre tous les dégâts quelques secondes.",
+          "en": "Activate to make Leoric immune to all damage for a few seconds."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Leoric",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "liming",
