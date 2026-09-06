@@ -44666,7 +44666,7 @@ const HEROES = [
   },
   {
     "id": "yrel",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Yrel",
       "en": "Yrel"
@@ -44690,8 +44690,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_divine_purpose.png",
         "description": {
-          "fr": "À l'activation, la prochaine capacité de base part instantanément, à pleine charge et sans coût. Être étourdie ou réduite au silence pendant un chargement en raccourcit le temps de recharge. Effet passif : ses capacités se chargent avant de partir, ce qui les renforce mais la ralentit pendant ce temps.",
-          "en": "On activation, the next Basic Ability fires instantly, fully charged and free. Being Stunned or Silenced during a charge-up brings the next cast closer. Passive: her Abilities charge before firing, which empowers them but Slows her meanwhile."
+          "fr": "À l'activation, la prochaine capacité de base part instantanément, à pleine charge et sans coût en mana. Lancer une capacité héroïque remet Dessein divin à zéro. Effet passif : ses capacités se chargent avant de partir, ce qui les renforce mais la ralentit pendant ce temps.",
+          "en": "Activate and the next Basic Ability fires instantly, fully charged and free. Casting a Heroic resets Divine Purpose. Passive: her Abilities charge up before firing, which makes them stronger but Slows her while they do."
         },
         "demoYoutubeId": ""
       },
@@ -44704,7 +44704,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_vindication.png",
         "description": {
           "fr": "Libère une onde sacrée qui blesse les ennemis proches et soigne Yrel, d'autant plus que la capacité a été chargée longtemps.",
-          "en": "Releases holy energy that damages nearby enemies and heals Yrel, more so the longer it was charged."
+          "en": "Releases a holy wave that damages nearby enemies and heals Yrel, more the longer it was charged."
         },
         "demoYoutubeId": ""
       },
@@ -44717,7 +44717,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_righteous_hammer.png",
         "description": {
           "fr": "Repousse les ennemis devant elle ; à pleine charge, le coup porte plus loin, frappe plus fort et les étourdit.",
-          "en": "Knocks back the enemies in front of her; at full charge the blow reaches farther, hits harder and Stuns them."
+          "en": "Knocks back the enemies in front of her; at full charge it reaches farther, hits harder and Stuns them."
         },
         "demoYoutubeId": ""
       },
@@ -44730,7 +44730,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_avenging_wrath.png",
         "description": {
           "fr": "Bondit à l'endroit ciblé en blessant et ralentissant les ennemis ; charger la capacité en augmente la portée.",
-          "en": "Leaps to the target location, damaging and Slowing enemies; charging it increases the range."
+          "en": "Leaps to the target spot, damaging and Slowing enemies; charging it up extends its range."
         },
         "demoYoutubeId": ""
       },
@@ -44742,8 +44742,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_ardent_defender.png",
         "description": {
-          "fr": "Une barrière absorbe tous les dégâts subis pendant un court instant et les reconvertit en points de vie.",
-          "en": "A barrier absorbs all damage taken for a brief moment and converts it back into Health."
+          "fr": "Une barrière absorbe tous les dégâts subis pendant un court instant et en reconvertit la moitié en points de vie.",
+          "en": "A barrier absorbs all incoming damage for a brief moment and turns half of it back into Health."
         },
         "demoYoutubeId": ""
       },
@@ -44756,23 +44756,23 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_sacred_ground.png",
         "description": {
           "fr": "Yrel consacre le sol autour d'elle : elle gagne une armure considérable tant qu'elle reste dans la zone.",
-          "en": "Yrel consecrates the ground around her: she gains considerable Armor while she stays inside."
+          "en": "Yrel sanctifies the ground around her: she gains heavy Armor for as long as she stays inside."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Charger tes sorts au maximum en augmente nettement l'effet.",
-        "en": "Fully charging your Abilities makes them markedly stronger."
+        "fr": "Rémission (A) se relance dès qu'elle est up, même dans le vide : c'est ta seule source de sustain en lane, et Dessein divin (D) t'évite d'y laisser ton mana.",
+        "en": "Cast Vindication (Q) whenever it's up, even hitting nothing: it's your only sustain in lane, and Divine Purpose (D) saves the Mana."
       },
       {
-        "fr": "Ardent défenseur annule un burst complet : garde-le pour le bon moment.",
-        "en": "Ardent Defender negates a full burst: save it for the right moment."
+        "fr": "Courroux vengeur (E) se charge derrière un mur : l'équipe d'en face ne te voit pas venir et tu tombes dessus à pleine portée.",
+        "en": "Charge Avenging Wrath (E) behind terrain: the enemy team doesn't see you coming and you land on them at full range."
       },
       {
-        "fr": "Dessein divin lance la capacité suivante instantanément : garde-le pour un contrôle.",
-        "en": "Divine Purpose fires the next Ability instantly: save it for a Stun."
+        "fr": "Ardent défenseur (R) se lance vers la moitié de ta vie, pas au dernier moment : tu continues le fight au lieu de devoir décrocher quand même.",
+        "en": "Use Ardent Defender (R) around half Health, not at the last second: you keep fighting instead of having to back off anyway."
       }
     ],
     "builds": [
@@ -44791,11 +44791,11 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Yrel]",
+        "buildCode": "[T1321314,Yrel]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
@@ -44805,12 +44805,12 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tm1z1xjms04q7b",
+            "primaryId": "tm1z1xjms06ebj",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tm1z1xjms07hdb",
+            "primaryId": "tm1z1xjms08lom",
             "alternativeIds": []
           },
           {
@@ -44820,7 +44820,7 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tm1z1xjms12yuo",
+            "primaryId": "tm1z1xjms14pk5",
             "alternativeIds": []
           },
           {
@@ -44830,7 +44830,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tm1z1xjms187m7",
+            "primaryId": "tm1z1xjms21b4i",
             "alternativeIds": []
           }
         ],
@@ -44848,8 +44848,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_vindication.png",
         "description": {
-          "fr": "Augmente le rayon de Rémission et les points de vie qu'elle rend.",
-          "en": "Increase Vindication radius, healing"
+          "fr": "Augmente le rayon de Rémission. Toucher un héros augmente nettement les points de vie qu'elle rend, et davantage encore à partir de deux.",
+          "en": "Increases Vindication's radius. Hitting a Hero raises its healing sharply, and more still from two onwards."
         },
         "demoYoutubeId": null
       },
@@ -44862,8 +44862,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_abilitytalent_armor.png",
         "description": {
-          "fr": "Les capacités de base confèrent de l'armure physique.",
-          "en": "Basic Abilities grant Physical Armor"
+          "fr": "Lancer une capacité de base confère de l'armure physique à Yrel quelques secondes.",
+          "en": "Casting a Basic Ability grants Yrel Physical Armor for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -44876,8 +44876,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_heal.png",
         "description": {
-          "fr": "L'attaque qui suit l'utilisation d'une capacité de base rend des points de vie à Yrel.",
-          "en": "Attacking after Basic Abilities heals"
+          "fr": "Après avoir blessé un héros avec une capacité de base, la prochaine attaque de base d'Yrel lui rend des points de vie.",
+          "en": "After damaging a Hero with a Basic Ability, Yrel's next Basic Attack heals her."
         },
         "demoYoutubeId": null
       },
@@ -44890,8 +44890,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_avenging_wrath.png",
         "description": {
-          "fr": "Courroux vengeur confère de l'armure aux alliés.",
-          "en": "Avenging Wrath grants allies Armor"
+          "fr": "À l'atterrissage, Courroux vengeur confère de l'armure aux héros alliés proches.",
+          "en": "On landing, Avenging Wrath grants Armor to nearby allied Heroes."
         },
         "demoYoutubeId": null
       },
@@ -44904,8 +44904,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_divine_purpose.png",
         "description": {
-          "fr": "Dessein divin rend des points de vie à un allié.",
-          "en": "Divine Purpose heals an ally"
+          "fr": "Dessein divin rend des points de vie à l'allié proche qui en a le moins.",
+          "en": "Divine Purpose heals the nearby ally with the least Health."
         },
         "demoYoutubeId": null
       },
@@ -44918,8 +44918,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_hand_of_freedom.png",
         "description": {
-          "fr": "Augmente la vitesse de déplacement et dissipe les ralentissements et immobilisations.",
-          "en": "Grants Move Speed, removes Slows, Roots"
+          "fr": "Accélère un héros allié et dissipe les ralentissements et immobilisations qui l'affectent.",
+          "en": "Speeds an allied Hero up and clears the Slows and Roots on them."
         },
         "demoYoutubeId": null
       },
@@ -44933,7 +44933,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_righteous_hammer.png",
         "description": {
           "fr": "Marteau vertueux accélère Yrel et ne la ralentit plus pendant sa canalisation ; à pleine charge, le gain de vitesse est bien plus fort.",
-          "en": "Righteous Hammer speeds Yrel up and no longer Slows her while channeling; at full charge, the speed gain is far greater."
+          "en": "Righteous Hammer speeds Yrel up and no longer Slows her while channeling; at full charge the speed bonus is far bigger."
         },
         "demoYoutubeId": null
       },
@@ -44946,8 +44946,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_avenging_wrath.png",
         "description": {
-          "fr": "Temps de recharge réduit à pleine charge.",
-          "en": "Avenging Wrath cooldown reduced at max charge"
+          "fr": "Toucher un héros avec Courroux vengeur à pleine charge frappe plus fort et ramène son temps de recharge à presque rien.",
+          "en": "Hitting a Hero with a fully charged Avenging Wrath hits harder and drops its cooldown to almost nothing."
         },
         "demoYoutubeId": null
       },
@@ -44960,8 +44960,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_divine_steed.png",
         "description": {
-          "fr": "L'invocation de la monture est instantanée.",
-          "en": "Mounting is instant"
+          "fr": "L'invocation de la monture est instantanée et donne un gros pic de vitesse qui retombe en quelques secondes.",
+          "en": "Mounting is instant and gives a big speed spike that fades over a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -44974,8 +44974,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_ardent_defender.png",
         "description": {
-          "fr": "Une barrière absorbe tous les dégâts subis pendant un court instant et les reconvertit en points de vie.",
-          "en": "A barrier absorbs all damage taken for a brief moment and converts it back into Health."
+          "fr": "Une barrière absorbe tous les dégâts subis pendant un court instant et en reconvertit la moitié en points de vie.",
+          "en": "A barrier absorbs all incoming damage for a brief moment and turns half of it back into Health."
         },
         "demoYoutubeId": null
       },
@@ -44989,7 +44989,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_sacred_ground.png",
         "description": {
           "fr": "Yrel consacre le sol autour d'elle : elle gagne une armure considérable tant qu'elle reste dans la zone.",
-          "en": "Yrel consecrates the ground around her: she gains considerable Armor while she stays inside."
+          "en": "Yrel sanctifies the ground around her: she gains heavy Armor for as long as she stays inside."
         },
         "demoYoutubeId": null
       },
@@ -45002,8 +45002,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_vindication.png",
         "description": {
-          "fr": "Rémission peut réduire les dégâts ennemis.",
-          "en": "Vindication can reduce enemy damage"
+          "fr": "Les héros touchés par Rémission à pleine charge infligent nettement moins de dégâts quelques secondes.",
+          "en": "Heroes hit by a fully charged Vindication deal far less damage for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -45017,7 +45017,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_avenging_wrath.png",
         "description": {
           "fr": "Augmente l'intensité et la durée du ralentissement de Courroux vengeur.",
-          "en": "Increase Avenging Wrath Slow, duration"
+          "en": "Increases the strength and the duration of Avenging Wrath's Slow."
         },
         "demoYoutubeId": null
       },
@@ -45030,8 +45030,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_velens_chosen.png",
         "description": {
-          "fr": "Les capacités de base peuvent conférer de la puissance de capacité.",
-          "en": "Basic Abilities can grant Spell Power"
+          "fr": "Toucher un héros avec une capacité de base à pleine charge augmente la puissance de capacité d'Yrel, cumulable jusqu'à un plafond.",
+          "en": "Hitting a Hero with a fully charged Basic Ability grants Yrel Spell Power, stacking up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -45044,8 +45044,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_righteous_hammer.png",
         "description": {
-          "fr": "Marteau vertueux réduit l'armure des cibles et leur inflige un pourcentage de dégâts.",
-          "en": "Righteous Hammer reduces Armor, deals percent damage"
+          "fr": "Marteau vertueux réduit l'armure des héros touchés et leur inflige des dégâts supplémentaires proportionnels à leurs points de vie maximum.",
+          "en": "Righteous Hammer cuts the Armor of the Heroes it hits and deals them bonus damage based on their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -45058,8 +45058,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_divine_purpose.png",
         "description": {
-          "fr": "Les capacités de base réduisent le temps de recharge de Dessein divin.",
-          "en": "Basic Abilities reduce Divine Purpose cooldown"
+          "fr": "Lancer une capacité de base réduit le temps de recharge de Dessein divin.",
+          "en": "Casting a Basic Ability reduces Divine Purpose's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -45072,8 +45072,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_aoe.png",
         "description": {
-          "fr": "L'attaque de base qui suit l'utilisation d'une capacité de base inflige des dégâts de zone.",
-          "en": "Attacks splash after casting Basic Abilities"
+          "fr": "Après une capacité de base, la prochaine attaque de base d'Yrel frappe plus fort et éclabousse les ennemis autour de la cible.",
+          "en": "After a Basic Ability, Yrel's next Basic Attack hits harder and splashes onto the enemies around the target."
         },
         "demoYoutubeId": null
       },
@@ -45086,8 +45086,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_ardent_defender.png",
         "description": {
-          "fr": "Conversion d'Ardent défenseur augmentée, rend des points de vie aux alliés dans une zone.",
-          "en": "Ardent Defender conversion increased, heals allies in an area"
+          "fr": "Ardent défenseur reconvertit une plus grosse part des dégâts, et rend autant de points de vie aux héros alliés proches.",
+          "en": "Ardent Defender converts a bigger share of the damage, and heals nearby allied Heroes for as much."
         },
         "demoYoutubeId": null
       },
@@ -45100,8 +45100,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/spells/storm_ui_icon_yrel_sacred_ground.png",
         "description": {
-          "fr": "Courroux vengeur permet de déplacer Terre sacrée.",
-          "en": "Avenging Wrath moves Sacred Ground"
+          "fr": "Lancer Courroux vengeur depuis Terre sacrée déplace la zone là où Yrel atterrit.",
+          "en": "Casting Avenging Wrath from inside Sacred Ground moves the area to where Yrel lands."
         },
         "demoYoutubeId": null
       },
@@ -45114,8 +45114,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_bubble_hearth.png",
         "description": {
-          "fr": "Rend invulnérable Yrel qui se téléporte au hall des Tempêtes.",
-          "en": "Activate to become Invulnerable and Hearth"
+          "fr": "Après un instant, Yrel devient invulnérable et part en pierre de foyer. Impossible à annuler.",
+          "en": "After a moment, Yrel turns Invulnerable and Hearthstones out. It cannot be cancelled."
         },
         "demoYoutubeId": null
       },
@@ -45128,15 +45128,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/yrel/images/talents/storm_ui_icon_yrel_seraphim.png",
         "description": {
-          "fr": "Rend insensible aux effets de contrôle.",
-          "en": "Activate to become Unstoppable"
+          "fr": "À l'activation, rend Yrel insensible aux effets de contrôle un court instant.",
+          "en": "Activate to make Yrel Unstoppable for a brief moment."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Yrel",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "zagara",
