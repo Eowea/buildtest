@@ -13958,7 +13958,7 @@ const HEROES = [
   },
   {
     "id": "chen",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Chen",
       "en": "Chen"
@@ -13983,7 +13983,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_fortifyingbrew.png",
         "description": {
           "fr": "Chen boit à son tonneau : il regagne du breuvage et accumule un bouclier tant qu'il boit, qui persiste un moment après.",
-          "en": "Chen drinks from his keg: he regains Brew and builds a Shield while drinking, which lingers a moment after."
+          "en": "Chen drinks from his keg: he gets Brew back and builds a Shield while he drinks, which lingers a while afterwards."
         },
         "demoYoutubeId": ""
       },
@@ -13996,7 +13996,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_flyingkick.png",
         "description": {
           "fr": "Donne un coup de pied qui traverse l'ennemi ciblé en le blessant.",
-          "en": "Delivers a kick that passes through the target enemy, damaging them."
+          "en": "Kicks through the targeted enemy, damaging them."
         },
         "demoYoutubeId": ""
       },
@@ -14009,7 +14009,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_kegsmash.png",
         "description": {
           "fr": "Trempe de breuvage les ennemis d'une zone et les ralentit, de plus en plus fort au bout d'un moment. La capacité se change ensuite en Souffle de feu, qui embrase les ennemis trempés.",
-          "en": "Douses the enemies in an area with Brew and Slows them, harder after a moment. The Ability then becomes Breath of Fire, which ignites the doused enemies."
+          "en": "Soaks the enemies in an area with Brew and Slows them, harder after a moment. The Ability then becomes Breath of Fire, which Ignites the soaked enemies."
         },
         "demoYoutubeId": ""
       },
@@ -14022,7 +14022,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_stagger.png",
         "description": {
           "fr": "Absorbe les dégâts subis pendant quelques secondes, puis les inflige à Chen étalés dans le temps, sans possibilité de les réduire.",
-          "en": "Absorbs damage taken for a few seconds, then deals it to Chen spread over time, with no way to reduce it."
+          "en": "Absorbs the damage taken for a few seconds, then deals it back to Chen spread over time, with no way to reduce it."
         },
         "demoYoutubeId": ""
       },
@@ -14034,8 +14034,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_stormearthfire.png",
         "description": {
-          "fr": "Après un temps de préparation, Chen se scinde en trois esprits élémentaires : Tempête protège d'un bouclier, Terre bondit et ralentit, Feu renforce les attaques. La dernière capacité utilisée est renforcée, et si les trois esprits meurent, Chen meurt avec eux.",
-          "en": "After a wind-up, Chen splits into three elemental spirits: Storm grants a Shield, Earth leaps and Slows, Fire empowers attacks. The last spirit Ability used is empowered, and if all three spirits die, Chen dies with them."
+          "fr": "Après un temps de préparation, Chen se scinde en trois esprits élémentaires dotés chacun d'une bonne part de ses points de vie : Tempête protège d'un bouclier, Terre bondit et ralentit, Feu renforce les attaques. La dernière capacité utilisée est renforcée, et si les trois esprits meurent, Chen meurt avec eux.",
+          "en": "After a wind-up, Chen splits into three elemental spirits, each with a good share of his Health: Storm shields, Earth leaps and Slows, Fire boosts attacks. The last Ability used is empowered, and if all three spirits die, Chen dies with them."
         },
         "demoYoutubeId": ""
       },
@@ -14048,23 +14048,23 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_wanderingkeg.png",
         "description": {
           "fr": "Chen saute dans un tonneau, insensible aux effets de contrôle et couvert d'armure, qui file plus vite en bousculant et blessant les ennemis sur son passage.",
-          "en": "Chen hops into a barrel, Unstoppable and armored, rolling faster while bowling over and damaging enemies in its path."
+          "en": "Chen jumps into a barrel, Unstoppable and armored, rolling faster while knocking back and damaging the enemies in its way."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Bois toujours après avoir absorbé : Report te rend la facture sinon.",
-        "en": "Always drink after absorbing: otherwise Stagger hands you the bill."
+        "fr": "Report (E) ne fait que décaler la facture : bois (D) pendant qu'elle tombe, le bouclier absorbe les dégâts différés.",
+        "en": "Stagger (E) only delays the bill: drink (D) while it comes due, the Shield eats the deferred damage."
       },
       {
-        "fr": "Fracasse-tonneau se change en Souffle de feu : enchaîne les deux systématiquement.",
-        "en": "Keg Smash becomes Breath of Fire: always chain the two."
+        "fr": "Place une attaque de base entre Fracasse-tonneau (Z) et Souffle de feu : c'est ce qui fait tout ton dégât, pas l'enchaînement direct.",
+        "en": "Land a Basic Attack between Keg Smash (W) and Breath of Fire: that's where your damage comes from, not the raw chain."
       },
       {
-        "fr": "Tonneau fou te rend insensible aux contrôles et bouscule toute une équipe.",
-        "en": "Wandering Keg makes you Unstoppable and bowls over a whole team."
+        "fr": "Coup de pied volant (A) se lance sur n'importe quelle unité : vise un serviteur ou un mur pour sortir d'un mauvais pas.",
+        "en": "Flying Kick (Q) works on any unit: target a Minion or a wall to get yourself out of trouble."
       }
     ],
     "builds": [
@@ -14083,16 +14083,16 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Chen]",
+        "buildCode": "[T2131413,Chen]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmdpbfh1o01hke",
+            "primaryId": "tmdpbfh1o02mco",
             "alternativeIds": []
           },
           {
@@ -14102,7 +14102,7 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tmdpbfh1o079no",
+            "primaryId": "tmdpbfh1o096u1",
             "alternativeIds": []
           },
           {
@@ -14112,7 +14112,7 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tmdpbfh1o12tmx",
+            "primaryId": "tmdpbfh1o152jx",
             "alternativeIds": []
           },
           {
@@ -14122,7 +14122,67 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmdpbfh1o19kph",
+            "primaryId": "tmdpbfh1o21jw2",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build Z",
+          "en": "W build"
+        },
+        "summary": {
+          "fr": "Build centré sur Fracasse-tonneau et Souffle de feu.",
+          "en": "Focused on Keg Smash and Breath of Fire."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T1331213,Chen]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmdpbfh1o01hke",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmdpbfh1o06sba",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmdpbfh1o096u1",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmdpbfh1o10ctv",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmdpbfh1o13zec",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmdpbfh1o16fpk",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmdpbfh1o21jw2",
             "alternativeIds": []
           }
         ],
@@ -14140,8 +14200,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_breathoffire.png",
         "description": {
-          "fr": "Quête : brûler des héros adverses pour augmenter ses dégâts et sa portée.",
-          "en": "Quest: Burn enemy Heroes to gain damage, range"
+          "fr": "Récompenses successives : brûler des héros avec Souffle de feu en augmente définitivement les dégâts périodiques, puis allonge la portée de Fracasse-tonneau, et enfin l'embrasement réduit l'armure de la cible et se prolonge à chaque attaque de Chen.",
+          "en": "Successive rewards: burning Heroes with Breath of Fire permanently increases its periodic damage, then extends Keg Smash's range, and finally the Ignite cuts the target's Armor and lasts longer with each of Chen's attacks."
         },
         "demoYoutubeId": null
       },
@@ -14154,8 +14214,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_fortifyingbrew.png",
         "description": {
-          "fr": "Quête : les globes de régénération rendent davantage de points de vie. Récompense : Boisson fortifiante se recharge plus vite, et Chen conserve en permanence une partie de son bouclier.",
-          "en": "Quest: Regeneration Globes restore more Health. Reward: Fortifying Brew returns sooner, and Chen permanently keeps part of its Shield."
+          "fr": "Quête : les globes de régénération rendent des points de vie bien plus longtemps. Récompense : Boisson fortifiante se recharge plus vite, et Chen conserve en permanence une partie de son bouclier.",
+          "en": "Quest: Regeneration Globes heal for far longer. Reward: Fortifying Brew recharges faster, and Chen keeps part of its Shield permanently."
         },
         "demoYoutubeId": null
       },
@@ -14168,8 +14228,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_stormstoutsecretrecipe.png",
         "description": {
-          "fr": "Les capacités de base rendent des points de vie à Chen.",
-          "en": "Basic Abilities heal Chen"
+          "fr": "Les capacités de base qui touchent un héros rendent des points de vie à Chen.",
+          "en": "Basic Abilities that hit a Hero heal Chen."
         },
         "demoYoutubeId": null
       },
@@ -14182,8 +14242,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_flyingkick.png",
         "description": {
-          "fr": "Coup de pied volant ne coûte plus de breuvage, et frappe plus fort tant que Chen est couvert par le bouclier de Boisson fortifiante.",
-          "en": "Flying Kick no longer costs Brew, and hits harder while Chen is covered by Fortifying Brew's Shield."
+          "fr": "Coup de pied volant ne coûte plus de breuvage, et frappe bien plus fort tant que Chen est couvert par le bouclier de Boisson fortifiante.",
+          "en": "Flying Kick no longer costs Brew, and hits far harder while Chen is covered by Fortifying Brew's Shield."
         },
         "demoYoutubeId": null
       },
@@ -14196,8 +14256,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_kegsmash.png",
         "description": {
-          "fr": "Les attaques de base infligent des dégâts supplémentaires et rendent des points de vie.",
-          "en": "Basic Attacks deal bonus damage, heal"
+          "fr": "Les attaques de base portées à un héros trempé de breuvage frappent plus fort et rendent des points de vie à Chen.",
+          "en": "Basic Attacks on a Brew-soaked Hero hit harder and heal Chen."
         },
         "demoYoutubeId": null
       },
@@ -14210,8 +14270,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_breathoffire_a.png",
         "description": {
-          "fr": "Embraser les héros réduit leur puissance de capacité.",
-          "en": "Igniting Heroes reduces their Spell Power"
+          "fr": "Embraser un héros réduit fortement sa puissance de capacité.",
+          "en": "Igniting a Hero sharply cuts their Spell Power."
         },
         "demoYoutubeId": null
       },
@@ -14224,8 +14284,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_stagger.png",
         "description": {
-          "fr": "Augmente la durée de Report et réduit les dégâts subis.",
-          "en": "Increase Stagger's duration, reduce damage taken"
+          "fr": "Report absorbe les dégâts plus longtemps, et Chen n'en récupère ensuite qu'une moitié.",
+          "en": "Stagger absorbs damage for longer, and Chen only takes half of it back afterwards."
         },
         "demoYoutubeId": null
       },
@@ -14239,7 +14299,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_fortifyingbrew.png",
         "description": {
           "fr": "Vitesse de déplacement accrue quand la jauge de breuvage est basse, récupération de points de vie accrue quand elle est haute.",
-          "en": "Movement Speed while the Brew gauge is low, Health regeneration while it is high."
+          "en": "More Movement Speed when the Brew gauge is low, more Health regeneration when it is high."
         },
         "demoYoutubeId": null
       },
@@ -14252,8 +14312,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_elusivebrew.png",
         "description": {
-          "fr": "Accélère Chen et lui permet d'éviter toutes les attaques de base ; ses propres attaques en réduisent le temps de recharge.",
-          "en": "Speeds Chen up and lets him Evade all Basic Attacks; his own attacks reduce its cooldown."
+          "fr": "Accélère Chen et lui permet d'éviter toutes les attaques de base quelques secondes ; ses propres attaques en réduisent le temps de recharge.",
+          "en": "Speeds Chen up and lets him Evade every Basic Attack for a few seconds; his own attacks reduce its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -14267,7 +14327,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_wanderingkeg.png",
         "description": {
           "fr": "Chen saute dans un tonneau, insensible aux effets de contrôle et couvert d'armure, qui file plus vite en bousculant et blessant les ennemis sur son passage.",
-          "en": "Chen hops into a barrel, Unstoppable and armored, rolling faster while bowling over and damaging enemies in its path."
+          "en": "Chen jumps into a barrel, Unstoppable and armored, rolling faster while knocking back and damaging the enemies in its way."
         },
         "demoYoutubeId": null
       },
@@ -14280,8 +14340,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_stormearthfire.png",
         "description": {
-          "fr": "Après un temps de préparation, Chen se scinde en trois esprits élémentaires : Tempête protège d'un bouclier, Terre bondit et ralentit, Feu renforce les attaques. La dernière capacité utilisée est renforcée, et si les trois esprits meurent, Chen meurt avec eux.",
-          "en": "After a wind-up, Chen splits into three elemental spirits: Storm grants a Shield, Earth leaps and Slows, Fire empowers attacks. The last spirit Ability used is empowered, and if all three spirits die, Chen dies with them."
+          "fr": "Après un temps de préparation, Chen se scinde en trois esprits élémentaires dotés chacun d'une bonne part de ses points de vie : Tempête protège d'un bouclier, Terre bondit et ralentit, Feu renforce les attaques. La dernière capacité utilisée est renforcée, et si les trois esprits meurent, Chen meurt avec eux.",
+          "en": "After a wind-up, Chen splits into three elemental spirits, each with a good share of his Health: Storm shields, Earth leaps and Slows, Fire boosts attacks. The last Ability used is empowered, and if all three spirits die, Chen dies with them."
         },
         "demoYoutubeId": null
       },
@@ -14295,7 +14355,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_flyingkick.png",
         "description": {
           "fr": "Coup de pied volant ralentit sa cible, bien davantage si Chen est couvert par le bouclier de Boisson fortifiante.",
-          "en": "Flying Kick Slows its target, far more if Chen is covered by Fortifying Brew's Shield."
+          "en": "Flying Kick Slows its target, far more if Chen has Fortifying Brew's Shield up."
         },
         "demoYoutubeId": null
       },
@@ -14308,8 +14368,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_kegsmash.png",
         "description": {
-          "fr": "Augmente la durée et le ralentissement de Fracasse-tonneau.",
-          "en": "Increase Keg Smash Slow amount, duration"
+          "fr": "Augmente la durée et l'intensité du ralentissement de Fracasse-tonneau.",
+          "en": "Increases both the strength and the duration of Keg Smash's Slow."
         },
         "demoYoutubeId": null
       },
@@ -14322,8 +14382,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_breathoffire.png",
         "description": {
-          "fr": "Inflige des dégâts aux ennemis proches après les avoir embrasés.",
-          "en": "Damage nearby enemies after Igniting them"
+          "fr": "Après avoir embrasé un ennemi, Chen s'entoure d'une aura de flammes qui blesse les ennemis proches quelques secondes.",
+          "en": "After Igniting an enemy, Chen is wrapped in a fiery aura that damages nearby enemies for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -14350,8 +14410,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_flyingkick.png",
         "description": {
-          "fr": "Allonge la portée de Coup de pied volant, dont le temps de recharge diminue chaque fois qu'un héros brûle.",
-          "en": "Extends Flying Kick's range, and its cooldown drops each time a Hero takes burn damage."
+          "fr": "Allonge la portée de Coup de pied volant, dont le temps de recharge diminue chaque fois qu'un héros subit des dégâts d'embrasement.",
+          "en": "Extends Flying Kick's range, and its cooldown drops each time a Hero takes Ignite damage."
         },
         "demoYoutubeId": null
       },
@@ -14365,7 +14425,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_stagger.png",
         "description": {
           "fr": "Les attaques de base portées à un héros ralenti, immobilisé ou étourdi réduisent le temps de recharge de Report et confèrent de l'armure à Chen.",
-          "en": "Basic Attacks against a Slowed, Rooted or Stunned Hero reduce Stagger's cooldown and grant Chen Armor."
+          "en": "Basic Attacks on a Slowed, Rooted or Stunned Hero reduce Stagger's cooldown and grant Chen Armor."
         },
         "demoYoutubeId": null
       },
@@ -14378,8 +14438,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_fortifyingbrew.png",
         "description": {
-          "fr": "Toutes les trois attaques portées à une même cible, le coup frappe plus fort. Tant que Chen est couvert par un bouclier de Boisson fortifiante, sa vitesse d'attaque augmente.",
-          "en": "Every third attack on the same target hits harder. While Chen is covered by a Fortifying Brew Shield, his Attack Speed increases."
+          "fr": "Toutes les trois attaques portées à une même cible, le coup frappe bien plus fort. Tant que Chen est couvert par un bouclier de Boisson fortifiante, et un peu après, sa vitesse d'attaque augmente.",
+          "en": "Every third attack on the same target hits far harder. While Chen has a Fortifying Brew Shield, and shortly after, his Attack Speed rises."
         },
         "demoYoutubeId": null
       },
@@ -14392,8 +14452,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_wanderingkeg.png",
         "description": {
-          "fr": "Augmente la vitesse de Tonneau fou et confère de l'armure.",
-          "en": "Increases Wandering Keg Speed, Armor"
+          "fr": "Tonneau fou file bien plus vite et confère beaucoup plus d'armure, qui persiste encore après la fin du tonneau.",
+          "en": "Wandering Keg rolls far faster and grants much more Armor, which lingers after the barrel ends."
         },
         "demoYoutubeId": null
       },
@@ -14406,8 +14466,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_stormearthfire.png",
         "description": {
-          "fr": "Renforce les capacités des trois esprits.",
-          "en": "All Storm, Earth, Fire Abilities are empowered"
+          "fr": "Les trois esprits disposent de tous les points de vie de Chen, et toutes leurs capacités sont renforcées.",
+          "en": "The three spirits get Chen's full Health, and all of their Abilities are empowered."
         },
         "demoYoutubeId": null
       },
@@ -14420,8 +14480,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/spells/storm_ui_icon_chen_fortifyingbrew.png",
         "description": {
-          "fr": "Boisson fortifiante rend insensible.",
-          "en": "Fortifying Brew grants Unstoppable"
+          "fr": "Lancer Boisson fortifiante rend Chen insensible aux effets de contrôle un court instant.",
+          "en": "Casting Fortifying Brew makes Chen Unstoppable for a brief moment."
         },
         "demoYoutubeId": null
       },
@@ -14434,15 +14494,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/chen/images/talents/storm_ui_icon_chen_fortifyingbrew_b.png",
         "description": {
-          "fr": "Boire jusqu'au bout confère à Chen des points de vie supplémentaires et augmente ses dégâts pendant un moment.",
-          "en": "Drinking to the end grants Chen bonus Health and increases his damage for a while."
+          "fr": "Boire Boisson fortifiante jusqu'au bout confère à Chen des points de vie supplémentaires et augmente ses dégâts pendant un long moment.",
+          "en": "Drinking Fortifying Brew to the last drop grants Chen bonus Health and damage for a long while."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Chen",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "chogall",
