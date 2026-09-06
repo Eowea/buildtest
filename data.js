@@ -283,7 +283,7 @@ const HEROES = [
         "en": "The Flamestrike (Q) empowerment from your Trait only increases its area of effect, not its damage."
       },
       {
-        "fr": "La Rupture de gravité (E) boostée par le Trait est vitale pour stopper un plongeon (dive) de plusieurs ennemis ou suivre de très loin ton tank.",
+        "fr": "La Rupture de gravité (E) boostée par le Trait est vitale pour stopper un dive à plusieurs, ou pour suivre ton tank de très loin.",
         "en": "Trait-empowered Gravity Lapse (E) is vital for stopping a multi-enemy dive or following up your tank from a distance."
       }
     ],
@@ -26179,7 +26179,7 @@ const HEROES = [
         "en": "Finish your trait's (D) Blight quest as early as you can: your whole damage spike depends on it."
       },
       {
-        "fr": "Tu n'as aucune échappatoire : un héros mobile te tue avant que tes sorts ne touchent, reste derrière ton équipe.",
+        "fr": "Tu n'as aucune escape : un héros mobile te tue avant même que tes sorts ne touchent, reste derrière ton équipe.",
         "en": "You have no escape: a mobile Hero kills you before your spells even land, so stay behind your team."
       }
     ],
@@ -28365,7 +28365,7 @@ const HEROES = [
         "en": "Split them to soak, regroup them before every objective."
       },
       {
-        "fr": "Chacun a son poste : Olaf tient la ligne et gêne, Baleog nettoie les vagues, Erik va prendre les camps et canaliser les objectifs.",
+        "fr": "Chacun a son poste : Olaf encaisse devant et gêne, Baleog nettoie les vagues, Erik va prendre les camps et canaliser les objectifs.",
         "en": "Each has his job: Olaf holds the line and disrupts, Baleog clears waves, Erik takes camps and channels objectives."
       },
       {
@@ -29429,8 +29429,8 @@ const HEROES = [
         "en": "Open from a bush or out of vision: Spirit of Vengeance (E) to close, Umbral Bind (W) right after — they get no time to react."
       },
       {
-        "fr": "Un stun ou un aveuglement annule Entraves d'ombre (Z) : contre ce genre de compo, ne rentre pas en premier, laisse partir leurs contrôles avant de plonger.",
-        "en": "A Stun or a Blind cancels Umbral Bind (W): against that kind of comp, don't go in first, let their crowd control go out before you dive."
+        "fr": "Un stun ou un aveuglement annule Entraves d'ombre (Z) : en face d'une équipe qui a du CC, ne rentre pas en premier — laisse-le partir, puis dive.",
+        "en": "A Stun or a Blind cancels Umbral Bind (W): against a team with crowd control, don't go in first — let it go out, then dive."
       }
     ],
     "builds": [
@@ -31823,7 +31823,7 @@ const HEROES = [
         "en": "Shade of Mephisto (E) always pulls you back to where you cast it: pick that spot before you go in, not once you're there."
       },
       {
-        "fr": "Tu es un follow-up, pas un initiateur : garde Crâne maudit (A) pour les cibles déjà bloquées, et évite le solo lane contre un vrai duelliste.",
+        "fr": "Tu es un follow-up, pas un engage : garde Crâne maudit (A) pour les cibles déjà bloquées, et évite le solo lane contre un vrai duelliste.",
         "en": "You are follow-up, not engage: save Skull Missile (Q) for targets already locked down, and avoid solo laning against a real duelist."
       }
     ],
@@ -31832,18 +31832,18 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build recommandé",
-          "en": "Recommended build"
+          "fr": "Build A",
+          "en": "Q build"
         },
         "summary": {
-          "fr": "Build Crâne maudit : dégâts à distance et enchaînement des temps de recharge.",
-          "en": "Skull Missile build: ranged damage and rolling cooldowns."
+          "fr": "Build centré sur Crâne maudit : gros dégâts à distance, et de quoi se soigner en le lançant.",
+          "en": "Focused on Skull Missile: heavy ranged damage, and enough sustain to keep casting it."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1332112,Mephisto]",
+        "buildCode": "[T1112113,Mephisto]",
         "videos": [],
         "updatedAt": {
           "fr": "6 Septembre 2026",
@@ -31857,12 +31857,12 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmlbthulu06tjs",
+            "primaryId": "tmlbthulu0471f",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmlbthulu090v9",
+            "primaryId": "tmlbthulu071qi",
             "alternativeIds": []
           },
           {
@@ -31882,7 +31882,67 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmlbthulu19q8p",
+            "primaryId": "tmlbthulu208i3",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build Z",
+          "en": "W build"
+        },
+        "summary": {
+          "fr": "Build centré sur Nova de foudre : il faut rester au contact, le bouclier et l'armure de l'ombre sont là pour ça.",
+          "en": "Focused on Lightning Nova: it means staying in close, and the Shield and the Shade's Armor are there for that."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T2212123,Mephisto]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "6 Septembre 2026",
+          "en": "September 6, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmlbthulu02gfb",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmlbthulu05tu6",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmlbthulu071qi",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmlbthulu11sf7",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmlbthulu12oa8",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmlbthulu16ixt",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmlbthulu208i3",
             "alternativeIds": []
           }
         ],
@@ -33801,8 +33861,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tu n'as aucune mobilité : garde toujours un chemin de repli ouvert derrière toi, le camouflage (D) n'est pas une échappatoire.",
-        "en": "You have no mobility at all: always keep a way out behind you, Stealth (D) is not an escape."
+        "fr": "Tu n'as aucune mobilité : garde toujours une escape ouverte derrière toi, le camouflage (D) n'en est pas une.",
+        "en": "You have no mobility at all: always keep an escape open behind you, Stealth (D) is not one."
       },
       {
         "fr": "Tir anesthésiant (Z) d'abord, Tir de précision (A) ensuite : sur une cible mobile, tu ne toucheras pas sans le ralentissement.",
@@ -33822,14 +33882,14 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "Build hologramme : pression permanente et échappatoires sans jamais se dévoiler.",
-          "en": "Holo Decoy build: constant pressure and outs without ever revealing yourself."
+          "fr": "Build attaques de base et hologrammes : Tir anesthésiant porte plus loin pour ouvrir, les attaques font le reste.",
+          "en": "Basic Attack and decoy build: Pinning Shot reaches further to open, the attacks do the rest."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T3132334,Nova]",
+        "buildCode": "[T1132334,Nova]",
         "videos": [],
         "updatedAt": {
           "fr": "6 Septembre 2026",
@@ -33838,7 +33898,7 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmp56mauf034ff",
+            "primaryId": "tmp56mauf016c5",
             "alternativeIds": []
           },
           {
@@ -34283,8 +34343,8 @@ const HEROES = [
         "en": "Aim Dread (E) slightly behind a Slowed or locked-down target: the wave and the eruption then both connect."
       },
       {
-        "fr": "Avant Magie de mort, ne crame pas une attaque chargée de chaos (D) sur un héros blindé : l'armure rogne les dégâts, donc tes soins.",
-        "en": "Before Dead Magic, don't burn a Chaos-charged attack (D) on an armored Hero: Armor cuts the damage, so it cuts your healing."
+        "fr": "Avant Magie de mort, ne crame pas une attaque chargée de chaos (D) sur une cible qui a de l'armure : elle rogne les dégâts, donc tes soins.",
+        "en": "Before Dead Magic, don't burn a Chaos-charged attack (D) on a target with Armor: it cuts the damage, so it cuts your healing."
       }
     ],
     "builds": [
@@ -34296,14 +34356,14 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "Build standard : soins par le chaos et fenêtres de dégâts sur les cibles bloquées.",
-          "en": "Standard build: healing off Chaos and damage windows on locked-down targets."
+          "fr": "Build dégâts de capacité : Valse d'ombre et Effroi reviennent presque sans temps de recharge, et Mort sûre bloque tout le groupe.",
+          "en": "Spell damage build: Shadow Waltz and Dread come back with almost no cooldown, and Crushing Jaws locks the whole group down."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T3231321,Orphea]",
+        "buildCode": "[T3132123,Orphea]",
         "videos": [],
         "updatedAt": {
           "fr": "6 Septembre 2026",
@@ -34317,7 +34377,7 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tm6mv4g9v05urq",
+            "primaryId": "tm6mv4g9v04b99",
             "alternativeIds": []
           },
           {
@@ -34327,12 +34387,12 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tm6mv4g9v10rzj",
+            "primaryId": "tm6mv4g9v11y0w",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tm6mv4g9v14yuh",
+            "primaryId": "tm6mv4g9v12xg4",
             "alternativeIds": []
           },
           {
@@ -34342,7 +34402,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tm6mv4g9v18h95",
+            "primaryId": "tm6mv4g9v20xlw",
             "alternativeIds": []
           }
         ],
@@ -37369,7 +37429,7 @@ const HEROES = [
         "en": "Your Images (Q) soak tower shots and push Structures without a wave: they're not just there to confuse targeting."
       },
       {
-        "fr": "Marche du vent (E) marche dans les deux sens : c'est autant ton approche que ton échappatoire.",
+        "fr": "Marche du vent (E) marche dans les deux sens : c'est autant ton approche que ton escape.",
         "en": "Wind Walk (E) works both ways: it's your approach as much as your escape."
       }
     ],
@@ -37382,14 +37442,14 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "Build Marche du vent : mobilité, soins et fenêtres d'attaque sans jamais rentrer à la base.",
-          "en": "Wind Walk build: mobility, healing and attack windows without ever going back to base."
+          "fr": "Build coups critiques : ils tombent plus souvent, rognent l'armure, et Marche du vent sert à se replacer entre deux.",
+          "en": "Critical Strike build: they land more often, chew through Armor, and Wind Walk is there to reposition in between."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T3211333,Samuro]",
+        "buildCode": "[T2221323,Samuro]",
         "videos": [],
         "updatedAt": {
           "fr": "6 Septembre 2026",
@@ -37398,7 +37458,7 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmjveafxq032rz",
+            "primaryId": "tmjveafxq02i60",
             "alternativeIds": []
           },
           {
@@ -37408,7 +37468,7 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tmjveafxq077g4",
+            "primaryId": "tmjveafxq08ght",
             "alternativeIds": []
           },
           {
@@ -37423,7 +37483,7 @@ const HEROES = [
           },
           {
             "level": 16,
-            "primaryId": "tmjveafxq17cmj",
+            "primaryId": "tmjveafxq160l4",
             "alternativeIds": []
           },
           {
@@ -44544,7 +44604,7 @@ const HEROES = [
         "en": "Cursed Strikes (W) is one of the best waveclears in the game, and it wrecks Heroes who live off their Basic Attacks."
       },
       {
-        "fr": "Prison d'os (E) se pose sur un tank qui vient de cramer ses défensives, ou sur une cible sans échappatoire : tes squelettes se ruent dessus.",
+        "fr": "Prison d'os (E) se pose sur un tank qui vient de cramer ses défensives, ou sur une cible qui n'a plus d'escape : tes squelettes se ruent dessus.",
         "en": "Bone Prison (E) goes on a tank who just burned their defensives, or on a target with no escape: your skeletons pile onto them."
       }
     ],
@@ -46577,8 +46637,8 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build recommandé",
-          "en": "Recommended build"
+          "fr": "Build auto-attaque",
+          "en": "Auto-attack build"
         },
         "summary": {
           "fr": "Build attaques de base : entrer camouflé, enchaîner sur une cible isolée, ressortir au Transfert.",
@@ -46628,6 +46688,66 @@ const HEROES = [
           {
             "level": 20,
             "primaryId": "tmya4zmzu20oxh",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build A",
+          "en": "Q build"
+        },
+        "summary": {
+          "fr": "Build centré sur Tailler : dégâts de zone, soins sur les capacités, et Prison du Vide pour couper le combat en deux.",
+          "en": "Focused on Cleave: area damage, healing off Abilities, and Void Prison to cut the fight in half."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T1112124,Zeratul]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "6 Septembre 2026",
+          "en": "September 6, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmya4zmzu01aqp",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmya4zmzu04asn",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmya4zmzu078rm",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmya4zmzu114kw",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmya4zmzu129sb",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmya4zmzu1613q",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmya4zmzu21wjn",
             "alternativeIds": []
           }
         ],
