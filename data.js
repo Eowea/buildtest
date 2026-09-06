@@ -28561,7 +28561,7 @@ const HEROES = [
   },
   {
     "id": "lunara",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Lunara",
       "en": "Lunara"
@@ -28585,8 +28585,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_stiflingblossom.png",
         "description": {
-          "fr": "Les attaques de base et les capacités empoisonnent la cible ; chaque nouvelle application allonge la durée du poison.",
-          "en": "Basic Attacks and Abilities poison the target; each new application extends the poison's duration."
+          "fr": "Les attaques de base et les capacités de Lunara empoisonnent la cible ; chaque nouvelle application allonge la durée du poison, jusqu'à un plafond.",
+          "en": "Lunara's Basic Attacks and Abilities poison the target; each new application extends the poison, up to a cap."
         },
         "demoYoutubeId": ""
       },
@@ -28611,8 +28611,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_fullbloom.png",
         "description": {
-          "fr": "Ralentit les ennemis affectés par Toxine naturelle et en augmente la durée.",
-          "en": "Slow enemies afflicted by Nature's Toxin and extend duration"
+          "fr": "Ralentit les ennemis déjà empoisonnés et prolonge la durée de leur poison.",
+          "en": "Slows the enemies already poisoned and extends their poison."
         },
         "demoYoutubeId": ""
       },
@@ -28625,7 +28625,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_wisp.png",
         "description": {
           "fr": "Fait apparaître un feu follet que Lunara peut rediriger pour explorer. Posté un moment dans un buisson, son champ de vision s'élargit nettement.",
-          "en": "Summons a wisp Lunara can redirect to scout. After a moment inside a bush, its sight radius widens considerably."
+          "en": "Sends out a wisp Lunara can steer to scout. Left sitting in a bush for a while, its sight widens sharply."
         },
         "demoYoutubeId": ""
       },
@@ -28638,7 +28638,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_mount.png",
         "description": {
           "fr": "Lunara se déplace en bondissant, plus vite qu'à pied, et n'utilise jamais de monture.",
-          "en": "Lunara moves by leaping, faster than on foot, and never uses a Mount."
+          "en": "Lunara bounds along faster than walking, and never uses a mount."
         },
         "demoYoutubeId": ""
       },
@@ -28651,7 +28651,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_wildspear.png",
         "description": {
           "fr": "Projette une liane épineuse qui traverse la zone et blesse les ennemis sur sa trajectoire. Se cumule en charges.",
-          "en": "Launches a thorned vine that crosses the area and damages the enemies in its path. Stores charges."
+          "en": "Fires a thorned vine that crosses the area and damages the enemies in its path. Stores charges."
         },
         "demoYoutubeId": ""
       },
@@ -28663,24 +28663,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_boundlessstride.png",
         "description": {
-          "fr": "Lunara bondit par-dessus un ennemi, le blesse et le ralentit. Se cumule en charges.",
-          "en": "Lunara leaps over an enemy, damaging and Slowing them. Stores charges."
+          "fr": "Lunara bondit par-dessus un ennemi, le blesse et le ralentit brièvement. Se cumule en charges.",
+          "en": "Lunara leaps over an enemy, damaging them and briefly Slowing them. Stores charges."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Empoisonne un maximum de cibles : le poison dure tant que tu le renouvelles.",
-        "en": "Poison as many targets as you can: it lasts as long as you keep applying it."
+        "fr": "Ton poison (D) est ta seule source de dégâts continue : étale-le sur toute l'équipe d'en face plutôt que de t'acharner sur une cible.",
+        "en": "Your poison (D) is your only steady damage: spread it across the whole enemy team instead of tunnelling one target."
       },
       {
-        "fr": "Tu ne montes jamais : tu es toujours prête à te battre, mais toujours plus lente.",
-        "en": "You never mount: always ready to fight, but always slower."
+        "fr": "Spores affaiblissantes (Z) relance le poison sur tout le monde d'un coup : garde-le pour rafraîchir plusieurs cibles, pas seulement pour le ralentissement.",
+        "en": "Crippling Spores (W) refreshes the poison on everyone at once: save it to top several targets up, not just for the Slow."
       },
       {
-        "fr": "Spores affaiblissantes ralentit tout ce qui est déjà empoisonné : c'est ton contrôle.",
-        "en": "Crippling Spores Slows everything already poisoned: that is your crowd control."
+        "fr": "Tu ne montes jamais : préviens ton équipe avant de rotate, tu arriveras toujours après tout le monde.",
+        "en": "You never mount: tell your team before you rotate, you will always show up after everyone else."
       }
     ],
     "builds": [
@@ -28699,46 +28699,46 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Lunara]",
+        "buildCode": "[T2222434,Lunara]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm53a7ftx01kfw",
+            "primaryId": "tm53a7ftx02gj3",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tm53a7ftx04qqj",
+            "primaryId": "tm53a7ftx05r59",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tm53a7ftx07w0t",
+            "primaryId": "tm53a7ftx08y2j",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tm53a7ftx10zq2",
+            "primaryId": "tm53a7ftx11cax",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tm53a7ftx123c5",
+            "primaryId": "tm53a7ftx15ruz",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tm53a7ftx16s4v",
+            "primaryId": "tm53a7ftx18xuj",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tm53a7ftx20c10",
+            "primaryId": "tm53a7ftx23a9y",
             "alternativeIds": []
           }
         ],
@@ -28757,7 +28757,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_wisp.png",
         "description": {
           "fr": "Posté un moment dans un buisson, le feu follet voit bien plus loin et révèle la zone autour de lui.",
-          "en": "After a moment inside a bush, the wisp sees much farther and reveals the area around it."
+          "en": "Left in a bush for a while, the wisp sees much farther and reveals the area around it."
         },
         "demoYoutubeId": null
       },
@@ -28770,8 +28770,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_stiflingblossom.png",
         "description": {
-          "fr": "Toxine naturelle révèle les ennemis.",
-          "en": "Nature's Toxin reveals enemies"
+          "fr": "Toxine naturelle révèle les ennemis empoisonnés pendant toute sa durée.",
+          "en": "Nature's Toxin reveals the poisoned enemies for its whole duration."
         },
         "demoYoutubeId": null
       },
@@ -28784,8 +28784,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/talents/storm_ui_icon_lunara_boundlessstride_a.png",
         "description": {
-          "fr": "Augmente le bonus conféré par Rapidité de la dryade.",
-          "en": "Increase Dryad's Swiftness bonus"
+          "fr": "Si Lunara n'a ni attaqué ni encaissé de dégâts depuis un moment, Rapidité de la dryade l'accélère davantage.",
+          "en": "If Lunara has neither attacked nor taken damage for a moment, Dryad's Swiftness speeds her up further."
         },
         "demoYoutubeId": null
       },
@@ -28798,8 +28798,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_pollencloud.png",
         "description": {
-          "fr": "Augmente le rayon et la portée de Fleurs nocives.",
-          "en": "Increases Noxious Blossom range and radius"
+          "fr": "Augmente le rayon et la portée de Fleurs nocives, qui applique en plus Toxine naturelle aux ennemis touchés.",
+          "en": "Increases Noxious Blossom's radius and range, and it also applies Nature's Toxin to the enemies hit."
         },
         "demoYoutubeId": null
       },
@@ -28812,8 +28812,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_stiflingblossom.png",
         "description": {
-          "fr": "Augmente les dégâts de Toxine naturelle infligés aux cibles non héroïques.",
-          "en": "Increases Nature's Toxin damage to non-Heroes"
+          "fr": "Toxine naturelle inflige bien plus de dégâts aux cibles non héroïques.",
+          "en": "Nature's Toxin deals far more damage to non-Heroic targets."
         },
         "demoYoutubeId": null
       },
@@ -28826,8 +28826,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/talents/storm_ui_icon_lunara_stiflingblossom_var1.png",
         "description": {
-          "fr": "Toxine naturelle rend des points de vie.",
-          "en": "Nature's Toxin heals Lunara"
+          "fr": "Tant qu'au moins un ennemi est empoisonné, Lunara récupère des points de vie en continu, et davantage encore quand un héros est au maximum de cumuls.",
+          "en": "While at least one enemy is poisoned, Lunara regains Health continuously, and more still when a Hero is at maximum stacks."
         },
         "demoYoutubeId": null
       },
@@ -28841,7 +28841,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_pollencloud.png",
         "description": {
           "fr": "Lancer Fleurs nocives charge la lance de Lunara : ses attaques de base touchent alors un ennemi supplémentaire par charge, en consomment une par cible atteinte et appliquent Toxine naturelle.",
-          "en": "Casting Noxious Blossom charges Lunara's spear: her Basic Attacks then hit one extra enemy per charge, spending one per target struck, and apply Nature's Toxin."
+          "en": "Casting Noxious Blossom loads Lunara's spear: her Basic Attacks then hit one extra enemy per charge, spending one per target reached, and apply Nature's Toxin."
         },
         "demoYoutubeId": null
       },
@@ -28854,8 +28854,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/talents/storm_ui_icon_lunara_pollencloud_b.png",
         "description": {
-          "fr": "Toxine naturelle augmente les dégâts infligés par Fleurs nocives.",
-          "en": "Nature's Toxin increases Noxious Blossom damage"
+          "fr": "Fleurs nocives frappe deux fois plus fort les ennemis empoisonnés, et bien plus encore sur une cible au maximum de cumuls.",
+          "en": "Noxious Blossom hits poisoned enemies twice as hard, and far harder still on a target at maximum stacks."
         },
         "demoYoutubeId": null
       },
@@ -28868,8 +28868,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_fullbloom.png",
         "description": {
-          "fr": "Spores affaiblissantes augmente les dégâts des attaques de base.",
-          "en": "Crippling Spores increases Basic Attack damage"
+          "fr": "Après Spores affaiblissantes, les prochaines attaques de base de Lunara frappent bien plus fort.",
+          "en": "After Crippling Spores, Lunara's next Basic Attacks hit far harder."
         },
         "demoYoutubeId": null
       },
@@ -28883,7 +28883,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_wildspear.png",
         "description": {
           "fr": "Projette une liane épineuse qui traverse la zone et blesse les ennemis sur sa trajectoire. Se cumule en charges.",
-          "en": "Launches a thorned vine that crosses the area and damages the enemies in its path. Stores charges."
+          "en": "Fires a thorned vine that crosses the area and damages the enemies in its path. Stores charges."
         },
         "demoYoutubeId": null
       },
@@ -28896,8 +28896,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_boundlessstride.png",
         "description": {
-          "fr": "Lunara bondit par-dessus un ennemi, le blesse et le ralentit. Se cumule en charges.",
-          "en": "Lunara leaps over an enemy, damaging and Slowing them. Stores charges."
+          "fr": "Lunara bondit par-dessus un ennemi, le blesse et le ralentit brièvement. Se cumule en charges.",
+          "en": "Lunara leaps over an enemy, damaging them and briefly Slowing them. Stores charges."
         },
         "demoYoutubeId": null
       },
@@ -28910,8 +28910,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_fullbloom.png",
         "description": {
-          "fr": "Toxine naturelle peut réduire le temps de recharge de Spores affaiblissantes.",
-          "en": "Nature's Toxin can reduce Crippling Spores cooldown"
+          "fr": "Lancer Spores affaiblissantes alors qu'au moins deux héros sont empoisonnés en réduit le temps de recharge et rend du mana.",
+          "en": "Casting Crippling Spores while at least two Heroes are poisoned reduces its cooldown and refunds Mana."
         },
         "demoYoutubeId": null
       },
@@ -28924,8 +28924,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/talents/storm_ui_icon_lunara_fullbloom_a.png",
         "description": {
-          "fr": "Augmente le ralentissement de Spores affaiblissantes.",
-          "en": "Increase Crippling Spores Slow"
+          "fr": "Prolonge le ralentissement de Spores affaiblissantes, qui ne s'estompe plus progressivement.",
+          "en": "Extends Crippling Spores' Slow, and it no longer decays away."
         },
         "demoYoutubeId": null
       },
@@ -28938,8 +28938,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/talents/storm_ui_icon_lunara_greaterspellshield.png",
         "description": {
-          "fr": "Confère régulièrement, mais pour une courte durée, de l'armure anti-sort.",
-          "en": "Periodically gain temporary Spell Armor"
+          "fr": "Confère régulièrement de l'armure anti-sort contre la prochaine capacité adverse et celles qui suivent de près.",
+          "en": "Regularly grants Spell Armor against the next enemy Ability and those right after it."
         },
         "demoYoutubeId": null
       },
@@ -28952,8 +28952,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/talents/storm_ui_icon_lunara_abolishmagic.png",
         "description": {
-          "fr": "Supprime les effets de contrôle dont Lunara et sa cible souffrent.",
-          "en": "Remove crowd control from a target and Lunara"
+          "fr": "Débarrasse un allié et Lunara de tous les effets de contrôle et des dégâts sur la durée, puis réduit un instant la durée des contrôles suivants.",
+          "en": "Clears every crowd control and damage-over-time effect from an ally and Lunara, then briefly shortens the crowd control that follows."
         },
         "demoYoutubeId": null
       },
@@ -28966,8 +28966,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_pollencloud.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Fleurs nocives.",
-          "en": "Noxious Blossom recharges faster"
+          "fr": "Réduit le coût en mana de Fleurs nocives, et tant qu'un héros est empoisonné, elle se recharge bien plus vite.",
+          "en": "Reduces Noxious Blossom's Mana cost, and while a Hero is poisoned it recharges far faster."
         },
         "demoYoutubeId": null
       },
@@ -28980,8 +28980,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_fullbloom.png",
         "description": {
-          "fr": "Spores affaiblissantes augmente la portée des attaques de base.",
-          "en": "Crippling Spores increases Basic Attack range"
+          "fr": "Augmente la portée des attaques de base, et Spores affaiblissantes l'allonge encore nettement pendant un moment.",
+          "en": "Increases Basic Attack range, and Crippling Spores stretches it much further for a while."
         },
         "demoYoutubeId": null
       },
@@ -28994,8 +28994,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/talents/storm_ui_icon_lunara_fullbloom_a.png",
         "description": {
-          "fr": "Spores affaiblissantes renforce les attaques de base.",
-          "en": "Crippling Spores empowers Basic Attacks"
+          "fr": "Spores affaiblissantes augmente la vitesse d'attaque de Lunara. Ses attaques de base sur un héros au maximum de cumuls lui infligent en plus des dégâts proportionnels à ses points de vie maximum.",
+          "en": "Crippling Spores raises Lunara's Attack Speed. Her Basic Attacks on a Hero at maximum stacks also deal damage based on their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -29008,8 +29008,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_stiflingblossom.png",
         "description": {
-          "fr": "Toxine naturelle frappe plus fort les héros ralentis, immobilisés ou étourdis.",
-          "en": "Nature's Toxin hits Slowed, Rooted or Stunned Heroes harder."
+          "fr": "Toxine naturelle frappe bien plus fort les héros ralentis, immobilisés ou étourdis.",
+          "en": "Nature's Toxin hits Slowed, Rooted or Stunned Heroes far harder."
         },
         "demoYoutubeId": null
       },
@@ -29022,8 +29022,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_wildspear.png",
         "description": {
-          "fr": "Couronne d'épines forme un arc",
-          "en": "Thornwood Vine shoots in an arc"
+          "fr": "Couronne d'épines projette plusieurs lianes supplémentaires, formant un large arc.",
+          "en": "Thornwood Vine fires several extra vines, fanning out in a wide arc."
         },
         "demoYoutubeId": null
       },
@@ -29036,8 +29036,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_boundlessstride.png",
         "description": {
-          "fr": "Frappe bondissante peut cibler les alliés.",
-          "en": "Leaping Strike can target allies"
+          "fr": "Toutes les charges de Frappe bondissante se rechargent d'un coup à intervalle régulier, et la capacité peut aussi viser un allié.",
+          "en": "Every Leaping Strike charge comes back at once on a regular timer, and it can also target an ally."
         },
         "demoYoutubeId": null
       },
@@ -29050,8 +29050,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/talents/storm_ui_icon_lunara_forests_wrath.png",
         "description": {
-          "fr": "Héroïque applique davantage de Toxine naturelle, portée augmentée",
-          "en": "Heroic applies more Nature's Toxin, range increased"
+          "fr": "La capacité héroïque de Lunara applique Toxine naturelle et gagne en portée.",
+          "en": "Lunara's Heroic applies Nature's Toxin and gains range."
         },
         "demoYoutubeId": null
       },
@@ -29064,8 +29064,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/spells/storm_ui_icon_lunara_stiflingblossom.png",
         "description": {
-          "fr": "Augmente les dégâts de Toxine naturelle.",
-          "en": "Increase Nature's Toxin damage"
+          "fr": "Sur une cible au maximum de cumuls, Toxine naturelle frappe bien plus fort.",
+          "en": "On a target at maximum stacks, Nature's Toxin hits far harder."
         },
         "demoYoutubeId": null
       },
@@ -29078,15 +29078,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lunara/images/talents/storm_ui_icon_lunara_boundlessstride_a.png",
         "description": {
-          "fr": "Augmente la vitesse de déplacement.",
-          "en": "Activate to increase Movement Speed"
+          "fr": "À l'activation, Rapidité de la dryade accélère énormément Lunara pendant quelques secondes.",
+          "en": "Activate and Dryad's Swiftness speeds Lunara up enormously for a few seconds."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Lunara",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "maiev",
@@ -38964,7 +38964,7 @@ const HEROES = [
   },
   {
     "id": "sylvanas",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Sylvanas",
       "en": "Sylvanas"
@@ -38988,8 +38988,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_blackarrows.png",
         "description": {
-          "fr": "Les attaques de base infectent les adversaires de Flèches noires, effet cumulable ; Sylvanas frappe plus fort les cibles saturées. Quête : blesser des adversaires saturés en augmente définitivement le bonus.",
-          "en": "Basic Attacks infect enemies with Black Arrows, stacking; Sylvanas hits fully stacked targets harder. Quest: damaging fully stacked enemies permanently increases the bonus."
+          "fr": "Les attaques de base infectent les adversaires de Flèches noires, cumulable trois fois. Sylvanas frappe plus fort les cibles portant le maximum de cumuls.",
+          "en": "Basic Attacks infect enemies with Black Arrows, stacking three times. Sylvanas hits targets at maximum stacks harder."
         },
         "demoYoutubeId": ""
       },
@@ -39001,8 +39001,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_witheringfire.png",
         "description": {
-          "fr": "Tire des flèches sur l'ennemi le plus proche. Le temps de recharge prend fin quand un héros est tué.",
-          "en": "Shoot arrows at the closest enemy. Cooldown is reset on Takedown."
+          "fr": "Décoche une rafale de flèches sur l'ennemi le plus proche, les héros en priorité. Le temps de recharge prend fin dès qu'un héros adverse meurt.",
+          "en": "Looses a volley of arrows at the nearest enemy, Heroes first. The cooldown ends the moment an enemy Hero dies."
         },
         "demoYoutubeId": ""
       },
@@ -39014,8 +39014,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_shadowdagger.png",
         "description": {
-          "fr": "Inflige des dégâts à un ennemi sur la durée et se propage après l'impact.",
-          "en": "Damage an enemy over time, spreading after hit"
+          "fr": "Plante une dague dans un ennemi : il perd des points de vie sur la durée, et chaque dégât que Sylvanas lui inflige propage la dague aux ennemis proches.",
+          "en": "Sinks a dagger into an enemy: they bleed Health over time, and every hit Sylvanas lands on them spreads the dagger to nearby enemies."
         },
         "demoYoutubeId": ""
       },
@@ -39027,8 +39027,21 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_hauntingwave.png",
         "description": {
-          "fr": "Inflige des dégâts et permet de se téléporter.",
-          "en": "Deals damage and allows teleportation"
+          "fr": "Projette une vague de banshees qui blesse tout sur son passage. La relancer téléporte Sylvanas à leur position.",
+          "en": "Sends out a wave of banshees that damages everything in its path. Recasting teleports Sylvanas to where they are."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "&",
+        "name": {
+          "fr": "Possession",
+          "en": "Possession"
+        },
+        "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_possession.png",
+        "description": {
+          "fr": "À l'activation, fait passer un serviteur adverse dans le camp de Sylvanas. S'emparer d'une catapulte coûte plusieurs charges. Se cumule en charges.",
+          "en": "Activate to turn an enemy Minion to Sylvanas's side. Taking a Catapult costs several charges. Stores charges."
         },
         "demoYoutubeId": ""
       },
@@ -39040,8 +39053,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_wailingarrow.png",
         "description": {
-          "fr": "Décoche une flèche qui inflige des dégâts et réduit au silence.",
-          "en": "Fire arrow that damages and Silences"
+          "fr": "Décoche une flèche que l'on peut faire exploser à volonté : elle blesse et réduit au silence les ennemis de la zone. Elle explose d'elle-même en bout de course.",
+          "en": "Looses an arrow that can be detonated at will: it damages and Silences the enemies in the area. It bursts on its own at maximum range."
         },
         "demoYoutubeId": ""
       },
@@ -39053,24 +39066,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_mindcontrol.png",
         "description": {
-          "fr": "Après un temps de préparation, tire un projectile qui s'empare du premier héros adverse touché : il est réduit au silence, ralenti, chargé de Flèches noires et contraint de marcher vers Sylvanas.",
-          "en": "After a wind-up, fires a projectile that seizes the first enemy Hero hit: they are Silenced, Slowed, loaded with Black Arrows and forced to walk toward Sylvanas."
+          "fr": "Après un temps de préparation, projette un trait qui s'empare du premier héros adverse touché : il est réduit au silence, ralenti, chargé de Flèches noires et contraint de marcher vers Sylvanas.",
+          "en": "After a wind-up, launches a missile that seizes the first enemy Hero in its path: they are Silenced, Slowed, loaded with Black Arrows and forced to walk toward Sylvanas."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Tes attaques neutralisent les bâtiments : entre dans la base ennemie sans craindre les tirs.",
-        "en": "Your attacks disable Structures: walk into the enemy base without fearing their fire."
+        "fr": "Monte tes trois cumuls de Flèches noires (D) en attaque de base avant de lâcher Tir d'affliction (A) et Dague de l'ombre (Z) : tout frappe bien plus fort sur une cible saturée.",
+        "en": "Build your three Black Arrows (D) stacks with Basic Attacks before letting Withering Fire (Q) and Shadow Dagger (W) go: everything hits far harder on a fully stacked target."
       },
       {
-        "fr": "Vague de hantise sert d'aller-retour : lance-la avant d'engager, pas après.",
-        "en": "Haunting Wave is a round trip: cast it before engaging, not after."
+        "fr": "Possession (&) sert à pousser : prends une catapulte une fois la vague nettoyée, ou vole le serviteur mage pour rafler son globe.",
+        "en": "Possession (1) is a pushing tool: take a Catapult once the wave is cleared, or steal the Mage Minion to grab its Globe."
       },
       {
-        "fr": "Dague de l'ombre se propage : lance-la sur un serviteur au milieu d'un groupe.",
-        "en": "Shadow Dagger spreads: cast it on a Minion in the middle of a pack."
+        "fr": "Vague de hantise (E) sert surtout à te replacer : lance-la avant d'engage, pas pour fuir quand il est déjà trop tard.",
+        "en": "Haunting Wave (E) is mostly for repositioning: use it before you engage, not to run once it's already too late."
       }
     ],
     "builds": [
@@ -39089,26 +39102,26 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Sylvanas]",
+        "buildCode": "[T2331234,Sylvanas]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmw5gdvgs017ua",
+            "primaryId": "tmw5gdvgs02ty8",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmw5gdvgs043du",
+            "primaryId": "tmw5gdvgs0613b",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmw5gdvgs07j48",
+            "primaryId": "tmw5gdvgs09w5y",
             "alternativeIds": []
           },
           {
@@ -39118,17 +39131,17 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tmw5gdvgs12n78",
+            "primaryId": "tmw5gdvgs13x11",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmw5gdvgs15q3r",
+            "primaryId": "tmw5gdvgs17qsx",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmw5gdvgs18h8s",
+            "primaryId": "tmw5gdvgs21cv5",
             "alternativeIds": []
           }
         ],
@@ -39146,8 +39159,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_witheringfire.png",
         "description": {
-          "fr": "Tir d'affliction augmente la vitesse d'attaque et la puissance de capacité.",
-          "en": "Withering Fire grants Attack Speed, Spell Power"
+          "fr": "Toucher un héros avec Tir d'affliction augmente la vitesse d'attaque et la puissance de capacité de Sylvanas, cumulable plusieurs fois.",
+          "en": "Hitting a Hero with Withering Fire raises Sylvanas's Attack Speed and Spell Power, stacking several times."
         },
         "demoYoutubeId": null
       },
@@ -39160,8 +39173,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_shadowdagger.png",
         "description": {
-          "fr": "Augmente la durée et les dégâts de Dague de l'ombre.",
-          "en": "Increase Shadow Dagger damage and duration"
+          "fr": "Augmente les dégâts de Dague de l'ombre et en prolonge la durée.",
+          "en": "Increases Shadow Dagger's damage and extends its duration."
         },
         "demoYoutubeId": null
       },
@@ -39174,8 +39187,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_blackarrows.png",
         "description": {
-          "fr": "Flèches noires ralentit les héros et inflige des dégâts supplémentaires",
-          "en": "Black Arrows Slow, bonus damage to Heroes"
+          "fr": "Les héros au maximum de cumuls de Flèches noires sont ralentis, et les attaques de base portées à un ennemi ralenti lui infligent des dégâts proportionnels à ses points de vie maximum.",
+          "en": "Heroes at maximum Black Arrows stacks are Slowed, and Basic Attacks on a Slowed enemy deal damage based on their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -39188,8 +39201,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_shadowdagger.png",
         "description": {
-          "fr": "Les serviteurs ennemis peuvent exploser quand ils meurent.",
-          "en": "Enemy Minions can explode on death"
+          "fr": "Les serviteurs qui meurent en étant marqués par tes capacités explosent et blessent les serviteurs, mercenaires et invocations autour d'eux.",
+          "en": "Minions dying while marked by your Abilities explode, damaging the Minions, Mercenaries and Summons around them."
         },
         "demoYoutubeId": null
       },
@@ -39202,8 +39215,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_blackarrows.png",
         "description": {
-          "fr": "Étourdit les unités neutres, renforce les mercenaires alliés.",
-          "en": "Stun neutral, and empower allied Mercenaries"
+          "fr": "Les mercenaires alliés non élite proches de Sylvanas frappent bien plus fort.",
+          "en": "Allied non-Elite Mercenaries near Sylvanas hit far harder."
         },
         "demoYoutubeId": null
       },
@@ -39216,8 +39229,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/talents/storm_ui_icon_sylvanas_blackarrows_b.png",
         "description": {
-          "fr": "À l'activation, les attaques et capacités de base étourdissent les serviteurs et les bâtiments. Attaquer un bâtiment en réduit le temps de recharge.",
-          "en": "On activation, Basic Attacks and Abilities Stun Minions and Structures. Attacking a Structure brings the next cast closer."
+          "fr": "À l'activation, les attaques et capacités de base étourdissent les serviteurs et les bâtiments quelques secondes. Attaquer un bâtiment en réduit le temps de recharge.",
+          "en": "Activate so Basic Attacks and Abilities Stun Minions and Structures for a few seconds. Attacking a Structure reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -39230,8 +39243,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_witheringfire.png",
         "description": {
-          "fr": "Tir d'affliction inflige des dégâts supplémentaires",
-          "en": "Withering Fire deals bonus damage"
+          "fr": "Toucher cinq fois le même ennemi avec Tir d'affliction fait exploser les dégâts du cinquième tir.",
+          "en": "Hitting the same enemy five times with Withering Fire makes that fifth shot hit enormously harder."
         },
         "demoYoutubeId": null
       },
@@ -39244,8 +39257,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_shadowdagger.png",
         "description": {
-          "fr": "Les attaques de base réduisent le temps de recharge de Dague de l'ombre.",
-          "en": "Basic Attacks reduce Shadow Dagger cooldown"
+          "fr": "Les attaques de base portées à un héros ou à un bâtiment au maximum de cumuls réduisent le temps de recharge de Dague de l'ombre, deux fois plus sur un héros.",
+          "en": "Basic Attacks on a Hero or Structure at maximum stacks reduce Shadow Dagger's cooldown, twice as much on a Hero."
         },
         "demoYoutubeId": null
       },
@@ -39258,8 +39271,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_hauntingwave.png",
         "description": {
-          "fr": "Vague de hantise applique Flèches noires.",
-          "en": "Haunting Wave applies Black Arrows"
+          "fr": "Augmente les dégâts de Vague de hantise, qui applique en plus le maximum de cumuls de Flèches noires.",
+          "en": "Increases Haunting Wave's damage, and it also applies maximum Black Arrows stacks."
         },
         "demoYoutubeId": null
       },
@@ -39272,8 +39285,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_wailingarrow.png",
         "description": {
-          "fr": "Décoche une flèche qui inflige des dégâts et réduit au silence.",
-          "en": "Fire arrow that damages and Silences"
+          "fr": "Décoche une flèche que l'on peut faire exploser à volonté : elle blesse et réduit au silence les ennemis de la zone. Elle explose d'elle-même en bout de course.",
+          "en": "Looses an arrow that can be detonated at will: it damages and Silences the enemies in the area. It bursts on its own at maximum range."
         },
         "demoYoutubeId": null
       },
@@ -39286,8 +39299,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_mindcontrol.png",
         "description": {
-          "fr": "Après un temps de préparation, tire un projectile qui s'empare du premier héros adverse touché : il est réduit au silence, ralenti, chargé de Flèches noires et contraint de marcher vers Sylvanas.",
-          "en": "After a wind-up, fires a projectile that seizes the first enemy Hero hit: they are Silenced, Slowed, loaded with Black Arrows and forced to walk toward Sylvanas."
+          "fr": "Après un temps de préparation, projette un trait qui s'empare du premier héros adverse touché : il est réduit au silence, ralenti, chargé de Flèches noires et contraint de marcher vers Sylvanas.",
+          "en": "After a wind-up, launches a missile that seizes the first enemy Hero in its path: they are Silenced, Slowed, loaded with Black Arrows and forced to walk toward Sylvanas."
         },
         "demoYoutubeId": null
       },
@@ -39300,8 +39313,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_shadowdagger.png",
         "description": {
-          "fr": "Dague de l'ombre réduit l'armure.",
-          "en": "Shadow Dagger lowers Armor"
+          "fr": "Dague de l'ombre réduit fortement l'armure de sa cible initiale, et un peu celle des ennemis auxquels elle se propage.",
+          "en": "Shadow Dagger sharply cuts the Armor of its first target, and a little of the enemies it spreads to."
         },
         "demoYoutubeId": null
       },
@@ -39315,7 +39328,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_hauntingwave.png",
         "description": {
           "fr": "Vague de hantise peut être relancée gratuitement peu après la téléportation, et se téléporter remet aussitôt Tir d'affliction à disposition.",
-          "en": "Haunting Wave can be recast for free shortly after the teleport, and teleporting instantly refreshes Withering Fire."
+          "en": "Haunting Wave can be recast for free shortly after teleporting, and teleporting instantly refreshes Withering Fire."
         },
         "demoYoutubeId": null
       },
@@ -39328,8 +39341,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_blackarrows.png",
         "description": {
-          "fr": "Les attaques de base lancent Tir d'affliction.",
-          "en": "Basic Attacks cast Withering Fire"
+          "fr": "Les attaques de base portées à un héros au maximum de cumuls déclenchent un Tir d'affliction, qui applique lui aussi Flèches noires.",
+          "en": "Basic Attacks on a Hero at maximum stacks trigger a Withering Fire shot, which applies Black Arrows in turn."
         },
         "demoYoutubeId": null
       },
@@ -39343,7 +39356,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_witheringfire.png",
         "description": {
           "fr": "Chaque Tir d'affliction qui atteint un ennemi accélère Sylvanas, effet cumulable, et ses attaques de base en relancent la durée.",
-          "en": "Each Withering Fire shot that hits an enemy speeds Sylvanas up, stacking, and her Basic Attacks refresh the duration."
+          "en": "Each Withering Fire that reaches an enemy speeds Sylvanas up, stacking, and her Basic Attacks refresh the duration."
         },
         "demoYoutubeId": null
       },
@@ -39356,8 +39369,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_blackarrows.png",
         "description": {
-          "fr": "Les dégâts infligés aux adversaires saturés de Flèches noires rendent des points de vie à Sylvanas, davantage contre les héros.",
-          "en": "Damage dealt to enemies fully stacked with Black Arrows restores Health to Sylvanas, more so against Heroes."
+          "fr": "Les dégâts infligés aux adversaires au maximum de cumuls de Flèches noires rendent des points de vie à Sylvanas, deux fois plus contre les héros.",
+          "en": "Damage dealt to enemies at maximum Black Arrows stacks heals Sylvanas, twice as much against Heroes."
         },
         "demoYoutubeId": null
       },
@@ -39370,8 +39383,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/talents/storm_ui_icon_sylvanas_willoftheforsaken.png",
         "description": {
-          "fr": "Rend insensible aux effets de contrôle et augmente la vitesse de déplacement.",
-          "en": "Activate to gain Unstoppable and Move Speed"
+          "fr": "Rend Sylvanas insensible aux effets de contrôle et l'accélère fortement quelques secondes.",
+          "en": "Makes Sylvanas Unstoppable and speeds her up sharply for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -39384,8 +39397,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_wailingarrow.png",
         "description": {
-          "fr": "Au centre de l'explosion de Flèche gémissante, les ennemis subissent bien plus de dégâts et restent réduits au silence bien plus longtemps.",
-          "en": "At the center of Wailing Arrow's blast, enemies take far more damage and stay Silenced far longer."
+          "fr": "Au centre de l'explosion de Flèche gémissante, les ennemis subissent bien plus de dégâts et restent réduits au silence deux fois plus longtemps.",
+          "en": "At the center of Wailing Arrow's blast, enemies take far more damage and stay Silenced twice as long."
         },
         "demoYoutubeId": null
       },
@@ -39398,8 +39411,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_mindcontrol.png",
         "description": {
-          "fr": "Contrôle mental réduit fortement la vision des héros touchés et se recharge plus vite.",
-          "en": "Mind Control heavily reduces the sight of the Heroes hit, and returns sooner."
+          "fr": "Contrôle mental réduit fortement la vision des héros touchés et se recharge bien plus vite.",
+          "en": "Mind Control heavily shrinks the vision of the Heroes it hits and comes back far sooner."
         },
         "demoYoutubeId": null
       },
@@ -39412,8 +39425,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/sylvanas/images/spells/storm_ui_icon_sylvanas_witheringfire.png",
         "description": {
-          "fr": "Tir d'affliction applique Flèches noires.",
-          "en": "Withering Fire applies Black Arrows"
+          "fr": "Tir d'affliction applique Flèches noires, et toucher des héros en réduit le temps de recharge.",
+          "en": "Withering Fire applies Black Arrows, and hitting Heroes reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -39426,15 +39439,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_boltofthestorm.png",
         "description": {
-          "fr": "Téléporte sur une courte distance.",
-          "en": "Activate to teleport a short distance"
+          "fr": "À l'activation, téléporte Sylvanas à un endroit proche.",
+          "en": "Activate to teleport Sylvanas a short distance."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Sylvanas",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "tassadar",
@@ -46677,7 +46690,7 @@ const HEROES = [
   },
   {
     "id": "zuljin",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Zul'jin",
       "en": "Zul'jin"
@@ -46701,8 +46714,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_berzerker.png",
         "description": {
-          "fr": "Zul'jin frappe d'autant plus vite qu'il lui manque des points de vie. À l'activation, ses attaques frappent bien plus fort mais lui coûtent de la vie.",
-          "en": "Zul'jin attacks faster the more Health he is missing. On activation his attacks hit far harder but cost him Health."
+          "fr": "Zul'jin frappe d'autant plus vite qu'il lui manque des points de vie. À l'activation, ses attaques frappent bien plus fort mais lui coûtent de la vie à chaque coup.",
+          "en": "Zul'jin attacks faster the more Health he is missing. Activate and his attacks hit far harder, but each swing costs him Health."
         },
         "demoYoutubeId": ""
       },
@@ -46714,8 +46727,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_grievousthrow.png",
         "description": {
-          "fr": "Lance une hache qui inflige des dégâts et marque, augmentant les dégâts infligés par Zul'jin.",
-          "en": "Throw an Axe, damaging and marking a target, increasing Zul'jin's Basic Attack damage."
+          "fr": "Lance une hache qui blesse les deux premiers ennemis touchés et les marque : les prochaines attaques de base de Zul'jin sur ces cibles frappent bien plus fort.",
+          "en": "Throws an axe that damages the first two enemies hit and marks them: Zul'jin's next Basic Attacks on those targets hit far harder."
         },
         "demoYoutubeId": ""
       },
@@ -46727,8 +46740,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_twincleave.png",
         "description": {
-          "fr": "Lance des haches tourbillonnantes qui ralentissent les ennemis.",
-          "en": "Throw swirling Axes that Slow enemies"
+          "fr": "Projette deux haches sur une trajectoire circulaire ; chacune blesse et ralentit les ennemis qu'elle touche.",
+          "en": "Hurls two axes along a circular path; each damages and Slows the enemies it hits."
         },
         "demoYoutubeId": ""
       },
@@ -46741,7 +46754,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_regeneration.png",
         "description": {
           "fr": "Canalise pour récupérer une grande partie de ses points de vie. Se déplacer ou subir des dégâts interrompt l'effet.",
-          "en": "Channels to recover a large portion of his Health. Moving or taking damage interrupts it."
+          "en": "Channels to recover a large chunk of his Health. Moving or taking damage cuts it short."
         },
         "demoYoutubeId": ""
       },
@@ -46753,8 +46766,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_tazdingo.png",
         "description": {
-          "fr": "Rend impossible à tuer.",
-          "en": "Become unkillable"
+          "fr": "Pendant quelques secondes, Zul'jin ne peut pas mourir : ses points de vie ne descendent jamais sous un point.",
+          "en": "For a few seconds, Zul'jin cannot die: his Health never drops below one point."
         },
         "demoYoutubeId": ""
       },
@@ -46766,24 +46779,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_guillotine.png",
         "description": {
-          "fr": "Lance une hache gigantesque qui frappe d'autant plus fort qu'il manque de points de vie à Zul'jin.",
-          "en": "Hurls a giant axe that hits harder the more Health Zul'jin is missing."
+          "fr": "Lance une hache gigantesque qui retombe sur la zone ciblée et frappe d'autant plus fort qu'il manque de points de vie à Zul'jin.",
+          "en": "Throws a giant axe that lands on the target area and hits harder the more Health Zul'jin is missing."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Tu es plus fort à bas points de vie : n'aie pas peur de rester au front.",
-        "en": "You are stronger at low Health: do not be afraid to hold the line."
+        "fr": "N'abuse pas de Berserker (D) : chaque coup te coûte de la vie, et tu ne veux pas être bas quand l'équipe d'en face engage.",
+        "en": "Don't lean on Berserker (D) too hard: every swing costs you Health, and you don't want to be low when the enemy team engages."
       },
       {
-        "fr": "Régénération s'interrompt au moindre déplacement ou dégât : canalise à couvert.",
-        "en": "Regeneration breaks on any movement or damage: channel under cover."
+        "fr": "Lancer pernicieux (A) ne marque que les deux premiers ennemis touchés : ne le balance pas dans une vague de serviteurs si tu vises le héros derrière.",
+        "en": "Grievous Throw (Q) only marks the first two enemies hit: don't throw it into a Minion wave if you want the Hero behind."
       },
       {
-        "fr": "Taz'dingo ! te rend impossible à tuer : lance-le avant le burst, pas après.",
-        "en": "Taz'dingo! makes you unkillable: use it before the burst, not after."
+        "fr": "Régénération (E) saute au moindre dégât : mets-toi à couvert avant de la lancer, un serviteur suffit à te la couper.",
+        "en": "Regeneration (E) breaks on any damage: get behind cover before you start it, a single Minion is enough to cut it."
       }
     ],
     "builds": [
@@ -46802,21 +46815,21 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Zuljin]",
+        "buildCode": "[T2311221,Zuljin]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm67a7du401rh1",
+            "primaryId": "tm67a7du4022dw",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tm67a7du404wf7",
+            "primaryId": "tm67a7du406wqj",
             "alternativeIds": []
           },
           {
@@ -46831,7 +46844,67 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tm67a7du412ocg",
+            "primaryId": "tm67a7du413afk",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tm67a7du416p8p",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tm67a7du418mub",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build A",
+          "en": "Q build"
+        },
+        "summary": {
+          "fr": "Build centré sur Lancer pernicieux et ses marques.",
+          "en": "Focused on Grievous Throw and its marks."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T1311311,Zuljin]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tm67a7du401rh1",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tm67a7du406wqj",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tm67a7du4079ap",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tm67a7du4103z8",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tm67a7du414qnm",
             "alternativeIds": []
           },
           {
@@ -46859,8 +46932,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_grievousthrow.png",
         "description": {
-          "fr": "Améliore Lancer pernicieux.",
-          "en": "Empower Grievous Throw"
+          "fr": "Lancer pernicieux transperce tous les ennemis touchés, rend du mana par héros atteint, et sa marque ne s'use plus sur les attaques de base.",
+          "en": "Grievous Throw pierces every enemy hit, refunds Mana per Hero struck, and its mark is no longer spent by Basic Attacks."
         },
         "demoYoutubeId": null
       },
@@ -46873,8 +46946,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_berzerker.png",
         "description": {
-          "fr": "Augmente les dégâts quand les points de vie sont bas.",
-          "en": "Low Health increases damage"
+          "fr": "Sous un premier seuil de points de vie, la puissance de capacité de Zul'jin augmente ; plus bas encore, ce sont ses attaques de base qui frappent plus fort.",
+          "en": "Below a first Health threshold, Zul'jin's Spell Power rises; lower still, his Basic Attacks hit harder."
         },
         "demoYoutubeId": null
       },
@@ -46887,8 +46960,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/talents/storm_ui_icon_zuljin_headhunter.png",
         "description": {
-          "fr": "Quête : faire des victimes augmente les dégâts des attaques.",
-          "en": "Quest: Takedowns increase damage"
+          "fr": "Quête : tuer chaque héros adverse pour la première fois augmente définitivement les dégâts de Zul'jin.",
+          "en": "Quest: killing each enemy Hero for the first time permanently increases Zul'jin's damage."
         },
         "demoYoutubeId": null
       },
@@ -46901,8 +46974,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_regeneration.png",
         "description": {
-          "fr": "Régénération rend davantage de points de vie.",
-          "en": "Regeneration heals more"
+          "fr": "Régénération rend davantage de points de vie, et rend aussi du mana si la canalisation va à son terme.",
+          "en": "Regeneration restores more Health, and also gives Mana back if the channel completes."
         },
         "demoYoutubeId": null
       },
@@ -46915,8 +46988,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/talents/storm_ui_icon_zuljin_regeneration_a.png",
         "description": {
-          "fr": "À l'activation, dissipe immobilisations et ralentissements. Effet passif : Régénération se recharge plus vite et coûte moins de mana.",
-          "en": "On activation, clears Roots and Slows. Passive: Regeneration returns sooner and costs less Mana."
+          "fr": "À l'activation, dissipe les immobilisations et les ralentissements qui affectent Zul'jin.",
+          "en": "Activate to clear the Roots and Slows on Zul'jin."
         },
         "demoYoutubeId": null
       },
@@ -46929,8 +47002,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/talents/storm_ui_icon_zuljin_davoodooshuffle.png",
         "description": {
-          "fr": "Rage amani voit son temps de recharge réduit et confère de l'armure tant qu'elle rend des points de vie.",
-          "en": "Amani Rage returns sooner and grants Armor for as long as it is restoring Health."
+          "fr": "Rage amani revient plus vite et confère de l'armure tant qu'elle rend des points de vie.",
+          "en": "Amani Rage comes back sooner and grants Armor while it is healing him."
         },
         "demoYoutubeId": null
       },
@@ -46944,7 +47017,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_grievousthrow.png",
         "description": {
           "fr": "Augmente le bonus aux dégâts et la durée du marquage de Lancer pernicieux.",
-          "en": "Increase Grievous Throw duration and damage"
+          "en": "Increases both the damage bonus and the duration of Grievous Throw's mark."
         },
         "demoYoutubeId": null
       },
@@ -46957,8 +47030,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_twincleave.png",
         "description": {
-          "fr": "Quête : augmente les dégâts de Cercle de mort.",
-          "en": "Quest: Increase Twin Cleave damage"
+          "fr": "Quête : chaque héros touché par Cercle de mort en augmente définitivement les dégâts.",
+          "en": "Quest: every Hero hit by Twin Cleave permanently increases its damage."
         },
         "demoYoutubeId": null
       },
@@ -46971,8 +47044,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_berzerker.png",
         "description": {
-          "fr": "Bonus de Berserker à la vitesse d'attaque augmenté.",
-          "en": "Increases Berserker's Attack Speed bonus"
+          "fr": "Augmente nettement le bonus à la vitesse d'attaque de Berserker.",
+          "en": "Sharply increases Berserker's Attack Speed bonus."
         },
         "demoYoutubeId": null
       },
@@ -46985,8 +47058,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_tazdingo.png",
         "description": {
-          "fr": "Rend impossible à tuer.",
-          "en": "Become unkillable"
+          "fr": "Pendant quelques secondes, Zul'jin ne peut pas mourir : ses points de vie ne descendent jamais sous un point.",
+          "en": "For a few seconds, Zul'jin cannot die: his Health never drops below one point."
         },
         "demoYoutubeId": null
       },
@@ -46999,8 +47072,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_guillotine.png",
         "description": {
-          "fr": "Lance une hache gigantesque qui frappe d'autant plus fort qu'il manque de points de vie à Zul'jin.",
-          "en": "Hurls a giant axe that hits harder the more Health Zul'jin is missing."
+          "fr": "Lance une hache gigantesque qui retombe sur la zone ciblée et frappe d'autant plus fort qu'il manque de points de vie à Zul'jin.",
+          "en": "Throws a giant axe that lands on the target area and hits harder the more Health Zul'jin is missing."
         },
         "demoYoutubeId": null
       },
@@ -47013,8 +47086,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_twincleave.png",
         "description": {
-          "fr": "Augmente le ralentissement infligé par Cercle de mort.",
-          "en": "Increase Twin Cleave Slow"
+          "fr": "Augmente l'intensité et la durée du ralentissement de chaque hache de Cercle de mort.",
+          "en": "Increases the strength and duration of the Slow from each Twin Cleave axe."
         },
         "demoYoutubeId": null
       },
@@ -47027,8 +47100,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_base.png",
         "description": {
-          "fr": "Les attaques de base augmentent la vitesse de déplacement.",
-          "en": "Basic Attacks grant Move Speed"
+          "fr": "Les attaques de base portées aux héros accélèrent Zul'jin, cumulable jusqu'à un plafond.",
+          "en": "Basic Attacks on Heroes speed Zul'jin up, stacking to a cap."
         },
         "demoYoutubeId": null
       },
@@ -47042,7 +47115,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/zuljin/images/talents/storm_ui_icon_zuljin_trollnet.png",
         "description": {
           "fr": "Lance un filet qui immobilise le premier héros adverse touché. À vide, la capacité revient presque aussitôt.",
-          "en": "Throws a net that Roots the first enemy Hero hit. On a miss, the Ability comes back almost immediately."
+          "en": "Throws a net that Roots the first enemy Hero hit. On a miss, it comes back almost at once."
         },
         "demoYoutubeId": null
       },
@@ -47055,8 +47128,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_grievousthrow.png",
         "description": {
-          "fr": "Les attaques de base ne tiennent pas compte de l'armure et infligent plus de dégâts.",
-          "en": "Basic Attacks ignore Armor, deal more damage"
+          "fr": "Les attaques de base portées à un héros marqué par Lancer pernicieux ignorent son armure et lui infligent des dégâts supplémentaires proportionnels à ses points de vie maximum.",
+          "en": "Basic Attacks on a Hero marked by Grievous Throw ignore their Armor and deal bonus damage based on their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -47069,8 +47142,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_twincleave.png",
         "description": {
-          "fr": "Dégâts augmentés au point de rencontre des haches de Cercle de mort.",
-          "en": "Bonus Twin Cleave damage at apex"
+          "fr": "Un ennemi frappé par les deux haches de Cercle de mort en même temps subit un gros supplément de dégâts.",
+          "en": "An enemy struck by both Twin Cleave axes at once takes a big chunk of extra damage."
         },
         "demoYoutubeId": null
       },
@@ -47083,8 +47156,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_speed.png",
         "description": {
-          "fr": "Chaque ennemi tué augmente la vitesse d'attaque de Zul'jin, effet cumulable dont les attaques de base relancent la durée. Participer à la mort d'un héros la fait bondir d'un coup.",
-          "en": "Each enemy killed raises Zul'jin's Attack Speed, stacking, with Basic Attacks refreshing the duration. A Hero Takedown spikes it instantly."
+          "fr": "Chaque ennemi tué augmente la vitesse d'attaque de Zul'jin, effet cumulable dont les attaques de base relancent la durée.",
+          "en": "Every enemy killed raises Zul'jin's Attack Speed, stacking, with Basic Attacks refreshing the duration."
         },
         "demoYoutubeId": null
       },
@@ -47097,8 +47170,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_tazdingo.png",
         "description": {
-          "fr": "Taz'dingo dure plus longtemps et rend des points de vie.",
-          "en": "Taz'dingo duration increased, restores Health"
+          "fr": "Prolonge Taz'dingo !, et à son expiration Zul'jin récupère la moitié des dégâts qu'il a infligés pendant.",
+          "en": "Extends Taz'dingo!, and when it ends Zul'jin recovers half the damage he dealt during it."
         },
         "demoYoutubeId": null
       },
@@ -47111,8 +47184,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_guillotine.png",
         "description": {
-          "fr": "Guillotine continue sa course au-delà du premier héros touché.",
-          "en": "Guillotine keeps traveling forward"
+          "fr": "Après l'impact, la guillotine poursuit sa course et blesse les ennemis suivants. Si elle tue un héros, Zul'jin récupère d'un coup tous ses points de vie.",
+          "en": "After impact, the guillotine keeps going and damages the enemies beyond. If it kills a Hero, Zul'jin instantly refills his Health."
         },
         "demoYoutubeId": null
       },
@@ -47125,8 +47198,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zuljin/images/spells/storm_ui_icon_zuljin_regeneration.png",
         "description": {
-          "fr": "Régénération ne peut pas être interrompue.",
-          "en": "Regeneration cannot be interrupted"
+          "fr": "Régénération n'est plus canalisée et ne peut plus être interrompue.",
+          "en": "Regeneration is no longer channeled and can no longer be interrupted."
         },
         "demoYoutubeId": null
       },
@@ -47139,15 +47212,15 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_aoe.png",
         "description": {
-          "fr": "Les attaques de base ricochent sur un ennemi proche.",
-          "en": "Basic Attacks bounce to a nearby enemy"
+          "fr": "Les attaques de base ricochent sur un ennemi proche, les héros en priorité.",
+          "en": "Basic Attacks bounce to a nearby enemy, Heroes first."
         },
         "demoYoutubeId": null
       }
     ],
     "forms": [],
     "codeKey": "Zuljin",
-    "isNew": false
+    "isNew": true
   }
 ];
 
