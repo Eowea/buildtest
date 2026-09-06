@@ -44106,7 +44106,7 @@ const HEROES = [
   },
   {
     "id": "xul",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Xul",
       "en": "Xul"
@@ -44130,8 +44130,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_raiseskeleton.png",
         "description": {
-          "fr": "Les serviteurs adverses qui meurent près de Xul se relèvent en guerriers squelettes, qui explosent à leur mort.",
-          "en": "Enemy Minions dying near Xul rise as Skeletal Warriors, which explode when they die."
+          "fr": "Les serviteurs adverses qui meurent près de Xul se relèvent en guerriers squelettes, qui explosent à leur mort. Trois au maximum en même temps.",
+          "en": "Enemy Minions dying near Xul rise as Skeletal Warriors, which explode when they die. Three at most at a time."
         },
         "demoYoutubeId": ""
       },
@@ -44156,8 +44156,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_cursedstrikes_off.png",
         "description": {
-          "fr": "Les attaques de base infligent des dégâts de zone et réduisent la vitesse d'attaque.",
-          "en": "Basic Attacks deal damage in an area and reduce Attack Speed"
+          "fr": "Pendant quelques secondes, les attaques de base de Xul frappent dans une large zone et réduisent la vitesse d'attaque des héros et des invocations touchés.",
+          "en": "For a few seconds, Xul's Basic Attacks hit a wide area and cut the Attack Speed of the Heroes and Summons they touch."
         },
         "demoYoutubeId": ""
       },
@@ -44170,7 +44170,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_boneprison.png",
         "description": {
           "fr": "Après un court délai, blesse et immobilise un héros adverse ; tous les guerriers squelettes proches se ruent alors sur lui.",
-          "en": "After a short delay, damages and Roots an enemy Hero; every nearby Skeletal Warrior then focuses them."
+          "en": "After a short delay, damages and Roots an enemy Hero; every nearby Skeletal Warrior then fixates on them."
         },
         "demoYoutubeId": ""
       },
@@ -44182,8 +44182,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_bonearmor.png",
         "description": {
-          "fr": "Confère à Xul un bouclier proportionnel à son maximum de points de vie.",
-          "en": "Grants Xul a Shield based on his maximum Health."
+          "fr": "Confère à Xul un bouclier proportionnel à son maximum de points de vie, quelques secondes.",
+          "en": "Grants Xul a Shield based on his maximum Health, for a few seconds."
         },
         "demoYoutubeId": ""
       },
@@ -44195,8 +44195,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_skeletalmages.png",
         "description": {
-          "fr": "Invoque des mages de givre qui infligent des dégâts aux ennemis et les ralentissent.",
-          "en": "Summon Frost Mages to damage and Slow enemies"
+          "fr": "Ciblage vectoriel : invoque une rangée de mages de givre qui blessent et ralentissent les ennemis proches un long moment.",
+          "en": "Vector targeting: summons a line of Frost Mages that damage and Slow nearby enemies for a long while."
         },
         "demoYoutubeId": ""
       },
@@ -44208,24 +44208,24 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_poisonnova.png",
         "description": {
-          "fr": "Empoisonne les ennemis dans une large zone.",
-          "en": "Poison enemies in a large area"
+          "fr": "Libère des projectiles empoisonnés qui rongent longuement tous les ennemis touchés.",
+          "en": "Releases poisonous missiles that eat away at every enemy hit for a long time."
         },
         "demoYoutubeId": ""
       }
     ],
     "tips": [
       {
-        "fr": "Tue les serviteurs près des ennemis : chaque cadavre devient un squelette.",
-        "en": "Kill Minions near enemies: every corpse becomes a Skeleton."
+        "fr": "Ta place est en split push : clear la vague, remonte à cheval, va pousser la lane d'en face pendant que ton équipe joue safe.",
+        "en": "Your place is split-pushing: clear the wave, mount up, and go push the opposite lane while your team plays safe."
       },
       {
-        "fr": "Prison d'os immobilise et envoie tous tes squelettes sur la cible.",
-        "en": "Bone Prison Roots and sends every Skeleton onto the target."
+        "fr": "Frappes maudites (Z) est l'un des meilleurs waveclears du jeu, et il détruit les héros qui vivent de leurs attaques de base.",
+        "en": "Cursed Strikes (W) is one of the best waveclears in the game, and it wrecks Heroes who live off their Basic Attacks."
       },
       {
-        "fr": "Frappes maudites ruine les héros qui vivent de leurs attaques de base.",
-        "en": "Cursed Strikes wrecks Heroes who live off their Basic Attacks."
+        "fr": "Prison d'os (E) se pose sur un tank qui vient de cramer ses défensives, ou sur une cible sans échappatoire : tes squelettes se ruent dessus.",
+        "en": "Bone Prison (E) goes on a tank who just burned their defensives, or on a target with no escape: your skeletons pile onto them."
       }
     ],
     "builds": [
@@ -44244,11 +44244,11 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Xul]",
+        "buildCode": "[T1322323,Xul]",
         "videos": [],
         "updatedAt": {
-          "fr": "18 Août 2026",
-          "en": "August 18, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
@@ -44258,7 +44258,67 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmxwxxlzy04ttd",
+            "primaryId": "tmxwxxlzy06njl",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmxwxxlzy081zq",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmxwxxlzy1102b",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmxwxxlzy14y7e",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmxwxxlzy16tka",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmxwxxlzy20q0d",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build Z",
+          "en": "W build"
+        },
+        "summary": {
+          "fr": "Build centré sur Frappes maudites, pour taper large et se soigner dessus.",
+          "en": "Focused on Cursed Strikes, to hit wide and heal off it."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T1212223,Xul]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmxwxxlzy01y8p",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmxwxxlzy05fqk",
             "alternativeIds": []
           },
           {
@@ -44268,22 +44328,22 @@ const HEROES = [
           },
           {
             "level": 10,
-            "primaryId": "tmxwxxlzy1020a",
+            "primaryId": "tmxwxxlzy1102b",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmxwxxlzy123ml",
+            "primaryId": "tmxwxxlzy13fx1",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmxwxxlzy15jjw",
+            "primaryId": "tmxwxxlzy16tka",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmxwxxlzy18awv",
+            "primaryId": "tmxwxxlzy20q0d",
             "alternativeIds": []
           }
         ],
@@ -44301,8 +44361,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_bonearmor_b.png",
         "description": {
-          "fr": "Explose et inflige des dégâts.",
-          "en": "Bone Armor explodes for damage"
+          "fr": "Quand Armure d'os expire, elle inflige aux héros proches des dégâts proportionnels à leurs points de vie maximum.",
+          "en": "When Bone Armor expires, it deals nearby Heroes damage based on their maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -44316,7 +44376,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_bonearmor_c.png",
         "description": {
           "fr": "Armure d'os ralentit les ennemis proches, et attaquer un héros ralenti, immobilisé ou étourdi en réduit le temps de recharge.",
-          "en": "Bone Armor Slows nearby enemies, and attacking a Slowed, Rooted or Stunned Hero brings the next cast closer."
+          "en": "Bone Armor Slows nearby enemies, and attacking a Slowed, Rooted or Stunned Hero reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -44329,8 +44389,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_bonearmor.png",
         "description": {
-          "fr": "Armure d'os permet d'esquiver les attaques de base.",
-          "en": "Bone Armor evades Basic Attacks"
+          "fr": "Tant qu'Armure d'os est active, Xul esquive toutes les attaques de base, en échange d'un temps de recharge nettement plus long.",
+          "en": "While Bone Armor is up, Xul evades every Basic Attack, in exchange for a much longer cooldown."
         },
         "demoYoutubeId": null
       },
@@ -44344,7 +44404,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_reap.png",
         "description": {
           "fr": "Réduit le temps de recharge de Faux spectrale et son coût en mana.",
-          "en": "Lower Spectral Scythe cooldown, Mana cost"
+          "en": "Reduces Spectral Scythe's cooldown and Mana cost."
         },
         "demoYoutubeId": null
       },
@@ -44357,8 +44417,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_cursedstrikes_off.png",
         "description": {
-          "fr": "Réduit le temps de recharge de Frappes maudites.",
-          "en": "Reduce Cursed Strikes cooldown"
+          "fr": "Augmente les dégâts des attaques de base de Xul, et chaque ennemi touché par Frappes maudites en réduit le temps de recharge.",
+          "en": "Increases Xul's Basic Attack damage, and each enemy hit by Cursed Strikes reduces its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -44371,8 +44431,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_raiseskeleton.png",
         "description": {
-          "fr": "Quête : Prison d'os génère des guerriers squelettes.",
-          "en": "Quest: Bone Prison spawns Skeletal Warriors"
+          "fr": "Prison d'os relève deux guerriers squelettes en plus de la limite habituelle. Quête : en relever beaucoup. Récompense : quand ils se ruent sur une cible, les squelettes attaquent et se déplacent plus vite.",
+          "en": "Bone Prison raises two Skeletal Warriors beyond the usual cap. Quest: raise a lot of them. Reward: while fixated on a target, the skeletons attack and move faster."
         },
         "demoYoutubeId": null
       },
@@ -44385,8 +44445,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_cursedstrikes_off.png",
         "description": {
-          "fr": "Rend des points de vie pour chaque héros adverse touché par Frappes maudites.",
-          "en": "Cursed Strikes against Heroes heals"
+          "fr": "Frappes maudites rend à Xul une bonne part des dégâts qu'elle inflige aux héros.",
+          "en": "Cursed Strikes heals Xul for a good share of the damage it deals to Heroes."
         },
         "demoYoutubeId": null
       },
@@ -44399,8 +44459,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_raiseskeleton.png",
         "description": {
-          "fr": "Les attaques des guerriers squelettes rendent des points de vie et de mana.",
-          "en": "Skeletal Warrior attacks restore Health, Mana"
+          "fr": "Chaque attaque d'un guerrier squelette rend des points de vie et du mana à Xul.",
+          "en": "Every attack from a Skeletal Warrior restores Health and Mana to Xul."
         },
         "demoYoutubeId": null
       },
@@ -44414,7 +44474,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_bonearmor.png",
         "description": {
           "fr": "Augmente la quantité de dégâts absorbés par le bouclier d'Armure d'os, et confère de l'armure anti-sort pendant toute sa durée.",
-          "en": "Increases how much Bone Armor's Shield absorbs, and grants Spell Armor for its full duration."
+          "en": "Increases how much Bone Armor's Shield absorbs, and grants Spell Armor for its whole duration."
         },
         "demoYoutubeId": null
       },
@@ -44427,8 +44487,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_poisonnova.png",
         "description": {
-          "fr": "Empoisonne les ennemis proches.",
-          "en": "Poison nearby enemies"
+          "fr": "Libère des projectiles empoisonnés qui rongent longuement tous les ennemis touchés.",
+          "en": "Releases poisonous missiles that eat away at every enemy hit for a long time."
         },
         "demoYoutubeId": null
       },
@@ -44441,8 +44501,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_skeletalmages.png",
         "description": {
-          "fr": "Invoque des mages de givre qui infligent des dégâts aux ennemis et les ralentissent.",
-          "en": "Summon Frost Mages to damage and Slow enemies"
+          "fr": "Ciblage vectoriel : invoque une rangée de mages de givre qui blessent et ralentissent les ennemis proches un long moment.",
+          "en": "Vector targeting: summons a line of Frost Mages that damage and Slow nearby enemies for a long while."
         },
         "demoYoutubeId": null
       },
@@ -44455,8 +44515,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_reap.png",
         "description": {
-          "fr": "Après un court délai, Faux spectrale invoque des faux supplémentaires, plus faibles.",
-          "en": "After a short delay, Spectral Scythe summons extra scythes, weaker ones."
+          "fr": "Après un court délai, Faux spectrale invoque deux faux supplémentaires, plus faibles.",
+          "en": "After a short delay, Spectral Scythe summons two extra scythes, weaker ones."
         },
         "demoYoutubeId": null
       },
@@ -44469,8 +44529,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_cursedstrikes_off.png",
         "description": {
-          "fr": "Frappes maudites augmente la vitesse d'attaque.",
-          "en": "Cursed Strikes increases Attack Speed"
+          "fr": "Chaque ennemi touché par Frappes maudites augmente la vitesse d'attaque de Xul, cumulable jusqu'à un plafond élevé.",
+          "en": "Each enemy hit by Cursed Strikes increases Xul's Attack Speed, stacking up to a high cap."
         },
         "demoYoutubeId": null
       },
@@ -44497,8 +44557,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_reap.png",
         "description": {
-          "fr": "Faux spectrale et les guerriers squelettes ralentissent les ennemis.",
-          "en": "Spectral Scythe, Skeletal Warriors Slow"
+          "fr": "Les héros touchés par Faux spectrale ou par les guerriers squelettes sont ralentis.",
+          "en": "Heroes damaged by Spectral Scythe or by Skeletal Warriors are Slowed."
         },
         "demoYoutubeId": null
       },
@@ -44511,8 +44571,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_cursedstrikes_off.png",
         "description": {
-          "fr": "Frappes maudites et les guerriers squelettes réduisent les dégâts infligés.",
-          "en": "Cursed Strikes, Skeletal Warriors reduce damage dealt"
+          "fr": "Les héros touchés par Frappes maudites ou par les guerriers squelettes infligent nettement moins de dégâts pendant quelques secondes.",
+          "en": "Heroes damaged by Cursed Strikes or by Skeletal Warriors deal far less damage for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -44525,8 +44585,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/talents/storm_ui_icon_necromancer_bonespear.png",
         "description": {
-          "fr": "Inflige des dégâts aux ennemis sur une ligne.",
-          "en": "Damage enemies in a line"
+          "fr": "Projette une lance qui blesse tous les ennemis sur une ligne.",
+          "en": "Throws a spear that damages every enemy in a line."
         },
         "demoYoutubeId": null
       },
@@ -44539,8 +44599,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_poisonnova.png",
         "description": {
-          "fr": "Nova de poison rend des points de vie et sa durée est augmentée.",
-          "en": "Increase Poison Nova duration, now heals"
+          "fr": "Nova de poison rend à Xul la moitié des dégâts qu'elle inflige, et son poison dure plus longtemps.",
+          "en": "Poison Nova heals Xul for half the damage it deals, and its poison lasts longer."
         },
         "demoYoutubeId": null
       },
@@ -44554,7 +44614,7 @@ const HEROES = [
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_skeletalmages.png",
         "description": {
           "fr": "Les mages de givre ralentissent bien plus fort, et Faux spectrale en invoque un à la place d'un guerrier squelette toutes les quelques touches sur des héros adverses.",
-          "en": "Frost Mages Slow far harder, and Spectral Scythe summons one instead of a Skeletal Warrior every few hits on enemy Heroes."
+          "en": "Frost Mages Slow far harder, and every few Spectral Scythe hits on Heroes spawn one instead of a Skeletal Warrior."
         },
         "demoYoutubeId": null
       },
@@ -44567,8 +44627,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_reap.png",
         "description": {
-          "fr": "Faux spectrale réduit les soins reçus.",
-          "en": "Spectral Scythe reduces healing taken"
+          "fr": "Les héros touchés par Faux spectrale ne reçoivent presque plus de soins pendant quelques secondes.",
+          "en": "Heroes hit by Spectral Scythe receive almost no healing for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -44581,8 +44641,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xul/images/spells/storm_ui_icon_necromancer_raiseskeleton.png",
         "description": {
-          "fr": "Les guerriers squelettes réduisent le temps de recharge de la capacité héroïque.",
-          "en": "Skeletal Warriors reduce Heroic cooldown"
+          "fr": "Chaque fois qu'un guerrier squelette inflige des dégâts, les temps de recharge d'Armure d'os et de la capacité héroïque de Xul se réduisent.",
+          "en": "Each time a Skeletal Warrior deals damage, Bone Armor's and Xul's Heroic cooldowns tick down."
         },
         "demoYoutubeId": null
       }
@@ -44602,7 +44662,7 @@ const HEROES = [
       "fr": "20 Août 2026",
       "en": "August 20, 2026"
     },
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "yrel",
