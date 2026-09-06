@@ -10383,7 +10383,7 @@ const HEROES = [
   },
   {
     "id": "alarak",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Alarak",
       "en": "Alarak"
@@ -10407,8 +10407,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/talents/storm_ui_icon_alarak_sadism.png",
         "description": {
-          "fr": "Chaque point de sadisme augmente les dégâts de capacité qu'Alarak inflige aux héros adverses, ainsi que les points de vie qui lui sont rendus. Quête répétable : faire des victimes augmente le sadisme jusqu'à un plafond ; ce gain est perdu en cas de mort.",
-          "en": "Each point of Sadism increases Alarak's Ability damage and self-healing against enemy Heroes. Repeatable Quest: Takedowns increase Sadism up to a cap; that gain is lost on death."
+          "fr": "Alarak inflige bien plus de dégâts de capacité aux héros adverses, et récupère d'autant plus de points de vie. Plusieurs talents font encore monter ce bonus, mais ce qu'ils apportent est perdu en cas de mort.",
+          "en": "Alarak deals far more Ability damage to enemy Heroes, and heals for that much more. Several Talents push that bonus higher, but what they add is lost on death."
         },
         "demoYoutubeId": ""
       },
@@ -10480,16 +10480,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Télékinésie te déplace aussi : sers-t'en pour entrer, puis pour ressortir.",
-        "en": "Telekinesis moves you too: use it to get in, then to get out."
+        "fr": "Le sadisme que tes talents t'accumulent disparaît à ta mort : décroche d'un fight perdu, tes cumuls valent plus cher qu'un kill.",
+        "en": "The Sadism your Talents build up vanishes when you die: back out of a lost fight, your stacks are worth more than a kill."
       },
       {
-        "fr": "Le sadisme gagné sur tes victimes est perdu à ta mort : ne prends aucun risque inutile.",
-        "en": "The Sadism you gain from Takedowns is lost on death: take no needless risks."
+        "fr": "Télékinésie (Z) te pousse toi aussi : lance-la sur toi-même pour rentrer sur une cible, ou pour te sortir d'un mauvais pas.",
+        "en": "Telekinesis (W) pushes you too: self-cast it to close on a target, or to shove yourself out of trouble."
       },
       {
-        "fr": "Représailles te protège de tous les dégâts : lance-la dans l'engagement, pas après.",
-        "en": "Counter-Strike protects you from all damage: cast it into the engage, not after."
+        "fr": "Frappe de discorde (A) part avec un délai et sur un arc étroit : garde-la pour un ennemi déjà bloqué, son silence vaut plus que ses dégâts.",
+        "en": "Discord Strike (Q) has a delay and a narrow arc: save it for an enemy already locked down, its Silence is worth more than its damage."
       }
     ],
     "builds": [
@@ -10497,22 +10497,22 @@ const HEROES = [
         "enabled": true,
         "order": 1,
         "label": {
-          "fr": "Build recommandé",
-          "en": "Recommended build"
+          "fr": "Build A",
+          "en": "Q build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build centré sur Frappe de discorde et les attaques de base.",
+          "en": "Focused on Discord Strike and Basic Attacks."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1122312,Alarak]",
+        "buildCode": "[T1131132,Alarak]",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
@@ -10527,10 +10527,68 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tmxq76prv08ots",
-            "alternativeIds": [
-              "tmxq76prv09c17"
-            ]
+            "primaryId": "tmxq76prv09c17",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmxq76prv10r8k",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmxq76prv12bc3",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmxq76prv17nda",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmxq76prv19a0l",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build E",
+          "en": "E build"
+        },
+        "summary": {
+          "fr": "Build centré sur Arc électrique.",
+          "en": "Focused on Lightning Surge."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T3232322,Alarak]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmxq76prv032jl",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmxq76prv05nru",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmxq76prv09c17",
+            "alternativeIds": []
           },
           {
             "level": 10,
@@ -10540,25 +10598,77 @@ const HEROES = [
           {
             "level": 13,
             "primaryId": "tmxq76prv142a7",
-            "alternativeIds": [
-              "tmxq76prv13077"
-            ]
+            "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmxq76prv15h4f",
-            "alternativeIds": [
-              "tmxq76prv17nda"
-            ]
+            "primaryId": "tmxq76prv16bij",
+            "alternativeIds": []
           },
           {
             "level": 20,
             "primaryId": "tmxq76prv19a0l",
-            "alternativeIds": [
-              "tmxq76prv189ff",
-              "tmxq76prv20406",
-              "tmxq76prv21cn5"
-            ]
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 3,
+        "label": {
+          "fr": "Build Z",
+          "en": "W build"
+        },
+        "summary": {
+          "fr": "Build centré sur Télékinésie, tourné vers la montée du sadisme.",
+          "en": "Focused on Telekinesis, built to stack Sadism."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T2332332,Alarak]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmxq76prv02j61",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmxq76prv06mmt",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmxq76prv09c17",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmxq76prv114dn",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmxq76prv142a7",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmxq76prv17nda",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmxq76prv19a0l",
+            "alternativeIds": []
           }
         ],
         "isNew": false
@@ -10631,8 +10741,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/spells/storm_ui_icon_alarak_lightningsurge.png",
         "description": {
-          "fr": "Renforce d'emblée les dégâts infligés aux ennemis placés entre Alarak et sa cible. Quête : chaque héros touché par la zone centrale d'Arc électrique les augmente encore, définitivement.",
-          "en": "Immediately increases the damage dealt to enemies between Alarak and his target. Quest: each Hero hit by Lightning Surge's center raises it further, permanently."
+          "fr": "Porte à un niveau bien supérieur le bonus aux dégâts infligés aux ennemis placés entre Alarak et la cible de l'arc.",
+          "en": "Pushes the bonus damage to enemies caught between Alarak and the beam's target much higher."
         },
         "demoYoutubeId": null
       },
@@ -10785,8 +10895,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/spells/storm_ui_icon_alarak_lightningsurge.png",
         "description": {
-          "fr": "Toucher un héros avec la zone centrale d'Arc électrique permet de le relancer aussitôt, sur une autre cible principale.",
-          "en": "Hitting a Hero with Lightning Surge's center allows an immediate second cast, on a different main target."
+          "fr": "Toucher un héros avec la zone centrale d'Arc électrique permet de le relancer aussitôt sur une autre cible principale. Ce tir gratuit ne redonne pas de nouvelle relance.",
+          "en": "Hitting a Hero with Lightning Surge's center lets it be recast at once on a different primary target. That free cast does not grant another."
         },
         "demoYoutubeId": null
       },
@@ -10813,8 +10923,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/alarak/images/talents/storm_ui_icon_alarak_sadism.png",
         "description": {
-          "fr": "Charge mortelle renforce les dégâts de sadisme. Temps de recharge de Représailles réduit par les capacités de base.",
-          "en": "Deadly Charge empowers Sadism's damage Basic Abilities reduce Counter-Strike's cooldown"
+          "fr": "Si Charge mortelle est l'héroïque choisie, les capacités d'Alarak frappent bien plus fort les héros qu'elle a touchés, quelques secondes durant.",
+          "en": "If Deadly Charge is the chosen Heroic, Alarak's Abilities hit the Heroes it caught far harder for a few seconds."
         },
         "demoYoutubeId": null
       },
@@ -10863,7 +10973,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Alarak",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "anubarak",
@@ -23508,7 +23618,7 @@ const HEROES = [
   },
   {
     "id": "illidan",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Illidan",
       "en": "Illidan"
@@ -23532,8 +23642,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_betrayersthirst.png",
         "description": {
-          "fr": "Les attaques de base rendent un montant de points de vie basé sur les dégâts infligés et réduisent les temps de recharge des capacités.",
-          "en": "Basic Attacks heal for part of the damage dealt and reduce Ability cooldowns"
+          "fr": "Les attaques de base rendent à Illidan une part des dégâts infligés et font descendre le temps de recharge de toutes ses capacités.",
+          "en": "Basic Attacks return part of the damage dealt as Health and tick down every one of Illidan's cooldowns."
         },
         "demoYoutubeId": ""
       },
@@ -23571,8 +23681,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/illidan/images/spells/storm_ui_icon_illidan_evasion.png",
         "description": {
-          "fr": "Esquive les attaques de base ennemies.",
-          "en": "Evade enemy Basic Attacks"
+          "fr": "Illidan esquive toutes les attaques de base adverses pendant quelques secondes.",
+          "en": "Illidan evades every incoming Basic Attack for a few seconds."
         },
         "demoYoutubeId": ""
       },
@@ -23605,16 +23715,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ne plonge jamais en premier : attends que le tank ait absorbé les effets de contrôle.",
-        "en": "Never dive first: wait until your tank has eaten the crowd control."
+        "fr": "Tape en permanence, même hors combat : chaque attaque de base te soigne et fait descendre tes temps de recharge (D).",
+        "en": "Keep attacking, even out of combat: every Basic Attack heals you and ticks your cooldowns down (D)."
       },
       {
-        "fr": "Dérobade te rend immunisé aux attaques de base : garde-la pour l'ennemi qui te vise.",
-        "en": "Evasion makes you immune to Basic Attacks: save it for whoever focuses you."
+        "fr": "Plongeon (A) te dépose toujours derrière la cible : sers-t'en pour te mettre à l'abri d'une AoE, pas seulement pour entrer.",
+        "en": "Dive (Q) always drops you behind the target: use it to get out of an AoE, not only to go in."
       },
       {
-        "fr": "Voie des lames sert autant à poursuivre qu'à traverser un groupe.",
-        "en": "Sweeping Strike is as good for chasing as for slipping through a group."
+        "fr": "Dérobade (E) esquive aussi les tirs des bâtiments : c'est elle qui te permet d'aller finir un fort ou un noyau.",
+        "en": "Evasion (E) dodges Structure fire too: it's what lets you go finish a Fort or a Core."
       }
     ],
     "builds": [
@@ -23633,31 +23743,31 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Illidan]",
+        "buildCode": "[T2332132,Illidan]",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmo2tufu00179f",
+            "primaryId": "tmo2tufu002sbl",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmo2tufu004wl4",
+            "primaryId": "tmo2tufu006034",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmo2tufu007xum",
+            "primaryId": "tmo2tufu0098u1",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmo2tufu0105kw",
+            "primaryId": "tmo2tufu011nvo",
             "alternativeIds": []
           },
           {
@@ -23667,12 +23777,12 @@ const HEROES = [
           },
           {
             "level": 16,
-            "primaryId": "tmo2tufu015zma",
+            "primaryId": "tmo2tufu01760w",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmo2tufu01819c",
+            "primaryId": "tmo2tufu019sfi",
             "alternativeIds": []
           }
         ],
@@ -23718,8 +23828,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_seasonedmarksman.png",
         "description": {
-          "fr": "Quête : tuer des ennemis augmente les dégâts des attaques de base.",
-          "en": "Quest: Killing enemies grants Basic Attack damage"
+          "fr": "Quête : chaque serviteur tué et chaque victime héroïque augmentent définitivement les dégâts des attaques de base. Récompense : une fois le palier atteint, ils augmentent encore d'autant.",
+          "en": "Quest: every Minion killed and every Hero Takedown permanently increases Basic Attack damage. Reward: once the milestone is reached, it rises by as much again."
         },
         "demoYoutubeId": null
       },
@@ -23978,7 +24088,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Illidan",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "imperius",
@@ -26554,7 +26664,7 @@ const HEROES = [
   },
   {
     "id": "kerrigan",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Kerrigan",
       "en": "Kerrigan"
@@ -26578,8 +26688,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_assimilation.png",
         "description": {
-          "fr": "Convertit une partie des dégâts qu'elle inflige en bouclier temporaire, bien davantage contre les héros.",
-          "en": "Converts part of the damage she deals into a temporary Shield, far more against Heroes."
+          "fr": "Convertit une partie des dégâts qu'elle inflige en bouclier temporaire, bien davantage contre les héros. Le bouclier fond s'il n'est pas entretenu.",
+          "en": "Turns part of the damage she deals into a temporary Shield, far more against Heroes. The Shield melts away if she stops feeding it."
         },
         "demoYoutubeId": ""
       },
@@ -26651,16 +26761,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Attire puis empale : la combinaison est presque impossible à esquiver.",
-        "en": "Pull then impale: the combo is nearly impossible to dodge."
+        "fr": "Poigne primordiale (E) puis Lames perforantes (Z) : l'attraction regroupe, l'étourdissement tombe dessus. Pris séparément, les deux se dodgent.",
+        "en": "Primal Grasp (E) then Impaling Blades (W): the pull bunches them up, the Stun lands on top. Cast apart, both get dodged."
       },
       {
-        "fr": "Sans effet de contrôle allié, tu meurs avant ton combo : attends l'engagement.",
-        "en": "Without allied crowd control you die before your combo: wait for the engage."
+        "fr": "Ravage (A) porte ta quête : monte-la sur les serviteurs à distance en priorité, plutôt que de clear la vague au plus vite.",
+        "en": "Ravage (Q) carries your quest: build it on Ranged Minions first rather than clearing the wave as fast as possible."
       },
       {
-        "fr": "Tes boucliers montent en frappant : reste au contact plutôt que de reculer.",
-        "en": "Your Shields build by hitting: stay in contact rather than backing off."
+        "fr": "Ton bouclier (D) ne monte qu'en tapant : c'est en restant au contact que tu survis, pas en reculant.",
+        "en": "Your Shield (D) only builds while you're dealing damage: you survive by staying in, not by backing off."
       }
     ],
     "builds": [
@@ -26679,46 +26789,46 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Kerrigan]",
+        "buildCode": "[T3222334,Kerrigan]",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm3wj1pr801jtu",
+            "primaryId": "tm3wj1pr803gy6",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tm3wj1pr804jlu",
+            "primaryId": "tm3wj1pr8052si",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tm3wj1pr807mtf",
+            "primaryId": "tm3wj1pr808ypb",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tm3wj1pr810zoa",
+            "primaryId": "tm3wj1pr811qnp",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tm3wj1pr812ti6",
+            "primaryId": "tm3wj1pr814lrs",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tm3wj1pr81551k",
+            "primaryId": "tm3wj1pr8177ld",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tm3wj1pr818n0q",
+            "primaryId": "tm3wj1pr821l0i",
             "alternativeIds": []
           }
         ],
@@ -26946,8 +27056,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/kerrigan/images/spells/storm_ui_icon_kerrigan_impalingblades.png",
         "description": {
-          "fr": "Les ennemis touchés par Lames perforantes subissent des dégâts supplémentaires lors des prochaines attaques de Kerrigan.",
-          "en": "Enemies hit by Impaling Blades take bonus damage from Kerrigan's next attacks."
+          "fr": "Les ennemis touchés par Lames perforantes encaissent un supplément de dégâts sur les prochaines attaques que Kerrigan leur porte, dans les secondes qui suivent.",
+          "en": "Enemies hit by Impaling Blades take bonus damage from Kerrigan's next few attacks on them, over the following seconds."
         },
         "demoYoutubeId": null
       },
@@ -27024,7 +27134,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Kerrigan",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "leoric",
@@ -40105,7 +40215,7 @@ const HEROES = [
   },
   {
     "id": "thebutcher",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Le Boucher",
       "en": "The Butcher"
@@ -40129,8 +40239,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/spells/storm_ui_icon_butcher_freshmeat.png",
         "description": {
-          "fr": "Les ennemis qui meurent à proximité laissent de la viande, davantage pour un héros ; chaque unité ramassée augmente les dégâts d'attaque du Boucher. Une partie est perdue à sa mort. Quête : en accumuler assez pour gagner définitivement des dégâts et de la vitesse d'attaque.",
-          "en": "Enemies dying nearby drop meat, more from a Hero; each piece collected raises the Butcher's Attack Damage. Part of it is lost on death. Quest: gather enough to permanently gain Attack Damage and Attack Speed."
+          "fr": "Les ennemis qui meurent à proximité laissent de la viande, bien davantage pour un héros ; chaque unité ramassée augmente les dégâts d'attaque du Boucher, et une partie est perdue à sa mort. Quête : en accumuler assez pour gagner définitivement des dégâts et de la vitesse d'attaque. Passé ce cap, les serviteurs n'en laissent plus, mais mourir ne coûte plus rien.",
+          "en": "Enemies dying nearby drop meat, far more from a Hero; every piece gathered raises the Butcher's Attack Damage, and some is lost when he dies. Quest: bank enough of it to permanently gain damage and Attack Speed. Past that point Minions drop none, but dying costs nothing."
         },
         "demoYoutubeId": ""
       },
@@ -40168,8 +40278,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/spells/storm_ui_icon_butcher_fullboar.png",
         "description": {
-          "fr": "Charge un ennemi en devenant increvable et plus rapide. À l'impact, la cible est étourdie et blessée.",
-          "en": "Charges an enemy while becoming Unstoppable and faster. On impact, the target is Stunned and damaged."
+          "fr": "Charge un ennemi en devenant insensible aux effets de contrôle et bien plus rapide. À l'impact, la cible est étourdie et blessée.",
+          "en": "Charges an enemy, becoming Unstoppable and far faster. On impact the target is Stunned and damaged."
         },
         "demoYoutubeId": ""
       },
@@ -40202,16 +40312,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Farme ta viande en début de partie : c'est toute ta courbe de puissance.",
-        "en": "Farm your meat early: it is your entire power curve."
+        "fr": "Marque du Boucher (Z) est ta seule survie : garde-la pour te soigner sur un héros, ne la crame jamais pour des dégâts.",
+        "en": "Butcher's Brand (W) is your only survivability: save it to heal off a Hero, never burn it for damage."
       },
       {
-        "fr": "Charge impitoyable te rend insensible aux contrôles : c'est ton engagement principal.",
-        "en": "Ruthless Onslaught makes you Unstoppable: it is your main engage."
+        "fr": "Charge impitoyable (E) est un outil d'entrée, pas de dégâts : elle te rend insensible aux contrôles, et viser un serviteur permet aussi de décrocher.",
+        "en": "Ruthless Onslaught (E) is a gap-closer, not damage: it makes you Unstoppable, and targeting a Minion is also a way out."
       },
       {
-        "fr": "Gibier de potence isole totalement un héros pendant plusieurs secondes.",
-        "en": "Lamb to the Slaughter fully isolates a Hero for several seconds."
+        "fr": "Roame tôt pour farmer ta viande (D), mais jamais au prix d'un objectif : ta courbe de puissance ne vaut rien si l'équipe perd la carte pendant.",
+        "en": "Roam early to farm your meat (D), but never at the cost of an objective: your power curve is worthless if the team loses the map meanwhile."
       }
     ],
     "builds": [
@@ -40230,46 +40340,46 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,TheButcher]",
+        "buildCode": "[T2322222,TheButcher]",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "5 Septembre 2026",
+          "en": "September 5, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmfm4t2ae01lyy",
+            "primaryId": "tmfm4t2ae02d9v",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmfm4t2ae0473h",
+            "primaryId": "tmfm4t2ae06mgt",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmfm4t2ae076xh",
+            "primaryId": "tmfm4t2ae08uih",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tmfm4t2ae10u91",
+            "primaryId": "tmfm4t2ae11kbq",
             "alternativeIds": []
           },
           {
             "level": 13,
-            "primaryId": "tmfm4t2ae12euq",
+            "primaryId": "tmfm4t2ae13a3a",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmfm4t2ae154o7",
+            "primaryId": "tmfm4t2ae1640l",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmfm4t2ae18vqd",
+            "primaryId": "tmfm4t2ae19peb",
             "alternativeIds": []
           }
         ],
@@ -40497,8 +40607,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/thebutcher/images/talents/storm_ui_icon_butcher_enraged.png",
         "description": {
-          "fr": "Subir des dégâts alors qu'il lui reste moins de la moitié de ses points de vie rend le Boucher enragé : sa vitesse d'attaque augmente et il gagne de l'armure.",
-          "en": "Taking damage below half Health Enrages The Butcher: he gains Attack Speed and Armor."
+          "fr": "Subir des dégâts alors qu'il lui reste moins de la moitié de ses points de vie rend le Boucher enragé quelques secondes : sa vitesse d'attaque augmente et il gagne de l'armure. Ne se redéclenche qu'au bout d'un moment.",
+          "en": "Taking damage below half Health Enrages the Butcher for a few seconds: his Attack Speed rises and he gains Armor. It only comes back after a while."
         },
         "demoYoutubeId": null
       },
@@ -40511,8 +40621,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_speed.png",
         "description": {
-          "fr": "Les attaques de base augmentent les vitesses d'attaque et de déplacement.",
-          "en": "Basic Attacks grant Attack and Move Speed"
+          "fr": "Les attaques de base portées aux héros augmentent les vitesses d'attaque et de déplacement du Boucher, cumulable jusqu'à un plafond.",
+          "en": "Basic Attacks on Heroes raise the Butcher's Attack and Movement Speed, stacking up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -40575,7 +40685,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "TheButcher",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "thrall",
