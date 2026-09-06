@@ -6877,7 +6877,7 @@ const HEROES = [
       {
         "key": "Trait",
         "name": {
-          "fr": "Éruption éruptive",
+          "fr": "Éruption virale",
           "en": "Bio-Kill Switch"
         },
         "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_bio-killswitch.png",
@@ -6942,7 +6942,7 @@ const HEROES = [
       {
         "key": "R2",
         "name": {
-          "fr": "Frappe chaotique",
+          "fr": "Frappes chaotiques",
           "en": "Flailing Swipe"
         },
         "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_flailingswipe.png",
@@ -6955,12 +6955,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Attends que Virus régénérateur (A) se propage à tout le monde avant de faire péter Éruption éruptive (D).",
-        "en": "Wait for Healing Pathogen (Q) to spread to everyone before pressing Bio-Kill Switch (D)."
+        "fr": "Tu n'as aucune mobilité et tu ne roames pas : reste collé au groupe, Virus régénérateur (A) ne se propage qu'entre alliés proches.",
+        "en": "You have no mobility and you don't roam: stay with the group, Healing Pathogen (Q) only spreads between allies who are close together."
       },
       {
-        "fr": "Place Menace larvée (E) sur un CC allié.",
-        "en": "Place Lurking Arm (E) on top of an allied CC."
+        "fr": "Éruption virale (D) est d'abord un soin : laisse Virus régénérateur (A) faire le tour de l'équipe avant de la déclencher, sinon tu la gâches.",
+        "en": "Bio-Kill Switch (D) is a heal first: let Healing Pathogen (Q) go round the whole team before you set it off, or you waste it."
+      },
+      {
+        "fr": "Canalise Menace larvée (E) sur un choke, pas au milieu du fight : son silence ne vaut que si ton équipe a le CC pour garder les gens dedans.",
+        "en": "Channel Lurking Arm (E) on a choke, not in the middle of the fight: its Silence is only worth it if your team has the crowd control to keep people inside."
       }
     ],
     "builds": [
@@ -29320,7 +29324,7 @@ const HEROES = [
   },
   {
     "id": "maiev",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Maiev",
       "en": "Maiev"
@@ -29383,8 +29387,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_rush_1.png",
         "description": {
-          "fr": "Projette une ombre qui blesse les ennemis sur toute sa trajectoire avant de revenir ; toucher un héros en réduit le temps de recharge. Maiev peut ensuite se téléporter à son emplacement.",
-          "en": "Throws a shadow that damages enemies along its whole path before returning; hitting a Hero brings the next cast closer. Maiev can then teleport to its position."
+          "fr": "Projette une ombre qui blesse les ennemis sur toute sa trajectoire, aller et retour ; toucher un héros en réduit le temps de recharge. Maiev peut ensuite se téléporter sur l'ombre, ce qui la consomme.",
+          "en": "Sends out a shadow that damages enemies along both paths; hitting a Hero reduces its cooldown. Maiev can then teleport to the shadow, consuming it."
         },
         "demoYoutubeId": ""
       },
@@ -29396,8 +29400,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_heroic_1_a.png",
         "description": {
-          "fr": "Projette un glaive : s'il touche un héros adverse, la capacité peut être réactivée pour le plonger en stase et le priver de vision. À sa sortie, le héros est réduit au silence.",
-          "en": "Throws a glaive: if it hits an enemy Hero, the Ability can be reactivated to place them in Stasis and remove their vision. On exiting, the Hero is Silenced."
+          "fr": "Projette un glaive : s'il touche un héros adverse, la capacité peut être réactivée pour le plonger en stase et le priver de vision. À sa sortie, le héros est réduit au silence. Elle se déclenche d'elle-même si elle n'est pas réactivée à temps.",
+          "en": "Throws a glaive: if it hits an enemy Hero, the Ability can be reactivated to Time Stop them and strip their vision. On leaving it, the Hero is Silenced. It goes off on its own if it is not reactivated in time."
         },
         "demoYoutubeId": ""
       },
@@ -29417,16 +29421,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Entraves d'ombre lie la cible : elle est ramenée à toi si elle tente de fuir.",
-        "en": "Umbral Bind tethers the target: they get yanked back if they try to leave."
+        "fr": "Garde Éventail de dagues (A) jusqu'à pouvoir toucher deux héros : c'est ça qui le remet à zéro, le lâcher sur une seule cible le gâche.",
+        "en": "Hold Fan of Knives (Q) until you can hit two Heroes: that's what resets it, throwing it at a single target wastes it."
       },
       {
-        "fr": "Esprit vengeur revient vers son point de départ : tu peux te téléporter dessus.",
-        "en": "Spirit of Vengeance returns to where it started: you can Blink to it."
+        "fr": "Ouvre depuis un buisson ou hors vision : Esprit vengeur (E) pour rentrer, Entraves d'ombre (Z) dans la foulée — ils n'ont pas le temps de réagir.",
+        "en": "Open from a bush or out of vision: Spirit of Vengeance (E) to close, Umbral Bind (W) right after — they get no time to react."
       },
       {
-        "fr": "Salto des Gardiennes t'immunise un instant : saute dans l'effet de contrôle, pas avant.",
-        "en": "Vault of the Wardens makes you immune for a moment: jump into the crowd control, not before."
+        "fr": "Un stun ou un aveuglement annule Entraves d'ombre (Z) : contre ce genre de compo, ne rentre pas en premier, laisse partir leurs contrôles avant de plonger.",
+        "en": "A Stun or a Blind cancels Umbral Bind (W): against that kind of comp, don't go in first, let their crowd control go out before you dive."
       }
     ],
     "builds": [
@@ -29438,23 +29442,23 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build Éventail de dagues : dégâts de zone et armure quand plusieurs cibles sont touchées.",
+          "en": "Fan of Knives build: area damage and Armor whenever several targets are caught."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Maiev]",
+        "buildCode": "[T3111113,Maiev]",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "6 Septembre 2026",
+          "en": "September 6, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tm3j6xrib01w97",
+            "primaryId": "tm3j6xrib03hkn",
             "alternativeIds": []
           },
           {
@@ -29484,7 +29488,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tm3j6xrib18wk9",
+            "primaryId": "tm3j6xrib20ne4",
             "alternativeIds": []
           }
         ],
@@ -29502,8 +29506,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_umbra_1.png",
         "description": {
-          "fr": "Quête : lier des cibles secondaires augmente les dégâts d'Entraves d'ombre.",
-          "en": "Quest: Secondary tethers increase Umbral Bind damage"
+          "fr": "Quête : chaque cible secondaire liée par Entraves d'ombre en augmente définitivement les dégâts d'attraction. Récompenses : au bout de plusieurs cibles, ces dégâts font un bond, puis c'est l'attaque en arc de cercle qui frappe plus fort.",
+          "en": "Quest: every secondary target tethered by Umbral Bind permanently increases its pull damage. Rewards: after enough targets that pull damage jumps, then the cleave itself hits harder."
         },
         "demoYoutubeId": null
       },
@@ -29544,8 +29548,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_knives.png",
         "description": {
-          "fr": "Quête : toucher plusieurs héros renforce Éventail de dagues.",
-          "en": "Quest: Hitting multiple Heroes empowers Fan of Knives"
+          "fr": "Quête : toucher trois héros d'un seul Éventail de dagues. Récompense : la capacité frappe nettement plus fort, et chaque nouvelle réussite l'améliore encore jusqu'à un plafond. En toucher quatre d'un coup débloque tout d'un seul coup.",
+          "en": "Quest: hit three Heroes with a single Fan of Knives. Reward: the Ability hits considerably harder, and each further success improves it again up to a cap. Hitting four at once unlocks everything at once."
         },
         "demoYoutubeId": null
       },
@@ -29628,8 +29632,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/spells/storm_ui_icon_maiev_heroic_1_a.png",
         "description": {
-          "fr": "Projette un glaive : s'il touche un héros adverse, la capacité peut être réactivée pour le plonger en stase et le priver de vision. À sa sortie, le héros est réduit au silence.",
-          "en": "Throws a glaive: if it hits an enemy Hero, the Ability can be reactivated to place them in Stasis and remove their vision. On exiting, the Hero is Silenced."
+          "fr": "Projette un glaive : s'il touche un héros adverse, la capacité peut être réactivée pour le plonger en stase et le priver de vision. À sa sortie, le héros est réduit au silence. Elle se déclenche d'elle-même si elle n'est pas réactivée à temps.",
+          "en": "Throws a glaive: if it hits an enemy Hero, the Ability can be reactivated to Time Stop them and strip their vision. On leaving it, the Hero is Silenced. It goes off on its own if it is not reactivated in time."
         },
         "demoYoutubeId": null
       },
@@ -29726,8 +29730,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/maiev/images/talents/storm_ui_icon_maiev_heavy_strikes.png",
         "description": {
-          "fr": "L'armure augmente les dégâts physiques infligés.",
-          "en": "Armor increases Physical Damage dealt"
+          "fr": "Tant que Maiev a de l'armure, quelle qu'en soit la source, tous ses dégâts physiques augmentent.",
+          "en": "While Maiev has Armor from any source, all her Physical damage is increased."
         },
         "demoYoutubeId": null
       },
@@ -29776,7 +29780,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Maiev",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "malganis",
@@ -35135,7 +35139,7 @@ const HEROES = [
   },
   {
     "id": "qhira",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Qhira",
       "en": "Qhira"
@@ -35185,8 +35189,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_w.png",
         "description": {
-          "fr": "Effet passif : les attaques et capacités de base font saigner les ennemis, effet cumulable. À l'activation, inflige des dégâts et rend des points de vie pour chaque héros qui saigne, d'autant plus que les cumuls sont nombreux. Quête : infliger des dégâts de saignement aux héros pour renforcer définitivement l'effet.",
-          "en": "Passive: Basic Attacks and Abilities make enemies bleed, stacking. On activation, deals damage and restores Health for each bleeding Hero, more the higher the stacks. Quest: deal bleed damage to Heroes to permanently strengthen it."
+          "fr": "Effet passif : les attaques et capacités de base font saigner les ennemis, effet cumulable. À l'activation, inflige des dégâts et rend des points de vie pour chaque héros qui saigne, d'autant plus que les cumuls sont nombreux sur lui.",
+          "en": "Passive: Basic Attacks and Abilities make enemies bleed, stacking. On activation, deals damage and heals for each bleeding Hero, the more so the more stacks are on them."
         },
         "demoYoutubeId": ""
       },
@@ -35198,8 +35202,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_e.png",
         "description": {
-          "fr": "Arrime son épée au premier héros adverse touché et l'étourdit, puis tourne autour de lui en devenant insensible à tous les effets. Relancer projette la cible d'un coup de pied et l'étourdit de nouveau.",
-          "en": "Latches her sword onto the first enemy Hero hit and Stuns them, then rotates around them while becoming immune to all effects. Reactivating kicks the target away and Stuns them again."
+          "fr": "Arrime son épée au premier héros adverse touché et l'étourdit, puis tourne autour de lui en devenant insensible à tous les effets, en blessant tout ce qui se trouve entre eux. Relancer projette Qhira sur la cible, la repousse d'un coup de pied et l'étourdit de nouveau.",
+          "en": "Attaches her sword to the first enemy Hero hit and Stuns them, then swings around them, Immune to all effects, damaging everything in between. Re-activating sends Qhira to the target, kicks them away and Stuns them again."
         },
         "demoYoutubeId": ""
       },
@@ -35232,16 +35236,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Orbite meurtrière t'amène sur ta cible ; la relancer la projette au loin.",
-        "en": "Revolving Sweep brings you to your target; reactivating it launches them away."
+        "fr": "Soif de sang (Z) ne vaut que si plusieurs héros saignent déjà : répands les cumuls d'abord, active ensuite.",
+        "en": "Blood Rage (W) is only worth it once several Heroes are already bleeding: spread the stacks first, activate after."
       },
       {
-        "fr": "Pendant la rotation tu ignores tous les contrôles : c'est ta fenêtre pour engager.",
-        "en": "During the rotation you ignore all crowd control: that is your engage window."
+        "fr": "Le Grappin (D) sur le décor est aussi défensif : il traverse serviteurs et mercenaires, sers-t'en pour sortir d'un gank.",
+        "en": "Grappling Hook (D) on terrain is defensive too: it pierces Minions and Mercenaries, use it to get out of a gank."
       },
       {
-        "fr": "Soif de sang soigne selon les saignements en cours : répands-les avant de l'utiliser.",
-        "en": "Blood Rage heals based on the bleeds out there: spread them before using it."
+        "fr": "N'engage jamais de face : contourne et rentre par un angle qu'ils n'attendent pas, Orbite meurtrière (E) fait le reste.",
+        "en": "Never engage head on: go around and come in from an angle they don't expect, Revolving Sweep (E) does the rest."
       }
     ],
     "builds": [
@@ -35253,18 +35257,18 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build saignement : cumuls entretenus sur toute l'équipe adverse et soins qui suivent.",
+          "en": "Bleed build: stacks kept up on the whole enemy team, with the healing that follows."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Qhira]",
+        "buildCode": "[T1122123,Qhira]",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "6 Septembre 2026",
+          "en": "September 6, 2026"
         },
         "talentSelections": [
           {
@@ -35279,12 +35283,12 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tm7ldovsn07w8e",
+            "primaryId": "tm7ldovsn08l8q",
             "alternativeIds": []
           },
           {
             "level": 10,
-            "primaryId": "tm7ldovsn10ggh",
+            "primaryId": "tm7ldovsn11xv8",
             "alternativeIds": []
           },
           {
@@ -35294,12 +35298,12 @@ const HEROES = [
           },
           {
             "level": 16,
-            "primaryId": "tm7ldovsn15v6p",
+            "primaryId": "tm7ldovsn16jeu",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tm7ldovsn1849s",
+            "primaryId": "tm7ldovsn20bxv",
             "alternativeIds": []
           }
         ],
@@ -35331,8 +35335,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_w.png",
         "description": {
-          "fr": "Au maximum de charges, le saignement de Soif de sang inflige des dégâts supplémentaires aux héros dont les points de vie sont bas.",
-          "en": "At maximum charges, Blood Rage's bleed deals bonus damage to Heroes at low Health."
+          "fr": "Au maximum de cumuls, le saignement frappe plus fort les héros sous la moitié de leurs points de vie. Quête : infliger des dégâts de saignement aux héros allonge définitivement la durée de Soif de sang.",
+          "en": "At maximum stacks, the bleed hits Heroes below half Health harder. Quest: dealing bleed damage to Heroes permanently extends Blood Rage's duration."
         },
         "demoYoutubeId": null
       },
@@ -35359,8 +35363,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_w.png",
         "description": {
-          "fr": "Toucher plusieurs héros avec Soif de sang permet à Qhira d'esquiver les prochaines attaques de base des héros.",
-          "en": "Hitting several Heroes with Blood Rage lets Qhira evade the next Basic Attacks from Heroes."
+          "fr": "Toucher plusieurs héros d'une seule Soif de sang permet à Qhira d'esquiver les prochaines attaques de base des héros, pendant un moment.",
+          "en": "Hitting several Heroes with a single Blood Rage lets Qhira Evade the next few Heroic Basic Attacks, for a while."
         },
         "demoYoutubeId": null
       },
@@ -35373,8 +35377,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_e.png",
         "description": {
-          "fr": "Orbite meurtrière ralentit les ennemis.",
-          "en": "Revolving Sweep Slows enemies"
+          "fr": "La cible principale d'Orbite meurtrière est fortement ralentie tant que Qhira y est attachée, et les ennemis balayés au passage le sont aussi, plus brièvement.",
+          "en": "Revolving Sweep's primary target is heavily Slowed while Qhira is attached, and the enemies swept along the way are Slowed too, more briefly."
         },
         "demoYoutubeId": null
       },
@@ -35401,8 +35405,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/qhira/images/spells/storm_ui_icon_nexushunter_q.png",
         "description": {
-          "fr": "Carnage augmente les dégâts des attaques de base et rend des points de vie.",
-          "en": "Carnage increases Basic Attack damage, healing"
+          "fr": "Carnage rend la moitié des dégâts qu'il inflige aux héros. Chaque héros blessé par Carnage renforce en plus la prochaine attaque de base, effet cumulable plusieurs fois.",
+          "en": "Carnage heals for half the damage it deals to Heroes. Each Hero damaged by Carnage also empowers the next Basic Attack, stacking several times."
         },
         "demoYoutubeId": null
       },
@@ -35605,7 +35609,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Qhira",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "ragnaros",
@@ -37260,7 +37264,7 @@ const HEROES = [
   },
   {
     "id": "samuro",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Samuro",
       "en": "Samuro"
@@ -37297,8 +37301,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_mirrorimage.png",
         "description": {
-          "fr": "Se téléporte sur une courte distance et crée deux images miroir dans la direction opposée. Elles ont autant de points de vie que Samuro mais subissent le double de dégâts, et l'utilisation dissipe la plupart des effets négatifs.",
-          "en": "Teleports a short distance and creates two Mirror Images in the opposite direction. They have as much Health as Samuro but take double damage, and casting cleanses most negative effects."
+          "fr": "Se téléporte sur une courte distance et crée deux images miroir dans la direction opposée. Elles ont autant de points de vie que Samuro mais subissent le double de dégâts, et chaque héros qu'elles ou lui touchent allonge leur durée. L'utiliser dissipe la plupart des effets négatifs.",
+          "en": "Teleports a short distance and creates two Mirror Images in the opposite direction. They have as much Health as Samuro but take double damage, and every Hero he or they hit extends their duration. Using it removes most negative effects."
         },
         "demoYoutubeId": ""
       },
@@ -37323,8 +37327,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_windwalk.png",
         "description": {
-          "fr": "Camoufle Samuro : il récupère des points de vie, traverse les unités et se déplace plus vite. S'il reste immobile un moment, il devient totalement invisible.",
-          "en": "Stealths Samuro: he regenerates Health, passes through units and moves faster. If he stands still for a moment, he becomes fully invisible."
+          "fr": "Camoufle Samuro : il récupère des points de vie, traverse les unités et se déplace plus vite. S'il reste immobile un moment, il devient totalement invisible, et il est indécelable pendant le premier instant.",
+          "en": "Stealths Samuro: he regenerates Health, passes through units and moves faster. Staying still for a moment makes him fully Invisible, and he cannot be revealed for the first instant."
         },
         "demoYoutubeId": ""
       },
@@ -37357,16 +37361,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Transfert d'image dissipe la plupart des effets négatifs : c'est ta purge.",
-        "en": "Image Transmission cleanses most negative effects: that is your cleanse."
+        "fr": "Frappe critique (Z) reset ton attaque de base : réactive-la juste après un critique, jamais avant.",
+        "en": "Critical Strike (W) resets your Basic Attack: reactivate it right after a crit, never before."
       },
       {
-        "fr": "Alterne image et corps réel en permanence pour brouiller le ciblage adverse.",
-        "en": "Constantly swap between image and real body to scramble enemy targeting."
+        "fr": "Tes images (A) encaissent les tirs de tour et poussent les bâtiments sans vague : elles ne servent pas qu'à brouiller le ciblage.",
+        "en": "Your Images (Q) soak tower shots and push Structures without a wave: they're not just there to confuse targeting."
       },
       {
-        "fr": "Marche du vent te soigne : recule quelques secondes plutôt que de rentrer à la base.",
-        "en": "Wind Walk heals you: back off for a few seconds instead of using your Hearthstone."
+        "fr": "Marche du vent (E) marche dans les deux sens : c'est autant ton approche que ton échappatoire.",
+        "en": "Wind Walk (E) works both ways: it's your approach as much as your escape."
       }
     ],
     "builds": [
@@ -37378,28 +37382,28 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build Marche du vent : mobilité, soins et fenêtres d'attaque sans jamais rentrer à la base.",
+          "en": "Wind Walk build: mobility, healing and attack windows without ever going back to base."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Samuro]",
+        "buildCode": "[T3211333,Samuro]",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "6 Septembre 2026",
+          "en": "September 6, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmjveafxq019w6",
+            "primaryId": "tmjveafxq032rz",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmjveafxq045rh",
+            "primaryId": "tmjveafxq05swq",
             "alternativeIds": []
           },
           {
@@ -37414,17 +37418,17 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tmjveafxq123zc",
+            "primaryId": "tmjveafxq14cun",
             "alternativeIds": []
           },
           {
             "level": 16,
-            "primaryId": "tmjveafxq15qxa",
+            "primaryId": "tmjveafxq17cmj",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmjveafxq18w5e",
+            "primaryId": "tmjveafxq20bb1",
             "alternativeIds": []
           }
         ],
@@ -37484,8 +37488,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_mirrorimage.png",
         "description": {
-          "fr": "Image miroir confère de l'armure anti-sort.",
-          "en": "Mirror Image grants Spell Armor"
+          "fr": "Image miroir confère à Samuro et à ses images de l'armure anti-sort contre les deux prochaines sources de dégâts de capacité.",
+          "en": "Mirror Image grants Samuro and his Images Spell Armor against the next two sources of Spell Damage."
         },
         "demoYoutubeId": null
       },
@@ -37526,8 +37530,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_criticalstrike.png",
         "description": {
-          "fr": "Frappe critique inflige des dégâts de zone.",
-          "en": "Critical Strike deals area damage"
+          "fr": "Les coups critiques de Samuro comme de ses images infligent en plus des dégâts de capacité à la cible et aux ennemis autour d'elle.",
+          "en": "Critical Strikes from Samuro and from his Images also deal Spell Damage to the target and the enemies around them."
         },
         "demoYoutubeId": null
       },
@@ -37624,8 +37628,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/talents/storm_ui_icon_samuro_windwalk_a.png",
         "description": {
-          "fr": "Marche du vent téléporte sur une courte distance.",
-          "en": "Wind Walk teleports a short distance"
+          "fr": "Marche du vent téléporte Samuro sur une courte distance, dans la direction où il regarde.",
+          "en": "Wind Walk teleports Samuro a short distance, in the direction he is facing."
         },
         "demoYoutubeId": null
       },
@@ -37666,8 +37670,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/talents/storm_ui_icon_samuro_flowingstrikes.png",
         "description": {
-          "fr": "Discipline du maître-lame augmente la vitesse d'attaque.",
-          "en": "Advancing Strikes increases Attack Speed"
+          "fr": "Les attaques de base de Samuro et de ses images portées à des héros, ou portées pendant Discipline du maître-lame, augmentent leur vitesse d'attaque, effet cumulable. Tout est perdu dès que Discipline du maître-lame retombe.",
+          "en": "Basic Attacks from Samuro and his Images against Heroes, or landed while Advancing Strikes is up, increase their Attack Speed, stacking. It is all lost the moment Advancing Strikes drops."
         },
         "demoYoutubeId": null
       },
@@ -37680,8 +37684,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/samuro/images/spells/storm_ui_icon_samuro_bladestorm.png",
         "description": {
-          "fr": "Les images utilisent Tourbillon de lames, peut réinitialiser le temps de recharge.",
-          "en": "Images use Bladestorm, can reset cooldown"
+          "fr": "Les images déclenchent Tourbillon de lames en même temps que Samuro, pour une part de ses dégâts. Toucher assez de héros avec annule son temps de recharge.",
+          "en": "The Images use Bladestorm at the same time as Samuro, for a fraction of his damage. Hitting enough Heroes with it resets its cooldown."
         },
         "demoYoutubeId": null
       },
@@ -37730,7 +37734,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Samuro",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "sgthammer",
@@ -46446,7 +46450,7 @@ const HEROES = [
   },
   {
     "id": "zeratul",
-    "enabled": false,
+    "enabled": true,
     "name": {
       "fr": "Zeratul",
       "en": "Zeratul"
@@ -46522,8 +46526,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/talents/storm_ui_icon_zeratul_vorpalblade.png",
         "description": {
-          "fr": "Peu après une attaque de base, permet à Zeratul de se téléporter auprès de sa cible et la révèle.",
-          "en": "Shortly after a Basic Attack, lets Zeratul teleport to his target and reveals them."
+          "fr": "Juste après une attaque de base, permet à Zeratul de se téléporter sur sa dernière cible, les bâtiments exceptés, et la révèle pendant ce court laps de temps.",
+          "en": "Right after a Basic Attack, lets Zeratul teleport to his last target, Structures excepted, revealing them for that short window."
         },
         "demoYoutubeId": ""
       },
@@ -46535,8 +46539,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_mightofnerazim.png",
         "description": {
-          "fr": "Permet de relancer une version affaiblie de la dernière capacité de base utilisée. Effet passif : la première attaque de base portée juste après une capacité inflige des dégâts supplémentaires.",
-          "en": "Allows recasting a weakened version of the last Basic Ability used. Passive: the first Basic Attack right after casting an Ability deals bonus damage."
+          "fr": "Permet de relancer une version affaiblie de la dernière capacité de base utilisée, sans le bénéfice des talents. Effet passif : la première attaque de base portée juste après une capacité inflige des dégâts supplémentaires.",
+          "en": "Lets Zeratul recast a weakened version of his last used Basic Ability, without the benefit of its Talents. Passive: the first Basic Attack right after an Ability deals bonus damage."
         },
         "demoYoutubeId": ""
       },
@@ -46556,16 +46560,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Garde toujours une charge de Transfert pour t'échapper, jamais pour engager.",
-        "en": "Always keep a Blink charge to escape, never to engage."
+        "fr": "Transfert (E) est ta survie, pas ton engage : ne rentre avec que si tu as encore de quoi ressortir.",
+        "en": "Blink (E) is your survival, not your engage: only go in with it if you still have a way back out."
       },
       {
-        "fr": "Pointe de singularité explose après un délai : anticipe le déplacement de la cible.",
-        "en": "Singularity Spike detonates after a delay: lead your target's movement."
+        "fr": "Pointe de singularité (Z) d'abord pour le ralentissement, attaques de base ensuite : c'est là que tombent tes vrais dégâts.",
+        "en": "Singularity Spike (W) first for the Slow, Basic Attacks after: that's where your real damage comes from."
       },
       {
-        "fr": "Prison du Vide fige aussi tes alliés : vise l'ennemi seul, pas la mêlée générale.",
-        "en": "Void Prison freezes your allies too: aim at the enemy alone, not the whole brawl."
+        "fr": "Le camouflage (D) ne te rend pas invisible, juste translucide : il faut rester immobile un instant pour disparaître vraiment.",
+        "en": "Stealth (D) does not make you Invisible, only translucent: you have to stand still a moment to truly vanish."
       }
     ],
     "builds": [
@@ -46577,28 +46581,28 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "Build qui passe partout, peu importe le mode de jeu.",
-          "en": "A build that works in any situation, no matter the game mode."
+          "fr": "Build attaques de base : entrer camouflé, enchaîner sur une cible isolée, ressortir au Transfert.",
+          "en": "Basic Attack build: come in Stealthed, chain on an isolated target, leave with Blink."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T1111111,Zeratul]",
+        "buildCode": "[T2211213,Zeratul]",
         "videos": [],
         "updatedAt": {
-          "fr": "16 Août 2026",
-          "en": "August 16, 2026"
+          "fr": "6 Septembre 2026",
+          "en": "September 6, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmya4zmzu01aqp",
+            "primaryId": "tmya4zmzu026e4",
             "alternativeIds": []
           },
           {
             "level": 4,
-            "primaryId": "tmya4zmzu04asn",
+            "primaryId": "tmya4zmzu05m91",
             "alternativeIds": []
           },
           {
@@ -46613,7 +46617,7 @@ const HEROES = [
           },
           {
             "level": 13,
-            "primaryId": "tmya4zmzu129sb",
+            "primaryId": "tmya4zmzu13es3",
             "alternativeIds": []
           },
           {
@@ -46623,7 +46627,7 @@ const HEROES = [
           },
           {
             "level": 20,
-            "primaryId": "tmya4zmzu18752",
+            "primaryId": "tmya4zmzu20oxh",
             "alternativeIds": []
           }
         ],
@@ -46725,8 +46729,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_blink.png",
         "description": {
-          "fr": "Permet de retourner à la position initiale de Transfert.",
-          "en": "Can return from Blink location"
+          "fr": "Peu après un Transfert, la capacité peut être réactivée pendant quelques secondes pour revenir à son point de départ.",
+          "en": "Shortly after a Blink, the Ability can be reactivated for a few seconds to return to where it was cast from."
         },
         "demoYoutubeId": null
       },
@@ -46767,8 +46771,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_mightofnerazim.png",
         "description": {
-          "fr": "Permet de relancer une version affaiblie de la dernière capacité de base utilisée. Effet passif : la première attaque de base portée juste après une capacité inflige des dégâts supplémentaires.",
-          "en": "Allows recasting a weakened version of the last Basic Ability used. Passive: the first Basic Attack right after casting an Ability deals bonus damage."
+          "fr": "Permet de relancer une version affaiblie de la dernière capacité de base utilisée, sans le bénéfice des talents. Effet passif : la première attaque de base portée juste après une capacité inflige des dégâts supplémentaires.",
+          "en": "Lets Zeratul recast a weakened version of his last used Basic Ability, without the benefit of its Talents. Passive: the first Basic Attack right after an Ability deals bonus damage."
         },
         "demoYoutubeId": null
       },
@@ -46795,8 +46799,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/zeratul/images/spells/storm_ui_icon_zeratul_cloak.png",
         "description": {
-          "fr": "Tant que Camouflage permanent est actif, Zeratul accumule progressivement un bouclier.",
-          "en": "While Permanent Cloak is active, Zeratul gradually builds up a Shield."
+          "fr": "Tant que Camouflage permanent est actif, Zeratul accumule progressivement un bouclier proportionnel à son maximum de points de vie.",
+          "en": "While Permanent Cloak is up, Zeratul gradually builds a Shield based on his maximum Health."
         },
         "demoYoutubeId": null
       },
@@ -46837,8 +46841,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_damage.png",
         "description": {
-          "fr": "La troisième attaque de base consécutive inflige des dégâts supplémentaires.",
-          "en": "Bonus damage every third Basic Attack"
+          "fr": "Chaque troisième attaque de base consécutive portée à une même cible la frappe bien plus fort. Changer de cible remet le compte à zéro.",
+          "en": "Every third consecutive Basic Attack against the same target hits far harder. Switching targets resets the count."
         },
         "demoYoutubeId": null
       },
@@ -46929,7 +46933,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Zeratul",
-    "isNew": false
+    "isNew": true
   },
   {
     "id": "zuljin",
