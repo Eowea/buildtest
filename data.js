@@ -27129,8 +27129,8 @@ const HEROES = [
         "en": "As a wraith, don't head home: go drain enemy Heroes (W). It deals no damage any more, but it still heals you, and it's that bar that brings you back."
       },
       {
-        "fr": "Drain d'espoir (Z) ne paie que s'il va au bout : lance-le quand la cible ne peut pas décrocher, pas au milieu d'un fight ouvert.",
-        "en": "Drain Hope (W) only pays if it runs its course: cast it when the target can't peel away, not in the middle of an open fight."
+        "fr": "Frappe du squelette (A) rend la moitié de son temps de recharge et de son mana dès qu'elle touche un héros : c'est ton moteur, et son ralentissement est ce qui fait tenir le drain derrière.",
+        "en": "Skeletal Swing (Q) gives back half its cooldown and Mana the moment it hits a Hero: it is your engine, and its Slow is what keeps the drain connected afterwards."
       },
       {
         "fr": "Marche spectrale (E) te rend insensible aux contrôles : sers-t'en pour traverser un combo adverse, pas seulement pour fuir.",
