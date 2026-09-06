@@ -6964,7 +6964,7 @@ const HEROES = [
       },
       {
         "fr": "Canalise Menace larvée (E) sur un choke, pas au milieu du fight : son silence ne vaut que si ton équipe a le CC pour garder les gens dedans.",
-        "en": "Channel Lurking Arm (E) on a choke, not in the middle of the fight: its Silence is only worth it if your team has the crowd control to keep people inside."
+        "en": "Channel Lurking Arm (E) on a choke, not mid-fight: its Silence only pays if your team has the crowd control to keep people inside."
       }
     ],
     "builds": [
@@ -8180,8 +8180,8 @@ const HEROES = [
         "en": "Don't hesitate to die to save your team: Devotion (D) still lets you act as a spirit."
       },
       {
-        "fr": "Utilise ton Bouclier Divin (R) quand ton allié saute dedans ou qu'il va prendre d'énormes dégâts ou contrôles, et pas quand il est sur le point de mourir.",
-        "en": "Use your Divine Shield (R) when your ally jumps into it or is about to take massive damage or be subjected to crowd control, not when he is about to die."
+        "fr": "Lâche Bouclier Divin (R) quand ton allié saute dedans ou va prendre gros, pas quand il est déjà sur le point de mourir.",
+        "en": "Use Divine Shield (R) when your ally jumps in or is about to take a huge hit, not when they're already about to die."
       }
     ],
     "builds": [
@@ -13082,8 +13082,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tu n'es pas obligé d'allumer Flaque d'Huile (Z) : elle ralentit. Si tu l'allumes avec Flambée (A), alors elle ne ralentit plus mais inflige des dégâts et te soigne. ",
-        "en": "You don't have to activate Oil Spill (W)—it slows enemies. If you activate it with Flame Stream (Q), it no longer slows enemies but deals damage and heals you."
+        "fr": "Flaque d'Huile (Z) ralentit tant que tu ne l'allumes pas. L'enflammer avec Flambée (A) supprime le ralentissement, mais ça blesse et ça soigne.",
+        "en": "Oil Spill (W) Slows as long as you leave it unlit. Igniting it with Flame Stream (Q) removes the Slow, but it damages and heals you."
       },
       {
         "fr": "Le Bunker (R) abrite tes alliés et les renforce à la sortie, mais l'ennemi peut le détruire.",
@@ -15202,7 +15202,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "N'aie pas peur de rater ton Souffle de sable (A) : mieux vaut le relancer souvent qu'attendre le tir parfait. Vise le chemin de la cible, pas sa position.",
+        "fr": "N'aie pas peur de rater ton Souffle de sable (A) : mieux vaut le relancer souvent qu'attendre le tir parfait. Vise le chemin, pas la position.",
         "en": "Don't be afraid to miss Sand Blast (Q): casting it often beats waiting for the perfect shot. Aim where the target is going, not where it is."
       },
       {
@@ -16385,8 +16385,8 @@ const HEROES = [
         "en": "Drag (Q) is there to pull an enemy out of position: bring them under your tower or into your team's Abilities."
       },
       {
-        "fr": "Garde ton essence (D) pleine pour les fights : hors combat, remonte ta vie à la fontaine ou en pierre de foyer, Traqueur de la jungle (W) te ramène aussitôt.",
-        "en": "Keep your Essence (D) full for fights: out of combat, top up at the fountain or Hearthstone, Brushstalker (Z) brings you straight back."
+        "fr": "Garde ton essence (D) pour les fights : hors combat, remonte ta vie à la fontaine, Traqueur de la jungle (W) te ramène aussitôt.",
+        "en": "Keep your Essence (D) for fights: out of combat, top up at the fountain, Brushstalker (Z) brings you straight back."
       }
     ],
     "builds": [
@@ -17513,7 +17513,7 @@ const HEROES = [
     "tips": [
       {
         "fr": "Matrice défensive (Z) se réoriente en la relançant et s'annule au trait (D) : pose-la sur celui qui tape, pas devant toi par réflexe.",
-        "en": "Defense Matrix (W) is re-aimed by recasting and cancelled with your trait (D): put it on whoever is dealing the damage, not in front of you out of habit."
+        "en": "Defense Matrix (W) is re-aimed by recasting and cancelled with your trait (D): put it on whoever is dealing the damage, not in front of you."
       },
       {
         "fr": "Autodestruction (E) se lance pendant Turboréacteurs (A) : projette ton méca au milieu d'eux au lieu de le poser à leurs pieds.",
@@ -19041,7 +19041,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ton bouclier (D) se recharge hors combat, pas les points de vie d'en face : trade, décroche deux secondes, reviens — tu gagnes l'échange sur la durée.",
+        "fr": "Ton bouclier (D) se recharge hors combat, pas leurs points de vie : trade, décroche deux secondes, reviens — tu gagnes sur la durée.",
         "en": "Your Shield (D) recharges out of combat, their Health does not: trade, back off for two seconds, come back — you win the exchange over time."
       },
       {
@@ -20593,7 +20593,7 @@ const HEROES = [
         "en": "Deth Lazor (W) heals you far more off Heroes: wait for them to line up or for a CC to land before you let it go."
       },
       {
-        "fr": "Charge d'X-plosium (E) est trop lente pour toucher toute seule : garde-la en suivi d'un CC allié, ou enchaîne-la sur Gravitobombe 3000 (R) si tu la prends.",
+        "fr": "Charge d'X-plosium (E) est trop lente pour toucher seule : garde-la en suivi d'un CC allié, ou enchaîne-la sur Gravitobombe 3000 (R).",
         "en": "Xplodium Charge (E) is too slow to land on its own: hold it as follow-up to an ally's CC, or chain it off Grav-O-Bomb 3000 (R) if you take it."
       },
       {
@@ -21636,7 +21636,7 @@ const HEROES = [
       },
       {
         "fr": "L'armure de la forme worgen (D) est là pour encaisser : reste au corps à corps tant que tu frappes, repasse humain dès qu'on te bloque.",
-        "en": "Worgen Form's Armor (D) is there to absorb damage: stay in melee while you're landing hits, shift back to Human the moment you get locked down."
+        "en": "Worgen Form's Armor (D) is there to absorb: stay in melee while you're landing hits, shift back to Human the moment you get locked down."
       }
     ],
     "builds": [
@@ -22655,8 +22655,8 @@ const HEROES = [
         "en": "Storm Bow (Q) gains range while you channel: back up as you charge so you let it go from far beyond what the enemy expects."
       },
       {
-        "fr": "Mille-flèches (Z) part instantanément : c'est ton outil pour démonter un ennemi ou couper une pierre de foyer. Et comme il ricoche, sers-t'en dans les couloirs, pas en terrain ouvert.",
-        "en": "Scatter Arrow (W) fires instantly: it's your tool to dismount someone or cut a Hearthstone. And since it ricochets, use it in corridors, not in open ground."
+        "fr": "Mille-flèches (Z) part instantanément : de quoi démonter un ennemi ou couper une pierre de foyer. Il ricoche, alors garde-le pour les couloirs.",
+        "en": "Scatter Arrow (W) fires instantly: enough to dismount someone or cut a Hearthstone. It ricochets, so save it for corridors."
       },
       {
         "fr": "Flèche du dragon (R) frappe d'autant plus fort qu'elle vient de loin : garde-la pour une équipe qui décroche en ligne droite.",
@@ -27239,12 +27239,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "En spectre, ne rentre pas à la base : va drainer les héros adverses (Z). Ça n'inflige plus rien, mais ça te soigne toujours, et c'est ta barre qui te ramène.",
-        "en": "As a wraith, don't head home: go drain enemy Heroes (W). It deals no damage any more, but it still heals you, and it's that bar that brings you back."
+        "fr": "En spectre, ne rentre pas à la base : va drainer les héros adverses (Z). Ça n'inflige plus rien, mais ça soigne, et c'est ta barre qui te ramène.",
+        "en": "As a wraith, don't head home: go drain enemy Heroes (W). It deals no damage now, but it still heals, and that bar is what revives you."
       },
       {
-        "fr": "Frappe du squelette (A) rend la moitié de son temps de recharge et de son mana dès qu'elle touche un héros : c'est ton moteur, et son ralentissement est ce qui fait tenir le drain derrière.",
-        "en": "Skeletal Swing (Q) gives back half its cooldown and Mana the moment it hits a Hero: it is your engine, and its Slow is what keeps the drain connected afterwards."
+        "fr": "Frappe du squelette (A) te rend la moitié de sa recharge et de son mana sur un héros : c'est ton moteur, et son ralentissement tient le drain.",
+        "en": "Skeletal Swing (Q) gives back half its cooldown and Mana on a Hero: it's your engine, and its Slow keeps the drain connected."
       },
       {
         "fr": "Marche spectrale (E) te rend insensible aux contrôles : sers-t'en pour traverser un combo adverse, pas seulement pour fuir.",
@@ -28909,12 +28909,12 @@ const HEROES = [
         "en": "Your poison (D) is your only steady damage: spread it across the whole enemy team instead of tunnelling one target."
       },
       {
-        "fr": "Spores affaiblissantes (Z) relance le poison sur tout le monde d'un coup : garde-le pour rafraîchir plusieurs cibles, pas seulement pour le ralentissement.",
+        "fr": "Spores affaiblissantes (Z) relance le poison sur tout le monde d'un coup : garde-le pour rafraîchir plusieurs cibles, pas pour le ralentissement.",
         "en": "Crippling Spores (W) refreshes the poison on everyone at once: save it to top several targets up, not just for the Slow."
       },
       {
-        "fr": "Sans monture, tu traverses la carte bien plus lentement que les autres : pars vers l'objectif avant ton équipe, sinon tu arrives quand le fight est déjà lancé.",
-        "en": "With no mount, you cross the map far slower than anyone else: set off for the objective before your team, or you'll turn up once the fight has already started."
+        "fr": "Sans monture, tu traverses la carte plus lentement que les autres : pars vers l'objectif avant ton équipe, sinon tu arrives le fight lancé.",
+        "en": "With no mount you cross the map slower than anyone: set off for the objective before your team, or you arrive with the fight going."
       }
     ],
     "builds": [
@@ -30360,7 +30360,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tes attaques de base frappent en arc : balaie plusieurs ennemis pour poser un maximum de Marques du faucheur (D) plutôt que de t'acharner sur un seul.",
+        "fr": "Tes attaques de base frappent en arc : balaie plusieurs ennemis pour poser un max de Marques du faucheur (D) plutôt que d'en focus un.",
         "en": "Your Basic Attacks hit in an arc: sweep several enemies to spread Reaper's Mark (D) instead of tunnelling one."
       },
       {
@@ -30856,8 +30856,8 @@ const HEROES = [
         "en": "Portal (E) goes down before the fight, not during: walking through takes time, and the enemy team can drop CC on the exit."
       },
       {
-        "fr": "Forme de corbeau (D) te rend intouchable et survole les murs : sers-t'en pour scout et intercepter les rotations, mais tu es plus lent qu'à cheval, ne t'éloigne pas trop.",
-        "en": "Raven Form (D) makes you untouchable and flies over walls: use it to scout and intercept rotations, but you're slower than mounted, so don't drift too far."
+        "fr": "Forme de corbeau (D) te rend intouchable et survole les murs : sers-t'en pour scout et couper les rotations, mais tu es plus lent qu'à cheval.",
+        "en": "Raven Form (D) makes you untouchable and flies over walls: use it to scout and cut rotations, but you're slower than mounted."
       }
     ],
     "builds": [
@@ -34830,7 +34830,7 @@ const HEROES = [
         "en": "Warp Rift (W) does nothing on its own: drop it in a corridor the enemy has to walk through, then set it off with Disruption Pulse (Q)."
       },
       {
-        "fr": "Canon à photons (E) sert à zoner et à prendre les coups à ta place : pose-le pour tenir un couloir ou absorber les tirs des serviteurs, pas au milieu du fight.",
+        "fr": "Canon à photons (E) zone et encaisse à ta place : pose-le pour tenir un couloir ou manger les tirs des serviteurs, pas au milieu du fight.",
         "en": "Photon Cannon (E) zones and takes hits for you: place it to hold a corridor or absorb Minion fire, not in the middle of the fight."
       }
     ],
@@ -38390,7 +38390,7 @@ const HEROES = [
     "tips": [
       {
         "fr": "Alterne Secousse sismique (Z) et attaques de base plutôt que de tout enchaîner : c'est ce rythme qui entretient tes dégâts et ta fureur.",
-        "en": "Alternate Seismic Slam (W) and Basic Attacks rather than dumping everything: that rhythm is what keeps both your damage and your Fury flowing."
+        "en": "Alternate Seismic Slam (W) and Basic Attacks instead of dumping everything: that rhythm keeps both your damage and your Fury flowing."
       },
       {
         "fr": "Tu n'as aucune fuite : n'entre pas sur une cible que ton équipe ne peut pas suivre, tu n'en ressortiras pas.",
@@ -39381,8 +39381,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Monte tes trois cumuls de Flèches noires (D) en attaque de base avant de lâcher Tir d'affliction (A) et Dague de l'ombre (Z) : tout frappe bien plus fort sur une cible saturée.",
-        "en": "Build your three Black Arrows (D) stacks with Basic Attacks before letting Withering Fire (Q) and Shadow Dagger (W) go: everything hits far harder on a fully stacked target."
+        "fr": "Monte tes trois cumuls de Flèches noires (D) avant Tir d'affliction (A) et Dague de l'ombre (Z) : tout frappe plus fort sur une cible saturée.",
+        "en": "Build your three Black Arrows (D) stacks before Withering Fire (Q) and Shadow Dagger (W): everything hits harder on a fully stacked target."
       },
       {
         "fr": "Possession (&) sert à pousser : prends une catapulte une fois la vague nettoyée, ou vole le serviteur mage pour rafler son globe.",
@@ -39855,11 +39855,11 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Garde Rayon de résonance (D) actif : c'est lui qui paie ton mana, et enchaîner Rayon de choc avec Tempête psionique te met à sec en un rien de temps.",
+        "fr": "Garde Rayon de résonance (D) actif : c'est lui qui paie ton mana, enchaîner Rayon de choc et Tempête psionique te met à sec.",
         "en": "Keep Resonance Beam (D) up: it's what pays your Mana, and chaining Shock Ray into Psionic Storm drains you in no time."
       },
       {
-        "fr": "Tempête psionique (Z) et Mur de force (E) se placent, ils ne se lancent pas : attends le contrôle d'un allié plutôt que d'espérer toucher une cible mobile.",
+        "fr": "Tempête psionique (Z) et Mur de force (E) se placent, ils ne se lancent pas : attends le CC d'un allié plutôt que de viser une cible mobile.",
         "en": "Psionic Storm (W) and Force Wall (E) are placed, not thrown: wait for an ally's crowd control instead of hoping to land on a mobile target."
       },
       {
@@ -43488,7 +43488,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tes stacks de haine (D) tombent si tu ne frappes rien pendant quelques secondes : remonte-les sur les serviteurs avant un fight au lieu d'engager à vide.",
+        "fr": "Tes stacks de haine (D) tombent si tu ne frappes rien quelques secondes : remonte-les sur les serviteurs avant un fight, pas à vide.",
         "en": "Your Hatred (D) stacks drop if you hit nothing for a few seconds: stack them back up on Minions before a fight instead of engaging empty."
       },
       {
@@ -44043,8 +44043,8 @@ const HEROES = [
         "en": "With Colossus Smash (R), always open with it: the Armor shred boosts everything that follows, yours and your team's."
       },
       {
-        "fr": "Provocation (R) est un excellent outil d'engage : attrape la cible clé pour lancer le fight, ou punis celui qui dive ta backline en le forçant à ne taper que toi.",
-        "en": "Taunt (R) is an excellent engage tool: grab the key target to start the fight, or punish whoever dives your backline by forcing them onto you."
+        "fr": "Provocation (R) est un super engage : attrape la cible clé pour lancer le fight, ou punis un dive sur ta backline en le forçant sur toi.",
+        "en": "Taunt (R) is a great engage: grab the key target to start the fight, or punish a dive on your backline by forcing them onto you."
       }
     ],
     "builds": [
@@ -45143,7 +45143,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Rémission (A) se relance dès qu'elle est up, même dans le vide : c'est ta seule source de sustain en lane, et Dessein divin (D) t'évite d'y laisser ton mana.",
+        "fr": "Rémission (A) se relance dès qu'elle est up, même dans le vide : c'est ton seul sustain en lane, et Dessein divin (D) économise le mana.",
         "en": "Cast Vindication (Q) whenever it's up, even hitting nothing: it's your only sustain in lane, and Divine Purpose (D) saves the Mana."
       },
       {
