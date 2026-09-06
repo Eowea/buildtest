@@ -28679,8 +28679,8 @@ const HEROES = [
         "en": "Crippling Spores (W) refreshes the poison on everyone at once: save it to top several targets up, not just for the Slow."
       },
       {
-        "fr": "Tu ne montes jamais : préviens ton équipe avant de rotate, tu arriveras toujours après tout le monde.",
-        "en": "You never mount: tell your team before you rotate, you will always show up after everyone else."
+        "fr": "Sans monture, tu traverses la carte bien plus lentement que les autres : pars vers l'objectif avant ton équipe, sinon tu arrives quand le fight est déjà lancé.",
+        "en": "With no mount, you cross the map far slower than anyone else: set off for the objective before your team, or you'll turn up once the fight has already started."
       }
     ],
     "builds": [
