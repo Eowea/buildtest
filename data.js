@@ -28238,8 +28238,8 @@ const HEROES = [
       "en": "Three Heroes in one! Can gather experience from multiple locations."
     },
     "gameplay": {
-      "fr": "Les Vikings poussent trois lanes à la fois. Leur force n'est pas le combat mais l'expérience accumulée pendant que l'adversaire cherche à les rattraper.",
-      "en": "The Vikings push three lanes at once. Their strength is not fighting but the experience they bank while the enemy scrambles to catch them."
+      "fr": "Les Vikings perdus commencent sans aucune capacité de base : ce sont leurs talents qui les leur donnent. Ils poussent trois lanes à la fois, et leur force n'est pas le combat mais l'expérience accumulée pendant que l'adversaire cherche à les rattraper.",
+      "en": "The Lost Vikings start with no Basic Abilities at all: their Talents are what grant them. They push three lanes at once, and their strength is not fighting but the experience they pile up while the enemy tries to chase them down."
     },
     "spells": [
       {
@@ -28264,8 +28264,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_spintowin.png",
         "description": {
-          "fr": "À l'activation, chacun des trois Vikings blesse les ennemis autour de lui, deux fois plus fort contre les héros.",
-          "en": "On activation, each of the three Vikings damages the enemies around him, twice as hard against Heroes."
+          "fr": "À l'activation, chacun des trois Vikings blesse les ennemis autour de lui, deux fois plus fort contre les héros. Capacité obtenue avec le talent du même nom, au palier 7.",
+          "en": "On activation, each of the three Vikings damages the enemies around him, twice as hard against Heroes. Unlocked by the Talent of the same name, at tier 7."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -28292,8 +28292,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/lostvikings/images/spells/storm_ui_icon_lostvikings_jump.png",
         "description": {
-          "fr": "Rend les trois Vikings invulnérables un court instant et leur permet de sauter par-dessus les ennemis.",
-          "en": "Makes all three Vikings Invulnerable for a brief moment and lets them jump over enemies."
+          "fr": "Rend les trois Vikings invulnérables un court instant et leur permet de sauter par-dessus les ennemis. Capacité obtenue avec le talent du même nom, au palier 13.",
+          "en": "Makes all three Vikings Invulnerable for a brief moment and lets them jump over enemies. Unlocked by the Talent of the same name, at tier 13."
         },
         "demoYoutubeId": "",
         "form": "normal"
@@ -28306,8 +28306,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_bribe.png",
         "description": {
-          "fr": "Tuer des serviteurs et des mercenaires près des Vikings accumule des charges, à dépenser pour acheter un camp de mercenaires au lieu de le combattre. Sans effet sur les mercenaires élite.",
-          "en": "Killing Minions and Mercenaries near the Vikings banks charges, spent to buy a Mercenary camp instead of fighting it. No effect on Elite Mercenaries."
+          "fr": "Tuer des serviteurs et des mercenaires près des Vikings accumule des charges, à dépenser pour acheter un camp de mercenaires au lieu de le combattre. Sans effet sur les mercenaires élite. Capacité obtenue avec le talent du même nom, au palier 1.",
+          "en": "Killing Minions and Mercenaries near the Vikings banks charges, spent to buy a Mercenary camp instead of fighting it. No effect on Elite Mercenaries. Unlocked by the Talent of the same name, at tier 1."
         },
         "demoYoutubeId": "",
         "form": "normal"
