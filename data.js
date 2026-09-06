@@ -27125,8 +27125,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ta mort n'est qu'une pause : en spectre, colle les héros adverses, chaque seconde passée à leur contact fait tomber ton temps de réapparition.",
-        "en": "Dying is only a pause: as a wraith, stick to enemy Heroes, every second spent near them drops your respawn timer."
+        "fr": "En spectre, ne rentre pas à la base : va drainer les héros adverses (Z). Ça n'inflige plus rien, mais ça te soigne toujours, et c'est ta barre qui te ramène.",
+        "en": "As a wraith, don't head home: go drain enemy Heroes (W). It deals no damage any more, but it still heals you, and it's that bar that brings you back."
       },
       {
         "fr": "Drain d'espoir (Z) ne paie que s'il va au bout : lance-le quand la cible ne peut pas décrocher, pas au milieu d'un fight ouvert.",
