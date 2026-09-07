@@ -2578,7 +2578,7 @@ const HEROES = [
             "alternativeIds": []
           }
         ],
-        "isNew": true
+        "isNew": false
       }
     ],
     "guideVideos": [
@@ -6010,7 +6010,7 @@ const HEROES = [
             ]
           }
         ],
-        "isNew": true
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -7631,7 +7631,7 @@ const HEROES = [
             "alternativeIds": []
           }
         ],
-        "isNew": true
+        "isNew": false
       },
       {
         "enabled": true,
@@ -7691,7 +7691,7 @@ const HEROES = [
             "alternativeIds": []
           }
         ],
-        "isNew": true
+        "isNew": false
       }
     ],
     "guideVideos": [
@@ -8896,7 +8896,7 @@ const HEROES = [
             "alternativeIds": []
           }
         ],
-        "isNew": true
+        "isNew": false
       }
     ],
     "guideVideos": [
@@ -12655,7 +12655,7 @@ const HEROES = [
             "alternativeIds": []
           }
         ],
-        "isNew": true
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -13677,7 +13677,7 @@ const HEROES = [
             ]
           }
         ],
-        "isNew": true
+        "isNew": false
       },
       {
         "enabled": true,
@@ -13737,7 +13737,7 @@ const HEROES = [
             "alternativeIds": []
           }
         ],
-        "isNew": true
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -17018,7 +17018,7 @@ const HEROES = [
             "alternativeIds": []
           }
         ],
-        "isNew": true
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -19964,7 +19964,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Gall",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "garrosh",
@@ -21992,7 +21992,7 @@ const HEROES = [
     ],
     "codeKey": "Greymane",
     "bugs": [],
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "guldan",
@@ -26640,7 +26640,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "KelThuzad",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "kerrigan",
@@ -27886,7 +27886,7 @@ const HEROES = [
             ]
           }
         ],
-        "isNew": true
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -30723,7 +30723,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Malthael",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "medivh",
@@ -33355,7 +33355,7 @@ const HEROES = [
             ]
           }
         ],
-        "isNew": true
+        "isNew": false
       },
       {
         "enabled": true,
@@ -33421,7 +33421,7 @@ const HEROES = [
             ]
           }
         ],
-        "isNew": true
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -35862,7 +35862,7 @@ const HEROES = [
             "alternativeIds": []
           }
         ],
-        "isNew": true
+        "isNew": false
       },
       {
         "enabled": true,
@@ -35922,7 +35922,7 @@ const HEROES = [
             "alternativeIds": []
           }
         ],
-        "isNew": true
+        "isNew": false
       },
       {
         "enabled": true,
@@ -35982,7 +35982,7 @@ const HEROES = [
             "alternativeIds": []
           }
         ],
-        "isNew": true
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -37962,7 +37962,7 @@ const HEROES = [
             "alternativeIds": []
           }
         ],
-        "isNew": true
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -40264,7 +40264,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Tassadar",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "thebutcher",
@@ -41766,7 +41766,7 @@ const HEROES = [
       "fr": "",
       "en": ""
     },
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "tychus",
@@ -41993,7 +41993,7 @@ const HEROES = [
             "alternativeIds": []
           }
         ],
-        "isNew": true
+        "isNew": false
       }
     ],
     "guideVideos": [],
@@ -43897,7 +43897,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Valla",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "varian",
