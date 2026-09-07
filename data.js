@@ -10460,7 +10460,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Le sadisme que tes talents t'accumulent disparaît à ta mort : décroche d'un fight perdu, tes cumuls valent plus cher qu'un kill.",
+        "fr": "Le sadisme que tes talents t'accumulent disparaît à ta mort : sors d'un fight perdu, tes cumuls valent plus cher qu'un kill.",
         "en": "The Sadism your Talents build up vanishes when you die: back out of a lost fight, your stacks are worth more than a kill."
       },
       {
@@ -19017,7 +19017,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Condensateur de bouclier (D) se recharge hors combat, pas leurs points de vie : trade, décroche deux secondes, reviens.",
+        "fr": "Condensateur de bouclier (D) se recharge hors combat, pas leurs points de vie : trade, recule deux secondes, reviens.",
         "en": "Shield Capacitor (D) recharges out of combat, their Health does not: trade, back off two seconds, come back."
       },
       {
@@ -22635,7 +22635,7 @@ const HEROES = [
         "en": "Scatter Arrow (W) fires instantly: enough to dismount someone or cut a Hearthstone. It ricochets, so save it for corridors."
       },
       {
-        "fr": "Flèche du dragon (R) frappe d'autant plus fort qu'elle vient de loin : garde-la pour une équipe qui décroche en ligne droite.",
+        "fr": "Flèche du dragon (R) frappe d'autant plus fort qu'elle vient de loin : garde-la pour une équipe qui recule en ligne droite.",
         "en": "Dragon's Arrow (R) hits harder the farther it has flown: save it for a team backing off in a straight line."
       }
     ],
@@ -23229,7 +23229,7 @@ const HEROES = [
         "en": "Loot Hoard (D) isn't just damage: it's terrain you place yourself, so it's a wall to slam enemies into."
       },
       {
-        "fr": "Lardée sauvage (E) rebondit sur les obstacles et te rend insensible aux contrôles : elle sert autant à engage qu'à décrocher.",
+        "fr": "Lardée sauvage (E) rebondit sur les obstacles et te rend insensible aux contrôles : elle sert autant à engage qu'à disengage.",
         "en": "Hogg Wild (E) bounces off terrain and makes you Unstoppable: it's as much an engage as a way out."
       }
     ],
@@ -40369,7 +40369,7 @@ const HEROES = [
         "en": "Butcher's Brand (W) is your only survivability: save it to heal off a Hero, never burn it for damage."
       },
       {
-        "fr": "Charge impitoyable (E) est un outil d'entrée, pas de dégâts : elle te rend insensible aux contrôles, et viser un serviteur permet aussi de décrocher.",
+        "fr": "Charge impitoyable (E) est un outil d'entrée, pas de dégâts : elle te rend insensible aux contrôles, et viser un serviteur te sort du fight.",
         "en": "Ruthless Onslaught (E) is a gap-closer, not damage: it makes you Unstoppable, and targeting a Minion is also a way out."
       },
       {
@@ -45127,7 +45127,7 @@ const HEROES = [
         "en": "Charge Avenging Wrath (E) behind terrain: the enemy team doesn't see you coming and you land on them at full range."
       },
       {
-        "fr": "Ardent défenseur (R) se lance vers la moitié de ta vie, pas au dernier moment : tu continues le fight au lieu de devoir décrocher quand même.",
+        "fr": "Ardent défenseur (R) se lance vers la moitié de ta vie, pas au dernier moment : tu continues le fight au lieu de devoir reculer quand même.",
         "en": "Use Ardent Defender (R) around half Health, not at the last second: you keep fighting instead of having to back off anyway."
       }
     ],
