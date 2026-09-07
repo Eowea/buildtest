@@ -840,7 +840,7 @@ const HEROES = [
         "en": "Use your Chastise (E) as a follow-up or to protect your allies."
       },
       {
-        "fr": "Bombe de lumière (R) est à utiliser quand l'un des tes alliés engage, pas à la fin du fight !",
+        "fr": "Bombe de lumière (R) est à utiliser quand l'un de tes alliés engage, pas à la fin du fight !",
         "en": "Use Lightbomb (R) when one of your allies engages the enemy, not at the end of the fight!"
       }
     ],
@@ -3061,8 +3061,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "N'utilise pas Reine-dragon (D) pour un petit combat, favorise les phases objectifs. ",
-        "en": "Don't use Dragonqueen (D) for a small skirmish; focus on objective-based gameplay instead."
+        "fr": "Ne crame pas Reine-dragon (D) sur une escarmouche : garde-la pour les objectifs.",
+        "en": "Don't burn Dragonqueen (D) on a small skirmish: save it for the objectives."
       },
       {
         "fr": "Pose Luxuriance (Z) là où tes alliés vont.",
@@ -3614,7 +3614,7 @@ const HEROES = [
         "en": "Position yourself very far back: Healing Dart (Q) reaches far enough to heal from there."
       },
       {
-        "fr": "Lorsque tu touches un ennemi avec Fléchette hypodermique (E), pendant 0,5secondes il ne peut pas être réveillé. ",
+        "fr": "Touché par Fléchette hypodermique (E), un ennemi ne peut pas être réveillé pendant le premier instant.",
         "en": "When you hit an enemy with Sleep Dart (E), they cannot be woken up for 0.5 seconds."
       }
     ],
@@ -8709,7 +8709,7 @@ const HEROES = [
         "en": "Manage your Mana, do not spam Desperate Plea (Q)."
       },
       {
-        "fr": "Égide écarlate (R) est parfait pour contrer les engages ennemis ou appliquer Zèle (D) en masse.",
+        "fr": "Égide écarlate (R) est parfaite pour contrer les engages ennemis ou appliquer Zèle (D) en masse.",
         "en": "Scarlet Aegis (R) is perfect to counter enemy engages or to apply Zeal (D) to multiple allies."
       },
       {
@@ -9339,8 +9339,8 @@ const HEROES = [
         "en": "Soundwave (Q) is mostly there to protect your allies, not just to deal damage."
       },
       {
-        "fr": "Le beat de soin de Crossfade (Z) est jaune, le vert est celui de vitesse.",
-        "en": "Crossfade's (W) healing beat is yellow, the green one is speed."
+        "fr": "Crossfade (Z) alterne deux morceaux : le jaune soigne, le vert accélère.",
+        "en": "Crossfade (W) switches between two tracks: the yellow one heals, the green one speeds you up."
       }
     ],
     "builds": [
@@ -11063,7 +11063,7 @@ const HEROES = [
       },
       {
         "fr": "Vaut mieux parfois attendre dans un buisson que de se montrer sur la carte !",
-        "en": "Sometimes it's better to wait in a bush than to show up on the map! "
+        "en": "Sometimes it's better to wait in a bush than to show up on the map!"
       }
     ],
     "builds": [
@@ -13605,7 +13605,7 @@ const HEROES = [
         "en": "Blind with Blinding Light (W) first, then strike: you hit Blinded targets far harder."
       },
       {
-        "fr": "Javelot foudroyant (A) se scinde à l'impact : tu peux donc faire plus de dégâts pendant une phase de siège.",
+        "fr": "Javelot foudroyant (A) se divise à l'impact : c'est ce qui en fait ton meilleur outil de siège.",
         "en": "Lightning Fury (Q) splits upon impact, allowing you to deal more damage during a siege."
       }
     ],
@@ -24177,8 +24177,8 @@ const HEROES = [
         "en": "Angelic Armaments (R) gives you a shield: engage with it."
       },
       {
-        "fr": "Fureur des Angiris (R) est un excellent outil pour isoler un ennemi et se replacer. ",
-        "en": "Wrath of the Angiris (R) is an excellent tool for isolating an enemy and repositioning yourself. "
+        "fr": "Fureur des Angiris (R) est un excellent outil pour isoler un ennemi et se replacer.",
+        "en": "Wrath of the Angiris (R) is an excellent tool for isolating an enemy and repositioning yourself."
       }
     ],
     "builds": [
@@ -25654,7 +25654,7 @@ const HEROES = [
         "en": "Concussion Mine (W) is your only disengage: don't burn it the second it's up, and play very safe while it's down."
       },
       {
-        "fr": "Piège d'acier (E) met deux secondes à s'armer : pose-le avant le fight sur un point de passage, jamais au milieu de la bagarre.",
+        "fr": "Piège d'acier (E) met deux secondes à s'armer : pose-le en amont sur un point de passage, jamais une fois le fight lancé.",
         "en": "Steel Trap (E) takes two seconds to arm: place it before the fight on a choke, never in the middle of the brawl."
       }
     ],
@@ -29861,7 +29861,7 @@ const HEROES = [
         "en": "Night Rush (E) can both punish enemies and protect your allies."
       },
       {
-        "fr": "Sers toi de Ailes de la nuit (E) pour toucher un maximum de personnes avec Griffes gangrenées (A). ",
+        "fr": "Sers-toi de Ailes de la nuit (E) pour toucher un maximum d'ennemis avec Griffes gangrenées (A).",
         "en": "Use Night Rush (E) to reach as many people as possible with Fel Claws (Q)."
       },
       {
@@ -30340,7 +30340,7 @@ const HEROES = [
         "en": "Your Basic Attacks hit in an arc: sweep several enemies to spread Reaper's Mark (D) instead of tunnelling one."
       },
       {
-        "fr": "N'engage jamais seul : harcèle la frontline à la Moisson d'âmes (A) jusqu'à ce qu'elle brûle ses contrôles, puis rentre dedans.",
+        "fr": "N'engage jamais seul : poke la frontline à la Moisson d'âmes (A) jusqu'à ce qu'elle brûle ses contrôles, puis rentre dedans.",
         "en": "Never engage alone: poke the frontline with Soul Rip (Q) until it burns its crowd control, then go in."
       },
       {
@@ -32333,7 +32333,7 @@ const HEROES = [
         "en": "Dwarf Toss (E) is also a great escape from a failed engage."
       },
       {
-        "fr": "Sers toi du ralentissement de Coup de tonnerre (Z) pour sécuriser ton Éclair de tempête (A).",
+        "fr": "Sers-toi du ralentissement de Coup de tonnerre (Z) pour sécuriser ton Éclair de tempête (A).",
         "en": "Use the slow effect from Thunder Clap (W) to set up your Storm Bolt (Q)."
       }
     ],
@@ -36405,7 +36405,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Balle perforante (A)  peut t'aider pour te protéger. ",
+        "fr": "Balle perforante (A) peut t'aider pour te protéger.",
         "en": "Penetrating Round (Q) can help you keep yourself safe."
       },
       {
@@ -38869,8 +38869,8 @@ const HEROES = [
         "en": "Helping Hand (1) can save an ally and make them Unstoppable while in flight."
       },
       {
-        "fr": "Balafré est un tank, donc il n'est pas absolument pas nécessaire de rester toujours derrière à ne rien faire.",
-        "en": "Stitches is a tank, so there's absolutely no need to just stay in the back doing nothing."
+        "fr": "Balafré est un tank : pas besoin de rester derrière à ne rien faire.",
+        "en": "Stitches is a tank: no need to hang back doing nothing."
       }
     ],
     "builds": [
@@ -39361,7 +39361,7 @@ const HEROES = [
         "en": "Build your three Black Arrows (D) stacks before Withering Fire (Q) and Shadow Dagger (W): everything hits harder on a fully stacked target."
       },
       {
-        "fr": "Possession (&) sert à pousser : prends une catapulte une fois la vague nettoyée, ou vole le serviteur mage pour rafler son globe.",
+        "fr": "Possession (&) sert à pousser : prends une catapulte une fois la vague nettoyée, ou vole le serviteur mage pour récupérer son globe.",
         "en": "Possession (1) is a pushing tool: take a Catapult once the wave is cleared, or steal the Mage Minion to grab its Globe."
       },
       {
@@ -41378,7 +41378,7 @@ const HEROES = [
         "en": "Always keep a Blink (Q) charge to dodge with: going in without a way out is dying."
       },
       {
-        "fr": "Rappel (E) te purge : garde-le pour le contrôle qui va te tuer, pas pour te replacer confortablement.",
+        "fr": "Rappel (E) te purge : garde-le pour le contrôle qui va te tuer, pas juste pour te replacer.",
         "en": "Recall (E) cleanses you: save it for the crowd control that would kill you, not for a comfortable reposition."
       },
       {
@@ -41923,7 +41923,7 @@ const HEROES = [
         "en": "Run and Gun (E) is as good for escaping as for repositioning."
       },
       {
-        "fr": "Tes attaques de base font plus de dégâts que ton Exécution (A) sans talent, utilise-le pour poursuivre un ennemi. ",
+        "fr": "Tes attaques de base font plus de dégâts que ton Exécution (A) sans talent, utilise-le pour poursuivre un ennemi.",
         "en": "Your basic attacks deal more damage than your Overkill (Q) without a talent, so use it to chase an enemy."
       }
     ],
@@ -42411,7 +42411,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Puissance d'El'druin (A) peut servir pour ralentir un ennemi tout comme fuir un combat. ",
+        "fr": "Puissance d'El'druin (A) peut servir pour ralentir un ennemi tout comme fuir un combat.",
         "en": "El'druin's Might (Q) can be used to slow down an enemy or to flee from combat."
       },
       {
