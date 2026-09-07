@@ -275,8 +275,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Utilise ton Trait (D) avant Bombe vivante (Z) pour consommer un minimum de mana.",
-        "en": "Use your Trait (D) before Living Bomb (W) to consume no mana."
+        "fr": "Utilise Sphères verdoyantes (D) avant Bombe vivante (Z) pour consommer un minimum de mana.",
+        "en": "Use Verdant Spheres (D) before Living Bomb (W) to consume no mana."
       },
       {
         "fr": "L'augmentation du Choc de flammes (A) grâce à ton trait n'augmente que sa zone d'effet, pas ses dégâts.",
@@ -830,8 +830,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "N'attends pas que ton allié soit sur le point de mourir, utilise ton pull (D) avant ! ",
-        "en": "Don't wait until your ally is about to die, use your pull (D) sooner!"
+        "fr": "N'attends pas que ton allié soit sur le point de mourir, utilise Saut de foi (D) avant !",
+        "en": "Don't wait until your ally is about to die, use Leap of Faith (D) sooner!"
       },
       {
         "fr": "Utilise ton Châtiment (E) en suivi ou pour protéger tes alliés.",
@@ -1384,8 +1384,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Utilise ton totem (E) pour protéger un allié ou attraper un ennemi.",
-        "en": "Use your totem (E) to protect an ally or catch an enemy."
+        "fr": "Utilise Totem de lien terrestre (E) pour protéger un allié ou attraper un ennemi.",
+        "en": "Use Earthbind Totem (E) to protect an ally or catch an enemy."
       },
       {
         "fr": "Place ton Bouclier de foudre (Z) sur ton tank.",
@@ -1950,12 +1950,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Utilise ta Métamorphose (Z) pour casser les canalisations adverses ou protéger un allié.",
-        "en": "Use your Polymorph (W) to interrupt enemy channels or protect your allies."
+        "fr": "Utilise Métamorphe (Z) pour casser les canalisations adverses ou protéger un allié.",
+        "en": "Use Polymorph (W) to interrupt enemy channels or protect your allies."
       },
       {
-        "fr": "Garde un œil sur la mini-carte pour ton global (W) : Déphasage te téléporte sur n'importe quel allié.",
-        "en": "Keep an eye on the minimap for your global (Z): Phase Shift teleports you to any ally."
+        "fr": "Garde un œil sur la mini-carte : Déphasage (W) te téléporte sur n'importe quel allié, où qu'il soit.",
+        "en": "Keep an eye on the minimap: Phase Shift (Z) teleports you to any ally, wherever they are."
       },
       {
         "fr": "Essaye d'utiliser Poudre de perlimpinpin (E) sur allié quand il va se faire burst.",
@@ -2445,16 +2445,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Prépare toujours des potions (A) avant l'objectif.",
-        "en": "Always setup potions (Q) before the objective starts."
+        "fr": "Prépare toujours Potion de soin (A) au sol avant l'objectif.",
+        "en": "Always set up Healing Potion (Q) on the ground before the objective starts."
       },
       {
-        "fr": "Combine le Cube (Z) avec le Parchemin (E) pour garantir l'immobilisation.",
-        "en": "Combine your Cube (W) with your Scroll (E) to guarantee the root."
+        "fr": "Combine Cube horadrique (Z) et Parchemin de confinement (E) pour garantir l'immobilisation.",
+        "en": "Combine Horadric Cube (W) with Scroll of Sealing (E) to guarantee the Root."
       },
       {
-        "fr": "Vise les potions (A) directement sur tes alliés, personne ne veut courir après un soin !",
-        "en": "Aim your potions (Q) directly on your allies—no one wants to have to walk to get healed!"
+        "fr": "Vise Potion de soin (A) directement sur tes alliés, personne ne veut courir après un soin !",
+        "en": "Aim Healing Potion (Q) directly on your allies — no one wants to walk to get healed!"
       }
     ],
     "builds": [
@@ -3081,8 +3081,8 @@ const HEROES = [
         "en": "Place Abundance (W) where your allies will go."
       },
       {
-        "fr": "Pendant la transformation en dragon (D) et un court instant, tu deviens inciblable. ",
-        "en": "While you're transforming into a dragon (D), you become untargetable for a brief moment."
+        "fr": "Pendant Reine-dragon (D), tu deviens inciblable un court instant.",
+        "en": "During Dragonqueen (D), you become untargetable for a brief moment."
       }
     ],
     "builds": [
@@ -3618,8 +3618,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Garde la grenade (Z) pour empêcher un sauvetage ennemi.",
-        "en": "Save the grenade (W) to prevent an enemy rescue."
+        "fr": "Garde Grenade biotique (Z) pour empêcher un sauvetage ennemi.",
+        "en": "Save Biotic Grenade (W) to prevent an enemy rescue."
       },
       {
         "fr": "Place-toi très en arrière : Fléchette soignante (A) porte assez loin pour soigner de là.",
@@ -4168,8 +4168,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Change la couronne (D) de cible si ton allié ne fait pas de dégâts ou lorsqu'il est mort.",
-        "en": "Switch your crown (D) to another target if your ally is not dealing damage or if they are dead."
+        "fr": "Change la cible de Don d'espoir (D) si ton allié ne fait pas de dégâts ou s'il est mort.",
+        "en": "Switch Bestow Hope (D) to another target if your ally deals no damage or is dead."
       },
       {
         "fr": "Cherche les étourdissements sur les murs avec Entrave (E).",
@@ -4372,7 +4372,7 @@ const HEROES = [
         "level": 4,
         "name": {
           "fr": "Amplitude majestueuse",
-          "en": "Increasing Clarity"
+          "en": "Majestic Span"
         },
         "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_angelicsweep.png",
         "description": {
@@ -4414,7 +4414,7 @@ const HEROES = [
         "level": 7,
         "name": {
           "fr": "Lueur d'espoir",
-          "en": "Energized Cord"
+          "en": "Glimmer of Hope"
         },
         "icon": "assets/heroes/base_spells/auriel/images/spells/storm_ui_icon_auriel_rayofheaven.png",
         "description": {
@@ -4498,7 +4498,7 @@ const HEROES = [
         "level": 13,
         "name": {
           "fr": "Force convergente",
-          "en": "Increasing Clarity"
+          "en": "Converging Force"
         },
         "icon": "assets/heroes/base_spells/auriel/images/talents/storm_ui_icon_auriel_angelicsweep_b.png",
         "description": {
@@ -4731,8 +4731,8 @@ const HEROES = [
         "en": "Keep a Radiant Dash (Q) charge to escape."
       },
       {
-        "fr": "Les Sept Frappes (R) inflige + de dégâts à une seule cible qu'à plusieurs. ",
-        "en": "Seven Strikes (R) deals more damage to a single target than to multiple targets."
+        "fr": "Les Sept frappes (R) inflige plus de dégâts sur une seule cible que réparti sur plusieurs.",
+        "en": "Seven-Sided Strike (R) deals more damage on a single target than spread across several."
       }
     ],
     "builds": [
@@ -5289,8 +5289,8 @@ const HEROES = [
         "en": "Move closer to the target you want to heal: Healing Brew (Q) always goes to the lowest-Health ally in range."
       },
       {
-        "fr": "De temps en temps, prends des dégâts pour bénéficier de ton trait (D).",
-        "en": "Sometimes, take some damage to activate your trait (D)."
+        "fr": "De temps en temps, prends des dégâts pour déclencher Prompts petons (D).",
+        "en": "Now and then, take some damage to trigger Fast Feet (D)."
       }
     ],
     "builds": [
@@ -5887,8 +5887,8 @@ const HEROES = [
         "en": "You can heal Minions with Healing Beam (Q)."
       },
       {
-        "fr": "Ta grenade (E) est ton seul moyen de te défendre.",
-        "en": "Your grenade (E) is your only self-defense tool."
+        "fr": "Grenade de distorsion (E) est ton seul moyen de te défendre.",
+        "en": "Displacement Grenade (E) is your only self-defense tool."
       },
       {
         "fr": "Pense à mettre Rayon de soins (A) sur un allié ou un serviteur pour te soigner grâce à ton trait !",
@@ -7025,9 +7025,7 @@ const HEROES = [
           {
             "level": 20,
             "primaryId": "tmrryr6jo02dpa",
-            "alternativeIds": [
-              "tmrryr6joxwsxq"
-            ]
+            "alternativeIds": []
           }
         ],
         "isNew": false
@@ -7056,7 +7054,7 @@ const HEROES = [
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jotcxbw",
+            "primaryId": "tc8msjba5116fc",
             "alternativeIds": []
           }
         ],
@@ -7123,20 +7121,6 @@ const HEROES = [
         "description": {
           "fr": "Actif : Propage Agent infectieux autour de Stukov à ses ennemis et annule le temps de recharge d'Éruption éruptive. Passif : Quand les points de vie de Stukov sont bas, le temps de recharge d'Éruption éruptive est plus rapide.",
           "en": "Active: Spreads Weighted Pustule to nearby enemies and resets Bio-Kill Switch's cooldown. Passive: When Stukov's Health is low, Bio-Kill Switch recharges faster."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jotcxbw",
-        "level": 1,
-        "name": {
-          "fr": "Éclatement",
-          "en": "Fetid Touch"
-        },
-        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_abilitytalent_damage.png",
-        "description": {
-          "fr": "Améliore W.",
-          "en": "Improves W."
         },
         "demoYoutubeId": null
       },
@@ -7391,20 +7375,6 @@ const HEROES = [
           "en": "Bio-Kill Switch also detonates Lurking Arm: enemy Heroes in the area are damaged, infected with Weighted Pustule and Silenced."
         },
         "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6joxwsxq",
-        "level": 20,
-        "name": {
-          "fr": "Chaos maîtrisé",
-          "en": "Controlled Chaos"
-        },
-        "icon": "assets/heroes/base_spells/stukov/images/spells/storm_ui_icon_stukov_flailingswipe.png",
-        "description": {
-          "fr": "Frappes chaotiques touche une seule fois mais possède plusieurs charges.",
-          "en": "Flailing Swipe hits only once but has multiple charges."
-        },
-        "demoYoutubeId": null
       }
     ],
     "forms": [],
@@ -7510,8 +7480,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Lance ta chouette (Z) pour scouter les boss.",
-        "en": "Use your Owl (W) to scout Bosses."
+        "fr": "Lance Sentinelle (Z) pour scouter les boss.",
+        "en": "Use Sentinel (W) to scout Bosses."
       },
       {
         "fr": "Pose Marque du chasseur (D) sur la cible que ton tank engage.",
@@ -8180,7 +8150,7 @@ const HEROES = [
         "en": "Don't hesitate to die to save your team: Devotion (D) still lets you act as a spirit."
       },
       {
-        "fr": "Lâche Bouclier Divin (R) quand ton allié saute dedans ou va prendre gros, pas quand il est déjà sur le point de mourir.",
+        "fr": "Lâche Bouclier divin (R) quand ton allié saute dedans ou va prendre gros, pas quand il est déjà sur le point de mourir.",
         "en": "Use Divine Shield (R) when your ally jumps in or is about to take a huge hit, not when they're already about to die."
       }
     ],
@@ -8935,7 +8905,7 @@ const HEROES = [
         "level": 1,
         "name": {
           "fr": "Compassion",
-          "en": "Compassion"
+          "en": "Pity the Frail"
         },
         "icon": "assets/heroes/base_spells/whitemane/images/talents/storm_ui_icon_whitemane_inquisition_lash.png",
         "description": {
@@ -9359,8 +9329,8 @@ const HEROES = [
         "en": "Remember to always stay on Wall Ride: it carries your mobility and unlocks Push Off (D)."
       },
       {
-        "fr": "Ton Onde Sonore (A) servira dans la majorité des cas à protéger tes alliés et non à juste faire des dégâts.",
-        "en": "In most cases, your Soundwave (Q) will be used to protect your allies rather than just to deal damage."
+        "fr": "Onde sonore (A) sert dans la majorité des cas à protéger tes alliés, pas seulement à faire des dégâts.",
+        "en": "Soundwave (Q) is mostly there to protect your allies, not just to deal damage."
       },
       {
         "fr": "Le beat de soin de Crossfade (Z) est jaune, le vert est celui de vitesse.",
@@ -9970,8 +9940,8 @@ const HEROES = [
         "en": "Symbiote (Q) on a Minion pushes an empty lane and gives you free vision."
       },
       {
-        "fr": "Empile tes Nids toxiques (Z) sur les objectifs avant qu'ils ne s'ouvrent.",
-        "en": "Stack your Toxic Nests (W) on objectives before they open."
+        "fr": "Empile Nid toxique (Z) sur les objectifs avant qu'ils ne s'ouvrent.",
+        "en": "Stack Toxic Nest (W) on objectives before they open."
       }
     ],
     "builds": [
@@ -11078,12 +11048,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tes scarabées (D) peuvent servir à tanker les sorts et à assiéger les bâtiments.",
-        "en": "Your Beetles (D) can be used to absorb spells and to siege buildings."
+        "fr": "Armée de scarabées (D) sert à tanker les sorts et à assiéger les bâtiments.",
+        "en": "Scarab Host (D) is there to soak spells and to siege Structures."
       },
       {
-        "fr": "Utilise ton Empale (A) en premier pour sécuriser ta Charge enfouie (E) et ne pas la louper.",
-        "en": "Use your Impale (Q) first to set up your Burrow Charge (E) so you don't miss it."
+        "fr": "Utilise Empaler (A) en premier pour sécuriser Charge enfouie (E) et ne pas la louper.",
+        "en": "Use Impale (Q) first to set up Burrow Charge (E) so you don't miss it."
       },
       {
         "fr": "Vaut mieux parfois attendre dans un buisson que de se montrer sur la carte !",
@@ -12539,16 +12509,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Lance ton Globe (A) sur les vagues de serviteurs : chaque victime le renforce à vie.",
-        "en": "Throw your Globe (Q) at Minion waves: every kill strengthens it for good."
+        "fr": "Lance Globe d'annihilation (A) sur les vagues de serviteurs : chaque victime le renforce à vie.",
+        "en": "Throw Globe of Annihilation (Q) at Minion waves: every kill strengthens it for good."
       },
       {
         "fr": "Tout doit brûler (E) te ralentit fortement : ne le canalise jamais sans protection.",
         "en": "All Shall Burn (E) heavily Slows you: never channel it unprotected."
       },
       {
-        "fr": "Tes Guerriers démoniaques (Z) peuvent tanker les sorts ennemis.",
-        "en": "Your Demon Warriors (W) can tank enemy spells."
+        "fr": "Guerrier démoniaque (Z) peut tanker les sorts ennemis.",
+        "en": "Summon Demon Warrior (W) can soak enemy spells."
       }
     ],
     "builds": [
@@ -13082,7 +13052,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Flaque d'Huile (Z) ralentit tant que tu ne l'allumes pas. L'enflammer avec Flambée (A) supprime le ralentissement, mais ça blesse et ça soigne.",
+        "fr": "Flaque d'huile (Z) ralentit tant que tu ne l'allumes pas. L'enflammer avec Flambée (A) supprime le ralentissement, mais ça blesse et ça soigne.",
         "en": "Oil Spill (W) Slows as long as you leave it unlit. Igniting it with Flame Stream (Q) removes the Slow, but it damages and heals you."
       },
       {
@@ -14169,8 +14139,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Report (E) ne fait que décaler la facture : bois (D) pendant qu'elle tombe, le bouclier absorbe les dégâts différés.",
-        "en": "Stagger (E) only delays the bill: drink (D) while it comes due, the Shield eats the deferred damage."
+        "fr": "Report (E) ne fait que décaler la facture : Boisson fortifiante (D) pendant qu'elle tombe, le bouclier absorbe les dégâts différés.",
+        "en": "Stagger (E) only delays the bill: Fortifying Brew (D) while it comes due, the Shield eats the deferred damage."
       },
       {
         "fr": "Place une attaque de base entre Fracasse-tonneau (Z) et Souffle de feu : c'est ce qui fait tout ton dégât, pas l'enchaînement direct.",
@@ -14725,8 +14695,8 @@ const HEROES = [
         "en": "The longer you wind up Surging Fist (Q), the farther the charge carries."
       },
       {
-        "fr": "N'oublie pas d'activer ton Trait (D) lorsque tu as peu de points de vie. ",
-        "en": "Don't forget to activate your Trait (D) when your health is low."
+        "fr": "N'oublie pas d'activer Peau d'ogre (D) quand tu as peu de points de vie.",
+        "en": "Don't forget to activate Ogre Hide (D) when your Health is low."
       }
     ],
     "builds": [
@@ -15206,8 +15176,8 @@ const HEROES = [
         "en": "Don't be afraid to miss Sand Blast (Q): casting it often beats waiting for the perfect shot. Aim where the target is going, not where it is."
       },
       {
-        "fr": "Piège temporel (E) n'est pas qu'offensif : déclenché au trait (D), il met aussi tes alliés en stase et peut leur faire éviter un burst.",
-        "en": "Time Trap (E) isn't only offensive: detonated with your trait (D), it also freezes your allies and can make them dodge a burst."
+        "fr": "Piège temporel (E) n'est pas qu'offensif : déclenché à Incursion temporelle (D), il met aussi tes alliés en stase et leur évite un burst.",
+        "en": "Time Trap (E) isn't only offensive: detonated with Timewalker (D), it also freezes allies and saves them from a burst."
       },
       {
         "fr": "Tu meurs au moindre dive : reste derrière ta frontline, hors de portée d'engage, et laisse ta portée faire le travail.",
@@ -15875,8 +15845,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tes plaques d'armure (D) ne se rechargent qu'en Vol draconique (W) : décolle pour les regagner.",
-        "en": "Your Armor Plates (D) only recharge during Dragonflight (Z): take off to get them back."
+        "fr": "Aspect de la Mort (D) ne recharge ses plaques d'armure qu'en Vol draconique (W) : décolle pour les regagner.",
+        "en": "Aspect of Death (D) only recharges its Armor Plates during Dragonflight (Z): take off to get them back."
       },
       {
         "fr": "Forme Destructeur (A) pour le corps à corps, Brise-monde (Z) pour le contrôle de zone.",
@@ -16385,8 +16355,8 @@ const HEROES = [
         "en": "Drag (Q) is there to pull an enemy out of position: bring them under your tower or into your team's Abilities."
       },
       {
-        "fr": "Garde ton essence (D) pour les fights : hors combat, remonte ta vie à la fontaine, Traqueur de la jungle (W) te ramène aussitôt.",
-        "en": "Keep your Essence (D) for fights: out of combat, top up at the fountain, Brushstalker (Z) brings you straight back."
+        "fr": "Garde Collecte d'essence (D) pleine pour les fights : hors combat, remonte ta vie à la fontaine, Traqueur de la jungle (W) te ramène.",
+        "en": "Keep Essence Collection (D) full for fights: out of combat, top up at the fountain, Brushstalker (Z) brings you back."
       }
     ],
     "builds": [
@@ -17520,8 +17490,8 @@ const HEROES = [
         "en": "Self-Destruct (E) can be launched during Boosters (Q): fling your Mech into the middle of them instead of dropping it at their feet."
       },
       {
-        "fr": "Ton méca réapparaît toujours au même endroit : décale-toi avant de le rappeler (Z), sinon l'équipe d'en face t'accueille avec ses contrôles.",
-        "en": "Your Mech always lands in the same predictable spot: move before you call it (W), or the enemy team greets it with their crowd control."
+        "fr": "Ton méca réapparaît toujours au même endroit : décale-toi avant Appel du méca (Z), sinon l'équipe d'en face t'accueille au contrôle.",
+        "en": "Your Mech always lands in the same spot: move before Call Mech (W), or the enemy team greets it with crowd control."
       }
     ],
     "builds": [
@@ -19041,8 +19011,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ton bouclier (D) se recharge hors combat, pas leurs points de vie : trade, décroche deux secondes, reviens — tu gagnes sur la durée.",
-        "en": "Your Shield (D) recharges out of combat, their Health does not: trade, back off for two seconds, come back — you win the exchange over time."
+        "fr": "Condensateur de bouclier (D) se recharge hors combat, pas leurs points de vie : trade, décroche deux secondes, reviens.",
+        "en": "Shield Capacitor (D) recharges out of combat, their Health does not: trade, back off two seconds, come back."
       },
       {
         "fr": "Stutter-step à ta portée maximale : Découpeur à plasma (A) d'abord, attaques de base ensuite, jamais l'inverse.",
@@ -20597,8 +20567,8 @@ const HEROES = [
         "en": "Xplodium Charge (E) is too slow to land on its own: hold it as follow-up to an ally's CC, or chain it off Grav-O-Bomb 3000 (R) if you take it."
       },
       {
-        "fr": "Tes tourelles (A) tapent trop peu pour clear : sers-t'en pour bloquer les skillshots, démonter les ennemis et scout les rotations.",
-        "en": "Your turrets (Q) hit far too softly to clear: use them to block skillshots, dismount enemies and scout rotations."
+        "fr": "Tourelle Sulfatt (A) tape trop peu pour clear : sers-t'en pour bloquer les skillshots, démonter les ennemis et scout les rotations.",
+        "en": "Rock-It! Turret (Q) hits far too softly to clear: use it to block skillshots, dismount enemies and scout rotations."
       }
     ],
     "builds": [
@@ -21627,16 +21597,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ton passage en worgen (D) est ton moment le plus vulnérable : n'entre que si ton équipe a déjà posé son contrôle.",
-        "en": "Shifting into Worgen (D) is when you're most exposed: only go in once your team has landed its crowd control."
+        "fr": "Ton passage en worgen avec Malédiction des worgens (D) est ton moment le plus vulnérable : n'entre qu'après le contrôle de ton équipe.",
+        "en": "Shifting with Curse of the Worgen (D) is when you're most exposed: only go in after your team has landed its crowd control."
       },
       {
         "fr": "Balle maudite (R) te repasse en forme humaine, mais elle ne te propulse pas comme Désengagement.",
         "en": "Cursed Bullet (R) shifts you back to Human Form, but it doesn't launch you clear the way Disengage does."
       },
       {
-        "fr": "L'armure de la forme worgen (D) est là pour encaisser : reste au corps à corps tant que tu frappes, repasse humain dès qu'on te bloque.",
-        "en": "Worgen Form's Armor (D) is there to absorb: stay in melee while you're landing hits, shift back to Human the moment you get locked down."
+        "fr": "L'armure de Malédiction des worgens (D) est là pour encaisser : reste au corps à corps tant que tu frappes, repasse humain si on te bloque.",
+        "en": "The Armor from Curse of the Worgen (D) is there to absorb: stay in melee while you land hits, shift back to Human if you get locked down."
       }
     ],
     "builds": [
@@ -23719,8 +23689,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tape en permanence, même hors combat : chaque attaque de base te soigne et fait descendre tes temps de recharge (D).",
-        "en": "Keep attacking, even out of combat: every Basic Attack heals you and ticks your cooldowns down (D)."
+        "fr": "Tape en permanence, même hors combat : Soif du Traître (D) te soigne à chaque attaque de base et fait descendre tes temps de recharge.",
+        "en": "Keep attacking, even out of combat: Betrayer's Thirst (D) heals you on every Basic Attack and ticks your cooldowns down."
       },
       {
         "fr": "Plongeon (A) te dépose toujours derrière la cible : sers-t'en pour te mettre à l'abri d'une AoE, pas seulement pour entrer.",
@@ -24193,8 +24163,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ta marque (D)  te soigne à chaque fois que tu la déclenches.",
-        "en": "Your mark (D) heals you every time you trigger it."
+        "fr": "Fer de vaillance (D) te soigne à chaque fois que tu le déclenches.",
+        "en": "Valorous Brand (D) heals you every time you trigger it."
       },
       {
         "fr": "Arsenal angélique (R) te donne un bouclier : engage avec.",
@@ -26171,12 +26141,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ton combo, c'est Chaînes (E), Nova de givre (Z) entre les cibles, puis Chaînes à nouveau : pris séparément, tes sorts ne font presque rien.",
-        "en": "Your combo is Chains (E), Frost Nova (W) between the targets, then Chains again: taken separately, your spells do almost nothing."
+        "fr": "Ton combo : Chaînes de Kel'Thuzad (E), Nova de givre (Z) entre les cibles, puis les Chaînes à nouveau. Séparés, tes sorts ne font presque rien.",
+        "en": "Your combo: Chains of Kel'Thuzad (E), Frost Nova (W) between the targets, then the Chains again. Apart, your spells do almost nothing."
       },
       {
-        "fr": "Remplis la quête de chancre de ton trait (D) le plus tôt possible : tout ton pic de dégâts en dépend.",
-        "en": "Finish your trait's (D) Blight quest as early as you can: your whole damage spike depends on it."
+        "fr": "Remplis la quête de chancre de Maître des ténèbres glaciales (D) au plus tôt : tout ton pic de dégâts en dépend.",
+        "en": "Finish the Blight quest on Master of the Cold Dark (D) as early as you can: your whole damage spike depends on it."
       },
       {
         "fr": "Tu n'as aucune escape : un héros mobile te tue avant même que tes sorts ne touchent, reste derrière ton équipe.",
@@ -26773,8 +26743,8 @@ const HEROES = [
         "en": "Ravage (Q) carries your quest: build it on Ranged Minions first rather than clearing the wave as fast as possible."
       },
       {
-        "fr": "Ton bouclier (D) ne monte qu'en tapant : c'est en restant au contact que tu survis, pas en reculant.",
-        "en": "Your Shield (D) only builds while you're dealing damage: you survive by staying in, not by backing off."
+        "fr": "Assimilation (D) ne monte qu'en tapant : c'est en restant au contact que tu survis, pas en reculant.",
+        "en": "Assimilation (D) only builds while you deal damage: you survive by staying in, not by backing off."
       }
     ],
     "builds": [
@@ -27239,8 +27209,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "En spectre, ne rentre pas à la base : va drainer les héros adverses (Z). Ça n'inflige plus rien, mais ça soigne, et c'est ta barre qui te ramène.",
-        "en": "As a wraith, don't head home: go drain enemy Heroes (W). It deals no damage now, but it still heals, and that bar is what revives you."
+        "fr": "En spectre, ne rentre pas à la base : va poser Drain d'espoir (Z) sur un héros. Ça n'inflige plus rien, mais ça soigne et ça te ramène.",
+        "en": "As a wraith, don't head home: put Drain Hope (W) on a Hero. It deals no damage now, but it heals and it brings you back."
       },
       {
         "fr": "Frappe du squelette (A) te rend la moitié de sa recharge et de son mana sur un héros : c'est ton moteur, et son ralentissement tient le drain.",
@@ -28905,8 +28875,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ton poison (D) est ta seule source de dégâts continue : étale-le sur toute l'équipe d'en face plutôt que de t'acharner sur une cible.",
-        "en": "Your poison (D) is your only steady damage: spread it across the whole enemy team instead of tunnelling one target."
+        "fr": "Toxine naturelle (D) est ta seule source de dégâts continue : étale-la sur toute l'équipe d'en face plutôt que d'en focus une.",
+        "en": "Nature's Toxin (D) is your only steady damage: spread it across the whole enemy team instead of tunnelling one target."
       },
       {
         "fr": "Spores affaiblissantes (Z) relance le poison sur tout le monde d'un coup : garde-le pour rafraîchir plusieurs cibles, pas pour le ralentissement.",
@@ -30360,7 +30330,7 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tes attaques de base frappent en arc : balaie plusieurs ennemis pour poser un max de Marques du faucheur (D) plutôt que d'en focus un.",
+        "fr": "Tes attaques de base frappent en arc : balaie plusieurs ennemis pour poser un max de Marque du faucheur (D) plutôt que d'en focus un.",
         "en": "Your Basic Attacks hit in an arc: sweep several enemies to spread Reaper's Mark (D) instead of tunnelling one."
       },
       {
@@ -32832,8 +32802,8 @@ const HEROES = [
         "en": "Hide your Egg (D) in a bush or a corner, and move it every time: without it, dying turns back into a real gift for the enemy."
       },
       {
-        "fr": "Embourbe (A) avant tout le reste : Bourbe fait bien plus mal sur une cible déjà embourbée, et ta quête de Poisson-globe (Z) ne monte que là-dessus.",
-        "en": "Slime (Q) before anything else: Slime hurts far more on an already-Slimed target, and your Pufferfish (W) quest only counts those."
+        "fr": "Bourbe (A) avant tout le reste : elle fait bien plus mal sur une cible déjà embourbée, et la quête de Poisson-globe (Z) ne monte que là.",
+        "en": "Slime (Q) before anything else: it hurts far more on an already-Slimed target, and the Pufferfish (W) quest only counts those."
       },
       {
         "fr": "Bulle de sûreté (E) sert à dodge : garde-la pour avaler un burst ou un skillshot, pas pour partir une fois à moitié mort.",
@@ -33310,8 +33280,8 @@ const HEROES = [
         "en": "Zombies wall (W) is trapping people inside; remember to deactivate it if it's an ally."
       },
       {
-        "fr": "Essaye de viser un seul serviteur avec tes araignées (A) pour optimiser ton waveclear.",
-        "en": "Try to target a single minion with your spiders (Q) to optimize your waveclear."
+        "fr": "Vise un seul serviteur avec Araignées nécrophages (A) pour optimiser ton waveclear.",
+        "en": "Target a single Minion with Corpse Spiders (Q) to optimise your waveclear."
       }
     ],
     "builds": [
@@ -33861,8 +33831,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tu n'as aucune mobilité : garde toujours une escape ouverte derrière toi, le camouflage (D) n'en est pas une.",
-        "en": "You have no mobility at all: always keep an escape open behind you, Stealth (D) is not one."
+        "fr": "Tu n'as aucune mobilité : garde toujours une escape ouverte derrière toi, Camouflage permanent (D) n'en est pas une.",
+        "en": "You have no mobility at all: always keep an escape open behind you, Permanent Cloak (D) is not one."
       },
       {
         "fr": "Tir anesthésiant (Z) d'abord, Tir de précision (A) ensuite : sur une cible mobile, tu ne toucheras pas sans le ralentissement.",
@@ -34343,8 +34313,8 @@ const HEROES = [
         "en": "Aim Dread (E) slightly behind a Slowed or locked-down target: the wave and the eruption then both connect."
       },
       {
-        "fr": "Avant Magie de mort, ne crame pas une attaque chargée de chaos (D) sur une cible qui a de l'armure : elle rogne les dégâts, donc tes soins.",
-        "en": "Before Dead Magic, don't burn a Chaos-charged attack (D) on a target with Armor: it cuts the damage, so it cuts your healing."
+        "fr": "Avant Magie de mort, ne crame pas une attaque chargée par Chaos débordant (D) sur une cible qui a de l'armure : elle rogne tes soins.",
+        "en": "Before Dead Magic, don't burn an attack charged by Overflowing Chaos (D) on a target with Armor: it cuts your healing."
       }
     ],
     "builds": [
@@ -34822,8 +34792,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Planque tes pylônes (D) dans un buisson ou derrière un mur : c'est ta seule source de mana, et sans eux tu ne fais plus rien.",
-        "en": "Tuck your Pylons (D) into a bush or behind terrain: they're your only Mana source, and without them you do nothing."
+        "fr": "Planque Transfert de pylône (D) dans un buisson ou derrière un mur : c'est ta seule source de mana, et sans eux tu ne fais plus rien.",
+        "en": "Tuck Warp In Pylon (D) into a bush or behind terrain: it's your only Mana source, and without them you do nothing."
       },
       {
         "fr": "Faille instable (Z) ne fait rien toute seule : pose-la dans un couloir où l'adversaire doit passer, et fais-la détoner à l'Impulsion disruptive (A).",
@@ -37425,8 +37395,8 @@ const HEROES = [
         "en": "Critical Strike (W) resets your Basic Attack: reactivate it right after a crit, never before."
       },
       {
-        "fr": "Tes images (A) encaissent les tirs de tour et poussent les bâtiments sans vague : elles ne servent pas qu'à brouiller le ciblage.",
-        "en": "Your Images (Q) soak tower shots and push Structures without a wave: they're not just there to confuse targeting."
+        "fr": "Image miroir (A) encaisse les tirs de tour et pousse les bâtiments sans vague : elles ne servent pas qu'à brouiller le ciblage.",
+        "en": "Mirror Image (Q) soaks tower shots and pushes Structures without a wave: they're not just there to confuse targeting."
       },
       {
         "fr": "Marche du vent (E) marche dans les deux sens : c'est autant ton approche que ton escape.",
@@ -37908,16 +37878,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tu peux activer tes Propulseurs (W) en mode Siège (D) pour fuir.",
-        "en": "You can activate your Thrusters (Z) in Siege Mode (D) to escape."
+        "fr": "Tu peux activer Propulseurs (W) en Mode Siège (D) pour fuir.",
+        "en": "You can activate Thrusters (Z) in Siege Mode (D) to escape."
       },
       {
         "fr": "Décharge percutante (Z) peut cancel des sorts, mais surtout te sauver !",
         "en": "Concussive Blast (W) can cancel spells—but more importantly, it can save your life!"
       },
       {
-        "fr": "Tes mines (A) donnent de la vision et peuvent ralentir un gank.",
-        "en": "Your mines (Q) provide vision and can slow down a gank."
+        "fr": "Mines araignées (A) donnent de la vision et peuvent ralentir un gank.",
+        "en": "Spider Mines (Q) give vision and can slow down a gank."
       }
     ],
     "builds": [
@@ -40397,8 +40367,8 @@ const HEROES = [
         "en": "Ruthless Onslaught (E) is a gap-closer, not damage: it makes you Unstoppable, and targeting a Minion is also a way out."
       },
       {
-        "fr": "Roame tôt pour farmer ta viande (D), mais jamais au prix d'un objectif : ta courbe de puissance ne vaut rien si l'équipe perd la carte pendant.",
-        "en": "Roam early to farm your meat (D), but never at the cost of an objective: your power curve is worthless if the team loses the map meanwhile."
+        "fr": "Roame tôt pour farmer Viande fraîche (D), mais jamais au prix d'un objectif : ta courbe de puissance ne vaut rien sans la carte.",
+        "en": "Roam early to farm Fresh Meat (D), but never at the cost of an objective: your power curve is worthless without the map."
       }
     ],
     "builds": [
@@ -40863,8 +40833,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Esprit farouche (Z) sur une vague de serviteurs suffit à déclencher le soin de ton trait (D) : pas besoin d'un héros pour te remettre d'aplomb.",
-        "en": "Feral Spirit (W) on a Minion wave is enough to set off your trait's (D) heal: you don't need a Hero to get back up."
+        "fr": "Esprit farouche (Z) sur une vague de serviteurs suffit à déclencher le soin de Résilience loup-de-givre (D) : pas besoin d'un héros.",
+        "en": "Feral Spirit (W) on a Minion wave is enough to trigger the heal from Frostwolf Resilience (D): you don't need a Hero."
       },
       {
         "fr": "Furie-des-vents (E) n'est pas qu'un pic de dégâts : c'est ton engage et ton disengage. Ne la crame pas pour taper si tu risques de te faire aveugler.",
@@ -42979,8 +42949,8 @@ const HEROES = [
         "en": "Skip Blade Flurry (W) in a fight unless you've missed your Q: it burns more Energy than it deals damage."
       },
       {
-        "fr": "Tu n'es pas l'engage : laisse ton équipe rentrer avant de dive, et reste loin des AoE, qui cassent ton camouflage (D) avant même ton ouverture.",
-        "en": "You're not the engage: let your team go in before you dive, and stay clear of AoE, which breaks your Stealth (D) before you even open."
+        "fr": "Tu n'es pas l'engage : laisse ton équipe rentrer avant de dive, et reste loin des AoE, qui cassent Disparition (D) avant ton ouverture.",
+        "en": "You're not the engage: let your team go in before you dive, and stay clear of AoE, which breaks Vanish (D) before you open."
       }
     ],
     "builds": [
@@ -43488,8 +43458,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Tes stacks de haine (D) tombent si tu ne frappes rien quelques secondes : remonte-les sur les serviteurs avant un fight, pas à vide.",
-        "en": "Your Hatred (D) stacks drop if you hit nothing for a few seconds: stack them back up on Minions before a fight instead of engaging empty."
+        "fr": "Tes cumuls de Haine (D) tombent si tu ne frappes rien quelques secondes : remonte-les sur les serviteurs avant un fight, pas à vide.",
+        "en": "Your Hatred (D) stacks drop if you hit nothing for a few seconds: build them back on Minions before a fight, not on an empty engage."
       },
       {
         "fr": "Acrobatie (E) est ton seul disengage : la cramer pour dive une cible te laisse sans issue quand l'équipe d'en face se retourne sur toi.",
@@ -45617,8 +45587,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Ton mucus (D) donne de la vision : couvre les objectifs et les buissons.",
-        "en": "Your creep (D) grants vision: cover the objectives and the bushes."
+        "fr": "Tumeur muqueuse (D) donne de la vision : couvre les objectifs et les buissons.",
+        "en": "Creep Tumor (D) grants vision: cover the objectives and the bushes."
       },
       {
         "fr": "Chasseur-tueur (Z) est une excellente source de dégâts à distance.",
@@ -46091,11 +46061,11 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Pose tes écrans (Z) et (E) avant que les dégâts tombent, pas après : un écran en retard, c'est de l'énergie (D) que tu ne toucheras jamais.",
-        "en": "Drop your Shields (W) and (E) before the damage lands, not after: a late Shield is Energy (D) you will never get."
+        "fr": "Pose Écran personnel (Z) et Écran généré (E) avant que les dégâts tombent : un écran en retard, c'est de l'Énergie (D) jamais gagnée.",
+        "en": "Drop Personal Barrier (W) and Shield Ally (E) before the damage lands: a late Shield is Energy (D) you never gain."
       },
       {
-        "fr": "Écran personnel (Z) encaisse aussi les tirs des bâtiments : va te faire taper par un fort pour remonter ton énergie (D) avant un fight.",
+        "fr": "Écran personnel (Z) encaisse aussi les tirs des bâtiments : va te faire taper par un fort pour remonter ton Énergie (D) avant un fight.",
         "en": "Personal Barrier (W) absorbs Structure fire too: go take a few tower shots to top up your Energy (D) before a fight."
       },
       {
@@ -46628,8 +46598,8 @@ const HEROES = [
         "en": "Singularity Spike (W) first for the Slow, Basic Attacks after: that's where your real damage comes from."
       },
       {
-        "fr": "Le camouflage (D) ne te rend pas invisible, juste translucide : il faut rester immobile un instant pour disparaître vraiment.",
-        "en": "Stealth (D) does not make you Invisible, only translucent: you have to stand still a moment to truly vanish."
+        "fr": "Camouflage permanent (D) ne te rend pas invisible, juste translucide : il faut rester immobile un instant pour disparaître vraiment.",
+        "en": "Permanent Cloak (D) does not make you Invisible, only translucent: you have to stand still a moment to truly vanish."
       }
     ],
     "builds": [
