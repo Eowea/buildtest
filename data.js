@@ -366,8 +366,8 @@ const HEROES = [
         "buildCode": "[T2322131,Kaelthas]",
         "videos": [],
         "updatedAt": {
-          "fr": "",
-          "en": ""
+          "fr": "7 Septembre 2026",
+          "en": "September 7, 2026"
         },
         "talentSelections": [
           {
@@ -377,12 +377,12 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jocmbtu",
+            "primaryId": "tcxx1zr7516str",
             "alternativeIds": []
           },
           {
             "level": 7,
-            "primaryId": "tmrryr6jo6zsl2",
+            "primaryId": "tmrryr6jo3iuli",
             "alternativeIds": []
           },
           {
@@ -397,12 +397,12 @@ const HEROES = [
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jo3iuli",
+            "primaryId": "tcxx1zr7520mkg",
             "alternativeIds": []
           },
           {
             "level": 20,
-            "primaryId": "tmrryr6jowrwxu",
+            "primaryId": "tcxx1zr7521w4z",
             "alternativeIds": []
           }
         ],
@@ -504,20 +504,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmrryr6jocmbtu",
-        "level": 4,
-        "name": {
-          "fr": "Accro à la mana",
-          "en": "Mana Addict"
-        },
-        "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_manaaddict.png",
-        "description": {
-          "fr": "Indispensable pour la survie tard dans la partie.",
-          "en": "Essential for late-game survival."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmrryr6jorbvgs",
         "level": 7,
         "name": {
@@ -532,10 +518,24 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmrryr6jo3iuli",
+        "level": 7,
+        "name": {
+          "fr": "Fureur du roi-soleil",
+          "en": "Sun King's Fury"
+        },
+        "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_livingbomb_b.png",
+        "description": {
+          "fr": "Augmente considérablement les dégâts de Bombe vivante sur les cibles principales.",
+          "en": "Greatly increases Living Bomb damage on primary targets."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmrryr6jo6zsl2",
         "level": 7,
         "name": {
-          "fr": "Enchantement du Feu solaire",
+          "fr": "Enchantement du feu solaire",
           "en": "Sunfire Enchantment"
         },
         "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_arcanebarrier.png",
@@ -654,20 +654,6 @@ const HEROES = [
         "description": {
           "fr": "Obtient les effets des talents du niveau 7 et une charge de Sphères verdoyantes.",
           "en": "Gain level 7 talents, Verdant Spheres charge"
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jo3iuli",
-        "level": 16,
-        "name": {
-          "fr": "Fureur du Roi-Soleil",
-          "en": "Sun King's Fury"
-        },
-        "icon": "assets/heroes/base_spells/kaelthas/images/talents/storm_ui_icon_kaelthas_livingbomb_b.png",
-        "description": {
-          "fr": "Augmente considérablement les dégâts de Bombe vivante sur les cibles principales.",
-          "en": "Greatly increases Living Bomb damage on primary targets."
         },
         "demoYoutubeId": null
       },
@@ -2466,8 +2452,8 @@ const HEROES = [
           "en": "Recommended build"
         },
         "updatedAt": {
-          "fr": "6 Mai 2026",
-          "en": "May 6, 2026"
+          "fr": "7 Septembre 2026",
+          "en": "September 7, 2026"
         },
         "summary": {
           "fr": "Build qui passe partout, peu importe le mode de jeu.",
@@ -2487,7 +2473,7 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmrryr6jodjpjn",
+            "primaryId": "tcfx02x72133gg",
             "alternativeIds": []
           },
           {
@@ -2681,20 +2667,6 @@ const HEROES = [
         "description": {
           "fr": "Le proche Cube horadrique génère des petites potions de soin.",
           "en": "The next Horadric Cube spawns Lesser Healing Potions."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jodjpjn",
-        "level": 4,
-        "name": {
-          "fr": "Potion de bouclier",
-          "en": "Shielding Potion"
-        },
-        "icon": "assets/heroes/base_spells/deckard/images/spells/storm_ui_icon_deckard_healing_potion.png",
-        "description": {
-          "fr": "Les potions confèrent un bouclier.",
-          "en": "Potions grant a shield upon healing."
         },
         "demoYoutubeId": null
       },
@@ -5375,8 +5347,8 @@ const HEROES = [
         "buildCode": "[T2111131,LiLi]",
         "videos": [],
         "updatedAt": {
-          "fr": "14 Août 2026",
-          "en": "August 14, 2026"
+          "fr": "7 Septembre 2026",
+          "en": "September 7, 2026"
         },
         "talentSelections": [
           {
@@ -5391,7 +5363,7 @@ const HEROES = [
           },
           {
             "level": 7,
-            "primaryId": "tmp5w2lil096sa",
+            "primaryId": "tmp5w2lil07rkj",
             "alternativeIds": []
           },
           {
@@ -5425,8 +5397,8 @@ const HEROES = [
           "en": "Tank build"
         },
         "updatedAt": {
-          "fr": "14 Août 2026",
-          "en": "August 14, 2026"
+          "fr": "7 Septembre 2026",
+          "en": "September 7, 2026"
         },
         "summary": {
           "fr": "Si t'adores courir dans les sorts et faire l'appât.",
@@ -5436,7 +5408,7 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T3322131,LiLi]",
+        "buildCode": "[T3321131,LiLi]",
         "videos": [],
         "talentSelections": [
           {
@@ -8806,13 +8778,43 @@ const HEROES = [
         "buildCode": "[T1112111,Whitemane]",
         "videos": [],
         "updatedAt": {
-          "fr": "",
-          "en": ""
+          "fr": "7 Septembre 2026",
+          "en": "September 7, 2026"
         },
         "talentSelections": [
           {
             "level": 1,
-            "primaryId": "tmrryr6jo7l6vs",
+            "primaryId": "tmrryr6joatafp",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tcom8pm1h110pg",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tcom8pm1h13irv",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tcom8pm1h152as",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmrryr6joqdu17",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tcom8pm1h186tc",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmrryr6jo7szcd",
             "alternativeIds": []
           }
         ],
@@ -8939,20 +8941,6 @@ const HEROES = [
         "description": {
           "fr": "Flagellation rend du mana et augmente la durée de Zèle.",
           "en": "Quest: Hit Heroes to increase Health and Mana"
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmrryr6jo7l6vs",
-        "level": 1,
-        "name": {
-          "fr": "Martyre",
-          "en": "Martyrdom"
-        },
-        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_abilitytalent_damage.png",
-        "description": {
-          "fr": "Améliore Q.",
-          "en": "Improves Q."
         },
         "demoYoutubeId": null
       },
