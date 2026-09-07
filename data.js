@@ -94,10 +94,26 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "2 Septembre 2026",
-      "en": "September 2, 2026"
+      "fr": "7 Septembre 2026",
+      "en": "September 7, 2026"
     },
     "changelog": [
+      {
+        "date": {
+          "fr": "7 Septembre 2026",
+          "en": "September 7, 2026"
+        },
+        "items": [
+          {
+            "fr": "Les 90 héros sont en ligne : 38 nouvelles fiches, dont Fenix, Maiev, Méphisto, Nova, Orphéa, Qhira, Samuro et Zeratul pour boucler le roster.",
+            "en": "All 90 Heroes are online: 38 new pages, including Fenix, Maiev, Mephisto, Nova, Orphea, Qhira, Samuro and Zeratul to round out the roster."
+          },
+          {
+            "fr": "57 builds ajoutés, avec plusieurs choix sur 15 héros — jusqu'à trois sur Alarak, Chromie, Hanzo et Leoric.",
+            "en": "57 builds added, with several options on 15 Heroes — up to three on Alarak, Chromie, Hanzo and Leoric."
+          }
+        ]
+      },
       {
         "date": {
           "fr": "2 Septembre 2026",
