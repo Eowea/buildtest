@@ -5397,8 +5397,8 @@ const HEROES = [
           "en": "Tank build"
         },
         "updatedAt": {
-          "fr": "7 Septembre 2026",
-          "en": "September 7, 2026"
+          "fr": "14 Août 2026",
+          "en": "August 14, 2026"
         },
         "summary": {
           "fr": "Si t'adores courir dans les sorts et faire l'appât.",
@@ -5408,7 +5408,7 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T3321131,LiLi]",
+        "buildCode": "[T3322131,LiLi]",
         "videos": [],
         "talentSelections": [
           {
@@ -6997,7 +6997,9 @@ const HEROES = [
           {
             "level": 20,
             "primaryId": "tmrryr6jo02dpa",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tc8msjba522irf"
+            ]
           }
         ],
         "isNew": false
