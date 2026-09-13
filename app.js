@@ -485,7 +485,9 @@ function renderTalentTable(hero) {
     })}<div class="talent-title-card">${esc(loc(t.name))}</div></article>`).join('');
     return `<div class="talent-table-row"><div class="talent-level talent-table-level">${t('level')} ${esc(String(niveauAffiche(hero, p)))}</div><div class="talent-table-items">${cartes}</div></div>`;
   }).join('');
-  return `<section class="talent-table" id="talentTable" hidden>${lignes}</section>`;
+  // Déplié d'entrée : sans build à montrer, les talents sont le contenu principal de
+  // la section. Le bouton sert alors à replier.
+  return `<section class="talent-table" id="talentTable">${lignes}</section>`;
 }
 
 function renderBuildCode(b) {
@@ -655,7 +657,7 @@ function renderBuildSection(hero) {
     el.innerHTML = `<section class="build-soon">`
       + `<div class="build-soon-title">${t('buildSoon')}</div>`
       + `<p class="build-soon-text">${t('buildSoonText')}</p>`
-      + (tableau ? `<button class="build-soon-toggle" type="button" id="talentTableToggle" aria-expanded="false" aria-controls="talentTable">${t('showAllTalents')}</button>` : '')
+      + (tableau ? `<button class="build-soon-toggle" type="button" id="talentTableToggle" aria-expanded="true" aria-controls="talentTable">${t('hideAllTalents')}</button>` : '')
       + `</section>${tableau}`;
     bindFloatingTriggers();
     queueLayoutSync();

@@ -47664,8 +47664,12 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Les descriptions sont en place. Les conseils et les builds arrivent une fois le héros jouable, après sa sortie le 28 septembre.",
-        "en": "The descriptions are in place. Tips and builds land once the Hero is playable, after release on September 28."
+        "fr": "Xal'atath débarque sur le PTR le 14 septembre, avant sa sortie en jeu le 28.",
+        "en": "Xal'atath lands on the PTR on September 14, ahead of her live release on September 28."
+      },
+      {
+        "fr": "Les descriptions sont en place. Les conseils et les builds arrivent une fois le héros jouable.",
+        "en": "The descriptions are in place. Tips and builds land once the Hero is playable."
       }
     ],
     "builds": [],
