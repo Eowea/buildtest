@@ -47564,6 +47564,425 @@ const HEROES = [
     "forms": [],
     "codeKey": "Zuljin",
     "isNew": true
+  },
+  {
+    "id": "xalatath",
+    "enabled": true,
+    "name": {
+      "fr": "Xal'atath",
+      "en": "Xal'atath"
+    },
+    "role": "AssassinDistance",
+    "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_xalatath.png",
+    "headline": {
+      "fr": "Assassine à distance, Héraut du Néant. PTR le 14 septembre, sortie le 28 septembre.",
+      "en": "Ranged Assassin, Herald of the Void. PTR on September 14, release on September 28."
+    },
+    "gameplay": {
+      "fr": "Xal'atath tourne autour du Cœur Sombre : elle marque ses cibles, envoie le talisman exploser dessus, et devient plus dangereuse à mesure que le combat s'éternise. Icônes et builds encore en attente.",
+      "en": "Xal'atath revolves around the Cœur Sombre: she marks her targets, sends the talisman to detonate on them, and grows more dangerous the longer a fight drags on. Icons and builds still pending."
+    },
+    "spells": [
+      {
+        "key": "Trait",
+        "name": {
+          "fr": "Volée du Néant",
+          "en": "Volée du Néant"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Les attaques de base font monter l'Essence d'Âme. Au maximum, Xal'atath déchaîne une rafale de projectiles de néant sans cesser de se déplacer. Une quête en renforce la portée, la vitesse de charge et les dégâts perçants.",
+          "en": "Basic Attacks build Soul Essence. At maximum, Xal'atath unleashes a burst of void projectiles without stopping to move. A quest improves its range, its charge speed and its piercing damage."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "A",
+        "name": {
+          "fr": "Marque des Ombres",
+          "en": "Marque des Ombres"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Projette un grand orbe de néant qui marque les héros touchés. Le Cœur Sombre part alors vers le point d'impact et explose sur les héros marqués.",
+          "en": "Throws a large void orb that marks the Heroes it hits. The Cœur Sombre then travels to the impact point and detonates on the marked Heroes."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "Z",
+        "name": {
+          "fr": "Pas du Néant",
+          "en": "Pas du Néant"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Téléporte Xal'atath sur trois points formant un triangle, chaque arrêt augmentant ses dégâts d'attaque. La série s'interrompt en cours de route pour se replacer ou fuir.",
+          "en": "Teleports Xal'atath across three points forming a triangle, each stop raising her Attack Damage. The chain can be cut short on the way to reposition or escape."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "E",
+        "name": {
+          "fr": "Rituel du Cœur Sombre",
+          "en": "Rituel du Cœur Sombre"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Invoque le talisman du Cœur Sombre, qui blesse par pulsations les ennemis proches, puis part suivre un héros marqué pour exploser sur lui.",
+          "en": "Summons the Cœur Sombre talisman, which pulses damage onto nearby enemies, then sets off after a marked Hero to detonate on them."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "R1",
+        "name": {
+          "fr": "Éruption du Néant",
+          "en": "Éruption du Néant"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Canalise un orbe qui grossit, aveugle et interdit le terrain avant d'exploser sur une large zone. Lancée depuis le Cœur Sombre, elle part instantanément et déjà pleinement chargée.",
+          "en": "Channels an orb that grows, Blinds and denies ground before erupting over a wide area. Cast from the Cœur Sombre, it goes off instantly and already fully charged."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "R2",
+        "name": {
+          "fr": "Convergence du Néant",
+          "en": "Convergence du Néant"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Après une courte canalisation, ouvre un portail qui fait apparaître des sbires du néant pour submerger les ennemis proches et les ralentir. Les sbires s'épuisent avec le temps, et le portail tient jusqu'à sa destruction.",
+          "en": "After a short channel, opens a portal that spawns void Minions to swamp nearby enemies and Slow them. The Minions wear down over time, and the portal holds until it is destroyed."
+        },
+        "demoYoutubeId": ""
+      }
+    ],
+    "tips": [
+      {
+        "fr": "Les descriptions sont en place. Les conseils et les builds arrivent une fois le héros jouable, après sa sortie le 28 septembre.",
+        "en": "The descriptions are in place. Tips and builds land once the Hero is playable, after release on September 28."
+      }
+    ],
+    "builds": [],
+    "guideVideos": [],
+    "talentPool": [
+      {
+        "id": "tmtzw8rki10f4y",
+        "level": 1,
+        "name": {
+          "fr": "Noyau Ancré",
+          "en": "Noyau Ancré"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Le Cœur Sombre gagne en rayon et en durée, et ses dégâts rebondissent deux fois vers les ennemis proches.",
+          "en": "The Cœur Sombre gains radius and duration, and its damage bounces twice to nearby enemies."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkj2rqoq",
+        "level": 1,
+        "name": {
+          "fr": "Cape des Ombres",
+          "en": "Cape des Ombres"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Activer Pas du Néant accélère Xal'atath et lui confère de l'armure anti-sort, effet renouvelé à chaque téléportation.",
+          "en": "Activating Pas du Néant speeds Xal'atath up and grants her Spell Armor, refreshed on every teleport."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkk3j1yj",
+        "level": 1,
+        "name": {
+          "fr": "Marque Toxique",
+          "en": "Marque Toxique"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Marque des Ombres dure plus longtemps, ses dégâts sur la durée montent avec le maximum de points de vie de la cible, et le héros marqué perd de l'armure.",
+          "en": "Marque des Ombres lasts longer, its damage over time scales with the target's maximum Health, and the marked Hero loses Armor."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rklsx9q0",
+        "level": 4,
+        "name": {
+          "fr": "Barrière Sombre",
+          "en": "Barrière Sombre"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Chaque salve de dégâts du Cœur Sombre confère à Xal'atath un bouclier proportionnel à son maximum de points de vie, jusqu'à un plafond.",
+          "en": "Every tick of Cœur Sombre damage grants Xal'atath a Shield based on her maximum Health, up to a cap."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkm3iqw8",
+        "level": 4,
+        "name": {
+          "fr": "Acolyte du Néant",
+          "en": "Acolyte du Néant"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Terminer Pas du Néant charge entièrement Volée du Néant. La rafale suivante frappe bien plus fort et ne coûte pas de mana.",
+          "en": "Finishing Pas du Néant fully charges Volée du Néant. The next burst hits far harder and costs no Mana."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rknccszh",
+        "level": 4,
+        "name": {
+          "fr": "Pieds Froids",
+          "en": "Pieds Froids"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Marque des Ombres dure plus longtemps et ralentit les héros marqués.",
+          "en": "Marque des Ombres lasts longer and Slows the marked Heroes."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkoo12zw",
+        "level": 7,
+        "name": {
+          "fr": "Invocatrice du Néant",
+          "en": "Invocatrice du Néant"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Activer Pas du Néant invoque un sbire qui se jette sur les héros marqués et disparaît au bout d'un moment.",
+          "en": "Activating Pas du Néant summons a Minion that hunts marked Heroes and fades after a while."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkp78f1m",
+        "level": 7,
+        "name": {
+          "fr": "Adepte du Néant",
+          "en": "Adepte du Néant"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Quête : faire exploser le Cœur Sombre sur des héros marqués augmente définitivement les dégâts de Marque des Ombres, jusqu'à un plafond.",
+          "en": "Quest: detonating the Cœur Sombre on marked Heroes permanently increases Marque des Ombres' damage, up to a cap."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkqpf666",
+        "level": 7,
+        "name": {
+          "fr": "Silence de l'Agneau",
+          "en": "Silence de l'Agneau"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Pas du Néant laisse un sceau au sol qui blesse et réduit au silence les ennemis qui s'y trouvent.",
+          "en": "Pas du Néant leaves a seal on the ground that damages and Silences the enemies standing in it."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkrr3to1",
+        "level": 10,
+        "name": {
+          "fr": "Éruption du Néant",
+          "en": "Éruption du Néant"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Canalise un orbe qui grossit, aveugle et interdit le terrain avant d'exploser sur une large zone. Lancée depuis le Cœur Sombre, elle part instantanément et déjà pleinement chargée.",
+          "en": "Channels an orb that grows, Blinds and denies ground before erupting over a wide area. Cast from the Cœur Sombre, it goes off instantly and already fully charged."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkssexm7",
+        "level": 10,
+        "name": {
+          "fr": "Convergence du Néant",
+          "en": "Convergence du Néant"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Après une courte canalisation, ouvre un portail qui fait apparaître des sbires du néant pour submerger les ennemis proches et les ralentir. Les sbires s'épuisent avec le temps, et le portail tient jusqu'à sa destruction.",
+          "en": "After a short channel, opens a portal that spawns void Minions to swamp nearby enemies and Slow them. The Minions wear down over time, and the portal holds until it is destroyed."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rktzftja",
+        "level": 13,
+        "name": {
+          "fr": "Cascade Écrasante",
+          "en": "Cascade Écrasante"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Chaque projectile de Volée du Néant ralentit sa cible, effet cumulable jusqu'à un plafond.",
+          "en": "Each Volée du Néant projectile Slows its target, stacking up to a cap."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkuebhld",
+        "level": 13,
+        "name": {
+          "fr": "Protection des Cœurs Sombres",
+          "en": "Protection des Cœurs Sombres"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Le Cœur Sombre réduit au silence les ennemis pris dans son rayon, et confère de l'armure anti-sort à Xal'atath comme aux alliés qui s'y tiennent.",
+          "en": "The Cœur Sombre Silences the enemies caught in its radius, and grants Spell Armor to Xal'atath and to the allies standing inside."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkvwnoot",
+        "level": 13,
+        "name": {
+          "fr": "Murmures Implacables",
+          "en": "Murmures Implacables"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Tant que Pas du Néant est actif, la vitesse d'attaque de Xal'atath grimpe énormément.",
+          "en": "While Pas du Néant is active, Xal'atath's Attack Speed climbs enormously."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkws50bs",
+        "level": 16,
+        "name": {
+          "fr": "Attraction du Cœur Sombre",
+          "en": "Attraction du Cœur Sombre"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Chaque pulsation du Cœur Sombre ralentit un peu plus les ennemis qui y sont liés, effet cumulable qui retombe vite.",
+          "en": "Every Cœur Sombre pulse Slows the enemies tethered to it a little more, stacking but decaying fast."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkx4tknx",
+        "level": 16,
+        "name": {
+          "fr": "Résilience Marquée",
+          "en": "Résilience Marquée"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Les attaques de base portées à un héros marqué confèrent un bouclier, qui se dissipe rapidement.",
+          "en": "Basic Attacks on a marked Hero grant a Shield, which fades quickly."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkyiz6mp",
+        "level": 16,
+        "name": {
+          "fr": "Réalité Fracturée",
+          "en": "Réalité Fracturée"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Les projectiles de Volée du Néant frappent plus fort et laissent derrière eux une traînée de feu.",
+          "en": "Volée du Néant's projectiles hit harder and leave a trail of fire behind them."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkz9f4n3",
+        "level": 20,
+        "name": {
+          "fr": "Consommation du Messager",
+          "en": "Consommation du Messager"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Éruption du Néant se divise en trois orbes en orbite. L'annuler plus tôt les lance sur une trajectoire plus rapide.",
+          "en": "Éruption du Néant splits into three orbiting orbs. Cancelling it early sends them on a faster path."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rl0mdhsv",
+        "level": 20,
+        "name": {
+          "fr": "Invasion de la Faille",
+          "en": "Invasion de la Faille"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Le portail de Convergence du Néant ne s'épuise plus et entretient davantage de sbires.",
+          "en": "The Convergence du Néant portal no longer wears down and sustains more Minions."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rl1gl0bs",
+        "level": 20,
+        "name": {
+          "fr": "Orbes Duellistes",
+          "en": "Orbes Duellistes"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Marque des Ombres gagne une charge supplémentaire, avec un court délai entre deux utilisations.",
+          "en": "Marque des Ombres gains an extra charge, with a short delay between two casts."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rl2i18fv",
+        "level": 20,
+        "name": {
+          "fr": "Noyau Instable",
+          "en": "Noyau Instable"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Quand le Cœur Sombre se termine ou explose sur un héros marqué, il laisse une mare de flammes.",
+          "en": "When the Cœur Sombre ends or detonates on a marked Hero, it leaves a pool of flames."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rl3at7du",
+        "level": 20,
+        "name": {
+          "fr": "Boucle du Paradoxe",
+          "en": "Boucle du Paradoxe"
+        },
+        "icon": "assets/heroes/base_spells/kharazim/images/spells/storm_ui_icon_monk_trait1.png",
+        "description": {
+          "fr": "Après Pas du Néant, un second Pas du Néant part immédiatement dans la direction opposée, et en réactive tous les effets.",
+          "en": "After Pas du Néant, a second Pas du Néant fires at once in the opposite direction, re-triggering all its effects."
+        },
+        "demoYoutubeId": null
+      }
+    ],
+    "forms": [],
+    "codeKey": "Xalatath",
+    "isNew": true
   }
 ];
 

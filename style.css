@@ -921,6 +921,85 @@
       text-shadow: 0 0 8px var(--gold-glow);
     }
 
+    /* ── Héros sans build : annonce + tableau de tous les talents ──
+       Le bloc reprend le liseré doré de .build-summary pour rester dans la même
+       famille visuelle que la section de build qu'il remplace. */
+    .build-soon {
+      margin-bottom: 16px;
+      padding: 18px 20px;
+      border-radius: 2px;
+      border-left: 4px solid var(--gold-bright);
+      background: linear-gradient(90deg, rgba(248, 183, 0, 0.15), rgba(248, 183, 0, 0.02));
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+    .build-soon-title {
+      font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
+      font-size: 18px;
+      color: var(--gold-bright);
+      text-shadow: 0 0 8px var(--gold-glow);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+    .build-soon-text { margin: 0; color: var(--text-dim); font-size: 14px; line-height: 1.6; }
+
+    .build-soon-toggle {
+      margin-top: 14px;
+      display: inline-flex;
+      align-items: center;
+      height: 40px;
+      padding: 0 24px;
+      clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+      border: none;
+      border-bottom: 2px solid var(--blue-border);
+      background: rgba(0, 229, 255, 0.08);
+      color: var(--text-dim);
+      font-family: inherit;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all var(--t);
+    }
+    .build-soon-toggle:hover {
+      background: rgba(0, 229, 255, 0.2);
+      border-bottom-color: var(--blue-bright);
+      color: var(--text-bright);
+    }
+    .build-soon-toggle[aria-expanded="true"] {
+      background: linear-gradient(180deg, rgba(248, 183, 0, 0.1), rgba(248, 183, 0, 0.25));
+      border-bottom: 3px solid var(--gold-bright);
+      color: var(--gold-bright);
+    }
+
+    /* Une ligne par palier : la pastille de niveau à gauche, les talents à droite.
+       Les talents passent à la ligne plutôt que de déborder, il n'y a rien à faire
+       défiler horizontalement ici. */
+    .talent-table { display: grid; gap: 10px; width: 100%; min-width: 0; }
+    /* Sans cette règle, le display: grid ci-dessus l'emporte sur l'attribut hidden
+       et le tableau reste visible alors qu'il devrait être replié. */
+    .talent-table[hidden] { display: none; }
+    .talent-table-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 12px;
+      border: 1px solid var(--blue-border);
+      border-radius: var(--radius-sm);
+      background: linear-gradient(180deg, rgba(20, 28, 44, 0.6), rgba(12, 18, 28, 0.75));
+      min-width: 0;
+    }
+    .talent-table-level { flex: 0 0 auto; margin-top: 4px; }
+    .talent-table-items { display: flex; flex-wrap: wrap; gap: 10px; min-width: 0; flex: 1; }
+    .talent-table-items .talent-card { height: auto; }
+
+    @media (max-width: 640px) {
+      .talent-table-row { flex-direction: column; gap: 10px; }
+      .talent-table-level { margin-top: 0; }
+      .talent-table-items .talent-card { flex-basis: 104px; max-width: 104px; }
+    }
+
     .build-summary {
       margin-bottom: 20px;
       padding: 16px 20px;

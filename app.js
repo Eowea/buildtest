@@ -32,6 +32,10 @@
       lastUpdate: { fr: "Dernière mise à jour :", en: "Last updated:" },
       defaultBuildCodeTitle: { fr: "À COLLER DANS L'ARBRE DES TALENTS", en: "PASTE INTO TALENT TREE" },
       emptyTalents: { fr: "Aucun talent dans ce build.", en: "No talents in this build." },
+      buildSoon: { fr: "Build à venir", en: "Build coming soon" },
+      buildSoonText: { fr: "Le build arrive une fois le héros jouable. En attendant, voici tous ses talents, palier par palier.", en: "The build lands once the Hero is playable. In the meantime, here are all of its Talents, tier by tier." },
+      showAllTalents: { fr: "Voir tous les talents", en: "Show all Talents" },
+      hideAllTalents: { fr: "Masquer les talents", en: "Hide Talents" },
       gameplay: { fr: "Gameplay", en: "Gameplay" },
       tips: { fr: "Conseils", en: "Tips" },
       descUnavailable: { fr: "Description indisponible.", en: "Description unavailable." },
@@ -462,6 +466,28 @@ function renderTalentBoard(ts=[]) {
       }).join('')}</div></div></section>`; 
     }
     
+/* Tableau de tous les talents d'un héros, regroupés par palier.
+   Sert quand aucun build n'est encore posé : le visiteur voit quand même le contenu
+   du héros. Les niveaux affichés passent par niveauAffiche(), pour que les héros aux
+   paliers décalés comme Chromie montrent les leurs. Les vignettes reprennent la carte
+   de talent du plateau de build, donc les infobulles fonctionnent à l'identique. */
+function renderTalentTable(hero) {
+  const pool = (hero && hero.talentPool) || [];
+  if (!pool.length) return '';
+  const paliers = [...new Set(pool.map(t => t.level))].sort((a, b) => a - b);
+  const lignes = paliers.map(p => {
+    const cartes = pool.filter(t => t.level === p).map(t => `<article class="talent-card">${ftHTML({
+      cls: 'talent-trigger floating-trigger',
+      title: t.name,
+      desc: t.description,
+      demoId: t.demoYoutubeId || t.demoYoutubeUrl,
+      inner: `<div class="talent-icon" data-fallback="${esc(initials(loc(t.name)))}"><img src="${t.icon||svgBadge(loc(t.name))}" alt="${esc(loc(t.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`
+    })}<div class="talent-title-card">${esc(loc(t.name))}</div></article>`).join('');
+    return `<div class="talent-table-row"><div class="talent-level talent-table-level">${t('level')} ${esc(String(niveauAffiche(hero, p)))}</div><div class="talent-table-items">${cartes}</div></div>`;
+  }).join('');
+  return `<section class="talent-table" id="talentTable" hidden>${lignes}</section>`;
+}
+
 function renderBuildCode(b) {
   if (!b.buildCode) return '';
 
@@ -622,8 +648,17 @@ function renderBuildSection(hero) {
   const el = $('buildSection'); 
   if (!el) return; 
   
+  // Héros sans build : on annonce qu'il arrive, et on donne accès à tous les talents
+  // plutôt que de laisser la section vide.
   if (!hero.builds || hero.builds.length === 0) {
-    el.innerHTML = `<div class="empty-state">${t('emptyTalents')}</div>`;
+    const tableau = renderTalentTable(hero);
+    el.innerHTML = `<section class="build-soon">`
+      + `<div class="build-soon-title">${t('buildSoon')}</div>`
+      + `<p class="build-soon-text">${t('buildSoonText')}</p>`
+      + (tableau ? `<button class="build-soon-toggle" type="button" id="talentTableToggle" aria-expanded="false" aria-controls="talentTable">${t('showAllTalents')}</button>` : '')
+      + `</section>${tableau}`;
+    bindFloatingTriggers();
+    queueLayoutSync();
     return;
   }
   
@@ -758,6 +793,22 @@ function initVideoTracking() {
     if (!a) return;
     const chemin = a.dataset.videoTrack || a.dataset.ytId || 'inconnue';
     track('video/' + chemin, a.dataset.videoTitle || chemin);
+  });
+}
+
+/* Ouverture et fermeture du tableau des talents. L'écouteur est posé une fois sur le
+   document : il survit aux rendus successifs de la section de build. */
+function initTalentTable() {
+  document.addEventListener('click', e => {
+    const b = e.target.closest && e.target.closest('#talentTableToggle');
+    if (!b) return;
+    const tableau = document.getElementById('talentTable');
+    if (!tableau) return;
+    const ouvert = tableau.hidden;
+    tableau.hidden = !ouvert;
+    b.setAttribute('aria-expanded', String(ouvert));
+    b.textContent = t(ouvert ? 'hideAllTalents' : 'showAllTalents');
+    if (ouvert) queueLayoutSync();
   });
 }
 
@@ -1482,6 +1533,7 @@ els.homeBtn.addEventListener('click', (e) => {
 initAnalytics();
 initNavTracking();
 initVideoTracking();
+initTalentTable();
 restoreFromHash(); renderAll();
 
     // --- NOUVEAU : Auto-scroll au chargement si on arrive via un lien de partage ---
