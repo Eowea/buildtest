@@ -53,6 +53,13 @@ const STREAMER_CONFIG = {
   "latestVideos": [
     {
       "title": {
+        "fr": "Xal'atath dans Heroes of the Storm : Le Résumé",
+        "en": "Xal'atath in Heroes of the Storm: The Recap"
+      },
+      "youtubeId": "zKQoggyrkks"
+    },
+    {
+      "title": {
         "fr": "GUIDE COMPLET: Mine Hantée",
         "en": "COMPLETE GUIDE: Haunted Mine"
       },
@@ -71,13 +78,6 @@ const STREAMER_CONFIG = {
         "en": "Ana Grand Master Gameplay - No commentary"
       },
       "youtubeId": "Fl23LG4v-U0"
-    },
-    {
-      "title": {
-        "fr": "Dehaka Grand Master Gameplay - Analyse & Explications",
-        "en": "Dehaka Grandmaster Gameplay - Analysis & Explanations"
-      },
-      "youtubeId": "Nfp1w2JU-DQ"
     }
   ],
   "patchVideos": [
