@@ -994,12 +994,6 @@
     .talent-table-items { display: flex; flex-wrap: wrap; gap: 10px; min-width: 0; flex: 1; }
     .talent-table-items .talent-card { height: auto; }
 
-    @media (max-width: 640px) {
-      .talent-table-row { flex-direction: column; gap: 10px; }
-      .talent-table-level { margin-top: 0; }
-      .talent-table-items .talent-card { flex-basis: 104px; max-width: 104px; }
-    }
-
     .build-summary {
       margin-bottom: 20px;
       padding: 16px 20px;
