@@ -47591,8 +47591,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_trait.png",
         "description": {
-          "fr": "Les attaques de base chargent Volée du Néant. Une fois prête, elle déverse une salve d'orbes du Néant sur l'endroit visé. Quête : toucher des héros adverses la renforce à trois reprises.",
-          "en": "Basic Attacks charge Void Volley. Once ready, it pours a barrage of Void Orbs onto the targeted spot. Quest: hitting enemy Heroes strengthens it three times over."
+          "fr": "Les attaques de base chargent Volée du Néant. Une fois prête, elle déverse une salve d'orbes du Néant sur l'endroit visé. Quête : toucher des héros adverses augmente tous les dégâts du Néant de Xal'atath et renforce la Volée à trois reprises, mais ses cumuls sont perdus à la mort.",
+          "en": "Basic Attacks charge Void Volley. Once ready, it pours a barrage of Void Orbs onto the targeted spot. Quest: hitting enemy Heroes increases all of Xal'atath's Void damage and strengthens the Volley three times over, but her stacks are lost on death."
         },
         "demoYoutubeId": ""
       },
@@ -47720,7 +47720,7 @@ const HEROES = [
           "fr": "Barrière Sombre",
           "en": "Dark Barrier"
         },
-        "icon": "assets/heroes/base_spells/xalatath/images/talents/storm_ui_icon_xalatath_e_darkheartritual_b.png",
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
         "description": {
           "fr": "Chaque salve de dégâts du Cœur obscur confère à Xal'atath un bouclier proportionnel à son maximum de points de vie, jusqu'à un plafond.",
           "en": "Every instance of Dark Heart damage grants Xal'atath a Shield based on her maximum Health, up to a cap."
@@ -47734,7 +47734,7 @@ const HEROES = [
           "fr": "Acolyte du Néant",
           "en": "Void Acolyte"
         },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_trait.png",
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
         "description": {
           "fr": "Terminer Pas du Néant charge entièrement Volée du Néant. La salve suivante frappe bien plus fort et ne coûte pas de mana.",
           "en": "Completing Void Step fully charges Void Volley. The next barrage hits far harder and costs no Mana."
@@ -47748,7 +47748,7 @@ const HEROES = [
           "fr": "Pieds Froids",
           "en": "Cold Feet"
         },
-        "icon": "assets/heroes/base_spells/xalatath/images/talents/storm_ui_icon_xalatath_q_shadowmark_b.png",
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_q_shadowmark.png",
         "description": {
           "fr": "Marque des Ombres dure plus longtemps et ralentit les héros marqués.",
           "en": "Shadow Mark lasts longer and Slows the Marked Heroes."
@@ -47846,10 +47846,10 @@ const HEROES = [
           "fr": "Protection du Cœur obscur",
           "en": "Dark Heart's Protection"
         },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
+        "icon": "assets/heroes/base_spells/xalatath/images/talents/storm_ui_icon_xalatath_e_darkheartritual_b.png",
         "description": {
-          "fr": "Le Cœur obscur réduit au silence les ennemis pris dans son rayon, et confère de l'armure anti-sort à Xal'atath comme aux alliés qui s'y tiennent.",
-          "en": "The Dark Heart Silences the enemies caught in its radius, and grants Spell Armor to Xal'atath and to the allies standing inside."
+          "fr": "Invoquer le Cœur obscur réduit au silence les ennemis pris dans son rayon. Xal'atath et ses alliés gagnent de l'armure anti-sort tant qu'ils restent à l'intérieur.",
+          "en": "Casting the Dark Heart Silences the enemies caught in its radius. Xal'atath and her allies gain Spell Armor while they remain inside."
         },
         "demoYoutubeId": null
       },
@@ -47874,7 +47874,7 @@ const HEROES = [
           "fr": "Attraction du Cœur obscur",
           "en": "Pull of the Dark Heart"
         },
-        "icon": "assets/heroes/base_spells/xalatath/images/talents/storm_ui_icon_xalatath_e_darkheartritual_b.png",
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
         "description": {
           "fr": "Chaque pulsation du Cœur obscur ralentit un peu plus les ennemis qui y sont liés, effet cumulable qui retombe vite.",
           "en": "Every Dark Heart pulse Slows the enemies tethered to it a little more, stacking but decaying fast."
@@ -47888,7 +47888,7 @@ const HEROES = [
           "fr": "Résilience Marquée",
           "en": "Marked Resilience"
         },
-        "icon": "assets/heroes/base_spells/xalatath/images/talents/storm_ui_icon_xalatath_q_shadowmark_b.png",
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_q_shadowmark.png",
         "description": {
           "fr": "Les attaques de base portées à un héros marqué confèrent un bouclier, qui se dissipe rapidement.",
           "en": "Basic Attacks on a Marked Hero grant a Shield, which fades quickly."
@@ -47972,7 +47972,7 @@ const HEROES = [
           "fr": "Boucle du Paradoxe",
           "en": "Paradox Loop"
         },
-        "icon": "assets/heroes/base_spells/xalatath/images/talents/storm_ui_icon_xalatath_w_voidstep_b.png",
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
         "description": {
           "fr": "Après Pas du Néant, un second Pas du Néant part immédiatement dans la direction opposée, et tous les effets ajoutés par les talents se redéclenchent.",
           "en": "After Void Step, a second Void Step fires at once in the opposite direction, and every effect added by Talents triggers again."
