@@ -47694,8 +47694,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
         "description": {
-          "fr": "Activer Pas du Néant accélère Xal'atath et lui confère de l'armure anti-sort, effet renouvelé à chaque téléportation.",
-          "en": "Activating Void Step speeds Xal'atath up and grants her Spell Armor, refreshed on every teleport."
+          "fr": "Activer Pas du Néant augmente la vitesse de déplacement de Xal'atath et lui confère de l'armure anti-sort, effet renouvelé à chaque téléportation.",
+          "en": "Activating Void Step grants Xal'atath Movement Speed and Spell Armor, refreshed on every teleport."
         },
         "demoYoutubeId": null
       },
@@ -47904,8 +47904,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_trait.png",
         "description": {
-          "fr": "Les projectiles de Volée du Néant frappent plus fort et laissent derrière eux une traînée de feu.",
-          "en": "Void Volley's projectiles hit harder and leave a trail of fire behind them."
+          "fr": "Les projectiles de Volée du Néant frappent plus fort et laissent sur leur passage une traînée de feu qui inflige des dégâts sur la durée.",
+          "en": "Void Volley's projectiles hit harder and leave a trail of fire in their wake that deals damage over time."
         },
         "demoYoutubeId": null
       },
@@ -47974,8 +47974,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
         "description": {
-          "fr": "Quand le Cœur obscur se termine ou explose sur un héros marqué, il laisse derrière lui des flammes du Néant.",
-          "en": "When the Dark Heart ends or detonates on a Marked Hero, it leaves Void flames behind."
+          "fr": "Quand le Cœur obscur se termine ou explose sur un héros marqué, il laisse derrière lui des flammes du Néant qui infligent des dégâts sur la durée aux ennemis qui s'y attardent.",
+          "en": "When the Dark Heart ends or detonates on a Marked Hero, it leaves behind Void flames that deal damage over time to enemies lingering in them."
         },
         "demoYoutubeId": null
       }
