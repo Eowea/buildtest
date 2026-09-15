@@ -47672,16 +47672,16 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmtzw8rki10f4y",
+        "id": "tmtzw8rkk3j1yj",
         "level": 1,
         "name": {
-          "fr": "Noyau Ancré",
-          "en": "Anchored Core"
+          "fr": "Marque Toxique",
+          "en": "Toxic Mark"
         },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_q_shadowmark.png",
         "description": {
-          "fr": "Le Cœur obscur gagne en rayon et en durée, et ses dégâts rebondissent deux fois vers les ennemis proches.",
-          "en": "The Dark Heart gains radius and duration, and its damage bounces twice to nearby enemies."
+          "fr": "Marque des Ombres dure plus longtemps, ses dégâts sur la durée montent avec le maximum de points de vie de la cible, et le héros marqué perd de l'armure.",
+          "en": "Shadow Mark lasts longer, its damage over time scales with the target's maximum Health, and the Marked Hero loses Armor."
         },
         "demoYoutubeId": null
       },
@@ -47700,44 +47700,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmtzw8rkk3j1yj",
+        "id": "tmtzw8rki10f4y",
         "level": 1,
         "name": {
-          "fr": "Marque Toxique",
-          "en": "Toxic Mark"
-        },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_q_shadowmark.png",
-        "description": {
-          "fr": "Marque des Ombres dure plus longtemps, ses dégâts sur la durée montent avec le maximum de points de vie de la cible, et le héros marqué perd de l'armure.",
-          "en": "Shadow Mark lasts longer, its damage over time scales with the target's maximum Health, and the Marked Hero loses Armor."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmtzw8rklsx9q0",
-        "level": 4,
-        "name": {
-          "fr": "Barrière Sombre",
-          "en": "Dark Barrier"
+          "fr": "Noyau Ancré",
+          "en": "Anchored Core"
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
         "description": {
-          "fr": "Chaque salve de dégâts du Cœur obscur confère à Xal'atath un bouclier proportionnel à son maximum de points de vie, jusqu'à un plafond.",
-          "en": "Every instance of Dark Heart damage grants Xal'atath a Shield based on her maximum Health, up to a cap."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmtzw8rkm3iqw8",
-        "level": 4,
-        "name": {
-          "fr": "Acolyte du Néant",
-          "en": "Void Acolyte"
-        },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
-        "description": {
-          "fr": "Terminer Pas du Néant charge entièrement Volée du Néant. La salve suivante frappe bien plus fort et ne coûte pas de mana.",
-          "en": "Completing Void Step fully charges Void Volley. The next barrage hits far harder and costs no Mana."
+          "fr": "Le Cœur obscur gagne en rayon et en durée, et ses dégâts rebondissent deux fois vers les ennemis proches.",
+          "en": "The Dark Heart gains radius and duration, and its damage bounces twice to nearby enemies."
         },
         "demoYoutubeId": null
       },
@@ -47756,16 +47728,30 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmtzw8rkoo12zw",
-        "level": 7,
+        "id": "tmtzw8rkm3iqw8",
+        "level": 4,
         "name": {
-          "fr": "Invocatrice du Néant",
-          "en": "Void Summoner"
+          "fr": "Acolyte du Néant",
+          "en": "Void Acolyte"
         },
-        "icon": "assets/heroes/base_spells/xalatath/images/talents/storm_ui_icon_xalatath_w_voidstep_b.png",
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
         "description": {
-          "fr": "Activer Pas du Néant invoque un sbire du Néant, attiré par les héros marqués, qui s'épuise avec le temps.",
-          "en": "Activating Void Step summons a Void Minion, drawn to Marked Heroes, that wears down over time."
+          "fr": "Terminer Pas du Néant charge entièrement Volée du Néant. La salve suivante frappe bien plus fort et ne coûte pas de mana.",
+          "en": "Completing Void Step fully charges Void Volley. The next barrage hits far harder and costs no Mana."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rklsx9q0",
+        "level": 4,
+        "name": {
+          "fr": "Barrière Sombre",
+          "en": "Dark Barrier"
+        },
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
+        "description": {
+          "fr": "Chaque salve de dégâts du Cœur obscur confère à Xal'atath un bouclier proportionnel à son maximum de points de vie, jusqu'à un plafond.",
+          "en": "Every instance of Dark Heart damage grants Xal'atath a Shield based on her maximum Health, up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -47798,6 +47784,20 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmtzw8rkoo12zw",
+        "level": 7,
+        "name": {
+          "fr": "Invocatrice du Néant",
+          "en": "Void Summoner"
+        },
+        "icon": "assets/heroes/base_spells/xalatath/images/talents/storm_ui_icon_xalatath_w_voidstep_b.png",
+        "description": {
+          "fr": "Activer Pas du Néant invoque un sbire du Néant, attiré par les héros marqués, qui s'épuise avec le temps.",
+          "en": "Activating Void Step summons a Void Minion, drawn to Marked Heroes, that wears down over time."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmtzw8rkrr3to1",
         "level": 10,
         "name": {
@@ -47826,16 +47826,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmtzw8rktzftja",
+        "id": "tmtzw8rkvwnoot",
         "level": 13,
         "name": {
-          "fr": "Cascade Écrasante",
-          "en": "Crushing Cascade"
+          "fr": "Murmures Implacables",
+          "en": "Relentless Whispers"
         },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_trait.png",
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
         "description": {
-          "fr": "Chaque projectile de Volée du Néant ralentit sa cible, effet cumulable jusqu'à un plafond.",
-          "en": "Each Void Volley projectile Slows its target, stacking up to a cap."
+          "fr": "Tant que Pas du Néant est actif, la vitesse d'attaque de Xal'atath grimpe énormément.",
+          "en": "While Void Step is active, Xal'atath's Attack Speed climbs enormously."
         },
         "demoYoutubeId": null
       },
@@ -47854,30 +47854,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmtzw8rkvwnoot",
+        "id": "tmtzw8rktzftja",
         "level": 13,
         "name": {
-          "fr": "Murmures Implacables",
-          "en": "Relentless Whispers"
+          "fr": "Cascade Écrasante",
+          "en": "Crushing Cascade"
         },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_trait.png",
         "description": {
-          "fr": "Tant que Pas du Néant est actif, la vitesse d'attaque de Xal'atath grimpe énormément.",
-          "en": "While Void Step is active, Xal'atath's Attack Speed climbs enormously."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmtzw8rkws50bs",
-        "level": 16,
-        "name": {
-          "fr": "Attraction du Cœur obscur",
-          "en": "Pull of the Dark Heart"
-        },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
-        "description": {
-          "fr": "Chaque pulsation du Cœur obscur ralentit un peu plus les ennemis qui y sont liés, effet cumulable qui retombe vite.",
-          "en": "Every Dark Heart pulse Slows the enemies tethered to it a little more, stacking but decaying fast."
+          "fr": "Chaque projectile de Volée du Néant ralentit sa cible, effet cumulable jusqu'à un plafond.",
+          "en": "Each Void Volley projectile Slows its target, stacking up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -47892,6 +47878,20 @@ const HEROES = [
         "description": {
           "fr": "Les attaques de base portées à un héros marqué confèrent un bouclier, qui se dissipe rapidement.",
           "en": "Basic Attacks on a Marked Hero grant a Shield, which fades quickly."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkws50bs",
+        "level": 16,
+        "name": {
+          "fr": "Attraction du Cœur obscur",
+          "en": "Pull of the Dark Heart"
+        },
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
+        "description": {
+          "fr": "Chaque pulsation du Cœur obscur ralentit un peu plus les ennemis qui y sont liés, effet cumulable qui retombe vite.",
+          "en": "Every Dark Heart pulse Slows the enemies tethered to it a little more, stacking but decaying fast."
         },
         "demoYoutubeId": null
       },
@@ -47952,20 +47952,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmtzw8rl2i18fv",
-        "level": 20,
-        "name": {
-          "fr": "Noyau Instable",
-          "en": "Unstable Core"
-        },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
-        "description": {
-          "fr": "Quand le Cœur obscur se termine ou explose sur un héros marqué, il laisse derrière lui des flammes du Néant.",
-          "en": "When the Dark Heart ends or detonates on a Marked Hero, it leaves Void flames behind."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmtzw8rl3at7du",
         "level": 20,
         "name": {
@@ -47976,6 +47962,20 @@ const HEROES = [
         "description": {
           "fr": "Après Pas du Néant, un second Pas du Néant part immédiatement dans la direction opposée, et tous les effets ajoutés par les talents se redéclenchent.",
           "en": "After Void Step, a second Void Step fires at once in the opposite direction, and every effect added by Talents triggers again."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rl2i18fv",
+        "level": 20,
+        "name": {
+          "fr": "Noyau Instable",
+          "en": "Unstable Core"
+        },
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
+        "description": {
+          "fr": "Quand le Cœur obscur se termine ou explose sur un héros marqué, il laisse derrière lui des flammes du Néant.",
+          "en": "When the Dark Heart ends or detonates on a Marked Hero, it leaves Void flames behind."
         },
         "demoYoutubeId": null
       }
