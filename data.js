@@ -53,6 +53,13 @@ const STREAMER_CONFIG = {
   "latestVideos": [
     {
       "title": {
+        "fr": "Présentation de Xal'atath - Heroes of the Storm",
+        "en": "Xal'atath Overview - Heroes of the Storm"
+      },
+      "youtubeId": "n6pxfcxrXEA"
+    },
+    {
+      "title": {
         "fr": "Xal'atath dans Heroes of the Storm : Le Résumé",
         "en": "Xal'atath in Heroes of the Storm: The Recap"
       },
@@ -71,13 +78,6 @@ const STREAMER_CONFIG = {
         "en": "Slapathur Master Gameplay - No commentary"
       },
       "youtubeId": "sNeMU-aHYQY"
-    },
-    {
-      "title": {
-        "fr": "Ana Grand Master Gameplay - Aucun commentaire",
-        "en": "Ana Grand Master Gameplay - No commentary"
-      },
-      "youtubeId": "Fl23LG4v-U0"
     }
   ],
   "patchVideos": [
