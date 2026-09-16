@@ -15708,8 +15708,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_aspect_of_death.png",
         "description": {
-          "fr": "Aile de mort porte des plaques d'armure qui lui confèrent chacune de l'armure. Il en perd une à chaque tranche de points de vie entamée, et ne les regagne qu'en vol. Il est en permanence insensible aux effets de contrôle et frappe plus fort les héros, mais aucun effet allié ne l'atteint.",
-          "en": "Deathwing wears Armor Plates, each granting him Armor. He sheds one for every chunk of Health lost, and only regains them while flying. He is permanently Unstoppable and hits Heroes harder, but no allied effect can reach him."
+          "fr": "Aile de mort porte des plaques d'armure qui lui confèrent chacune de l'armure. Il en perd une à chaque tranche de points de vie entamée, et ne les regagne qu'en atterrissant de Vol draconique, d'autant plus qu'il lui reste de points de vie à ce moment-là. Il est en permanence insensible aux effets de contrôle et frappe plus fort les héros, mais aucun effet allié ne l'atteint.",
+          "en": "Deathwing wears armor plates, each granting him Armor. He sheds one every time a slice of his Health is gone, and only wins them back on landing from Dragonflight, the more so the more Health he has left at that moment. He is permanently Unstoppable and hits Heroes harder, but no allied effect can reach him."
         },
         "demoYoutubeId": ""
       },
@@ -15839,8 +15839,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_cataclysm.png",
         "description": {
-          "fr": "Aile de mort s'envole après un temps de préparation, blesse les ennemis sur son passage et laisse derrière lui une terre brûlée qui continue de les consumer. Quête : toucher des héros avec Flamme de la fournaise et faire des victimes. Récompense mythique : la capacité s'en trouve durablement renforcée.",
-          "en": "Deathwing takes off after a wind-up, damaging the enemies in his path and leaving scorched earth that keeps burning them. Quest: hit Heroes with Molten Flame and earn Takedowns. Mythic reward: the Ability is permanently empowered."
+          "fr": "Aile de mort s'envole après un temps de préparation, blesse les ennemis sur son passage et laisse derrière lui une terre brûlée qui continue de les consumer. Quête : toucher des héros avec Flamme de la fournaise et faire des victimes. Récompense mythique : la terre brûlée devient dévastatrice contre les bâtiments.",
+          "en": "Deathwing takes off after a wind-up, damaging the enemies in his path and leaving scorched earth behind that keeps consuming them. Quest: hit Heroes with Molten Flame and score Takedowns. Mythic reward: the scorched earth becomes devastating against Structures."
         },
         "demoYoutubeId": "",
         "form": [
@@ -15999,8 +15999,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/talents/storm_ui_icon_deathwing_heat_wave.png",
         "description": {
-          "fr": "En Destructeur, toucher un héros avec Incinération l'entoure d'une aura brûlante, cumulable. En Brise-monde, la déflagration d'Explosion de lave frappe plus fort.",
-          "en": "As the Destroyer, hitting a Hero with Incinerate wraps him in a burning aura that stacks. As the World Breaker, Lava Burst's blast hits harder."
+          "fr": "En Destructeur, toucher un héros avec Incinération entoure Aile de mort d'une aura brûlante quelques secondes, cumulable. En Brise-monde, la déflagration d'Explosion de lave frappe bien plus fort.",
+          "en": "As Destroyer, hitting a Hero with Incinerate wraps Deathwing in a burning aura for a few seconds, stacking. As World Breaker, Lava Burst's blast hits far harder."
         },
         "demoYoutubeId": null
       },
@@ -16069,8 +16069,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/deathwing/images/spells/storm_ui_icon_deathwing_cataclysm.png",
         "description": {
-          "fr": "Détruire un fort ou un bastion adverse remet Cataclysme à disposition, et sa terre brûlée consume plus vite.",
-          "en": "Destroying an enemy Fort or Keep makes Cataclysm available again, and its scorched earth burns faster."
+          "fr": "Détruire un fort ou un bastion adverse remet Cataclysme à disposition, et sa terre brûlée brûle bien plus fort.",
+          "en": "Destroying an enemy Fort or Keep puts Cataclysm back up, and its scorched earth burns far harder."
         },
         "demoYoutubeId": null
       },
