@@ -113,10 +113,6 @@ const STREAMER_CONFIG = {
             "en": "Under every build, a link unfolds all of the Hero's Talents: the board extends and shows the other picks at each tier."
           },
           {
-            "fr": "Descriptions de talents et de sorts reprises sur une grande partie du roster, dans les deux langues, relues une à une contre les textes du jeu.",
-            "en": "Talent and Ability descriptions reworked across a large part of the roster, in both languages, each checked one by one against the game's own text."
-          },
-          {
             "fr": "Cinq héros portent enfin leur nom français officiel : Fénix, Léoric, Orphéa, Tyraël et Aile de mort.",
             "en": "Five Heroes finally carry their official French name: Fénix, Léoric, Orphéa, Tyraël and Aile de mort."
           },
