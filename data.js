@@ -10953,7 +10953,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Alarak",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "anubarak",
@@ -14592,7 +14592,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Chen",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "chogall",
@@ -15671,7 +15671,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Chromie",
-    "isNew": true,
+    "isNew": false,
     "talentLevels": [
       1,
       2,
@@ -16786,7 +16786,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Dehaka",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "diablo",
@@ -17876,7 +17876,7 @@ const HEROES = [
       }
     ],
     "codeKey": "DVa",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "etc",
@@ -18916,7 +18916,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Falstad",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "fenix",
@@ -19404,7 +19404,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Fenix",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "gall",
@@ -20938,7 +20938,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Gazlowe",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "genji",
@@ -21472,7 +21472,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Genji",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "greymane",
@@ -22526,7 +22526,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Guldan",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "hanzo",
@@ -23120,7 +23120,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Hanzo",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "hogger",
@@ -23594,7 +23594,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Hogger",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "illidan",
@@ -24068,7 +24068,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Illidan",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "imperius",
@@ -26033,7 +26033,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Junkrat",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "kelthuzad",
@@ -27114,7 +27114,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Kerrigan",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "leoric",
@@ -27708,7 +27708,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Leoric",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "liming",
@@ -28767,7 +28767,7 @@ const HEROES = [
       }
     ],
     "codeKey": "LostVikings",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "lunara",
@@ -29296,7 +29296,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Lunara",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "maiev",
@@ -29756,7 +29756,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Maiev",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "malganis",
@@ -31211,7 +31211,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Medivh",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "mei",
@@ -32224,7 +32224,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Mephisto",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "muradin",
@@ -33177,7 +33177,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Murky",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "nazeebo",
@@ -34210,7 +34210,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Nova",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "orphea",
@@ -34684,7 +34684,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Orphea",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "probius",
@@ -35171,7 +35171,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Probius",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "qhira",
@@ -35645,7 +35645,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Qhira",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "ragnaros",
@@ -37296,7 +37296,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Rexxar",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "samuro",
@@ -37770,7 +37770,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Samuro",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "sgthammer",
@@ -39730,7 +39730,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Sylvanas",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "tassadar",
@@ -40738,7 +40738,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "TheButcher",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "thrall",
@@ -41286,7 +41286,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Thrall",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "tracer",
@@ -43363,7 +43363,7 @@ const HEROES = [
       }
     ],
     "codeKey": "Valeera",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "valla",
@@ -44458,7 +44458,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Varian",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "xul",
@@ -45018,7 +45018,7 @@ const HEROES = [
       "fr": "20 Août 2026",
       "en": "August 20, 2026"
     },
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "yrel",
@@ -45492,7 +45492,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Yrel",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "zagara",
@@ -46482,7 +46482,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Zarya",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "zeratul",
@@ -47029,7 +47029,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Zeratul",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "zuljin",
@@ -47563,7 +47563,7 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Zuljin",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "xalatath",
