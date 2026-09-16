@@ -471,7 +471,7 @@ function renderTalentBoard(ts=[]) {
    du héros. Les niveaux affichés passent par niveauAffiche(), pour que les héros aux
    paliers décalés comme Chromie montrent les leurs. Les vignettes reprennent la carte
    de talent du plateau de build, donc les infobulles fonctionnent à l'identique. */
-function renderTalentTable(hero) {
+function renderTalentTable(hero, ouvert) {
   const pool = (hero && hero.talentPool) || [];
   if (!pool.length) return '';
   const paliers = [...new Set(pool.map(t => t.level))].sort((a, b) => a - b);
@@ -485,9 +485,9 @@ function renderTalentTable(hero) {
     })}<div class="talent-title-card">${esc(loc(t.name))}</div></article>`).join('');
     return `<div class="talent-table-row"><div class="talent-level talent-table-level">${t('level')} ${esc(String(niveauAffiche(hero, p)))}</div><div class="talent-table-items">${cartes}</div></div>`;
   }).join('');
-  // Déplié d'entrée : sans build à montrer, les talents sont le contenu principal de
-  // la section. Le bouton sert alors à replier.
-  return `<section class="talent-table" id="talentTable">${lignes}</section>`;
+  // Déplié d'entrée seulement quand il n'y a pas de build à montrer : les talents sont
+  // alors le contenu principal de la section. Ailleurs il reste replié, en retrait.
+  return `<section class="talent-table" id="talentTable"${ouvert ? '' : ' hidden'}>${lignes}</section>`;
 }
 
 function renderBuildCode(b) {
@@ -653,7 +653,7 @@ function renderBuildSection(hero) {
   // Héros sans build : on annonce qu'il arrive, et on donne accès à tous les talents
   // plutôt que de laisser la section vide.
   if (!hero.builds || hero.builds.length === 0) {
-    const tableau = renderTalentTable(hero);
+    const tableau = renderTalentTable(hero, true);
     el.innerHTML = `<section class="build-soon">`
       + `<div class="build-soon-title">${t('buildSoon')}</div>`
       + `<p class="build-soon-text">${t('buildSoonText')}</p>`
@@ -688,7 +688,14 @@ const tabsHtml = sortedBuildIndices.map(i => {
     ? `<div class="build-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> ${t('lastUpdate')} ${esc(loc(b.updatedAt))}</div>` 
     : '';
   
-  el.innerHTML=`<div class="build-tabs">${tabsHtml}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(resolveBuildTalents(hero,b))}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
+  // Accès replié à tous les talents du héros, sous le build : un lien discret, pour ne
+  // pas concurrencer le build qui reste le contenu principal de la page.
+  const tableauTalents = renderTalentTable(hero, false);
+  const lienTalents = tableauTalents
+    ? `<button class="talent-table-link" type="button" id="talentTableToggle" aria-expanded="false" aria-controls="talentTable">${t('showAllTalents')}</button>${tableauTalents}`
+    : '';
+
+  el.innerHTML=`<div class="build-tabs">${tabsHtml}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(resolveBuildTalents(hero,b))}${renderBuildCode(b)}${lienTalents}${renderBuildVideos(hero,b)}`;
   // Le build qu'on vient d'afficher est désormais vu : son badge disparaîtra au prochain
   // rendu. Le marquage est différé pour qu'il reste visible sur celui-ci.
   if (b.isNew) setTimeout(() => markBuildSeen(hero.id, b), 0);

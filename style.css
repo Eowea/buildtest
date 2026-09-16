@@ -976,6 +976,28 @@
     /* Une ligne par palier : la pastille de niveau à gauche, les talents à droite.
        Les talents passent à la ligne plutôt que de déborder, il n'y a rien à faire
        défiler horizontalement ici. */
+    /* Accès aux talents depuis une fiche qui a déjà un build : volontairement effacé.
+       Pas de fond, pas de cadre, une taille inférieure au reste — il se remarque quand
+       on le cherche, sans tirer l'œil au détriment du build. */
+    .talent-table-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin: 4px 0 16px;
+      padding: 4px 0;
+      border: none;
+      background: none;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 12px;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      transition: color var(--t);
+    }
+    .talent-table-link::before { content: "+"; font-size: 13px; line-height: 1; }
+    .talent-table-link[aria-expanded="true"]::before { content: "\2212"; }
+    .talent-table-link:hover { color: var(--blue-bright); }
+
     .talent-table { display: grid; gap: 10px; width: 100%; min-width: 0; }
     /* Sans cette règle, le display: grid ci-dessus l'emporte sur l'attribut hidden
        et le tableau reste visible alors qu'il devrait être replié. */
