@@ -94,10 +94,42 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "7 Septembre 2026",
-      "en": "September 7, 2026"
+      "fr": "16 Septembre 2026",
+      "en": "September 16, 2026"
     },
     "changelog": [
+      {
+        "date": {
+          "fr": "16 Septembre 2026",
+          "en": "September 16, 2026"
+        },
+        "items": [
+          {
+            "fr": "Xal'atath est en ligne : tous ses talents sont consultables dès maintenant, son build arrivera une fois l'héroïne jouable.",
+            "en": "Xal'atath is online: all her Talents are already there to browse, her build will follow once she is playable."
+          },
+          {
+            "fr": "Sous chaque build, un lien déplie tous les talents du héros : le plateau s'allonge et montre les autres choix de chaque palier.",
+            "en": "Under every build, a link unfolds all of the Hero's Talents: the board extends and shows the other picks at each tier."
+          },
+          {
+            "fr": "Descriptions de talents et de sorts reprises sur une grande partie du roster, dans les deux langues, relues une à une contre les textes du jeu.",
+            "en": "Talent and Ability descriptions reworked across a large part of the roster, in both languages, each checked one by one against the game's own text."
+          },
+          {
+            "fr": "Cinq héros portent enfin leur nom français officiel : Fénix, Léoric, Orphéa, Tyraël et Aile de mort.",
+            "en": "Five Heroes finally carry their official French name: Fénix, Léoric, Orphéa, Tyraël and Aile de mort."
+          },
+          {
+            "fr": "La capacité (E) d'Anduin s'appelait Châtiment, qui est le nom de celle de Tyraël : c'est Châtier.",
+            "en": "French version: Anduin's (E) was named after Tyrael's Ability; it now reads Chastise, as in the game."
+          },
+          {
+            "fr": "Six talents affichaient l'icône d'une autre capacité, chez Kael'thas, Tyrande, Ana et Sgt. Marteau : corrigé.",
+            "en": "Six Talents were showing another Ability's icon, on Kael'thas, Tyrande, Ana and Sgt. Hammer: fixed."
+          }
+        ]
+      },
       {
         "date": {
           "fr": "7 Septembre 2026",
