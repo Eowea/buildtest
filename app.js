@@ -440,16 +440,39 @@ function resolveBuildTalents(hero, build) {
       const primary = hero.talentPool.find(p => p.id === sel.primaryId);
       if (!primary) return null;
       const alternatives = (sel.alternativeIds || []).map(id => hero.talentPool.find(p => p.id === id)).filter(Boolean);
-      return { ...primary, level: niveauAffiche(hero, primary.level), alternatives };
+      // niveauBrut garde le palier réel : level est écrasé par le niveau d'affichage,
+      // or c'est le palier réel qui permet de retrouver les autres talents du même cran.
+      return { ...primary, level: niveauAffiche(hero, primary.level), niveauBrut: primary.level, alternatives };
     }).filter(Boolean);
   }
   // Ancien format (rétrocompatibilité) : les talents sont écrits en entier dans le build.
   return Array.isArray(build.talents) ? build.talents : [];
 }
-function renderTalentBoard(ts=[]) { 
-      if(!ts.length) return `<div class="empty-state">${t('emptyTalents')}</div>`; 
-      
-      return `<section class="talent-board-wrap"><div class="talent-board-scroller"><div class="talent-board-track">${ts.map(tData => {
+/* Une carte de talent, telle qu'elle apparaît sur le plateau.
+   `niveau` à null pour les talents dépliés sous le build : la pastille du haut de
+   colonne vaut déjà pour toute la colonne, la répéter ne ferait que du bruit. */
+function carteTalent(tal, niveau, altHtml = '') {
+  return `<article class="talent-card">`
+    + (niveau == null ? '' : `<div class="talent-level">${t('level')} ${esc(String(niveau))}</div>`)
+    + ftHTML({
+      cls: 'talent-trigger floating-trigger',
+      title: tal.name,
+      desc: tal.description,
+      demoId: tal.demoYoutubeId || tal.demoYoutubeUrl,
+      inner: `<div class="talent-icon" data-fallback="${esc(initials(loc(tal.name)))}"><img src="${tal.icon||svgBadge(loc(tal.name))}" alt="${esc(loc(tal.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`
+    })
+    + `<div class="talent-title-card">${esc(loc(tal.name))}</div>${altHtml}</article>`;
+}
+
+/* Le plateau du build : une colonne par palier, le talent retenu en tête.
+   Chaque colonne porte aussi les autres talents de son palier, masqués jusqu'à ce
+   qu'on déplie — le plateau s'allonge alors vers le bas sans changer de largeur,
+   ce qui laisse intacte la logique de centrage de syncTalentBoards(). */
+function renderTalentBoard(hero, ts=[]) {
+      if(!ts.length) return `<div class="empty-state">${t('emptyTalents')}</div>`;
+      const pool = (hero && hero.talentPool) || [];
+
+      return `<section class="talent-board-wrap" id="talentBoard"><div class="talent-board-scroller"><div class="talent-board-track">${ts.map(tData => {
         let altHtml = '';
         if (tData.alternatives && tData.alternatives.length > 0) {
           const alts = tData.alternatives.slice(0, 3).map(alt => ftHTML({
@@ -462,32 +485,31 @@ function renderTalentBoard(ts=[]) {
           altHtml = `<div class="talent-alternatives"><div class="talent-alternatives-label">${t('optionalTalents')}</div>${alts}</div>`;
         }
 
-        return `<article class="talent-card"><div class="talent-level">${t('level')} ${esc(String(tData.level))}</div>${ftHTML({cls:'talent-trigger floating-trigger',title:tData.name,desc:tData.description,demoId:tData.demoYoutubeId||tData.demoYoutubeUrl,inner:`<div class="talent-icon" data-fallback="${esc(initials(loc(tData.name)))}"><img src="${tData.icon||svgBadge(loc(tData.name))}" alt="${esc(loc(tData.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`})}<div class="talent-title-card">${esc(loc(tData.name))}</div>${altHtml}</article>`;
-      }).join('')}</div></div></section>`; 
+        const tete = carteTalent(tData, tData.level, altHtml);
+        // Les autres talents du même palier, celui du build excepté.
+        const palier = tData.niveauBrut != null ? tData.niveauBrut : tData.level;
+        const autres = pool.filter(p => p.level === palier && p.id !== tData.id)
+          .map(p => carteTalent(p, null)).join('');
+        return `<div class="talent-column">${tete}`
+          + (autres ? `<div class="talent-column-extra">${autres}</div>` : '')
+          + `</div>`;
+      }).join('')}</div></div></section>`;
     }
-    
-/* Tableau de tous les talents d'un héros, regroupés par palier.
-   Sert quand aucun build n'est encore posé : le visiteur voit quand même le contenu
-   du héros. Les niveaux affichés passent par niveauAffiche(), pour que les héros aux
-   paliers décalés comme Chromie montrent les leurs. Les vignettes reprennent la carte
-   de talent du plateau de build, donc les infobulles fonctionnent à l'identique. */
-function renderTalentTable(hero, ouvert) {
+
+/* Le même plateau, pour un héros qui n'a pas encore de build : faute de talent retenu,
+   la colonne est coiffée de sa seule pastille de palier et tous ses talents sont
+   dessous. Toujours déplié — ici les talents sont le contenu principal de la page. */
+function renderTalentTable(hero) {
   const pool = (hero && hero.talentPool) || [];
   if (!pool.length) return '';
-  const paliers = [...new Set(pool.map(t => t.level))].sort((a, b) => a - b);
-  const lignes = paliers.map(p => {
-    const cartes = pool.filter(t => t.level === p).map(t => `<article class="talent-card">${ftHTML({
-      cls: 'talent-trigger floating-trigger',
-      title: t.name,
-      desc: t.description,
-      demoId: t.demoYoutubeId || t.demoYoutubeUrl,
-      inner: `<div class="talent-icon" data-fallback="${esc(initials(loc(t.name)))}"><img src="${t.icon||svgBadge(loc(t.name))}" alt="${esc(loc(t.name))}" loading="lazy" onerror="this.parentNode.classList.add('fallback');this.remove();" /></div>`
-    })}<div class="talent-title-card">${esc(loc(t.name))}</div></article>`).join('');
-    return `<div class="talent-table-row"><div class="talent-level talent-table-level">${t('level')} ${esc(String(niveauAffiche(hero, p)))}</div><div class="talent-table-items">${cartes}</div></div>`;
+  const paliers = [...new Set(pool.map(x => x.level))].sort((a, b) => a - b);
+  const colonnes = paliers.map(p => {
+    const cartes = pool.filter(x => x.level === p).map(tal => carteTalent(tal, null)).join('');
+    return `<div class="talent-column">`
+      + `<div class="talent-level talent-column-tete">${t('level')} ${esc(String(niveauAffiche(hero, p)))}</div>`
+      + `<div class="talent-column-extra">${cartes}</div></div>`;
   }).join('');
-  // Déplié d'entrée seulement quand il n'y a pas de build à montrer : les talents sont
-  // alors le contenu principal de la section. Ailleurs il reste replié, en retrait.
-  return `<section class="talent-table" id="talentTable"${ouvert ? '' : ' hidden'}>${lignes}</section>`;
+  return `<section class="talent-board-wrap talents-ouverts" id="talentBoard"><div class="talent-board-scroller"><div class="talent-board-track">${colonnes}</div></div></section>`;
 }
 
 function renderBuildCode(b) {
@@ -653,11 +675,11 @@ function renderBuildSection(hero) {
   // Héros sans build : on annonce qu'il arrive, et on donne accès à tous les talents
   // plutôt que de laisser la section vide.
   if (!hero.builds || hero.builds.length === 0) {
-    const tableau = renderTalentTable(hero, true);
+    const tableau = renderTalentTable(hero);
     el.innerHTML = `<section class="build-soon">`
       + `<div class="build-soon-title">${t('buildSoon')}</div>`
       + `<p class="build-soon-text">${t('buildSoonText')}</p>`
-      + (tableau ? `<button class="build-soon-toggle" type="button" id="talentTableToggle" aria-expanded="true" aria-controls="talentTable">${t('hideAllTalents')}</button>` : '')
+      + (tableau ? `<button class="build-soon-toggle" type="button" id="talentTableToggle" aria-expanded="true" aria-controls="talentBoard">${t('hideAllTalents')}</button>` : '')
       + `</section>${tableau}`;
     bindFloatingTriggers();
     queueLayoutSync();
@@ -688,14 +710,15 @@ const tabsHtml = sortedBuildIndices.map(i => {
     ? `<div class="build-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> ${t('lastUpdate')} ${esc(loc(b.updatedAt))}</div>` 
     : '';
   
-  // Accès replié à tous les talents du héros, sous le build : un lien discret, pour ne
-  // pas concurrencer le build qui reste le contenu principal de la page.
-  const tableauTalents = renderTalentTable(hero, false);
-  const lienTalents = tableauTalents
-    ? `<button class="talent-table-link" type="button" id="talentTableToggle" aria-expanded="false" aria-controls="talentTable">${t('showAllTalents')}</button>${tableauTalents}`
+  // Lien discret posé au-dessus du plateau : il reste en place pendant que les colonnes
+  // s'allongent sous lui, sans que le bouton se dérobe sous le curseur au moment du clic.
+  const talents = resolveBuildTalents(hero, b);
+  const aDesTalentsEnPlus = (hero.talentPool || []).length > talents.length;
+  const lienTalents = aDesTalentsEnPlus
+    ? `<button class="talent-table-link" type="button" id="talentTableToggle" aria-expanded="false" aria-controls="talentBoard">${t('showAllTalents')}</button>`
     : '';
 
-  el.innerHTML=`<div class="build-tabs">${tabsHtml}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${renderTalentBoard(resolveBuildTalents(hero,b))}${renderBuildCode(b)}${lienTalents}${renderBuildVideos(hero,b)}`;
+  el.innerHTML=`<div class="build-tabs">${tabsHtml}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${lienTalents}${renderTalentBoard(hero,talents)}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
   // Le build qu'on vient d'afficher est désormais vu : son badge disparaîtra au prochain
   // rendu. Le marquage est différé pour qu'il reste visible sur celui-ci.
   if (b.isNew) setTimeout(() => markBuildSeen(hero.id, b), 0);
@@ -811,10 +834,12 @@ function initTalentTable() {
   document.addEventListener('click', e => {
     const b = e.target.closest && e.target.closest('#talentTableToggle');
     if (!b) return;
-    const tableau = document.getElementById('talentTable');
-    if (!tableau) return;
-    const ouvert = tableau.hidden;
-    tableau.hidden = !ouvert;
+    const plateau = document.getElementById('talentBoard');
+    if (!plateau) return;
+    // Une classe sur le plateau plutôt que l'attribut hidden : les talents dépliés sont
+    // répartis dans les sept colonnes, il n'y a pas un bloc unique à masquer.
+    const ouvert = !plateau.classList.contains('talents-ouverts');
+    plateau.classList.toggle('talents-ouverts', ouvert);
     b.setAttribute('aria-expanded', String(ouvert));
     b.textContent = t(ouvert ? 'hideAllTalents' : 'showAllTalents');
     if (ouvert) queueLayoutSync();
