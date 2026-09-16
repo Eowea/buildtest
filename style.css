@@ -1039,6 +1039,10 @@
     /* Les talents optionnels sont un raccourci pour la vue repliée. Une fois la colonne
        ouverte, ils y figurent en carte entière : garder les vignettes ferait doublon. */
     .talent-board-wrap.talents-ouverts .talent-alternatives { display: none; }
+    /* La ligne horizontale relie les sept talents du build entre eux. Une fois les
+       colonnes ouvertes, ce sont les traits verticaux qui structurent la lecture :
+       la garder barrerait le tableau au milieu. */
+    .talent-board-wrap.talents-ouverts .talent-board-scroller::before { display: none; }
     /* Une fois la colonne dépliée, plus rien ne dirait lequel de ces talents le build
        recommande : on garde le talent retenu en or, la couleur du build sur tout le site. */
     .talent-board-wrap.talents-ouverts .talent-column > .talent-card {
