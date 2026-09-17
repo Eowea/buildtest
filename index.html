@@ -4,6 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280" />
   <title>Eowea - Builds HotS</title>
+  <!-- Sans cette balise, Google compose lui-même l'extrait en recopiant le texte visible
+       de la page : on y lisait la barre de filtres et les liens des réseaux sociaux. -->
+  <meta name="description" content="Les builds Heroes of the Storm d'Eowea : pour chaque héros, les talents à prendre, le code à copier en jeu et des conseils pour bien le jouer." />
+
+  <!-- Open Graph : ce qu'affichent Discord, X et Facebook quand on partage le lien.
+       og:site_name sert aussi à Google, qui devinait « GitHub Pages documentation ».
+       Pas d'og:url : ce fichier est recopié tel quel entre buildtest et builds, qui
+       n'ont pas la même adresse — une URL en dur y serait fausse pour l'un des deux.
+       Les plateformes utilisent de toute façon l'adresse réellement partagée. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Eowea Builds" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Eowea - Builds HotS" />
+  <meta property="og:description" content="Les builds Heroes of the Storm d'Eowea : pour chaque héros, les talents à prendre, le code à copier en jeu et des conseils pour bien le jouer." />
+
+  <!-- Carte « summary » et non « summary_large_image » : faute de bannière, la grande
+       carte s'afficherait avec un cadre vide. Ajouter une image de 1200×630 et une
+       balise og:image permettra de passer à summary_large_image. -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Eowea - Builds HotS" />
+  <meta name="twitter:description" content="Les builds Heroes of the Storm d'Eowea : pour chaque héros, les talents à prendre, le code à copier en jeu et des conseils pour bien le jouer." />
   <link rel="icon" type="image/png" href="https://static.wikia.nocookie.net/allstars_gamepedia/images/e/e5/Emoji_Elements_Pack_Flower.png/">
 
   <!-- Préchargement des polices (réduit le flash de texte au chargement) -->
