@@ -53,6 +53,13 @@ const STREAMER_CONFIG = {
   "latestVideos": [
     {
       "title": {
+        "fr": "Un prochain héros après Xal'atath ? - Heroes of the Storm",
+        "en": "Another Hero after Xal'atath? - Heroes of the Storm"
+      },
+      "youtubeId": "0-Genm604b0"
+    },
+    {
+      "title": {
         "fr": "Présentation de Xal'atath - Heroes of the Storm",
         "en": "Xal'atath Overview - Heroes of the Storm"
       },
@@ -71,13 +78,6 @@ const STREAMER_CONFIG = {
         "en": "COMPLETE GUIDE: Haunted Mine"
       },
       "youtubeId": "https://youtu.be/6LcTtaws0yk"
-    },
-    {
-      "title": {
-        "fr": "Slapathur Master Gameplay - Aucun commentaire",
-        "en": "Slapathur Master Gameplay - No commentary"
-      },
-      "youtubeId": "sNeMU-aHYQY"
     }
   ],
   "patchVideos": [
