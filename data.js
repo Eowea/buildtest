@@ -10100,7 +10100,7 @@ const HEROES = [
       },
       {
         "id": "tmatgxdrn04o4s",
-        "level": 1,
+        "level": 16,
         "name": {
           "fr": "Instinct de survie",
           "en": "Survival Instincts"
@@ -10324,7 +10324,7 @@ const HEROES = [
       },
       {
         "id": "tmatgxdrn19z3h",
-        "level": 16,
+        "level": 1,
         "name": {
           "fr": "Couvée de nuisibles",
           "en": "Locust Brood"
