@@ -10161,7 +10161,7 @@ const HEROES = [
           "fr": "Slapathur",
           "en": "Slapathur"
         },
-        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_stun.png",
+        "icon": "assets/heroes/base_spells/abathur/images/talents/storm_ui_icon_abathur_volatilemutation.png",
         "description": {
           "fr": "Les attaques de base d'Abathur frappent démesurément plus fort, étourdissent les ennemis non élites et neutralisent les bâtiments. Un même héros ou bâtiment ne peut être touché ainsi qu'une fois de temps en temps.",
           "en": "Abathur's Basic Attacks hit vastly harder, Stun non-Elite enemies and disable Structures. The same Hero or Structure can only be caught this way once in a while."
