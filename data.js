@@ -47640,19 +47640,6 @@ const HEROES = [
       {
         "key": "Z",
         "name": {
-          "fr": "Pas du Vide",
-          "en": "Void Step"
-        },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
-        "description": {
-          "fr": "Téléporte Xal'atath sur trois points formant un triangle. Chaque saut renforce ses attaques de base tant que la capacité dure. La relancer y met fin plus tôt et la laisse sur place.",
-          "en": "Teleports Xal'atath across three points forming a triangle. Each hop strengthens her Basic Attacks for as long as the Ability lasts. Recasting ends it early and leaves her where she stands."
-        },
-        "demoYoutubeId": ""
-      },
-      {
-        "key": "E",
-        "name": {
           "fr": "Rituel du cœur obscur",
           "en": "Dark Heart Ritual"
         },
@@ -47660,6 +47647,19 @@ const HEROES = [
         "description": {
           "fr": "Invoque le cœur obscur, qui blesse par pulsations les ennemis proches. Il se rend au point d'impact de Marque de l'ombre, poursuit les héros marqués et explose sur eux.",
           "en": "Summons the Dark Heart, which pulses damage onto nearby enemies. It travels to Shadow Mark's impact point, chases Marked Heroes and detonates on them."
+        },
+        "demoYoutubeId": ""
+      },
+      {
+        "key": "E",
+        "name": {
+          "fr": "Pas du Vide",
+          "en": "Void Step"
+        },
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
+        "description": {
+          "fr": "Téléporte Xal'atath sur trois points formant un triangle. Chaque saut renforce ses attaques de base tant que la capacité dure. La relancer y met fin plus tôt et la laisse sur place.",
+          "en": "Teleports Xal'atath across three points forming a triangle. Each hop strengthens her Basic Attacks for as long as the Ability lasts. Recasting ends it early and leaves her where she stands."
         },
         "demoYoutubeId": ""
       },
@@ -47692,8 +47692,8 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Xal'atath débarque sur le PTR le 14 septembre, avant sa sortie en jeu le 28.",
-        "en": "Xal'atath lands on the PTR on September 14, ahead of her live release on September 28."
+        "fr": "Xal'atath est jouable sur le PTR ; sa sortie en jeu est prévue le 28 septembre.",
+        "en": "Xal'atath is playable on the PTR; she goes live in game on September 28."
       }
     ],
     "builds": [],
@@ -47714,20 +47714,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmtzw8rkj2rqoq",
-        "level": 1,
-        "name": {
-          "fr": "Cape d'ombre",
-          "en": "Cloak of Shadows"
-        },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
-        "description": {
-          "fr": "Activer Pas du Vide augmente la vitesse de déplacement de Xal'atath et lui confère de l'armure anti-sort, effet renouvelé à chaque téléportation.",
-          "en": "Activating Void Step grants Xal'atath Movement Speed and Spell Armor, refreshed on every teleport."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmtzw8rki10f4y",
         "level": 1,
         "name": {
@@ -47738,6 +47724,20 @@ const HEROES = [
         "description": {
           "fr": "Le cœur obscur gagne en rayon et en durée, et ses dégâts rebondissent deux fois vers les ennemis proches.",
           "en": "The Dark Heart gains radius and duration, and its damage bounces twice to nearby enemies."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkj2rqoq",
+        "level": 1,
+        "name": {
+          "fr": "Cape d'ombre",
+          "en": "Cloak of Shadows"
+        },
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
+        "description": {
+          "fr": "Activer Pas du Vide augmente la vitesse de déplacement de Xal'atath et lui confère de l'armure anti-sort, effet renouvelé à chaque téléportation.",
+          "en": "Activating Void Step grants Xal'atath Movement Speed and Spell Armor, refreshed on every teleport."
         },
         "demoYoutubeId": null
       },
@@ -47756,20 +47756,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmtzw8rkm3iqw8",
-        "level": 4,
-        "name": {
-          "fr": "Acolyte du Vide",
-          "en": "Void Acolyte"
-        },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
-        "description": {
-          "fr": "Terminer Pas du Vide charge entièrement Salve du Vide. La salve suivante frappe bien plus fort et ne coûte pas de mana.",
-          "en": "Completing Void Step fully charges Void Volley. The next barrage hits far harder and costs no Mana."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmtzw8rklsx9q0",
         "level": 4,
         "name": {
@@ -47780,6 +47766,20 @@ const HEROES = [
         "description": {
           "fr": "Chaque salve de dégâts du cœur obscur confère à Xal'atath un bouclier proportionnel à son maximum de points de vie, jusqu'à un plafond.",
           "en": "Every instance of Dark Heart damage grants Xal'atath a Shield based on her maximum Health, up to a cap."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkm3iqw8",
+        "level": 4,
+        "name": {
+          "fr": "Acolyte du Vide",
+          "en": "Void Acolyte"
+        },
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
+        "description": {
+          "fr": "Terminer Pas du Vide charge entièrement Salve du Vide. La salve suivante frappe bien plus fort et ne coûte pas de mana.",
+          "en": "Completing Void Step fully charges Void Volley. The next barrage hits far harder and costs no Mana."
         },
         "demoYoutubeId": null
       },
@@ -47854,16 +47854,30 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmtzw8rkvwnoot",
+        "id": "tmtzw8rktzftja",
         "level": 13,
         "name": {
-          "fr": "Murmures incessants",
-          "en": "Relentless Whispers"
+          "fr": "Cascade dévastatrice",
+          "en": "Crushing Cascade"
         },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_trait.png",
         "description": {
-          "fr": "Tant que Pas du Vide est actif, la vitesse d'attaque de Xal'atath grimpe énormément.",
-          "en": "While Void Step is active, Xal'atath's Attack Speed climbs enormously."
+          "fr": "Chaque projectile de Salve du Vide ralentit sa cible, effet cumulable jusqu'à un plafond.",
+          "en": "Each Void Volley projectile Slows its target, stacking up to a cap."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkws50bs",
+        "level": 13,
+        "name": {
+          "fr": "Appel du cœur obscur",
+          "en": "Pull of the Dark Heart"
+        },
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
+        "description": {
+          "fr": "Chaque pulsation du cœur obscur ralentit un peu plus les ennemis qui y sont liés, effet cumulable qui retombe vite.",
+          "en": "Every Dark Heart pulse Slows the enemies tethered to it a little more, stacking but decaying fast."
         },
         "demoYoutubeId": null
       },
@@ -47882,20 +47896,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmtzw8rktzftja",
-        "level": 13,
-        "name": {
-          "fr": "Cascade dévastatrice",
-          "en": "Crushing Cascade"
-        },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_trait.png",
-        "description": {
-          "fr": "Chaque projectile de Salve du Vide ralentit sa cible, effet cumulable jusqu'à un plafond.",
-          "en": "Each Void Volley projectile Slows its target, stacking up to a cap."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmtzw8rkx4tknx",
         "level": 16,
         "name": {
@@ -47910,20 +47910,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmtzw8rkws50bs",
-        "level": 16,
-        "name": {
-          "fr": "Appel du cœur obscur",
-          "en": "Pull of the Dark Heart"
-        },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
-        "description": {
-          "fr": "Chaque pulsation du cœur obscur ralentit un peu plus les ennemis qui y sont liés, effet cumulable qui retombe vite.",
-          "en": "Every Dark Heart pulse Slows the enemies tethered to it a little more, stacking but decaying fast."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmtzw8rkyiz6mp",
         "level": 16,
         "name": {
@@ -47934,6 +47920,20 @@ const HEROES = [
         "description": {
           "fr": "Les projectiles de Salve du Vide frappent plus fort et laissent sur leur passage une traînée de feu qui inflige des dégâts sur la durée.",
           "en": "Void Volley's projectiles hit harder and leave a trail of fire in their wake that deals damage over time."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkvwnoot",
+        "level": 16,
+        "name": {
+          "fr": "Murmures incessants",
+          "en": "Relentless Whispers"
+        },
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
+        "description": {
+          "fr": "Tant que Pas du Vide est actif, la vitesse d'attaque de Xal'atath grimpe énormément.",
+          "en": "While Void Step is active, Xal'atath's Attack Speed climbs enormously."
         },
         "demoYoutubeId": null
       },
@@ -47980,20 +47980,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmtzw8rl3at7du",
-        "level": 20,
-        "name": {
-          "fr": "Boucle de paradoxe",
-          "en": "Paradox Loop"
-        },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
-        "description": {
-          "fr": "Après Pas du Vide, un second Pas du Vide part immédiatement dans la direction opposée, et tous les effets ajoutés par les talents se redéclenchent.",
-          "en": "After Void Step, a second Void Step fires at once in the opposite direction, and every effect added by Talents triggers again."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmtzw8rl2i18fv",
         "level": 20,
         "name": {
@@ -48004,6 +47990,20 @@ const HEROES = [
         "description": {
           "fr": "Quand le cœur obscur se termine ou explose sur un héros marqué, il laisse derrière lui des flammes du Vide qui infligent des dégâts sur la durée aux ennemis qui s'y attardent.",
           "en": "When the Dark Heart ends or detonates on a Marked Hero, it leaves behind Void flames that deal damage over time to enemies lingering in them."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rl3at7du",
+        "level": 20,
+        "name": {
+          "fr": "Boucle de paradoxe",
+          "en": "Paradox Loop"
+        },
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
+        "description": {
+          "fr": "Après Pas du Vide, un second Pas du Vide part immédiatement dans la direction opposée, et tous les effets ajoutés par les talents se redéclenchent.",
+          "en": "After Void Step, a second Void Step fires at once in the opposite direction, and every effect added by Talents triggers again."
         },
         "demoYoutubeId": null
       }
