@@ -1242,6 +1242,20 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmu6sj4o50mtfi",
+        "level": 16,
+        "name": {
+          "fr": "Focalisation intérieure",
+          "en": "Inner Focus"
+        },
+        "icon": "assets/heroes/base_spells/anduin/images/talents/storm_ui_icon_anduin_inner_focus.png",
+        "description": {
+          "fr": "À l'activation, remet Soins rapides à disposition, et son prochain lancer soigne davantage. Blesser un héros adverse raccourcit l'attente avant de pouvoir recommencer.",
+          "en": "Activate to put Flash Heal back up, and its next cast heals for more. Damaging an enemy Hero shortens the wait before it can be used again."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmk7j3and12be5",
         "level": 20,
         "name": {
@@ -10086,7 +10100,7 @@ const HEROES = [
       },
       {
         "id": "tmatgxdrn04o4s",
-        "level": 16,
+        "level": 1,
         "name": {
           "fr": "Instinct de survie",
           "en": "Survival Instincts"
@@ -10137,6 +10151,20 @@ const HEROES = [
         "description": {
           "fr": "Nid toxique dure bien plus longtemps, revient plus vite et gagne des charges supplémentaires.",
           "en": "Toxic Nest lasts far longer, comes back sooner and gains extra charges."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmu6sj4o552gup",
+        "level": 4,
+        "name": {
+          "fr": "Slapathur",
+          "en": "Slapathur"
+        },
+        "icon": "assets/heroes/base_spells/generic/images/talents/storm_ui_icon_talent_autoattack_stun.png",
+        "description": {
+          "fr": "Les attaques de base d'Abathur frappent démesurément plus fort, étourdissent les ennemis non élites et neutralisent les bâtiments. Un même héros ou bâtiment ne peut être touché ainsi qu'une fois de temps en temps.",
+          "en": "Abathur's Basic Attacks hit vastly harder, Stun non-Elite enemies and disable Structures. The same Hero or Structure can only be caught this way once in a while."
         },
         "demoYoutubeId": null
       },
@@ -10296,7 +10324,7 @@ const HEROES = [
       },
       {
         "id": "tmatgxdrn19z3h",
-        "level": 1,
+        "level": 16,
         "name": {
           "fr": "Couvée de nuisibles",
           "en": "Locust Brood"
