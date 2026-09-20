@@ -7091,6 +7091,66 @@ const HEROES = [
           }
         ],
         "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 3,
+        "label": {
+          "fr": "Build E",
+          "en": "E build"
+        },
+        "summary": {
+          "fr": "Build centré sur Menace larvée : une zone qui s'étale et verrouille les combats.",
+          "en": "Focused on Lurking Arm: a zone that spreads and locks fights down."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T2322112,Stukov]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "21 Septembre 2026",
+          "en": "September 21, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tc8msjba512l1f",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmrryr6joxl4ad",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmrryr6jo7l2de",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmrryr6jo7i88o",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tc8msjba518snb",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmrryr6jou2537",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmrryr6jo02dpa",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
       }
     ],
     "guideVideos": [
@@ -10100,7 +10160,7 @@ const HEROES = [
       },
       {
         "id": "tmatgxdrn04o4s",
-        "level": 16,
+        "level": 1,
         "name": {
           "fr": "Instinct de survie",
           "en": "Survival Instincts"
@@ -10324,7 +10384,7 @@ const HEROES = [
       },
       {
         "id": "tmatgxdrn19z3h",
-        "level": 1,
+        "level": 16,
         "name": {
           "fr": "Couvée de nuisibles",
           "en": "Locust Brood"
@@ -25760,6 +25820,66 @@ const HEROES = [
           {
             "level": 13,
             "primaryId": "tm0q03buz13jma",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tm0q03buz185ty",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tm0q03buz19jpr",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build piège",
+          "en": "Trap build"
+        },
+        "summary": {
+          "fr": "Build centré sur Piège d'acier : on quadrille le terrain et on punit ceux qui tombent dedans.",
+          "en": "Focused on Steel Trap: cover the ground and punish whoever walks into it."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T2321331,Junkrat]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "21 Septembre 2026",
+          "en": "September 21, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tm0q03buz02fwh",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tm0q03buz0623h",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tm0q03buz08eei",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tm0q03buz102b0",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tm0q03buz14ba6",
             "alternativeIds": []
           },
           {
