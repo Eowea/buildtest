@@ -7063,38 +7063,8 @@ const HEROES = [
         "isNew": false
       },
       {
-        "enabled": false,
-        "order": 2,
-        "label": {
-          "fr": "Build Pustule",
-          "en": "Pustule Build"
-        },
-        "summary": {
-          "fr": "Gros burst et ralentissement sur l'explosion du W.",
-          "en": "Huge burst and slow on W explosion."
-        },
-        "buildCodeTitle": {
-          "fr": "CLIQUER POUR COPIER LE BUILD",
-          "en": "CLICK TO COPY THE BUILD"
-        },
-        "buildCode": "[T1112111,Stukov]",
-        "videos": [],
-        "updatedAt": {
-          "fr": "",
-          "en": ""
-        },
-        "talentSelections": [
-          {
-            "level": 1,
-            "primaryId": "tc8msjba5116fc",
-            "alternativeIds": []
-          }
-        ],
-        "isNew": false
-      },
-      {
         "enabled": true,
-        "order": 3,
+        "order": 2,
         "label": {
           "fr": "Build E",
           "en": "E build"
