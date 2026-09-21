@@ -94,8 +94,8 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "16 Septembre 2026",
-      "en": "September 16, 2026"
+      "fr": "21 Septembre 2026",
+      "en": "September 21, 2026"
     },
     "changelog": [
       {
