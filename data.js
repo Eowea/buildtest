@@ -94,10 +94,30 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "21 Septembre 2026",
-      "en": "September 21, 2026"
+      "fr": "22 Septembre 2026",
+      "en": "September 22, 2026"
     },
     "changelog": [
+      {
+        "date": {
+          "fr": "22 Septembre 2026",
+          "en": "September 22, 2026"
+        },
+        "items": [
+          {
+            "fr": "Une page Contact, accessible en bas du site : Discord, e-mail et réseaux pour signaler une erreur, avec un bouton qui te ramène sur le héros que tu étais en train de lire.",
+            "en": "A Contact page, reachable from the bottom of the site: Discord, email and socials to report a mistake, with a button that takes you back to the Hero you were reading."
+          },
+          {
+            "fr": "Deux nouveaux builds : « Build piège » sur Chacal et « Build E » sur Stukov.",
+            "en": "Two new builds: “Trap build” on Junkrat and “E build” on Stukov."
+          },
+          {
+            "fr": "Le code de build d'Abathur donnait le mauvais talent de niveau 16 une fois collé en jeu : corrigé.",
+            "en": "Abathur's build code gave the wrong level 16 Talent once pasted in game: fixed."
+          }
+        ]
+      },
       {
         "date": {
           "fr": "16 Septembre 2026",

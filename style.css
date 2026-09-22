@@ -2302,3 +2302,38 @@ a.contact-value:hover { color: var(--gold-bright); border-bottom-color: var(--go
     gap: 16px;
     min-width: 0;
 }
+
+/* Bouton « Retour sur <héros> » de la page Contact : il tient compagnie au bouton
+   Accueil dans la barre d'outils, d'où la hauteur alignée sur .home-btn. */
+.retour-lien {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    height: 44px;
+    border-radius: 4px;
+    padding: 0 16px;
+    border: 1px solid var(--blue-border);
+    background: var(--blue-soft);
+    color: var(--text-bright);
+    font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all var(--t);
+}
+.retour-lien:hover {
+    border-color: var(--blue-border-hover);
+    color: var(--blue-bright);
+    box-shadow: 0 0 12px var(--blue-glow);
+}
+.retour-lien svg { width: 17px; height: 17px; flex: 0 0 17px; }
+.retour-portrait {
+    width: 26px;
+    height: 26px;
+    flex: 0 0 26px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--gold-border);
+}

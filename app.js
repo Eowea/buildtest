@@ -250,18 +250,22 @@ function markEverythingAsSeen(hero) {
       el('heroesTitle').textContent = t('heroesTitle');
       el('heroesNote').textContent = t('heroesNote');
       els.searchInput.placeholder = t('searchPlaceholder');
-      renderFooter();
       document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === state.lang));
     }
 
     // Pied de page : une phrase et un lien vers la page de contact. Il arrive masqué
     // depuis le HTML pour qu'une bande de panneau vide ne clignote pas au chargement,
     // et on ne l'affiche qu'une fois rempli.
+    // Le lien emporte le fragment courant : la page de contact s'en sert pour offrir
+    // un retour sur le héros qu'on était en train de lire. D'où l'appel en toute fin
+    // de renderAll(), après updateHash() — avant, le fragment serait encore le précédent.
     function renderFooter() {
       const pied = $('siteFooter');
       if (!pied) return;
+      const retour = (location.hash || '').replace(/^#/, '');
+      const cible = 'contact.html' + (retour ? '?retour=' + encodeURIComponent(retour) : '');
       pied.innerHTML = `<span class="footer-note">${escapeHtml(t('footerNote'))}</span>`
-        + `<a class="footer-link" href="contact.html">`
+        + `<a class="footer-link" href="${escapeHtml(cible)}">`
         + `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 7 9 6 9-6"/></svg>`
         + `<span>${escapeHtml(t('footerContact'))}</span></a>`;
       pied.hidden = false;
@@ -1057,7 +1061,7 @@ function renderDetail() {
     function updateHash() {
       const h = currentHero();
       clampBuildIndex(h);
-      if (!h) { history.replaceState(null,'',location.pathname); return; }
+      if (!h) { history.replaceState(null,'',location.pathname); renderFooter(); return; }
       const b = h.builds[state.buildIndex];
       const heroPart = looseHashEncode(state.heroId);
       if (b?.buildCode) {
@@ -1065,6 +1069,11 @@ function renderDetail() {
       } else {
         history.replaceState(null,'',`#${heroPart}`);
       }
+      // Le lien du pied de page emporte le fragment : il faut le réécrire chaque fois
+      // que celui-ci change. Un simple changement d'onglet de build ne repasse pas par
+      // renderAll(), mais il passe forcément ici — c'est le seul endroit qui écrit le
+      // fragment, donc le seul endroit où le lien peut se désynchroniser.
+      renderFooter();
     }
     function restoreFromHash() {
       const raw = (location.hash || '').replace(/^#/, '');

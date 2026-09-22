@@ -35,6 +35,8 @@ const CT_DICT = {
     fr: "Je suis joignable sur tous ces réseaux, choisis celui que tu préfères.",
     en: "You can reach me on any of these, whichever you prefer."
   },
+  backToHero: { fr: "Retour sur {n}", en: "Back to {n}" },
+  backToBuilds: { fr: "Retour aux builds", en: "Back to the builds" },
 };
 
 /* ── Utilities (copie autonome des helpers d'app.js, page indépendante) ── */
@@ -51,10 +53,15 @@ const $ct = id => document.getElementById(id);
 const ctEls = {
   siteTitle: $ct('siteTitle'), headerNav: $ct('headerNav'), socials: $ct('socials'),
   siteUpdate: $ct('siteUpdate'), langSwitcher: $ct('langSwitcher'), contactView: $ct('contactView'),
+  retourZone: $ct('retourZone'),
 };
 
 const ctLoc = (val) => (val && typeof val === 'object' && !Array.isArray(val)) ? (val[ctState.lang] !== undefined ? val[ctState.lang] : (val['fr'] || '')) : (val || '');
-const ctT = (key) => ctLoc(CT_DICT[key]) || '';
+const ctT = (key, vars) => {
+  let s = ctLoc(CT_DICT[key]) || '';
+  if (vars) for (const k in vars) s = s.replace('{' + k + '}', vars[k]);
+  return s;
+};
 const ctEsc = (v) => String(v||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 function ctNormalize(text) { return String(text||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(); }
 // Même règle que navSlug() dans app.js : un lien doit produire le même identifiant
@@ -108,6 +115,43 @@ function renderCtSiteUpdate() {
     + `<span class="site-update-date">${ctEsc(date)}</span>`;
 }
 
+/* ── Retour sur le héros ──
+   Le lien du pied de page transmet le fragment de l'accueil tel quel, sous la forme
+   "idDuHeros" ou "idDuHeros/codeDeBuild". On le renvoie à l'identique après le #,
+   donc on retombe non seulement sur le bon héros mais sur le bon onglet de build.
+   Rien à faire de l'historique du navigateur : ça marche aussi si on arrive ici
+   par un lien direct, et ça n'envoie jamais ailleurs que sur l'accueil du site. */
+function ctRetour() {
+  let brut = '';
+  try { brut = new URLSearchParams(location.search).get('retour') || ''; } catch { return null; }
+  if (!brut) return null;
+  const slash = brut.indexOf('/');
+  let heroId = '';
+  try { heroId = decodeURIComponent(slash >= 0 ? brut.slice(0, slash) : brut); } catch { return null; }
+  const hero = (typeof HEROES !== 'undefined' ? HEROES : []).find(h => h.id === heroId && h.enabled !== false);
+  return hero ? { hero, fragment: brut } : null;
+}
+
+const CT_FLECHE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>';
+
+function renderRetour() {
+  if (!ctEls.retourZone) return;
+  const r = ctRetour();
+  if (!r) {
+    // Venu de l'accueil, ou héros inconnu : on ne promet pas un retour qu'on ne sait pas tenir.
+    ctEls.retourZone.innerHTML = `<a class="retour-lien" href="index.html">${CT_FLECHE}`
+      + `<span>${ctEsc(ctT('backToBuilds'))}</span></a>`;
+    return;
+  }
+  const nom = ctLoc(r.hero.name);
+  const portrait = r.hero.portrait
+    ? `<img class="retour-portrait" src="${ctEsc(r.hero.portrait)}" alt="" loading="lazy" onerror="this.remove();" />`
+    : '';
+  ctEls.retourZone.innerHTML = `<a class="retour-lien" href="index.html#${ctEsc(r.fragment)}">`
+    + CT_FLECHE + portrait
+    + `<span>${ctEsc(ctT('backToHero', { n: nom }))}</span></a>`;
+}
+
 function renderContact() {
   const invite = ctDiscordInvite();
   const lienServeur = invite
@@ -154,6 +198,7 @@ function renderContact() {
 function renderCtAll() {
   document.documentElement.lang = ctState.lang;
   renderCtHeader();
+  renderRetour();
   renderContact();
   document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === ctState.lang));
 }
