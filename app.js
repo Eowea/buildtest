@@ -58,6 +58,8 @@
       changelogTitle: { fr: "Ce qui a changé", en: "What's new" },
       changelogOpen: { fr: "Voir les changements", en: "See what changed" },
       changelogEmpty: { fr: "Rien de noté pour cette mise à jour.", en: "Nothing noted for this update." },
+      footerNote: { fr: "Une erreur dans un build, un talent ou une description ?", en: "Spotted a mistake in a build, a talent or a description?" },
+      footerContact: { fr: "Contact", en: "Contact" },
       prevIssue: { fr: "Bug précédent", en: "Previous issue" },
       nextIssue: { fr: "Bug suivant", en: "Next issue" },
     };
@@ -248,7 +250,21 @@ function markEverythingAsSeen(hero) {
       el('heroesTitle').textContent = t('heroesTitle');
       el('heroesNote').textContent = t('heroesNote');
       els.searchInput.placeholder = t('searchPlaceholder');
+      renderFooter();
       document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === state.lang));
+    }
+
+    // Pied de page : une phrase et un lien vers la page de contact. Il arrive masqué
+    // depuis le HTML pour qu'une bande de panneau vide ne clignote pas au chargement,
+    // et on ne l'affiche qu'une fois rempli.
+    function renderFooter() {
+      const pied = $('siteFooter');
+      if (!pied) return;
+      pied.innerHTML = `<span class="footer-note">${escapeHtml(t('footerNote'))}</span>`
+        + `<a class="footer-link" href="contact.html">`
+        + `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 7 9 6 9-6"/></svg>`
+        + `<span>${escapeHtml(t('footerContact'))}</span></a>`;
+      pied.hidden = false;
     }
 
     function renderHeader() {

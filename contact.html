@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1280" />
+  <title>Eowea - Contact</title>
+  <meta name="description" content="Contacter Eowea pour signaler une erreur sur les builds Heroes of the Storm : Discord, e-mail et réseaux sociaux." />
+  <link rel="icon" type="image/png" href="https://static.wikia.nocookie.net/allstars_gamepedia/images/e/e5/Emoji_Elements_Pack_Flower.png/">
+
+  <!-- Préchargement des polices (réduit le flash de texte au chargement) -->
+  <link rel="preload" href="assets/fonts/metronic-for-blizzard.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/metronic-for-blizzard-bold.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- C'est ici qu'on relie le design ! -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+<header class="panel topbar">
+  <div class="brand-block">
+    <h1 class="site-title" id="siteTitle">Eowea builds</h1>
+  </div>
+  <nav class="header-nav" id="headerNav" aria-label="Navigation"></nav>
+  <div class="site-update" id="siteUpdate"></div>
+  <nav class="socials" id="socials" aria-label="Réseaux sociaux"></nav>
+  <div class="header-actions">
+    <div class="lang-switcher" id="langSwitcher">
+      <button class="lang-btn" data-lang="fr"><img src="https://flagicons.lipis.dev/flags/4x3/fr.svg" alt="FR"></button>
+      <button class="lang-btn" data-lang="en"><img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="EN"></button>
+    </div>
+  </div>
+</header>
+    <section class="panel toolbar">
+      <div class="toolbar-row">
+        <a href="index.html" class="home-btn" id="homeBtn" aria-label="Accueil" title="Accueil">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Pas de .layout ici : la page n'a pas de liste latérale, le contenu occupe
+         toute la largeur de la colonne centrale. -->
+    <main class="panel content">
+      <div id="contactView"></div>
+    </main>
+  </div>
+
+  <!-- BOUTON RETOUR EN HAUT -->
+  <button id="backToTop" aria-label="Remonter" title="Remonter en haut">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+          <path d="M13 7.828V20h-2V7.828l-5.364 5.364-1.414-1.414L12 4l7.778 7.778-1.414 1.414L13 7.828z"/>
+      </svg>
+  </button>
+
+  <script src="data.js"></script>
+  <script src="contact.js"></script>
+
+<script>
+  // Même repli que sur les autres pages : sur écran étroit, une première touche
+  // ouvre le libellé du réseau, la seconde suit le lien.
+  document.addEventListener("click", function(e) {
+    if (window.innerWidth <= 768) {
+      const socialLink = e.target.closest("#socials .social-link");
+      if (socialLink) {
+        if (!socialLink.classList.contains("is-open")) {
+          e.preventDefault();
+          document.querySelectorAll("#socials .social-link").forEach(l => l.classList.remove("is-open"));
+          socialLink.classList.add("is-open");
+        }
+      } else {
+        document.querySelectorAll("#socials .social-link").forEach(l => l.classList.remove("is-open"));
+      }
+    }
+  });
+  document.addEventListener("touchstart", function(e) {
+    if (window.innerWidth <= 768 && !e.target.closest("#socials")) {
+      document.querySelectorAll("#socials .social-link").forEach(l => l.classList.remove("is-open"));
+    }
+  }, { passive: true });
+</script>
+</body>
+</html>
