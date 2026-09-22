@@ -53,6 +53,20 @@ const STREAMER_CONFIG = {
   "latestVideos": [
     {
       "title": {
+        "fr": "Comment draft sur Heroes of the Storm",
+        "en": "How to Draft in Heroes of the Storm"
+      },
+      "youtubeId": "wPaadSRgZDg"
+    },
+    {
+      "title": {
+        "fr": "Xal'atath - Interactions - Heroes of the Storm",
+        "en": "Xal'atath - Interactions - Heroes of the Storm"
+      },
+      "youtubeId": "5eidOlou4fs"
+    },
+    {
+      "title": {
         "fr": "Un prochain héros après Xal'atath ? - Heroes of the Storm",
         "en": "Another Hero after Xal'atath? - Heroes of the Storm"
       },
@@ -64,20 +78,6 @@ const STREAMER_CONFIG = {
         "en": "Xal'atath Overview - Heroes of the Storm"
       },
       "youtubeId": "n6pxfcxrXEA"
-    },
-    {
-      "title": {
-        "fr": "Xal'atath dans Heroes of the Storm : Le Résumé",
-        "en": "Xal'atath in Heroes of the Storm: The Recap"
-      },
-      "youtubeId": "zKQoggyrkks"
-    },
-    {
-      "title": {
-        "fr": "GUIDE COMPLET: Mine Hantée",
-        "en": "COMPLETE GUIDE: Haunted Mine"
-      },
-      "youtubeId": "https://youtu.be/6LcTtaws0yk"
     }
   ],
   "patchVideos": [

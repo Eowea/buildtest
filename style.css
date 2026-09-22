@@ -2292,3 +2292,13 @@ a.contact-value:hover { color: var(--gold-bright); border-bottom-color: var(--go
     transform: translateY(-1px);
 }
 .contact-social svg { width: 20px; height: 20px; flex: 0 0 20px; }
+
+/* Colonne de droite de .layout : contenu + pied de page empilés. Sans ce
+   conteneur, le pied de page est un enfant de .page et se cale sous la colonne
+   la plus haute — la liste des héros — loin sous les cartes de l'accueil. */
+.layout-main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+}

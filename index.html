@@ -70,13 +70,19 @@
         <p class="section-note" id="heroesNote">Choisis un héros dans la liste, ou utilise la recherche et les filtres ci-dessus.</p>
         <div class="hero-list" id="heroList" role="listbox" aria-label="Liste des héros"></div>
       </aside>
-      <section class="panel content" id="detailViewWrap">
-        <div id="detailView"></div>
-      </section>
-    </main>
+      <!-- Colonne de droite : le contenu et le pied de page descendent ensemble.
+           Sinon la barre se cale sous la colonne la plus haute, c'est-a-dire la
+           liste des heros, et se retrouve plusieurs milliers de pixels sous les
+           cartes Dernieres videos / Analyses Patch / Rotation gratuite. -->
+      <div class="layout-main">
+        <section class="panel content" id="detailViewWrap">
+          <div id="detailView"></div>
+        </section>
 
-      <!-- Rempli par updateStaticLang() : le libelle suit la langue choisie. -->
-      <footer class="panel site-footer" id="siteFooter" hidden></footer>
+        <!-- Rempli par updateStaticLang() : le libelle suit la langue choisie. -->
+        <footer class="panel site-footer" id="siteFooter" hidden></footer>
+      </div>
+    </main>
   </div>
 
   <div id="tooltipPortal" class="spell-portal" aria-hidden="true"></div>
