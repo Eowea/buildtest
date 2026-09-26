@@ -10161,16 +10161,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmatgxdrn04o4s",
+        "id": "tmatgxdrn19z3h",
         "level": 1,
         "name": {
-          "fr": "Instinct de survie",
-          "en": "Survival Instincts"
+          "fr": "Couvée de nuisibles",
+          "en": "Locust Brood"
         },
         "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spawnlocust.png",
         "description": {
-          "fr": "Les nuisibles ont bien plus de points de vie et frappent nettement plus fort.",
-          "en": "Locusts have far more Health and hit noticeably harder."
+          "fr": "Fait éclore d'un coup plusieurs nuisibles à un endroit proche.",
+          "en": "Hatches several Locusts at once at a nearby spot."
         },
         "demoYoutubeId": null
       },
@@ -10343,6 +10343,20 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmatgxdrn04o4s",
+        "level": 16,
+        "name": {
+          "fr": "Instinct de survie",
+          "en": "Survival Instincts"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spawnlocust.png",
+        "description": {
+          "fr": "Les nuisibles ont bien plus de points de vie et frappent nettement plus fort.",
+          "en": "Locusts have far more Health and hit noticeably harder."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmatgxdrn16gp5",
         "level": 16,
         "name": {
@@ -10381,20 +10395,6 @@ const HEROES = [
         "description": {
           "fr": "Les clones et les monstruosités blessent régulièrement les ennemis proches, et une dernière fois à leur mort. Toucher un héros leur rend autant de points de vie qu'ils infligent de dégâts.",
           "en": "Clones and Monstrosities damage nearby enemies at regular intervals, and once more when they die. Hitting a Hero restores them as much Health as the damage dealt."
-        },
-        "demoYoutubeId": null
-      },
-      {
-        "id": "tmatgxdrn19z3h",
-        "level": 16,
-        "name": {
-          "fr": "Couvée de nuisibles",
-          "en": "Locust Brood"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spawnlocust.png",
-        "description": {
-          "fr": "Fait éclore d'un coup plusieurs nuisibles à un endroit proche.",
-          "en": "Hatches several Locusts at once at a nearby spot."
         },
         "demoYoutubeId": null
       },
