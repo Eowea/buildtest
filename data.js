@@ -47971,7 +47971,7 @@ const HEROES = [
     "talentPool": [
       {
         "id": "tmtzw8rkk3j1yj",
-        "level": 1,
+        "level": 7,
         "name": {
           "fr": "Marque toxique",
           "en": "Toxic Mark"
@@ -48055,7 +48055,7 @@ const HEROES = [
       },
       {
         "id": "tmtzw8rkp78f1m",
-        "level": 7,
+        "level": 1,
         "name": {
           "fr": "Adepte du Vide",
           "en": "Void Adept"
