@@ -53,6 +53,13 @@ const STREAMER_CONFIG = {
   "latestVideos": [
     {
       "title": {
+        "fr": "Gameplay Xal'atath PTR - Heroes of the Storm",
+        "en": "Xal'atath PTR Gameplay - Heroes of the Storm"
+      },
+      "youtubeId": "xRsVIfNHcMA"
+    },
+    {
+      "title": {
         "fr": "Comment draft sur Heroes of the Storm",
         "en": "How to Draft in Heroes of the Storm"
       },
@@ -71,13 +78,6 @@ const STREAMER_CONFIG = {
         "en": "Another Hero after Xal'atath? - Heroes of the Storm"
       },
       "youtubeId": "0-Genm604b0"
-    },
-    {
-      "title": {
-        "fr": "Présentation de Xal'atath - Heroes of the Storm",
-        "en": "Xal'atath Overview - Heroes of the Storm"
-      },
-      "youtubeId": "n6pxfcxrXEA"
     }
   ],
   "patchVideos": [
@@ -94,10 +94,22 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "22 Septembre 2026",
-      "en": "September 22, 2026"
+      "fr": "26 Septembre 2026",
+      "en": "September 26, 2026"
     },
     "changelog": [
+      {
+        "date": {
+          "fr": "26 Septembre 2026",
+          "en": "September 26, 2026"
+        },
+        "items": [
+          {
+            "fr": "Deux nouveaux builds : « Build E » sur Maiev et « Build A » sur Johanna.",
+            "en": "Two new builds: “E build” on Maiev and “Q build” on Johanna."
+          }
+        ]
+      },
       {
         "date": {
           "fr": "22 Septembre 2026",
