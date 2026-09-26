@@ -47970,16 +47970,16 @@ const HEROES = [
     "guideVideos": [],
     "talentPool": [
       {
-        "id": "tmtzw8rkk3j1yj",
-        "level": 7,
+        "id": "tmtzw8rkp78f1m",
+        "level": 1,
         "name": {
-          "fr": "Marque toxique",
-          "en": "Toxic Mark"
+          "fr": "Adepte du Vide",
+          "en": "Void Adept"
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_q_shadowmark.png",
         "description": {
-          "fr": "Marque de l'ombre dure plus longtemps, ses dégâts sur la durée montent avec le maximum de points de vie de la cible, et le héros marqué perd de l'armure.",
-          "en": "Shadow Mark lasts longer, its damage over time scales with the target's maximum Health, and the Marked Hero loses Armor."
+          "fr": "Quête : faire exploser le cœur obscur sur des héros marqués augmente définitivement les dégâts de Marque de l'ombre, jusqu'à un plafond.",
+          "en": "Quest: detonating the Dark Heart on Marked Heroes permanently increases Shadow Mark's damage, up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -48054,16 +48054,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmtzw8rkp78f1m",
-        "level": 1,
+        "id": "tmtzw8rkk3j1yj",
+        "level": 7,
         "name": {
-          "fr": "Adepte du Vide",
-          "en": "Void Adept"
+          "fr": "Marque toxique",
+          "en": "Toxic Mark"
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_q_shadowmark.png",
         "description": {
-          "fr": "Quête : faire exploser le cœur obscur sur des héros marqués augmente définitivement les dégâts de Marque de l'ombre, jusqu'à un plafond.",
-          "en": "Quest: detonating the Dark Heart on Marked Heroes permanently increases Shadow Mark's damage, up to a cap."
+          "fr": "Marque de l'ombre dure plus longtemps, ses dégâts sur la durée montent avec le maximum de points de vie de la cible, et le héros marqué perd de l'armure.",
+          "en": "Shadow Mark lasts longer, its damage over time scales with the target's maximum Health, and the Marked Hero loses Armor."
         },
         "demoYoutubeId": null
       },
@@ -48124,20 +48124,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmtzw8rktzftja",
-        "level": 13,
-        "name": {
-          "fr": "Cascade dévastatrice",
-          "en": "Crushing Cascade"
-        },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_trait.png",
-        "description": {
-          "fr": "Chaque projectile de Salve du Vide ralentit sa cible, effet cumulable jusqu'à un plafond.",
-          "en": "Each Void Volley projectile Slows its target, stacking up to a cap."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmtzw8rkws50bs",
         "level": 13,
         "name": {
@@ -48166,6 +48152,20 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
+        "id": "tmtzw8rktzftja",
+        "level": 13,
+        "name": {
+          "fr": "Cascade dévastatrice",
+          "en": "Crushing Cascade"
+        },
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_trait.png",
+        "description": {
+          "fr": "Chaque projectile de Salve du Vide ralentit sa cible, effet cumulable jusqu'à un plafond.",
+          "en": "Each Void Volley projectile Slows its target, stacking up to a cap."
+        },
+        "demoYoutubeId": null
+      },
+      {
         "id": "tmtzw8rkx4tknx",
         "level": 16,
         "name": {
@@ -48180,20 +48180,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmtzw8rkyiz6mp",
-        "level": 16,
-        "name": {
-          "fr": "Réalité brisée",
-          "en": "Fractured Reality"
-        },
-        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_trait.png",
-        "description": {
-          "fr": "Les projectiles de Salve du Vide frappent plus fort et laissent sur leur passage une traînée de feu qui inflige des dégâts sur la durée.",
-          "en": "Void Volley's projectiles hit harder and leave a trail of fire in their wake that deals damage over time."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmtzw8rkvwnoot",
         "level": 16,
         "name": {
@@ -48204,6 +48190,20 @@ const HEROES = [
         "description": {
           "fr": "Tant que Pas du Vide est actif, la vitesse d'attaque de Xal'atath grimpe énormément.",
           "en": "While Void Step is active, Xal'atath's Attack Speed climbs enormously."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmtzw8rkyiz6mp",
+        "level": 16,
+        "name": {
+          "fr": "Réalité brisée",
+          "en": "Fractured Reality"
+        },
+        "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_trait.png",
+        "description": {
+          "fr": "Les projectiles de Salve du Vide frappent plus fort et laissent sur leur passage une traînée de feu qui inflige des dégâts sur la durée.",
+          "en": "Void Volley's projectiles hit harder and leave a trail of fire in their wake that deals damage over time."
         },
         "demoYoutubeId": null
       },
