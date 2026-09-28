@@ -47999,8 +47999,8 @@ const HEROES = [
           "en": "Recommended build"
         },
         "summary": {
-          "fr": "Build qui passe partout : le cœur obscur tient la zone et réduit au silence, l'Éruption du Vide fait les dégâts.",
-          "en": "A build for any situation: the Dark Heart holds the ground and silences, while Void Eruption deals the damage."
+          "fr": "Build qui passe partout.",
+          "en": "A build for any situation."
         },
         "buildCodeTitle": {
           "fr": "CLIQUER POUR COPIER LE BUILD",
