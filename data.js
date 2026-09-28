@@ -107,6 +107,10 @@ const STREAMER_CONFIG = {
           {
             "fr": "Le build de Xal'atath est en ligne : les talents à prendre et le code à copier en jeu.",
             "en": "Xal'atath's build is online: the Talents to pick and the code to paste in game."
+          },
+          {
+            "fr": "Des conseils de jeu sur Xal'atath : le placement de la Salve du Vide et ce que permet Pas du Vide.",
+            "en": "Gameplay tips on Xal'atath: how to position Void Volley and what Void Step lets you do."
           }
         ]
       },
@@ -47974,8 +47978,16 @@ const HEROES = [
     ],
     "tips": [
       {
-        "fr": "Xal'atath est jouable sur le PTR ; sa sortie en jeu est prévue le 28 septembre.",
-        "en": "Xal'atath is playable on the PTR; she goes live in game on September 28."
+        "fr": "Pense à te replacer après ta Salve du Vide (D) : ta cible doit être entre toi et le point d'impact pour se manger les orbes.",
+        "en": "Reposition after your Void Volley (D): your target has to sit between you and the impact point to eat the orbs."
+      },
+      {
+        "fr": "Tu peux enchaîner tes sorts (A) et (Z) pendant Pas du Vide (E), mais pas ta Salve du Vide (D).",
+        "en": "You can still chain (Q) and (W) during Void Step (E), but not your Void Volley (D)."
+      },
+      {
+        "fr": "Réappuie sur Pas du Vide (E) pour l'arrêter où tu veux : c'est comme ça que tu fuis un fight ou que tu chase une cible.",
+        "en": "Re-press Void Step (E) to end it where you want: that's how you escape a fight or chase a target down."
       }
     ],
     "builds": [
