@@ -94,10 +94,22 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "26 Septembre 2026",
-      "en": "September 26, 2026"
+      "fr": "28 Septembre 2026",
+      "en": "September 28, 2026"
     },
     "changelog": [
+      {
+        "date": {
+          "fr": "28 Septembre 2026",
+          "en": "September 28, 2026"
+        },
+        "items": [
+          {
+            "fr": "Le build de Xal'atath est en ligne : les talents à prendre et le code à copier en jeu.",
+            "en": "Xal'atath's build is online: the Talents to pick and the code to paste in game."
+          }
+        ]
+      },
       {
         "date": {
           "fr": "26 Septembre 2026",
