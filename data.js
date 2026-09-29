@@ -94,8 +94,8 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "28 Septembre 2026",
-      "en": "September 28, 2026"
+      "fr": "29 Septembre 2026",
+      "en": "September 29, 2026"
     },
     "changelog": [
       {
@@ -48006,11 +48006,11 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T2311231,Xalatath]",
+        "buildCode": "[T2211231,Xalatath]",
         "videos": [],
         "updatedAt": {
-          "fr": "28 Septembre 2026",
-          "en": "September 28, 2026"
+          "fr": "29 Septembre 2026",
+          "en": "September 29, 2026"
         },
         "talentSelections": [
           {
@@ -48020,7 +48020,7 @@ const HEROES = [
           },
           {
             "level": 4,
-            "primaryId": "tmtzw8rkm3iqw8",
+            "primaryId": "tmtzw8rklsx9q0",
             "alternativeIds": []
           },
           {
