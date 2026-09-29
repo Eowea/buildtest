@@ -53,6 +53,13 @@ const STREAMER_CONFIG = {
   "latestVideos": [
     {
       "title": {
+        "fr": "Sortie de Xal'atath: Prix, Futur du jeu & Twitch Drops",
+        "en": "Xal'atath Release: Price, Future of the Game & Twitch Drops"
+      },
+      "youtubeId": "fT42D5Os9RA"
+    },
+    {
+      "title": {
         "fr": "Gameplay Xal'atath PTR - Heroes of the Storm",
         "en": "Xal'atath PTR Gameplay - Heroes of the Storm"
       },
@@ -71,13 +78,6 @@ const STREAMER_CONFIG = {
         "en": "Xal'atath - Interactions - Heroes of the Storm"
       },
       "youtubeId": "5eidOlou4fs"
-    },
-    {
-      "title": {
-        "fr": "Un prochain héros après Xal'atath ? - Heroes of the Storm",
-        "en": "Another Hero after Xal'atath? - Heroes of the Storm"
-      },
-      "youtubeId": "0-Genm604b0"
     }
   ],
   "patchVideos": [
