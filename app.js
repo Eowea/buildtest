@@ -1064,10 +1064,11 @@ function renderDetail() {
       if (!h) { history.replaceState(null,'',location.pathname); renderFooter(); return; }
       const b = h.builds[state.buildIndex];
       const heroPart = looseHashEncode(state.heroId);
+      // Le fragment se termine toujours par un « / », comme l’adresse du site.
       if (b?.buildCode) {
-        history.replaceState(null,'',`#${heroPart}/${looseHashEncode(b.buildCode)}`);
+        history.replaceState(null,'',`#${heroPart}/${looseHashEncode(b.buildCode)}/`);
       } else {
-        history.replaceState(null,'',`#${heroPart}`);
+        history.replaceState(null,'',`#${heroPart}/`);
       }
       // Le lien du pied de page emporte le fragment : il faut le réécrire chaque fois
       // que celui-ci change. Un simple changement d'onglet de build ne repasse pas par
@@ -1076,7 +1077,11 @@ function renderDetail() {
       renderFooter();
     }
     function restoreFromHash() {
-      const raw = (location.hash || '').replace(/^#/, '');
+      // Le fragment se termine par un « / ». On l’enlève avant de découper :
+      // sinon le code se lirait « [T…]/ », ne correspondrait à aucun build, et
+      // l’onglet retomberait sur le premier. Les liens partagés avant, sans ce
+      // « / », continuent de marcher : on n’en retire un que s’il y en a un.
+      const raw = (location.hash || '').replace(/^#/, '').replace(/\/+$/, '');
       if (!raw) return;
       const slashIdx = raw.indexOf('/');
       let heroId, code = '';
