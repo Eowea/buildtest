@@ -47889,8 +47889,8 @@ const HEROES = [
     "role": "AssassinDistance",
     "portrait": "assets/heroes/portraits/storm_ui_glues_draft_portrait_xalatath.png",
     "headline": {
-      "fr": "Assassine à distance, la messagère du Vide. Sortie le 28 septembre.",
-      "en": "Ranged Assassin, Harbinger of the Void. Out on September 28."
+      "fr": "Un assassin à distance qui manipule l'énergie du Vide pour submerger ses ennemis et contrôler le champ de bataille.",
+      "en": "A ranged damage dealer who manipulates void energy to overwhelm enemies and control the battlefield."
     },
     "gameplay": {
       "fr": "Xal'atath tourne autour du cœur obscur : elle marque ses cibles, envoie le cœur exploser dessus, et devient plus dangereuse à mesure que le combat s'éternise.",
