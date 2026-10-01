@@ -83,10 +83,10 @@ const STREAMER_CONFIG = {
   "patchVideos": [
     {
       "title": {
-        "fr": "NOUVEAU PATCH HotS : Skin Lúcio, Mine Hantée, Reworks, ...",
-        "en": "NEW HotS PATCH: Lúcio Skin, Haunted Mine, Reworks, ..."
+        "fr": "Patch Note PTR Xal'atath Nouveau Perso Heroes of the Storm feat @eowea",
+        "en": "Xal'atath PTR Patch Note, New Hero - Heroes of the Storm feat @eowea"
       },
-      "youtubeId": "https://youtu.be/m8kifCbSy-s"
+      "youtubeId": "_UpypfDCXz4"
     }
   ],
   "showHeroRotation": true,
