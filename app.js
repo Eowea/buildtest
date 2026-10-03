@@ -60,6 +60,21 @@
       changelogEmpty: { fr: "Rien de noté pour cette mise à jour.", en: "Nothing noted for this update." },
       footerNote: { fr: "Une erreur dans un build, un talent ou une description ?", en: "Spotted a mistake in a build, a talent or a description?" },
       footerContact: { fr: "Contact", en: "Contact" },
+      makeBuild: { fr: "Faire mon build", en: "Make my build" },
+      myBuild: { fr: "Mon build", en: "My build" },
+      myBuildHint: { fr: "Choisis un talent par palier. Le code se fabrique tout seul en dessous.", en: "Pick one Talent per tier. The code builds itself below." },
+      myBuildLeft: { fr: "Encore {n} palier à choisir.", en: "{n} tier left to pick." },
+      myBuildLeftPlural: { fr: "Encore {n} paliers à choisir.", en: "{n} tiers left to pick." },
+      myBuildReset: { fr: "Tout effacer", en: "Clear all" },
+      myBuildQuit: { fr: "Revenir aux builds", en: "Back to the builds" },
+      myBuildCodeTitle: { fr: "CLIQUER POUR COPIER TON BUILD", en: "CLICK TO COPY YOUR BUILD" },
+      optAdd: { fr: "Marquer comme optionnel", en: "Mark as optional" },
+      optRemove: { fr: "Retirer des optionnels", en: "Remove from optionals" },
+      optLegend: { fr: "Le + d'une carte la met en optionnel, 3 au maximum par palier. Ils partent dans le lien, pas dans le code du jeu.", en: "The + on a card marks it optional, 3 per tier at most. They travel in the link, not in the game code." },
+      shareLink: { fr: "Copier le lien à partager", en: "Copy the link to share" },
+      shareCopied: { fr: "Lien copié !", en: "Link copied!" },
+      shareError: { fr: "Copie impossible", en: "Copy failed" },
+      customBuildBadge: { fr: "Build partagé", en: "Shared build" },
       prevIssue: { fr: "Bug précédent", en: "Previous issue" },
       nextIssue: { fr: "Bug suivant", en: "Next issue" },
     };
@@ -82,6 +97,10 @@ const getInitialLang = () => {
       heroId: null,
       buildIndex: 0,
       formId: null,
+      // Build fabriqué par le visiteur : { heroId, picks: { palier: idDuTalent } }.
+      // Null le reste du temps — c'est ce qui distingue le mode « Faire mon build »
+      // de l'affichage normal des builds d'Eowea.
+      custom: null,
       lang: getInitialLang()
     };
 
@@ -554,6 +573,55 @@ function renderBuildCode(b) {
     </div>
   `;
 }
+    /* Copie le lien de partage d'un build maison. Même repli que pour le code :
+       navigator.clipboard est refusé hors contexte sécurisé, d'où le textarea. */
+    async function copierLien(bouton) {
+      if (!bouton) return;
+      const url = bouton.dataset.shareUrl || '';
+      if (!url) return;
+      const texteOrigine = bouton.dataset.labelOrigine || bouton.textContent;
+      bouton.dataset.labelOrigine = texteOrigine;
+
+      const retour = (cle, erreur = false) => {
+        bouton.textContent = t(cle);
+        bouton.disabled = true;
+        bouton.classList.toggle('is-copied', !erreur);
+        bouton.classList.toggle('is-copy-error', erreur);
+        clearTimeout(bouton._copyTimer);
+        bouton._copyTimer = setTimeout(() => {
+          bouton.textContent = texteOrigine;
+          bouton.disabled = false;
+          bouton.classList.remove('is-copied', 'is-copy-error');
+        }, 1600);
+      };
+
+      const heros = currentHero();
+      const marquer = () => track('lien-build-partage/' + (heros ? heros.id : 'inconnu'),
+        heros ? loc(heros.name) + ' — mon build' : 'Lien de build partagé');
+
+      try {
+        await navigator.clipboard.writeText(url);
+        retour('shareCopied', false);
+        marquer();
+      } catch (err) {
+        try {
+          const temp = document.createElement('textarea');
+          temp.value = url;
+          temp.setAttribute('readonly', '');
+          temp.style.position = 'absolute';
+          temp.style.left = '-9999px';
+          document.body.appendChild(temp);
+          temp.select();
+          document.execCommand('copy');
+          document.body.removeChild(temp);
+          retour('shareCopied', false);
+          marquer();
+        } catch (e2) {
+          retour('shareError', true);
+        }
+      }
+    }
+
     async function copyBuildCode(button) {
   if (!button) return;
 
@@ -579,10 +647,13 @@ function renderBuildCode(b) {
   // Le code copié est le signal le plus parlant : c'est le moment où un visiteur
   // emporte vraiment un build en jeu.
   const heros = currentHero();
-  const build = heros && heros.builds ? heros.builds[state.buildIndex] : null;
+  // En mode « Faire mon build », aucun build d'Eowea n'est affiché : on ne doit pas
+  // créditer le compteur de l'un des siens.
+  const build = (state.custom || !heros || !heros.builds) ? null : heros.builds[state.buildIndex];
   // Le libellé du build entre dans le chemin : sans lui, les trois builds d'un
   // même héros tomberaient dans le même compteur.
-  const cleBuild = build ? normalize((build.label || {}).fr || '').replace(/ /g, '-') : '';
+  const cleBuild = state.custom ? 'mon-build'
+    : (build ? normalize((build.label || {}).fr || '').replace(/ /g, '-') : '');
   const marquerCopie = () => track(
     'build-copie/' + (heros ? heros.id : 'inconnu') + (cleBuild ? '/' + cleBuild : ''),
     heros ? loc(heros.name) + (build ? ' — ' + loc(build.label) : '') : 'Build copié'
@@ -688,18 +759,192 @@ function renderGuide(h) {
     }
     function renderBuildVideos(h,b) { const wg=hasGuide(h); return `<section class="videos-layout${wg?' with-guide':''}">${wg?renderGuide(h):''}${renderVideoCards(b.videos)}</section>`; }
 
-function renderBuildSection(hero) { 
-  const el = $('buildSection'); 
-  if (!el) return; 
+/* =========================================================================
+   FAIRE MON BUILD
+   Le visiteur compose son propre build et le partage. Tout repose sur le format
+   de code déjà utilisé partout : [T<un chiffre par palier>,<codeKey>], où chaque
+   chiffre est le rang du talent dans son palier, dans l'ordre du talentPool.
+   Le même code sert donc à la fois à coller en jeu et à refaire le lien du site.
+   ========================================================================= */
+function paliersDe(hero) {
+  return [...new Set(((hero && hero.talentPool) || []).map(t => t.level))].sort((a, b) => a - b);
+}
+
+// picks -> code, ou null tant qu'il manque un palier : on ne fabrique jamais un
+// code incomplet, il serait refusé en jeu.
+function codeDepuisPicks(hero, picks) {
+  if (!hero || !hero.codeKey) return null;
+  const chiffres = paliersDe(hero).map(p => {
+    const dans = hero.talentPool.filter(t => t.level === p);
+    const i = dans.findIndex(t => t.id === picks[p]);
+    return i >= 0 ? String(i + 1) : null;
+  });
+  if (!chiffres.length || chiffres.some(c => c === null)) return null;
+  return `[T${chiffres.join('')},${hero.codeKey}]`;
+}
+
+// code -> picks. Rend null si le code ne colle pas à ce héros : mauvaise clé,
+// mauvais nombre de paliers, ou rang hors du palier.
+function picksDepuisCode(hero, code) {
+  const m = String(code || '').match(/^\[T(\d+),([^\]]+)\]$/);
+  if (!m || !hero || m[2] !== hero.codeKey) return null;
+  const paliers = paliersDe(hero);
+  if (m[1].length !== paliers.length) return null;
+  const picks = {};
+  for (let i = 0; i < paliers.length; i++) {
+    const dans = hero.talentPool.filter(t => t.level === paliers[i]);
+    const rang = Number(m[1][i]);
+    if (!(rang >= 1 && rang <= dans.length)) return null;
+    picks[paliers[i]] = dans[rang - 1].id;
+  }
+  return picks;
+}
+
+// Point de départ du constructeur : le build affiché, pour qu'on parte de quelque
+// chose plutôt que d'un plateau vide.
+function picksDuBuild(hero, build) {
+  const picks = {};
+  ((build && build.talentSelections) || []).forEach(sel => {
+    const t = (hero.talentPool || []).find(x => x.id === sel.primaryId);
+    if (t) picks[t.level] = t.id;
+  });
+  return picks;
+}
+function optsDuBuild(hero, build) {
+  const opts = {};
+  ((build && build.talentSelections) || []).forEach(sel => {
+    (sel.alternativeIds || []).forEach(id => {
+      const t = (hero.talentPool || []).find(x => x.id === id);
+      if (!t) return;
+      (opts[t.level] = opts[t.level] || []).push(t.id);
+    });
+  });
+  return opts;
+}
+
+/* ── Les talents optionnels dans le lien ──
+   Le code [T…] ne porte qu'un talent par palier : c'est le format du jeu, on n'y
+   touche pas. Les optionnels voyagent donc dans un troisième morceau du fragment.
+   Un palier compte au plus cinq talents : un masque de 5 bits suffit, écrit en
+   base 32, soit un caractère par palier. « o2000000 » = au palier 1, le talent de
+   rang 2 est optionnel. Absent quand il n'y a aucun optionnel. */
+const MAX_OPTIONNELS = 3;   // même plafond que l'affichage des builds d'Eowea
+
+function optionsVersTexte(hero, opts) {
+  const paliers = paliersDe(hero);
+  const chars = paliers.map(p => {
+    const dans = hero.talentPool.filter(t => t.level === p);
+    let masque = 0;
+    ((opts && opts[p]) || []).forEach(id => {
+      const i = dans.findIndex(t => t.id === id);
+      if (i >= 0 && i < 5) masque |= (1 << i);
+    });
+    return masque.toString(32);
+  });
+  return chars.some(c => c !== '0') ? 'o' + chars.join('') : '';
+}
+
+function texteVersOptions(hero, texte) {
+  const m = String(texte || '').match(/^o([0-9a-v]+)$/i);
+  if (!m) return {};
+  const paliers = paliersDe(hero);
+  if (m[1].length !== paliers.length) return {};
+  const opts = {};
+  paliers.forEach((p, i) => {
+    const dans = hero.talentPool.filter(t => t.level === p);
+    const masque = parseInt(m[1][i], 32);
+    if (!masque) return;
+    const ids = [];
+    dans.forEach((t, j) => { if (masque & (1 << j)) ids.push(t.id); });
+    if (ids.length) opts[p] = ids.slice(0, MAX_OPTIONNELS);
+  });
+  return opts;
+}
+
+function lienDuBuild(hero, code, opts) {
+  const suffixe = optionsVersTexte(hero, opts || {});
+  return location.origin + location.pathname + '#' + looseHashEncode(hero.id)
+    + '/' + looseHashEncode(code) + (suffixe ? '/' + suffixe : '') + '/';
+}
+
+function renderCustomBuilder(hero) {
+  const picks = (state.custom && state.custom.picks) || {};
+  const opts = (state.custom && state.custom.opts) || {};
+  const paliers = paliersDe(hero);
+  const code = codeDepuisPicks(hero, picks);
+  const manquants = paliers.filter(p => !picks[p]).length;
+
+  const colonnes = paliers.map(p => {
+    const dans = hero.talentPool.filter(t => t.level === p);
+    const listeOpt = opts[p] || [];
+    const plein = listeOpt.length >= MAX_OPTIONNELS;
+    const cartes = dans.map(tal => {
+      const choisi = picks[p] === tal.id;
+      const optionnel = listeOpt.includes(tal.id);
+      // Le talent retenu ne peut pas être aussi optionnel : pas de bouton sur lui.
+      const boutonOpt = choisi ? ''
+        : `<button class="talent-opt${optionnel ? ' est-option' : ''}" type="button"`
+          + ` data-opt-level="${esc(String(p))}" data-opt-id="${esc(tal.id)}"`
+          + ` title="${esc(optionnel ? t('optRemove') : t('optAdd'))}" aria-pressed="${optionnel}"`
+          + ((!optionnel && plein) ? ' disabled' : '') + `>${optionnel ? '★' : '+'}</button>`;
+      return `<div class="talent-choix${choisi ? ' is-choisi' : ''}${optionnel ? ' est-option' : ''}" data-pick-level="${esc(String(p))}" data-pick-id="${esc(tal.id)}" role="button" tabindex="0" aria-pressed="${choisi}">`
+        + boutonOpt + carteTalent(tal, null) + `</div>`;
+    }).join('');
+    return `<div class="talent-column">`
+      + `<div class="talent-level talent-column-tete${picks[p] ? ' est-rempli' : ''}">${t('level')} ${esc(String(niveauAffiche(hero, p)))}</div>`
+      + `<div class="talent-column-extra">${cartes}</div></div>`;
+  }).join('');
+
+  const pied = code
+    ? renderBuildCode({ buildCode: code, buildCodeTitle: { fr: t('myBuildCodeTitle'), en: t('myBuildCodeTitle') } })
+      + `<div class="mon-build-partage-ligne">`
+      + `<button class="btn mon-build-partage" type="button" id="monBuildPartage" data-share-url="${esc(lienDuBuild(hero, code, opts))}">${esc(t('shareLink'))}</button>`
+      + `</div>`
+    : `<div class="mon-build-reste">${esc((manquants > 1 ? t('myBuildLeftPlural') : t('myBuildLeft')).replace('{n}', manquants))}</div>`;
+
+  return `<section class="mon-build">`
+      + `<div class="mon-build-tete">`
+        + `<div><div class="mon-build-titre">${esc(t('myBuild'))}</div>`
+        + `<div class="mon-build-hint">${esc(t('myBuildHint'))}</div>`
+        + `<div class="mon-build-hint">${esc(t('optLegend'))}</div></div>`
+        + `<div class="mon-build-actions">`
+          + `<button class="btn" type="button" id="monBuildReset">${esc(t('myBuildReset'))}</button>`
+          + `<button class="btn" type="button" id="monBuildQuit">${esc(t('myBuildQuit'))}</button>`
+        + `</div>`
+      + `</div>`
+    + `</section>`
+    + `<section class="talent-board-wrap talents-ouverts mon-build-plateau" id="talentBoard"><div class="talent-board-scroller"><div class="talent-board-track">${colonnes}</div></div></section>`
+    + pied;
+}
+
+function renderBuildSection(hero) {
+  const el = $('buildSection');
+  if (!el) return;
+
+  // Mode « Faire mon build » : il remplace l'affichage des builds d'Eowea tant
+  // qu'on n'en sort pas.
+  if (state.custom && state.custom.heroId === hero.id) {
+    el.innerHTML = renderCustomBuilder(hero);
+    bindFloatingTriggers();
+    queueLayoutSync();
+    return;
+  }
+
   
   // Héros sans build : on annonce qu'il arrive, et on donne accès à tous les talents
   // plutôt que de laisser la section vide.
   if (!hero.builds || hero.builds.length === 0) {
     const tableau = renderTalentTable(hero);
+    // Même sans build d'Eowea, on peut composer le sien : le bouton est là aussi.
+    const boutonMien = (hero.talentPool || []).length
+      ? `<button class="btn faire-mon-build" type="button" id="faireMonBuild">${esc(t('makeBuild'))}</button>` : '';
     el.innerHTML = `<section class="build-soon">`
       + `<div class="build-soon-title">${t('buildSoon')}</div>`
       + `<p class="build-soon-text">${t('buildSoonText')}</p>`
-      + (tableau ? `<button class="build-soon-toggle" type="button" id="talentTableToggle" aria-expanded="true" aria-controls="talentBoard">${t('hideAllTalents')}</button>` : '')
+      + `<div class="build-soon-actions">`
+        + (tableau ? `<button class="build-soon-toggle" type="button" id="talentTableToggle" aria-expanded="true" aria-controls="talentBoard">${t('hideAllTalents')}</button>` : '')
+        + boutonMien
+      + `</div>`
       + `</section>${tableau}`;
     bindFloatingTriggers();
     queueLayoutSync();
@@ -738,7 +983,13 @@ const tabsHtml = sortedBuildIndices.map(i => {
     ? `<button class="talent-table-link" type="button" id="talentTableToggle" aria-expanded="false" aria-controls="talentBoard">${t('showAllTalents')}</button>`
     : '';
 
-  el.innerHTML=`<div class="build-tabs">${tabsHtml}</div>${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${lienTalents}${renderTalentBoard(hero,talents)}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
+  // Les onglets à gauche, « Faire mon build » à droite : le bouton reste visible
+  // quel que soit le nombre de builds du héros.
+  const rangeeOnglets = `<div class="build-tabs-rangee">`
+    + `<div class="build-tabs">${tabsHtml}</div>`
+    + `<button class="btn faire-mon-build" type="button" id="faireMonBuild">${esc(t('makeBuild'))}</button>`
+    + `</div>`;
+  el.innerHTML=`${rangeeOnglets}${dateHtml}<div class="build-summary">${esc(loc(b.summary))}</div>${lienTalents}${renderTalentBoard(hero,talents)}${renderBuildCode(b)}${renderBuildVideos(hero,b)}`;
   // Le build qu'on vient d'afficher est désormais vu : son badge disparaîtra au prochain
   // rendu. Le marquage est différé pour qu'il reste visible sur celui-ci.
   if (b.isNew) setTimeout(() => markBuildSeen(hero.id, b), 0);
@@ -1062,8 +1313,22 @@ function renderDetail() {
       const h = currentHero();
       clampBuildIndex(h);
       if (!h) { history.replaceState(null,'',location.pathname); renderFooter(); return; }
-      const b = h.builds[state.buildIndex];
       const heroPart = looseHashEncode(state.heroId);
+      // En mode « Faire mon build », c'est le code du visiteur qui part dans l'adresse :
+      // la barre d'adresse reste donc partageable telle quelle, à tout moment. Tant
+      // qu'il manque un palier, on ne met que le héros — un code incomplet ne vaut rien.
+      if (state.custom && state.custom.heroId === h.id) {
+        const codePerso = codeDepuisPicks(h, state.custom.picks);
+        // Les optionnels ne s'ajoutent qu'une fois le build complet : seuls, ils
+        // ne désignent rien de partageable.
+        const suffixe = codePerso ? optionsVersTexte(h, state.custom.opts) : '';
+        history.replaceState(null, '', codePerso
+          ? `#${heroPart}/${looseHashEncode(codePerso)}${suffixe ? '/' + suffixe : ''}/`
+          : `#${heroPart}/`);
+        renderFooter();
+        return;
+      }
+      const b = h.builds[state.buildIndex];
       // Le fragment se termine toujours par un « / », comme l’adresse du site.
       if (b?.buildCode) {
         history.replaceState(null,'',`#${heroPart}/${looseHashEncode(b.buildCode)}/`);
@@ -1083,22 +1348,41 @@ function renderDetail() {
       // « / », continuent de marcher : on n’en retire un que s’il y en a un.
       const raw = (location.hash || '').replace(/^#/, '').replace(/\/+$/, '');
       if (!raw) return;
-      const slashIdx = raw.indexOf('/');
-      let heroId, code = '';
-      if (slashIdx >= 0) {
-        heroId = decodeURIComponent(raw.slice(0, slashIdx));
-        code = decodeURIComponent(raw.slice(slashIdx + 1));
-      } else {
-        heroId = decodeURIComponent(raw);
-      }
+      // Trois morceaux au plus : héros / code / optionnels. Le code [T…] ne contient
+      // jamais de « / », la découpe est donc sûre. Les liens plus anciens n'ont que
+      // les deux premiers morceaux, ou le seul héros : ils restent valables.
+      const morceaux = raw.split('/');
+      const decode = s => { try { return decodeURIComponent(s); } catch { return s; } };
+      const heroId = decode(morceaux[0] || '');
+      const code = morceaux[1] ? decode(morceaux[1]) : '';
+      const optTexte = morceaux[2] || '';
       if (heroId && HEROES.some(h => h.id === heroId && h.enabled !== false)) {
         const hero = HEROES.find(h => h.id === heroId);
         state.heroId = heroId;
         if (code) {
-          const bidx = hero.builds.findIndex(b => b.buildCode === code);
-          state.buildIndex = bidx >= 0 ? bidx : firstBuildIndex(hero);
+          const bidx = (hero.builds || []).findIndex(b => b.buildCode === code);
+          const picks = picksDepuisCode(hero, code);
+          const optsLus = picks ? texteVersOptions(hero, optTexte) : {};
+          const aDesOptions = Object.keys(optsLus).length > 0;
+          // Un visiteur part souvent d'un build d'Eowea et n'y change que les
+          // optionnels : le code reste alors identique au sien. Sans ce test sur
+          // les optionnels, le lien retomberait sur le build d'Eowea et le travail
+          // du visiteur serait perdu en silence.
+          if (bidx >= 0 && !aDesOptions) {
+            state.buildIndex = bidx;
+            state.custom = null;
+          } else if (picks) {
+            // Code inconnu, ou code connu mais assorti d'optionnels : dans les deux
+            // cas c'est le build d'un visiteur, on l'ouvre tel quel.
+            state.custom = { heroId: heroId, picks, opts: optsLus };
+            state.buildIndex = firstBuildIndex(hero);
+          } else {
+            state.custom = null;
+            state.buildIndex = bidx >= 0 ? bidx : firstBuildIndex(hero);
+          }
         } else {
           state.buildIndex = firstBuildIndex(hero);
+          state.custom = null;
         }
       }
     }
@@ -1466,6 +1750,7 @@ function goToHero(heroId) {
     state.heroId = heroId;
     state.buildIndex = firstBuildIndex(heroObj);
     state.formId = null;
+    state.custom = null;   // changer de héros sort du constructeur
     renderAll();
 
   setTimeout(() => {
@@ -1527,6 +1812,69 @@ els.detailView.addEventListener('click', (e) => {
     });
 
    els.detailView.addEventListener('click', (e) => {
+  // --- Faire mon build ---
+  if (e.target.closest('#faireMonBuild')) {
+    const h = currentHero();
+    if (!h) return;
+    // On démarre sur le build affiché plutôt que sur un plateau vide : il y a
+    // toujours quelque chose à modifier, et le code est complet dès le départ.
+    const depart = (h.builds || [])[clampBuildIndex(h)];
+    state.custom = {
+      heroId: h.id,
+      picks: depart ? picksDuBuild(h, depart) : {},
+      opts: depart ? optsDuBuild(h, depart) : {}
+    };
+    renderBuildSection(h);
+    updateHash();
+    return;
+  }
+  // Le bouton « optionnel » vit à l'intérieur de la carte cliquable : il doit être
+  // traité avant, sinon un clic dessus changerait aussi le talent retenu.
+  const bascule = e.target.closest('[data-opt-id]');
+  if (bascule && state.custom) {
+    const h = currentHero();
+    if (!h) return;
+    const p = Number(bascule.dataset.optLevel), id = bascule.dataset.optId;
+    const liste = state.custom.opts[p] || [];
+    if (liste.includes(id)) state.custom.opts[p] = liste.filter(x => x !== id);
+    else if (liste.length < MAX_OPTIONNELS) state.custom.opts[p] = [...liste, id];
+    if (!(state.custom.opts[p] || []).length) delete state.custom.opts[p];
+    renderBuildSection(h);
+    updateHash();
+    return;
+  }
+  const choix = e.target.closest('[data-pick-id]');
+  if (choix && state.custom) {
+    const h = currentHero();
+    if (!h) return;
+    const p = Number(choix.dataset.pickLevel), id = choix.dataset.pickId;
+    state.custom.picks[p] = id;
+    // Un talent retenu ne peut pas rester dans les optionnels du même palier.
+    const reste = (state.custom.opts[p] || []).filter(x => x !== id);
+    if (reste.length) state.custom.opts[p] = reste; else delete state.custom.opts[p];
+    renderBuildSection(h);
+    updateHash();
+    return;
+  }
+  if (e.target.closest('#monBuildReset')) {
+    const h = currentHero();
+    if (!h || !state.custom) return;
+    state.custom.picks = {};
+    state.custom.opts = {};
+    renderBuildSection(h);
+    updateHash();
+    return;
+  }
+  if (e.target.closest('#monBuildQuit')) {
+    const h = currentHero();
+    state.custom = null;
+    if (h) { state.buildIndex = firstBuildIndex(h); renderBuildSection(h); }
+    updateHash();
+    return;
+  }
+  const partage = e.target.closest('#monBuildPartage[data-share-url]');
+  if (partage) { copierLien(partage); return; }
+
   const tab = e.target.closest('[data-build-index]');
   if (tab) {
     state.buildIndex = Number(tab.dataset.buildIndex);
