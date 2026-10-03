@@ -2493,3 +2493,61 @@ a.contact-value:hover { color: var(--gold-bright); border-bottom-color: var(--go
    palier sont tous des choix équivalents, côte à côte : le trait ne relie rien et ne
    fait que barrer les cartes. */
 .mon-build-plateau .talent-column-extra::before { display: none; }
+
+/* ═══════════════════════════════
+   AUTEURS DES BUILDS
+   ═══════════════════════════════ */
+/* L'auteur se lit sur la même ligne que la date, séparé d'un point médian. */
+.build-date-sep { margin: 0 8px; color: var(--text-muted); }
+.build-auteur strong { color: var(--text-bright); font-weight: 700; }
+
+/* « Voir les builds de : » sur l'accueil. */
+.auteurs-section { margin: 26px 0 8px; }
+.auteurs-liste {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.auteur-puce {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 9px 18px;
+    border-radius: 2px;
+    border: 1px solid var(--gold-border);
+    background: var(--gold-soft);
+    color: var(--text-bright);
+    cursor: pointer;
+    transition: all var(--t);
+}
+.auteur-puce:hover {
+    background: var(--gold-glow);
+    border-color: var(--gold-bright);
+    box-shadow: 0 0 14px var(--gold-glow);
+}
+.auteur-puce.active {
+    background: var(--gold-glow);
+    border-color: var(--gold-bright);
+    box-shadow: 0 0 14px var(--gold-glow);
+}
+.auteur-nom {
+    font-family: 'Metronic for Blizzard', 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--gold-bright);
+}
+.auteur-nb { font-size: 12px; color: var(--text-dim); }
+
+/* Le filtre actif, à côté des rôles : doré pour se distinguer d'eux, avec sa croix. */
+.filter-chip.filtre-auteur {
+    border-color: var(--gold-border);
+    color: var(--gold-bright);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.filtre-auteur-x { font-size: 11px; opacity: .8; }
+.filter-chip.filtre-auteur:hover .filtre-auteur-x { opacity: 1; }

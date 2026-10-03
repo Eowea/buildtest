@@ -475,6 +475,18 @@ function refuserEditeur(quoi){
   toast("Ton compte éditeur ne peut que travailler les builds" + (quoi ? " : " + quoi + " est réservé à Eowea" : ''), 'error');
   return false;
 }
+
+/* Chaque build porte le pseudo du compte qui l'a créé (champ author), affiché sur le
+   site sous le build. Les builds d'avant ce champ n'en ont pas : ils sont d'Eowea,
+   comme le site les présente. */
+const AUTEUR_PAR_DEFAUT = 'Eowea';
+function auteurDuBuild(b){ return String((b && b.author) || '').trim() || AUTEUR_PAR_DEFAUT; }
+// Un éditeur ne touche qu'à ses propres builds. Sans ça, il pourrait réécrire un build
+// d'Eowea qui continuerait d'afficher « Auteur : Eowea » sur le site : l'attribution
+// serait fausse. L'admin, lui, peut tout modifier.
+function peutModifierBuild(b){
+  return !estEditeur() || auteurDuBuild(b).toLowerCase() === String(currentUser || '').toLowerCase();
+}
 let currentHeroIndex = null;
 let currentTab = 'infos';
 let dirty = false;
@@ -1877,9 +1889,15 @@ function setBugNote(idx, talentId, lang, value){
 
 /* ---------- Onglet Builds ---------- */
 function renderBuildsTab(hero){
-  const indices = hero.builds.map((_, i) => i);
+  // Un éditeur ne voit que ses propres builds : ceux des autres ne lui sont pas proposés.
+  const indices = hero.builds.map((_, i) => i).filter(i => peutModifierBuild(hero.builds[i]));
   indices.sort((a, b) => (hero.builds[a].order ?? 0) - (hero.builds[b].order ?? 0));
-  let html = indices.map((i, pos) => renderOneBuild(hero, hero.builds[i], i, pos)).join('');
+  const caches = hero.builds.length - indices.length;
+  let html = '';
+  if (caches) {
+    html += `<small class="help" style="display:block;margin-bottom:12px;">${caches} build${caches > 1 ? 's' : ''} d'autres auteurs ${caches > 1 ? 'ne sont pas affichés' : "n'est pas affiché"} ici : tu ne peux travailler que les tiens.</small>`;
+  }
+  html += indices.map((i, pos) => renderOneBuild(hero, hero.builds[i], i, pos)).join('');
   html += `<button class="list-add-btn" onclick="addBuild(${currentHeroIndex})">+ Ajouter un build</button>`;
   return html;
 }
@@ -1905,13 +1923,18 @@ function renderOneBuild(hero, b, i, pos){
       </div>
     </div>
   `).join('');
+  // Le glisser-déposer renumérote l'ordre de TOUS les builds du héros d'après les positions
+  // affichées. Un éditeur ne voit que les siens : ses positions ne correspondraient pas à
+  // la liste complète et bousculeraient les builds d'Eowea. Il garde le champ « Ordre ».
+  const glisser = estEditeur() ? '' : ` data-drag-item data-drag-list="builds" data-drag-index="${pos}"`;
   return `
-    <details class="collapsible" data-uid="${buildUid}"${collapsibleState[buildUid]?' open':''} data-build-index="${i}" data-drag-item data-drag-list="builds" data-drag-index="${pos}">
+    <details class="collapsible" data-uid="${buildUid}"${collapsibleState[buildUid]?' open':''} data-build-index="${i}"${glisser}>
       <summary>
-        <span class="drag-handle" title="Glisser pour réordonner">⠿</span>
+        ${estEditeur() ? '' : '<span class="drag-handle" title="Glisser pour réordonner">⠿</span>'}
         <span class="chevron">▸</span>
         <span class="s-title">${escapeHtml(b.label?.fr || 'Build sans nom')}</span>
         <span class="s-sub">
+          <span style="color:var(--text-dim);">par ${escapeHtml(auteurDuBuild(b))}</span>
           ${b.isNew?'<span style="color:var(--gold);">● MàJ</span>':''}
           <span class="s-dot ${b.enabled?'on':'off'}" style="background:${b.enabled?'var(--green)':'var(--red)'}"></span>
           <span style="color:${b.enabled?'var(--green)':'var(--red)'};font-weight:700;">${b.enabled?'PUBLIÉ':'NON PUBLIÉ'}</span>
@@ -1940,6 +1963,16 @@ function renderOneBuild(hero, b, i, pos){
       <div class="row">
         <div class="field"><label>Nom du build (FR)</label><input value="${escapeHtml(b.label?.fr)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'label.fr',this.value)" /></div>
         <div class="field"><label>Nom du build (EN)</label><input value="${escapeHtml(b.label?.en)}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'label.en',this.value)" /></div>
+      </div>
+      <!-- data-no-touch sur le conteneur et non sur l'input : réattribuer un build ne le
+           modifie pas, il ne doit donc pas le redater. Et touchBuild() écrit la date dans
+           les deux premiers input[data-no-touch] du bloc — un input marqué ici, placé
+           avant les dates, recevrait la date à leur place. -->
+      <div class="field" data-no-touch><label>Auteur</label>
+        ${estEditeur()
+          ? `<input value="${escapeHtml(auteurDuBuild(b))}" disabled />`
+          : `<input value="${escapeHtml(auteurDuBuild(b))}" oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'author',this.value.trim())" />`}
+        <small class="help">Pseudo affiché sous ce build sur le site, et dans « Voir les builds de ». Rempli tout seul avec le compte qui crée le build${estEditeur() ? '.' : ' ; tu peux le réattribuer.'}</small>
       </div>
       <div class="row">
         <div class="field"><label>Résumé (FR)</label><textarea oninput="setNested(HEROES[${currentHeroIndex}].builds[${i}],'summary.fr',this.value)">${escapeHtml(b.summary?.fr)}</textarea></div>
@@ -2192,13 +2225,19 @@ function addBuild(idx){
     enabled: true, order: (HEROES[idx].builds.length+1),
     label:{fr:'Nouveau build',en:'New build'}, updatedAt:dateDuJour(),
     summary:{fr:'',en:''}, buildCodeTitle:{fr:"A COLLER DANS L'ARBRE DES TALENTS",en:"PASTE IN TALENT TREE"},
-    buildCode:'', videos:[], talentSelections:[]
+    buildCode:'', videos:[], talentSelections:[],
+    // Le build appartient au compte connecté : c'est ce nom qu'affiche le site.
+    author: currentUser || AUTEUR_PAR_DEFAUT
   };
   collapsibleState[assignUid(b)] = true;
   HEROES[idx].builds.push(b);
   markDirty(); renderHeroPanel();
 }
 function removeBuild(idx, bIdx){
+  if (!peutModifierBuild(HEROES[idx].builds[bIdx])){
+    toast("Ton compte éditeur ne peut supprimer que ses propres builds", 'error');
+    return false;
+  }
   if (!confirm('Supprimer ce build ?')) return;
   HEROES[idx].builds.splice(bIdx,1);
   markDirty(); renderHeroPanel();

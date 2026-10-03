@@ -78,6 +78,12 @@
       customBuildIntro: { fr: "Build composé par un visiteur, pas par Eowea.", en: "Build put together by a visitor, not by Eowea." },
       editThisBuild: { fr: "Modifier ce build", en: "Edit this build" },
       seeRecommended: { fr: "Voir les builds recommandés", en: "See the recommended builds" },
+      buildAuthor: { fr: "Auteur :", en: "Author:" },
+      seeBuildsBy: { fr: "Voir les builds de :", en: "See builds by:" },
+      buildsBy: { fr: "Builds de {n}", en: "Builds by {n}" },
+      clearAuthor: { fr: "Retirer ce filtre", en: "Clear this filter" },
+      authorHeroCount: { fr: "{n} héros", en: "{n} heroes" },
+      authorHeroCountSingular: { fr: "{n} héros", en: "{n} hero" },
       previewBuild: { fr: "Voir le rendu", en: "Preview" },
       prevIssue: { fr: "Bug précédent", en: "Previous issue" },
       nextIssue: { fr: "Bug suivant", en: "Next issue" },
@@ -105,6 +111,10 @@ const getInitialLang = () => {
       // Null le reste du temps — c'est ce qui distingue le mode « Partager mon build »
       // de l'affichage normal des builds d'Eowea.
       custom: null,
+      // Filtre « Voir les builds de » : le pseudo choisi, ou null. Il restreint la
+      // liste des héros à ceux où cet auteur a un build, puis les onglets d'un héros
+      // à ses seuls builds.
+      auteur: null,
       lang: getInitialLang()
     };
 
@@ -248,6 +258,31 @@ function markEverythingAsSeen(hero) {
 
     const visibleHeroes = () => HEROES.filter(h=>h.enabled!==false);
     const roles = () =>['all',...new Set(visibleHeroes().map(h=>h.role))];
+
+    /* ── Les auteurs des builds ──
+       Chaque build porte le pseudo de celui qui l'a créé dans l'admin (champ author).
+       Les builds antérieurs à ce champ n'en ont pas : ils sont d'Eowea. On compare les
+       pseudos sans tenir compte de la casse, pour qu'« eowea » et « Eowea » ne fassent
+       pas deux auteurs. Les builds désactivés sont déjà écartés au chargement. */
+    const AUTEUR_PAR_DEFAUT = 'Eowea';
+    const auteurDuBuild = b => String((b && b.author) || '').trim() || AUTEUR_PAR_DEFAUT;
+    const memeAuteur = (a, b) => String(a || '').toLowerCase() === String(b || '').toLowerCase();
+    const heroAUnBuildDe = (h, nom) => (h.builds || []).some(b => memeAuteur(auteurDuBuild(b), nom));
+    // Les auteurs présents sur le site — Eowea d'abord, puis par ordre alphabétique —
+    // avec le nombre de héros où chacun a au moins un build.
+    function listeAuteurs() {
+      const vus = new Map();
+      visibleHeroes().forEach(h => (h.builds || []).forEach(b => {
+        const nom = auteurDuBuild(b), cle = nom.toLowerCase();
+        if (!vus.has(cle)) vus.set(cle, { nom, heros: new Set() });
+        vus.get(cle).heros.add(h.id);
+      }));
+      return [...vus.values()]
+        .map(a => ({ nom: a.nom, nbHeros: a.heros.size }))
+        .sort((a, b) => memeAuteur(a.nom, AUTEUR_PAR_DEFAUT) ? -1
+          : memeAuteur(b.nom, AUTEUR_PAR_DEFAUT) ? 1
+          : a.nom.localeCompare(b.nom, state.lang, { sensitivity: 'base' }));
+    }
     // normalize() remplace la ponctuation par des espaces : "E.T.C." devient "e t c",
     // que "etc" ne retrouve pas. On compare donc aussi une forme compacte, sans aucun
     // séparateur, qui rattrape "etc", "dva", "anubarak", "sgtmarteau", "ltmorales".
@@ -257,13 +292,27 @@ function markEverythingAsSeen(hero) {
       return normalize(h.name?.fr).includes(q) || normalize(h.name?.en).includes(q)
           || compact(h.name?.fr).includes(qc) || compact(h.name?.en).includes(qc);
     }
-    function filteredHeroes() { const q=normalize(state.search), qc=compact(state.search); return visibleHeroes().filter(h=>(state.role==='all'||h.role===state.role)&&heroMatchesSearch(h,q,qc)).sort((a,b)=>loc(a.name).localeCompare(loc(b.name),state.lang,{sensitivity:'base'})); }
+    function filteredHeroes() { const q=normalize(state.search), qc=compact(state.search); return visibleHeroes().filter(h=>(state.role==='all'||h.role===state.role)&&(!state.auteur||heroAUnBuildDe(h,state.auteur))&&heroMatchesSearch(h,q,qc)).sort((a,b)=>loc(a.name).localeCompare(loc(b.name),state.lang,{sensitivity:'base'})); }
+    // Les builds affichés pour un héros : tous, ou seulement ceux de l'auteur filtré.
+    // Ce sont des indices dans hero.builds, pour que le reste du code n'ait rien à changer.
+    function indicesBuildsVisibles(h) {
+      const tous = (h?.builds || []).map((_, i) => i);
+      if (!state.auteur) return tous;
+      const siens = tous.filter(i => memeAuteur(auteurDuBuild(h.builds[i]), state.auteur));
+      // Héros sans build de cet auteur : on ne laisse pas la section vide.
+      return siens.length ? siens : tous;
+    }
     const currentHero = () => HEROES.find(h=>h.id===state.heroId&&h.enabled!==false)||null;
     function clampBuildIndex(h) { if(!h?.builds?.length){state.buildIndex=0;return 0;} state.buildIndex=Math.min(h.builds.length-1,Math.max(0,Number(state.buildIndex)||0)); return state.buildIndex; }
     function firstBuildIndex(h) {
       if (!h?.builds?.length) return 0;
+      // Avec le filtre auteur, le premier build est le premier des siens.
+      const permis = new Set(indicesBuildsVisibles(h));
       let bestIdx = 0, bestOrder = Infinity;
-      h.builds.forEach((b, i) => { const o = b.order ?? 0; if (o < bestOrder) { bestOrder = o; bestIdx = i; } });
+      h.builds.forEach((b, i) => {
+        if (!permis.has(i)) return;
+        const o = b.order ?? 0; if (o < bestOrder) { bestOrder = o; bestIdx = i; }
+      });
       return bestIdx;
     }
     function ensureSelection() { const l=filteredHeroes(); if(state.heroId&&(!currentHero()||!l.some(h=>h.id===state.heroId))){state.heroId=null;state.buildIndex=0;} clampBuildIndex(currentHero()); }
@@ -400,7 +449,15 @@ function markEverythingAsSeen(hero) {
       document.getElementById('changelogBtn')?.focus();
     }
     
-    function renderFilters() { els.roleFilters.innerHTML=roles().map(r=>`<button class="filter-chip${state.role===r?' active':''}" type="button" data-role="${r}">${locRole(r)}</button>`).join(''); }
+    function renderFilters() {
+      const puces = roles().map(r=>`<button class="filter-chip${state.role===r?' active':''}" type="button" data-role="${r}">${locRole(r)}</button>`).join('');
+      // Le filtre auteur s'affiche à côté des rôles tant qu'il est actif : on voit sur
+      // toutes les pages pourquoi la liste est réduite, et on le retire d'un clic.
+      const auteur = state.auteur
+        ? `<button class="filter-chip filtre-auteur active" type="button" id="retirerAuteur" title="${esc(t('clearAuthor'))}" aria-label="${esc(t('clearAuthor'))}">${esc(t('buildsBy').replace('{n}', state.auteur))}<span class="filtre-auteur-x" aria-hidden="true">✕</span></button>`
+        : '';
+      els.roleFilters.innerHTML = puces + auteur;
+    }
     function renderHeroList() {
     const hList = filteredHeroes();
     els.resultsCount.textContent = hList.length > 1 ? t('resultsCount', {n:hList.length}) : t('resultsCountSingular', {n:hList.length});
@@ -411,7 +468,8 @@ function markEverythingAsSeen(hero) {
     }
 
     els.heroList.innerHTML = hList.map(h => {
-        const bCount = (h.builds || []).filter(b => b.enabled !== false).length;
+        // Avec le filtre auteur, le compteur ne donne que ses builds sur ce héros.
+        const bCount = indicesBuildsVisibles(h).length;
         
         // --- LOGIQUE DE PRIORITÉ DES BADGES ---
         let badgeHtml = '';
@@ -1010,11 +1068,15 @@ function renderBuildSection(hero) {
     return;
   }
   
-  const b = hero.builds[clampBuildIndex(hero)] || hero.builds[0]; 
-  
+  // Avec le filtre auteur, seuls ses builds ont un onglet. Si le build mémorisé n'est
+  // pas l'un des siens (lien ouvert avant de filtrer, par exemple), on prend le premier.
+  const visibles = indicesBuildsVisibles(hero);
+  if (!visibles.includes(clampBuildIndex(hero))) state.buildIndex = firstBuildIndex(hero);
+  const b = hero.builds[clampBuildIndex(hero)] || hero.builds[0];
+
   // --- MODIFICATION ICI ---
   // On ajoute une vérification "x.isNew" sur chaque build dans le .map()
-const sortedBuildIndices = hero.builds.map((_, i) => i).sort((a, b) => (hero.builds[a].order ?? 0) - (hero.builds[b].order ?? 0));
+const sortedBuildIndices = visibles.slice().sort((a, b) => (hero.builds[a].order ?? 0) - (hero.builds[b].order ?? 0));
 const tabsHtml = sortedBuildIndices.map(i => {
     const x = hero.builds[i];
     const newBadge = (x.isNew && !hasSeenBuild(hero.id, x)) ? `<span class="new-badge">${t('newBadge')}</span>` : '';
@@ -1030,9 +1092,14 @@ const tabsHtml = sortedBuildIndices.map(i => {
 }).join('');
   // -------------------------
 
-  const dateHtml = b.updatedAt 
-    ? `<div class="build-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> ${t('lastUpdate')} ${esc(loc(b.updatedAt))}</div>` 
-    : '';
+  // La ligne sous les onglets : la date de mise à jour quand il y en a une, puis
+  // toujours l'auteur — un build sans date reste attribué.
+  const dateHtml = `<div class="build-date">`
+    + (b.updatedAt
+        ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> ${t('lastUpdate')} ${esc(loc(b.updatedAt))}<span class="build-date-sep" aria-hidden="true">·</span>`
+        : '')
+    + `<span class="build-auteur">${esc(t('buildAuthor'))} <strong>${esc(auteurDuBuild(b))}</strong></span>`
+    + `</div>`;
   
   // Lien discret posé au-dessus du plateau : il reste en place pendant que les colonnes
   // s'allongent sous lui, sans que le bouton se dérobe sous le curseur au moment du clic.
@@ -1068,7 +1135,24 @@ function renderHomeVideoSections() {
     </div>`;
 
   const rotationHtml = STREAMER_CONFIG.showHeroRotation !== false ? renderHeroRotationSection() : '';
-  return `<div class="videos-layout with-guide">${col('latestVideoTitle', latestMarkup)}${col('patchAnalysisTitle', patchMarkup)}</div>${rotationHtml}`;
+  return `<div class="videos-layout with-guide">${col('latestVideoTitle', latestMarkup)}${col('patchAnalysisTitle', patchMarkup)}</div>${renderListeAuteurs()}${rotationHtml}`;
+}
+
+// « Voir les builds de : » — un bouton par auteur, avec le nombre de héros où il a un
+// build. Un clic filtre la liste des héros ; un second clic sur le même le retire.
+function renderListeAuteurs() {
+  const auteurs = listeAuteurs();
+  if (!auteurs.length) return '';
+  const puces = auteurs.map(a => {
+    const actif = memeAuteur(a.nom, state.auteur);
+    const nb = (a.nbHeros > 1 ? t('authorHeroCount') : t('authorHeroCountSingular')).replace('{n}', a.nbHeros);
+    return `<button class="auteur-puce${actif ? ' active' : ''}" type="button" data-auteur="${esc(a.nom)}" aria-pressed="${actif}">`
+      + `<span class="auteur-nom">${esc(a.nom)}</span><span class="auteur-nb">${esc(nb)}</span></button>`;
+  }).join('');
+  return `<section class="auteurs-section">`
+    + `<h2 class="section-title" style="text-align:center;margin-bottom:16px;">${esc(t('seeBuildsBy'))}</h2>`
+    + `<div class="auteurs-liste">${puces}</div>`
+    + `</section>`;
 }
 
 /* =========================================================================
@@ -1776,6 +1860,7 @@ window.goToBuild = (heroId, buildIndex) => {
 // Un timer pour éviter que la recherche ne saccade à chaque lettre frappée
     let searchTimeout;
     els.roleFilters.addEventListener('click', (e) => {
+  if (e.target.closest('#retirerAuteur')) { choisirAuteur(null); return; }
   const btn = e.target.closest('[data-role]');
   if (!btn) return;
 
@@ -1793,6 +1878,22 @@ window.goToBuild = (heroId, buildIndex) => {
   scrollToHeroes();
 });
 
+// Active le filtre « Voir les builds de » — ou le retire, avec null. Une fiche déjà
+// ouverte reste ouverte si l'auteur y a un build (ses onglets se réduisent alors aux
+// siens) ; sinon on la referme, puisqu'elle n'aurait plus rien à montrer de lui.
+function choisirAuteur(nom) {
+  state.auteur = nom || null;
+  state.custom = null;
+  const h = currentHero();
+  if (h) {
+    if (state.auteur && !heroAUnBuildDe(h, state.auteur)) { state.heroId = null; state.buildIndex = 0; }
+    else state.buildIndex = firstBuildIndex(h);
+  }
+  if (nom) track('auteur/' + normalize(nom).replace(/ /g, '-'), 'Builds de ' + nom);
+  renderAll();
+  if (nom) scrollToHeroes();
+}
+
 // Ouvre la fiche d'un héros et amène la vue dessus. Utilisé par la liste des héros
 // comme par les portraits de la rotation gratuite.
 function goToHero(heroId) {
@@ -1805,6 +1906,9 @@ function goToHero(heroId) {
     // on les lève pour que le clic aboutisse toujours.
     if (state.role !== 'all' && heroObj.role !== state.role) state.role = 'all';
     if (state.search) { state.search = ''; if (els.searchInput) els.searchInput.value = ''; }
+    // Même chose pour le filtre auteur : un héros qu'il n'a pas fait (depuis la rotation
+    // gratuite, par exemple) s'ouvre normalement plutôt que de rester invisible.
+    if (state.auteur && !heroAUnBuildDe(heroObj, state.auteur)) state.auteur = null;
 
     track('heros/' + heroId, heroObj.name.fr);
     state.heroId = heroId;
@@ -1834,6 +1938,14 @@ els.detailView.addEventListener('click', (e) => {
     const btn = e.target.closest('.rotation-hero[data-hero-id]');
     if (!btn) return;
     goToHero(btn.dataset.heroId);
+});
+
+// « Voir les builds de : » — un clic choisit l'auteur, un second clic sur le même le retire.
+els.detailView.addEventListener('click', (e) => {
+    const puce = e.target.closest('.auteur-puce[data-auteur]');
+    if (!puce) return;
+    const nom = puce.dataset.auteur;
+    choisirAuteur(memeAuteur(nom, state.auteur) ? null : nom);
 });
     els.searchInput.addEventListener('input', e => {
       clearTimeout(searchTimeout);
