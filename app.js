@@ -60,7 +60,7 @@
       changelogEmpty: { fr: "Rien de noté pour cette mise à jour.", en: "Nothing noted for this update." },
       footerNote: { fr: "Une erreur dans un build, un talent ou une description ?", en: "Spotted a mistake in a build, a talent or a description?" },
       footerContact: { fr: "Contact", en: "Contact" },
-      makeBuild: { fr: "Faire mon build", en: "Make my build" },
+      makeBuild: { fr: "Partager mon build", en: "Share my build" },
       myBuild: { fr: "Mon build", en: "My build" },
       myBuildHint: { fr: "Choisis un talent par palier. Le code se fabrique tout seul en dessous.", en: "Pick one Talent per tier. The code builds itself below." },
       myBuildLeft: { fr: "Encore {n} palier à choisir.", en: "{n} tier left to pick." },
@@ -98,7 +98,7 @@ const getInitialLang = () => {
       buildIndex: 0,
       formId: null,
       // Build fabriqué par le visiteur : { heroId, picks: { palier: idDuTalent } }.
-      // Null le reste du temps — c'est ce qui distingue le mode « Faire mon build »
+      // Null le reste du temps — c'est ce qui distingue le mode « Partager mon build »
       // de l'affichage normal des builds d'Eowea.
       custom: null,
       lang: getInitialLang()
@@ -647,7 +647,7 @@ function renderBuildCode(b) {
   // Le code copié est le signal le plus parlant : c'est le moment où un visiteur
   // emporte vraiment un build en jeu.
   const heros = currentHero();
-  // En mode « Faire mon build », aucun build d'Eowea n'est affiché : on ne doit pas
+  // En mode « Partager mon build », aucun build d'Eowea n'est affiché : on ne doit pas
   // créditer le compteur de l'un des siens.
   const build = (state.custom || !heros || !heros.builds) ? null : heros.builds[state.buildIndex];
   // Le libellé du build entre dans le chemin : sans lui, les trois builds d'un
@@ -921,7 +921,7 @@ function renderBuildSection(hero) {
   const el = $('buildSection');
   if (!el) return;
 
-  // Mode « Faire mon build » : il remplace l'affichage des builds d'Eowea tant
+  // Mode « Partager mon build » : il remplace l'affichage des builds d'Eowea tant
   // qu'on n'en sort pas.
   if (state.custom && state.custom.heroId === hero.id) {
     el.innerHTML = renderCustomBuilder(hero);
@@ -983,7 +983,7 @@ const tabsHtml = sortedBuildIndices.map(i => {
     ? `<button class="talent-table-link" type="button" id="talentTableToggle" aria-expanded="false" aria-controls="talentBoard">${t('showAllTalents')}</button>`
     : '';
 
-  // Les onglets à gauche, « Faire mon build » à droite : le bouton reste visible
+  // Les onglets à gauche, « Partager mon build » à droite : le bouton reste visible
   // quel que soit le nombre de builds du héros.
   const rangeeOnglets = `<div class="build-tabs-rangee">`
     + `<div class="build-tabs">${tabsHtml}</div>`
@@ -1314,7 +1314,7 @@ function renderDetail() {
       clampBuildIndex(h);
       if (!h) { history.replaceState(null,'',location.pathname); renderFooter(); return; }
       const heroPart = looseHashEncode(state.heroId);
-      // En mode « Faire mon build », c'est le code du visiteur qui part dans l'adresse :
+      // En mode « Partager mon build », c'est le code du visiteur qui part dans l'adresse :
       // la barre d'adresse reste donc partageable telle quelle, à tout moment. Tant
       // qu'il manque un palier, on ne met que le héros — un code incomplet ne vaut rien.
       if (state.custom && state.custom.heroId === h.id) {
@@ -1812,7 +1812,7 @@ els.detailView.addEventListener('click', (e) => {
     });
 
    els.detailView.addEventListener('click', (e) => {
-  // --- Faire mon build ---
+  // --- Partager mon build ---
   if (e.target.closest('#faireMonBuild')) {
     const h = currentHero();
     if (!h) return;

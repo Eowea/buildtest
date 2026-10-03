@@ -94,10 +94,22 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "29 Septembre 2026",
-      "en": "September 29, 2026"
+      "fr": "3 Octobre 2026",
+      "en": "October 3, 2026"
     },
     "changelog": [
+      {
+        "date": {
+          "fr": "3 Octobre 2026",
+          "en": "October 3, 2026"
+        },
+        "items": [
+          {
+            "fr": "Un bouton « Partager mon build » sur chaque héros : composer ses propres talents, marquer ses optionnels, et envoyer le tout par un lien.",
+            "en": "A “Share my build” button on every Hero: pick your own Talents, mark your optionals, and send the whole thing as a link."
+          }
+        ]
+      },
       {
         "date": {
           "fr": "28 Septembre 2026",
