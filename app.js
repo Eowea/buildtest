@@ -80,7 +80,8 @@
       seeRecommended: { fr: "Voir les builds recommandés", en: "See the recommended builds" },
       buildAuthor: { fr: "Auteur :", en: "Author:" },
       seeBuildsBy: { fr: "Voir les builds de :", en: "See builds by:" },
-      buildsBy: { fr: "Builds de {n}", en: "Builds by {n}" },
+      // En français, {n} reçoit « de » ou « d' » selon le pseudo : voir libelleBuildsDe().
+      buildsBy: { fr: "Builds {n}", en: "Builds by {n}" },
       clearAuthor: { fr: "Retirer ce filtre", en: "Clear this filter" },
       authorHeroCount: { fr: "{n} héros", en: "{n} heroes" },
       authorHeroCountSingular: { fr: "{n} héros", en: "{n} hero" },
@@ -449,12 +450,19 @@ function markEverythingAsSeen(hero) {
       document.getElementById('changelogBtn')?.focus();
     }
     
+    // « Builds d'Eowea », « Builds de Malganyr » : en français, « de » s'élide devant une
+    // voyelle. Pas devant un h — dans un pseudo on ne sait pas s'il est muet.
+    function libelleBuildsDe(nom) {
+      if (state.lang !== 'fr') return t('buildsBy').replace('{n}', nom);
+      const de = /^[aeiouyàâäéèêëîïôöùûü]/i.test(nom) ? "d'" : 'de ';
+      return t('buildsBy').replace('{n}', de + nom);
+    }
     function renderFilters() {
       const puces = roles().map(r=>`<button class="filter-chip${state.role===r?' active':''}" type="button" data-role="${r}">${locRole(r)}</button>`).join('');
       // Le filtre auteur s'affiche à côté des rôles tant qu'il est actif : on voit sur
       // toutes les pages pourquoi la liste est réduite, et on le retire d'un clic.
       const auteur = state.auteur
-        ? `<button class="filter-chip filtre-auteur active" type="button" id="retirerAuteur" title="${esc(t('clearAuthor'))}" aria-label="${esc(t('clearAuthor'))}">${esc(t('buildsBy').replace('{n}', state.auteur))}<span class="filtre-auteur-x" aria-hidden="true">✕</span></button>`
+        ? `<button class="filter-chip filtre-auteur active" type="button" id="retirerAuteur" title="${esc(t('clearAuthor'))}" aria-label="${esc(t('clearAuthor'))}">${esc(libelleBuildsDe(state.auteur))}<span class="filtre-auteur-x" aria-hidden="true">✕</span></button>`
         : '';
       els.roleFilters.innerHTML = puces + auteur;
     }
