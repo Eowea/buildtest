@@ -77,6 +77,7 @@
       customBuildBadge: { fr: "Build partagé", en: "Shared build" },
       customBuildIntro: { fr: "Build composé par un visiteur, pas par Eowea.", en: "Build put together by a visitor, not by Eowea." },
       editThisBuild: { fr: "Modifier ce build", en: "Edit this build" },
+      seeRecommended: { fr: "Voir les builds recommandés", en: "See the recommended builds" },
       previewBuild: { fr: "Voir le rendu", en: "Preview" },
       prevIssue: { fr: "Bug précédent", en: "Previous issue" },
       nextIssue: { fr: "Bug suivant", en: "Next issue" },
@@ -901,7 +902,13 @@ function renderCustomView(hero) {
       + `<div class="build-tabs"><div class="build-tab-wrapper">`
         + `<button class="build-tab active" type="button" disabled>${esc(t('customBuildBadge'))}</button>`
       + `</div></div>`
-      + `<button class="btn faire-mon-build" type="button" id="monBuildEditer">${esc(t('editThisBuild'))}</button>`
+      + `<div class="mon-build-actions">`
+        // Celui qui arrive par un lien partagé n'a autrement aucun chemin vers les
+        // builds d'Eowea : ce bouton est sa seule porte d'entrée.
+        + ((hero.builds || []).length
+            ? `<button class="btn" type="button" id="monBuildRecommandes">${esc(t('seeRecommended'))}</button>` : '')
+        + `<button class="btn faire-mon-build" type="button" id="monBuildEditer">${esc(t('editThisBuild'))}</button>`
+      + `</div>`
     + `</div>`
     // On dit d'où vient ce build : sans ça, un lien partagé passerait pour une
     // recommandation d'Eowea.
@@ -1927,7 +1934,7 @@ els.detailView.addEventListener('click', (e) => {
     updateHash();
     return;
   }
-  if (e.target.closest('#monBuildQuit')) {
+  if (e.target.closest('#monBuildQuit') || e.target.closest('#monBuildRecommandes')) {
     const h = currentHero();
     state.custom = null;
     if (h) { state.buildIndex = firstBuildIndex(h); renderBuildSection(h); }
