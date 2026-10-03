@@ -75,6 +75,9 @@
       shareCopied: { fr: "Lien copié !", en: "Link copied!" },
       shareError: { fr: "Copie impossible", en: "Copy failed" },
       customBuildBadge: { fr: "Build partagé", en: "Shared build" },
+      customBuildIntro: { fr: "Build composé par un visiteur, pas par Eowea.", en: "Build put together by a visitor, not by Eowea." },
+      editThisBuild: { fr: "Modifier ce build", en: "Edit this build" },
+      previewBuild: { fr: "Voir le rendu", en: "Preview" },
       prevIssue: { fr: "Bug précédent", en: "Previous issue" },
       nextIssue: { fr: "Bug suivant", en: "Next issue" },
     };
@@ -867,6 +870,50 @@ function lienDuBuild(hero, code, opts) {
     + '/' + looseHashEncode(code) + (suffixe ? '/' + suffixe : '') + '/';
 }
 
+/* Les choix du visiteur remis dans la forme que renderTalentBoard attend : un talent
+   par palier, ses optionnels dans .alternatives. C'est ce qui permet d'afficher un
+   build partagé exactement comme un build d'Eowea, sans rien dupliquer. */
+function talentsDepuisCustom(hero, picks, opts) {
+  return paliersDe(hero).map(p => {
+    const principal = (hero.talentPool || []).find(t => t.id === picks[p]);
+    if (!principal) return null;
+    const alternatives = ((opts && opts[p]) || [])
+      .map(id => (hero.talentPool || []).find(t => t.id === id)).filter(Boolean);
+    return { ...principal, level: niveauAffiche(hero, principal.level), niveauBrut: principal.level, alternatives };
+  }).filter(Boolean);
+}
+
+/* Vue d'un build partagé : même mise en forme que les builds d'Eowea. C'est ce que
+   voit celui qui reçoit le lien — il veut lire le build, pas l'éditer. L'édition
+   reste à un clic. */
+function renderCustomView(hero) {
+  const picks = (state.custom && state.custom.picks) || {};
+  const opts = (state.custom && state.custom.opts) || {};
+  const talents = talentsDepuisCustom(hero, picks, opts);
+  const code = codeDepuisPicks(hero, picks);
+  const aDesTalentsEnPlus = (hero.talentPool || []).length > talents.length;
+
+  const lienTalents = aDesTalentsEnPlus
+    ? `<button class="talent-table-link" type="button" id="talentTableToggle" aria-expanded="false" aria-controls="talentBoard">${t('showAllTalents')}</button>`
+    : '';
+
+  return `<div class="build-tabs-rangee">`
+      + `<div class="build-tabs"><div class="build-tab-wrapper">`
+        + `<button class="build-tab active" type="button" disabled>${esc(t('customBuildBadge'))}</button>`
+      + `</div></div>`
+      + `<button class="btn faire-mon-build" type="button" id="monBuildEditer">${esc(t('editThisBuild'))}</button>`
+    + `</div>`
+    // On dit d'où vient ce build : sans ça, un lien partagé passerait pour une
+    // recommandation d'Eowea.
+    + `<div class="build-summary">${esc(t('customBuildIntro'))}</div>`
+    + lienTalents
+    + renderTalentBoard(hero, talents)
+    + (code ? renderBuildCode({ buildCode: code, buildCodeTitle: { fr: t('myBuildCodeTitle'), en: t('myBuildCodeTitle') } }) : '')
+    + (code ? `<div class="mon-build-partage-ligne">`
+        + `<button class="btn mon-build-partage" type="button" id="monBuildPartage" data-share-url="${esc(lienDuBuild(hero, code, opts))}">${esc(t('shareLink'))}</button>`
+      + `</div>` : '');
+}
+
 function renderCustomBuilder(hero) {
   const picks = (state.custom && state.custom.picks) || {};
   const opts = (state.custom && state.custom.opts) || {};
@@ -908,6 +955,7 @@ function renderCustomBuilder(hero) {
         + `<div class="mon-build-hint">${esc(t('myBuildHint'))}</div>`
         + `<div class="mon-build-hint">${esc(t('optLegend'))}</div></div>`
         + `<div class="mon-build-actions">`
+          + (code ? `<button class="btn" type="button" id="monBuildVoir">${esc(t('previewBuild'))}</button>` : '')
           + `<button class="btn" type="button" id="monBuildReset">${esc(t('myBuildReset'))}</button>`
           + `<button class="btn" type="button" id="monBuildQuit">${esc(t('myBuildQuit'))}</button>`
         + `</div>`
@@ -924,7 +972,11 @@ function renderBuildSection(hero) {
   // Mode « Partager mon build » : il remplace l'affichage des builds d'Eowea tant
   // qu'on n'en sort pas.
   if (state.custom && state.custom.heroId === hero.id) {
-    el.innerHTML = renderCustomBuilder(hero);
+    // Deux états : « vue » pour celui qui reçoit le lien, « édition » pour celui qui
+    // compose. Un build incomplet n'a rien à montrer : on reste alors en édition.
+    const complet = !!codeDepuisPicks(hero, state.custom.picks || {});
+    const enEdition = state.custom.mode === 'edition' || !complet;
+    el.innerHTML = enEdition ? renderCustomBuilder(hero) : renderCustomView(hero);
     bindFloatingTriggers();
     queueLayoutSync();
     return;
@@ -1373,8 +1425,9 @@ function renderDetail() {
             state.custom = null;
           } else if (picks) {
             // Code inconnu, ou code connu mais assorti d'optionnels : dans les deux
-            // cas c'est le build d'un visiteur, on l'ouvre tel quel.
-            state.custom = { heroId: heroId, picks, opts: optsLus };
+            // cas c'est le build d'un visiteur. On l'ouvre en vue, mis en forme comme
+            // un build d'Eowea — celui qui arrive par le lien veut le lire, pas l'éditer.
+            state.custom = { heroId: heroId, mode: 'vue', picks, opts: optsLus };
             state.buildIndex = firstBuildIndex(hero);
           } else {
             state.custom = null;
@@ -1821,11 +1874,20 @@ els.detailView.addEventListener('click', (e) => {
     const depart = (h.builds || [])[clampBuildIndex(h)];
     state.custom = {
       heroId: h.id,
+      mode: 'edition',
       picks: depart ? picksDuBuild(h, depart) : {},
       opts: depart ? optsDuBuild(h, depart) : {}
     };
     renderBuildSection(h);
     updateHash();
+    return;
+  }
+  // Passage d'un état à l'autre sur un build de visiteur.
+  if (e.target.closest('#monBuildEditer') || e.target.closest('#monBuildVoir')) {
+    const h = currentHero();
+    if (!h || !state.custom) return;
+    state.custom.mode = e.target.closest('#monBuildEditer') ? 'edition' : 'vue';
+    renderBuildSection(h);
     return;
   }
   // Le bouton « optionnel » vit à l'intérieur de la carte cliquable : il doit être
