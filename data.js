@@ -107,6 +107,14 @@ const STREAMER_CONFIG = {
           {
             "fr": "Un bouton « Partager mon build » sur chaque héros : composer ses propres talents, marquer ses optionnels, et envoyer le tout par un lien.",
             "en": "A “Share my build” button on every Hero: pick your own Talents, mark your optionals, and send the whole thing as a link."
+          },
+          {
+            "fr": "Un lien de build partagé s'ouvre maintenant mis en forme comme les builds du site, avec un bouton pour revenir aux builds recommandés.",
+            "en": "A shared build link now opens laid out like the site's builds, with a button back to the recommended builds."
+          },
+          {
+            "fr": "Chaque build indique son auteur, et l'accueil propose « Voir les builds de : » pour n'afficher que les builds d'une personne.",
+            "en": "Every build shows its author, and the home page offers “See builds by:” to show only one person's builds."
           }
         ]
       },

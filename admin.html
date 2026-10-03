@@ -3244,6 +3244,13 @@ function showAdminsPanel(){
           <option value="editor"${a.role === 'editor' ? ' selected' : ''}>Éditeur (limité au dépôt Eowea/buildtest)</option>
         </select>
       </div>
+      <div class="field" style="margin-top:8px;">
+        <label>Nouveau mot de passe</label>
+        <div class="row" style="gap:6px;flex-wrap:nowrap;align-items:center;">
+          <input id="newPass_${i}" type="password" autocomplete="new-password" style="flex:1;" />
+          <button type="button" style="flex:0 0 auto;" onclick="changeAdminPassword(${i})">Changer</button>
+        </div>
+      </div>
     </div>
   `).join('');
   document.getElementById('contentEl').innerHTML = `
@@ -3278,6 +3285,21 @@ async function addAdminEntry(){
   const salt = randomSalt();
   const hash = await sha256Hex(salt + ':' + password);
   ADMINS.push({ username, salt, hash, role });
+  await commitAdminsFile();
+  showAdminsPanel();
+}
+// Nouveau mot de passe : nouveau sel et nouveau hash, comme à la création. Le mot de
+// passe en clair ne quitte jamais la page.
+async function changeAdminPassword(i){
+  if (estEditeur()) return refuserEditeur('la gestion des comptes');
+  const champ = document.getElementById('newPass_' + i);
+  const password = champ ? champ.value : '';
+  if (!password){ toast('Saisis le nouveau mot de passe', 'error'); return; }
+  const nom = ADMINS[i].username;
+  if (!confirm(`Changer le mot de passe de "${nom}" ?`)) return;
+  const salt = randomSalt();
+  ADMINS[i] = { ...ADMINS[i], salt, hash: await sha256Hex(salt + ':' + password) };
+  champ.value = '';
   await commitAdminsFile();
   showAdminsPanel();
 }
