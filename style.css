@@ -2487,3 +2487,9 @@ a.contact-value:hover { color: var(--gold-bright); border-bottom-color: var(--go
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05), 0 4px 15px rgba(0, 0, 0, .5), 0 0 10px var(--blue-glow);
 }
 .talent-choix.est-option .talent-title-card { color: var(--blue-bright); }
+
+/* Pas de trait de liaison dans le constructeur. Sur le plateau d'Eowea, il relie le
+   talent retenu aux autres choix du palier, dépliés en dessous. Ici les talents d'un
+   palier sont tous des choix équivalents, côte à côte : le trait ne relie rien et ne
+   fait que barrer les cartes. */
+.mon-build-plateau .talent-column-extra::before { display: none; }
