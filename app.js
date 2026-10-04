@@ -1460,10 +1460,14 @@ function renderDetail() {
     function looseHashEncode(str) {
       return String(str).replace(/[%&#\s]/g, c => encodeURIComponent(c));
     }
+    // Le filtre auteur voyage dans l'adresse sous la forme « @Pseudo » : un lien vers
+    // « Builds de Malganyr » s'ouvre donc filtré. Pas sur un build de visiteur, qui
+    // doit rester un lien autonome.
+    const morceauAuteur = () => state.auteur ? '@' + looseHashEncode(state.auteur) + '/' : '';
     function updateHash() {
       const h = currentHero();
       clampBuildIndex(h);
-      if (!h) { history.replaceState(null,'',location.pathname); renderFooter(); return; }
+      if (!h) { history.replaceState(null,'',location.pathname + (state.auteur ? '#' + morceauAuteur() : '')); renderFooter(); return; }
       const heroPart = looseHashEncode(state.heroId);
       // En mode « Partager mon build », c'est le code du visiteur qui part dans l'adresse :
       // la barre d'adresse reste donc partageable telle quelle, à tout moment. Tant
@@ -1482,9 +1486,9 @@ function renderDetail() {
       const b = h.builds[state.buildIndex];
       // Le fragment se termine toujours par un « / », comme l’adresse du site.
       if (b?.buildCode) {
-        history.replaceState(null,'',`#${heroPart}/${looseHashEncode(b.buildCode)}/`);
+        history.replaceState(null,'',`#${heroPart}/${looseHashEncode(b.buildCode)}/${morceauAuteur()}`);
       } else {
-        history.replaceState(null,'',`#${heroPart}/`);
+        history.replaceState(null,'',`#${heroPart}/${morceauAuteur()}`);
       }
       // Le lien du pied de page emporte le fragment : il faut le réécrire chaque fois
       // que celui-ci change. Un simple changement d'onglet de build ne repasse pas par
@@ -1502,13 +1506,25 @@ function renderDetail() {
       // Trois morceaux au plus : héros / code / optionnels. Le code [T…] ne contient
       // jamais de « / », la découpe est donc sûre. Les liens plus anciens n'ont que
       // les deux premiers morceaux, ou le seul héros : ils restent valables.
-      const morceaux = raw.split('/');
       const decode = s => { try { return decodeURIComponent(s); } catch { return s; } };
+      // Le morceau « @Pseudo » est retiré avant tout : il peut suivre le héros, le code,
+      // ou rester seul (« #@Pseudo/ », la liste d'un auteur sans héros ouvert). Un pseudo
+      // absent du site est ignoré.
+      const tous = raw.split('/');
+      const brutAuteur = tous.find(m => m.startsWith('@'));
+      const morceaux = tous.filter(m => !m.startsWith('@'));
+      if (brutAuteur) {
+        const connu = listeAuteurs().find(a => memeAuteur(a.nom, decode(brutAuteur.slice(1))));
+        state.auteur = connu ? connu.nom : null;
+      }
+      if (!morceaux.length) return;
       const heroId = decode(morceaux[0] || '');
       const code = morceaux[1] ? decode(morceaux[1]) : '';
       const optTexte = morceaux[2] || '';
       if (heroId && HEROES.some(h => h.id === heroId && h.enabled !== false)) {
         const hero = HEROES.find(h => h.id === heroId);
+        // Un auteur qui n'a rien fait sur ce héros ne le filtre pas : le héros s'affiche normalement.
+        if (state.auteur && !heroAUnBuildDe(hero, state.auteur)) state.auteur = null;
         state.heroId = heroId;
         if (code) {
           const bidx = (hero.builds || []).findIndex(b => b.buildCode === code);
