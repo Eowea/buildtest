@@ -104,6 +104,25 @@
   .token-card p{color:var(--text-dim);font-size:13px;line-height:1.5;}
   .token-card ol{color:var(--text-dim);font-size:13px;line-height:1.7;padding-left:18px;}
   .token-card code{background:var(--panel-alt);padding:1px 5px;border-radius:4px;color:var(--gold);}
+  .token-card{width:540px;}
+  .token-guide{margin:16px 0 20px;}
+  .token-guide-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-dim);margin-bottom:8px;}
+  .token-path{border:1px solid var(--border);border-radius:10px;background:var(--panel-alt);margin-bottom:8px;overflow:hidden;}
+  .token-path > summary{list-style:none;cursor:pointer;padding:10px 14px 10px 34px;position:relative;display:flex;flex-direction:column;gap:2px;}
+  .token-path > summary::-webkit-details-marker{display:none;}
+  .token-path > summary::before{content:'▸';position:absolute;left:14px;top:10px;color:var(--gold);transition:transform .15s;}
+  .token-path[open] > summary::before{transform:rotate(90deg);}
+  .token-path > summary:hover{background:rgba(255,255,255,.03);}
+  .token-path[open]{border-color:var(--gold);}
+  .token-path-name{font-size:13px;font-weight:700;color:var(--text);}
+  .token-path-sub{font-size:11.5px;color:var(--text-dim);}
+  .token-path ol{margin:0;padding:4px 16px 12px 36px;}
+  .token-path li{margin-bottom:6px;}
+  .token-path li small{display:block;font-size:11.5px;opacity:.8;}
+  .token-path b{color:var(--text);}
+  .token-link{display:inline-block;font-weight:700;color:var(--gold);text-decoration:none;border:1px solid var(--gold);border-radius:6px;padding:2px 10px;margin-bottom:2px;}
+  .token-link:hover{background:var(--gold);color:var(--bg, #000);}
+  .token-guide-note{font-size:12px !important;margin:6px 0 0;}
 
   /* ---------- App shell ---------- */
   #appScreen{display:none;height:100vh;flex-direction:column;}
@@ -365,24 +384,51 @@
     <div class="eyebrow">Bonjour <span id="tokenGreetUser"></span></div>
     <h1>Connexion à GitHub</h1>
     <p>Pour enregistrer tes modifications dans le dépôt, colle ici un <strong>token GitHub personnel</strong> ayant le droit d'écrire sur le dépôt visé ci-dessous. Il reste uniquement dans ton navigateur, il n'est jamais envoyé ailleurs qu'à l'API GitHub.</p>
-    <ol>
-      <li>github.com → Settings → Developer settings → <em>Fine-grained tokens</em></li>
-      <li>Repository access → sélectionne le(s) dépôt(s) concerné(s)</li>
-      <li>Permissions → <em>Contents</em> : Read and write</li>
-      <li>Génère puis colle le token ci-dessous</li>
-    </ol>
     <div id="tokenError" class="login-error hidden"></div>
     <div class="field">
       <label>Dépôt cible</label>
       <select id="repoSelect" onchange="onRepoSelectChange()"></select>
     </div>
     <div id="customRepoFields" class="row hidden">
-      <div class="field"><label>Propriétaire (owner)</label><input id="repoOwnerInput" type="text" /></div>
-      <div class="field"><label>Dépôt</label><input id="repoNameInput" type="text" /></div>
+      <div class="field"><label>Propriétaire (owner)</label><input id="repoOwnerInput" type="text" oninput="updateTokenGuide()" /></div>
+      <div class="field"><label>Dépôt</label><input id="repoNameInput" type="text" oninput="updateTokenGuide()" /></div>
+    </div>
+    <div class="token-guide">
+      <div class="token-guide-title">Pas encore de token ? Choisis ton cas :</div>
+      <details class="token-path" id="tokenPathOwner" open>
+        <summary>
+          <span class="token-path-name">Le dépôt est sur <u>ton</u> compte GitHub</span>
+          <span class="token-path-sub">Token « Fine-grained » · recommandé</span>
+        </summary>
+        <ol>
+          <li><a id="tokenLinkOwner" class="token-link" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Ouvrir la page de création ↗</a>
+            <small>Photo de profil → Settings → Developer settings → Personal access tokens → Fine-grained tokens → <em>Generate new token</em></small></li>
+          <li><b>Token name</b> : un nom au choix (ex. « Admin Eowea »).<br><b>Expiration</b> : la durée de ton choix ; à l'échéance, il faudra en créer un nouveau.</li>
+          <li><b>Resource owner</b> : <code class="tok-owner">Eowea</code></li>
+          <li><b>Repository access</b> → <em>Only select repositories</em> → choisis <code class="tok-repo">dépôt</code></li>
+          <li><b>Permissions</b> → <em>Add permissions</em> → <em>Contents</em>, puis mets l'accès sur <em>Read and write</em>.<br><small><em>Metadata : Read-only</em> s'ajoute tout seul, c'est normal.</small></li>
+          <li><b>Generate token</b>, copie le code <code>github_pat_…</code> et colle-le plus bas.</li>
+        </ol>
+      </details>
+      <details class="token-path" id="tokenPathCollab">
+        <summary>
+          <span class="token-path-name">Tu es <u>collaborateur</u> sur le dépôt de <span class="tok-owner">Eowea</span></span>
+          <span class="token-path-sub">Token « Classic » · GitHub refuse les fine-grained aux collaborateurs</span>
+        </summary>
+        <ol>
+          <li>Vérifie d'abord que tu as <b>accepté l'invitation</b> de collaborateur (mail ou notification GitHub) : sans ça, l'écriture sera refusée.</li>
+          <li><a id="tokenLinkCollab" class="token-link" href="https://github.com/settings/tokens/new?scopes=public_repo&amp;description=Admin%20Eowea" target="_blank" rel="noopener">Ouvrir la page de création ↗</a>
+            <small>Photo de profil → Settings → Developer settings → Personal access tokens → Tokens (classic) → <em>Generate new token (classic)</em></small></li>
+          <li><b>Note</b> : un nom au choix · <b>Expiration</b> : la durée de ton choix.</li>
+          <li><b>Select scopes</b> : coche uniquement <em>public_repo</em> (déjà coché par le lien).<br><small>Dépôt privé : coche <em>repo</em> à la place.</small></li>
+          <li><b>Generate token</b>, copie le code <code>ghp_…</code> et colle-le plus bas.</li>
+        </ol>
+      </details>
+      <p class="token-guide-note">⚠ GitHub n'affiche le token <b>qu'une seule fois</b> : copie-le avant de quitter la page.</p>
     </div>
     <div class="field">
       <label>Token GitHub</label>
-      <input id="tokenInput" type="password" placeholder="github_pat_..." />
+      <input id="tokenInput" type="password" placeholder="github_pat_… ou ghp_…" />
       <small class="help">Laisse ce champ vide pour réutiliser le token déjà utilisé lors de ta dernière connexion (si tu changes juste de dépôt, mais que ton token a accès aux deux).</small>
     </div>
     <div class="checkbox-row">
@@ -649,6 +695,9 @@ async function proceedAfterLogin(username){
   }
   document.getElementById('tokenScreen').classList.remove('hidden');
   populateRepoSelect();
+  updateTokenGuide();
+  document.getElementById('tokenPathOwner').open = currentUserRole !== 'editor';
+  document.getElementById('tokenPathCollab').open = currentUserRole === 'editor';
 }
 
 function populateRepoSelect(){
@@ -678,6 +727,17 @@ function populateRepoSelect(){
   document.getElementById('repoOwnerInput').value = REPO_OWNER;
   document.getElementById('repoNameInput').value = REPO_NAME;
 }
+function updateTokenGuide(){
+  // Reflète le dépôt choisi dans le guide de création du token (propriétaire, nom, liens pré-remplis).
+  const owner = document.getElementById('repoOwnerInput').value.trim() || REPO_OWNER;
+  const name  = document.getElementById('repoNameInput').value.trim() || REPO_NAME;
+  document.querySelectorAll('.tok-owner').forEach(el => el.textContent = owner);
+  document.querySelectorAll('.tok-repo').forEach(el => el.textContent = name);
+  const tokenName = encodeURIComponent('Admin ' + name);
+  document.getElementById('tokenLinkOwner').href = 'https://github.com/settings/personal-access-tokens/new'
+    + '?name=' + tokenName + '&target_name=' + encodeURIComponent(owner) + '&contents=write';
+  document.getElementById('tokenLinkCollab').href = 'https://github.com/settings/tokens/new?scopes=public_repo&description=' + tokenName;
+}
 function onRepoSelectChange(){
   const sel = document.getElementById('repoSelect');
   const customFields = document.getElementById('customRepoFields');
@@ -689,6 +749,7 @@ function onRepoSelectChange(){
     document.getElementById('repoOwnerInput').value = owner;
     document.getElementById('repoNameInput').value = name;
   }
+  updateTokenGuide();
 }
 
 async function generateAccountSnippet(){
