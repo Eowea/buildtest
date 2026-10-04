@@ -104,7 +104,7 @@
   .token-card p{color:var(--text-dim);font-size:13px;line-height:1.5;}
   .token-card ol{color:var(--text-dim);font-size:13px;line-height:1.7;padding-left:18px;}
   .token-card code{background:var(--panel-alt);padding:1px 5px;border-radius:4px;color:var(--gold);}
-  .token-card{width:540px;}
+  .token-card{width:520px;}
   .token-guide{margin:16px 0 20px;}
   .token-guide-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-dim);margin-bottom:8px;}
   .token-path{border:1px solid var(--border);border-radius:10px;background:var(--panel-alt);margin-bottom:8px;overflow:hidden;}
@@ -123,6 +123,8 @@
   .token-link{display:inline-block;font-weight:700;color:var(--gold);text-decoration:none;border:1px solid var(--gold);border-radius:6px;padding:2px 10px;margin-bottom:2px;}
   .token-link:hover{background:var(--gold);color:var(--bg, #000);}
   .token-guide-note{font-size:12px !important;margin:6px 0 0;}
+  .token-guide-path{display:block;font-size:11.5px;color:var(--text-dim);opacity:.8;margin:4px 0 10px;}
+  .token-editor-hint{margin:14px 0 4px;color:var(--text) !important;}
 
   /* ---------- App shell ---------- */
   #appScreen{display:none;height:100vh;flex-direction:column;}
@@ -390,45 +392,44 @@
       <select id="repoSelect" onchange="onRepoSelectChange()"></select>
     </div>
     <div id="customRepoFields" class="row hidden">
-      <div class="field"><label>Propriétaire (owner)</label><input id="repoOwnerInput" type="text" oninput="updateTokenGuide()" /></div>
-      <div class="field"><label>Dépôt</label><input id="repoNameInput" type="text" oninput="updateTokenGuide()" /></div>
+      <div class="field"><label>Propriétaire (owner)</label><input id="repoOwnerInput" type="text" /></div>
+      <div class="field"><label>Dépôt</label><input id="repoNameInput" type="text" /></div>
     </div>
-    <div class="token-guide">
-      <div class="token-guide-title">Pas encore de token ? Choisis ton cas :</div>
-      <details class="token-path" id="tokenPathOwner" open>
+    <div class="token-guide" id="tokenGuideAdmin">
+      <div class="token-guide-title">Rappel : créer un token</div>
+      <a class="token-link" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Ouvrir la création de token ↗</a>
+      <small class="token-guide-path">Photo de profil → Settings → Developer settings → Personal access tokens → Fine-grained tokens → <em>Generate new token</em></small>
+      <details class="token-path" id="tokenPathAdmin" open>
         <summary>
-          <span class="token-path-name">Le dépôt est sur <u>ton</u> compte GitHub</span>
-          <span class="token-path-sub">Token « Fine-grained » · recommandé</span>
+          <span class="token-path-name">Pour toi (admin)</span>
+          <span class="token-path-sub">Un seul token pour tous tes dépôts</span>
         </summary>
         <ol>
-          <li><a id="tokenLinkOwner" class="token-link" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Ouvrir la page de création ↗</a>
-            <small>Photo de profil → Settings → Developer settings → Personal access tokens → Fine-grained tokens → <em>Generate new token</em></small></li>
-          <li><b>Token name</b> : un nom au choix (ex. « Admin Eowea »).<br><b>Expiration</b> : la durée de ton choix ; à l'échéance, il faudra en créer un nouveau.</li>
-          <li><b>Resource owner</b> : <code class="tok-owner">Eowea</code></li>
-          <li><b>Repository access</b> → <em>Only select repositories</em> → choisis <code class="tok-repo">dépôt</code></li>
-          <li><b>Permissions</b> → <em>Add permissions</em> → <em>Contents</em>, puis mets l'accès sur <em>Read and write</em>.<br><small><em>Metadata : Read-only</em> s'ajoute tout seul, c'est normal.</small></li>
-          <li><b>Generate token</b>, copie le code <code>github_pat_…</code> et colle-le plus bas.</li>
+          <li><b>Token name</b> : « Admin Eowea » · <b>Expiration</b> : longue (ex. 1 an).</li>
+          <li><b>Repository access</b> → <em>Only select repositories</em> → coche <code>builds</code>, <code>buildtest</code> et <code>maps</code>.</li>
+          <li><b>Permissions</b> → <em>Add permissions</em> → <em>Contents</em> → <em>Read and write</em>.</li>
+          <li><b>Generate token</b>, puis colle-le ci-dessous.</li>
         </ol>
       </details>
-      <details class="token-path" id="tokenPathCollab">
+      <details class="token-path" id="tokenPathEditor">
         <summary>
-          <span class="token-path-name">Tu es <u>collaborateur</u> sur le dépôt de <span class="tok-owner">Eowea</span></span>
-          <span class="token-path-sub">Token « Classic » · GitHub refuse les fine-grained aux collaborateurs</span>
+          <span class="token-path-name">Pour un éditeur</span>
+          <span class="token-path-sub">Tu le crées sur ton compte et tu le lui envoies</span>
         </summary>
         <ol>
-          <li>Vérifie d'abord que tu as <b>accepté l'invitation</b> de collaborateur (mail ou notification GitHub) : sans ça, l'écriture sera refusée.</li>
-          <li><a id="tokenLinkCollab" class="token-link" href="https://github.com/settings/tokens/new?scopes=public_repo&amp;description=Admin%20Eowea" target="_blank" rel="noopener">Ouvrir la page de création ↗</a>
-            <small>Photo de profil → Settings → Developer settings → Personal access tokens → Tokens (classic) → <em>Generate new token (classic)</em></small></li>
-          <li><b>Note</b> : un nom au choix · <b>Expiration</b> : la durée de ton choix.</li>
-          <li><b>Select scopes</b> : coche uniquement <em>public_repo</em> (déjà coché par le lien).<br><small>Dépôt privé : coche <em>repo</em> à la place.</small></li>
-          <li><b>Generate token</b>, copie le code <code>ghp_…</code> et colle-le plus bas.</li>
+          <li><b>Token name</b> : son pseudo (ex. « Éditeur Pseudo »), pour le retrouver ensuite · <b>Expiration</b> : courte, tu renouvelleras.</li>
+          <li><b>Repository access</b> → <em>Only select repositories</em> → uniquement <code>buildtest</code>.</li>
+          <li><b>Permissions</b> → <em>Add permissions</em> → <em>Contents</em> → <em>Read and write</em>.</li>
+          <li><b>Generate token</b>, puis envoie-le-lui en privé avec ses identifiants du panneau (onglet <em>Administrateurs</em>).</li>
+          <li>Pour lui couper l'accès : <em>Fine-grained tokens</em> → son token → <em>Delete</em>.</li>
         </ol>
       </details>
-      <p class="token-guide-note">⚠ GitHub n'affiche le token <b>qu'une seule fois</b> : copie-le avant de quitter la page.</p>
+      <p class="token-guide-note">⚠ GitHub n'affiche le token <b>qu'une seule fois</b> : copie-le avant de quitter la page. Inutile d'inviter l'éditeur comme collaborateur sur GitHub.</p>
     </div>
+    <p id="tokenEditorHint" class="token-editor-hint hidden">Colle ci-dessous le token qu'Eowea t'a envoyé.</p>
     <div class="field">
       <label>Token GitHub</label>
-      <input id="tokenInput" type="password" placeholder="github_pat_… ou ghp_…" />
+      <input id="tokenInput" type="password" placeholder="github_pat_..." />
       <small class="help">Laisse ce champ vide pour réutiliser le token déjà utilisé lors de ta dernière connexion (si tu changes juste de dépôt, mais que ton token a accès aux deux).</small>
     </div>
     <div class="checkbox-row">
@@ -696,8 +697,6 @@ async function proceedAfterLogin(username){
   document.getElementById('tokenScreen').classList.remove('hidden');
   populateRepoSelect();
   updateTokenGuide();
-  document.getElementById('tokenPathOwner').open = currentUserRole !== 'editor';
-  document.getElementById('tokenPathCollab').open = currentUserRole === 'editor';
 }
 
 function populateRepoSelect(){
@@ -728,15 +727,10 @@ function populateRepoSelect(){
   document.getElementById('repoNameInput').value = REPO_NAME;
 }
 function updateTokenGuide(){
-  // Reflète le dépôt choisi dans le guide de création du token (propriétaire, nom, liens pré-remplis).
-  const owner = document.getElementById('repoOwnerInput').value.trim() || REPO_OWNER;
-  const name  = document.getElementById('repoNameInput').value.trim() || REPO_NAME;
-  document.querySelectorAll('.tok-owner').forEach(el => el.textContent = owner);
-  document.querySelectorAll('.tok-repo').forEach(el => el.textContent = name);
-  const tokenName = encodeURIComponent('Admin ' + name);
-  document.getElementById('tokenLinkOwner').href = 'https://github.com/settings/personal-access-tokens/new'
-    + '?name=' + tokenName + '&target_name=' + encodeURIComponent(owner) + '&contents=write';
-  document.getElementById('tokenLinkCollab').href = 'https://github.com/settings/tokens/new?scopes=public_repo&description=' + tokenName;
+  // L'admin voit le rappel de création des tokens ; l'éditeur reçoit le sien d'Eowea.
+  const editeur = currentUserRole === 'editor';
+  document.getElementById('tokenGuideAdmin').classList.toggle('hidden', editeur);
+  document.getElementById('tokenEditorHint').classList.toggle('hidden', !editeur);
 }
 function onRepoSelectChange(){
   const sel = document.getElementById('repoSelect');
@@ -749,7 +743,6 @@ function onRepoSelectChange(){
     document.getElementById('repoOwnerInput').value = owner;
     document.getElementById('repoNameInput').value = name;
   }
-  updateTokenGuide();
 }
 
 async function generateAccountSnippet(){
