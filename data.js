@@ -50,7 +50,15 @@ const STREAMER_CONFIG = {
       "newTab": true
     }
   ],
+  "youtubeChannelId": "UCPsyRq7cuI-F2ZdVhul8OZQ",
   "latestVideos": [
+    {
+      "title": {
+        "fr": "De retour sur Heroes of the Storm?",
+        "en": "Back on Heroes of the Storm?"
+      },
+      "youtubeId": "9UuhCAdO7Ho"
+    },
     {
       "title": {
         "fr": "Sortie de Xal'atath: Prix, Futur du jeu & Twitch Drops",
@@ -71,15 +79,9 @@ const STREAMER_CONFIG = {
         "en": "How to Draft in Heroes of the Storm"
       },
       "youtubeId": "wPaadSRgZDg"
-    },
-    {
-      "title": {
-        "fr": "Xal'atath - Interactions - Heroes of the Storm",
-        "en": "Xal'atath - Interactions - Heroes of the Storm"
-      },
-      "youtubeId": "5eidOlou4fs"
     }
   ],
+  "patchPlaylistId": "PL4buBMBqxxrbUJIH-3yW0XNbXK1BoTc3y",
   "patchVideos": [
     {
       "title": {
