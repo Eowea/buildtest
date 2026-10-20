@@ -96,10 +96,22 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "3 Octobre 2026",
-      "en": "October 3, 2026"
+      "fr": "20 Octobre 2026",
+      "en": "October 20, 2026"
     },
     "changelog": [
+      {
+        "date": {
+          "fr": "20 Octobre 2026",
+          "en": "October 20, 2026"
+        },
+        "items": [
+          {
+            "fr": "Les talents et les sorts de Xal'atath ont été mis à jour.",
+            "en": "Xal'atath's Talents and Abilities have been updated."
+          }
+        ]
+      },
       {
         "date": {
           "fr": "3 Octobre 2026",
@@ -47911,8 +47923,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_trait.png",
         "description": {
-          "fr": "Les attaques de base chargent Salve du Vide, qui déverse alors une salve d'orbes du Vide sur l'endroit visé. Quête : toucher des héros adverses augmente tous les dégâts du Vide de Xal'atath, et la récompense trois fois — la salve porte plus loin, se charge en moins d'attaques, puis ses projectiles transpercent toutes les cibles. Mourir lui coûte des cumuls.",
-          "en": "Basic Attacks charge Void Volley. Once ready, it pours a barrage of Void Orbs onto the targeted spot. Quest: hitting enemy Heroes increases all of Xal'atath's Void damage and strengthens the Volley three times over, but her stacks are lost on death."
+          "fr": "Les attaques de base portées aux ennemis chargent Salve du Vide, bien plus vite contre les héros, mais la charge retombe si Xal'atath cesse de toucher. La salve déverse alors une pluie d'orbes du Vide sur l'endroit visé. Quête : toucher des héros avec la salve augmente ses dégâts et la récompense trois fois — plus de portée et moins de cumuls perdus à la mort, une charge plus rapide, puis des attaques de base et une salve bien plus fortes dont les projectiles transpercent toutes les cibles ; mourir ne la fait jamais redescendre sous un palier atteint.",
+          "en": "Basic Attacks against enemies charge Void Volley, much faster against Heroes, but the charge fades if Xal'atath stops landing hits. The Volley then rains Void Orbs onto the targeted spot. Quest: hitting Heroes with it increases its damage and rewards her three times — more range and fewer stacks lost on death, a faster charge, then far stronger Basic Attacks and Volley whose projectiles pierce all targets; dying never drops her below a reward tier she has reached."
         },
         "demoYoutubeId": ""
       },
@@ -47924,8 +47936,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_q_shadowmark.png",
         "description": {
-          "fr": "Tire un orbe du Vide qui blesse les ennemis sur son passage, bien davantage en plein centre. Les héros touchés de plein fouet sont marqués : ils sont révélés, et attirent sur eux le cœur obscur comme les serviteurs du Vide.",
-          "en": "Fires a Void Orb that damages the enemies in its path, far more at its centre. Heroes hit dead on are Marked: they are Revealed, and they draw the Dark Heart and the Void Minions onto themselves."
+          "fr": "Tire un orbe du Vide qui blesse les ennemis sur son passage, bien davantage en plein centre. Les héros et les structures touchés de plein fouet sont marqués : ils sont révélés, et attirent sur eux le cœur obscur comme les serviteurs du Vide.",
+          "en": "Fires a Void Orb that damages the enemies in its path, far more at its centre. Heroes and Structures hit dead on are Marked: they are Revealed, and they draw the Dark Heart and the Void Minions onto themselves."
         },
         "demoYoutubeId": ""
       },
@@ -47937,8 +47949,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
         "description": {
-          "fr": "Invoque le cœur obscur, qui blesse par pulsations les ennemis proches. Il se rend au point d'impact de Marque de l'ombre, poursuit les héros marqués et explose sur eux.",
-          "en": "Summons the Dark Heart, which pulses damage onto nearby enemies. It travels to Shadow Mark's impact point, chases Marked Heroes and detonates on them."
+          "fr": "Invoque le cœur obscur, qui blesse par pulsations les ennemis proches. Il se rend au point d'impact de Marque de l'ombre, poursuit les cibles marquées et explose sur elles.",
+          "en": "Summons the Dark Heart, which pulses damage onto nearby enemies. It travels to Shadow Mark's impact point, chases Marked targets and detonates on them."
         },
         "demoYoutubeId": ""
       },
@@ -47950,8 +47962,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
         "description": {
-          "fr": "Téléporte Xal'atath sur trois points formant un triangle. Chaque saut renforce ses attaques de base tant que la capacité dure. La relancer y met fin plus tôt et la laisse sur place.",
-          "en": "Teleports Xal'atath across three points forming a triangle. Each hop strengthens her Basic Attacks for as long as the Ability lasts. Recasting ends it early and leaves her where she stands."
+          "fr": "Téléporte Xal'atath sur trois points formant un triangle. Chaque saut renforce ses attaques de base tant que la capacité dure, jusqu'à un plafond. La relancer y met fin plus tôt et la laisse sur place ; une immobilisation l'empêche ou l'interrompt.",
+          "en": "Teleports Xal'atath across three points forming a triangle. Each hop strengthens her Basic Attacks for as long as the Ability lasts, up to a cap. Recasting ends it early and leaves her where she stands; Roots prevent or interrupt it."
         },
         "demoYoutubeId": ""
       },
@@ -47963,8 +47975,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_r1_voideruption.png",
         "description": {
-          "fr": "Canalise un orbe du Vide qui grossit jusqu'à sa taille maximale. Le relancer le lance plus tôt. Il aveugle et blesse tout ce qu'il touche sur son trajet, puis explose en fin de course sur une large zone.",
-          "en": "Channels a Void Orb that swells to full size. Recasting launches it early. It Blinds and damages everything it touches along the way, then erupts over a wide area at the end of its path."
+          "fr": "Canalise un orbe du Vide qui grossit jusqu'à sa taille maximale, et frappe d'autant plus fort qu'il a été chargé. Le relancer le lance plus tôt. Il aveugle et blesse tout ce qu'il touche sur son trajet, puis explose en fin de course sur une large zone.",
+          "en": "Channels a Void Orb that swells to full size and hits harder the longer it charges. Recasting launches it early. It Blinds and damages everything it touches along the way, then erupts over a wide area at the end of its path."
         },
         "demoYoutubeId": ""
       },
@@ -47976,8 +47988,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_r2_voidconvergence.png",
         "description": {
-          "fr": "Après une canalisation, ouvre un portail du Vide qui fait apparaître des serviteurs et ralentit les ennemis proches. Les serviteurs se jettent sur les héros marqués. Le portail s'épuise avec le temps.",
-          "en": "After a channel, opens a Void Portal that spawns Minions and Slows nearby enemies. The Minions throw themselves at Marked Heroes. The Portal wears down over time."
+          "fr": "Après une canalisation, ouvre un portail du Vide qui fait apparaître des serviteurs et ralentit les ennemis proches. Les serviteurs se jettent sur les cibles marquées, sinon ils partent pousser une voie proche. Le portail disparaît au bout d'un moment.",
+          "en": "After a channel, opens a Void Portal that spawns Minions and Slows nearby enemies. The Minions throw themselves at Marked targets, or else head off to push a nearby lane. The Portal expires after a while."
         },
         "demoYoutubeId": ""
       }
@@ -48069,8 +48081,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_q_shadowmark.png",
         "description": {
-          "fr": "Quête : faire exploser le cœur obscur sur des héros marqués augmente définitivement les dégâts de Marque de l'ombre, jusqu'à un plafond.",
-          "en": "Quest: detonating the Dark Heart on Marked Heroes permanently increases Shadow Mark's damage, up to a cap."
+          "fr": "Quête : chaque explosion du cœur obscur sur une cible marquée augmente définitivement les dégâts de Marque de l'ombre et de l'explosion du cœur obscur, jusqu'à un plafond.",
+          "en": "Quest: every Dark Heart detonation on a Marked target permanently increases the damage of Shadow Mark and of the Dark Heart's detonation, up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -48125,8 +48137,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
         "description": {
-          "fr": "Chaque salve de dégâts du cœur obscur confère à Xal'atath un bouclier proportionnel à son maximum de points de vie, jusqu'à un plafond.",
-          "en": "Every instance of Dark Heart damage grants Xal'atath a Shield based on her maximum Health, up to a cap."
+          "fr": "Chaque fois que le cœur obscur blesse un héros adverse, Xal'atath gagne un bouclier proportionnel à son maximum de points de vie, jusqu'à un plafond.",
+          "en": "Every time the Dark Heart damages an enemy Hero, Xal'atath gains a Shield based on her maximum Health, up to a cap."
         },
         "demoYoutubeId": null
       },
@@ -48181,8 +48193,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/talents/storm_ui_icon_xalatath_w_voidstep_b.png",
         "description": {
-          "fr": "Activer Pas du Vide invoque un serviteur du Vide, attiré par les héros marqués, qui s'épuise avec le temps.",
-          "en": "Activating Void Step summons a Void Minion, drawn to Marked Heroes, that wears down over time."
+          "fr": "Activer Pas du Vide invoque un serviteur du Vide à l'endroit d'où Xal'atath est partie. Il fonce sur les cibles marquées, sinon il pousse une voie proche, et s'épuise avec le temps.",
+          "en": "Activating Void Step summons a Void Minion where Xal'atath started from. It rushes Marked targets, or else pushes a nearby lane, and wears down over time."
         },
         "demoYoutubeId": null
       },
@@ -48195,8 +48207,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_r1_voideruption.png",
         "description": {
-          "fr": "Canalise un orbe du Vide qui grossit jusqu'à sa taille maximale. Le relancer le lance plus tôt. Il aveugle et blesse tout ce qu'il touche sur son trajet, puis explose en fin de course sur une large zone.",
-          "en": "Channels a Void Orb that swells to full size. Recasting launches it early. It Blinds and damages everything it touches along the way, then erupts over a wide area at the end of its path."
+          "fr": "Canalise un orbe du Vide qui grossit jusqu'à sa taille maximale, et frappe d'autant plus fort qu'il a été chargé. Le relancer le lance plus tôt. Il aveugle et blesse tout ce qu'il touche sur son trajet, puis explose en fin de course sur une large zone.",
+          "en": "Channels a Void Orb that swells to full size and hits harder the longer it charges. Recasting launches it early. It Blinds and damages everything it touches along the way, then erupts over a wide area at the end of its path."
         },
         "demoYoutubeId": null
       },
@@ -48209,8 +48221,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_r2_voidconvergence.png",
         "description": {
-          "fr": "Après une canalisation, ouvre un portail du Vide qui fait apparaître des serviteurs et ralentit les ennemis proches. Les serviteurs se jettent sur les héros marqués. Le portail s'épuise avec le temps.",
-          "en": "After a channel, opens a Void Portal that spawns Minions and Slows nearby enemies. The Minions throw themselves at Marked Heroes. The Portal wears down over time."
+          "fr": "Après une canalisation, ouvre un portail du Vide qui fait apparaître des serviteurs et ralentit les ennemis proches. Les serviteurs se jettent sur les cibles marquées, sinon ils partent pousser une voie proche. Le portail disparaît au bout d'un moment.",
+          "en": "After a channel, opens a Void Portal that spawns Minions and Slows nearby enemies. The Minions throw themselves at Marked targets, or else head off to push a nearby lane. The Portal expires after a while."
         },
         "demoYoutubeId": null
       },
@@ -48223,8 +48235,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
         "description": {
-          "fr": "Chaque pulsation du cœur obscur ralentit un peu plus les ennemis qui y sont liés, effet cumulable qui retombe vite.",
-          "en": "Every Dark Heart pulse Slows the enemies tethered to it a little more, stacking but decaying fast."
+          "fr": "Chaque pulsation du cœur obscur ralentit un peu plus les ennemis qu'elle blesse, effet cumulable jusqu'à un plafond qui retombe vite.",
+          "en": "Every Dark Heart pulse Slows the enemies it damages a little more, stacking up to a cap and decaying fast."
         },
         "demoYoutubeId": null
       },
@@ -48237,8 +48249,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/talents/storm_ui_icon_xalatath_e_darkheartritual_b.png",
         "description": {
-          "fr": "Invoquer le cœur obscur réduit au silence les ennemis pris dans son rayon. Xal'atath et ses alliés gagnent de l'armure anti-sort tant qu'ils restent à l'intérieur.",
-          "en": "Casting the Dark Heart Silences the enemies caught in its radius. Xal'atath and her allies gain Spell Armor while they remain inside."
+          "fr": "Faire exploser le cœur obscur sur un héros marqué réduit au silence tous les ennemis touchés par l'explosion. Xal'atath et ses alliés gagnent de l'armure anti-sort tant qu'ils restent dans son rayon.",
+          "en": "Detonating the Dark Heart on a Marked Hero Silences every enemy caught in the blast. Xal'atath and her allies gain Spell Armor while they remain inside its radius."
         },
         "demoYoutubeId": null
       },
@@ -48293,8 +48305,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_trait.png",
         "description": {
-          "fr": "Les projectiles de Salve du Vide frappent plus fort et laissent sur leur passage une traînée de feu qui inflige des dégâts sur la durée.",
-          "en": "Void Volley's projectiles hit harder and leave a trail of fire in their wake that deals damage over time."
+          "fr": "Les projectiles de Salve du Vide frappent plus fort et laissent derrière eux une traînée de flammes, qui brûle d'autant plus fort qu'un ennemi y reste, jusqu'à un plafond. Plusieurs traînées cumulent cette hausse.",
+          "en": "Void Volley's projectiles hit harder and leave a trail of flames behind them, which burns harder the longer an enemy stays in it, up to a cap. Several trails stack that increase."
         },
         "demoYoutubeId": null
       },
@@ -48307,8 +48319,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/talents/storm_ui_icon_xalatath_r1_voideruption_b.png",
         "description": {
-          "fr": "Éruption du Vide se divise en trois orbes en orbite. L'annuler plus tôt les lance sur une trajectoire plus rapide.",
-          "en": "Void Eruption splits into three orbiting orbs. Cancelling it early sends them on a faster path."
+          "fr": "Éruption du Vide se divise en trois orbes du Vide qui gravitent autour de Xal'atath. Chaque héros adverse touché par leur explosion réduit le temps de recharge d'Éruption du Vide.",
+          "en": "Void Eruption splits into three Void Orbs that orbit Xal'atath. Each enemy Hero hit by their explosions lowers Void Eruption's cooldown."
         },
         "demoYoutubeId": null
       },
@@ -48321,8 +48333,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_r2_voidconvergence.png",
         "description": {
-          "fr": "Le portail de Convergence du Vide ne s'épuise plus et entretient davantage de serviteurs.",
-          "en": "The Void Convergence Portal no longer wears down and sustains more Minions."
+          "fr": "Le portail de Convergence du Vide s'use toujours, mais l'usure ne peut plus le détruire. Deux portails peuvent être ouverts à la fois, et chacun entretient davantage de serviteurs.",
+          "en": "The Void Convergence Portal still wears down, but decay can no longer destroy it. Two Portals can be open at once, and each sustains more Minions."
         },
         "demoYoutubeId": null
       },
@@ -48349,8 +48361,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_e_darkheartritual.png",
         "description": {
-          "fr": "Quand le cœur obscur se termine ou explose sur un héros marqué, il laisse derrière lui des flammes du Vide qui infligent des dégâts sur la durée aux ennemis qui s'y attardent.",
-          "en": "When the Dark Heart ends or detonates on a Marked Hero, it leaves behind Void flames that deal damage over time to enemies lingering in them."
+          "fr": "Quand le cœur obscur se termine ou explose sur une cible marquée, il laisse derrière lui des flammes du Vide qui infligent des dégâts sur la durée aux ennemis qui s'y attardent.",
+          "en": "When the Dark Heart ends or detonates on a Marked target, it leaves behind Void flames that deal damage over time to enemies lingering in them."
         },
         "demoYoutubeId": null
       },
