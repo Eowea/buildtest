@@ -47962,8 +47962,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/xalatath/images/spells/storm_ui_icon_xalatath_w_voidstep.png",
         "description": {
-          "fr": "Téléporte Xal'atath sur trois points formant un triangle. Chaque saut renforce ses attaques de base tant que la capacité dure, jusqu'à un plafond. La relancer y met fin plus tôt et la laisse sur place ; une immobilisation l'empêche ou l'interrompt.",
-          "en": "Teleports Xal'atath across three points forming a triangle. Each hop strengthens her Basic Attacks for as long as the Ability lasts, up to a cap. Recasting ends it early and leaves her where she stands; Roots prevent or interrupt it."
+          "fr": "Téléporte Xal'atath sur trois points formant un triangle. Chaque saut renforce ses attaques de base tant que la capacité dure, jusqu'à un plafond. La relancer y met fin plus tôt et la laisse sur place.",
+          "en": "Teleports Xal'atath across three points forming a triangle. Each hop strengthens her Basic Attacks for as long as the Ability lasts, up to a cap. Recasting ends it early and leaves her where she stands."
         },
         "demoYoutubeId": ""
       },
