@@ -2585,14 +2585,14 @@ function showConfigPanel(){
     </div>
     <div class="card">
       <h3>Dernière vidéo (page d'accueil)</h3>
-      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Carrousel affiché sur la page d'accueil. Avec un ID de chaîne, le site affiche tout seul les dernières vidéos de la chaîne : la liste ci-dessous ne sert plus que de secours, quand YouTube ne répond pas (elle fixe aussi le nombre de vidéos affichées).</small>
+      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Carrousel affiché sur la page d'accueil. Avec un ID de chaîne, une tâche GitHub relève toutes les heures les dernières vidéos de la chaîne (sans les lives ni les Shorts) dans videos.json : la liste ci-dessous ne sert plus que de secours, si ce fichier manque (elle fixe aussi le nombre de vidéos affichées).</small>
       <div class="field"><label>ID de la chaîne YouTube (commence par UC)</label><input value="${escapeHtml(STREAMER_CONFIG.youtubeChannelId || '')}" oninput="STREAMER_CONFIG.youtubeChannelId=this.value.trim(); markDirty();" /></div>
       ${latestVideosHtml}
       <button onclick="STREAMER_CONFIG.latestVideos.push({title:{fr:'',en:''},youtubeId:''}); markDirty(); showConfigPanel();">+ Ajouter une vidéo</button>
     </div>
     <div class="card">
       <h3>Analyse Patchs (page d'accueil)</h3>
-      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Carrousel de vidéos d'analyse de patch, affiché à côté de "Dernière vidéo" sur la page d'accueil. Avec un ID de playlist, le site affiche tout seul les premières vidéos de la playlist (dans son ordre sur YouTube) : la liste ci-dessous ne sert plus que de secours, quand YouTube ne répond pas (elle fixe aussi le nombre de vidéos affichées).</small>
+      <small class="help" style="margin-top:-4px;margin-bottom:10px;">Carrousel de vidéos d'analyse de patch, affiché à côté de "Dernière vidéo" sur la page d'accueil. Avec un ID de playlist, une tâche GitHub relève toutes les heures les premières vidéos de la playlist (dans son ordre sur YouTube) dans videos.json : la liste ci-dessous ne sert plus que de secours, si ce fichier manque (elle fixe aussi le nombre de vidéos affichées).</small>
       <div class="field"><label>ID de la playlist YouTube (commence par PL, après « list= » dans le lien)</label><input value="${escapeHtml(STREAMER_CONFIG.patchPlaylistId || '')}" oninput="STREAMER_CONFIG.patchPlaylistId=this.value.trim(); markDirty();" /></div>
       ${patchVideosHtml}
       <button onclick="STREAMER_CONFIG.patchVideos.push({title:{fr:'',en:''},youtubeId:''}); markDirty(); showConfigPanel();">+ Ajouter une vidéo</button>

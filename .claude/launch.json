@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "github",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8767", "--directory", "C:/Users/jmcle/Documents/GitHub"],
+      "port": 8767
+    }
+  ]
+}

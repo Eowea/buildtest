@@ -1140,7 +1140,7 @@ function renderHomeVideoSections() {
     </div>`;
 
   const rotationHtml = STREAMER_CONFIG.showHeroRotation !== false ? renderHeroRotationSection() : '';
-  SOURCES_VIDEOS.forEach(chargerSourceVideos);
+  chargerVideosAuto();
   return `<div class="videos-layout with-guide">${col('latestVideoTitle', SOURCES_VIDEOS[0])}${col('patchAnalysisTitle', SOURCES_VIDEOS[1])}</div>${renderListeAuteurs()}${rotationHtml}`;
 }
 
@@ -1150,147 +1150,52 @@ function contenuColonneVideos(source) {
 }
 
 /* =========================================================================
-   VIDÉOS DE L'ACCUEIL — lues sur YouTube
+   VIDÉOS DE L'ACCUEIL — lues dans videos.json
 
-   « Dernières vidéos » montre les dernières vidéos de la chaîne
-   (STREAMER_CONFIG.youtubeChannelId), « Analyses Patch » les premières de la
-   playlist des patchs (STREAMER_CONFIG.patchPlaylistId), dans l'ordre de la
-   playlist. Rien à remplir à la main.
+   « Dernières vidéos » montre les dernières vidéos de la chaîne, « Analyses
+   Patch » les premières de la playlist des patchs. Rien à remplir à la main :
+   une tâche GitHub (.github/workflows/videos.yml) lit toutes les heures les
+   flux RSS officiels de YouTube et réécrit videos.json quand une vidéo sort.
+   Un navigateur ne peut pas lire ces flux lui-même (YouTube ne l'autorise pas).
 
-   YouTube n'offre aucune API ouverte à une page statique : les listes
-   viennent d'une instance Invidious (miroir public de YouTube, qui autorise
-   l'appel depuis le navigateur), la première qui répond. Elle donne les
-   titres traduits en anglais par YouTube ; le titre d'origine, affiché en
-   français, vient de l'oEmbed de YouTube.
-
-   Le résultat est gardé une heure dans le navigateur. Si aucune instance ne
-   répond, le site affiche la dernière liste obtenue, puis à défaut celle de
-   data.js (latestVideos / patchVideos) : la section n'est jamais vide. La
-   longueur de cette liste de secours fixe aussi le nombre de vidéos montrées.
+   La tâche écarte déjà les lives, les Shorts et, des « Dernières vidéos »,
+   toute vidéo de la playlist des patchs. Si videos.json manque, le site
+   affiche les listes de data.js (latestVideos / patchVideos), filtrées de la
+   même façon : la section n'est jamais vide.
    ========================================================================= */
-const INSTANCES_INVIDIOUS = [
-  'https://invidious.f5.si',
-  'https://inv.nadeko.net',
-  'https://iv.ggtyler.dev',
-  'https://invidious.jing.rocks'
-];
-const DUREE_VIDEOS_AUTO = 60 * 60 * 1000;
-
 const SOURCES_VIDEOS = [
-  {
-    colonne: 'colonneDernieresVideos', contexte: 'derniere', cle: 'eowea_videosChaine',
-    secours: 'latestVideos', idConfig: 'youtubeChannelId', exclure: 'colonneAnalysesPatch',
-    chemin: id => `/api/v1/channels/${encodeURIComponent(id)}/videos`
-  },
-  {
-    colonne: 'colonneAnalysesPatch', contexte: 'patch', cle: 'eowea_videosPatch',
-    secours: 'patchVideos', idConfig: 'patchPlaylistId',
-    chemin: id => `/api/v1/playlists/${encodeURIComponent(id)}`
-  }
+  { colonne: 'colonneDernieresVideos', contexte: 'derniere', cle: 'derniere', secours: 'latestVideos', exclure: 'patch' },
+  { colonne: 'colonneAnalysesPatch', contexte: 'patch', cle: 'patch', secours: 'patchVideos' }
 ];
-SOURCES_VIDEOS.forEach(source => {
-  source.liste = null;
-  source.ids = [];     // toutes les vidéos de la source, pas seulement celles montrées
-  source.date = 0;
-  source.chargement = null;
-  try {
-    const cache = JSON.parse(localStorage.getItem(source.cle) || 'null');
-    if (cache && cache.id === STREAMER_CONFIG[source.idConfig] && Array.isArray(cache.liste) && cache.liste.length) {
-      source.liste = cache.liste;
-      source.ids = Array.isArray(cache.ids) ? cache.ids : [];
-      source.date = cache.date || 0;
-    }
-  } catch (e) { /* navigation privée */ }
-});
+let videosAuto = null;            // contenu de videos.json, une fois lu
+let videosAutoDemandees = false;
 
-function nombreDeVideos(source) {
-  return Math.max(1, (STREAMER_CONFIG[source.secours] || []).length || 1);
-}
+// Restes de l'ancienne lecture via Invidious, gardés dans le navigateur des visiteurs.
+try { localStorage.removeItem('eowea_videosChaine'); localStorage.removeItem('eowea_videosPatch'); } catch (e) { /* navigation privée */ }
 
-// « Dernières vidéos » ne reprend aucune vidéo de la playlist des patchs : elles
-// ont leur propre section. On écarte toute la playlist, pas seulement la vidéo
-// affichée, sinon l'analyse de la semaine passée reviendrait dans la liste.
-function idsExclus(source) {
-  const autre = source.exclure && SOURCES_VIDEOS.find(s => s.colonne === source.exclure);
-  if (!autre) return new Set();
-  const montrees = videosDeSource(autre).map(v => parseYouTubeId(v?.youtubeId || v?.youtubeUrl || v?.url || ''));
-  return new Set([...autre.ids, ...montrees].filter(Boolean));
-}
+const idVideo = v => parseYouTubeId(v?.youtubeId || v?.youtubeUrl || v?.url || '');
 
-// Le filtre s'applique aussi à la liste gardée en cache : une analyse ajoutée à
-// la playlist depuis disparaît tout de suite des « Dernières vidéos ».
 function videosDeSource(source) {
-  const liste = (STREAMER_CONFIG[source.idConfig] && source.liste) || STREAMER_CONFIG[source.secours] || [];
+  const auto = videosAuto && Array.isArray(videosAuto[source.cle]) ? videosAuto[source.cle] : [];
+  const liste = auto.length ? auto : (STREAMER_CONFIG[source.secours] || []);
   if (!source.exclure) return liste;
-  const exclus = idsExclus(source);
-  return liste.filter(v => !exclus.has(parseYouTubeId(v?.youtubeId || v?.youtubeUrl || v?.url || '')));
+  // « Dernières vidéos » ne reprend pas l'analyse de patch affichée à côté.
+  const autre = SOURCES_VIDEOS.find(s => s.cle === source.exclure);
+  const exclus = new Set(videosDeSource(autre).map(idVideo).filter(Boolean));
+  return liste.filter(v => !exclus.has(idVideo(v)));
 }
 
-async function lireJson(url, ms) {
-  const ctrl = new AbortController();
-  const minuteur = setTimeout(() => ctrl.abort(), ms);
-  try {
-    const res = await fetch(url, { signal: ctrl.signal });
-    return res.ok ? await res.json() : null;
-  } catch (e) {
-    return null;
-  } finally {
-    clearTimeout(minuteur);
-  }
-}
-
-async function titreOriginal(id) {
-  const lien = encodeURIComponent('https://www.youtube.com/watch?v=' + id);
-  const data = await lireJson('https://www.youtube.com/oembed?format=json&url=' + lien, 4000)
-    || await lireJson('https://noembed.com/embed?url=' + lien, 4000);
-  return (data && data.title) || '';
-}
-
-// Les vidéos privées ou supprimées restent dans une playlist sous un titre
-// « [Private video] » / « [Deleted video] » : on les écarte.
-async function listeDepuisInvidious(source, id) {
-  for (const base of INSTANCES_INVIDIOUS) {
-    const data = await lireJson(base + source.chemin(id), 5000);
-    const videos = (data && Array.isArray(data.videos) ? data.videos : [])
-      .filter(v => v && v.videoId && !v.isUpcoming && !v.liveNow && !/^\[(private|deleted)/i.test(v.title || ''));
-    if (videos.length) return videos;
-  }
-  return null;
-}
-
-function chargerSourceVideos(source) {
-  const id = STREAMER_CONFIG[source.idConfig];
-  if (!id || source.chargement || Date.now() - source.date < DUREE_VIDEOS_AUTO) return;
-  source.chargement = (async () => {
-    let videos = await listeDepuisInvidious(source, id);
-    if (!videos) return;
-    const ids = videos.map(v => v.videoId);
-    if (source.exclure) {
-      // La playlist se charge en même temps : on attend sa réponse avant de trier.
-      const autre = SOURCES_VIDEOS.find(s => s.colonne === source.exclure);
-      if (autre && autre.chargement) await autre.chargement;
-      const exclus = idsExclus(source);
-      videos = videos.filter(v => !exclus.has(v.videoId));
-      if (!videos.length) return;
-    }
-    videos = videos.slice(0, nombreDeVideos(source));
-    const titres = await Promise.all(videos.map(v => titreOriginal(v.videoId)));
-    const liste = videos.map((v, i) => ({
-      title: { fr: titres[i] || v.title || '', en: v.title || titres[i] || '' },
-      youtubeId: v.videoId
-    }));
-    const avant = JSON.stringify(source.liste);
-    source.liste = liste;
-    source.ids = ids;
-    source.date = Date.now();
-    try {
-      localStorage.setItem(source.cle, JSON.stringify({ id, date: source.date, liste, ids }));
-    } catch (e) { /* navigation privée */ }
-    if (JSON.stringify(liste) !== avant) {
-      rafraichirColonneVideos(source);
-      SOURCES_VIDEOS.filter(s => s.exclure === source.colonne).forEach(rafraichirColonneVideos);
-    }
-  })().finally(() => { source.chargement = null; });
+function chargerVideosAuto() {
+  if (videosAutoDemandees) return;
+  videosAutoDemandees = true;
+  fetch('videos.json', { cache: 'no-cache' })
+    .then(r => (r.ok ? r.json() : null))
+    .catch(() => null)
+    .then(data => {
+      if (!data) return;
+      videosAuto = data;
+      SOURCES_VIDEOS.forEach(rafraichirColonneVideos);
+    });
 }
 
 // Remplace seulement la colonne concernée si l'accueil est affiché.

@@ -1,0 +1,47 @@
+# Met à jour videos.json (dernières vidéos YouTube et analyse de patch) toutes les
+# heures. Ne commite que si une vidéo a changé. Voir .github/scripts/videos.mjs.
+name: Vidéos YouTube
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - data.js
+      - .github/scripts/videos.mjs
+      - .github/workflows/videos.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: videos
+  cancel-in-progress: false
+
+jobs:
+  videos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Lire les flux YouTube
+        run: node .github/scripts/videos.mjs
+
+      - name: Commiter videos.json s'il a changé
+        run: |
+          git add videos.json
+          if git diff --cached --quiet; then
+            echo "Rien à commiter."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Vidéos YouTube mises à jour"
+          git pull --rebase origin main
+          git push origin HEAD:main
