@@ -96,10 +96,30 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "20 Octobre 2026",
-      "en": "October 20, 2026"
+      "fr": "1 Novembre 2026",
+      "en": "November 1, 2026"
     },
     "changelog": [
+      {
+        "date": {
+          "fr": "1 Novembre 2026",
+          "en": "November 1, 2026"
+        },
+        "items": [
+          {
+            "fr": "Un deuxième build sur Xal'atath : le Build A, centré sur Marque de l'ombre.",
+            "en": "A second Xal'atath build: the Q build, focused on Shadow Mark."
+          },
+          {
+            "fr": "Les dernières vidéos et l'analyse de patch de l'accueil se mettent désormais à jour toutes seules.",
+            "en": "The home page's latest videos and patch analysis now update on their own."
+          },
+          {
+            "fr": "Le code du build d'Abathur donne de nouveau le bon talent au niveau 16 une fois collé en jeu.",
+            "en": "Abathur's build code once again gives the right Level 16 Talent when pasted in game."
+          }
+        ]
+      },
       {
         "date": {
           "fr": "20 Octobre 2026",
@@ -10203,16 +10223,16 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmatgxdrn19z3h",
+        "id": "tmatgxdrn04o4s",
         "level": 1,
         "name": {
-          "fr": "Couvée de nuisibles",
-          "en": "Locust Brood"
+          "fr": "Instinct de survie",
+          "en": "Survival Instincts"
         },
         "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spawnlocust.png",
         "description": {
-          "fr": "Fait éclore d'un coup plusieurs nuisibles à un endroit proche.",
-          "en": "Hatches several Locusts at once at a nearby spot."
+          "fr": "Les nuisibles ont bien plus de points de vie et frappent nettement plus fort.",
+          "en": "Locusts have far more Health and hit noticeably harder."
         },
         "demoYoutubeId": null
       },
@@ -10385,20 +10405,6 @@ const HEROES = [
         "demoYoutubeId": null
       },
       {
-        "id": "tmatgxdrn04o4s",
-        "level": 16,
-        "name": {
-          "fr": "Instinct de survie",
-          "en": "Survival Instincts"
-        },
-        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spawnlocust.png",
-        "description": {
-          "fr": "Les nuisibles ont bien plus de points de vie et frappent nettement plus fort.",
-          "en": "Locusts have far more Health and hit noticeably harder."
-        },
-        "demoYoutubeId": null
-      },
-      {
         "id": "tmatgxdrn16gp5",
         "level": 16,
         "name": {
@@ -10437,6 +10443,20 @@ const HEROES = [
         "description": {
           "fr": "Les clones et les monstruosités blessent régulièrement les ennemis proches, et une dernière fois à leur mort. Toucher un héros leur rend autant de points de vie qu'ils infligent de dégâts.",
           "en": "Clones and Monstrosities damage nearby enemies at regular intervals, and once more when they die. Hitting a Hero restores them as much Health as the damage dealt."
+        },
+        "demoYoutubeId": null
+      },
+      {
+        "id": "tmatgxdrn19z3h",
+        "level": 16,
+        "name": {
+          "fr": "Couvée de nuisibles",
+          "en": "Locust Brood"
+        },
+        "icon": "assets/heroes/base_spells/abathur/images/spells/storm_ui_icon_abathur_spawnlocust.png",
+        "description": {
+          "fr": "Fait éclore d'un coup plusieurs nuisibles à un endroit proche.",
+          "en": "Hatches several Locusts at once at a nearby spot."
         },
         "demoYoutubeId": null
       },
@@ -48068,6 +48088,66 @@ const HEROES = [
           }
         ],
         "isNew": false
+      },
+      {
+        "enabled": true,
+        "order": 2,
+        "label": {
+          "fr": "Build A",
+          "en": "Q build"
+        },
+        "summary": {
+          "fr": "Build centré sur Marque de l'ombre : une marque qui dure, ralentit, ronge les points de vie et frappe plus fort à chaque explosion du cœur obscur.",
+          "en": "Focused on Shadow Mark: a Mark that lasts, Slows, eats away at Health and hits harder with every Dark Heart detonation."
+        },
+        "buildCodeTitle": {
+          "fr": "CLIQUER POUR COPIER LE BUILD",
+          "en": "CLICK TO COPY THE BUILD"
+        },
+        "buildCode": "[T1111231,Xalatath]",
+        "videos": [],
+        "updatedAt": {
+          "fr": "1 Novembre 2026",
+          "en": "November 1, 2026"
+        },
+        "talentSelections": [
+          {
+            "level": 1,
+            "primaryId": "tmtzw8rkp78f1m",
+            "alternativeIds": []
+          },
+          {
+            "level": 4,
+            "primaryId": "tmtzw8rknccszh",
+            "alternativeIds": []
+          },
+          {
+            "level": 7,
+            "primaryId": "tmtzw8rkk3j1yj",
+            "alternativeIds": []
+          },
+          {
+            "level": 10,
+            "primaryId": "tmtzw8rkrr3to1",
+            "alternativeIds": []
+          },
+          {
+            "level": 13,
+            "primaryId": "tmtzw8rkuebhld",
+            "alternativeIds": []
+          },
+          {
+            "level": 16,
+            "primaryId": "tmtzw8rkyiz6mp",
+            "alternativeIds": []
+          },
+          {
+            "level": 20,
+            "primaryId": "tmtzw8rkz9f4n3",
+            "alternativeIds": []
+          }
+        ],
+        "isNew": true
       }
     ],
     "guideVideos": [],
