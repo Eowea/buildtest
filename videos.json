@@ -32,13 +32,20 @@
   "patch": [
     {
       "title": {
-        "fr": "LE NERF TANT ATTENDU de Xal'atath - Heroes of the Storm",
-        "en": "LE NERF TANT ATTENDU de Xal'atath - Heroes of the Storm"
+        "fr": "NOUVEAU PATCH PTR HotS : Xal'atath, Mei, Gazleu, Medivh, ...",
+        "en": "NOUVEAU PATCH PTR HotS : Xal'atath, Mei, Gazleu, Medivh, ..."
       },
-      "youtubeId": "5qjk1V1dUNc"
+      "youtubeId": "O-8Zs9BmmgU"
     }
   ],
   "recentes": [
+    {
+      "title": {
+        "fr": "NOUVEAU PATCH PTR HotS : Xal'atath, Mei, Gazleu, Medivh, ...",
+        "en": "NOUVEAU PATCH PTR HotS : Xal'atath, Mei, Gazleu, Medivh, ..."
+      },
+      "youtubeId": "O-8Zs9BmmgU"
+    },
     {
       "title": {
         "fr": "Xal'atath achetable en PO plus tôt que prévu",
@@ -59,13 +66,6 @@
         "en": "Xal'atath Master gameplay - Ranked"
       },
       "youtubeId": "Hnv1BXCmZno"
-    },
-    {
-      "title": {
-        "fr": "De retour sur Heroes of the Storm?",
-        "en": "De retour sur Heroes of the Storm?"
-      },
-      "youtubeId": "9UuhCAdO7Ho"
     }
   ]
 }

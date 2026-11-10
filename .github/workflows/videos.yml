@@ -1,10 +1,14 @@
-# Met à jour videos.json (dernières vidéos YouTube et analyse de patch) toutes les
-# heures. Ne commite que si une vidéo a changé. Voir .github/scripts/videos.mjs.
+# Met à jour videos.json (dernières vidéos YouTube et analyse de patch). Ne commite
+# que si une vidéo a changé. Voir .github/scripts/videos.mjs.
+#
+# Planifiée tous les quarts d’heure : GitHub saute la plupart des passages planifiés
+# quand ses serveurs sont chargés (avec un passage par heure, il n’en lançait que
+# quatre par jour environ). Viser souvent laisse passer plus de passages.
 name: Vidéos YouTube
 
 on:
   schedule:
-    - cron: '17 * * * *'
+    - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
