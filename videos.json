@@ -2,6 +2,13 @@
   "derniere": [
     {
       "title": {
+        "fr": "Heroes Lounge - KittyKat Crusaders vs Ruby Goose Agents - Division 2",
+        "en": "Heroes Lounge - KittyKat Crusaders vs Ruby Goose Agents - Division 2"
+      },
+      "youtubeId": "bOQAFheclak"
+    },
+    {
+      "title": {
         "fr": "Xal'atath achetable en PO plus tôt que prévu",
         "en": "Xal'atath achetable en PO plus tôt que prévu"
       },
@@ -20,13 +27,6 @@
         "en": "Xal'atath Master gameplay - Ranked"
       },
       "youtubeId": "Hnv1BXCmZno"
-    },
-    {
-      "title": {
-        "fr": "De retour sur Heroes of the Storm?",
-        "en": "De retour sur Heroes of the Storm?"
-      },
-      "youtubeId": "9UuhCAdO7Ho"
     }
   ],
   "patch": [
@@ -41,6 +41,13 @@
   "recentes": [
     {
       "title": {
+        "fr": "Heroes Lounge - KittyKat Crusaders vs Ruby Goose Agents - Division 2",
+        "en": "Heroes Lounge - KittyKat Crusaders vs Ruby Goose Agents - Division 2"
+      },
+      "youtubeId": "bOQAFheclak"
+    },
+    {
+      "title": {
         "fr": "NOUVEAU PATCH PTR HotS : Xal'atath, Mei, Gazleu, Medivh, ...",
         "en": "NOUVEAU PATCH PTR HotS : Xal'atath, Mei, Gazleu, Medivh, ..."
       },
@@ -59,13 +66,6 @@
         "en": "Ragnaros Master gameplay - Ranked"
       },
       "youtubeId": "MSizOpduAdc"
-    },
-    {
-      "title": {
-        "fr": "Xal'atath Master gameplay - Ranked",
-        "en": "Xal'atath Master gameplay - Ranked"
-      },
-      "youtubeId": "Hnv1BXCmZno"
     }
   ]
 }
