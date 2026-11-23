@@ -2,8 +2,15 @@
   "derniere": [
     {
       "title": {
-        "fr": "Heroes Lounge - KittyKat Crusaders vs Ruby Goose Agents - Division 2",
-        "en": "Heroes Lounge - KittyKat Crusaders vs Ruby Goose Agents - Division 2"
+        "fr": "Heroes Lounge - Synergize VS Expedition 2027 - Division 1",
+        "en": "Heroes Lounge - Synergize VS Expedition 2027 - Division 1"
+      },
+      "youtubeId": "Gtv_q9sBuuw"
+    },
+    {
+      "title": {
+        "fr": "Heroes Lounge - KittyKat Crusaders VS Ruby Goose Agents - Division 2",
+        "en": "Heroes Lounge - KittyKat Crusaders VS Ruby Goose Agents - Division 2"
       },
       "youtubeId": "bOQAFheclak"
     },
@@ -20,13 +27,6 @@
         "en": "Ragnaros Master gameplay - Ranked"
       },
       "youtubeId": "MSizOpduAdc"
-    },
-    {
-      "title": {
-        "fr": "Xal'atath Master gameplay - Ranked",
-        "en": "Xal'atath Master gameplay - Ranked"
-      },
-      "youtubeId": "Hnv1BXCmZno"
     }
   ],
   "patch": [
@@ -41,8 +41,15 @@
   "recentes": [
     {
       "title": {
-        "fr": "Heroes Lounge - KittyKat Crusaders vs Ruby Goose Agents - Division 2",
-        "en": "Heroes Lounge - KittyKat Crusaders vs Ruby Goose Agents - Division 2"
+        "fr": "Heroes Lounge - Synergize VS Expedition 2027 - Division 1",
+        "en": "Heroes Lounge - Synergize VS Expedition 2027 - Division 1"
+      },
+      "youtubeId": "Gtv_q9sBuuw"
+    },
+    {
+      "title": {
+        "fr": "Heroes Lounge - KittyKat Crusaders VS Ruby Goose Agents - Division 2",
+        "en": "Heroes Lounge - KittyKat Crusaders VS Ruby Goose Agents - Division 2"
       },
       "youtubeId": "bOQAFheclak"
     },
@@ -59,13 +66,6 @@
         "en": "Xal'atath achetable en PO plus tôt que prévu"
       },
       "youtubeId": "rIBzsxbJI3s"
-    },
-    {
-      "title": {
-        "fr": "Ragnaros Master gameplay - Ranked",
-        "en": "Ragnaros Master gameplay - Ranked"
-      },
-      "youtubeId": "MSizOpduAdc"
     }
   ]
 }
