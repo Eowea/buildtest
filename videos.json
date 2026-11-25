@@ -32,13 +32,20 @@
   "patch": [
     {
       "title": {
-        "fr": "09/11/26 PATCH PTR HotS : Xal'atath, Mei, Gazleu, Medivh, ...",
-        "en": "09/11/26 PATCH PTR HotS : Xal'atath, Mei, Gazleu, Medivh, ..."
+        "fr": "NOUVEAU PATCH HotS : Skins Méphisto, Mei, Gazleu, Medivh, ...",
+        "en": "NOUVEAU PATCH HotS : Skins Méphisto, Mei, Gazleu, Medivh, ..."
       },
-      "youtubeId": "O-8Zs9BmmgU"
+      "youtubeId": "YcmtRjkeT3g"
     }
   ],
   "recentes": [
+    {
+      "title": {
+        "fr": "NOUVEAU PATCH HotS : Skins Méphisto, Mei, Gazleu, Medivh, ...",
+        "en": "NOUVEAU PATCH HotS : Skins Méphisto, Mei, Gazleu, Medivh, ..."
+      },
+      "youtubeId": "YcmtRjkeT3g"
+    },
     {
       "title": {
         "fr": "Heroes Lounge - Synergize VS Expedition 2027 - Division 1",
@@ -59,13 +66,6 @@
         "en": "09/11/26 PATCH PTR HotS : Xal'atath, Mei, Gazleu, Medivh, ..."
       },
       "youtubeId": "O-8Zs9BmmgU"
-    },
-    {
-      "title": {
-        "fr": "Xal'atath achetable en PO plus tôt que prévu",
-        "en": "Xal'atath achetable en PO plus tôt que prévu"
-      },
-      "youtubeId": "rIBzsxbJI3s"
     }
   ]
 }
