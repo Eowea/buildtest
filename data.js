@@ -2628,8 +2628,8 @@ const HEROES = [
           "en": "Recommended build"
         },
         "updatedAt": {
-          "fr": "7 Septembre 2026",
-          "en": "September 7, 2026"
+          "fr": "4 Novembre 2026",
+          "en": "November 4, 2026"
         },
         "summary": {
           "fr": "Build qui passe partout, peu importe le mode de jeu.",
@@ -2639,7 +2639,7 @@ const HEROES = [
           "fr": "CLIQUER POUR COPIER LE BUILD",
           "en": "CLICK TO COPY THE BUILD"
         },
-        "buildCode": "[T3121331,Deckard]",
+        "buildCode": "[T3121321,Deckard]",
         "videos": [],
         "talentSelections": [
           {
@@ -2655,7 +2655,9 @@ const HEROES = [
           {
             "level": 7,
             "primaryId": "tmrryr6jozz1s4",
-            "alternativeIds": []
+            "alternativeIds": [
+              "tcfx02x7216347"
+            ]
           },
           {
             "level": 10,
@@ -2669,8 +2671,10 @@ const HEROES = [
           },
           {
             "level": 16,
-            "primaryId": "tmrryr6jorbr2s",
-            "alternativeIds": []
+            "primaryId": "tcfx02x7220ylp",
+            "alternativeIds": [
+              "tmrryr6jorbr2s"
+            ]
           },
           {
             "level": 20,
@@ -3059,7 +3063,12 @@ const HEROES = [
     ],
     "forms": [],
     "codeKey": "Deckard",
-    "isNew": false
+    "isNew": false,
+    "bugs": [],
+    "bugsUpdatedAt": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": "alexstrasza",
@@ -31313,8 +31322,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/spells/storm_ui_icon_medivh_portal.png",
         "description": {
-          "fr": "Permet de placer soi-même les deux portails, mais Portail coûte bien plus de mana. Le trait annule un portail resté seul.",
-          "en": "Lets him place both portals himself, but Portal costs far more Mana. His trait cancels a portal left unlinked."
+          "fr": "Permet de placer soi-même les deux portails, sans quitter la forme de corbeau, mais Portail coûte bien plus de mana. Le trait annule un portail resté seul.",
+          "en": "Lets him place both portals himself, without breaking Raven Form, but Portal costs far more Mana. His trait cancels a portal left unlinked."
         },
         "demoYoutubeId": null
       },
@@ -31355,8 +31364,8 @@ const HEROES = [
         },
         "icon": "assets/heroes/base_spells/medivh/images/talents/storm_ui_icon_medivh_dustofappearance.png",
         "description": {
-          "fr": "Élargit fortement le champ de vision et révèle les héros adverses de la zone, sans quitter la forme de corbeau. Effet passif : Medivh peut lancer Portail en corbeau, sans reprendre forme humaine.",
-          "en": "Greatly widens his sight and reveals the enemy Heroes in the area, without breaking Raven Form. Passive: Medivh can cast Portal as a raven, without dismounting."
+          "fr": "Élargit fortement le champ de vision et révèle les héros adverses de la zone, sans quitter la forme de corbeau. Effet passif : Medivh voit plus loin en corbeau.",
+          "en": "Greatly widens his sight and reveals the enemy Heroes in the area, without breaking Raven Form. Passive: Medivh sees farther as a raven."
         },
         "demoYoutubeId": null
       },
