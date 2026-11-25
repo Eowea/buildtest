@@ -96,10 +96,26 @@ const STREAMER_CONFIG = {
     "enabled": true,
     "autoDate": true,
     "date": {
-      "fr": "1 Novembre 2026",
-      "en": "November 1, 2026"
+      "fr": "25 Novembre 2026",
+      "en": "November 25, 2026"
     },
     "changelog": [
+      {
+        "date": {
+          "fr": "25 Novembre 2026",
+          "en": "November 25, 2026"
+        },
+        "items": [
+          {
+            "fr": "Les talents de Gazleu, Grisetête, Medivh, Thrall et Xal'atath ont été mis à jour avec le patch du 23 novembre.",
+            "en": "Gazlowe, Greymane, Medivh, Thrall and Xal'atath's Talents have been updated for the November 23 patch."
+          },
+          {
+            "fr": "Un bug connu sur Xal'atath : depuis ce patch, la quête d'Adepte du Vide ne gagne plus de cumuls.",
+            "en": "A known bug on Xal'atath: since this patch, Void Adept's quest no longer gains stacks."
+          }
+        ]
+      },
       {
         "date": {
           "fr": "1 Novembre 2026",
